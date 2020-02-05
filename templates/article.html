@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<article class="article">
+  <h1 class="article__title">
+    {% if article.subtitle|length > 1 %}
+      {{ article.title }}: {{ article.subtitle }}
+    {% else %}
+      {{ article.title }}
+    {% endif %}
+  </h1>
+  {{ article.content }}
+  
+</article>
+
+{% endblock %}

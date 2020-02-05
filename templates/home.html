@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- assignments -->
+<section class="index">
+  <h2 class="index__title">Fab Acacademy assignments</h2>
+  <ul class="index__list">
+    {% for assignment in assignments %}
+      {% if not 'draft' in assignment.tags %}
+        <li class="index__item">
+          {% if assignment.subtitle|length > 1 %}
+            <a href="{{ assignment.slug }}.html" class="index__link">{{ assignment.title }}: {{ assignment.subtitle }}</a>
+          {% else %}
+            <a href="{{ assignment.slug }}.html" class="index__link">{{ assignment.title }}</a>
+          {% endif %}
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</section>
+
+<!-- posts -->
+<!-- <section class="index">
+  <h2 class="index__title">Posts</h2>
+  <ul class="index__list">
+    {% for post in posts %}
+      {% if not 'draft' in post.tags %}
+        <li class="index__item"><a href="{{ post.slug }}.html" class="index__link">{{ post.title }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</section> -->
+
+<!-- pages -->
+<section class="index">
+  <h2 class="index__title">Pages</h2>
+  <ul class="index__list">
+    {% for page in pages %}
+      {% if not 'draft' in pages.tags %}
+        <li class="index__item"><a href="{{ page.slug }}.html" class="index__link">{{ page.title }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</section>
+
+
+{% endblock %}
