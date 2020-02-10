@@ -10,3 +10,12 @@ title: Bookmarks
 - This is your phone on feminism [(link)](https://conversationalist.org/2019/09/13/feminism-explains-our-toxic-relationships-with-our-smartphones/)
 - Calm Technology [(link)](https://calmtech.com/)
 
+
+## Plants
+- Thijs Biersteker & Stefano Mancuso - Nous les Arbres [(link)](https://www.youtube.com/watch?v=ukcOmdeVQcM)
+- Voice of Nature / Thijs Biersteker [(link)](https://www.youtube.com/watch?v=AGbmut3hy7w)
+- “Plant Lamps” Turn Dirt and Vegetation into a Power Source [(link)](https://www.technologyreview.com/s/543781/plant-lamps-turn-dirt-and-vegetation-into-a-power-source/)
+- Research progress on electrical signals in higher plants [(link)](https://www.sciencedirect.com/science/article/pii/S1002007109000161)
+- Meet the Sonic Artist Making Music with Plants: Sound Builders [(link)](https://www.youtube.com/watch?v=wYU18eiiFt4)
+
+
