@@ -4,7 +4,7 @@
 <!-- assignments -->
 <section class="index">
   <h2 class="index__title">Fab Acacademy assignments</h2>
-  <ul class="index__list">
+  <ol class="index__list" reversed>
     {% for assignment in assignments %}
       {% if not 'draft' in assignment.tags %}
         <li class="index__item">
@@ -16,7 +16,7 @@
         </li>
       {% endif %}
     {% endfor %}
-  </ul>
+  </ol>
 </section>
 
 <!-- posts -->
