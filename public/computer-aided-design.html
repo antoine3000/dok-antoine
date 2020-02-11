@@ -36,7 +36,9 @@
 
 <h2>GIMP</h2>
 
-<p>GIMP is a raster graphics editor used for image retouching and editing, converting between different image formats, free-form drawing, …  Installation: <code>$ sudo apt-get install gimp</code></p>
+<p>GIMP is a raster graphics editor used for image retouching and editing, converting between different image formats, free-form drawing, …</p>
+
+<p>Installation: <code>$ sudo apt-get install gimp</code></p>
 
 <p><img src ="medias/computer-aided-design-references-making.png" alt="references" /></p>
 
@@ -57,7 +59,9 @@
 
 <h2>Inkscape</h2>
 
-<p>Inkscape is a vector graphics editor. Its primary vector graphics format is SVG (Scalable Vector Graphics). Installation: <code>$ sudo apt-get install inkscape</code></p>
+<p>Inkscape is a vector graphics editor. Its primary vector graphics format is SVG (Scalable Vector Graphics).</p>
+
+<p>Installation: <code>$ sudo apt-get install inkscape</code></p>
 
 <p><img src ="medias/computer-aided-design-schema-making.png" alt="schema" /></p>
 
@@ -83,23 +87,92 @@
 
 <p>And many more with a "Inkscape shortcuts" <a href="https://duckduckgo.com/?q=Inkscape+shortcuts&amp;t=canonical&amp;atb=v195-1&amp;ia=cheatsheet&amp;iax=1">research</a> in DuckDuckGo.</p>
 
-<h2>Blender</h2>
-
-<p>Blender is 3D computer graphics software used for creating animated films, visual effects, 3D printed models, motion graphics, …</p>
-
-<p>Installation: <code>$ sudo snap install blender --classic</code></p>
-
 <h2>FreeCAD</h2>
 
 <p>Freecad is general-purpose parametric 3D CAD modeler software made to design real-life objects of any size. It is highly customizable and extensible and it can read and write to many open file formats.</p>
 
 <p>Installation: <code>$ sudo apt-get install freecad</code></p>
 
+<p>Each view has a custom set of tools. So it's important to switch to the appropriated view before doing some manipulations. The more useful ones are Sketcher and Part Design.</p>
+
 <h2>OpenSCAD</h2>
 
 <p>OpenSCAD is a software for creating solid 3D CAD (computer-aided design) objects. It is a script-only based modeller that uses its own description language; parts can be previewed, but it cannot be interactively selected or modified by mouse in the 3D view. An OpenSCAD script specifies geometric primitives (such as spheres, boxes, cylinders, etc.) and defines how they are modified and combined (for instance by intersection, difference, envelope combination and Minkowski sums) to render a 3D model.</p>
 
 <p>Installation: <code>$ sudo apt-get install openscad</code></p>
+
+<p><img src ="medias/computer-aided-design-openscad-box-1.png" alt="openscad-box-1" />
+<img src ="medias/computer-aided-design-openscad-box-2.png" alt="openscad-box-2" /></p>
+
+<pre>
+$fn = 40;
+length = 50;
+width= 40;
+height = 20;
+radius = 2;
+wallTickness = 1.5;
+
+module roundedBox(length, width, height, radius) {
+  dRadius = 2*radius;
+  minkowski() {
+    cube(size = [width-dRadius, length-dRadius, height]);
+    cylinder(r = radius, h = 0.01);
+  }
+}
+
+// box
+translate([radius, radius, 0]) {
+  difference () {
+    roundedBox(length, width, height, radius);
+    translate([wallTickness, wallTickness, wallTickness]) {
+      roundedBox(length-wallTickness*2, width-wallTickness*2, height, radius);
+    }
+  }
+}
+
+// lid
+translate([width*2 + radius, 0, 0]){
+  mirror([1,0,0]) {
+    translate([radius, radius, 0]) {
+      union() {
+        roundedBox(length, width, 1, radius);
+        difference() {
+          translate([wallTickness, wallTickness, 0]) {
+            roundedBox(length-wallTickness*2, width-wallTickness*2, 4, radius);
+          }
+          translate([wallTickness*2, wallTickness*2, 0]) {
+            roundedBox(length-wallTickness*4, width-wallTickness*4, 6, radius);
+          }
+        }
+      }
+    }
+  }
+}
+
+</pre>
+
+<h2>Blender</h2>
+
+<p>Blender is 3D computer graphics software used for creating animated films, visual effects, 3D printed models, motion graphics, …</p>
+
+<p>Installation: <code>$ sudo snap install blender --classic</code></p>
+
+<p><img src ="medias/computer-aided-design-setup.png" alt="setup" />
+<img src ="medias/computer-aided-design-setup2.png" alt="setup2" /></p>
+
+<p>Blender is super powerful and can be used in a wide variety of fields. I don't see any real use for me right now, as I mainly focus on exporting models from my computer to the real world, instead of polishing virtual things. However, it will be my weapon of choice for quickly sketching an idea in 3D and animating it if necessary.</p>
+
+<h3>Shortcuts</h3>
+
+<ul>
+<li>Switch between edit and object mode: <code>tab</code></li>
+<li>Switch the preview mode: <code>z</code></li>
+<li>Move: <code>g</code>; + the axe if needed <code>x</code>, <code>y</code>, <code>z</code> or multiple ones <code>xy</code></li>
+<li>Select box: <code>b</code>; select circle: <code>c</code>; select lasso <code>l</code>; (un)select all: <code>a</code></li>
+<li>Cut a shape: <code>ctrl + R</code></li>
+<li>In edit mode, switch between the select modes (vertex, edge or face): <code>1 or 2 or 3</code></li>
+<li>Insert faces: <code>i</code></li>
+</ul>
 
   
 </article>
