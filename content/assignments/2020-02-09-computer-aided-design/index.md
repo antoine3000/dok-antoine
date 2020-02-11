@@ -8,7 +8,7 @@ A tour of open-source softwares for computer-aided design, in order to discover 
 
 GIMP is a raster graphics editor used for image retouching and editing, converting between different image formats, free-form drawing, …
 
-Installation: `$ sudo apt-get install gimp`
+`$ sudo apt-get install gimp`
 
 ![references](references-making.png)
 
@@ -28,15 +28,13 @@ And many more with a "GIMP shortcuts" [research](https://duckduckgo.com/?q=GIMP+
 
 ## Inkscape
 
-Inkscape is a vector graphics editor. Its primary vector graphics format is SVG (Scalable Vector Graphics).
+Inkscape is a vector graphics editor.
 
-Installation: `$ sudo apt-get install inkscape`
+`$ sudo apt-get install inkscape`
 
 ![schema](schema-making.png)
 
-I didn't really like spending time in Inkscape. I had a few bugs, the software crashed several times, the handling of the vectors was not precise. Surely I have to spend more time on it, maybe to tweak it a bit, because the community behind the software seems to agree that it has a great potential. Next time, I'll go for some Python script experimentation, an area where Inkscape seems very interesting.
-
-In the meantime, I have drawn a basic but vector schema of my project.
+I used Inkscape to draw a basic but vector schema of my project. I did not have a good experience with this software: I had a few bugs, the software crashed several times, the manipulation of the vectors was not precise. Surely I need to spend more time on it, maybe to tweak it a bit, because the community behind the software seems to agree that it has great potential. Next time, I'll try a Python script experiment, an area where Inkscape seems very interesting.
 
 ![schema](schema.png)
 
@@ -54,23 +52,23 @@ In the meantime, I have drawn a basic but vector schema of my project.
 
 And many more with a "Inkscape shortcuts" [research](https://duckduckgo.com/?q=Inkscape+shortcuts&t=canonical&atb=v195-1&ia=cheatsheet&iax=1) in DuckDuckGo.
 
-
-## FreeCAD
-
-Freecad is general-purpose parametric 3D CAD modeler software made to design real-life objects of any size. It is highly customizable and extensible and it can read and write to many open file formats.
-
-Installation: `$ sudo apt-get install freecad`
-
-Each view has a custom set of tools. So it's important to switch to the appropriated view before doing some manipulations. The more useful ones are Sketcher and Part Design.
-
 ## OpenSCAD
 
 OpenSCAD is a software for creating solid 3D CAD (computer-aided design) objects. It is a script-only based modeller that uses its own description language; parts can be previewed, but it cannot be interactively selected or modified by mouse in the 3D view. An OpenSCAD script specifies geometric primitives (such as spheres, boxes, cylinders, etc.) and defines how they are modified and combined (for instance by intersection, difference, envelope combination and Minkowski sums) to render a 3D model.
 
-Installation: `$ sudo apt-get install openscad`
+`$ sudo apt-get install openscad`
 
 ![openscad-box-1](openscad-box-1.png)
+
+I really like the approach of using code to create 3D model. It's parametric by design, everything is always visible in the code (no secret), versioning is possible with GIT, sharing sources is light and easy. Even if writing code can scare some people, I think OpenSCAD remains the most accessible software for modeling 3D objects.
+
+Make sure to always have [this cheatsheet](https://www.openscad.org/cheatsheet/index.html) close to you while writing models.
+
+I used OpenSCAD to design a basic printable box. As you can see in the second image, the modification of certain variables (declared at the top of the document) creates a new box.
+
 ![openscad-box-2](openscad-box-2.png)
+
+And here is the source code:
 
 <pre>
 $fn = 40;
@@ -116,8 +114,22 @@ translate([width*2 + radius, 0, 0]){
     }
   }
 }
-
 </pre>
+
+
+## FreeCAD
+
+Freecad is general-purpose parametric 3D CAD modeler software made to design real-life objects of any size. It is highly customizable and extensible and it can read and write to many open file formats.
+
+`$ sudo apt-get install freecad`
+
+![freecad-tutorial](freecad-tutorial.png)
+
+FreeCAD seems to have everything we need to design parts and machines, it seems really powerful. The thing that annoys me a little is the interface, I feel it over-complicated and I get lost easily, without knowing what I am doing. Maybe it comes from the fact that I "fell in love" with the "simplicity" of OpenSCAD? Anyway, I'll have to use FreeCAD and OpenSCAD together, and I am quite satisfied with all the possibilities it offers.
+
+Each view has a custom set of tools. So it's important to switch to the appropriated view before doing some manipulations. The more useful ones are `Sketcher` and `Part Design`.
+
+
 
 ## Blender
 
