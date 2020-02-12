@@ -20,9 +20,14 @@ title: References
 - “Plant Lamps” Turn Dirt and Vegetation into a Power Source [(link)](https://www.technologyreview.com/s/543781/plant-lamps-turn-dirt-and-vegetation-into-a-power-source/)
 - Research progress on electrical signals in higher plants [(link)](https://www.sciencedirect.com/science/article/pii/S1002007109000161)
 - Meet the Sonic Artist Making Music with Plants: Sound Builders [(link)](https://www.youtube.com/watch?v=wYU18eiiFt4)
+- Bully A Plant: Say No To Bullying [(link)](https://www.youtube.com/watch?v=Yx6UgfQreYY&feature=youtu.be)
 
 ## Communication
 
 - Books: Empire of the Ants (Les Fourmis) [(link)](https://en.wikipedia.org/wiki/Empire_of_the_Ants_(novel))
+
+## Art installation
+
+- One Hundred and Eight - Power of Making, Nils Völker [(link)](https://vimeo.com/27197947)
 
 
