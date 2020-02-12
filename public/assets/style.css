@@ -29,7 +29,8 @@ a {color: var(--color-action); text-decoration: none;}
 img {max-width: 100%;}
 
 /* header */
-.header {display: flex; justify-content: space-between; margin-bottom: calc(var(--spacing));}
+.header {position: sticky; top: var(--spacing); z-index: 2; display: flex; justify-content: space-between; margin-bottom: calc(var(--spacing));}
+.header a {background-color: var(--color-body);}
 .header .title a {color: var(--color-base);}
 .header .title a span {color: var(--color-action);}
 .nav li {padding: 0;}

@@ -1,6 +1,8 @@
 ---
-title: Bookmarks
+title: References
 ---
+
+## Technology
 
 - How to Build a Low-tech Website? [(link)](https://solar.lowtechmagazine.com/2018/09/how-to-build-a-lowtech-website.html)
 - Jenny Odell: "How to Do Nothing: Resisting the Attention Economy" [(link)](https://www.youtube.com/watch?v=izjlP9qtmBU)
@@ -12,10 +14,15 @@ title: Bookmarks
 
 
 ## Plants
+
 - Thijs Biersteker & Stefano Mancuso - Nous les Arbres [(link)](https://www.youtube.com/watch?v=ukcOmdeVQcM)
 - Voice of Nature / Thijs Biersteker [(link)](https://www.youtube.com/watch?v=AGbmut3hy7w)
 - “Plant Lamps” Turn Dirt and Vegetation into a Power Source [(link)](https://www.technologyreview.com/s/543781/plant-lamps-turn-dirt-and-vegetation-into-a-power-source/)
 - Research progress on electrical signals in higher plants [(link)](https://www.sciencedirect.com/science/article/pii/S1002007109000161)
 - Meet the Sonic Artist Making Music with Plants: Sound Builders [(link)](https://www.youtube.com/watch?v=wYU18eiiFt4)
+
+## Communication
+
+- Books: Empire of the Ants (Les Fourmis) [(link)](https://en.wikipedia.org/wiki/Empire_of_the_Ants_(novel))
 
 
