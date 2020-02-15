@@ -61,7 +61,7 @@ for content_type in content_types:
                  # markdown file
                 with open(file_path, 'r') as file:
                     ARTICLES[article_slug] = markdown(
-                        file.read(), extras=['metadata'])
+                        file.read(), extras=['metadata', 'tables'])
             else:
                 # media file
                 media_file_path = 'public/medias/{slug}'.format(slug=article_slug + '-' + item)
