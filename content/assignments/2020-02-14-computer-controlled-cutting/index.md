@@ -1,5 +1,6 @@
 ---
 title: Computer-controlled cutting
+tags: draft
 ---
 
 ## Basics of lasercutting
