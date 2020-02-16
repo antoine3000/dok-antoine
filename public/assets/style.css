@@ -31,7 +31,7 @@ img {max-width: 100%;}
 
 /* header */
 .header {position: sticky; top: var(--spacing); z-index: 2; display: flex; justify-content: space-between; margin-bottom: calc(var(--spacing));}
-.header a {background-color: var(--color-body);}
+.header a {background-color: var(--color-body); padding: 0.3em 0;}
 .header .title a {color: var(--color-base);}
 .header .title a span {color: var(--color-action);}
 .nav li {padding: 0;}
