@@ -10,11 +10,11 @@ GIMP is a raster graphics editor used for image retouching and editing, converti
 
 `$ sudo apt-get install gimp`
 
-![references](references-making.png)
+![references](references-making.jpg)
 
 Even if I only used GIMP to draw a quick moodboard for my project, I directly had a good feeling with it, the software seems robust and well designed. There's a huge online community behind it, which makes finding tips and tricks super easy.
 
-![references](references.png)
+![references](references.jpg)
 
 ### Shortcuts
 
@@ -137,8 +137,8 @@ Blender is 3D computer graphics software used for creating animated films, visua
 
 Installation: `$ sudo snap install blender --classic`
 
-![setup](setup.png)
-![setup2](setup2.png)
+![setup](setup.jpg)
+![setup2](setup2.jpg)
 
 Blender is super powerful and can be used in a wide variety of fields. I don't see any real use for me right now, as I mainly focus on exporting models from my computer to the real world, instead of polishing virtual things. However, it will be my weapon of choice for quickly sketching an idea in 3D and animating it if necessary.
 

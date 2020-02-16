@@ -23,16 +23,16 @@ warnings.filterwarnings("ignore", "(Possibly )?corrupt EXIF data", UserWarning)
 
 # Image utility
 def image_util(old_file, new_file):
+    if not os.path.isfile(new_file):
     # copy the original to public/media
-    shutil.copy2(old_file, new_file)
-    # check if file doesn't exist and has the good extension
-    if not os.path.isfile(new_file) and new_file.endswith(tuple(media_ext)):
-        img = Image.open(new_file)
-        # resize the public/img file
-        wpercent = (base_width/float(img.size[0]))
-        hsize = int((float(img.size[1])*float(wpercent)))
-        img = img.resize((base_width, hsize), Image.ANTIALIAS)
-        img.save(new_file)
+        shutil.copy2(old_file, new_file)
+        if new_file.endswith(tuple(media_ext)):
+            img = Image.open(new_file)
+            # resize the public/img file
+            wpercent = (base_width/float(img.size[0]))
+            hsize = int((float(img.size[1])*float(wpercent)))
+            img = img.resize((base_width, hsize), Image.ANTIALIAS)
+            img.save(new_file)
 
 # purge public folder
 folder_html = 'public/'
@@ -40,8 +40,8 @@ folder_medias = 'public/medias/'
 for file_name in os.listdir(folder_html):
     if file_name.endswith('.html'):
         os.remove(folder_html + file_name)
-for file_name in os.listdir(folder_medias):
-    os.remove(folder_medias + file_name)
+# for file_name in os.listdir(folder_medias):
+#     os.remove(folder_medias + file_name)
 
 # generate articles
 for content_type in content_types:
