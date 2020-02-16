@@ -25,14 +25,14 @@ warnings.filterwarnings("ignore", "(Possibly )?corrupt EXIF data", UserWarning)
 def image_util(old_file, new_file):
     # copy the original to public/media
     shutil.copy2(old_file, new_file)
-    if new_file.endswith(tuple(media_ext)):
+    # check if file doesn't exist and has the good extension
+    if not os.path.isfile(new_file) and new_file.endswith(tuple(media_ext)):
         img = Image.open(new_file)
         # resize the public/img file
         wpercent = (base_width/float(img.size[0]))
         hsize = int((float(img.size[1])*float(wpercent)))
         img = img.resize((base_width, hsize), Image.ANTIALIAS)
         img.save(new_file)
-
 
 # purge public folder
 folder_html = 'public/'
