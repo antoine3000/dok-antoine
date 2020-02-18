@@ -6,7 +6,7 @@ This week is about exploring the possibilities of the computer-controlled cuttin
 
 # Lasercutter
 
-The laser cutter is an excellent machine: it gives quick results, it is easy to learn, it works with different types of material (wood, acrylic, cardboard, etc.) and the cutting is very precise. Using joints allows you to go from 2D to 3D objects. It makes the laser cutter one of the best machines for quickly prototyping an idea.
+The laser cutter is an excellent machine: it gives quick results, it is easy to learn, it works with different types of material (wood, acrylic, cardboard, etc.) and the cutting is very precise. Using joints allows you to go from 2D to 3D objects. It makes the laser cutter one of the best machines to quickly prototype an idea.
 
 ![nesting-cut](nesting-cut.jpg)
 
@@ -41,7 +41,7 @@ The laser burns away a portion of material when it cuts through. This is known a
 
 ## Get to know the machine
 
-I was part of two different groups for the group assignement, simply because I was around and it's always good to know a bit about the differences between the machines.
+I was part of two different groups for the group assignement, simply because I was around and it's always good to know a bit more about the differences between the machines.
 
 ### Trotec Speedy 100
 
@@ -59,12 +59,23 @@ We chose to proceed with Cardboard 4mm and Plywood 4mm because we can find nice 
 
 <video><source src="test.mp4"></video>
 
+Here are the values we've collected by testing the Trotec Speedy 100.
+
+| Machine | Material | Technique | Speed | Power |
+| --- | --- | --- | --- | --- |
+| Trotec Speedy 100 | Plywood 4mm | Engrave | 100 | 80 |
+| Trotec Speedy 100 | Plywood 4mm | Cut | 1 | 75 |
+| Trotec Speedy 100 | Carboard 4mm | Engrave | 100 | 60 |
+| Trotec Speedy 100 | Carboard 4mm | Cut | 1 | 60 |
+
 
 ### Multicam 2000
 
 And the other group I'm part of is composed by [Bruno](https://fabacademy.org/2020/labs/barcelona/students/bruno-molteni), [Marco](https://fabacademy.org/2020/labs/barcelona/students/marco-cataffo), [Roger](https://fabacademy.org/2020/labs/barcelona/students/roger-anguera), and me.
 
-Our idea was to use one of the Trotec machines, either the 100 or the 400, but they were being used so we finally decided to do it on the old and huge Multicam 2000. Our instructor Mikel Llobera helped us throught the process. This would have been really impossible without him, given the complicated interface of the machine, not to mention that some parts of it are not working properly.
+Our idea was to use one of the Trotec machines, either the 100 or the 400, but they were being used so we finally decided to do it on the old and huge [Multicam 2000](https://wiki.fablabbcn.org/Multicam_2000_Laser_Cutter). Our instructor Mikel Llobera helped us throught the process. This would have been really impossible without him, given the complicated interface of the machine, not to mention that some parts of it are not working properly.
+
+![multicam-interface](multicam-interface.jpg)
 
 On the multicam, you have to go through it's own software called EnRoute, that turns a DXF file into gcode that the machine can read. With EnRoute open and connected to the machine, you can load the file from it's 1980's-style handheld interface, which is both cumbersome and amusing at the same time.
 
@@ -74,36 +85,36 @@ Once we had the piece on EnRoute, after a few crashes of the software due, we th
 
 <video><source src="multicam-test.mp4"></video>
 
-### Values
-
-Here are the values we've collected, with the Multicam and the Trotec.
+We didn't do enough tests to know well the machine because of the time we'd at our disposition. It would be interesting to compare the results with the other machine to know how much energy it does require and how fast is the industrial machine compare to the others. Anyway, rere are the values we've collected by testing the Multicam2000.
 
 | Machine | Material | Technique | Speed | Power |
 | --- | --- | --- | --- | --- |
-| Multicam 2000 | Cardboard 4mm | Cut | 100 | 80 |
-| Trotec Speedy 100 | Plywood 4mm | Engrave | 100 | 80 |
-| Trotec Speedy 100 | Plywood 4mm | Cut | 1 | 75 |
-| Trotec Speedy 100 | Carboard 4mm | Engrave | 100 | 60 |
-| Trotec Speedy 100 | Carboard 4mm | Cut | 1 | 60 |
+| Multicam 2000 | Cardboard 4mm | Cut | 100 | 100 |
 
+## Basic test to calculate the kerf
 
+I've see on various documentations a basic test which we can execute in order to calculate the kerf of a specific machine on a specific material. We wanted to test it by ourself.
 
+![kerf-explanations](kerf-explanations.png)
 
-### Calculate the kerf
+The idea is to cut a material several times, bring the cut pieces together and compare the final total width with the initial width. The difference should be the space left by the cut, from which we can get the value of the kerf.
+
+![kerf-result](kerf-result.jpg)
 
 | Material | Intended | Actual | Difference | Kerf (difference/10) | Offset (kerf/2) |
 | --- | --- | --- | --- | --- | --- |
-| Cardboard 2mm | 100mm | 95mm | 5mm | 0.5mm | 0.25mm |
-| Cardboard 4mm | 100mm | 95mm | 5mm | 0.5mm | 0.25mm |
-| Cardboard 6mm | 100mm | 95mm | 5mm | 0.5mm | 0.25mm |
+| Cardboard 4mm | 200mm | 194mm | 6mm | 0.3mm | 0.15mm |
+
+This technique could be applied to different materials with different settings (speed/power) by using this single template. 
+
 
 ---
 
-# A parametric construction kit
+# A 2V geodesic dome
 
 Design, lasercut, and document a parametric construction kit, accounting for the lasercutter kerf, which can be assembled in multiple ways.
 
 
 ---
 
-# Vinylcutter
+# The most common password ever

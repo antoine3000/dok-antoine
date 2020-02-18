@@ -36,7 +36,7 @@
 
 <h1>Lasercutter</h1>
 
-<p>The laser cutter is an excellent machine: it gives quick results, it is easy to learn, it works with different types of material (wood, acrylic, cardboard, etc.) and the cutting is very precise. Using joints allows you to go from 2D to 3D objects. It makes the laser cutter one of the best machines for quickly prototyping an idea.</p>
+<p>The laser cutter is an excellent machine: it gives quick results, it is easy to learn, it works with different types of material (wood, acrylic, cardboard, etc.) and the cutting is very precise. Using joints allows you to go from 2D to 3D objects. It makes the laser cutter one of the best machines to quickly prototype an idea.</p>
 
 <p><img src ="medias/computer-controlled-cutting-nesting-cut.jpg" alt="nesting-cut" /></p>
 
@@ -73,7 +73,7 @@
 
 <h2>Get to know the machine</h2>
 
-<p>I was part of two different groups for the group assignement, simply because I was around and it's always good to know a bit about the differences between the machines.</p>
+<p>I was part of two different groups for the group assignement, simply because I was around and it's always good to know a bit more about the differences between the machines.</p>
 
 <h3>Trotec Speedy 100</h3>
 
@@ -93,23 +93,7 @@
 
 <p><video controls preload="auto"><source type ="video/mp4" src ="medias/computer-controlled-cutting-test.mp4"></video></p>
 
-<h3>Multicam 2000</h3>
-
-<p>And the other group I'm part of is composed by <a href="https://fabacademy.org/2020/labs/barcelona/students/bruno-molteni">Bruno</a>, <a href="https://fabacademy.org/2020/labs/barcelona/students/marco-cataffo">Marco</a>, <a href="https://fabacademy.org/2020/labs/barcelona/students/roger-anguera">Roger</a>, and me.</p>
-
-<p>Our idea was to use one of the Trotec machines, either the 100 or the 400, but they were being used so we finally decided to do it on the old and huge Multicam 2000. Our instructor Mikel Llobera helped us throught the process. This would have been really impossible without him, given the complicated interface of the machine, not to mention that some parts of it are not working properly.</p>
-
-<p>On the multicam, you have to go through it's own software called EnRoute, that turns a DXF file into gcode that the machine can read. With EnRoute open and connected to the machine, you can load the file from it's 1980's-style handheld interface, which is both cumbersome and amusing at the same time.</p>
-
-<p><img src ="medias/computer-controlled-cutting-finger-crossed.jpg" alt="finger-crossed" /></p>
-
-<p>Once we had the piece on EnRoute, after a few crashes of the software due, we think, to the amount of different lines on the design, we learned that we would have issues with raster on that machine, so we had to remove the parts of the design that were supposed to be rastered.</p>
-
-<p><video controls preload="auto"><source type ="video/mp4" src ="medias/computer-controlled-cutting-multicam-test.mp4"></video></p>
-
-<h3>Values</h3>
-
-<p>Here are the values we've collected, with the Multicam and the Trotec.</p>
+<p>Here are the values we've collected by testing the Trotec Speedy 100.</p>
 
 <table>
 <thead>
@@ -122,13 +106,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-  <td>Multicam 2000</td>
-  <td>Cardboard 4mm</td>
-  <td>Cut</td>
-  <td>100</td>
-  <td>80</td>
-</tr>
 <tr>
   <td>Trotec Speedy 100</td>
   <td>Plywood 4mm</td>
@@ -160,7 +137,54 @@
 </tbody>
 </table>
 
-<h3>Calculate the kerf</h3>
+<h3>Multicam 2000</h3>
+
+<p>And the other group I'm part of is composed by <a href="https://fabacademy.org/2020/labs/barcelona/students/bruno-molteni">Bruno</a>, <a href="https://fabacademy.org/2020/labs/barcelona/students/marco-cataffo">Marco</a>, <a href="https://fabacademy.org/2020/labs/barcelona/students/roger-anguera">Roger</a>, and me.</p>
+
+<p>Our idea was to use one of the Trotec machines, either the 100 or the 400, but they were being used so we finally decided to do it on the old and huge <a href="https://wiki.fablabbcn.org/Multicam_2000_Laser_Cutter">Multicam 2000</a>. Our instructor Mikel Llobera helped us throught the process. This would have been really impossible without him, given the complicated interface of the machine, not to mention that some parts of it are not working properly.</p>
+
+<p><img src ="medias/computer-controlled-cutting-multicam-interface.jpg" alt="multicam-interface" /></p>
+
+<p>On the multicam, you have to go through it's own software called EnRoute, that turns a DXF file into gcode that the machine can read. With EnRoute open and connected to the machine, you can load the file from it's 1980's-style handheld interface, which is both cumbersome and amusing at the same time.</p>
+
+<p><img src ="medias/computer-controlled-cutting-finger-crossed.jpg" alt="finger-crossed" /></p>
+
+<p>Once we had the piece on EnRoute, after a few crashes of the software due, we think, to the amount of different lines on the design, we learned that we would have issues with raster on that machine, so we had to remove the parts of the design that were supposed to be rastered.</p>
+
+<p><video controls preload="auto"><source type ="video/mp4" src ="medias/computer-controlled-cutting-multicam-test.mp4"></video></p>
+
+<p>We didn't do enough tests to know well the machine because of the time we'd at our disposition. It would be interesting to compare the results with the other machine to know how much energy it does require and how fast is the industrial machine compare to the others. Anyway, rere are the values we've collected by testing the Multicam2000.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Machine</th>
+  <th>Material</th>
+  <th>Technique</th>
+  <th>Speed</th>
+  <th>Power</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Multicam 2000</td>
+  <td>Cardboard 4mm</td>
+  <td>Cut</td>
+  <td>100</td>
+  <td>100</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Basic test to calculate the kerf</h2>
+
+<p>I've see on various documentations a basic test which we can execute in order to calculate the kerf of a specific machine on a specific material. We wanted to test it by ourself.</p>
+
+<p><img src ="medias/computer-controlled-cutting-kerf-explanations.png" alt="kerf-explanations" /></p>
+
+<p>The idea is to cut a material several times, bring the cut pieces together and compare the final total width with the initial width. The difference should be the space left by the cut, from which we can get the value of the kerf.</p>
+
+<p><img src ="medias/computer-controlled-cutting-kerf-result.jpg" alt="kerf-result" /></p>
 
 <table>
 <thead>
@@ -175,41 +199,27 @@
 </thead>
 <tbody>
 <tr>
-  <td>Cardboard 2mm</td>
-  <td>100mm</td>
-  <td>95mm</td>
-  <td>5mm</td>
-  <td>0.5mm</td>
-  <td>0.25mm</td>
-</tr>
-<tr>
   <td>Cardboard 4mm</td>
-  <td>100mm</td>
-  <td>95mm</td>
-  <td>5mm</td>
-  <td>0.5mm</td>
-  <td>0.25mm</td>
-</tr>
-<tr>
-  <td>Cardboard 6mm</td>
-  <td>100mm</td>
-  <td>95mm</td>
-  <td>5mm</td>
-  <td>0.5mm</td>
-  <td>0.25mm</td>
+  <td>200mm</td>
+  <td>194mm</td>
+  <td>6mm</td>
+  <td>0.3mm</td>
+  <td>0.15mm</td>
 </tr>
 </tbody>
 </table>
 
+<p>This technique could be applied to different materials with different settings (speed/power) by using this single template. </p>
+
 <hr />
 
-<h1>A parametric construction kit</h1>
+<h1>A 2V geodesic dome</h1>
 
 <p>Design, lasercut, and document a parametric construction kit, accounting for the lasercutter kerf, which can be assembled in multiple ways.</p>
 
 <hr />
 
-<h1>Vinylcutter</h1>
+<h1>The most common password ever</h1>
 
   
 </article>
