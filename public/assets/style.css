@@ -82,7 +82,7 @@ ol li::marker {color: var(--color-heading-high);}
 .article th {border-bottom: var(--border-sm) solid var(--color-base);}
 .article table tr:nth-child(even) {background-color: var(--color-light);}
 .article video {display: block; width: 100%;}
-.article img, article video, article table { margin: 1.2em 0;}
+.article img, .article video, .article table, .article ul { margin: 1.4em 0;}
 
 /* index */
 ol.index__list {list-style: decimal-leading-zero; margin-left: 2.4em;}

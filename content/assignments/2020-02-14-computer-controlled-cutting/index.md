@@ -110,11 +110,38 @@ This technique could be applied to different materials with different settings (
 
 ---
 
-# A 2V geodesic dome
+# Geodesic dome
 
-Design, lasercut, and document a parametric construction kit, accounting for the lasercutter kerf, which can be assembled in multiple ways.
+
+
 
 
 ---
 
-# The most common password ever
+# The most common password
+
+According to [this page](https://en.wikipedia.org/wiki/List_of_the_most_common_passwords), the most common password is … `123456`. It's so basic and evident I wanted to stick it on my laptop to send the subtle message to the people around me that their password is *maybe* not the best. And you, is this one of your passwords?
+
+![password](password.png)
+
+The process of cutting something with a vinylcutter is straightforward:
+
+- Export your .EPS file and import it into the software of the machine
+- Prepare your sheet of paper and insert it into the machine (from back to front)
+- Set the size of the sheet via the machine commands and tell it to the software running on the computer attached to it
+- Press the *Print* button
+
+![password-process](password-process.jpg)
+
+The next step is the get your cut out of the sheet, wich may not be easy depending on your design, if it's detailed or not. 
+
+A good practice is to apply several strips of adhesive tape on the cut sheet to stick the different pieces together and then apply it where you want to stick your sticker. It works *almost* like a charm (it always does, right?).
+
+![password-final](password-final.jpg)
+
+The font used: is open-source; is designed by Raphaël Bastide; is called Terminal Grotesque. [Find it on Github](https://github.com/raphaelbastide/Terminal-Grotesque/).
+
+
+
+
+
