@@ -76,7 +76,7 @@ ol li::marker {color: var(--color-heading-high);}
 .article hr {display: block; border: none; margin: 2.4em 0; height: var(--border-sm); background-color: var(--color-base);}
 .article em {font-style: italic;}
 .article strong {font-weight: bold;}
-.article table {width: 100%;}
+.article table {width: 100%; margin: 1em 0;}
 .article th,
 .article td {text-align: left; padding: calc(var(--spacing)/4);}
 .article th {border-bottom: var(--border-sm) solid var(--color-base);}
