@@ -202,9 +202,9 @@ The font used: is open-source; is designed by Raphaël Bastide; is called Termin
 
 ---
 
-# The files
+# Files
 
-- Lasercutting tester (DXF) 
-- Kerf tester (FreeCAD / DXF)
-- Geodesic dome parts (FreeCAD / DXF)
-- The most common password ever (EPS)
+- Lasercutting tester ([SVG](files/lasercutting-tester.svg)) 
+- Kerf tester ([FreeCAD](files/kerf-tester.FCStd) / [DXF](files/kerf-tester.dxf))
+- Geodesic dome parts ([FreeCAD](files/geodesic-dome.FCStd) / [DXF](files/geodesic-dome-4mm-nest.dxf))
+- The most common password ever ([EPS](files/password.eps))
