@@ -112,7 +112,58 @@ This technique could be applied to different materials with different settings (
 
 # Geodesic dome
 
+A [geodesic dome](https://en.wikipedia.org/wiki/Geodesic_dome) is a structure based on a geodesic polyhedron. The triangular elements of the dome are structurally rigid and distribute the structural stress throughout the structure, making geodesic domes able to withstand very heavy loads for their size.
 
+![dome-reference](dome-reference.jpg)
+
+## Design
+
+I wanted to build a geodesic dome made up of two triangular faces and a joint. But because the structure of a geodesic dome is mainly made up of sticks instead of faces, finding the documentation was not as easy as expected. Finally, [this website](https://simplydifferently.org/Geodesic_Dome_Notes?page=3#2V%20Icosahedron%20Dome) helped me to find the geometric values.
+
+![dome-construction](dome-construction.png)
+
+- 30 x triangle A-A-B (55.57°, 55.57°, 68.86°)
+- 10 x triangle B-B-B (60.00°, 60.00°, 60.00°) 
+- 55 connectors (with an angle of 18°)
+
+![dome-freecad-0](dome-freecad-0.jpeg)
+
+I used FreeCAD to design the dome elements. I first filled out a spreadsheet with the parameters that I collected, so that I could use these parametric values to design the different parts and be able to change things quickly in case of change.
+
+![dome-freecad-3](dome-freecad-3.jpeg)
+
+
+Finding the kerf was a key point in this project because the pieces had to fit perfectly to keep the entire structure as solid as it should be. Due to the machine and its parameters, the material I use (4mm plywood), the bleeding value is `0.15mm`.
+
+![dome-freecad-1](dome-freecad-1.jpeg)
+
+I added this value for the joint measurement, because the part had to fit into another. The lasercut decreases the size of the part, so by adding the value before cutting, I guarantee that the end result will be the expected result.
+
+And vice versa for the opposite part.
+
+![dome-freecad-2](dome-freecad-2.jpeg)
+
+### Nesting
+
+In order to avoid wasting material and time (and therefore energy), I had to nest all of my shapes (95 in total) together as compact as possible. To achieve this perilous mission, I used [Deepnest](https://deepnest.io/), an open source nesting application.
+
+![dome-nesting](dome-nesting.jpeg)
+
+This tool does only one job and it does it very well.
+
+## Cutting
+
+<video><source src="dome-cutting.mp4"></video>
+
+![dome-cutting](dome-cutting.jpg)
+
+## Assembly
+
+![dome-construct-1](dome-construct-1.jpg)
+
+![dome-construct-2](dome-construct-2.jpg)
+
+![dome-construct-3](dome-construct-3.jpg)
 
 
 

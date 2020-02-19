@@ -215,6 +215,60 @@
 
 <h1>Geodesic dome</h1>
 
+<p>A <a href="https://en.wikipedia.org/wiki/Geodesic_dome">geodesic dome</a> is a structure based on a geodesic polyhedron. The triangular elements of the dome are structurally rigid and distribute the structural stress throughout the structure, making geodesic domes able to withstand very heavy loads for their size.</p>
+
+<p><img src ="medias/computer-controlled-cutting-dome-reference.jpg" alt="dome-reference" /></p>
+
+<h2>Design</h2>
+
+<p>I wanted to build a geodesic dome made up of two triangular faces and a joint. But because the structure of a geodesic dome is mainly made up of sticks instead of faces, finding the documentation was not as easy as expected. Finally, <a href="https://simplydifferently.org/Geodesic_Dome_Notes?page=3#2V%20Icosahedron%20Dome">this website</a> helped me to find the geometric values.</p>
+
+<p><img src ="medias/computer-controlled-cutting-dome-construction.png" alt="dome-construction" /></p>
+
+<ul>
+<li>30 x triangle A-A-B (55.57°, 55.57°, 68.86°)</li>
+<li>10 x triangle B-B-B (60.00°, 60.00°, 60.00°) </li>
+<li>55 connectors (with an angle of 18°)</li>
+</ul>
+
+<p><img src ="medias/computer-controlled-cutting-dome-freecad-0.jpeg" alt="dome-freecad-0" /></p>
+
+<p>I used FreeCAD to design the dome elements. I first filled out a spreadsheet with the parameters that I collected, so that I could use these parametric values to design the different parts and be able to change things quickly in case of change.</p>
+
+<p><img src ="medias/computer-controlled-cutting-dome-freecad-3.jpeg" alt="dome-freecad-3" /></p>
+
+<p>Finding the kerf was a key point in this project because the pieces had to fit perfectly to keep the entire structure as solid as it should be. Due to the machine and its parameters, the material I use (4mm plywood), the bleeding value is <code>0.15mm</code>.</p>
+
+<p><img src ="medias/computer-controlled-cutting-dome-freecad-1.jpeg" alt="dome-freecad-1" /></p>
+
+<p>I added this value for the joint measurement, because the part had to fit into another. The lasercut decreases the size of the part, so by adding the value before cutting, I guarantee that the end result will be the expected result.</p>
+
+<p>And vice versa for the opposite part.</p>
+
+<p><img src ="medias/computer-controlled-cutting-dome-freecad-2.jpeg" alt="dome-freecad-2" /></p>
+
+<h3>Nesting</h3>
+
+<p>In order to avoid wasting material and time (and therefore energy), I had to nest all of my shapes (95 in total) together as compact as possible. To achieve this perilous mission, I used <a href="https://deepnest.io/">Deepnest</a>, an open source nesting application.</p>
+
+<p><img src ="medias/computer-controlled-cutting-dome-nesting.jpeg" alt="dome-nesting" /></p>
+
+<p>This tool does only one job and it does it very well.</p>
+
+<h2>Cutting</h2>
+
+<p><video controls preload="auto"><source type ="video/mp4" src ="medias/computer-controlled-cutting-dome-cutting.mp4"></video></p>
+
+<p><img src ="medias/computer-controlled-cutting-dome-cutting.jpg" alt="dome-cutting" /></p>
+
+<h2>Assembly</h2>
+
+<p><img src ="medias/computer-controlled-cutting-dome-construct-1.jpg" alt="dome-construct-1" /></p>
+
+<p><img src ="medias/computer-controlled-cutting-dome-construct-2.jpg" alt="dome-construct-2" /></p>
+
+<p><img src ="medias/computer-controlled-cutting-dome-construct-3.jpg" alt="dome-construct-3" /></p>
+
 <hr />
 
 <h1>The most common password</h1>
@@ -240,7 +294,7 @@
 
 <p><img src ="medias/computer-controlled-cutting-password-final.jpg" alt="password-final" /></p>
 
-<p>The font in use: is open-source; is designed by Raphaël Bastide; is called Terminal Grotesque. <a href="https://github.com/raphaelbastide/Terminal-Grotesque/">Find it on Github</a>.</p>
+<p>The font used: is open-source; is designed by Raphaël Bastide; is called Terminal Grotesque. <a href="https://github.com/raphaelbastide/Terminal-Grotesque/">Find it on Github</a>.</p>
 
   
 </article>
