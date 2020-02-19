@@ -193,7 +193,7 @@ And you, is this one of your passwords?
 
 ![password](password.png)
 
-The process of cutting something with a vinylcutter is straightforward:
+The vinylutter we have at Fab Lab Barcelona is a `Roland GX-24`. The process of cutting something with a vinylcutter is straightforward:
 
 - Export your .EPS file and import it into the software of the machine
 - Prepare your sheet of paper and insert it into the machine (from back to front)
