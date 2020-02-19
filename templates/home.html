@@ -8,11 +8,7 @@
     {% for assignment in assignments %}
       {% if not 'draft' in assignment.tags %}
         <li class="index__item">
-          {% if assignment.subtitle|length > 1 %}
-            <a href="{{ assignment.slug }}.html" class="index__link">{{ assignment.title }}: {{ assignment.subtitle }}</a>
-          {% else %}
-            <a href="{{ assignment.slug }}.html" class="index__link">{{ assignment.title }}</a>
-          {% endif %}
+          <a href="{{ assignment.slug }}.html" class="index__link">{{ assignment.title }}</a>
         </li>
       {% endif %}
     {% endfor %}
