@@ -157,7 +157,15 @@ I first did a test on a cardboard to check if my design was well done and if the
 
 ![dome-cardboard](dome-cardboard.jpg)
 
-I did another test of the same three pieces on the real sheet of plywood I wanted to use, ultimate test before cutting the whole sheet. It was sucessful, everything seemed to fit correctly. Let's (laser) cut it.
+I did another test of the same three pieces on the real sheet of plywood I wanted to use, ultimate test before cutting the whole sheet. It was sucessful, everything seemed to fit correctly.
+
+![plywood4mm-values](plywood4mm-values.jpg)
+
+In the lab, there are samples with cutting / engraving values on each material that could be used. I took the values from there. In my case:
+
+`Plywood 4mm` `Power: 75` `Speed: 0.5`
+
+Let's (laser) cut it.
 
 <video><source src="dome-cutting.mp4"></video>
 
