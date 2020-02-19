@@ -59,7 +59,7 @@ We chose to proceed with Cardboard 4mm and Plywood 4mm because we can find nice 
 
 <video><source src="test.mp4"></video>
 
-Here are the values we've collected by testing the Trotec Speedy 100.
+Here are the values we collected when testing the Trotec Speedy 100.
 
 | Machine | Material | Technique | Speed | Power |
 | --- | --- | --- | --- | --- |
@@ -85,7 +85,7 @@ Once we had the piece on EnRoute, after a few crashes of the software due, we th
 
 <video><source src="multicam-test.mp4"></video>
 
-We didn't do enough tests to know well the machine because of the time we'd at our disposition. It would be interesting to compare the results with the other machine to know how much energy it does require and how fast is the industrial machine compare to the others. Anyway, rere are the values we've collected by testing the Multicam2000.
+We didn't do enough tests to know well the machine because of the time we'd at our disposition. It would be interesting to compare the results with the other machine to know how much energy it does require and how fast is the industrial machine compare to the others. Anyway, here are the values we collected when testing the Multicam2000.
 
 | Machine | Material | Technique | Speed | Power |
 | --- | --- | --- | --- | --- |
@@ -118,7 +118,7 @@ A [geodesic dome](https://en.wikipedia.org/wiki/Geodesic_dome) is a structure ba
 
 ## Design
 
-I wanted to build a geodesic dome made up of two triangular faces and a joint. But because the structure of a geodesic dome is mainly made up of sticks instead of faces, finding the documentation was not as easy as expected. Finally, [this website](https://simplydifferently.org/Geodesic_Dome_Notes?page=3#2V%20Icosahedron%20Dome) helped me to find the geometric values.
+I wanted to build a geodesic dome made up of two triangular faces and a joint. But because the structure of a geodesic dome is mainly made up of sticks instead of faces, finding documentation was not as easy as expected. Finally, [this website](https://simplydifferently.org/Geodesic_Dome_Notes?page=3#2V%20Icosahedron%20Dome) helped me to find the geometric values.
 
 ![dome-construction](dome-construction.png)
 
@@ -137,7 +137,7 @@ Finding the kerf was a key point in this project because the pieces had to fit p
 
 ![dome-freecad-1](dome-freecad-1.jpeg)
 
-I added this value for the connecteor measurement, because the part had to fit into another. The lasercut decreases the size of the part, so by adding the value before cutting, I guarantee that the end result will be the expected result.
+I added this value for the connector measurement, because the part had to fit into another. The lasercut decreases the size of the part, so by adding the value before cutting, I guarantee that the end result will be the expected result.
 
 And vice versa for the opposite part.
 
@@ -159,11 +159,11 @@ I first did a test on a cardboard to check if my design was well done and if the
 
 I did another test of the same three pieces on the real sheet of plywood I wanted to use, ultimate test before cutting the whole sheet. It was sucessful, everything seemed to fit correctly.
 
-![plywood4mm-values](plywood4mm-values.jpg)
-
 In the lab, there are samples with cutting / engraving values on each material that could be used. I took the values from there. In my case:
 
 `Plywood 4mm` `Power: 75` `Speed: 0.5`
+
+![plywood4mm-values](plywood4mm-values.jpg)
 
 Let's (laser) cut it.
 
@@ -173,7 +173,7 @@ Let's (laser) cut it.
 
 ## Assembly
 
-Unforntunately, while assembling the dome, I realized that I messed up with the triangles sizes. I've defined the height of the triangle, from its base to its summit, instead of measuring one its side … precipitation error. I was running out of time and the machines were hyper busy at the lab, so I decided to stop my test. I had enough information about the use of the lasercutters and I didn't want to waste more wood.
+Unforntunately, when assembling the dome, I realized that I messed up with the triangles sizes. I've defined the height of the triangle, from its base to its summit, instead of measuring one of its side … precipitation error. I was running out of time and the machines were hyper busy at the lab, so I decided to stop my test. I had enough information about the use of the lasercutters and I didn't want to waste more wood.
 
 I ended with a weird half geodesic dome that isn't as solid as it should be but wich was super fun to build, from A to Z.
 
@@ -187,7 +187,9 @@ I ended with a weird half geodesic dome that isn't as solid as it should be but 
 
 # The most common password ever
 
-According to [this page](https://en.wikipedia.org/wiki/List_of_the_most_common_passwords), the most common password ever is … `123456`. It's so basic and evident I wanted to stick it on my laptop to send the subtle message to the people around me that their password is *maybe* not the best. And you, is this one of your passwords?
+According to [this page](https://en.wikipedia.org/wiki/List_of_the_most_common_passwords), the most common password ever is … `123456`. It's so basic and evident I wanted to stick it on my laptop to send the subtle message to the people around me that their password is *maybe* not the best.
+
+And you, is this one of your passwords?
 
 ![password](password.png)
 
