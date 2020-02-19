@@ -41,7 +41,7 @@ The laser burns away a portion of material when it cuts through. This is known a
 
 ## Get to know the machine
 
-I was part of two different groups for the group assignement, simply because I was around and it's always good to know a bit more about the differences between the machines.
+I'm part of two different groups for the group assignement, simply because I was around and it's always good to know a bit more about the differences between the machines.
 
 ### Trotec Speedy 100
 
@@ -73,7 +73,7 @@ Here are the values we've collected by testing the Trotec Speedy 100.
 
 And the other group I'm part of is composed by [Bruno](https://fabacademy.org/2020/labs/barcelona/students/bruno-molteni), [Marco](https://fabacademy.org/2020/labs/barcelona/students/marco-cataffo), [Roger](https://fabacademy.org/2020/labs/barcelona/students/roger-anguera), and me.
 
-Our idea was to use one of the Trotec machines, either the 100 or the 400, but they were being used so we finally decided to do it on the old and huge [Multicam 2000](https://wiki.fablabbcn.org/Multicam_2000_Laser_Cutter). Our instructor Mikel Llobera helped us throught the process. This would have been really impossible without him, given the complicated interface of the machine, not to mention that some parts of it are not working properly.
+Our idea was to use one of the Trotec machines, either the 100 or the 400, but they were being used so we finally decided to do it on the old and huge [Multicam 2000](https://wiki.fablabbcn.org/Multicam_2000_Laser_Cutter). Our instructors Mikel Llobera & Oscar González Fernández helped us throught the process. This would have been really impossible without them, given the complicated interface of the machine, not to mention that some parts of it are not working properly.
 
 ![multicam-interface](multicam-interface.jpg)
 
@@ -93,7 +93,7 @@ We didn't do enough tests to know well the machine because of the time we'd at o
 
 ## Basic test to calculate the kerf
 
-I've see on various documentations a basic test which we can execute in order to calculate the kerf of a specific machine on a specific material. We wanted to test it by ourself.
+I've seen on [various](http://fab.academany.org/2018/labs/fablabamsterdam/lasercut/group1.html) [documentations](https://fabacademy.org/2019/labs/waag/students/anne-vlaanderen/assignments/week4.html) a basic test which we can execute in order to calculate the kerf of a specific machine on a specific material. We wanted to test it by ourself.
 
 ![kerf-explanations](kerf-explanations.png)
 
@@ -130,14 +130,14 @@ I wanted to build a geodesic dome made up of two triangular faces and a joint. B
 
 I used FreeCAD to design the dome elements. I first filled out a spreadsheet with the parameters that I collected, so that I could use these parametric values to design the different parts and be able to change things quickly in case of change.
 
+
 ![dome-freecad-3](dome-freecad-3.jpeg)
 
-
-Finding the kerf was a key point in this project because the pieces had to fit perfectly to keep the entire structure as solid as it should be. Due to the machine and its parameters, the material I use (4mm plywood), the bleeding value is `0.15mm`.
+Finding the kerf was a key point in this project because the pieces had to fit perfectly to keep the entire structure as solid as it should be. Because the dome will be made of `plywood 4mm` and due to the machine and its parameters, the kerf value is `0.15mm`.
 
 ![dome-freecad-1](dome-freecad-1.jpeg)
 
-I added this value for the joint measurement, because the part had to fit into another. The lasercut decreases the size of the part, so by adding the value before cutting, I guarantee that the end result will be the expected result.
+I added this value for the connecteor measurement, because the part had to fit into another. The lasercut decreases the size of the part, so by adding the value before cutting, I guarantee that the end result will be the expected result.
 
 And vice versa for the opposite part.
 
@@ -147,11 +147,17 @@ And vice versa for the opposite part.
 
 In order to avoid wasting material and time (and therefore energy), I had to nest all of my shapes (95 in total) together as compact as possible. To achieve this perilous mission, I used [Deepnest](https://deepnest.io/), an open source nesting application.
 
-![dome-nesting](dome-nesting.jpeg)
-
 This tool does only one job and it does it very well.
 
+![dome-nesting](dome-nesting.jpeg)
+
 ## Cutting
+
+I first did a test on a cardboard to check if my design was well done and if the parts fit together, before cutting a more precious sheet of wood. It *seemed* to be the case.
+
+![dome-cardboard](dome-cardboard.jpg)
+
+I did another test of the same three pieces on the real sheet of plywood I wanted to use, ultimate test before cutting the whole sheet. It was sucessful, everything seemed to fit correctly. Let's (laser) cut it.
 
 <video><source src="dome-cutting.mp4"></video>
 
@@ -159,19 +165,21 @@ This tool does only one job and it does it very well.
 
 ## Assembly
 
+Unforntunately, while assembling the dome, I realized that I messed up with the triangles sizes. I've defined the height of the triangle, from its base to its summit, instead of measuring one its side … precipitation error. I was running out of time and the machines were hyper busy at the lab, so I decided to stop my test. I had enough information about the use of the lasercutters and I didn't want to waste more wood.
+
+I ended with a weird half geodesic dome that isn't as solid as it should be but wich was super fun to build, from A to Z.
+
 ![dome-construct-1](dome-construct-1.jpg)
 
 ![dome-construct-2](dome-construct-2.jpg)
 
 ![dome-construct-3](dome-construct-3.jpg)
 
-
-
 ---
 
-# The most common password
+# The most common password ever
 
-According to [this page](https://en.wikipedia.org/wiki/List_of_the_most_common_passwords), the most common password is … `123456`. It's so basic and evident I wanted to stick it on my laptop to send the subtle message to the people around me that their password is *maybe* not the best. And you, is this one of your passwords?
+According to [this page](https://en.wikipedia.org/wiki/List_of_the_most_common_passwords), the most common password ever is … `123456`. It's so basic and evident I wanted to stick it on my laptop to send the subtle message to the people around me that their password is *maybe* not the best. And you, is this one of your passwords?
 
 ![password](password.png)
 
@@ -192,7 +200,11 @@ A good practice is to apply several strips of adhesive tape on the cut sheet to 
 
 The font used: is open-source; is designed by Raphaël Bastide; is called Terminal Grotesque. [Find it on Github](https://github.com/raphaelbastide/Terminal-Grotesque/).
 
+---
 
+# The files
 
-
-
+- Lasercutting tester (DXF) 
+- Kerf tester (FreeCAD / DXF)
+- Geodesic dome parts (FreeCAD / DXF)
+- The most common password ever (EPS)

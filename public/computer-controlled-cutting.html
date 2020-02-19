@@ -73,7 +73,7 @@
 
 <h2>Get to know the machine</h2>
 
-<p>I was part of two different groups for the group assignement, simply because I was around and it's always good to know a bit more about the differences between the machines.</p>
+<p>I'm part of two different groups for the group assignement, simply because I was around and it's always good to know a bit more about the differences between the machines.</p>
 
 <h3>Trotec Speedy 100</h3>
 
@@ -141,7 +141,7 @@
 
 <p>And the other group I'm part of is composed by <a href="https://fabacademy.org/2020/labs/barcelona/students/bruno-molteni">Bruno</a>, <a href="https://fabacademy.org/2020/labs/barcelona/students/marco-cataffo">Marco</a>, <a href="https://fabacademy.org/2020/labs/barcelona/students/roger-anguera">Roger</a>, and me.</p>
 
-<p>Our idea was to use one of the Trotec machines, either the 100 or the 400, but they were being used so we finally decided to do it on the old and huge <a href="https://wiki.fablabbcn.org/Multicam_2000_Laser_Cutter">Multicam 2000</a>. Our instructor Mikel Llobera helped us throught the process. This would have been really impossible without him, given the complicated interface of the machine, not to mention that some parts of it are not working properly.</p>
+<p>Our idea was to use one of the Trotec machines, either the 100 or the 400, but they were being used so we finally decided to do it on the old and huge <a href="https://wiki.fablabbcn.org/Multicam_2000_Laser_Cutter">Multicam 2000</a>. Our instructors Mikel Llobera &amp; Oscar González Fernández helped us throught the process. This would have been really impossible without them, given the complicated interface of the machine, not to mention that some parts of it are not working properly.</p>
 
 <p><img src ="medias/computer-controlled-cutting-multicam-interface.jpg" alt="multicam-interface" /></p>
 
@@ -178,7 +178,7 @@
 
 <h2>Basic test to calculate the kerf</h2>
 
-<p>I've see on various documentations a basic test which we can execute in order to calculate the kerf of a specific machine on a specific material. We wanted to test it by ourself.</p>
+<p>I've seen on <a href="http://fab.academany.org/2018/labs/fablabamsterdam/lasercut/group1.html">various</a> <a href="https://fabacademy.org/2019/labs/waag/students/anne-vlaanderen/assignments/week4.html">documentations</a> a basic test which we can execute in order to calculate the kerf of a specific machine on a specific material. We wanted to test it by ourself.</p>
 
 <p><img src ="medias/computer-controlled-cutting-kerf-explanations.png" alt="kerf-explanations" /></p>
 
@@ -237,11 +237,11 @@
 
 <p><img src ="medias/computer-controlled-cutting-dome-freecad-3.jpeg" alt="dome-freecad-3" /></p>
 
-<p>Finding the kerf was a key point in this project because the pieces had to fit perfectly to keep the entire structure as solid as it should be. Due to the machine and its parameters, the material I use (4mm plywood), the bleeding value is <code>0.15mm</code>.</p>
+<p>Finding the kerf was a key point in this project because the pieces had to fit perfectly to keep the entire structure as solid as it should be. Because the dome will be made of <code>plywood 4mm</code> and due to the machine and its parameters, the kerf value is <code>0.15mm</code>.</p>
 
 <p><img src ="medias/computer-controlled-cutting-dome-freecad-1.jpeg" alt="dome-freecad-1" /></p>
 
-<p>I added this value for the joint measurement, because the part had to fit into another. The lasercut decreases the size of the part, so by adding the value before cutting, I guarantee that the end result will be the expected result.</p>
+<p>I added this value for the connecteor measurement, because the part had to fit into another. The lasercut decreases the size of the part, so by adding the value before cutting, I guarantee that the end result will be the expected result.</p>
 
 <p>And vice versa for the opposite part.</p>
 
@@ -251,17 +251,27 @@
 
 <p>In order to avoid wasting material and time (and therefore energy), I had to nest all of my shapes (95 in total) together as compact as possible. To achieve this perilous mission, I used <a href="https://deepnest.io/">Deepnest</a>, an open source nesting application.</p>
 
-<p><img src ="medias/computer-controlled-cutting-dome-nesting.jpeg" alt="dome-nesting" /></p>
-
 <p>This tool does only one job and it does it very well.</p>
 
+<p><img src ="medias/computer-controlled-cutting-dome-nesting.jpeg" alt="dome-nesting" /></p>
+
 <h2>Cutting</h2>
+
+<p>I first did a test on a cardboard to check if my design was well done and if the parts fit together, before cutting a more precious sheet of wood. It <em>seemed</em> to be the case.</p>
+
+<p><img src ="medias/computer-controlled-cutting-dome-cardboard.jpg" alt="dome-cardboard" /></p>
+
+<p>I did another test of the same three pieces on the real sheet of plywood I wanted to use, ultimate test before cutting the whole sheet. It was sucessful, everything seemed to fit correctly. Let's (laser) cut it.</p>
 
 <p><video controls preload="auto"><source type ="video/mp4" src ="medias/computer-controlled-cutting-dome-cutting.mp4"></video></p>
 
 <p><img src ="medias/computer-controlled-cutting-dome-cutting.jpg" alt="dome-cutting" /></p>
 
 <h2>Assembly</h2>
+
+<p>Unforntunately, while assembling the dome, I realized that I messed up with the triangles sizes. I've defined the height of the triangle, from its base to its summit, instead of measuring one its side … precipitation error. I was running out of time and the machines were hyper busy at the lab, so I decided to stop my test. I had enough information about the use of the lasercutters and I didn't want to waste more wood.</p>
+
+<p>I ended with a weird half geodesic dome that isn't as solid as it should be but wich was super fun to build, from A to Z.</p>
 
 <p><img src ="medias/computer-controlled-cutting-dome-construct-1.jpg" alt="dome-construct-1" /></p>
 
@@ -271,9 +281,9 @@
 
 <hr />
 
-<h1>The most common password</h1>
+<h1>The most common password ever</h1>
 
-<p>According to <a href="https://en.wikipedia.org/wiki/List_of_the_most_common_passwords">this page</a>, the most common password is … <code>123456</code>. It's so basic and evident I wanted to stick it on my laptop to send the subtle message to the people around me that their password is <em>maybe</em> not the best. And you, is this one of your passwords?</p>
+<p>According to <a href="https://en.wikipedia.org/wiki/List_of_the_most_common_passwords">this page</a>, the most common password ever is … <code>123456</code>. It's so basic and evident I wanted to stick it on my laptop to send the subtle message to the people around me that their password is <em>maybe</em> not the best. And you, is this one of your passwords?</p>
 
 <p><img src ="medias/computer-controlled-cutting-password.png" alt="password" /></p>
 
@@ -295,6 +305,17 @@
 <p><img src ="medias/computer-controlled-cutting-password-final.jpg" alt="password-final" /></p>
 
 <p>The font used: is open-source; is designed by Raphaël Bastide; is called Terminal Grotesque. <a href="https://github.com/raphaelbastide/Terminal-Grotesque/">Find it on Github</a>.</p>
+
+<hr />
+
+<h1>The files</h1>
+
+<ul>
+<li>Lasercutting tester (DXF) </li>
+<li>Kerf tester (FreeCAD / DXF)</li>
+<li>Geodesic dome parts (FreeCAD / DXF)</li>
+<li>The most common password ever (EPS)</li>
+</ul>
 
   
 </article>
