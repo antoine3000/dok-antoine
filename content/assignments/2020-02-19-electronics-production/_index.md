@@ -1,4 +1,5 @@
 ---
-title: Electronics production (in progress)
+title: Electronics production
+tags: draft
 ---
 
