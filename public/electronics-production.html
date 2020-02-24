@@ -32,7 +32,59 @@
       Electronics production
     
   </h1>
-  <h3>group assignment</h3>
+  <p>It's the 4th week of the Fab Academy, we're now exploring the process of electronics production: How to make a <a href="https://en.wikipedia.org/wiki/Printed_circuit_board">printed circuit board</a> (PCB) from a blank board covered by a sheet of copper and multiple components.</p>
+
+<h1>Testing the machine</h1>
+
+<h1>Making an in-circuit programmer</h1>
+
+<blockquote>
+  <p>In-system programming (ISP), also called in-circuit serial programming (ICSP), is the ability of some programmable logic devices, microcontrollers, and other embedded devices to be programmed while installed in a complete system, rather than requiring the chip to be programmed prior to installing it into the system.</p>
+  
+  <blockquote>
+    <p><a href="https://en.wikipedia.org/wiki/In-system_programming">In-circuit programming, Wikipedia.</a></p>
+  </blockquote>
+</blockquote>
+
+<h1>FTDI</h1>
+
+<h2>Milling</h2>
+
+<p>The drills are super fragile, we have to manipulate them with extra attention.</p>
+
+<h3>Prepare the files (traces and interior)</h3>
+
+<ul>
+<li>Import the PNG in <a href="http://fabmodules.org/">Fabmodules</a></li>
+<li>Output:<code>Roland Mill</code></li>
+<li>Process for interior: <code>PCB traces (1/64)</code></li>
+<li>Process for traces: <code>PCB outline (1/32)</code></li>
+<li>Machine: <code>SRM-20</code></li>
+<li>Speed (mm/s): <code>4</code></li>
+<li>x0, y0, z0: <code>0, 0, 0</code></li>
+<li>zjog (mm): <code>12</code></li>
+<li><code>Calculate</code> &amp; <code>Save</code></li>
+</ul>
+
+<h3>Milling process</h3>
+
+<ul>
+<li>Tape the back of a PCB with double-face tape (don't overlap to avoid different levels)</li>
+<li>Place the PCB on the board of the machine (parallel is better)</li>
+<li>Change the drill depending on the task you're going to achieve (32 or 64)</li>
+<li>Set up the X and Y coordinates depending on the design and the space available on the PCB</li>
+<li>Set up the Z so the drill touch the PCB, even a bit more if necessary</li>
+<li>Load the files and press the <code>setup</code> button.</li>
+</ul>
+
+<p>#### Attention
+- </p>
+
+<h2>Soldering</h2>
+
+<hr />
+
+<h3>group assignment</h3>
 
 <p>characterize the design rules for your PCB production process</p>
 

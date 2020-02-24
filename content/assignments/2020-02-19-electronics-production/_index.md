@@ -3,6 +3,18 @@ title: Electronics production
 tags: draft
 ---
 
+It's the 4th week of the Fab Academy, we're now exploring the process of electronics production: How to make a [printed circuit board](https://en.wikipedia.org/wiki/Printed_circuit_board) (PCB) from a blank board covered by a sheet of copper and multiple components.
+
+
+# Testing the machine
+
+# Making an in-circuit programmer
+
+> In-system programming (ISP), also called in-circuit serial programming (ICSP), is the ability of some programmable logic devices, microcontrollers, and other embedded devices to be programmed while installed in a complete system, rather than requiring the chip to be programmed prior to installing it into the system.
+> > [In-circuit programming, Wikipedia.](https://en.wikipedia.org/wiki/In-system_programming)
+
+
+
 # FTDI
 
 ## Milling

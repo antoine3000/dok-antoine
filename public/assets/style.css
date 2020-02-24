@@ -10,7 +10,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   --color-heading-high: tomato;
   --color-heading-low: royalBlue;
   --color-light: lemonChiffon;
-  --font-size-base: 1.18em;
+  --font-family: Lucida Console, Lucida Sans Typewriter, monaco, Bitstream Vera Sans Mono, monospace;
+  --font-size-base: 14px;
   --spacing: 30px;
   --mobile: 600px;
   --border-sm: 1px;
@@ -23,7 +24,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 /* base */
-html {font: var(--font-size-base)/1.7 monospace}
+html {font: var(--font-size-base)/1.7 var(--font-family)}
 body {padding: var(--spacing); color: var(--color-base); background-color: var(--color-body);}
 a {color: var(--color-action); text-decoration: none;}
 img {max-width: 100%;}
