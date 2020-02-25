@@ -145,3 +145,11 @@ Keep the password in memory for the next 8 hours: `git config --global credentia
 Add a shortcut to add and commit at the same time: `git config --global alias.ac '!git add -A && git commit'` and then `git ac -m "message"`
 
 Configure an alias to display the commit-tree:  `git config --global alias.gg 'log --oneline --abbrev-commit --all --graph --decorate --color'` and then use `git gg`
+
+---
+
+# MISC
+
+### Video compression
+
+`ffmpeg -i video.mp4 -b 1000000 compressed-video.mp4`

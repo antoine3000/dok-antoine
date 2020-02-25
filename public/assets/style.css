@@ -62,7 +62,7 @@ h1.article__title {margin-top: 0;}
 .article p {margin-bottom: 0.6em;}
 .article img {display: block;}
 .article a {text-decoration: underline;}
-ol {margin-left: 1em;}
+ol {list-style: decimal-leading-zero; margin-left: 2.4em;}
 ul {list-style: none;}
 ul li {position: relative; padding-left: 1em;}
 ul li:before { content: "-"; position: absolute; top: 0; left: 0; color: var(--color-heading-high);}
@@ -82,7 +82,4 @@ ol li::marker {color: var(--color-heading-high);}
 .article th {border-bottom: var(--border-sm) solid var(--color-base);}
 .article table tr:nth-child(even) {background-color: var(--color-light);}
 .article video {display: block; width: 100%;}
-.article img, .article video, .article table, .article ul { margin: 1.4em 0;}
-
-/* index */
-ol.index__list {list-style: decimal-leading-zero; margin-left: 2.4em;}
+.article img, .article video, .article table, .article ul,.article ol { margin-top: 1.4em; margin-bottom: 1.4em;}

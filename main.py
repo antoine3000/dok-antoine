@@ -61,7 +61,7 @@ for content_type in content_types:
                  # markdown file
                 with open(file_path, 'r') as file:
                     ARTICLES[article_slug] = markdown(
-                        file.read(), extras=['metadata', 'tables'])
+                        file.read(), extras=['metadata', 'tables', 'target-blank-links'])
             else:
                 # media file
                 media_file_path = 'public/medias/{slug}'.format(slug=article_slug + '-' + item)
@@ -102,10 +102,10 @@ for content_type in content_types:
         os.makedirs(os.path.dirname(article_file_path), exist_ok=True)
         img_tag = '<img src ="medias/' + article_data['slug'] + '-'
         video_tag = '<video controls preload="auto"><source type ="video/mp4" src ="medias/' + article_data['slug'] + '-'
-        doc_link = '<a href="medias/' + article_data['slug'] + '-'
+        doc_link = '<a target="_blank" href="medias/' + article_data['slug'] + '-'
         article_html = article_html.replace('<img src="', img_tag)
         article_html = article_html.replace('<video><source src="', video_tag)
-        article_html = article_html.replace('<a href="files/', doc_link)
+        article_html = article_html.replace('<a target="_blank" href="files/', doc_link)
         with open(article_file_path, 'w') as file:
             file.write(article_html)
 
