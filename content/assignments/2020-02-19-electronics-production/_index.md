@@ -96,10 +96,29 @@ We had some issues during the process:
 
 ![pcb-result](pcb-result.jpg)
 
+It is a good practice to test the board with a multimeter between to milling and the soldering, to be sure that the circuits conduct the electricity as they should.
+
+![pcb-test](pcb-test.jpg)
+
+## Soldering components
+
+> Soldering is a process in which two or more items are joined together by melting and putting a filler metal (solder) into the joint, the filler metal having a lower melting point than the adjoining metal.
+> > [Soldering, Wikipedia.](https://en.wikipedia.org/wiki/Soldering)
+
+Once I had the board ready, I could start the soldering process. But before that, I first start the collect the components I needed and sticked them to a sheet of paper to be sure not to lose them.
+
+![shopping-list](shopping-list.jpg)
+
+To solder electronics components on a board, it is easier to start with the central parts to the external parts and from the most complex to the simplest.
+
+The first few minutes of soldering are a bit frustrating, the parts are very small and precision is not easy on this scale. And we've to begin with the most complex part (to get it done before continuing). But once I got used to it, it became a very pleasant moment of mindfulness.
+
+![soldering-macro](soldering-macro.jpg)
+
+![ftdi-updi-result](ftdi-updi-result.jpg)
+![ftdi-updi](ftdi-updi.jpg)
 
 
-
-## Soldering process
 
 ---
 
