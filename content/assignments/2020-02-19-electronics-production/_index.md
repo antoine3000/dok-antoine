@@ -124,6 +124,14 @@ The first few minutes of soldering are a bit frustrating, the parts are very sma
 
 # Testing the compact milling machine
 
+This week, in order to understand the machining process, I teamed up with almost everybody in the lab. As I said, the machines are always busy and it's been difficult to find extra time for the group assignement.
 
+The goal of this group assignment is for us to characterize the potential gaps between our traces, or how thin the traces could be.
 
-![test-file](test-file.png)
+We used the Roland MonoFab SRM-20 machine to mill this test file:
+
+![linetest](linetest.png)
+
+![linetest](testline-2.jpg)
+
+![linetest](testline-1.jpg)
