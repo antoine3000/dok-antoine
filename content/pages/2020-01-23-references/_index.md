@@ -32,7 +32,7 @@ title: References
 ## Art installation
 
 - One Hundred and Eight - Power of Making, Nils Völker [(link)](https://vimeo.com/27197947)
-- Digital Installations and Interactive Spaces [(link)](https://architizer.com/blog/inspiration/collections/digital-art-projection-installations/)
+- Behaviours of Light [(link)](https://vimeo.com/85159748)
 
 ## Robotic
 
