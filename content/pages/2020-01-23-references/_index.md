@@ -32,10 +32,14 @@ title: References
 ## Art installation
 
 - One Hundred and Eight - Power of Making, Nils Völker [(link)](https://vimeo.com/27197947)
+- Digital Installations and Interactive Spaces [(link)](https://architizer.com/blog/inspiration/collections/digital-art-projection-installations/)
 
 ## Robotic
 
 - Experiments in Biomimetic Technology Applied to Architecture Components [(link)](https://www.youtube.com/watch?v=MhhFja6tghc)
+- Robotic architecture [(link)](https://www.youtube.com/watch?v=m5VWHUvKt48)
+- Soft Roboto [(link)](https://www.youtube.com/watch?v=q2Q-taHAo7Q)
+- Soft Robots Inspired by Origami [(link)](https://www.youtube.com/watch?v=ARSKahntQDA)
 
 ## Fab Academy References (related to plants)
 
