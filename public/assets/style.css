@@ -10,7 +10,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   --color-heading-high: tomato;
   --color-heading-low: royalBlue;
   --color-light: lemonChiffon;
-  --font-family: Courier New, Courier, monospace;;
+  --font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --font-size-base: 14px;
   --spacing: 30px;
   --mobile: 600px;
