@@ -21,6 +21,9 @@ title: References
 - Research progress on electrical signals in higher plants [(link)](https://www.sciencedirect.com/science/article/pii/S1002007109000161)
 - Meet the Sonic Artist Making Music with Plants: Sound Builders [(link)](https://www.youtube.com/watch?v=wYU18eiiFt4)
 - Bully A Plant: Say No To Bullying [(link)](https://www.youtube.com/watch?v=Yx6UgfQreYY&feature=youtu.be)
+- Singing plant [(link)](https://www.instructables.com/id/Singing-plant-Make-your-plant-sing-with-Arduino-/)
+- Music of the plants [(link)](https://upliftconnect.com/music-of-the-plants/)
+- Plant talk [(link)](https://www.the-scientist.com/features/plant-talk-38209)
 
 ## Communication
 
@@ -29,5 +32,18 @@ title: References
 ## Art installation
 
 - One Hundred and Eight - Power of Making, Nils Völker [(link)](https://vimeo.com/27197947)
+
+## Robotic
+
+- Experiments in Biomimetic Technology Applied to Architecture Components [(link)](https://www.youtube.com/watch?v=MhhFja6tghc)
+
+## Fab Academy References (related to plants)
+
+- The hostile plant [(link)](http://fab.cba.mit.edu/classes/863.18/EECS/people/miana/finals.html)
+- hello.plant [(link)](http://fab.cba.mit.edu/classes/863.09/people/lifeform/07/index.html)
+- Walking plants [(link)](http://fab.cba.mit.edu/classes/863.10/people/hiro.tanaka/pages/page_01.html)
+- Breathing Flowerpot [(link)](http://fab.cba.mit.edu/classes/863.19/Harvard/people/hsingh/project.html)
+- Automated indoor hanging garden [(link)](http://fab.academany.org/2019/labs/berytech/students/nagi-abdelnour/final%20project%20dev.html)
+- Replicating superhydrophobic plant leaves [(link)](http://archive.fabacademy.org/archives/2017/woma/students/238/assignment12.html)
 
 
