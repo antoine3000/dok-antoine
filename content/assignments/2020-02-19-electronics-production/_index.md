@@ -115,7 +115,9 @@ The first few minutes of soldering are a bit frustrating, the parts are very sma
 ![soldering-macro](soldering-macro.jpg)
 ![soldering-ftdi](soldering-ftdi.JPG)
 
-Unfortunately, I forgot to take pictures during the soldering process, I was totally into it, I guess. Anyway, here are the results of the two boards, the FTDI and the UPDI.
+Unfortunately, I forgot to take pictures during the soldering process, I was totally into it, I guess. [This tutorial](https://www.youtube.com/watch?v=QKbJxytERvg) helped me understand how to do.
+
+Here are the results of the two boards, the FTDI and the UPDI.
 
 ![ftdi-updi-result](ftdi-updi-result.jpg)
 ![ftdi-updi](ftdi-updi.jpg)
