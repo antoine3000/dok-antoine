@@ -16,15 +16,27 @@ tags: draft
 2. Unzip it in any folder.
 3. Open a terminal and from this folder run `./Meshroom` to launch the GUI.
 
+### How-to
+
+1. Take pictures around the object you want to scan
+2. Import them into Meshroom
+
 # Print a 3D test file
 
 For this week's group assignement, I teamed up with [Tue](https://fabacademy.org/2020/labs/barcelona/students/tue-ngo/) and [David](https://fabacademy.org/2020/labs/barcelona/students/david-prieto/). We picked a [test file](https://www.thingiverse.com/thing:1363023) from Thingiverse in order to test different features of one of the 3D printers we have in Fab Lab Barcelona, the [Creality3D CR-10 S5 3D](https://www.creality3d.shop/products/creality-cr-10s-s5-3d-printer-diy-kit-large-printing-size-500x500x500mm).
 
+![test file](testfilecad.jpeg)
+
 This file allows us to test these features: Z-height check, warp check, spike, hole in wall, raft test, overhang Steps 50° - 70°, 2 different extrusion widths: 0.48mm & 0.4mm.
 
-There is a computer in the printing room, attached to the machines, that have all the presets of the different printers. It's therefore easier to directly use it in order to slice our model instead of searching the presets and install them on my personal laptop.
+## Slicing
 
-This computer use [Ultimaker Cura 4.4.0](https://ultimaker.com/software/ultimaker-cura), wich is unfortunately not open-source. I'll try later to slice my models myself using [Slic3r](https://slic3r.org/) wich seems to be a very good alternative. The difference seems to be the interface that is less user friendly, but does it really matter?
+To be able to print a 3D model, we have to send instructions to the printer, wich are written in [g-code](https://en.wikipedia.org/wiki/G-code) and tells the motors where to move.
+To prepare the g-code, we have to *slice* our 3D model (.STL), to simulate and anticipate how the model will be printed, according to the printer settings and gravity law.
+
+![cura lab](cura-lab.JPG)
+
+At Fab Lab Barcelona, a computer with [Ultimaker Cura](https://ultimaker.com/software/ultimaker-cura) is attached to the machines, with all the presets of the differents printers saved in it. It's therefore easier to directly use it in order to slice our model instead of searching the presets and install them on our personal laptop.
 
 ## Specific settings that we'd to specify
 
@@ -32,6 +44,22 @@ This computer use [Ultimaker Cura 4.4.0](https://ultimaker.com/software/ultimake
 - Wall thickness: `0.8mm` (= 2 lines)
 - Infill: `10%`
 - Print speed: `60mm/s` (= maximum for this printer)
+
+## Printing
+
+The filament we use is a `PLA 1.75mm`. It's a plant-based material made from starches like soybeans or corn. It needs to be heated at 190-200C° to be used.
+
+![testfileprint](testfileprint.JPG)
+
+The printing was done in ~50 minutes without any troubles.
+
+![testprint](testprint.JPG)
+![testdetail](testdetail.JPG)
+
+## Results
+
+As we can see in the images above, the definition of the print is quite good, the details are respected and the print angles can be large.
+
 
 ---
 
