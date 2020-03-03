@@ -18,6 +18,8 @@ content_types = ['posts', 'pages', 'assignments']
 base_width = 1200
 media_ext = ['jpg', 'jpeg', 'png']
 METADATA = {}
+folder_html = 'public/'
+folder_medias = 'public/medias/'
 # Temporary fix
 warnings.filterwarnings("ignore", "(Possibly )?corrupt EXIF data", UserWarning)
 
@@ -35,8 +37,6 @@ def image_util(old_file, new_file):
             img.save(new_file)
 
 # purge public folder
-folder_html = 'public/'
-folder_medias = 'public/medias/'
 for file_name in os.listdir(folder_html):
     if file_name.endswith('.html'):
         os.remove(folder_html + file_name)
@@ -156,3 +156,14 @@ for key, value in METADATA.items():
     filename = 'public/' + index_name + '.html'
     with open(filename, 'w') as file:
         file.write(index_html)
+
+# counting
+total_page = 0
+total_media = 0
+for file_name in os.listdir(folder_html):
+    if file_name.endswith('.html'):
+        total_page = total_page + 1
+for file_name in os.listdir(folder_medias):
+        total_media = total_media + 1
+print('Processed pages  :', total_page)
+print('Processed medias :', total_media)
