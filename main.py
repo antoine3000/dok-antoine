@@ -165,5 +165,4 @@ for file_name in os.listdir(folder_html):
         total_page = total_page + 1
 for file_name in os.listdir(folder_medias):
         total_media = total_media + 1
-print('Processed pages  :', total_page)
-print('Processed medias :', total_media)
+print('The website consists of', total_page, 'pages and', total_media, 'medias')
