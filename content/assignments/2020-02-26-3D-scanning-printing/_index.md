@@ -2,9 +2,7 @@
 title: 3D scanning and printing
 ---
 
-3D printing is not as simple as pressing the *print* button and waiting for the model to be printed. It is crucial to know how to prepare a 3D model, how the printer works and what are its limits, and how to balance printing time with print quality.
-
-For this week, I'll discover a whole new world, that of 3D printing. I'm going to test a printer, scan and print something.
+3D printing is not as simple as pressing the *print* button and waiting for the model to be printed. It is crucial to know how to prepare a 3D model, how the printer works and what are its limits, and how to balance printing time with print quality. This week, I'm going to test a printer, scan and print something.
 
 # Printing a 3D test file
 
@@ -12,7 +10,15 @@ For this week's group assignement, I teamed up with [Tue](https://fabacademy.org
 
 ![test file](testfilecad.jpeg)
 
-This file allows us to test these features: Z-height check, warp check, spike, hole in wall, raft test, overhang Steps 50° - 70°, 2 different extrusion widths: 0.48mm & 0.4mm.
+This file allows us to test these features:
+
+- z-height check
+- warp check
+- spike
+- hole in wall
+- raft test
+- overhang Steps 50° - 70°
+- 2 different extrusion widths: 0.48mm & 0.4mm
 
 ## Slicing
 
@@ -50,7 +56,7 @@ As we can see in the images above, the definition of the print is quite good, th
 
 ---
 
-# Print something - An oloid
+# Oloid
 
 I'm exploring different types of shapes that could eventually be interesting regarding my final project. One of these is the oloid.
 
@@ -83,17 +89,19 @@ hull() {
 }
 </pre>
 
+Here is the code I wrote to model the oloid. It's simple isn't it?
+
 <video><source src="oloid-openscad.mp4"></video>
 
 ## Slicing
 
 The slicing process of the oloid model was very interesting because I had to add supports to keep the shape in place during printing. It helped me understand how supports work and how to generate them in a slicer software, which is actually super easy.
 
-To do so, I used [Ultimaker Cura](https://ultimaker.com/software/ultimaker-cura) and its pre-configured *Support* options. In order to reduce the printing time and because I knew it from my previous test, I increased the overhang angle to 55° instead of 45°.
+To do so, I used [Ultimaker Cura](https://ultimaker.com/software/ultimaker-cura) and its pre-configured *Support* options. In order to reduce the printing time and because I knew it from my previous test, I increased the overhang angle to 55° (instead of 45°).
 
 ## Printing
 
-Printing this oloid wasn't as easy as the first test I did. My first attempt gave something like this:
+Printing this oloid was'nt as easy as the first test I did. My first attempt failed and I had to stop printing. It gave something like this:
 
 ![oloid-fail](oloid-fail.jpg)
 
@@ -105,7 +113,9 @@ Finally, Mikel discovered that the bed wasn't flat due to a wrong manipulation o
 
 <video><source src="oloid-print-1.mp4"></video>
 
-The very end of the printing was a bit problematic too. The supports didn't support the model enough and everything started to move according to the movements of the printer . It wasn't that problematic at first, but at one point it really seemed like the oloid could fall. Fortunately, I was around the printer and I could hold my piece in place using my finger. That is something I'll have to consider the next time I have to think about supports.
+The very end of the printing was a bit problematic too. The supports didn't support the model enough and everything started to move according to the movements of the printer.
+
+At one point it really seemed like the oloid could fall. Fortunately, I was around the printer and I could hold my piece in place using my finger. That is something I'll have to consider the next time I have to think about supports.
 
 <video><source src="oloid-print-2.mp4"></video>
 
@@ -138,9 +148,9 @@ Meshroom needs a [CUDA-Enabled GPU](https://en.wikipedia.org/wiki/CUDA) in order
 
 ### Installation
 
-1. Download the binary from Meshroom home page
+1. Download the binary from [Meshroom home page](https://alicevision.org/#meshroom)
 2. Unzip it in any folder.
-3. Open a terminal and from this folder run `./Meshroom` to launch the GUI. In my case I can type ` ~/Documents/Apps/Meshroom-2019.2.0/./Meshroom` to launch the app.
+3. Open a terminal and from this folder run `./Meshroom` to launch the GUI. In my case I've to type ` ~/Documents/Apps/Meshroom-2019.2.0/./Meshroom` to launch the app.
 
 ### How-to
 
@@ -166,13 +176,13 @@ I knew that Meshroom wasn't the problem because I tried with a set of pictures v
 
 Finally, a little desperate, I went to my roof to get some fresh air and I saw this plant pot, surrounded by tiles forming a grid around the object. It looked like a last try before giving up.
 
-And it more or less worked… I got the shape of the pot, its structure and texture. Maybe I should have taken a lot more pictures of the plant, all its leaves and its little detail to get it rendered in the final scan.
-
 <video><source src="scan-success.mp4"></video>
+
+And it more or less worked… I got the shape of the pot, its structure and texture. Maybe I should have taken a lot more pictures of the plant, all its leaves and its little detail to get it rendered in the final scan.
 
 ![scan-success](scan-success-2.jpeg)
 
-My tips for scanning an object with the photogrammetry process:
+### My tips for scanning an object with the photogrammetry process
 
 - the bigger the better
 - Preferably outside, with natural light
@@ -180,4 +190,6 @@ My tips for scanning an object with the photogrammetry process:
 - A lot of pictures are needed (~70) from every angle
 - Matt objects are the easiest (by far!)
 
+### Conclusion
 
+The result is clearly worse than I imagined when thinking about photogrammetry. But it's an exploration, between cutting-edge technology and open source software driven by the community, between a beginner (me) and a very specific technique. I will have to practice taking appropriate photos for photogrammetry if I want to scan something for a real need.
