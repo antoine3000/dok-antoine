@@ -1,6 +1,5 @@
 ---
 title: Electronics design
-tags: draft
 ---
 
 I knew almost nothing about electronics before following the Fab Academy. I still have to learn and understand the very basics of a circuit and its composents, but also of electricity and its flow. To do so, I designed a pomodoro timer from scratch. I've learn a lot throughout the process and I've the feeling that this new knowledge will play a key role in what I'll do for my personal project and afterwards.
@@ -31,7 +30,7 @@ I also need 6 resistor (one for each of the inputs/outputs), a capacitor, a FTDI
 
 ### Schematics
 
-### PCB design
+### PCB
 
 ### Exporting
 (Inkscape & Gimp & Fabmodules)
