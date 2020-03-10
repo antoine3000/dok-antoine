@@ -32,15 +32,34 @@
       Electronics design
     
   </h1>
-  <h2>Basics of electronics</h2>
-
-<p>I knew almost nothing about electronics before following the Fab Academy. I still have to learn and understand the very basics of a circuit and its composents, but also of electricity and its flow. To do so, I designed a pomodoro timer from scratch. I've learn a lot throughout the process and I've the feeling that this new knowledge will play a key role in what I'll do for my personal project and afterwards.</p>
+  <p>I knew almost nothing about electronics before following the Fab Academy. I still have to learn and understand the very basics of a circuit and its composents, but also of electricity and its flow. To do so, I designed a pomodoro timer from scratch. I've learn a lot throughout the process and I've the feeling that this new knowledge will play a key role in what I'll do for my personal project and afterwards.</p>
 
 <hr />
 
-<h1>Pomodoro time</h1>
+<h1>Pomodoro timer</h1>
 
-<h2>What is it</h2>
+<p>I use a pomodoro timer daily to help me manage my time and effort in the tasks I want to accomplish. For now, I'm using <a target="_blank" href="https://github.com/JaDogg/pydoro">Pydoro</a>, an open source pomodoro terminal timer written in Python but I would like to build mine and have it physically next to my laptop.</p>
+
+<blockquote>
+  <p>The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. The technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks. Each interval is known as a pomodoro, from the Italian word for 'tomato', after the tomato-shaped kitchen timer that Cirillo used as a university student.</p>
+  
+  <blockquote>
+    <p><a target="_blank" href="https://en.wikipedia.org/wiki/Pomodoro_Technique">Pomodoro Technique, Wikipedia</a></p>
+  </blockquote>
+</blockquote>
+
+<p><img src ="medias/electronics-design-pomo-illu.png" alt="pomo-illu" /></p>
+
+<h2>Components</h2>
+
+<p>The main component I'm using is the microcontroller <a target="_blank" href="https://www.microchip.com/wwwproducts/en/ATTINY1614">ATtiny1614</a>. It will allow me to program my inputs and outputs needed to run my project.</p>
+
+<p>As outputs, I've 4 LEDs that are used to visualize the time passing by and the interactions with the pomodoro timer. 
+As inputs, I've to 2 switches (buttons) that allow me to start/pause/resume/reset the timer.</p>
+
+<p>I also need 6 resistor (one for each of the inputs/outputs), a capacitor, a FTDI header (to be able to communicate with the boards), a UPDI header (to program the board).</p>
+
+<p><img src ="medias/electronics-design-shopping-list.png" alt="shopping-list" /></p>
 
 <h2>Designing</h2>
 
