@@ -28,6 +28,12 @@ I also need 6 resistor (one for each of the inputs/outputs), a capacitor, a FTDI
 
 ## Designing
 
+I'm using [KiCAD](https://kicad-pcb.org/), a cross platform and [open-source](https://gitlab.com/kicad) software for designing electronics.
+
+
+
+![kicad-design](kicad-design.jpeg)
+
 ### Schematics
 
 ### PCB
