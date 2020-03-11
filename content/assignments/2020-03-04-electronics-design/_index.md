@@ -24,21 +24,43 @@ As inputs, I've to 2 switches (buttons) that allow me to start/pause/resume/rese
 
 I also need 6 resistor (one for each of the inputs/outputs), a capacitor, a FTDI header (to be able to communicate with the boards), a UPDI header (to program the board).
 
-![shopping-list](shopping-list.png)
 
-## Designing
+## Design
 
-I'm using [KiCAD](https://kicad-pcb.org/), a cross platform and [open-source](https://gitlab.com/kicad) software for designing electronics.
+I'm using [KiCAD](https://kicad-pcb.org/), a cross platform and [open-source](https://gitlab.com/kicad) software, for designing electronics. The process is divided into two main steps: schematics design and PCB design.
+
+Before making the schematics, I had to import symbols and footprints according to the components which I wanted to use (and which I had at my disposal in the laboratory).
+
+For the symbols, go to `Preferences > Manage Symbol Librairies` to add [this](https://github.com/KiCad/kicad-symbols) and [this](https://kicad.github.io/symbols/MCU_Microchip_ATtiny).
+
+For the footprints, go to `Preferences > Manage Footprints Librairies` to add [this](https://github.com/KiCad/kicad-footprints).
+
+In the context of Fab Labs, [this library](http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/site/local/#material/extras/week06/assets/kicad_libraries.zip) is very useful because it contains all the components we have at our disposition.
+
+### Schematics design
+
+To design the schematic of the board, one should first import the right symbols. In my case, the components I listed above on this page. to do so, select the `Place symbol` tool, click on the page and choose the symbol you want.
+
+- `R` to rotate the component
+- `C` to copy it
+- `M` to move it
+- `Delete` to delete it
+- `W` to draw a wire
+
+Then, you'll have to connect the elements together. To do so, a good practice is to divide the circuit into smaller and more understandable circuits. In my case, I design the switches, LED's, capacitor, ATtiny1614, FTDI and UPDI apart. It's then easier to get a full understanding of the circuit and it's also easier to manipulate.
 
 
 
-![kicad-design](kicad-design.jpeg)
 
-### Schematics
 
-### PCB
+![schematics-design](schematics-design.jpeg)
 
-### Exporting
+### PCB design
+
+![pcb-design](pcb-design.jpeg)
+
+
+### Export
 (Inkscape & Gimp & Fabmodules)
 
 ## Milling
@@ -48,6 +70,9 @@ I'm using [KiCAD](https://kicad-pcb.org/), a cross platform and [open-source](ht
 ## Testing
 
 ## Programming
+
+Ardino IDE library: MegaTinyCore
+[tutorial](https://www.electronics-lab.com/project/getting-started-with-the-new-attiny-chips-programming-the-microchips-0-series-and-1-series-attiny-with-the-arduino-ide/)
 
 ---
 

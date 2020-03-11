@@ -59,19 +59,39 @@ As inputs, I've to 2 switches (buttons) that allow me to start/pause/resume/rese
 
 <p>I also need 6 resistor (one for each of the inputs/outputs), a capacitor, a FTDI header (to be able to communicate with the boards), a UPDI header (to program the board).</p>
 
-<p><img src ="medias/electronics-design-shopping-list.png" alt="shopping-list" /></p>
+<h2>Design</h2>
 
-<h2>Designing</h2>
+<p>I'm using <a target="_blank" href="https://kicad-pcb.org/">KiCAD</a>, a cross platform and <a target="_blank" href="https://gitlab.com/kicad">open-source</a> software, for designing electronics. The process is divided into two main steps: schematics design and PCB design.</p>
 
-<p>I'm using <a target="_blank" href="https://kicad-pcb.org/">KiCAD</a>, a cross platform and <a target="_blank" href="https://gitlab.com/kicad">open-source</a> software for designing electronics.</p>
+<p>Before making the schematics, I had to import symbols and footprints according to the components which I wanted to use (and which I had at my disposal in the laboratory).</p>
 
-<p><img src ="medias/electronics-design-kicad-design.jpeg" alt="kicad-design" /></p>
+<p>For the symbols, go to <code>Preferences &gt; Manage Symbol Librairies</code> to add <a target="_blank" href="https://github.com/KiCad/kicad-symbols">this</a> and <a target="_blank" href="https://kicad.github.io/symbols/MCU_Microchip_ATtiny">this</a>.</p>
 
-<h3>Schematics</h3>
+<p>For the footprints, go to <code>Preferences &gt; Manage Footprints Librairies</code> to add <a target="_blank" href="https://github.com/KiCad/kicad-footprints">this</a>.</p>
 
-<h3>PCB</h3>
+<p>In the context of Fab Labs, <a target="_blank" href="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/site/local/#material/extras/week06/assets/kicad_libraries.zip">this library</a> is very useful because it contains all the components we have at our disposition.</p>
 
-<h3>Exporting</h3>
+<h3>Schematics design</h3>
+
+<p>To design the schematic of the board, one should first import the right symbols. In my case, the components I listed above on this page. to do so, select the <code>Place symbol</code> tool, click on the page and choose the symbol you want.</p>
+
+<ul>
+<li><code>R</code> to rotate the component</li>
+<li><code>C</code> to copy it</li>
+<li><code>M</code> to move it</li>
+<li><code>Delete</code> to delete it</li>
+<li><code>W</code> to draw a wire</li>
+</ul>
+
+<p>Then, you'll have to connect the elements together. To do so, a good practice is to divide the circuit into smaller and more understandable circuits. In my case, I design the switches, LED's, capacitor, ATtiny1614, FTDI and UPDI apart. It's then easier to get a full understanding of the circuit and it's also easier to manipulate.</p>
+
+<p><img src ="medias/electronics-design-schematics-design.jpeg" alt="schematics-design" /></p>
+
+<h3>PCB design</h3>
+
+<p><img src ="medias/electronics-design-pcb-design.jpeg" alt="pcb-design" /></p>
+
+<h3>Export</h3>
 
 <p>(Inkscape &amp; Gimp &amp; Fabmodules)</p>
 
@@ -82,6 +102,9 @@ As inputs, I've to 2 switches (buttons) that allow me to start/pause/resume/rese
 <h2>Testing</h2>
 
 <h2>Programming</h2>
+
+<p>Ardino IDE library: MegaTinyCore
+<a target="_blank" href="https://www.electronics-lab.com/project/getting-started-with-the-new-attiny-chips-programming-the-microchips-0-series-and-1-series-attiny-with-the-arduino-ide/">tutorial</a></p>
 
 <hr />
 
