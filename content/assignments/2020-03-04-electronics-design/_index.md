@@ -2,7 +2,7 @@
 title: Electronics design
 ---
 
-I knew almost nothing about electronics before following the Fab Academy. I still have to learn and understand the very basics of a circuit and its composents, but also of electricity and its flow. To do so, I designed a pomodoro timer from scratch. I've learn a lot throughout the process and I've the feeling that this new knowledge will play a key role in what I'll do for my personal project and afterwards.
+I knew almost nothing about electronics before following the Fab Academy. I still had to learn and understand the very basics of a electronic circuit and its composents, but also of electricity and its flow. To do so, I designed a pomodoro timer from scratch. I've learn a lot throughout the process and I've the feeling that this new knowledge will play a key role in what I'll do for my personal project and afterwards.
 
 ---
 
@@ -31,9 +31,7 @@ I'm using [KiCAD](https://kicad-pcb.org/), a cross platform and [open-source](ht
 
 Before making the schematics, I had to import symbols and footprints according to the components which I wanted to use (and which I had at my disposal in the laboratory).
 
-For the symbols, go to `Preferences > Manage Symbol Librairies` to add [this](https://github.com/KiCad/kicad-symbols) and [this](https://kicad.github.io/symbols/MCU_Microchip_ATtiny).
-
-For the footprints, go to `Preferences > Manage Footprints Librairies` to add [this](https://github.com/KiCad/kicad-footprints).
+For the symbols, go to `Preferences > Manage Symbol Librairies` to add [this](https://github.com/KiCad/kicad-symbols) and [this](https://kicad.github.io/symbols/MCU_Microchip_ATtiny). For the footprints, go to `Preferences > Manage Footprints Librairies` to add [this](https://github.com/KiCad/kicad-footprints).
 
 In the context of Fab Labs, [this library](http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/site/local/#material/extras/week06/assets/kicad_libraries.zip) is very useful because it contains all the components we have at our disposition.
 
@@ -49,19 +47,33 @@ To design the schematic of the board, one should first import the right symbols.
 
 Then, you'll have to connect the elements together. To do so, a good practice is to divide the circuit into smaller and more understandable circuits. In my case, I design the switches, LED's, capacitor, ATtiny1614, FTDI and UPDI apart. It's then easier to get a full understanding of the circuit and it's also easier to manipulate.
 
-
-
-
-
 ![schematics-design](schematics-design.jpeg)
 
+Don't be confuse, the real design mission is for the next step, now is just about connecting parts together, and about being understandable for the community if you plan to share your design or simply for your future self.
+
+It's always important to check the datasheet of the components you're using. In this case, [the datasheet of the ATtiny1614](http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny1614-DataSheet-DS40001995B.pdf) helped me to verify the differents connections from the chip to the components.
+
+
 ### PCB design
+
+Now is the "tricky" part: finding the best paths, the most compact as possible while respecting the idea I had in mind. For instance, because I'm building a pomodoro timer, I want my 4 leds to be next to each other, and so has to be the resistors as well. It's about designing with constraints, something I really like, even if it took me hours to find a possible way to design my circuit.
 
 ![pcb-design](pcb-design.jpeg)
 
 
-### Export
-(Inkscape & Gimp & Fabmodules)
+
+#### Things I learned while designing it
+
+- always start by connecting the chip to its direct components
+- rotate and rotate again the components until it makes sense
+- the ground closes the circuit, so it's easier to end with it
+- what is possible in a CAD software may not be easy to do in real life
+- optimize your paths and think about how you'll solder the  components
+
+
+### Export (Inkscape & Gimp & Fabmodules)
+
+Once your design is ready, that means that all your components are linked together
 
 ## Milling
 
