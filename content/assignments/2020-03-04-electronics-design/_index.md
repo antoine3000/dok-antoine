@@ -49,7 +49,7 @@ Then, you'll have to connect the elements together. To do so, a good practice is
 
 ![schematics-design](schematics-design.jpeg)
 
-Don't be confuse, the real design mission is for the next step, now is just about connecting parts together, and about being understandable for the community if you plan to share your design or simply for your future self.
+Don't be confused, the real design mission is for the next step, now is just about connecting parts together, and about being understandable for the community if you plan to share your design or simply for your future self.
 
 It's always important to check the datasheet of the components you're using. In this case, [the datasheet of the ATtiny1614](http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny1614-DataSheet-DS40001995B.pdf) helped me to verify the differents connections from the chip to the components.
 
@@ -61,19 +61,26 @@ Now is the "tricky" part: finding the best paths, the most compact as possible w
 ![pcb-design](pcb-design.jpeg)
 
 
-
 #### Things I learned while designing it
 
 - always start by connecting the chip to its direct components
 - rotate and rotate again the components until it makes sense
 - the ground closes the circuit, so it's easier to end with it
+- just because you seem to be close to the solution doesn't mean you are really close to the solution. You don't know that until the end, when you connect the last components together
 - what is possible in a CAD software may not be easy to do in real life
 - optimize your paths and think about how you'll solder the  components
 
 
-### Export (Inkscape & Gimp & Fabmodules)
+### Preparing the files
 
-Once your design is ready, that means that all your components are linked together
+Once your design is ready (that means that all your components are linked together), you can export your files and prepare them to be sent to the mini milling machine. I used [Inkscape](https://inkscape.org/),[gimp](https://www.gimp.org/) and [fab modules](http://fabmodules.org/) to do so.
+
+![pomo-traces](pomo-traces.png)
+![pomo-cut](pomo-cut.png)
+
+![fab-modules](fab-modules.jpeg)
+
+I used Fab Modules to generate the files needed by the mini milling machine using the same settings I did during the [Electronics production](electronics-production.html) week.
 
 ## Milling
 
