@@ -80,13 +80,20 @@ Once your design is ready (that means that all your components are linked togeth
 
 ![fab-modules](fab-modules.jpeg)
 
-I used Fab Modules to generate the files needed by the mini milling machine using the same settings I did during the [Electronics production](electronics-production.html) week.
+I used Fab Modules to generate the files needed by the mini milling machine using the same settings I set during the [Electronics production](electronics-production.html) week.
 
 ## Milling
 
+![pomo-milling](pomo-milling.jpeg)
+
 ## Soldering
 
+![pomo-board](pomo-board.jpeg)
+
 ## Testing
+
+![pomo-plugged](pomo-plugged.jpeg)
+![pomo](pomo.jpeg)
 
 ## Programming
 
