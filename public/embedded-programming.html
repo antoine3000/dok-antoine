@@ -32,15 +32,17 @@
       Embedded programming
     
   </h1>
-  <p>Two weeks ago, I designed a pomodoro timer during the <a target="_blank" href="electronics-design.html">Electronics design</a> week. It's now time to program it. I'm going to write the piece of code that will light my LEDs as time goes by and find a way to send it to the ATtiny1614 chip. I'm going to focus on the latter: how to send a program (= program) a chip.</p>
+  <p>Two weeks ago, I designed a pomodoro timer during the <a target="_blank" href="electronics-design.html">Electronics design</a> week. It's now time to program it. I'm going to write the piece of code that will light my LEDs as time goes by and find a way to send it to the ATtiny1614 chip. I'm going to focus on the latter: how to send a program (= program) a chip. Well, that was the plan.</p>
 
 <p>Unfortunately, in the meantime, the coronavirus has hit Spain (and the whole world). We are now all in quarantine, with no access to the lab. I'll have to work from home, with the equipment I already have, nothing more. </p>
+
+<p><img src ="medias/embedded-programming-pomo-circuit-playground.jpeg" alt="pomo-circuit-playground" /></p>
 
 <p>For this reason, I'm going to use a <a target="_blank" href="https://www.adafruit.com/product/3333">Circuit Playground Express</a>. This tiny board is already equipped with 10 mini NeoPixels, 1 motion sensor, 1 temperature sensor, 1 sound sensor, 1 mini speaker, 2 push buttons, 1 slide switch, infrared receiver and transmitter and 8 alligator-clip friendly input/output pins. It's a perfect board for quick prototyping and code experiments.</p>
 
 <h2>Pomodoro code</h2>
 
-<p>How I want to use my pomodoro:</p>
+<h3>How I want to use my pomodoro</h3>
 
 <ul>
 <li>Press the left button to start the timer</li>
@@ -53,7 +55,9 @@
 <li>When it's paused, all the LEDs are light up and blue</li>
 </ul>
 
-<p>The code that does that:</p>
+<p><video controls preload="auto"><source type ="video/mp4" src ="medias/embedded-programming-pomo-playground.mp4"></video></p>
+
+<h3>The code that does this using the Arduino framework</h3>
 
 <pre>
 bool button_left;
@@ -150,17 +154,42 @@ void loop() {
 
 <p>I use PlatformIO as a replacement for Arduino IDE because it allows me to use the text editor I want (I use <a target="_blank" href="https://neovim.io/">Neovim</a>, an hyperextensible Vim-based text editor) and because it integrates librairies of more than 700 differents boards, including the ones I use. It also has a unified debugger and a static code analyze which seems super useful for large scale projects.</p>
 
-<h3>Initiation</h3>
+<h3>Initialization</h3>
 
-<p>Because PlatformIO is based on Python, the installation is pretty straight-forward using <code>pip</code>: <code>$ pip install -U platformio</code></p>
+<p>Because PlatformIO is based on Python, the installation is pretty straight-forward using <em>pip</em>: <code>$ pip install -U platformio</code></p>
 
-<p>An empty folder to host the project is needed for PlatformIO to set up its environment <code>$ mkdir my-project &amp;&amp; cd my-project</code>, then type <code>$ pio init</code> to  initialize it. </p>
+<p>An empty folder to host the project is needed for PlatformIO to set up its environment. Make a new one and go in it <code>$ mkdir my-project &amp;&amp; cd my-project</code> then type <code>$ pio init</code> to initialize this folder with the PlatformIO structure.</p>
 
-<p><code>pio</code> is the the shortcut for <code>platformio</code>, it's the exact same thing but shorter.</p>
+<blockquote>
+  <p><code>pio</code> is the the shortcut for <code>platformio</code>, it's the exact same thing but shorter</p>
+</blockquote>
 
-<p>Configure the project for this specific board, as found <a target="_blank" href="https://docs.platformio.org/en/latest/boards/atmelsam/adafruit_circuitplayground_m0.html">here</a> and search for the library ID <code>$ pio lib search "header:Adafruit_CircuitPlayground.h"</code>.</p>
+<p>Then the structure should look like this:</p>
 
-<p>On the <code>platformio.io</code> file:</p>
+<pre>
+platformio.ini
+src/
+- main.cpp
+- main.h
+- …
+lib/
+- input/
+- - input.cpp
+- - input.h
+- - …
+- output/
+- - output.cpp
+- - output.h
+- - …
+boards/
+- board_definition.json
+</pre>
+
+<p>Next, search for the depedencies ID you might need, in this case the <code>Adafruit_CircuitPlayground.h</code>, by typing <code>$ pio lib search "header:Adafruit_CircuitPlayground.h"</code>. The lib ID I need is <code>602</code>.</p>
+
+<p>Configure the project for this specific board, by following the datasheet found <a target="_blank" href="https://docs.platformio.org/en/latest/boards/atmelsam/adafruit_circuitplayground_m0.html">here</a>.</p>
+
+<p>These values have to be written in the <code>platformio.io</code> file.</p>
 
 <pre>
 [env:adafruit_circuitplayground_m0]
@@ -170,11 +199,17 @@ lib_deps =
   602
 </pre>
 
-<p>The code on the file <code>src/main.ccp</code></p>
+<h3>Run &amp; upload</h3>
 
-<p>Compile: <code>pio run</code></p>
+<p>Write your program into the <code>src</code> folder. The librairies have to be included at the very beginning of your program's files. In this case, the Arduino framework <code>#include &lt;Arduino.h&gt;</code> and the Circuit Playground framework <code>#include &lt;Adafruit_CircuitPlayground.h&gt;</code>.</p>
 
-<p>Upload the code on the device <code>pio run -t upload</code></p>
+<p>Once everything is set up (not that much actually, because PlatformIO does a few thing for us), launch the <code>$ pio run</code> command to run and compile the code.</p>
+
+<p><img src ="medias/embedded-programming-pio-run.jpeg" alt="pio-run" /></p>
+
+<p>If it has been verified correctly, send it to your board to make it alive by typing <code>pio run -t upload</code>.</p>
+
+<p><img src ="medias/embedded-programming-pio-upload.jpeg" alt="pio-upload" /></p>
 
   
 </article>

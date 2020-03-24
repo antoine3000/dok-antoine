@@ -1,17 +1,18 @@
 ---
 title: Embedded programming
-tags: draft
 ---
 
-Two weeks ago, I designed a pomodoro timer during the [Electronics design](electronics-design.html) week. It's now time to program it. I'm going to write the piece of code that will light my LEDs as time goes by and find a way to send it to the ATtiny1614 chip. I'm going to focus on the latter: how to send a program (= program) a chip.
+Two weeks ago, I designed a pomodoro timer during the [Electronics design](electronics-design.html) week. It's now time to program it. I'm going to write the piece of code that will light my LEDs as time goes by and find a way to send it to the ATtiny1614 chip. I'm going to focus on the latter: how to send a program (= program) a chip. Well, that was the plan.
 
 Unfortunately, in the meantime, the coronavirus has hit Spain (and the whole world). We are now all in quarantine, with no access to the lab. I'll have to work from home, with the equipment I already have, nothing more. 
+
+![pomo-circuit-playground](pomo-circuit-playground.jpeg)
 
 For this reason, I'm going to use a [Circuit Playground Express](https://www.adafruit.com/product/3333). This tiny board is already equipped with 10 mini NeoPixels, 1 motion sensor, 1 temperature sensor, 1 sound sensor, 1 mini speaker, 2 push buttons, 1 slide switch, infrared receiver and transmitter and 8 alligator-clip friendly input/output pins. It's a perfect board for quick prototyping and code experiments.
 
 ## Pomodoro code
 
-How I want to use my pomodoro:
+### How I want to use my pomodoro
 
 - Press the left button to start the timer
 - If it's running, press the left button to pause the timer
@@ -22,7 +23,9 @@ How I want to use my pomodoro:
 - When it's running and it's a break period, LEDs are green
 - When it's paused, all the LEDs are light up and blue
 
-The code that does that:
+<video><source src="pomo-playground.mp4"></video>
+
+### The code that does this using the Arduino framework
 
 <pre>
 bool button_left;
@@ -119,17 +122,41 @@ void loop() {
 
 I use PlatformIO as a replacement for Arduino IDE because it allows me to use the text editor I want (I use [Neovim](https://neovim.io/), an hyperextensible Vim-based text editor) and because it integrates librairies of more than 700 differents boards, including the ones I use. It also has a unified debugger and a static code analyze which seems super useful for large scale projects.
 
-### Initiation
+### Initialization
 
-Because PlatformIO is based on Python, the installation is pretty straight-forward using `pip`: `$ pip install -U platformio`
+Because PlatformIO is based on Python, the installation is pretty straight-forward using *pip*: `$ pip install -U platformio`
 
-An empty folder to host the project is needed for PlatformIO to set up its environment `$ mkdir my-project && cd my-project`, then type `$ pio init` to  initialize it. 
+An empty folder to host the project is needed for PlatformIO to set up its environment. Make a new one and go in it `$ mkdir my-project && cd my-project` then type `$ pio init` to initialize this folder with the PlatformIO structure.
 
-`pio` is the the shortcut for `platformio`, it's the exact same thing but shorter.
+> `pio` is the the shortcut for `platformio`, it's the exact same thing but shorter
 
-Configure the project for this specific board, as found [here](https://docs.platformio.org/en/latest/boards/atmelsam/adafruit_circuitplayground_m0.html) and search for the library ID `$ pio lib search "header:Adafruit_CircuitPlayground.h"`.
+Then the structure should look like this:
 
-On the `platformio.io` file:
+<pre>
+platformio.ini
+src/
+- main.cpp
+- main.h
+- …
+lib/
+- input/
+- - input.cpp
+- - input.h
+- - …
+- output/
+- - output.cpp
+- - output.h
+- - …
+boards/
+- board_definition.json
+</pre>
+
+Next, search for the depedencies ID you might need, in this case the `Adafruit_CircuitPlayground.h`, by typing `$ pio lib search "header:Adafruit_CircuitPlayground.h"`. The lib ID I need is `602`.
+
+Configure the project for this specific board, by following the datasheet found [here](https://docs.platformio.org/en/latest/boards/atmelsam/adafruit_circuitplayground_m0.html).
+
+These values have to be written in the `platformio.io` file.
+
 <pre>
 [env:adafruit_circuitplayground_m0]
 platform = atmelsam
@@ -138,11 +165,17 @@ lib_deps =
   602
 </pre>
 
-The code on the file `src/main.ccp`
+### Run & upload
 
-Compile: `pio run`
+Write your program into the `src` folder. The librairies have to be included at the very beginning of your program's files. In this case, the Arduino framework `#include <Arduino.h>` and the Circuit Playground framework `#include <Adafruit_CircuitPlayground.h>`.
 
-Upload the code on the device `pio run -t upload`
+Once everything is set up (not that much actually, because PlatformIO does a few thing for us), launch the `$ pio run` command to run and compile the code.
+
+![pio-run](pio-run.jpeg)
+
+If it has been verified correctly, send it to your board to make it alive by typing `pio run -t upload`.
+
+![pio-upload](pio-upload.jpeg)
 
 
 
