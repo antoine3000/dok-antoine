@@ -177,7 +177,15 @@ If it has been verified correctly, send it to your board to make it alive by typ
 
 ![pio-upload](pio-upload.jpeg)
 
+I've been using my pomodoro timer every day since I coded it, the Circuit Playground is always by my computer to remind me to take a 5-minutes break every 25 minutes and help me stay focused.
 
+---
 
+# The basic way: Arduino IDE
 
+One can also use Arduino IDE to load a piece of code into a device. It works perfectly well even if this solution is more basic and doesn't allow a lot of  fine tuning.
 
+1. [Download Arduino IDE](https://www.arduino.cc/en/Main/Software) and install it on you computer
+2. Find and install the Circuit Playground library with the built-in `Boards Manager`
+3. Verify the code
+4. Upload the code
