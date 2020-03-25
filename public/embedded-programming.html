@@ -219,6 +219,10 @@ lib_deps =
 
 <p>The ATtiny1614 isn't yet supported by PlatformIO and therefore needs another method to be programmed. Fortunately, <a target="_blank" href="https://github.com/mraardvark/pyupdi">pyupdi</a> is here! Pyupdi is a Python UPDI driver for programming the "new" tinyAVR and megaAVR devices.</p>
 
+<h2>Connectivity</h2>
+
+<p>Power comes from a USB cable via a FTDI connector. The data comes from the UPDI connector and goes through another FTDI connector.</p>
+
 <h2>Install</h2>
 
 <p><code>git clone https://github.com/mraardvark/pyupdi</code></p>
@@ -243,6 +247,8 @@ To be able to compile the code, first install the <a target="_blank" href="https
 <pre>
 pyupdi.py -d tiny1614 -c /dev/ttyUSB0 -b 9600 -f /tmp/arduino_build_342195/Blink.ino.hex -v
 </pre>
+
+<p><video controls preload="auto"><source type ="video/mp4" src ="medias/embedded-programming-pomo-test.mp4"></video></p>
 
 <hr />
 

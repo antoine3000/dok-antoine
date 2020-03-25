@@ -185,6 +185,10 @@ I've been using my pomodoro timer every day since I coded it, the Circuit Playgr
 
 The ATtiny1614 isn't yet supported by PlatformIO and therefore needs another method to be programmed. Fortunately, [pyupdi](https://github.com/mraardvark/pyupdi) is here! Pyupdi is a Python UPDI driver for programming the "new" tinyAVR and megaAVR devices.
 
+## Connectivity
+
+Power comes from a USB cable via a FTDI connector. The data comes from the UPDI connector and goes through another FTDI connector.
+
 ## Install
 
 `git clone https://github.com/mraardvark/pyupdi`
@@ -210,7 +214,7 @@ Then, run pyupdi with the name of the board you're working on `tiny1614`, the po
 pyupdi.py -d tiny1614 -c /dev/ttyUSB0 -b 9600 -f /tmp/arduino_build_342195/Blink.ino.hex -v
 </pre>
 
-
+<video><source src="pomo-test.mp4"></video>
 
 ---
 
