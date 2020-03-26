@@ -215,6 +215,64 @@ lib_deps =
 
 <hr />
 
+<h1>Programming the ESP32 — Barduino</h1>
+
+<p>We've been asked to assemble a Barduino few hours before the lab lockdown due to the coronavirus, in order to be able to experiment with it later at home.</p>
+
+<blockquote>
+  <p>Barduino 2.0 started as a project to have a ESP32 fabacademy compatible board to help the students develope their work on top of it. This board was designed by Eduardo Chamorro Martin with the help of Josep Marti and Oscar Gonzalez in Fab Lab Barcelona 2020.</p>
+  
+  <blockquote>
+    <p><a target="_blank" href="https://gitlab.fabcloud.org/barcelonaworkshops/barduino-2.0">Barduino 2.0, Gitlab</a></p>
+  </blockquote>
+</blockquote>
+
+<p><img src ="medias/embedded-programming-barduino-pic.jpeg" alt="arduino-pic" /></p>
+
+<p>To use that board with PlatformIO, <code>pio init</code> a new project specifically for the ESP32 chip.</p>
+
+<p><code>$ pio project init -board esp32-devkitlipo</code></p>
+
+<p>This command generates the <code>platformio.ini</code> files with the desired values.</p>
+
+<pre>
+[env:esp32-devkitlipo]
+platform = espressif32
+board = esp32-devkitlipo
+framework = arduino
+</pre>
+
+<p>Then, as we can see on the datasheet, the ID of the programmable test LED is <code>13</code>. We can use it to test if our board and our configuration work properly.</p>
+
+<p><img src ="medias/embedded-programming-barduino-pinouts.png" alt="arduino-pinouts" /></p>
+
+<h3>Datasheet</h3>
+
+<p>Also, there is a <em>Programmer Slider Switch</em> that changes the behaviour of the chip and tells it wheter it's in programming mode or execution mode. Obviously, we have to turn it to the left, the programming mode, before uploading our program.</p>
+
+<h3>The blink program, using PIN 13</h3>
+
+<pre>
+ #include <Arduino.h>
+
+ int led_in = 13;
+
+ void setup() {
+   pinMode(led_in, OUTPUT);
+ }
+
+ void loop() {
+   digitalWrite(led_in, HIGH);
+   delay(1000);
+   digitalWrite(led_in, LOW);
+   delay(1000);
+ }
+</pre>
+
+<p>Turn the programming slider switch to the right, in execution mode, press the reset button and the test LED should blink. Olé.</p>
+
+<hr />
+
 <h1>Programming the ATtiny1614</h1>
 
 <p>The ATtiny1614 isn't yet supported by PlatformIO and therefore needs another method to be programmed. Fortunately, <a target="_blank" href="https://github.com/mraardvark/pyupdi">pyupdi</a> is here! Pyupdi is a Python UPDI driver for programming the "new" tinyAVR and megaAVR devices.</p>
