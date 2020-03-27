@@ -32,7 +32,7 @@
       Input devices
     
   </h1>
-  <p>Let's play with sensors</p>
+  <p>Let's play with sensors.</p>
 
 <h1>Ultrasonic sensor HC-SR04</h1>
 
@@ -44,6 +44,56 @@
 <li>Echo Pulse Output</li>
 <li>GND</li>
 </ul>
+
+<p><img src ="medias/input-devices-uno-ultrasonic-inuse.jpg" alt="uno-ultrasonic-inuse" /></p>
+
+<p>I'm using an Arduino UNO to use this sensor because it needs a voltage of 5V. Unfortunately, the Barduino and its ESP32 only has a voltage of 3.3V.</p>
+
+<h2>Connection</h2>
+
+<p>The connection is quite simple, the <code>VCC</code> goes to the <code>5V</code>, the <code>GND</code> to the <code>GND</code>, the <code>Echo</code> to a digital pin, let's say the <code>12</code> and the <code>Trig</code> to another digital pin, the <code>11</code>.</p>
+
+<p><img src ="medias/input-devices-uno-ultrasonic.jpg" alt="uno-ultrasonci-schematic" /></p>
+
+<h2>Code</h2>
+
+<p>Here is the basic code to read data from the ultrasonic sensor, to convert them into readable values (cm) and print it on the serial monitor.</p>
+
+<p>To quickly create a <a target="_blank" href="https://platformio.org/">PlatformIO</a> project for the Arduino UNO, open a terminal and navigate to a freshly created folder and type <code>$ pio project init --board uno</code>. As simple as that.</p>
+
+<p>Create in new <code>main.cpp</code> file into the <code>src</code> folder.</p>
+
+<pre>
+int trigPin = 11;
+int echoPin = 12;
+long duration, cm;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+}
+
+void loop() {
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(5);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  pinMode(echoPin, INPUT);
+  duration = pulseIn(echoPin, HIGH);
+  cm = (duration/2) / 29.1;
+  Serial.print(cm);
+  Serial.print("cm");
+  delay(250);
+}
+</pre>
+
+<p>Compile it and upload it to the UNO <code>pio run -t upload</code> and open the serial monitor <code>pio device monitor</code> to see the distance value calculated by the ultrasonic sensor. I'm impressed how fast and accurate it is.</p>
+
+<h3>Explanations</h3>
+
+<p><code>cm =  (duration/2) / 29.1</code> is how we convert the duration to a distance, using a formula: <code>distance = (traveltime/2) * speed of sound</code>. The speed of sound is <code>343m/s</code> wich is equal to 1/29.1 cm/uS. We need to divide the <code>traveltime</code> by 2 because the wave we sent hit the object and then returned back to the sensor.</p>
 
   
 </article>

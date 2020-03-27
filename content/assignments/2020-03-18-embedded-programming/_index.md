@@ -192,7 +192,7 @@ We've been asked to assemble a Barduino few hours before the lab lockdown due to
 
 To use that board with PlatformIO, `pio init` a new project specifically for the ESP32 chip.
 
-`$ pio project init -board esp32-devkitlipo`
+`$ pio project init --board esp32-devkitlipo`
 
 This command generates the `platformio.ini` files with the desired values.
 
