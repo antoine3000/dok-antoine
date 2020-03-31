@@ -141,6 +141,25 @@ void loop() {
 }
 </pre>
 
+<h1>Moisture level sensor</h1>
+
+<p>Water is a conductive element, and the more water there is in the soil the more electricity can flow through it. So, in order to measure the soil moisture level, we can integrate it into an electrical circuit and measure the voltage. The more voltage in the circuit, the more water there is in the soil.</p>
+
+<p>To represent it, I built a small system that lights a green LED when the soil is wet and a red LED when it's dry.</p>
+
+<h2>Connection</h2>
+
+<ul>
+<li>5V from the Arduino UNO to the soil</li>
+<li>A0 (anaolog) from the Arduino UNO to the soil</li>
+<li>A0 (analog) from the Arduino UNO to the GND (analog) through a 10kΩ resistor</li>
+<li>11 (digital) to the red LED through a 220Ω resistor</li>
+<li>12 (digital) to the green LED through a 220Ω resistor</li>
+<li>LED's to the GND (digital)</li>
+</ul>
+
+<p><video controls preload="auto"><source type ="video/mp4" src ="medias/input-devices-moist-test.mp4"</video></p>
+
   
 </article>
 
