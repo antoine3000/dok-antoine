@@ -14,7 +14,7 @@ index_template = env.get_template('index.html')
 article_template = env.get_template('article.html')
 flux_template = env.get_template('flux.html')
 # misc
-content_types = ['posts', 'pages', 'assignments']
+content_types = ['finalproject', 'pages', 'assignments']
 base_width = 1200
 media_ext = ['jpg', 'jpeg', 'png']
 METADATA = {}
@@ -69,7 +69,7 @@ for content_type in content_types:
 
     # reverse order
     ARTICLES = {
-        article: ARTICLES[article] for article in sorted(ARTICLES, key=lambda article: datetime.strptime(ARTICLE_INFO.get(article), '%Y-%m-%d'), reverse=True)
+        article: ARTICLES[article] for article in sorted(ARTICLES, key=lambda article: datetime.strptime(ARTICLE_INFO.get(article), '%Y-%m-%d'), reverse=False)
     }
 
     for article in ARTICLES:
@@ -142,7 +142,7 @@ with open('public/flux.html', 'w') as file:
 
 # generate home
 home_html = home_template.render(
-    posts=METADATA['posts_metadata'],
+    finalproject=METADATA['finalproject_metadata'],
     pages=METADATA['pages_metadata'],
     assignments=METADATA['assignments_metadata'],
 )
