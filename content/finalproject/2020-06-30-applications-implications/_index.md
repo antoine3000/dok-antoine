@@ -1,6 +1,7 @@
 ---
-title: Final project
+title: Applications and implications
 ---
+
 
 
 
