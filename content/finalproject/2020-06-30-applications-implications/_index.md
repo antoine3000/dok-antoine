@@ -22,7 +22,7 @@ The machine I have in mind is able to get the data from a plant [electrical sign
 
 ### Breathing movement according to the environment
 
-I'm thinking about a machine that can represent the movement of the breathing, by using mechanics instead of air, and therefore I can have the control on what's happening, ahd what kind of movement is made.
+I'm thinking about a machine that can represent the movement of the breath, by using mechanics instead of air, and therefore I can have the control on what's happening, ahd what kind of movement is made.
 
 ![yo](sketch-general.jpg)
 
