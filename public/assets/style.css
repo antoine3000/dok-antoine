@@ -40,8 +40,7 @@ img {max-width: 100%;}
 
 /* index */
 .index {margin-bottom: var(--spacing);}
-.index__title {display: table; margin: 1.8em 0 0.8em 0; color: var(--color-base);border-bottom: var(--border-sm) solid var(--color-base); margin: 2.4em 0 1.8em 0;}
-.index__subtitle {margin: var(--spacing-sm) 0;}
+/* .index__title {display: table; margin: 1.8em 0 0.8em 0; color: var(--color-base);border-bottom: var(--border-sm) solid var(--color-base); margin: 2.4em 0 1.8em 0;} */
 
 /* flux */
 .flux {display: grid; align-items: center; grid-gap: var(--spacing); grid-template-columns: repeat(3, 1fr);}

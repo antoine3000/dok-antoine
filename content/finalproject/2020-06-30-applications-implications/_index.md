@@ -4,7 +4,7 @@ title: Applications and implications
 
 For this weeks's assignement, we were asked to answer a series of questions about our final project. I don't really know where I'm going with my project but I guess that's the point of this week: write some very practical facts and see where my main idea goes, and how far I can define it. Let's do that.
 
-My final project is (hopefully) one of the first step towards something I would like to explore: communication between plants and how they react to their environment, to their peers, to us.
+My final project is (hopefully) one of the firfist step towards something I would like to explore: communication between plants and how they react to their environment, to their peers, to us.
 
 My background isn't in sciences but in art. I don't know much on what's happening underground where the roots of the plants are but I'm super curious about it and I would like to invite more people to take a closer look, to take more interest in this absolutely incredible ecosystem in which we all live.
 

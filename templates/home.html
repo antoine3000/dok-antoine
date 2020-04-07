@@ -1,18 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
+
 <!-- assignments -->
 <section class="index">
-  <h2 class="index__title">Fab Acacademy 2020</h2>
-  <h3 class="index__subtitle">Final Project</h3>
-  <ul class="index__list">
-    {% for post in finalproject %}
-    {% if not 'draft' in post.tags %}
-    <li class="index__item"><a href="{{ post.slug }}.html" class="index__link">{{ post.title }}</a></li>
-    {% endif %}
-    {% endfor %}
-  </ul>
-  <h3 class="index__subtitle">Assignments</h3>
+  <h2 class="index__subtitle">Fab Acacademy / assignments</h2>
   <ol class="index__list">
     {% for post in assignments %}
       {% if not 'draft' in post.tags %}
@@ -20,6 +12,18 @@
           <a href="{{ post.slug }}.html" class="index__link">{{ post.title }}</a>
         </li>
       {% endif %}
+    {% endfor %}
+  </ol>
+</section>
+
+<!-- final project -->
+<section class="index">
+  <h2 class="index__subtitle">Fab Acacademy / final project</h2>
+  <ol class="index__list">
+    {% for post in finalproject %}
+    {% if not 'draft' in post.tags %}
+    <li class="index__item"><a href="{{ post.slug }}.html" class="index__link">{{ post.title }}</a></li>
+    {% endif %}
     {% endfor %}
   </ol>
 </section>
