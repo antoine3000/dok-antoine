@@ -16,6 +16,8 @@ Even if I only used GIMP to draw a quick moodboard for my project, I directly ha
 
 ![references](references.jpg)
 
+File: [references.xcf](https://cloud.antoine.studio/index.php/s/RKRdTDDCXPsSt4t/download?path=%2F02-cad&files=references.xcf)
+
 ### Shortcuts
 
 - Move: `m`
@@ -24,7 +26,6 @@ Even if I only used GIMP to draw a quick moodboard for my project, I directly ha
 - Rotate: `shift + r`
 
 And many more with a "GIMP shortcuts" [research](https://duckduckgo.com/?q=GIMP+shortcuts&t=canonical&atb=v195-1&ia=cheatsheet&iax=1) in DuckDuckGo.
-
 
 ## Inkscape
 
@@ -37,6 +38,8 @@ Inkscape is a vector graphics editor.
 I used Inkscape to draw a basic but vector schema of my project. I did not have a good experience with this software: I had a few bugs, the software crashed several times, the manipulation of the vectors was not precise. Surely I need to spend more time on it, maybe to tweak it a bit, because the community behind the software seems to agree that it has great potential. Next time, I'll try a Python script experiment, an area where Inkscape seems very interesting.
 
 ![schema](schema.png)
+
+File: [schema.svg](https://cloud.antoine.studio/index.php/s/RKRdTDDCXPsSt4t/download?path=%2F02-cad&files=schema.svg)
 
 ### Shortcuts
 
@@ -125,6 +128,9 @@ Freecad is general-purpose parametric 3D CAD modeler software made to design rea
 
 ![freecad-tutorial](freecad-tutorial.png)
 
+File: [freecad-test.FCStd](https://cloud.antoine.studio/index.php/s/RKRdTDDCXPsSt4t/download?path=%2F02-cad&files=freecad-test.FCStd)
+
+
 FreeCAD seems to have everything we need to design parts and machines, it seems really powerful. The thing that annoys me a little is the interface, I feel it over-complicated and I get lost easily, without knowing what I am doing. Maybe it comes from the fact that I "fell in love" with the "simplicity" of OpenSCAD? Anyway, I'll have to use FreeCAD and OpenSCAD together, and I am quite satisfied with all the possibilities it offers.
 
 Each view has a custom set of tools. So it's important to switch to the appropriated view before doing some manipulations. The more useful ones are `Sketcher` and `Part Design`.
@@ -142,6 +148,8 @@ Installation: `$ sudo snap install blender --classic`
 
 Blender is super powerful and can be used in a wide variety of fields. I don't see any real use for me right now, as I mainly focus on exporting models from my computer to the real world, instead of polishing virtual things. However, it will be my weapon of choice for quickly sketching an idea in 3D and animating it if necessary.
 
+File: [setup.blend](https://cloud.antoine.studio/index.php/s/RKRdTDDCXPsSt4t/download?path=%2F02-cad&files=setup.blend)
+
 ### Shortcuts
 
 - Switch between edit and object mode: `tab`
@@ -151,3 +159,16 @@ Blender is super powerful and can be used in a wide variety of fields. I don't s
 - Cut a shape: `ctrl + R`
 - In edit mode, switch between the select modes (vertex, edge or face): `1 or 2 or 3`
 - Insert faces: `i`
+
+---
+
+## Conclusion
+
+GIMP and Inkscape will definitely be part of my arsenal for handling bitmaps and
+vectors. For 3D modeling, I will try to focus on Freecad, simply because its
+spectrum is clearly focused on the modeling of technical parts, like a real CAD
+tool. Lately, I have discovered that it is quite easy to use a little openscad
+code in Freecad, which seems to combine the best of both worlds. Concerning
+Blender, it seems so complete that it scares me a little, let's say that I
+prefer the more specific, minimal tools, even if it's great to see an
+open-source tool so well developed. 
