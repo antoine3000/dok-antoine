@@ -1,0 +1,6 @@
+__pycache__/
+doc.py
+Pipfile.lock
+
+content/*/**/*.*
+!content/*/**/*.md
