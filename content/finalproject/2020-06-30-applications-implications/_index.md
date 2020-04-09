@@ -24,11 +24,11 @@ The machine I have in mind is able to get the data from a plant [electrical sign
 
 I'm thinking about a machine that can represent the movement of the breath, by using mechanics instead of air, and therefore I can have the control on what's happening, ahd what kind of movement is made.
 
-![yo](sketch-general.jpg)
+![sketch-mechanism](sketch-general.jpg)
 
 I imagine a grid of rods pushing into a soft material and therefore deforming it. Each stem is linked to a data type (temperature, moisture level, etc.) and adjust its level depending on the state of the data. The soft material takes a unique shape according to plant's needs.
 
-![yo](sketch-mechanism.jpg)
+![sketch-mechanism](sketch-mechanism.jpg)
 
 ### Luminous choreography according to the plant's electrical signal
 
@@ -37,6 +37,7 @@ The electrical signal of the plant, collected using electrodes and a signal ampl
 ### Global reaction to a human touch
 
 If a human touches the plant, the installation reacts as well, inviting the people to give a special attention to it. This can be made using the *touche sensor*, as seen [here](https://www.instructables.com/id/Touche-for-Arduino-Advanced-touch-sensing/).
+
 
 ---
 
