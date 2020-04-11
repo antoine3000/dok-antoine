@@ -55,7 +55,10 @@
 
 <h3>Focus</h3>
 
-<p>The focus is calculated based on the distance between the material and the laser. It must be adjusted before any cutting, depending on the thickness of the material.</p>
+<p>The focus is calculated based on the distance between the material and the
+laser. It must be adjusted before any cutting, depending on the thickness of the
+material. Also, keep in mind that the focal length varies depending on the lens
+you use, more information about this <a target="_blank" href="https://www.troteclaser.com/en-us/laser-machines/laser-accessories/focus-lenses/">here</a>.</p>
 
 <p><video controls preload="auto"><source type ="video/mp4" src ="medias/computer-controlled-cutting-focus.mp4"></video></p>
 
@@ -297,13 +300,30 @@
 
 <p><img src ="medias/computer-controlled-cutting-password.png" alt="password" /></p>
 
+<p>The vinylutter we have at Fab Lab Barcelona is a <a target="_blank" href="https://www.rolanddga.com/es/soporte/products/cutting/camm-1-gx-24-24-vinyl-cutter">Roland CAMM-1 Servo GX-24</a>.</p>
+
+<ul>
+<li>Work area: 584 x 24998mm</li>
+<li>Cutting speed: up to 500mm/s</li>
+<li>Cutting length: maximum 25m</li>
+<li>Cutting width: 50-700 mm</li>
+<li>Cutting force: 30 to 250gf</li>
+</ul>
+
 <p>The process of cutting something with a vinylcutter is straightforward:</p>
 
 <ul>
-<li>Export your .EPS file and import it into the software of the machine</li>
-<li>Prepare your sheet of paper and insert it into the machine (from back to front)</li>
+<li>Prepare your .EPS file</li>
+<li>Import it into the software of the machine,
+<a target="_blank" href="https://www.rolanddgi.com/productos/software/roland-cutstudio-software">CutStudio</a>,
+by going to <code>Object &gt; Image Outline</code> to get the trace of the design.</li>
+<li>Prepare your sheet of paper and insert it into the machine (from back to
+front), adjust the blade to be sure that the cutter will not cut through the
+material but only the surface.</li>
 <li>Set the size of the sheet via the machine commands and tell it to the software running on the computer attached to it</li>
-<li>Press the <em>Print</em> button</li>
+<li>Move the blade and set the origin, depending on the size of the design and the
+avaible material size.</li>
+<li>Press the <em>Print</em> button, or type <code>Ctrl p</code> to start cutting.</li>
 </ul>
 
 <p><img src ="medias/computer-controlled-cutting-password-process.jpg" alt="password-process" /></p>

@@ -23,11 +23,16 @@ Because the lasercutter is fun and easy to use, it's also easy to forget that it
 
 ### Focus
 
-The focus is calculated based on the distance between the material and the laser. It must be adjusted before any cutting, depending on the thickness of the material.
+The focus is calculated based on the distance between the material and the
+laser. It must be adjusted before any cutting, depending on the thickness of the
+material. Also, keep in mind that the focal length varies depending on the lens
+you use, more information about this [here](https://www.troteclaser.com/en-us/laser-machines/laser-accessories/focus-lenses/).
 
 <video><source src="focus.mp4"></video>
 
 Setting the focus is a mechanical & low-tech process, the idea is simply to obtain the distance value between the nozzle and the material.
+
+
 
 ### Speed & power 
 
@@ -193,12 +198,28 @@ And you, is this one of your passwords?
 
 ![password](password.png)
 
-The vinylutter we have at Fab Lab Barcelona is a `Roland GX-24`. The process of cutting something with a vinylcutter is straightforward:
+The vinylutter we have at Fab Lab Barcelona is a [Roland CAMM-1 Servo GX-24](https://www.rolanddga.com/es/soporte/products/cutting/camm-1-gx-24-24-vinyl-cutter).
 
-- Export your .EPS file and import it into the software of the machine
-- Prepare your sheet of paper and insert it into the machine (from back to front)
+- Work area: 584 x 24998mm
+- Cutting speed: up to 500mm/s
+- Cutting length: maximum 25m
+- Cutting width: 50-700 mm
+- Cutting force: 30 to 250gf
+
+The process of cutting something with a vinylcutter is straightforward:
+
+
+- Prepare your .EPS file
+- Import it into the software of the machine,
+  [CutStudio](https://www.rolanddgi.com/productos/software/roland-cutstudio-software),
+  by going to `Object > Image Outline` to get the trace of the design.
+- Prepare your sheet of paper and insert it into the machine (from back to
+  front), adjust the blade to be sure that the cutter will not cut through the
+  material but only the surface.
 - Set the size of the sheet via the machine commands and tell it to the software running on the computer attached to it
-- Press the *Print* button
+- Move the blade and set the origin, depending on the size of the design and the
+  avaible material size.
+- Press the *Print* button, or type `Ctrl p` to start cutting.
 
 ![password-process](password-process.jpg)
 
