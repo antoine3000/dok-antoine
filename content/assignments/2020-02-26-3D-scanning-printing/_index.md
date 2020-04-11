@@ -69,6 +69,11 @@ I'm exploring different types of shapes that could eventually be interesting reg
 
 An oloid is a geometric shape that only has one side. That means that if you make it roll on a flat surface, its entire surface will touch the flat surface at some point.
 
+The oloid shape can only be achieved by using an additive technique, such as 3D
+printing, and not a subtractive technique, such as laser cutting or milling,
+because the shape itself must be worked in all directions, not just from bottom
+to top (or by using another machine, a robot, with more axes, but then the technique begins to be too complex for a small piece like this one).
+
 ## Modeling
 
 [OpenSCAD](https://www.openscad.org/), the 3D CAD modeller that we use by writing code (as I said [here](computer-aided-design.html)) has a function called `hull()` that displays the [convex hull](https://doc.cgal.org/latest/Convex_hull_2/index.html) of child nodes.
@@ -98,6 +103,8 @@ Here is the code I wrote to model the oloid. It's simple isn't it?
 The slicing process of the oloid model was very interesting because I had to add supports to keep the shape in place during printing. It helped me understand how supports work and how to generate them in a slicer software, which is actually super easy.
 
 To do so, I used [Ultimaker Cura](https://ultimaker.com/software/ultimaker-cura) and its pre-configured *Support* options. In order to reduce the printing time and because I knew it from my previous test, I increased the overhang angle to 55° (instead of 45°).
+
+Here is the .std file I made for printing: [oloid.stl](files/oloid.stl)
 
 ## Printing
 

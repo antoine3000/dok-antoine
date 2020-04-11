@@ -107,6 +107,11 @@ To prepare the g-code, we have to <em>slice</em> our 3D model (.STL), to simulat
 
 <p>An oloid is a geometric shape that only has one side. That means that if you make it roll on a flat surface, its entire surface will touch the flat surface at some point.</p>
 
+<p>The oloid shape can only be achieved by using an additive technique, such as 3D
+printing, and not a subtractive technique, such as laser cutting or milling,
+because the shape itself must be worked in all directions, not just from bottom
+to top (or by using another machine, a robot, with more axes, but then the technique begins to be too complex for a small piece like this one).</p>
+
 <h2>Modeling</h2>
 
 <p><a target="_blank" href="https://www.openscad.org/">OpenSCAD</a>, the 3D CAD modeller that we use by writing code (as I said <a target="_blank" href="computer-aided-design.html">here</a>) has a function called <code>hull()</code> that displays the <a target="_blank" href="https://doc.cgal.org/latest/Convex_hull_2/index.html">convex hull</a> of child nodes.</p>
@@ -136,6 +141,8 @@ hull() {
 <p>The slicing process of the oloid model was very interesting because I had to add supports to keep the shape in place during printing. It helped me understand how supports work and how to generate them in a slicer software, which is actually super easy.</p>
 
 <p>To do so, I used <a target="_blank" href="https://ultimaker.com/software/ultimaker-cura">Ultimaker Cura</a> and its pre-configured <em>Support</em> options. In order to reduce the printing time and because I knew it from my previous test, I increased the overhang angle to 55° (instead of 45°).</p>
+
+<p>Here is the .std file I made for printing: <a target="_blank" href="medias/3D-scanning-printing-oloid.stl">oloid.stl</a></p>
 
 <h2>Printing</h2>
 
