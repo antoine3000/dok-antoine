@@ -36,7 +36,7 @@
 
 <p>To do so, I designed a pomodoro timer from scratch. I've learn a lot throughout the process and I've the feeling that this new knowledge will play a key role in what I'll do for my personal project and afterwards.</p>
 
-<p><img src ="medias/electronics-design-pomo.jpeg" alt="pomo" /></p>
+<p><img src ="medias/assignments-electronics-design-pomo.jpeg" alt="pomo" /></p>
 
 <h1>Pomodoro timer</h1>
 
@@ -50,7 +50,7 @@
   </blockquote>
 </blockquote>
 
-<p><img src ="medias/electronics-design-pomo-illu.png" alt="pomo-illu" /></p>
+<p><img src ="medias/assignments-electronics-design-pomo-illu.png" alt="pomo-illu" /></p>
 
 <h2>Components</h2>
 
@@ -85,7 +85,7 @@ As inputs, I've to 2 switches (buttons) that allow me to start/pause/resume/rese
 
 <p>Then, you'll have to connect the elements together. To do so, a good practice is to divide the circuit into smaller and more understandable circuits. In my case, I design the switches, LED's, capacitor, ATtiny1614, FTDI and UPDI apart. It's then easier to get a full understanding of the circuit and it's also easier to manipulate.</p>
 
-<p><img src ="medias/electronics-design-schematics-design.jpeg" alt="schematics-design" /></p>
+<p><img src ="medias/assignments-electronics-design-schematics-design.jpeg" alt="schematics-design" /></p>
 
 <p>Don't be confused, the real design mission is for the next step, now is just about connecting parts together, and about being understandable for the community if you plan to share your design or simply for your future self.</p>
 
@@ -95,7 +95,7 @@ As inputs, I've to 2 switches (buttons) that allow me to start/pause/resume/rese
 
 <p>Now is the "tricky" part: finding the best paths, the most compact as possible while respecting the idea I had in mind. For instance, because I'm building a pomodoro timer, I want my 4 leds to be next to each other, and so has to be the resistors as well. It's about designing with constraints, something I really like, even if it took me hours to find a possible way to design my circuit.</p>
 
-<p><img src ="medias/electronics-design-pcb-design.jpeg" alt="pcb-design" /></p>
+<p><img src ="medias/assignments-electronics-design-pcb-design.jpeg" alt="pcb-design" /></p>
 
 <h4>Things I learned while designing it</h4>
 
@@ -112,10 +112,10 @@ As inputs, I've to 2 switches (buttons) that allow me to start/pause/resume/rese
 
 <p>Once your design is ready (that means that all your components are linked together), you can export your files and prepare them to be sent to the mini milling machine. I used <a target="_blank" href="https://inkscape.org/">Inkscape</a>,<a target="_blank" href="https://www.gimp.org/">gimp</a> and <a target="_blank" href="http://fabmodules.org/">fab modules</a> to do so.</p>
 
-<p><img src ="medias/electronics-design-pomo-traces.png" alt="pomo-traces" />
-<img src ="medias/electronics-design-pomo-cut.png" alt="pomo-cut" /></p>
+<p><img src ="medias/assignments-electronics-design-pomo-traces.png" alt="pomo-traces" />
+<img src ="medias/assignments-electronics-design-pomo-cut.png" alt="pomo-cut" /></p>
 
-<p><img src ="medias/electronics-design-fab-modules.jpeg" alt="fab-modules" /></p>
+<p><img src ="medias/assignments-electronics-design-fab-modules.jpeg" alt="fab-modules" /></p>
 
 <p>I used Fab Modules to generate the files needed by the mini milling machine using the same settings I set during the <a target="_blank" href="electronics-production.html">Electronics production</a> week.</p>
 
@@ -123,13 +123,13 @@ As inputs, I've to 2 switches (buttons) that allow me to start/pause/resume/rese
 
 <p>The machine I used to mill my board is the Roland MonoFab SRM-20, this machine seems very reliable, I had no problem while using it.</p>
 
-<p><img src ="medias/electronics-design-pomo-milling.jpeg" alt="pomo-milling" /></p>
+<p><img src ="medias/assignments-electronics-design-pomo-milling.jpeg" alt="pomo-milling" /></p>
 
-<p><img src ="medias/electronics-design-pomo-board.jpeg" alt="pomo-board" /></p>
+<p><img src ="medias/assignments-electronics-design-pomo-board.jpeg" alt="pomo-board" /></p>
 
 <p>Soldering was fun to do, I really like doing it, even if I started with a big mistake: I was a little in a hurry, the lab was closing and I wanted my job to be done, my focus wasn't really there and I soldered the ATtiny1614 in the wrong direction. I know this little dot on the chip, which gives you the direction of the chip but I wasn't paying attention to it. What should have taken a  few minutes took me over an hour: desolder a 14-legs chip isn't that easy!</p>
 
-<p><img src ="medias/electronics-design-pomo.jpeg" alt="pomo" /></p>
+<p><img src ="medias/assignments-electronics-design-pomo.jpeg" alt="pomo" /></p>
 
 <h2>Testing</h2>
 
@@ -137,7 +137,7 @@ As inputs, I've to 2 switches (buttons) that allow me to start/pause/resume/rese
 
 <p>The power comes from the UPDI, as well as the data.</p>
 
-<p><img src ="medias/electronics-design-pomo-plugged.jpeg" alt="pomo-plugged" /></p>
+<p><img src ="medias/assignments-electronics-design-pomo-plugged.jpeg" alt="pomo-plugged" /></p>
 
 <p>First, check if your computer recognizes the board correctly by typing <code>dmesg -w</code> in a terminal and see if a new device is detected when you un/plug the board. Save the ID of the board for later.</p>
 

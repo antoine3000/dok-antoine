@@ -34,7 +34,7 @@
   </h1>
   <p>It's the 4th week of the Fab Academy, we're now exploring the process of electronics production: How to make a in-circuit programmer from a <a target="_blank" href="https://en.wikipedia.org/wiki/Printed_circuit_board">printed circuit board</a> (PCB) and several electronic components, a programmer in wich I'll send code to pilot my future electronic projects.</p>
 
-<p><img src ="medias/electronics-production-ftdi-updi.jpg" alt="ftdi-updi" /></p>
+<p><img src ="medias/assignments-electronics-production-ftdi-updi.jpg" alt="ftdi-updi" /></p>
 
 <h1>Making an in-circuit programmer</h1>
 
@@ -50,11 +50,11 @@
 
 <p>I decided to make an <a target="_blank" href="https://www.ftdichip.com/">FTDI</a> USB-FT230XS-serial. I have to admit that my choice isn't clear at this point. I could have chosen to make another model of programmer, any of them. It's almost impossible to make a thoughtful choice now because I don't know yet what kind of electronic architecture I'll need later. Let's say that the most important thing now is learning how to create a programmer, any of them, and to be able to do it again later with a more specific electronic project.</p>
 
-<p><img src ="medias/electronics-production-USB-FT230XS-serial.png" alt="USB-FT230XS-serial" /></p>
+<p><img src ="medias/assignments-electronics-production-USB-FT230XS-serial.png" alt="USB-FT230XS-serial" /></p>
 
 <p>To program this FTDI USB-FT230XS-serial chip, I also need a UPDI (Unified Program and Debugging Interface) which is an interface for programming and debugging other devices, such as the FTDI that I use.</p>
 
-<p><img src ="medias/electronics-production-FTDI-UPDI.png" alt="FTDI-UPDI" /></p>
+<p><img src ="medias/assignments-electronics-production-FTDI-UPDI.png" alt="FTDI-UPDI" /></p>
 
 <h3>Files preparation</h3>
 
@@ -76,7 +76,7 @@
 <p>I used the same settings for bothl mills, except for the mill value, as stated,
 <code>1/64</code> or <code>1/32</code>.</p>
 
-<p><img src ="medias/electronics-production-fab-modules-settings.jpeg" alt="fab-modules-settings" /></p>
+<p><img src ="medias/assignments-electronics-production-fab-modules-settings.jpeg" alt="fab-modules-settings" /></p>
 
 <h4>Files</h4>
 
@@ -91,19 +91,19 @@
 
 <p>At Fab Lab Barcelona, we use a Roland <a target="_blank" href="https://www.rolanddga.com/products/3d/srm-20-small-milling-machine/features">SRM-20 Compact Milling Machine</a> to mill PCBs. The machine is compact (as its name suggests) and <em>very</em> precise.</p>
 
-<p><img src ="medias/electronics-production-roland-srm20.jpg" alt="roland-srm20" /></p>
+<p><img src ="medias/assignments-electronics-production-roland-srm20.jpg" alt="roland-srm20" /></p>
 
 <p>Cover the back of the PCB with double-sided tape to make it stick to the surface of the milling machine, we don't want it to move. Don't overlap the layers of tape, this would create different levels and therefore a lack of precision on the Z axis.</p>
 
-<p><img src ="medias/electronics-production-pcb.jpg" alt="pcb" /></p>
+<p><img src ="medias/assignments-electronics-production-pcb.jpg" alt="pcb" /></p>
 
 <p>Place the PCB inside the milling machine, on the board (parallel to the edge is better, as it is easier to optimize the space on the PCB) and mount the drill on the machine. A 1/32 for the outline or a 1/64 for the traces.</p>
 
-<p><img src ="medias/electronics-production-end-mills.jpg" alt="end-mills" /></p>
+<p><img src ="medias/assignments-electronics-production-end-mills.jpg" alt="end-mills" /></p>
 
 <p>Configure the X and Y axes according to the size of the design and the space available on the PCB.And then, configure the Z axis. This is one of the most <em>important</em> part of the milling processs. The end-mill is supposed to be placed perfectly on the surface of the PCB so the machine knows how deep it can go when milling the paths. If not, it will either damage the board or not mill it enough.</p>
 
-<p><img src ="medias/electronics-production-roland-vpanel.jpg" alt="roland-vpanel" /></p>
+<p><img src ="medias/assignments-electronics-production-roland-vpanel.jpg" alt="roland-vpanel" /></p>
 
 <p>To set the Z axis correctly:</p>
 
@@ -119,7 +119,7 @@
 
 <p>Take care to always lift the Z axis before moving on the X and Y axis. If not, the end-mill will scratch the surface and destroy the PCB.</p>
 
-<p><img src ="medias/electronics-production-xyz-axes.jpg" alt="xyz" /></p>
+<p><img src ="medias/assignments-electronics-production-xyz-axes.jpg" alt="xyz" /></p>
 
 <p>When the end mill and the XYZ axes are configured, press the <code>cut</code> button to load the appropriate file, then press the <code>setup</code> button to start the milling process.</p>
 
@@ -138,11 +138,11 @@
 <li>We forgot to lift the tool on the Z axis before moving it to the X/Y origin… We scratched the board and we had to re-mill to damaged parts.</li>
 </ul>
 
-<p><img src ="medias/electronics-production-pcb-result.jpg" alt="pcb-result" /></p>
+<p><img src ="medias/assignments-electronics-production-pcb-result.jpg" alt="pcb-result" /></p>
 
 <p>It is a good practice to test the board with a multimeter between to milling and the soldering, to be sure that the circuits conduct the electricity as they should.</p>
 
-<p><img src ="medias/electronics-production-pcb-test.jpg" alt="pcb-test" /></p>
+<p><img src ="medias/assignments-electronics-production-pcb-test.jpg" alt="pcb-test" /></p>
 
 <h2>Soldering components</h2>
 
@@ -156,21 +156,21 @@
 
 <p>Once I had the board ready, I could start the soldering process. But before that, I first start the collect the components I needed and sticked them to a sheet of paper to be sure not to lose them.</p>
 
-<p><img src ="medias/electronics-production-shopping-list.jpg" alt="shopping-list" /></p>
+<p><img src ="medias/assignments-electronics-production-shopping-list.jpg" alt="shopping-list" /></p>
 
 <p>To solder electronics components on a board, it is easier to start with the central parts to the external parts and from the most complex to the simplest.</p>
 
 <p>The first few minutes of soldering are a bit frustrating, the parts are very small and precision is not easy on this scale. And we've to begin with the most complex part (to get it done before continuing). But once I got used to it, it became a very pleasant moment of mindfulness.</p>
 
-<p><img src ="medias/electronics-production-soldering-macro.jpg" alt="soldering-macro" />
-<img src ="medias/electronics-production-soldering-ftdi.JPG" alt="soldering-ftdi" /></p>
+<p><img src ="medias/assignments-electronics-production-soldering-macro.jpg" alt="soldering-macro" />
+<img src ="medias/assignments-electronics-production-soldering-ftdi.JPG" alt="soldering-ftdi" /></p>
 
 <p>Unfortunately, I forgot to take pictures during the soldering process, I was totally into it, I guess. <a target="_blank" href="https://www.youtube.com/watch?v=QKbJxytERvg">This tutorial</a> helped me understand how to do.</p>
 
 <p>Here are the results of the two boards, the FTDI and the UPDI.</p>
 
-<p><img src ="medias/electronics-production-ftdi-updi-result.jpg" alt="ftdi-updi-result" />
-<img src ="medias/electronics-production-ftdi-updi.jpg" alt="ftdi-updi" /></p>
+<p><img src ="medias/assignments-electronics-production-ftdi-updi-result.jpg" alt="ftdi-updi-result" />
+<img src ="medias/assignments-electronics-production-ftdi-updi.jpg" alt="ftdi-updi" /></p>
 
 <h2>Testing the device</h2>
 
@@ -180,7 +180,7 @@
 
 <p>Another test with the multimeter confirmed to me that the board was well done. Let's plug it to my computer to get that confirmation.</p>
 
-<p><img src ="medias/electronics-production-usb-cable.JPG" alt="usb-cable" /></p>
+<p><img src ="medias/assignments-electronics-production-usb-cable.JPG" alt="usb-cable" /></p>
 
 <p>On linux, in order to list the devices plugged to your computer, run <code>lsusb</code> in a terminal. Or run <code>dmesg -w</code> to get info in real time.</p>
 
@@ -192,9 +192,9 @@
   </blockquote>
 </blockquote>
 
-<p><img src ="medias/electronics-production-usb-computer.JPG" alt="usb-computer" /></p>
+<p><img src ="medias/assignments-electronics-production-usb-computer.JPG" alt="usb-computer" /></p>
 
-<p><img src ="medias/electronics-production-ftdi-screenshot.jpeg" alt="ftdi-screenshot" /></p>
+<p><img src ="medias/assignments-electronics-production-ftdi-screenshot.jpeg" alt="ftdi-screenshot" /></p>
 
 <p>It's working!</p>
 
@@ -206,7 +206,7 @@
 
 <p>We used the Roland MonoFab SRM-20 machine to mill a test file.</p>
 
-<p><img src ="medias/electronics-production-linetest.png" alt="linetest" /></p>
+<p><img src ="medias/assignments-electronics-production-linetest.png" alt="linetest" /></p>
 
 <h2>Detailed specs of the machine:</h2>
 
@@ -219,8 +219,8 @@
 <li>Material: Modeling Wax, Chemical Wood, Foam, Acrylic, PCB</li>
 </ul>
 
-<p><img src ="medias/electronics-production-group-1.png" alt="group-1" />
-<img src ="medias/electronics-production-group-2.png" alt="group-2" /></p>
+<p><img src ="medias/assignments-electronics-production-group-1.png" alt="group-1" />
+<img src ="medias/assignments-electronics-production-group-2.png" alt="group-2" /></p>
 
 <p>We prepared the <code>.rml</code> files using <a target="_blank" href="http://fabmodules.org/">Fab Modules</a>.</p>
 
@@ -234,9 +234,9 @@
 <li>Click the <code>calculate</code> button to calculate the toolpath and click the <code>save</code> button to save the <code>.rml</code> file.</li>
 </ol>
 
-<p><img src ="medias/electronics-production-testline-2.jpg" alt="linetest" /></p>
+<p><img src ="medias/assignments-electronics-production-testline-2.jpg" alt="linetest" /></p>
 
-<p><img src ="medias/electronics-production-testline-1.jpg" alt="linetest" /></p>
+<p><img src ="medias/assignments-electronics-production-testline-1.jpg" alt="linetest" /></p>
 
 <p>We had an issue with the outlines cutting. One side was not cut completely. We managed to generate the file multiple times and did the process again, but we still had the same problem. However, we could tell from the failed test that using the default settings of Fab Modules, the machine is able to mill up to 0.010mm thin trace.</p>
 
