@@ -28,10 +28,25 @@ I imagine a grid of rods pushing into a soft material and therefore deforming it
 
 ### Luminous choreography according to the plant's electrical signal
 
-The electrical signal of the plant, collected using electrodes and a signal amplifier, adjust the level of the LED's to give a visual signal on the pulses of the plants.
+The electrical signal of the plant, collected using electrodes and a signal amplifier, adjust the level of the LED's to give a visual signal on the pulses of the
+plants.
 
 ### Global reaction to a human touch
 
 If a human touches the plant, the installation reacts as well, inviting the people to give a special attention to it. This can be made using the *touche sensor*, as seen [here](https://www.instructables.com/id/Touche-for-Arduino-Advanced-touch-sensing/).
 
+---
 
+![sketch](sketch-001.jpg)
+![sketch](sketch-002.jpg)
+![sketch](sketch-003.jpg)
+![sketch](sketch-004.jpg)
+![sketch](sketch-005.jpg)
+![sketch](sketch-006.jpg)
+![sketch](sketch-007.jpg)
+![sketch](sketch-008.jpg)
+![sketch](sketch-009.jpg)
+![sketch](sketch-010.jpg)
+![sketch](sketch-011.jpg)
+![sketch](sketch-012.jpg)
+![sketch](sketch-013.jpg)
