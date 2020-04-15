@@ -17,27 +17,6 @@ What if we could have a tangible way to visualize how plants communicate, a way 
 ![first-sketch](first-sketch.jpg)
 
 
-## Listen to what the plants have to say
-
-Plants communicate as we do. But it's hardly noticeable for us because we don't send and receive signals at the same speed as they do. This is why I would like to build a kind of machine that can help any plant to express its needs at a speed that we can actually perceive and understand. Or should I reformulate in a less human-centric way: a machine that can help humans understand what the plants have to say.
-
-## A machine that helps us understand plants 
-
-The machine I have in mind is able to get the data from a plant [temperature, light level, air quality, humidity level, nutrient level, vibrations, ?] and transform it into something visual or audible. The machine itself could be small, like a tool that helps humans understand plants in everyday life, or large, as an art installation that invites the public to join a piece of nature, to watch and listen to what it has to say.
-
-
-1. Obtain environmental data (humidity, light, temperature)
-2. Compare them with the electrical signal emitted by the plant
-3. Find where the links between these different data are
-
-
-### Breathing
-
-Breathing (or respiration) is a very common process between plants and animals. This is the kind of movement I can use to represent how the plant feels in relation to its environment.
-
-![final-project-drawings](final-project-drawings.png)
-
-
 
 
 
