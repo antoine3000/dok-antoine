@@ -19,9 +19,7 @@ title: Concept
 
 ## Sytem
 
-### Standalone system
-
-### Connected modules
-
-## Interface
+### Modules
+### Assembly
+### Interface
 
