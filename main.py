@@ -41,7 +41,7 @@ for file_name in os.listdir(folder_html):
     if file_name.endswith('.html'):
         os.remove(folder_html + file_name)
 #for file_name in os.listdir(folder_medias):
-   # os.remove(folder_medias + file_name)
+       # os.remove(folder_medias + file_name)
 
 # generate articles
 for content_type in content_types:
@@ -64,7 +64,7 @@ for content_type in content_types:
                         file.read(), extras=['metadata', 'tables', 'target-blank-links'])
             else:
                 # media file
-                media_file_path = 'public/medias/{slug}'.format(slug=article_slug + '-' + item)
+                media_file_path = 'public/medias/{slug}'.format(slug=content_type + '-' + article_slug + '-' + item)
                 image_util(file_path, media_file_path)
 
     # reverse order
@@ -100,7 +100,7 @@ for content_type in content_types:
         article_file_path = 'public/{slug}.html'.format(
             slug=article_data['slug'])
         os.makedirs(os.path.dirname(article_file_path), exist_ok=True)
-        img_tag = '<img src ="medias/' + article_data['slug'] + '-'
+        img_tag = '<img src ="medias/' + content_type  + '-' + article_data['slug'] + '-'
         video_tag = '<video controls preload="auto"><source type ="video/mp4" src ="medias/' + article_data['slug'] + '-'
         doc_link = '<a target="_blank" href="medias/' + article_data['slug'] + '-'
         article_html = article_html.replace('<img src="', img_tag)
