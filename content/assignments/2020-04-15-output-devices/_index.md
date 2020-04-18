@@ -73,14 +73,13 @@ Servo motor appears to be the perfect candidate when we need a full control of
 the rotation angle, direction and speed of a motor.
 
 
-## Relays
 
-## MOSFET
+# MOSFET
 
-# Electroluminescence actuators
+A MOSFET (Metal Oxide Semiconductor Field Effect Transistor) is a semiconductor
+device which is used for switching electronic signals.
 
-## LED
 
-## LCD screen
+# LCD screen
 
  
