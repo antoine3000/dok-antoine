@@ -83,3 +83,38 @@ device which is used for switching electronic signals.
 # LCD screen
 
  
+---
+
+# Prototyping an incubator
+
+I would like to prototype an incubator by using the devices I already have. I'll
+do it by following the spiral methodology: a first round with the basic
+features, and then other ones with additional options.
+
+## Round #01: the basics
+
+For the first round, I would like to control a fan and a thermoelectric cooler
+depending on the ambient temperature, using a NODEMCU Amica.
+
+- NodeMCU V1.0 / ESP8266 ([info](https://www.nodemcu.com/index_en.html) / [Pinout](https://circuit-diagramz.com/wp-content/uploads/2018/11/ESP8266-12e-Pinout-Schematic-Circuit-Diagram-NodeMCU.pdf))
+- Thermoelectric Cooler ([info](https://www.sparkfun.com/products/15082) / [datasheet](https://cdn.sparkfun.com/assets/a/d/2/a/7/TEC112707Thermoelectric_Module_Datasheet.pdf))
+- 12V Axial Fan (EverFlow R127025BU DC 12V 0.40AMP 4-pin connector)
+- 10K thermistor
+- MOSFET N-CH ([datasheet](https://media.digikey.com/pdf/Data%20Sheets/NXP%20PDFs/IRFZ44N_Rev1.pdf))
+
+
+### References
+
+- [Biohack Academy:
+  Incubator](https://biohackacademy.github.io/bha6/class/3/pdf/3.4%20Incubator%20design.pdf)
+- [High-Power Control: Arduino + N-Channel
+    MOSFET](https://bildr.org/2012/03/rfp30n06le-arduino/)
+- [Sparkfun: MOSFETS explained](https://www.sparkfun.com/news/819)
+- [4 Pin
+  Fan](https://allpinouts.org/pinouts/connectors/motherboards/motherboard-cpu-4-pin-fan/)
+- [NodeMCU documentation](https://nodemcu.readthedocs.io/en/master/)
+- [PlatformIO NodeMCU
+  1.0](https://docs.platformio.org/en/latest/boards/espressif8266/nodemcuv2.html)
+  
+  
+  
