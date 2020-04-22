@@ -104,6 +104,8 @@ void loop() {
 }
 </pre>
 
+TODO: Update values according to [this tutorial](https://computers.tutsplus.com/tutorials/how-to-read-temperatures-with-arduino--mac-53714)
+
 
 # Moisture level sensor
 

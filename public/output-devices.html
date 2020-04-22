@@ -32,42 +32,24 @@
       Output devices
     
   </h1>
-  <p>This week's assignement is about output devices: we are learning how to make various
-motors work, what are their mechanisms and principles, when and why use a
-specific one instead of another.</p>
+  <p>This week's assignement is about output devices: we are learning how to make various motors work, what are their mechanisms and principles, when and why use a specific one instead of another.</p>
 
-<p>I might have enough material at home (covid-19 restrictions) to build an incubator system that could helps
-<a target="_blank" href="https://maudb.gitlab.io/dok/">Maud Bausier</a>, my partner who initiated this
-project but needed help to finish it, to grow mycellium or any fermented food (tempeh, sriracha, etc.).</p>
+<p>I might have enough material at home (covid-19 restrictions) to build an incubator system that could helps <a target="_blank" href="https://maudb.gitlab.io/dok/">Maud Bausier</a>, my partner who initiated this project but needed help to finish it, to grow mycellium or any fermented food (tempeh, sriracha, etc.).</p>
 
-<p>I'm going to use a thermistor (to know to temperature inside the incubator), a thermopad (to
-warm it up), a fan (to cool it down), a LCD screen (to know what's going on) and
-two push buttons to adjust the desired temperature inside the incubator.</p>
+<p>I'm going to use a thermistor (to know to temperature inside the incubator), a thermopad (to warm it up), a fan (to cool it down), a LCD screen (to know what's going on) and two push buttons to adjust the desired temperature inside the incubator.</p>
 
 <h1>Motors</h1>
 
-<p>But first, I needed some basics about motors: a motor is mainly made of coils
-and magnets. When current goes through a coil, a magnetic field is generated around it. The
-higher the current, the greater the field. This magnetic field creates polarity
-which is used to create a rotational force. This force is called <a target="_blank" href="https://en.wikipedia.org/wiki/Torque">the
-torque</a> and its value depends on the motor's input current. More
-current implies stronger magnetic field in the coils, that means more attraction/repulsion.</p>
+<p>But first, I needed some basics about motors: a motor is mainly made of coils and magnets. When current goes through a coil, a magnetic field is generated around it. The higher the current, the greater the field. This magnetic field creates polarity which is used to create a rotational force. This force is called <a target="_blank" href="https://en.wikipedia.org/wiki/Torque">the torque</a> and its value depends on the motor's input current. More current implies stronger magnetic field in the coils, that means more attraction/repulsion.</p>
 
 <p><img src ="medias/assignments-output-devices-motor-coils.png" alt="motor coils" />
-Image source: <a target="_blank" href="https://itp.nyu.edu/physcomp/lessons/dc-motors/dc-motors-the-basics/">ITP Physical
-Computing</a></p>
+Image source: <a target="_blank" href="https://itp.nyu.edu/physcomp/lessons/dc-motors/dc-motors-the-basics/">ITP Physical Computing</a></p>
 
 <h2>DC motor</h2>
 
-<p>Maybe the simplest and most common motor in electronics, it converts current electrical energy into mechanical energy.
-The motor spins in one direction. Switching its polarity changes its direction.
-Varying the current supplied varies the speed of the motor.</p>
+<p>Maybe the simplest and most common motor in electronics, it converts current electrical energy into mechanical energy. The motor spins in one direction. Switching its polarity changes its direction. Varying the current supplied varies the speed of the motor.</p>
 
-<p>There are two main kinds of DC motor: the brushed one and the brushless one. The
-first one is more commonly used because it is the cheaper one. The brushless is bit
-more expensive, but it is less noisy and can last a lot longer because it
-doesn't need to be maintained, simply because there is almost no friction inside
-it.</p>
+<p>There are two main kinds of DC motor: the brushed one and the brushless one. The first one is more commonly used because it is the cheaper one. The brushless is bit more expensive, but it is less noisy and can last a lot longer because it doesn't need to be maintained, simply because there is almost no friction inside it.</p>
 
 <p><img src ="medias/assignments-output-devices-dc-brush.jpg" alt="DC brush motor" />
 Image source: <a target="_blank" href="https://learn.sparkfun.com/tutorials/motors-and-selecting-the-right-one#what-makes-a-motor-move-">Sparkfun: Motors and selecting the right one</a></p>
@@ -80,17 +62,12 @@ Image source: <a target="_blank" href="https://learn.sparkfun.com/tutorials/moto
 
 <p><img src ="medias/assignments-output-devices-stepper-motor.jpg" alt="stepper motor" /></p>
 
-<p>Source: <a target="_blank" href="https://itp.nyu.edu/physcomp/lessons/dc-motors/dc-motors-the-basics/">ITP Physical
-Computing</a></p>
+<p>Source: <a target="_blank" href="https://itp.nyu.edu/physcomp/lessons/dc-motors/dc-motors-the-basics/">ITP Physical Computing</a></p>
 
 <h2>Servo</h2>
 
 <blockquote>
-  <p>A Servo is a small device that has an output shaft. This shaft can be
-  positioned to specific angular positions by sending the servo a coded signal.
-  As long as the coded signal exists on the input line, the servo will maintain
-  the angular position of the shaft. As the coded signal changes, the angular
-  position of the shaft changes. </p>
+  <p>A Servo is a small device that has an output shaft. This shaft can be positioned to specific angular positions by sending the servo a coded signal. As long as the coded signal exists on the input line, the servo will maintain the angular position of the shaft. As the coded signal changes, the angular position of the shaft changes.</p>
   
   <blockquote>
     <p><a target="_blank" href="http://www.seattlerobotics.org/guide/servos.html">Seattle Robotic Society</a></p>
@@ -98,56 +75,137 @@ Computing</a></p>
 </blockquote>
 
 <p><img src ="medias/assignments-output-devices-servo-motor.jpg" alt="Servo motor" />
-Image source: <a target="_blank" href="https://www.youtube.com/watch?v=LXURLvga8bQ">How Servo Motors Work &amp; How To Control Servos using
-Arduino</a></p>
+Image source: <a target="_blank" href="https://www.youtube.com/watch?v=LXURLvga8bQ">How Servo Motors Work &amp; How To Control Servos using Arduino</a></p>
 
-<p>As we can see on the image above, a servo motor is composed by a DC motor, a
-potentionmeter and embedded circuit to control them.</p>
+<p>As we can see on the image above, a servo motor is composed by a DC motor, a potentionmeter and embedded circuit to control them.</p>
 
-<p>Servo motor appears to be the perfect candidate when we need a full control of
-the rotation angle, direction and speed of a motor.</p>
+<p>Servo motor appears to be the perfect candidate when we need a full control of the rotation angle, direction and speed of a motor.</p>
 
 <h1>MOSFET</h1>
 
-<p>A MOSFET (Metal Oxide Semiconductor Field Effect Transistor) is a semiconductor
-device which is used for switching electronic signals.</p>
+<p>A MOSFET (Metal Oxide Semiconductor Field Effect Transistor) is a semiconductor device which is used for switching electronic signals.</p>
+
+<p class="todo">TODO: MOSFET description</p>
 
 <h1>LCD screen</h1>
+
+<p class="todo">TODO: LCD screen description</p>
 
 <hr />
 
 <h1>Prototyping an incubator</h1>
 
-<p>I would like to prototype an incubator by using the devices I already have. I'll
-do it by following the spiral methodology: a first round with the basic
-features, and then other ones with additional options.</p>
+<p>As I said above, my partner is building an incubator to help us grow mycellium (and other fermented food) and she asked me an hand to help her with the electronic part. In this context, I'll prototype an incubator by using the devices I already have. I'll do it by following the spiral methodology: a first round with the basic features, and then other ones with additional options.</p>
 
 <h2>Round #01: the basics</h2>
 
-<p>For the first round, I would like to control a fan and a thermoelectric cooler
-depending on the ambient temperature, using a NODEMCU Amica.</p>
+<p>For the first round, I would like to control a fan and a Peltier (thermoelectric cooler) to get an ideal temperature into a closed space, using a Arduino UNO. The Peltier will be used to warm up the temperature and the fan will help us to either cool down or to distribute the heat evenly.</p>
+
+<blockquote>
+  <p>Thermoelectric coolers (TEC or Peltier) create a temperature differential on each side. One side gets hot and the other side gets cool. Therefore, they can be used to either warm something up or cool something down, depending on which side you use.</p>
+  
+  <blockquote>
+    <p><a target="_blank" href="https://www.sparkfun.com/products/15082">Sparkfun - Thermoelectric Cooler</a></p>
+  </blockquote>
+</blockquote>
+
+<p>The Peltier could be used to warm up or cool down the space depending on the wanted temperature, to do so, we apparently have to reverse its polarity. I'll try to explore this track later. I'll focus on the warm side for now.</p>
+
+<p>Because the fan and the Peltier device require a voltage of 12V and the arduino can only supply 5V, I added an external power supply in the circuit. It is then necessary to also include MOSFETs to control how and when the current flows through the devices.</p>
+
+<h3>Material</h3>
 
 <ul>
-<li>NodeMCU V1.0 / ESP8266 (<a target="_blank" href="https://www.nodemcu.com/index_en.html">info</a> / <a target="_blank" href="https://circuit-diagramz.com/wp-content/uploads/2018/11/ESP8266-12e-Pinout-Schematic-Circuit-Diagram-NodeMCU.pdf">Pinout</a>)</li>
-<li>Thermoelectric Cooler (<a target="_blank" href="https://www.sparkfun.com/products/15082">info</a> / <a target="_blank" href="https://cdn.sparkfun.com/assets/a/d/2/a/7/TEC112707Thermoelectric_Module_Datasheet.pdf">datasheet</a>)</li>
+<li>Arduino UNO (<a target="_blank" href="https://content.arduino.cc/assets/Pinout-UNOrev3_latest.pdf">pinout</a>)</li>
+<li>Thermoelectric Cooler (<a target="_blank" href="https://www.sparkfun.com/products/15082">info</a> / <a target="_blank" href="https://cdn.sparkfun.com/assets/a/d/2/a/7 TEC112707Thermoelectric_Module_Datasheet.pdf">datasheet</a>)</li>
 <li>12V Axial Fan (EverFlow R127025BU DC 12V 0.40AMP 4-pin connector)</li>
 <li>10K thermistor</li>
 <li>MOSFET N-CH (<a target="_blank" href="https://media.digikey.com/pdf/Data%20Sheets/NXP%20PDFs/IRFZ44N_Rev1.pdf">datasheet</a>)</li>
+<li>12V external supply</li>
+<li>10K resistors</li>
+<li>Diode</li>
 </ul>
+
+<h3>Schematics</h3>
+
+<p>I did a schematic in <a target="_blank" href="https://www.kicad-pcb.org/">KiCAD</a> to help me understand the different components ad how to plug them together. Here is a <a target="_blank" href="medias/assignments-output-devices-incubator-schema.jpg">larger image</a> if you like.</p>
+
+<p><img src ="medias/assignments-output-devices-incubator-schema.jpg" alt="incubator-schema" /></p>
+
+<p>File: <a target="_blank" href="medias/assignments-output-devices-incubator_01.pro">incubator_01.pro</a></p>
+
+<h3>Code</h3>
+
+<p>I attribute the pins values according to my schematics and define some settings, such as the ideal temperature and the accepted range, but also the fan and Peltier power.</p>
+
+<p>I do not want the system to go from a stage "It is too hot, I have to cool the temperature" to a stage "It is too cold, let's heat it now" too quickly. This is why I implemented the value <code>tempRange</code>, saying that there are acceptable values around the ideal, which makes the system less reactive but constant.</p>
+
+<p>The fan and the Peltier do not have to operate at their maximum value all the time. This is why I plugged them on PWM pins, to be more subtle than just <code>HIGH</code> and <code>LOW</code> values. A pulse-width modulation (PWM) pin allow us to simulate an analog behavior by manipulating the frequency of the signal (read the <a target="_blank" href="https://www.arduino.cc/en/Tutorial/SecretsOfArduinoPWM">Secrets of Arduino PWM</a>).</p>
+
+<p>In addition, I introduced the values <code>powerFan</code> and<code>powerPeltier</code>, by mapping a value between 0 and 99 (easier to manipulate) to the real value going from 0 to 255 (analog style), to declare the necessary power to both devices. According to the test I did, a value between 20 and 40 is sufficient and prevents the system from overheating, damaging the wires or the devices.</p>
+
+<pre>
+// PINS
+int pinFan = 3;
+int pinPeltier = 5;
+int pinThermo = 0;
+// VARIABLES
+int val;
+float temp;
+// SETTINGS
+int powerFan = 20; // 0-99
+int powerPeltier = 30; // 0-99
+int tempIdeal = 28;
+int tempRange = 2;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(pinFan, OUTPUT);
+  pinMode(pinPeltier, OUTPUT);
+}
+
+void thermistor(int RawADC) {
+  temp = log(((10240000/RawADC) - 10000));
+  temp = 1 / (0.001129148 + (0.000234125 + (0.0000000876741 * temp * temp ))* temp );
+  temp = temp - 273.15;
+}
+
+void loop(){
+  int levelPeltier = map(powerPeltier, 0, 99, 0, 255);
+  int levelFan = map(powerFan, 0, 99, 0, 255);
+  int a = analogRead(pinThermo);
+  thermistor(a);
+  if (temp <= tempIdeal - tempRange) {
+    analogWrite(pinPeltier, levelPeltier);
+    analogWrite(pinFan, 0);
+    Serial.print("Peltier: on / ");
+  } else if (temp >= tempIdeal + tempRange) {
+    analogWrite(pinFan, levelFan);
+    analogWrite(pinPeltier, 0);
+    Serial.print("Fan: on / ");
+  } else {
+    analogWrite(pinFan, 0);
+    analogWrite(pinPeltier, 0);
+  }
+  Serial.print("Temp: ");
+  Serial.print(temp);
+  Serial.print(" / Ideal: ");
+  Serial.println(tempIdeal);
+  delay(1000);
+}
+</pre>
 
 <h3>References</h3>
 
 <ul>
-<li><a target="_blank" href="https://biohackacademy.github.io/bha6/class/3/pdf/3.4%20Incubator%20design.pdf">Biohack Academy:
-Incubator</a></li>
-<li><a target="_blank" href="https://bildr.org/2012/03/rfp30n06le-arduino/">High-Power Control: Arduino + N-Channel
-MOSFET</a></li>
+<li><a target="_blank" href="https://biohackacademy.github.io/bha6/class/3/pdf/3.4%20Incubator%20design.pdf">Biohack Academy: Incubator</a></li>
+<li><a target="_blank" href="https://maudb.gitlab.io/dok/projects/biolab-kitchen/">BioLab Kitchen by Maud Bausier</a></li>
+<li><a target="_blank" href="https://bildr.org/2012/03/rfp30n06le-arduino/">High-Power Control: Arduino + N-Channel MOSFET</a></li>
 <li><a target="_blank" href="https://www.sparkfun.com/news/819">Sparkfun: MOSFETS explained</a></li>
-<li><a target="_blank" href="https://allpinouts.org/pinouts/connectors/motherboards/motherboard-cpu-4-pin-fan/">4 Pin
-Fan</a></li>
+<li><a target="_blank" href="https://allpinouts.org/pinouts/connectors/motherboards/motherboard-cpu-4-pin-fan/">4 Pin Fan</a></li>
 <li><a target="_blank" href="https://nodemcu.readthedocs.io/en/master/">NodeMCU documentation</a></li>
-<li><a target="_blank" href="https://docs.platformio.org/en/latest/boards/espressif8266/nodemcuv2.html">PlatformIO NodeMCU
-1.0</a></li>
+<li><a target="_blank" href="https://www.instructables.com/id/NodeMCU-ESP8266-Details-and-Pinout/">NodeMCU details and Pinout</a></li>
+<li><a target="_blank" href="https://docs.platformio.org/en/latest/boards/espressif8266/nodemcuv2.html">PlatformIO NodeMCU 1.0</a></li>
 </ul>
 
   
