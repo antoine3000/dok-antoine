@@ -6,7 +6,9 @@ This week's assignement is about output devices: we are learning how to make var
 
 I might have enough material at home (covid-19 restrictions) to build an incubator system that could helps [Maud Bausier](https://maudb.gitlab.io/dok/), my partner who initiated this project but needed help to finish it, to grow mycellium or any fermented food (tempeh, sriracha, etc.).
 
-I'm going to use a thermistor (to know to temperature inside the incubator), a thermopad (to warm it up), a fan (to cool it down), a LCD screen (to know what's going on) and two push buttons to adjust the desired temperature inside the incubator.
+I'm going to use a thermistor (to know to temperature inside the incubator), a Peltier (to warm it up), a fan (to cool it down), a LCD screen (to know what's going on) and two push buttons to adjust the desired temperature inside the incubator.
+
+![incubator prototype](incubator-overview.jpg)
 
 # Motors
 
@@ -90,6 +92,8 @@ I did a schematic in [KiCAD](https://www.kicad-pcb.org/) to help me understand t
 
 File: [incubator_01.pro](files/incubator_01.pro)
 
+![incubator prototype](incubator-circuit.jpg)
+
 ### Code
 
 I attribute the pins values according to my schematics and define some settings, such as the ideal temperature and the accepted range, but also the fan and Peltier power.
@@ -150,6 +154,28 @@ void loop(){
   delay(1000);
 }
 </pre>
+
+<video><source src="incubator-prototype.mp4"></video>
+
+### Results
+
+The overall result of this prototype is quite good. The temperature is easily regulated with the Peltier and the fan, and the thermistor obtains precise values.
+
+![incubator prototype](incubator-overview.jpg)
+
+When I tried plugging in the devices for the first time, I was running them at 12 V continuously, but the wires and MOSFETS quickly became very hot, which was a concern. There was too much current in the circuit. Fortunately, not using them continuously but at regular intervals has given us much better results: the devices always work as we want when they receive less current, at least for my needs. This brings me to the PWM tip (as mentioned above).
+
+![incubator prototype](incubator-close.jpg)
+
+I put the thermistor and the Pelier in a cup, to allow the system to increase its temperature without losing too much heat in the surrounding environment. The fan is positioned in front of them, which gives us the possibility to expel the hot air.
+
+![incubator prototype](incubator-power.jpg)
+
+# Next
+
+Now that the electronics work as I want, I hand over to my partner. The next step will probably be a real test with a closed space to see how quickly we can lower or increase the temperature inside. We are also thinking of using the fan to distribute the heat evenly. Be sure to read [Maud's documentation](https://maudb.gitlab.io/dok/projects/biolab-kitchen/) to see her progress on the incubator.
+
+
 
 
 ### References
