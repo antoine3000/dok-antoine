@@ -106,6 +106,7 @@ for content_type in content_types:
         article_html = article_html.replace('<img src="', img_tag)
         article_html = article_html.replace('<video><source src="', video_tag)
         article_html = article_html.replace('<a target="_blank" href="files/', doc_link)
+        article_html = article_html.replace('<p>TODO:', '<p class="todo">TODO:')
         with open(article_file_path, 'w') as file:
             file.write(article_html)
 
