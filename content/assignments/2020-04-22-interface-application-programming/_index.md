@@ -54,11 +54,39 @@ My first reflex was to look for the openFrameworks package in PAMAC, the graphic
 
 Fortunately, the openFrameworks [download](https://openframeworks.cc/download/) and [installation](https://openframeworks.cc/setup/linux-install/) pages are clear enough and the community is very (re)active and helpful. This gives me hope for my future use of this tool.
 
-### Sending data
+### Project architecture
 
-### Receiving data
+Finding a minimal project architecture was harder than expected. The project generator given by openFrameworks doesn't work on my system, for whatever reasons.
+
+Luckily, [a project on github](https://github.com/hiroMTB/vscode_oF) shows how to start an openFrameworks for the case when you work with the VSCode editor. I don't use that editor anymore but the structure shown there is easily replicable for any other text editor (I'm currently juggling between Vim, Emacs and Atom).
+
+This is why I uploaded my own version of a [minimal starter kit for openFrameworks projects](https://gitlab.com/antoine.j/openframerworks-starter) on Gitlab, it will hopefully helps other people to start their projects.
+
+<pre>
+bin/
+obj/linux64/Release
+src/
+- main.cpp
+- ofApp.cpp
+- ofApp.h
+Makefile
+addons.make
+config.make
+</pre>
+
+### Sending data from Arduino
+
+TODO: Arduino code and explanations
+
+### Receiving data to openFrameworks
+
+TODO: oF code and explanations
 
 ### Make something out of it
+
+TODO: code and explanations
+
+TODO: video of the final result
 
 ---
 

@@ -84,11 +84,39 @@
 
 <p>Fortunately, the openFrameworks <a target="_blank" href="https://openframeworks.cc/download/">download</a> and <a target="_blank" href="https://openframeworks.cc/setup/linux-install/">installation</a> pages are clear enough and the community is very (re)active and helpful. This gives me hope for my future use of this tool.</p>
 
-<h3>Sending data</h3>
+<h3>Project architecture</h3>
 
-<h3>Receiving data</h3>
+<p>Finding a minimal project architecture was harder than expected. The project generator given by openFrameworks doesn't work on my system, for whatever reasons.</p>
+
+<p>Luckily, <a target="_blank" href="https://github.com/hiroMTB/vscode_oF">a project on github</a> shows how to start an openFrameworks for the case when you work with the VSCode editor. I don't use that editor anymore but the structure shown there is easily replicable for any other text editor (I'm currently juggling between Vim, Emacs and Atom).</p>
+
+<p>This is why I uploaded my own version of a <a target="_blank" href="https://gitlab.com/antoine.j/openframerworks-starter">minimal starter kit for openFrameworks projects</a> on Gitlab, it will hopefully helps other people to start their projects.</p>
+
+<pre>
+bin/
+obj/linux64/Release
+src/
+- main.cpp
+- ofApp.cpp
+- ofApp.h
+Makefile
+addons.make
+config.make
+</pre>
+
+<h3>Sending data from Arduino</h3>
+
+<p class="todo">TODO: Arduino code and explanations</p>
+
+<h3>Receiving data to openFrameworks</h3>
+
+<p class="todo">TODO: oF code and explanations</p>
 
 <h3>Make something out of it</h3>
+
+<p class="todo">TODO: code and explanations</p>
+
+<p class="todo">TODO: video of the final result</p>
 
 <hr />
 
