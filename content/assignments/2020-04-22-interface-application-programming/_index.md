@@ -6,7 +6,7 @@ This week is devoted to programming interfaces and applications, a subject that 
 
 I'm going to use [openFrameworks](https://openframeworks.cc/) to create an interactive audio and visual piece, a kind of experimental musical instrument that reacts to its environment.
 
-TODO: hero video & short description of the final result
+<video><source src="musical-playground-c.mp4"</video>
 
 ---
 
