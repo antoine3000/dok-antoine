@@ -41,7 +41,7 @@ for file_name in os.listdir(folder_html):
     if file_name.endswith('.html'):
         os.remove(folder_html + file_name)
 # for file_name in os.listdir(folder_medias):
-#        os.remove(folder_medias + file_name)
+       # os.remove(folder_medias + file_name)
 
 # generate articles
 for content_type in content_types:
