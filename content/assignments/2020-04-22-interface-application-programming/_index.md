@@ -8,8 +8,6 @@ I'm going to use [openFrameworks](https://openframeworks.cc/) to create an inter
 
 TODO: hero video & short description of the final result
 
-<video><source src="musical-playground.mp4"></video>
-
 ---
 
 ## My coding journey
