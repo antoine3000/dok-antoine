@@ -221,10 +221,25 @@ The application is getting the light level and the sound level around the microc
 - [ofApp.h](https://gitlab.com/antoine.j/musical-playground/-/blob/master/src/ofApp.h), where I declare the variables and call the functions
 - [ofApp.cpp](https://gitlab.com/antoine.j/musical-playground/-/blob/master/src/ofApp.cpp), the main program
 
+- If the light level is higher than the sound level:  
+play the `drop` sound && display its level horizontally.
+- If the sound level is higher than the hight level:  
+play the `kick` sound && display its level vertically.
+- If the mouse is pressed:  
+reverse the colors and light the LEDs on the Circuit playground
+- If the left button is pressed:  
+play the `clap` sound
+- If the right button is pressed:  
+play the `cymbal` sound
 
+And here is the final result:
+<video><source src="musical-playground-c.mp4"</video>
 
+TODO: Make a screen-capture video
 
-TODO: video of the final result
+# Conclusion
+
+Setting up openFrameworks was not as easy as expected, but it was worth it. I really like the idea of having this great tool in my toolbox, it allows new ideas to be alive, to be shared. It also helps me learn the C++ language, which is also used to control microcontrollers. I am super happy with the new perspectives that this gives to my practice.
 
 ---
 
@@ -234,7 +249,7 @@ TODO: video of the final result
 - [pio and linux](https://docs.platformio.org/en/latest/faq.html#platformio-udev-rules)
 - [pio playground express](https://docs.platformio.org/en/latest/boards/atmelsam/adafruit_circuitplayground_m0.html)
 - [oF ofSerial](https://openframeworks.cc/documentation/communication/ofSerial/)
-- [tuto data send/receive](https://maker.pro/arduino/projects/how-to-send-and-receive-data-through-the-openframeworks-platform-using-arduino)
+- [tutorial data send/receive](https://maker.pro/arduino/projects/how-to-send-and-receive-data-through-the-openframeworks-platform-using-arduino)
 - [light sensor](https://learn.adafruit.com/circuit-playground-lesson-number-0/light-sensor)
 - [sound sensor](https://learn.adafruit.com/circuit-playground-lesson-number-0/sound-sensor)
 - [accelerometer](https://learn.adafruit.com/circuit-playground-lesson-number-0/accelerometer)

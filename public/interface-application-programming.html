@@ -252,10 +252,27 @@ For example, the light sensor collects data in a range of 0 to 1023, but for eas
 
 <ul>
 <li><a target="_blank" href="https://gitlab.com/antoine.j/musical-playground/-/blob/master/src/ofApp.h">ofApp.h</a>, where I declare the variables and call the functions</li>
-<li><a target="_blank" href="https://gitlab.com/antoine.j/musical-playground/-/blob/master/src/ofApp.cpp">ofApp.cpp</a>, the main program</li>
+<li><p><a target="_blank" href="https://gitlab.com/antoine.j/musical-playground/-/blob/master/src/ofApp.cpp">ofApp.cpp</a>, the main program</p></li>
+<li><p>If the light level is higher than the sound level: <br />
+play the <code>drop</code> sound &amp;&amp; display its level horizontally.</p></li>
+<li>If the sound level is higher than the hight level: <br />
+play the <code>kick</code> sound &amp;&amp; display its level vertically.</li>
+<li>If the mouse is pressed: <br />
+reverse the colors and light the LEDs on the Circuit playground</li>
+<li>If the left button is pressed: <br />
+play the <code>clap</code> sound</li>
+<li>If the right button is pressed: <br />
+play the <code>cymbal</code> sound</li>
 </ul>
 
-<p class="todo">TODO: video of the final result</p>
+<p>And here is the final result:
+<video controls preload="auto"><source type ="video/mp4" src ="medias/assignments-interface-application-programming-musical-playground-c.mp4"</video></p>
+
+<p class="todo">TODO: Make a screen-capture video</p>
+
+<h1>Conclusion</h1>
+
+<p>Setting up openFrameworks was not as easy as expected, but it was worth it. I really like the idea of having this great tool in my toolbox, it allows new ideas to be alive, to be shared. It also helps me learn the C++ language, which is also used to control microcontrollers. I am super happy with the new perspectives that this gives to my practice.</p>
 
 <hr />
 
@@ -265,7 +282,7 @@ For example, the light sensor collects data in a range of 0 to 1023, but for eas
 <li><a target="_blank" href="https://docs.platformio.org/en/latest/faq.html#platformio-udev-rules">pio and linux</a></li>
 <li><a target="_blank" href="https://docs.platformio.org/en/latest/boards/atmelsam/adafruit_circuitplayground_m0.html">pio playground express</a></li>
 <li><a target="_blank" href="https://openframeworks.cc/documentation/communication/ofSerial/">oF ofSerial</a></li>
-<li><a target="_blank" href="https://maker.pro/arduino/projects/how-to-send-and-receive-data-through-the-openframeworks-platform-using-arduino">tuto data send/receive</a></li>
+<li><a target="_blank" href="https://maker.pro/arduino/projects/how-to-send-and-receive-data-through-the-openframeworks-platform-using-arduino">tutorial data send/receive</a></li>
 <li><a target="_blank" href="https://learn.adafruit.com/circuit-playground-lesson-number-0/light-sensor">light sensor</a></li>
 <li><a target="_blank" href="https://learn.adafruit.com/circuit-playground-lesson-number-0/sound-sensor">sound sensor</a></li>
 <li><a target="_blank" href="https://learn.adafruit.com/circuit-playground-lesson-number-0/accelerometer">accelerometer</a></li>
