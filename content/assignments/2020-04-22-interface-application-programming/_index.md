@@ -4,6 +4,8 @@ title: Interface application programming
 
 This week is devoted to programming interfaces and applications, a subject that I really like. I would not say that I am a good programmer, I have little experience. But it's something I love to do: solve logic problems, create software that produces the result I want (or the result I didn't expect, because I also find unexpected things beautiful).
 
+I'm going to use [openFrameworks](https://openframeworks.cc/) to create an interactive audio and visual piece, a kind of experimental musical instrument that reacts to its environment.
+
 TODO: hero video & short description of the final result
 
 ---
@@ -211,6 +213,10 @@ For example, the light sensor collects data in a range of 0 to 1023, but for eas
 I can now receive data from the serial and convert it to the type of variable I need, in an easy-to-use range. I have everything I need to create my application.
 
 ### Make something out of it
+
+[The source code of the program is here](https://gitlab.com/antoine.j/musical-playground) and is obviously free and open-source.
+
+
 
 
 TODO: video of the final result
