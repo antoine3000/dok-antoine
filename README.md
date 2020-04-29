@@ -10,7 +10,6 @@ It may not be as efficient or extensible as other static site generators (like [
 
 This documentation tool is open-source by default, as all the things I (try to) do. Feel free to use it, copy it, do whatever you want, but keep in mind that it was written in one specific context and may not work properly in another.
 
-
 ## Core functionalities
 
 In order to be able to develop this low-tech static site generator myself, I have to keep it simple and add functionalities one after the other according to my needs, as show in a [spiral model methodology](https://en.wikipedia.org/wiki/Spiral_model), in order to keep a tool wich works.
@@ -42,7 +41,7 @@ Even though I tried to keep the dependencies as low as possible, I had to use so
 import os
 import shutil
 from datetime import datetime
-from jinja2 import Environment, FileSystemLoader 
+from jinja2 import Environment, FileSystemLoader
 from markdown2 import markdown
 from PIL import Image
 </pre>
