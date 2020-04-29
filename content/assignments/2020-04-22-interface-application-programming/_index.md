@@ -214,7 +214,12 @@ I can now receive data from the serial and convert it to the type of variable I 
 
 ### Make something out of it
 
+The application is getting the light level and the sound level around the microcontroller, compare them. If one is bigger than another.
+
 [The source code of the program is here](https://gitlab.com/antoine.j/musical-playground) and is obviously free and open-source.
+
+- [ofApp.h](https://gitlab.com/antoine.j/musical-playground/-/blob/master/src/ofApp.h), where I declare the variables and call the functions
+- [ofApp.cpp](https://gitlab.com/antoine.j/musical-playground/-/blob/master/src/ofApp.cpp), the main program
 
 
 
