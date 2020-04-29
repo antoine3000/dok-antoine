@@ -74,23 +74,21 @@
 
 <p>For my first openFrameworks application, I would like to get sensor data and convert it to an interactive visual and audio piece. I'm going to use the <a target="_blank" href="https://learn.adafruit.com/adafruit-circuit-playground-express/overview">Circuit Playground Express</a> and its multiple integrated sensors and buttons to help me quickly prototype my idea.</p>
 
-<p class="todo">TODO: openFrameworks image</p>
-
 <h3>Installation</h3>
 
 <p>I first had to install openFrameworks on my machine. Speaking of my machine, I switched from <a target="_blank" href="https://elementary.io/">Elementary OS</a> to <a target="_blank" href="https://manjaro.org/">Manjaro</a> two three weeks ago. I no longer depend on the <a target="_blank" href="https://en.wikipedia.org/wiki/APT_(software)">APT</a> package manager (Advanced Package Tool, from Debian) but from <a target="_blank" href="https://aur.archlinux.org/">AUR</a> (Arch User Repository), from the Arch Linux community.</p>
 
-<p>My first reflex was to look for the openFrameworks package in PAMAC, the graphical AUR package manager for Manjaro Linux, but unfortunately the package is broken there. Which means manual installation is the thing to do. I must say that AUR packages are generally super easy to install, which makes them quite convenient. Too bad this is not the case for openframeworks, and I don't understand enough how it works to lend a hand. Maybe later.</p>
+<p>My first intention was to look for the openFrameworks package in PAMAC, the graphical AUR package manager for Manjaro Linux, but unfortunately the package is broken there. Which means manual installation is the thing to do. I must say that AUR packages are generally super easy to install, which makes them quite convenient. Too bad this is not the case for openframeworks, and I don't understand enough how it works to lend a hand. Maybe later.</p>
 
 <p>Fortunately, the openFrameworks <a target="_blank" href="https://openframeworks.cc/download/">download</a> and <a target="_blank" href="https://openframeworks.cc/setup/linux-install/">installation</a> pages are clear enough and the community is very (re)active and helpful. This gives me hope for my future use of this tool.</p>
 
 <h3>Project architecture</h3>
 
-<p>Finding a minimal project architecture was harder than expected. The project generator given by openFrameworks doesn't work on my system, for whatever reasons.</p>
+<p>Finding a minimal project architecture was more difficult than expected. The project generator provided by openFrameworks does not work on my system, for whatever reason.</p>
 
-<p>Luckily, <a target="_blank" href="https://github.com/hiroMTB/vscode_oF">a project on github</a> shows how to start an openFrameworks for the case when you work with the VSCode editor. I don't use that editor anymore but the structure shown there is easily replicable for any other text editor (I'm currently juggling between Vim, Emacs and Atom).</p>
+<p>Fortunately, <a target="_blank" href="https://github.com/hiroMTB/vscode_oF">a project on github</a> shows how to start an openFrameworks project when using VSCode as a text editor. I no longer use this editor but the structure shown there is easily reproducible for any other text editor (I am currently juggling between Vim, Emacs and Atom).</p>
 
-<p>This is why I uploaded my own version of a <a target="_blank" href="https://gitlab.com/antoine.j/openframerworks-starter">minimal starter kit for openFrameworks projects</a> on Gitlab, it will hopefully helps other people to start their projects.</p>
+<p>That's why I uploaded my own version of a <a target="_blank" href="https://gitlab.com/antoine.j/openframerworks-starter">minimal starter kit for openFrameworks projects</a> on Gitlab, hopefully it will help other people get started on their projects.</p>
 
 <pre>
 bin/
@@ -104,17 +102,147 @@ addons.make
 config.make
 </pre>
 
+<p>When oF (openFrameworks) and the starter kit are correctly installed, go to the project folder and use these commands:</p>
+
+<ul>
+<li>to compile the C++ code: <code>make</code></li>
+<li>to run the program: <code>make run</code></li>
+<li>to compile and run: <code>make &amp;&amp; make run</code></li>
+</ul>
+
 <h3>Sending data from Arduino</h3>
 
-<p class="todo">TODO: Arduino code and explanations</p>
+<p>The first step of my program is to collect the data from the sensors and transmit it to my oF program. To do this, I used a <a target="_blank" href="https://learn.adafruit.com/adafruit-circuit-playground-express/overview">Circuit Playground Express</a> and its built-in sensors, <a target="_blank" href="https: // platformio. org /">PlatformIO</a> to compile / send the code to the microcontroller and the <a target="_blank" href="https://learn.sparkfun.com/tutorials/serial-communication/all">serial communication</a> port.</p>
+
+<p>To create a Pio project, inside the main oF project, which will be used to talk to the Circuit Playground:</p>
+
+<pre>mkdir pio && cd pio && pio project init --board adafruit_circuitplayground_m0</pre>
+
+Then, create a new `main.cpp` file into the `pio/src` folder.
+
+<pre>
+#include &lt;Arduino.h&gt;
+#include &lt;Adafruit_CircuitPlayground.h&gt;
+
+float lightValue, soundValue;
+bool buttonLeft, buttonRight;
+bool dark = false;
+
+void setup() {
+  CircuitPlayground.begin();
+  Serial.begin(9600);
+}
+
+void darkSwitch() {
+  if (dark) {
+    for (int i = 0; i < 10; i++) {
+      CircuitPlayground.setPixelColor(i, 0,   0,   255);
+    }
+  } else {
+    CircuitPlayground.clearPixels();
+  }
+}
+
+void loop() {
+  // get
+  lightValue = CircuitPlayground.lightSensor();
+  soundValue = CircuitPlayground.mic.soundPressureLevel(10);
+  buttonLeft = CircuitPlayground.leftButton();
+  buttonRight = CircuitPlayground.rightButton();
+  // send
+  Serial.print(String(lightValue) + "," + String(soundValue) + "," + String(buttonLeft) + "," + String(buttonRight));
+  if (Serial.available()) {
+    // receive
+    char inByte = Serial.read();
+    if (inByte == 1) {
+    // the received data is '1'
+    dark = !dark;
+  }
+}
+darkSwitch();
+delay(100);
+}
+</pre>
+
+<p>(<a target="_blank" href="https://www.freeformatter.com/html-escape.html">this tool</a> helped me to format the code in order to display it correctly in a <code>&lt;pre&gt;</code> tag)</p>
+
+<p>The main thing here is this line:</p>
+
+<pre>
+Serial.print(String(lightValue) + "," + String(soundValue) + "," + String(buttonLeft) + "," + String(buttonRight));
+</pre>
+
+<p>It converts the values to a string format, using the <code>String ()</code> <a target="_blank" href="https://www.arduino.cc/reference/en/language/variables/data-types/stringobject/">function</a>, separates them with a <code>,</code> and prints them on the serial. It can be a <code>,</code> character or any other character that helps you differentiate between the data you are processing.</p>
+
+<p>Another important part of this program is:</p>
+
+<pre>
+if (Serial.available()) {
+  // receive
+  char inByte = Serial.read();
+  if (inByte == 1) {    // Whether the received data is '1'
+  dark = !dark;
+}
+</pre>
+
+<p>This means that the <code>inByte</code> variable is updated if a serial message is available. It switches the variable "dark" if the program receives a <code>1</code> (true) from the serial. This message is sent by the oF program.</p>
+
+<p>We can now send and receive messages via the serial.</p>
 
 <h3>Receiving data to openFrameworks</h3>
 
-<p class="todo">TODO: oF code and explanations</p>
+<p>First, I declare some variables in the <code>ofApp.h</code> file. The number <code>20</code> must be declared depending on the length of the message we receive.</p>
+
+<pre>
+char receivedData[20]; // length we receive
+char sendData = 1;
+ofSerial serial;
+</pre>
+
+<p>I call my custom function into update().</p>
+
+<pre>
+void ofApp::update(){
+    serialValues();
+}
+</pre>
+
+<p>In <code>serialValues()</code>, while the serial is available, we write the data in a <code>receivedDate</code> variable and run another <code>valuesConversion</code> function to do something with it.</p>
+
+<p>I prefer to keep these two functions separate to facilitate their reuse later. I will definitely reuse the <code>serialValues</code> function as it is, but I don't think that will be the case for <code>valuesConversion ()</code>.</p>
+
+<pre>
+void ofApp::serialValues() {
+    while(serial.available() > 0) {
+        serial.readBytes(receivedData, 20);
+        valuesConversion();
+    }
+}
+</pre>
+
+<p>Then I parse the <code>receivedData</code> to make an array, which I write in <code>values</code>. I can now call <code>values.at(0)</code> to get the first value, and so on. The separator <code>,</code> must correspond to the separator that we chose previously, in the Arduino code.</p>
+
+<pre>
+void ofApp::valuesConversion() {
+    vector<string> values;
+    values = ofSplitString(receivedData, ",");
+    lightValue = ofToFloat(values.at(0));
+    soundValue = ofToFloat(values.at(1));
+    buttonLeft = ofToBool(values.at(2));
+    buttonRight = ofToBool(values.at(3));
+    lightLevel = ofMap(lightValue, 0, 1023, 0, 100);
+    soundLevel = ofMap(soundValue, 50, 100, 0, 100);
+    cout << "light: " << lightLevel << " / sound: " << soundLevel << endl;
+    cout << "left: " << buttonLeft << " / right: " << buttonRight << endl;
+}
+</pre>
+
+<p>The <code>ofMap()</code> function allows us to map a value, from its initial range to a new one.
+For example, the light sensor collects data in a range of 0 to 1023, but for ease of use, I convert it to another value, from 0 to 100.</p>
+
+<p>I can now receive data from the serial and convert it to the type of variable I need, in an easy-to-use range. I have everything I need to create my application.</p>
 
 <h3>Make something out of it</h3>
-
-<p class="todo">TODO: code and explanations</p>
 
 <p class="todo">TODO: video of the final result</p>
 
