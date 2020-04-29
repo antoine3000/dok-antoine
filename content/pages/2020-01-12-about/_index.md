@@ -9,7 +9,7 @@ This website is my digital studio, a place where I can experiment without constr
 It's also my personal assistant, it helps me when I doubt on how to do something I've done before. It invites me to write (and then find) my personal knowledge online.
 A tool for documenting the things I learn.
 
-This website is built with a custom static site generator that I wrote in Python. It's open-source by default, as all the things I (try to) do. Sources are available on [Gitlab](https://gitlab.com/antoine.j/antoinestudio).
+This website is built with a custom static site generator that I wrote in Python. It's open-source by default, as all the things I (try to) do. Sources are available on [Gitlab](https://gitlab.com/antoine.j/antoine.studio).
 
 If you want to contact me, don't hesitate to [send me a message](mailto:antoine.stuff@pm.me) on my encrypted email address or to [follow me](https://merveilles.town/@focus404) on an alternative social network that I trust.
 
@@ -33,5 +33,3 @@ During our journey, we had the chance to work for/with a music festival (Schiev)
 
 I'm graduated in Art and Graphic Design at the [Ecole de Recherche Graphique](http://erg.be) (ERG) of Brussels.
 It was all about learning how to learn, hacking systems, building things without any budget, finding the right tone to communicate with others.
-
-

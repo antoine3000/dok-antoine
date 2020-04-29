@@ -34,7 +34,7 @@ It may not be as efficient or extensible as other static site generators (like [
 
 ## Sources
 
-This documentation tool is open-source by default, as all the things I (try to) do. Sources are available on [Gitlab](https://gitlab.com/antoine.j/antoinestudio).
+This documentation tool is open-source by default, as all the things I (try to) do. Sources are available on [Gitlab](https://gitlab.com/antoine.j/antoine.studio).
 
 Feel free to use it, copy it, do whatever you want, but keep in mind that it was written in one specific context and may not work properly in another.
 
@@ -70,7 +70,7 @@ Even though I tried to keep the dependencies as low as possible, I had to use so
 import os
 import shutil
 from datetime import datetime
-from jinja2 import Environment, FileSystemLoader 
+from jinja2 import Environment, FileSystemLoader
 from markdown2 import markdown
 from PIL import Image
 </pre>
@@ -102,7 +102,7 @@ main.py
 
 ---
 
-# GIT cheatsheet 
+# GIT cheatsheet
 
 Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 
