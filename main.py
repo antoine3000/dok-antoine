@@ -14,7 +14,7 @@ index_template = env.get_template('index.html')
 article_template = env.get_template('article.html')
 flux_template = env.get_template('flux.html')
 # misc
-content_types = ['finalproject', 'pages', 'assignments']
+content_types = ['fabac-finalproject', 'pages', 'fabac-assignments']
 base_width = 1200
 media_ext = ['jpg', 'jpeg', 'png']
 METADATA = {}
@@ -41,7 +41,7 @@ for file_name in os.listdir(folder_html):
     if file_name.endswith('.html'):
         os.remove(folder_html + file_name)
 # for file_name in os.listdir(folder_medias):
-       # os.remove(folder_medias + file_name)
+#        os.remove(folder_medias + file_name)
 
 # generate articles
 for content_type in content_types:
@@ -93,16 +93,16 @@ for content_type in content_types:
             'thumbnail': thumbnail,
             'tags': tags,
             'date': ARTICLE_INFO.get(article),
-            'slug': article
+            'slug': content_type  + '-' + article
         }
         ARTICLES[article].metadata = article_data
         article_html = article_template.render(article=article_data)
         article_file_path = 'public/{slug}.html'.format(
             slug=article_data['slug'])
         os.makedirs(os.path.dirname(article_file_path), exist_ok=True)
-        img_tag = '<img src ="medias/' + content_type  + '-' + article_data['slug'] + '-'
-        video_tag = '<video controls preload="auto"><source type ="video/mp4" src ="medias/' + content_type + '-' + article_data['slug'] + '-'
-        doc_link = '<a target="_blank" href="medias/' + content_type + '-' + article_data['slug'] + '-'
+        img_tag = '<img src ="medias/' + article_data['slug'] + '-'
+        video_tag = '<video controls preload="auto"><source type ="video/mp4" src ="medias/' + article_data['slug'] + '-'
+        doc_link = '<a target="_blank" href="medias/' + article_data['slug'] + '-'
         article_html = article_html.replace('<img src="', img_tag)
         article_html = article_html.replace('<video><source src="', video_tag)
         article_html = article_html.replace('<a target="_blank" href="files/', doc_link)
@@ -143,9 +143,9 @@ with open('public/flux.html', 'w') as file:
 
 # generate home
 home_html = home_template.render(
-    finalproject=METADATA['finalproject_metadata'],
+    finalproject=METADATA['fabac-finalproject_metadata'],
     pages=METADATA['pages_metadata'],
-    assignments=METADATA['assignments_metadata'],
+    assignments=METADATA['fabac-assignments_metadata'],
 )
 with open('public/index.html', 'w') as file:
     file.write(home_html)
