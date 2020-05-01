@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset=utf-8>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title property="schema:name">antoine.studio</title>
+  <meta name="description" content="experimental studio of Antoine Jaunard">
+  <meta property="schema:name" content="antoine.studio">
+  <meta property="schema:description" content="experimental studio of Antoine Jaunard">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+  <main class="main">
+    <header class="header">
+      <h1 class="title"><a href="index.html"><span>antoine</span>.studio</a></h1>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html" class="nav__link">index</a></li>
+          <li class="nav__item"><a href="flux.html" class="nav__link">flux</a></li>
+          <li class="nav__item"><a href="about.html" class="nav__link">about</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+
+<article class="article">
+  <h1 class="article__title">
+    
+      3D scanning and printing
+    
+  </h1>
+  <p>3D printing is not as simple as pressing the <em>print</em> button and waiting for the model to be printed. It is crucial to know how to prepare a 3D model, how the printer works and what are its limits, and how to balance printing time with print quality. This week, I'm going to test a printer, scan and print something.</p>
+
+<h1>Printing a 3D test file</h1>
+
+<p>For this week's group assignement, I teamed up with <a target="_blank" href="https://fabacademy.org/2020/labs/barcelona/students/tue-ngo/">Tue</a> and <a target="_blank" href="https://fabacademy.org/2020/labs/barcelona/students/david-prieto/">David</a>. We picked a <a target="_blank" href="https://www.thingiverse.com/thing:1363023">test file</a> from Thingiverse in order to test different features of one of the 3D printers we have in Fab Lab Barcelona, the <a target="_blank" href="https://www.creality3d.shop/products/creality-cr-10s-s5-3d-printer-diy-kit-large-printing-size-500x500x500mm">Creality3D CR-10 S5 3D</a>.</p>
+
+<p><img src ="medias/fabac-assignments-3D-scanning-printing-testfilecad.jpeg" alt="test file" /></p>
+
+<p>This file allows us to test these features:</p>
+
+<ul>
+<li>z-height check</li>
+<li>warp check</li>
+<li>spike</li>
+<li>hole in wall</li>
+<li>raft test</li>
+<li>overhang Steps 50° - 70°</li>
+<li>2 different extrusion widths: 0.48mm &amp; 0.4mm</li>
+</ul>
+
+<h2>Slicing</h2>
+
+<p>To be able to print a 3D model, we have to send instructions to the printer, wich are written in <a target="_blank" href="https://en.wikipedia.org/wiki/G-code">g-code</a> and tells the motors where to move.
+To prepare the g-code, we have to <em>slice</em> our 3D model (.STL), to simulate and anticipate how the model will be printed, according to the printer settings and gravity law.</p>
+
+<p><img src ="medias/fabac-assignments-3D-scanning-printing-cura-lab.JPG" alt="cura lab" /></p>
+
+<p>At Fab Lab Barcelona, a computer with <a target="_blank" href="https://ultimaker.com/software/ultimaker-cura">Ultimaker Cura</a> is attached to the machines, with all the presets of the differents printers saved in it. It's therefore easier to directly use it in order to slice our model instead of searching the presets and install them on our personal laptop.</p>
+
+<h3>Specific settings that we'd to specify</h3>
+
+<ul>
+<li>layer height: <code>0.25mm</code></li>
+<li>Wall thickness: <code>0.8mm</code> (= 2 lines)</li>
+<li>Infill: <code>10%</code></li>
+<li>Print speed: <code>60mm/s</code> (= maximum for this printer)</li>
+</ul>
+
+<h2>Printing</h2>
+
+<p>The filament we use is a <code>PLA 1.75mm</code>. It's a plant-based material made from starches like soybeans or corn. It needs to be heated at 190-200C° to be used.</p>
+
+<p><img src ="medias/fabac-assignments-3D-scanning-printing-testfileprint.JPG" alt="testfileprint" /></p>
+
+<p>The printing was done in ~90 minutes without any troubles.</p>
+
+<p><video controls preload="auto"><source type ="video/mp4" src ="medias/fabac-assignments-3D-scanning-printing-print-test.mp4"></video></p>
+
+<p><img src ="medias/fabac-assignments-3D-scanning-printing-testprint.JPG" alt="testprint" />
+<img src ="medias/fabac-assignments-3D-scanning-printing-testdetail.JPG" alt="testdetail" /></p>
+
+<h2>Results</h2>
+
+<p>As we can see in the images above, the definition of the print is quite good, the details are respected and the print angles can be large (in fact more than 45°). Even the small bridges without support were printed correctly. I am very satisfied with this test and the new possibilities that it lets us see.</p>
+
+<hr />
+
+<h1>Oloid</h1>
+
+<p>I'm exploring different types of shapes that could eventually be interesting regarding my final project. One of these is the oloid.</p>
+
+<blockquote>
+  <p>An oloid is a three-dimensional curved geometric object that was discovered by Paul Schatz in 1929. It is the convex hull of a skeletal frame made by placing two linked congruent circles in perpendicular planes, so that the center of each circle lies on the edge of the other circle. The distance between the circle centers equals the radius of the circles. One third of each circle's perimeter lies inside the convex hull, so the same shape may be also formed as the convex hull of the two remaining circular arcs each spanning an angle of 4π/3.</p>
+  
+  <blockquote>
+    <p><a target="_blank" href="https://en.wikipedia.org/wiki/Oloid">Oloid, Wikipedia</a></p>
+  </blockquote>
+</blockquote>
+
+<div class="embed-container">
+<iframe src="https://www.youtube-nocookie.com/embed/GM3_JuFgJ2E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<p>An oloid is a geometric shape that only has one side. That means that if you make it roll on a flat surface, its entire surface will touch the flat surface at some point.</p>
+
+<p>The oloid shape can only be achieved by using an additive technique, such as 3D
+printing, and not a subtractive technique, such as laser cutting or milling,
+because the shape itself must be worked in all directions, not just from bottom
+to top (or by using another machine, a robot, with more axes, but then the technique begins to be too complex for a small piece like this one).</p>
+
+<h2>Modeling</h2>
+
+<p><a target="_blank" href="https://www.openscad.org/">OpenSCAD</a>, the 3D CAD modeller that we use by writing code (as I said <a target="_blank" href="fabac-assignments-computer-aided-design.html">here</a>) has a function called <code>hull()</code> that displays the <a target="_blank" href="https://doc.cgal.org/latest/Convex_hull_2/index.html">convex hull</a> of child nodes.</p>
+
+<p>This is why I to use OpenSCAD to model this particular shape instead of another more conventional tool like FreeCAD.</p>
+
+<pre>
+$fn = 180; // resolution
+radius = 20;
+
+hull() {
+  cylinder(r=radius, h=0.1, center=true);
+  rotate(a=90, v=[1,0,0]) {
+    translate([radius,0,0]) {
+      cylinder(r=radius, h=0.1, center=true);
+    }
+  }
+}
+</pre>
+
+<p>Here is the code I wrote to model the oloid. It's simple isn't it?</p>
+
+<p><video controls preload="auto"><source type ="video/mp4" src ="medias/fabac-assignments-3D-scanning-printing-oloid-openscad.mp4"></video></p>
+
+<h2>Slicing</h2>
+
+<p>The slicing process of the oloid model was very interesting because I had to add supports to keep the shape in place during printing. It helped me understand how supports work and how to generate them in a slicer software, which is actually super easy.</p>
+
+<p>To do so, I used <a target="_blank" href="https://ultimaker.com/software/ultimaker-cura">Ultimaker Cura</a> and its pre-configured <em>Support</em> options. In order to reduce the printing time and because I knew it from my previous test, I increased the overhang angle to 55° (instead of 45°).</p>
+
+<p>Here is the .std file I made for printing: <a target="_blank" href="medias/fabac-assignments-3D-scanning-printing-oloid.stl">oloid.stl</a></p>
+
+<h2>Printing</h2>
+
+<p>Printing this oloid was'nt as easy as the first test I did. My first attempt failed and I had to stop printing. It gave something like this:</p>
+
+<p><img src ="medias/fabac-assignments-3D-scanning-printing-oloid-fail.jpg" alt="oloid-fail" /></p>
+
+<p>I had to call one of my instructors, Mikel Llobera Guelbenzu, to find out what had happened. But even with him, we didn't know directly where this failure came from. We had to search together, and it was very beneficial for my learning.</p>
+
+<p>At first we thought it came from the amount of material coming from the extruder, as if there was a knot in the spool of filament. There was one, but after another test, it turned out that this wasn't the main problem.</p>
+
+<p>Finally, Mikel discovered that the bed wasn't flat due to a wrong manipulation on previous prints. We recalibrated it and relaunched the print, and yes: it went well!</p>
+
+<p><video controls preload="auto"><source type ="video/mp4" src ="medias/fabac-assignments-3D-scanning-printing-oloid-print-1.mp4"></video></p>
+
+<p>The very end of the printing was a bit problematic too. The supports didn't support the model enough and everything started to move according to the movements of the printer.</p>
+
+<p>At one point it really seemed like the oloid could fall. Fortunately, I was around the printer and I could hold my piece in place using my finger. That is something I'll have to consider the next time I have to think about supports.</p>
+
+<p><video controls preload="auto"><source type ="video/mp4" src ="medias/fabac-assignments-3D-scanning-printing-oloid-print-2.mp4"></video></p>
+
+<h2>Result</h2>
+
+<p>The end result is quite good, even if I could have increased the quality if I had had more printing time. But let's say it's clearly sufficient for rapid prototyping.</p>
+
+<p><img src ="medias/fabac-assignments-3D-scanning-printing-oloid-result-1.jpg" alt="oloid-result" /></p>
+
+<p>Look at this geometric beauty.</p>
+
+<p><video controls preload="auto"><source type ="video/mp4" src ="medias/fabac-assignments-3D-scanning-printing-oloid-roll.mp4"></video></p>
+
+<hr />
+
+<h1>3D Scan</h1>
+
+<p>There aren't many open source tools available and maintained for 3D scanning, but <a target="_blank" href="https://alicevision.org/#meshroom">Meshroom</a> is one of them. It is an open source photogrammetry software.</p>
+
+<blockquote>
+  <p>Photogrammetry is the art, science and technology of obtaining reliable information about physical objects and the environment through the process of recording, measuring and interpreting photographic images and patterns of electromagnetic radiant imagery and other phenomena.</p>
+  
+  <blockquote>
+    <p><a target="_blank" href="https://en.wikipedia.org/wiki/Photogrammetry">Photogrammetry, Wikipedia</a></p>
+  </blockquote>
+</blockquote>
+
+<p><img src ="medias/fabac-assignments-3D-scanning-printing-scan-success.jpeg" alt="scan-success" /></p>
+
+<h2>Requirements</h2>
+
+<p>Meshroom needs a <a target="_blank" href="https://en.wikipedia.org/wiki/CUDA">CUDA-Enabled GPU</a> in order to run properly. My computer doesn't have this type of processor, but I found a solution to get decent results without the full capacity of the software. I'll explain it later in the process.</p>
+
+<h3>Installation</h3>
+
+<ol>
+<li>Download the binary from <a target="_blank" href="https://alicevision.org/#meshroom">Meshroom home page</a></li>
+<li>Unzip it in any folder.</li>
+<li>Open a terminal and from this folder run <code>./Meshroom</code> to launch the GUI. In my case I've to type <code>~/Documents/Apps/Meshroom-2019.2.0/./Meshroom</code> to launch the app.</li>
+</ol>
+
+<h3>How-to</h3>
+
+<ol>
+<li>Take pictures around the object you want to scan</li>
+<li>Import them into Meshroom, in drag and drop in the window.</li>
+<li>If you have a CUDA-Enabled GPU, simply press the <code>start</code> button. If not, you'll have to delete 3 nodes: <code>PrepareDenseScene</code> <code>DepthMap</code> and <code>DepthMapFilter</code> and connect the output of <code>StructureFromMotion</code> to the input of <code>Meshing</code>, and finally press the <code>start</code> button.</li>
+</ol>
+
+<h2>Problems I encountered</h2>
+
+<p>I had some problems getting decent results with photogrammetry. Almost all of my attempts weren't even close to a recognizable 3D scan of the object I was trying to get the shape from.</p>
+
+<p><img src ="medias/fabac-assignments-3D-scanning-printing-scan-fail-1.jpeg" alt="scan-fail" /></p>
+
+<p>These things didn't work because the objects were either too reflective, or too small, or the light was changing from pictures to pictures, or my camera (from my phone) had a too small aperture.</p>
+
+<p><img src ="medias/fabac-assignments-3D-scanning-printing-scan-fail-2.jpeg" alt="scan-fail" />
+<img src ="medias/fabac-assignments-3D-scanning-printing-scan-fail-3.jpeg" alt="scan-fail" />
+<img src ="medias/fabac-assignments-3D-scanning-printing-scan-fail-4.jpeg" alt="scan-fail" /></p>
+
+<p>I knew that Meshroom wasn't the problem because I tried with a set of pictures validated by the community, as something that works and that can be used to test the settings of the software.</p>
+
+<p><img src ="medias/fabac-assignments-3D-scanning-printing-scan-monument.jpeg" alt="scan-monument" /></p>
+
+<p>Finally, a little desperate, I went to my roof to get some fresh air and I saw this plant pot, surrounded by tiles forming a grid around the object. It looked like a last try before giving up.</p>
+
+<p><video controls preload="auto"><source type ="video/mp4" src ="medias/fabac-assignments-3D-scanning-printing-scan-success.mp4"></video></p>
+
+<p>And it more or less worked… I got the shape of the pot, its structure and texture. Maybe I should have taken a lot more pictures of the plant, all its leaves and its little detail to get it rendered in the final scan.</p>
+
+<p><img src ="medias/fabac-assignments-3D-scanning-printing-scan-success-2.jpeg" alt="scan-success" /></p>
+
+<h3>My tips for scanning an object with the photogrammetry process</h3>
+
+<ul>
+<li>the bigger the better</li>
+<li>Preferably outside, with natural light</li>
+<li>No blurred area on the pictures, the software needs to understand the background</li>
+<li>A lot of pictures are needed (~70) from every angle</li>
+<li>Matt objects are the easiest (by far!)</li>
+</ul>
+
+<h3>Conclusion</h3>
+
+<p>The result is clearly worse than I imagined when thinking about photogrammetry. But it's an exploration, between cutting-edge technology and open source software driven by the community, between a beginner (me) and a very specific technique. I will have to practice taking appropriate photos for photogrammetry if I want to scan something for a real need.</p>
+
+  
+</article>
+
+
+  </main>
+</body>
+
+</html>

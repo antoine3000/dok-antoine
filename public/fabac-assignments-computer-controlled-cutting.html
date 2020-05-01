@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset=utf-8>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title property="schema:name">antoine.studio</title>
+  <meta name="description" content="experimental studio of Antoine Jaunard">
+  <meta property="schema:name" content="antoine.studio">
+  <meta property="schema:description" content="experimental studio of Antoine Jaunard">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+  <main class="main">
+    <header class="header">
+      <h1 class="title"><a href="index.html"><span>antoine</span>.studio</a></h1>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html" class="nav__link">index</a></li>
+          <li class="nav__item"><a href="flux.html" class="nav__link">flux</a></li>
+          <li class="nav__item"><a href="about.html" class="nav__link">about</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+
+<article class="article">
+  <h1 class="article__title">
+    
+      Computer-controlled cutting
+    
+  </h1>
+  <p>This week is about exploring the possibilities of the computer-controlled cutting machines present in Fab Labs : the lasercutter and the vinylcutter. The first (group) assignement is to understand how the machines work and to obtain some of the values (specific to these machines) necessary to properly prepare the files before sending them to the machines. The second (personal) assignement is to design, lasercut, and document a parametric construction kit, and to cut something with the vinylcutter.</p>
+
+<h1>Lasercutter</h1>
+
+<p>The laser cutter is an excellent machine: it gives quick results, it is easy to learn, it works with different types of material (wood, acrylic, cardboard, etc.) and the cutting is very precise. Using joints allows you to go from 2D to 3D objects. It makes the laser cutter one of the best machines to quickly prototype an idea.</p>
+
+<p><img src ="medias/fabac-assignments-computer-controlled-cutting-nesting-cut.jpg" alt="nesting-cut" /></p>
+
+<h2>Basics of lasercutting</h2>
+
+<h3>Security</h3>
+
+<p>Because the lasercutter is fun and easy to use, it's also easy to forget that it can be dangerous. Here are some basic rules that accompany the use of the machine:</p>
+
+<ul>
+<li>Do not leave the machine unattended</li>
+<li>Cut only materials that you know are safe (no chromium, no carbon, no PVC, no PVP)</li>
+<li>Always use the filter and wait for the smoke to disappear before opening the cover</li>
+<li>Make sure you know what to do in case of fire</li>
+</ul>
+
+<h3>Focus</h3>
+
+<p>The focus is calculated based on the distance between the material and the
+laser. It must be adjusted before any cutting, depending on the thickness of the
+material. Also, keep in mind that the focal length varies depending on the lens
+you use, more information about this <a target="_blank" href="https://www.troteclaser.com/en-us/laser-machines/laser-accessories/focus-lenses/">here</a>.</p>
+
+<p><video controls preload="auto"><source type ="video/mp4" src ="medias/fabac-assignments-computer-controlled-cutting-focus.mp4"></video></p>
+
+<p>Setting the focus is a mechanical &amp; low-tech process, the idea is simply to obtain the distance value between the nozzle and the material.</p>
+
+<h3>Speed &amp; power</h3>
+
+<p>Speed and power are the two parameters that we have to adjust according to the desired results. The speed is defined in millimeters per second (0-400) and the power is defined in (a relative) percentage (0-100%). To cut something big, you will need to set a high power and a low speed, so that the laser stays longer at the same points and burns the material more. On the other hand, to slightly engrave, set a high speed and a low power, so that the laser does not have enough time to burn the material.</p>
+
+<p><img src ="medias/fabac-assignments-computer-controlled-cutting-table-values.jpg" alt="table-values" /></p>
+
+<h3>Kerf</h3>
+
+<p>The laser burns away a portion of material when it cuts through. This is known as the laser kerf and ranges from 0.08mm – 1mm depending on the material properties and thickness. It is super important the know the kerf value and to integrate it into the design, if we want to cut things perfectly.</p>
+
+<h2>Get to know the machine</h2>
+
+<p>I'm part of two different groups for the group assignement, simply because I was around and it's always good to know a bit more about the differences between the machines.</p>
+
+<h3>Trotec Speedy 100</h3>
+
+<p>The first group I'm part of is composed by <a target="_blank" href="http://fabacademy.org/2020/labs/barcelona/students/arman-najari">Arman</a>, <a target="_blank" href="http://fabacademy.org/2020/labs/barcelona/students/benjamin-scott/">Benjamin</a>, <a target="_blank" href="http://fabacademy.org/2020/labs/barcelona/students/david-prieto/">David</a>, <a target="_blank" href="http://fabacademy.org/2020/labs/barcelona/students/tue-ngo/">Minh Tue</a>, and me.</p>
+
+<p>We used this <a target="_blank" href="https://www.thingiverse.com/thing:728579">test file</a> provided by the instructors to test the lasercutter <a target="_blank" href="https://www.troteclaser.com/es/maquinas-laser/grabadora-laser-speedy/">Trotec Speedy 100</a> with different materials. Here are the specs of the machine:</p>
+
+<ul>
+<li>Work area: 600 x 300mm</li>
+<li>Height: 132mm</li>
+<li>Laser power: 12-60W</li>
+</ul>
+
+<p>We chose to proceed with Cardboard 4mm and Plywood 4mm because we can find nice leftovers of those materials. For the <code>Material Settings</code> in <code>TROTEC JobControl</code>, we followed the information on the Laser Cut Sample at the Fab Lab. The parts to be engraved were color-coded with black, and the parts to be cut were color-coded with red.</p>
+
+<p><img src ="medias/fabac-assignments-computer-controlled-cutting-screenshot-trotec.jpg" alt="screenshot-trotec" /></p>
+
+<p><video controls preload="auto"><source type ="video/mp4" src ="medias/fabac-assignments-computer-controlled-cutting-test.mp4"></video></p>
+
+<p>Here are the values we collected when testing the Trotec Speedy 100.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Machine</th>
+  <th>Material</th>
+  <th>Technique</th>
+  <th>Speed</th>
+  <th>Power</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Trotec Speedy 100</td>
+  <td>Plywood 4mm</td>
+  <td>Engrave</td>
+  <td>100</td>
+  <td>80</td>
+</tr>
+<tr>
+  <td>Trotec Speedy 100</td>
+  <td>Plywood 4mm</td>
+  <td>Cut</td>
+  <td>1</td>
+  <td>75</td>
+</tr>
+<tr>
+  <td>Trotec Speedy 100</td>
+  <td>Carboard 4mm</td>
+  <td>Engrave</td>
+  <td>100</td>
+  <td>60</td>
+</tr>
+<tr>
+  <td>Trotec Speedy 100</td>
+  <td>Carboard 4mm</td>
+  <td>Cut</td>
+  <td>1</td>
+  <td>60</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Multicam 2000</h3>
+
+<p>And the other group I'm part of is composed by <a target="_blank" href="https://fabacademy.org/2020/labs/barcelona/students/bruno-molteni">Bruno</a>, <a target="_blank" href="https://fabacademy.org/2020/labs/barcelona/students/marco-cataffo">Marco</a>, <a target="_blank" href="https://fabacademy.org/2020/labs/barcelona/students/roger-anguera">Roger</a>, and me.</p>
+
+<p>Our idea was to use one of the Trotec machines, either the 100 or the 400, but they were being used so we finally decided to do it on the old and huge <a target="_blank" href="https://wiki.fablabbcn.org/Multicam_2000_Laser_Cutter">Multicam 2000</a>. Our instructors Mikel Llobera &amp; Oscar González Fernández helped us throught the process. This would have been really impossible without them, given the complicated interface of the machine, not to mention that some parts of it are not working properly.</p>
+
+<p><img src ="medias/fabac-assignments-computer-controlled-cutting-multicam-interface.jpg" alt="multicam-interface" /></p>
+
+<p>On the multicam, you have to go through it's own software called EnRoute, that turns a DXF file into gcode that the machine can read. With EnRoute open and connected to the machine, you can load the file from it's 1980's-style handheld interface, which is both cumbersome and amusing at the same time.</p>
+
+<p><img src ="medias/fabac-assignments-computer-controlled-cutting-finger-crossed.jpg" alt="finger-crossed" /></p>
+
+<p>Once we had the piece on EnRoute, after a few crashes of the software due, we think, to the amount of different lines on the design, we learned that we would have issues with raster on that machine, so we had to remove the parts of the design that were supposed to be rastered.</p>
+
+<p><video controls preload="auto"><source type ="video/mp4" src ="medias/fabac-assignments-computer-controlled-cutting-multicam-test.mp4"></video></p>
+
+<p>We didn't do enough tests to know well the machine because of the time we'd at our disposition. It would be interesting to compare the results with the other machine to know how much energy it does require and how fast is the industrial machine compare to the others. Anyway, here are the values we collected when testing the Multicam2000.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Machine</th>
+  <th>Material</th>
+  <th>Technique</th>
+  <th>Speed</th>
+  <th>Power</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Multicam 2000</td>
+  <td>Cardboard 4mm</td>
+  <td>Cut</td>
+  <td>100</td>
+  <td>100</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Basic test to calculate the kerf</h2>
+
+<p>I've seen on <a target="_blank" href="http://fab.academany.org/2018/labs/fablabamsterdam/lasercut/group1.html">various</a> <a target="_blank" href="https://fabacademy.org/2019/labs/waag/students/anne-vlaanderen/assignments/week4.html">documentations</a> a basic test which we can execute in order to calculate the kerf of a specific machine on a specific material. We wanted to test it by ourself.</p>
+
+<p><img src ="medias/fabac-assignments-computer-controlled-cutting-kerf-explanations.png" alt="kerf-explanations" /></p>
+
+<p>The idea is to cut a material several times, bring the cut pieces together and compare the final total width with the initial width. The difference should be the space left by the cut, from which we can get the value of the kerf.</p>
+
+<p><img src ="medias/fabac-assignments-computer-controlled-cutting-kerf-result.jpg" alt="kerf-result" /></p>
+
+<table>
+<thead>
+<tr>
+  <th>Material</th>
+  <th>Intended</th>
+  <th>Actual</th>
+  <th>Difference</th>
+  <th>Kerf (difference/10)</th>
+  <th>Offset (kerf/2)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Cardboard 4mm</td>
+  <td>200mm</td>
+  <td>194mm</td>
+  <td>6mm</td>
+  <td>0.3mm</td>
+  <td>0.15mm</td>
+</tr>
+</tbody>
+</table>
+
+<p>This technique could be applied to different materials with different settings (speed/power) by using this single template. </p>
+
+<hr />
+
+<h1>Geodesic dome</h1>
+
+<p>A <a target="_blank" href="https://en.wikipedia.org/wiki/Geodesic_dome">geodesic dome</a> is a structure based on a geodesic polyhedron. The triangular elements of the dome are structurally rigid and distribute the structural stress throughout the structure, making geodesic domes able to withstand very heavy loads for their size.</p>
+
+<p><img src ="medias/fabac-assignments-computer-controlled-cutting-dome-reference.jpg" alt="dome-reference" /></p>
+
+<h2>Design</h2>
+
+<p>I wanted to build a geodesic dome made up of two triangular faces and a joint. But because the structure of a geodesic dome is mainly made up of sticks instead of faces, finding documentation was not as easy as expected. Finally, <a target="_blank" href="https://simplydifferently.org/Geodesic_Dome_Notes?page=3#2V%20Icosahedron%20Dome">this website</a> helped me to find the geometric values.</p>
+
+<p><img src ="medias/fabac-assignments-computer-controlled-cutting-dome-construction.png" alt="dome-construction" /></p>
+
+<ul>
+<li>30 x triangle A-A-B (55.57°, 55.57°, 68.86°)</li>
+<li>10 x triangle B-B-B (60.00°, 60.00°, 60.00°) </li>
+<li>55 connectors (with an angle of 18°)</li>
+</ul>
+
+<p><img src ="medias/fabac-assignments-computer-controlled-cutting-dome-freecad-0.jpeg" alt="dome-freecad-0" /></p>
+
+<p>I used FreeCAD to design the dome elements. I first filled out a spreadsheet with the parameters that I collected, so that I could use these parametric values to design the different parts and be able to change things quickly in case of change.</p>
+
+<p><img src ="medias/fabac-assignments-computer-controlled-cutting-dome-freecad-3.jpeg" alt="dome-freecad-3" /></p>
+
+<p>Finding the kerf was a key point in this project because the pieces had to fit perfectly to keep the entire structure as solid as it should be. Because the dome will be made of <code>plywood 4mm</code> and due to the machine and its parameters, the kerf value is <code>0.15mm</code>.</p>
+
+<p><img src ="medias/fabac-assignments-computer-controlled-cutting-dome-freecad-1.jpeg" alt="dome-freecad-1" /></p>
+
+<p>I added this value for the connector measurement, because the part had to fit into another. The lasercut decreases the size of the part, so by adding the value before cutting, I guarantee that the end result will be the expected result.</p>
+
+<p>And vice versa for the opposite part.</p>
+
+<p><img src ="medias/fabac-assignments-computer-controlled-cutting-dome-freecad-2.jpeg" alt="dome-freecad-2" /></p>
+
+<h3>Nesting</h3>
+
+<p>In order to avoid wasting material and time (and therefore energy), I had to nest all of my shapes (95 in total) together as compact as possible. To achieve this perilous mission, I used <a target="_blank" href="https://deepnest.io/">Deepnest</a>, an open source nesting application.</p>
+
+<p>This tool does only one job and it does it very well.</p>
+
+<p><img src ="medias/fabac-assignments-computer-controlled-cutting-dome-nesting.jpeg" alt="dome-nesting" /></p>
+
+<h2>Cutting</h2>
+
+<p>I first did a test on a cardboard to check if my design was well done and if the parts fit together, before cutting a more precious sheet of wood. It <em>seemed</em> to be the case.</p>
+
+<p><img src ="medias/fabac-assignments-computer-controlled-cutting-dome-cardboard.jpg" alt="dome-cardboard" /></p>
+
+<p>I did another test of the same three pieces on the real sheet of plywood I wanted to use, ultimate test before cutting the whole sheet. It was sucessful, everything seemed to fit correctly.</p>
+
+<p>In the lab, there are samples with cutting / engraving values on each material that could be used. I took the values from there. In my case:</p>
+
+<p><code>Plywood 4mm</code> <code>Power: 75</code> <code>Speed: 0.5</code></p>
+
+<p><img src ="medias/fabac-assignments-computer-controlled-cutting-plywood4mm-values.jpg" alt="plywood4mm-values" /></p>
+
+<p>Let's (laser) cut it.</p>
+
+<p><video controls preload="auto"><source type ="video/mp4" src ="medias/fabac-assignments-computer-controlled-cutting-dome-cutting.mp4"></video></p>
+
+<p><img src ="medias/fabac-assignments-computer-controlled-cutting-dome-cutting.jpg" alt="dome-cutting" /></p>
+
+<h2>Assembly</h2>
+
+<p>Unforntunately, when assembling the dome, I realized that I messed up with the triangles sizes. I've defined the height of the triangle, from its base to its summit, instead of measuring one of its side … precipitation error. I was running out of time and the machines were hyper busy at the lab, so I decided to stop my test. I had enough information about the use of the lasercutters and I didn't want to waste more wood.</p>
+
+<p>I ended with a weird half geodesic dome that isn't as solid as it should be but wich was super fun to build, from A to Z.</p>
+
+<p><img src ="medias/fabac-assignments-computer-controlled-cutting-dome-construct-1.jpg" alt="dome-construct-1" /></p>
+
+<p><img src ="medias/fabac-assignments-computer-controlled-cutting-dome-construct-2.jpg" alt="dome-construct-2" /></p>
+
+<p><img src ="medias/fabac-assignments-computer-controlled-cutting-dome-construct-3.jpg" alt="dome-construct-3" /></p>
+
+<hr />
+
+<h1>The most common password ever</h1>
+
+<p>According to <a target="_blank" href="https://en.wikipedia.org/wiki/List_of_the_most_common_passwords">this page</a>, the most common password ever is … <code>123456</code>. It's so basic and evident I wanted to stick it on my laptop to send the subtle message to the people around me that their password is <em>maybe</em> not the best.</p>
+
+<p>And you, is this one of your passwords?</p>
+
+<p><img src ="medias/fabac-assignments-computer-controlled-cutting-password.png" alt="password" /></p>
+
+<p>The vinylutter we have at Fab Lab Barcelona is a <a target="_blank" href="https://www.rolanddga.com/es/soporte/products/cutting/camm-1-gx-24-24-vinyl-cutter">Roland CAMM-1 Servo GX-24</a>.</p>
+
+<ul>
+<li>Work area: 584 x 24998mm</li>
+<li>Cutting speed: up to 500mm/s</li>
+<li>Cutting length: maximum 25m</li>
+<li>Cutting width: 50-700 mm</li>
+<li>Cutting force: 30 to 250gf</li>
+</ul>
+
+<p>The process of cutting something with a vinylcutter is straightforward:</p>
+
+<ul>
+<li>Prepare your .EPS file</li>
+<li>Import it into the software of the machine,
+<a target="_blank" href="https://www.rolanddgi.com/productos/software/roland-cutstudio-software">CutStudio</a>,
+by going to <code>Object &gt; Image Outline</code> to get the trace of the design.</li>
+<li>Prepare your sheet of paper and insert it into the machine (from back to
+front), adjust the blade to be sure that the cutter will not cut through the
+material but only the surface.</li>
+<li>Set the size of the sheet via the machine commands and tell it to the software running on the computer attached to it</li>
+<li>Move the blade and set the origin, depending on the size of the design and the
+avaible material size.</li>
+<li>Press the <em>Print</em> button, or type <code>Ctrl p</code> to start cutting.</li>
+</ul>
+
+<p><img src ="medias/fabac-assignments-computer-controlled-cutting-password-process.jpg" alt="password-process" /></p>
+
+<p>The next step is the get your cut out of the sheet, wich may not be easy depending on your design, if it's detailed or not. </p>
+
+<p>A good practice is to apply several strips of adhesive tape on the cut sheet to stick the different pieces together and then apply it where you want to stick your sticker. It works <em>almost</em> like a charm (it always does, right?).</p>
+
+<p><img src ="medias/fabac-assignments-computer-controlled-cutting-password-final.jpg" alt="password-final" /></p>
+
+<p>The font used: is open-source; is designed by Raphaël Bastide; is called Terminal Grotesque. <a target="_blank" href="https://github.com/raphaelbastide/Terminal-Grotesque/">Find it on Github</a>.</p>
+
+<hr />
+
+<h1>Files</h1>
+
+<ul>
+<li>Lasercutting tester (<a target="_blank" href="medias/fabac-assignments-computer-controlled-cutting-lasercutting-tester.svg">SVG</a>) </li>
+<li>Kerf tester (<a target="_blank" href="medias/fabac-assignments-computer-controlled-cutting-kerf-tester.FCStd">FreeCAD</a> / <a target="_blank" href="medias/fabac-assignments-computer-controlled-cutting-kerf-tester.dxf">DXF</a>)</li>
+<li>Geodesic dome parts (<a target="_blank" href="medias/fabac-assignments-computer-controlled-cutting-geodesic-dome.FCStd">FreeCAD</a> / <a target="_blank" href="medias/fabac-assignments-computer-controlled-cutting-geodesic-dome-4mm-nest.dxf">DXF</a>)</li>
+<li>The most common password ever (<a target="_blank" href="medias/fabac-assignments-computer-controlled-cutting-password.eps">EPS</a>)</li>
+</ul>
+
+  
+</article>
+
+
+  </main>
+</body>
+
+</html>

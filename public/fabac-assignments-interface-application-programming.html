@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset=utf-8>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title property="schema:name">antoine.studio</title>
+  <meta name="description" content="experimental studio of Antoine Jaunard">
+  <meta property="schema:name" content="antoine.studio">
+  <meta property="schema:description" content="experimental studio of Antoine Jaunard">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+  <main class="main">
+    <header class="header">
+      <h1 class="title"><a href="index.html"><span>antoine</span>.studio</a></h1>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html" class="nav__link">index</a></li>
+          <li class="nav__item"><a href="flux.html" class="nav__link">flux</a></li>
+          <li class="nav__item"><a href="about.html" class="nav__link">about</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+
+<article class="article">
+  <h1 class="article__title">
+    
+      Interface application programming
+    
+  </h1>
+  <p>This week is devoted to programming interfaces and applications, a subject that I really like. I would not say that I am a good programmer, I have little experience. But it's something I love to do: solve logic problems, create software that produces the result I want (or the result I didn't expect, because I also find unexpected things beautiful).</p>
+
+<p>I'm going to use <a target="_blank" href="https://openframeworks.cc/">openFrameworks</a> to create an interactive audio and visual piece, a kind of experimental musical instrument that reacts to its environment.</p>
+
+<p><video controls preload="auto"><source type ="video/mp4" src ="medias/fabac-assignments-interface-application-programming-musical-playground-c.mp4"</video></p>
+
+<hr />
+
+<h2>My coding journey</h2>
+
+<h3>Processing (Java / Javascript)</h3>
+
+<p>In art school, I had two years of digital art workshops. The main tool we used in this class was <a target="_blank" href="https://processing.org/">Processing</a>. And it was so refreshing. Being able to produce an artistic installation with algorithms was something I was looking for. But it was also the rise of another movement: Internet culture. This quickly made me drop Processing for its javascript version, <a target="_blank" href="https://p5js.org/">p5js</a> and html/css, in order to create websites. It was not really good, Processing (p5js) is not so exciting when it is stuck in a browser. But the mix of graphic design and coding was definitely the right direction for me. I had the insight I needed with Processing and the motivation to continue creating websites, and then to found my web studio.</p>
+
+<h3>Javascript</h3>
+
+<p>In my web studio, I made websites with html/css and Javascript. I used to mainly use <a target="_blank" href="https://en.wikipedia.org/wiki/JavaScript">vanilla Javascript</a> and <a target="_blank" href="https://vuejs.org/">Vue.js</a> to build reactives web interfaces. I always found it tricky and not really intuitive. Even if Javascript is powerful and can do many things, I find that it is also a kind of poison for the web: websites get heavier, they track you more and more, and they need an updated browser to be viewed. It is not a language in which I would like to invest myself more. I would even prefer the Internet without it, without advertising and tracking, filled with lighter websites that run on older browsers.</p>
+
+<h3>Python</h3>
+
+<p>Then I discovered Python, a language that also has many uses, but outside the browser. I'm at the very beginning of my Python's journey but I can already tell that I like it! My static website you are reading now is the result of the second program I wrote in Python (the first was a little expense tracking tool). I wrote about it <a target="_blank" href="fabac-assignments-project-management.html">during the first week</a> of the academy. I like the natural feeling of writing on Python, removing the syntax barrier and inviting us to focus on logic.</p>
+
+<h3>TidalCycles (Haskell)</h3>
+
+<p>I sometimes do live coding music. Live coding means that I write music in real time, from a blank file. Compose rhythms with logical loops, create synth melodies with random variables. The pattern language I use is called <a target="_blank" href="https://tidalcycles.org">TidalCycles</a> and it is written in <a target="_blank" href="https://www.haskell.org/">Haskell</a>. I couldn't tell you much about the Haskell language, but I can tell you that programming music is super fun to do and reveals its beauty on performances rather than on pure compositions.</p>
+
+<h3>Arduino (C++)</h3>
+
+<p>Since the beginning of the academy, I started to learn a little C ++ and the Arduino framework in order to speak with microcontrollers and to obtain an interaction between machines and their environment. I really like the new perspective that this gives to my coding practice: I do not only write software from my computer for other computers, but I now interact with the "real" world, being able to better understand and interact with it. Learning the basics of C ++ helps me to better understand some of the main programming concepts, which I had previously learned on the fly, without structure.</p>
+
+<h2>What's next</h2>
+
+<p>The feeling of having given up on processing too soon mixed with the new excitement of writing programs for microcontrollers using Arduino and C++ makes me want to dig a lot deeper into the relationship between creative coding and the physical world.</p>
+
+<h3>openFrameworks</h3>
+
+<p>To explore that path, I don't want to specifically use Processing itself, which now seems a bit limited compared to what I want to do, but <a target="_blank" href="https://openframeworks.cc/">openFrameworks</a>, another Processing-type framework, written in C++ (like Arduino) and able to create more powerful programs and therefore produce more complex artistic installations or tools or whatever you want.</p>
+
+<hr />
+
+<h2>My first openFrameworks application</h2>
+
+<p>For my first openFrameworks application, I would like to get sensor data and convert it to an interactive visual and audio piece. I'm going to use the <a target="_blank" href="https://learn.adafruit.com/adafruit-circuit-playground-express/overview">Circuit Playground Express</a> and its multiple integrated sensors and buttons to help me quickly prototype my idea.</p>
+
+<h3>Installation</h3>
+
+<p>I first had to install openFrameworks on my machine. Speaking of my machine, I switched from <a target="_blank" href="https://elementary.io/">Elementary OS</a> to <a target="_blank" href="https://manjaro.org/">Manjaro</a> two three weeks ago. I no longer depend on the <a target="_blank" href="https://en.wikipedia.org/wiki/APT_(software)">APT</a> package manager (Advanced Package Tool, from Debian) but from <a target="_blank" href="https://aur.archlinux.org/">AUR</a> (Arch User Repository), from the Arch Linux community.</p>
+
+<p>My first intention was to look for the openFrameworks package in PAMAC, the graphical AUR package manager for Manjaro Linux, but unfortunately the package is broken there. Which means manual installation is the thing to do. I must say that AUR packages are generally super easy to install, which makes them quite convenient. Too bad this is not the case for openframeworks, and I don't understand enough how it works to lend a hand. Maybe later.</p>
+
+<p>Fortunately, the openFrameworks <a target="_blank" href="https://openframeworks.cc/download/">download</a> and <a target="_blank" href="https://openframeworks.cc/setup/linux-install/">installation</a> pages are clear enough and the community is very (re)active and helpful. This gives me hope for my future use of this tool.</p>
+
+<h3>Project architecture</h3>
+
+<p>Finding a minimal project architecture was more difficult than expected. The project generator provided by openFrameworks does not work on my system, for whatever reason.</p>
+
+<p>Fortunately, <a target="_blank" href="https://github.com/hiroMTB/vscode_oF">a project on github</a> shows how to start an openFrameworks project when using VSCode as a text editor. I no longer use this editor but the structure shown there is easily reproducible for any other text editor (I am currently juggling between Vim, Emacs and Atom).</p>
+
+<p>That's why I uploaded my own version of a <a target="_blank" href="https://gitlab.com/antoine.j/openframerworks-starter">minimal starter kit for openFrameworks projects</a> on Gitlab, hopefully it will help other people get started on their projects.</p>
+
+<pre>
+bin/
+obj/linux64/Release
+src/
+- main.cpp
+- ofApp.cpp
+- ofApp.h
+Makefile
+addons.make
+config.make
+</pre>
+
+<p>When oF (openFrameworks) and the starter kit are correctly installed, go to the project folder and use these commands:</p>
+
+<ul>
+<li>to compile the C++ code: <code>make</code></li>
+<li>to run the program: <code>make run</code></li>
+<li>to compile and run: <code>make &amp;&amp; make run</code></li>
+</ul>
+
+<h3>Sending data from Arduino</h3>
+
+<p>The first step of my program is to collect the data from the sensors and transmit it to my oF program. To do this, I used a <a target="_blank" href="https://learn.adafruit.com/adafruit-circuit-playground-express/overview">Circuit Playground Express</a> and its built-in sensors, <a target="_blank" href="https: // platformio. org /">PlatformIO</a> to compile / send the code to the microcontroller and the <a target="_blank" href="https://learn.sparkfun.com/tutorials/serial-communication/all">serial communication</a> port.</p>
+
+<p>To create a Pio project, inside the main oF project, which will be used to talk to the Circuit Playground:</p>
+
+<pre>mkdir pio && cd pio && pio project init --board adafruit_circuitplayground_m0</pre>
+
+Then, create a new `main.cpp` file into the `pio/src` folder.
+
+<pre>
+#include &lt;Arduino.h&gt;
+#include &lt;Adafruit_CircuitPlayground.h&gt;
+
+float lightValue, soundValue;
+bool buttonLeft, buttonRight;
+bool dark = false;
+
+void setup() {
+  CircuitPlayground.begin();
+  Serial.begin(9600);
+}
+
+void darkSwitch() {
+  if (dark) {
+    for (int i = 0; i < 10; i++) {
+      CircuitPlayground.setPixelColor(i, 0,   0,   255);
+    }
+  } else {
+    CircuitPlayground.clearPixels();
+  }
+}
+
+void loop() {
+  // get
+  lightValue = CircuitPlayground.lightSensor();
+  soundValue = CircuitPlayground.mic.soundPressureLevel(10);
+  buttonLeft = CircuitPlayground.leftButton();
+  buttonRight = CircuitPlayground.rightButton();
+  // send
+  Serial.print(String(lightValue) + "," + String(soundValue) + "," + String(buttonLeft) + "," + String(buttonRight));
+  if (Serial.available()) {
+    // receive
+    char inByte = Serial.read();
+    if (inByte == 1) {
+    // the received data is '1'
+    dark = !dark;
+  }
+}
+darkSwitch();
+delay(100);
+}
+</pre>
+
+<p>(<a target="_blank" href="https://www.freeformatter.com/html-escape.html">this tool</a> helped me to format the code in order to display it correctly in a <code>&lt;pre&gt;</code> tag)</p>
+
+<p>The main thing here is this line:</p>
+
+<pre>
+Serial.print(String(lightValue) + "," + String(soundValue) + "," + String(buttonLeft) + "," + String(buttonRight));
+</pre>
+
+<p>It converts the values to a string format, using the <code>String ()</code> <a target="_blank" href="https://www.arduino.cc/reference/en/language/variables/data-types/stringobject/">function</a>, separates them with a <code>,</code> and prints them on the serial. It can be a <code>,</code> character or any other character that helps you differentiate between the data you are processing.</p>
+
+<p>Another important part of this program is:</p>
+
+<pre>
+if (Serial.available()) {
+  // receive
+  char inByte = Serial.read();
+  if (inByte == 1) {    // Whether the received data is '1'
+  dark = !dark;
+}
+</pre>
+
+<p>This means that the <code>inByte</code> variable is updated if a serial message is available. It switches the variable "dark" if the program receives a <code>1</code> (true) from the serial. This message is sent by the oF program.</p>
+
+<p>We can now send and receive messages via the serial.</p>
+
+<h3>Receiving data to openFrameworks</h3>
+
+<p>First, I declare some variables in the <code>ofApp.h</code> file. The number <code>20</code> must be declared depending on the length of the message we receive.</p>
+
+<pre>
+char receivedData[20]; // length we receive
+char sendData = 1;
+ofSerial serial;
+</pre>
+
+<p>I call my custom function into update().</p>
+
+<pre>
+void ofApp::update(){
+    serialValues();
+}
+</pre>
+
+<p>In <code>serialValues()</code>, while the serial is available, we write the data in a <code>receivedDate</code> variable and run another <code>valuesConversion</code> function to do something with it.</p>
+
+<p>I prefer to keep these two functions separate to facilitate their reuse later. I will definitely reuse the <code>serialValues</code> function as it is, but I don't think that will be the case for <code>valuesConversion ()</code>.</p>
+
+<pre>
+void ofApp::serialValues() {
+    while(serial.available() > 0) {
+        serial.readBytes(receivedData, 20);
+        valuesConversion();
+    }
+}
+</pre>
+
+<p>Then I parse the <code>receivedData</code> to make an array, which I write in <code>values</code>. I can now call <code>values.at(0)</code> to get the first value, and so on. The separator <code>,</code> must correspond to the separator that we chose previously, in the Arduino code.</p>
+
+<pre>
+void ofApp::valuesConversion() {
+    vector<string> values;
+    values = ofSplitString(receivedData, ",");
+    lightValue = ofToFloat(values.at(0));
+    soundValue = ofToFloat(values.at(1));
+    buttonLeft = ofToBool(values.at(2));
+    buttonRight = ofToBool(values.at(3));
+    lightLevel = ofMap(lightValue, 0, 1023, 0, 100);
+    soundLevel = ofMap(soundValue, 50, 100, 0, 100);
+    cout << "light: " << lightLevel << " / sound: " << soundLevel << endl;
+    cout << "left: " << buttonLeft << " / right: " << buttonRight << endl;
+}
+</pre>
+
+<p>The <code>ofMap()</code> function allows us to map a value, from its initial range to a new one.
+For example, the light sensor collects data in a range of 0 to 1023, but for ease of use, I convert it to another value, from 0 to 100.</p>
+
+<p>I can now receive data from the serial and convert it to the type of variable I need, in an easy-to-use range. I have everything I need to create my application.</p>
+
+<h3>Make something out of it</h3>
+
+<p>The application is getting the light level and the sound level around the microcontroller, compare them. If one is bigger than another.</p>
+
+<p><a target="_blank" href="https://gitlab.com/antoine.j/musical-playground">The source code of the program is here</a> and is obviously free and open-source.</p>
+
+<ul>
+<li><a target="_blank" href="https://gitlab.com/antoine.j/musical-playground/-/blob/master/src/ofApp.h">ofApp.h</a>, where I declare the variables and call the functions</li>
+<li><p><a target="_blank" href="https://gitlab.com/antoine.j/musical-playground/-/blob/master/src/ofApp.cpp">ofApp.cpp</a>, the main program</p></li>
+<li><p>If the light level is higher than the sound level: <br />
+play the <code>drop</code> sound &amp;&amp; display its level horizontally.</p></li>
+<li>If the sound level is higher than the hight level: <br />
+play the <code>kick</code> sound &amp;&amp; display its level vertically.</li>
+<li>If the mouse is pressed: <br />
+reverse the colors and light the LEDs on the Circuit playground</li>
+<li>If the left button is pressed: <br />
+play the <code>clap</code> sound</li>
+<li>If the right button is pressed: <br />
+play the <code>cymbal</code> sound</li>
+</ul>
+
+<p>And here is the final result:
+<video controls preload="auto"><source type ="video/mp4" src ="medias/fabac-assignments-interface-application-programming-musical-playground-c.mp4"</video></p>
+
+<p class="todo">TODO: Make a screen-capture video</p>
+
+<h1>Conclusion</h1>
+
+<p>Setting up openFrameworks was not as easy as expected, but it was worth it. I really like the idea of having this great tool in my toolbox, it allows new ideas to be alive, to be shared. It also helps me learn the C++ language, which is also used to control microcontrollers. I am super happy with the new perspectives that this gives to my practice.</p>
+
+<hr />
+
+<h1>Useful links</h1>
+
+<ul>
+<li><a target="_blank" href="https://docs.platformio.org/en/latest/faq.html#platformio-udev-rules">pio and linux</a></li>
+<li><a target="_blank" href="https://docs.platformio.org/en/latest/boards/atmelsam/adafruit_circuitplayground_m0.html">pio playground express</a></li>
+<li><a target="_blank" href="https://openframeworks.cc/documentation/communication/ofSerial/">oF ofSerial</a></li>
+<li><a target="_blank" href="https://maker.pro/arduino/projects/how-to-send-and-receive-data-through-the-openframeworks-platform-using-arduino">tutorial data send/receive</a></li>
+<li><a target="_blank" href="https://learn.adafruit.com/circuit-playground-lesson-number-0/light-sensor">light sensor</a></li>
+<li><a target="_blank" href="https://learn.adafruit.com/circuit-playground-lesson-number-0/sound-sensor">sound sensor</a></li>
+<li><a target="_blank" href="https://learn.adafruit.com/circuit-playground-lesson-number-0/accelerometer">accelerometer</a></li>
+<li><a target="_blank" href="https://openframeworks.cc/documentation/utils/ofUtils/#!show_ofToFloat">ofToFloat</a></li>
+<li><a target="_blank" href="https://forum.openframeworks.cc/t/reading-multiple-analog-input-from-arduino/29805">muliple analog arduino</a></li>
+<li><a target="_blank" href="https://forum.openframeworks.cc/t/how-can-separate-values-from-arduino/24246">separate values arduino</a></li>
+<li><a target="_blank" href="https://maker.pro/arduino/projects/how-to-send-and-receive-data-through-the-openframeworks-platform-using-arduino">how to send and receive data</a></li>
+</ul>
+
+  
+</article>
+
+
+  </main>
+</body>
+
+</html>
