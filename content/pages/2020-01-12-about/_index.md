@@ -11,9 +11,7 @@ A tool for documenting the things I learn.
 
 This website is built with a custom static site generator that I wrote in Python. It's open-source by default, as all the things I (try to) do. Sources are available on [Gitlab](https://gitlab.com/antoine.j/antoine.studio).
 
-If you want to contact me, don't hesitate to [send me a message](mailto:antoine.stuff@pm.me) on my encrypted email address or to [follow me](https://merveilles.town/@focus404) on an alternative social network that I trust.
-
-My mother tongue is French but you can speak to me in English, Dutch (*maar alleen een beetje*) or Spanish (*se amable, aprendo*).
+If you want to contact me, don't hesitate to [send me a message](mailto:antoine.stuff@pm.me) on my encrypted email address or to [follow me](https://merveilles.town/@focus404) on an alternative social network that I trust. You can speak to me in French, English, Dutch (*maar alleen een beetje*) or Spanish (*se amable, aprendo*).
 
 ![antoine-chill](antoine-chill.jpg)
 
