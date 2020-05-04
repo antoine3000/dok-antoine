@@ -162,6 +162,8 @@ File: [setup.blend](https://cloud.antoine.studio/index.php/s/RKRdTDDCXPsSt4t/dow
 
 ---
 
+TODO: Files < 10mb in this repo
+
 ## Conclusion
 
 GIMP and Inkscape will definitely be part of my arsenal for handling bitmaps and
@@ -171,4 +173,4 @@ tool. Lately, I have discovered that it is quite easy to use a little openscad
 code in Freecad, which seems to combine the best of both worlds. Concerning
 Blender, it seems so complete that it scares me a little, let's say that I
 prefer the more specific, minimal tools, even if it's great to see an
-open-source tool so well developed. 
+open-source tool so well developed.

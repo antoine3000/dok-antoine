@@ -3,6 +3,8 @@ title: Applications and implications
 ---
 For this weeks's assignement, we were asked to answer a series of questions about our final project. I don't really know where I'm going with my project but I guess that's the point of this week: write some very practical facts and see where my main idea goes, and how far I can define it. Let's do that.
 
+TODO: Answer the following questions
+
 - What will it do?
 - Who's done what beforehand?
 - What will you design?
@@ -47,4 +49,3 @@ For this weeks's assignement, we were asked to answer a series of questions abou
 - Solar panel (off-the-grid system)
 - Remote programmation of the boards (update plant's data)
 - System that can host several plants in the same network
-

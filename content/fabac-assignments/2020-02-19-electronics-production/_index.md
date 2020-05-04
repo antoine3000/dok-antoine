@@ -36,8 +36,10 @@ We always need two differents files to mill a board, one for the traces and one 
 - Direction: `climb` or `conventional`  (`climb` is preferred by default)
 - `Calculate` & `Save`
 
-I used the same settings for bothl mills, except for the mill value, as stated,
+I used the same settings for both mills, except for the mill value, as stated,
 `1/64` or `1/32`.
+
+TODO: Update values, the 1/32 mill needs to cut at 0.5mm/s speed as is cutting much more material at once
 
 ![fab-modules-settings](fab-modules-settings.jpeg)
 
