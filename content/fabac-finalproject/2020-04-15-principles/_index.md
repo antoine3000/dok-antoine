@@ -53,3 +53,8 @@ The panel, a wooden structure designed to assemble modules together, can hosts u
 
 - Massively used in a large room and re-creating a space forest, it invites an audience to interact with plants and clones
 - A device plugged to an houseplant, acting as a companion in the everyday life
+
+![clone](clone01.png)
+![clone](clone02.png)
+![clone](clone03.png)
+![clone](clone04.png)
