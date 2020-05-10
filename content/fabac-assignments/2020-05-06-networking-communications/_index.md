@@ -19,7 +19,7 @@ I'm using two [NodeMCU](https://www.nodemcu.com/index_en.html) equipped with [ES
 ![NodeMCUv1.0-pinout.jpg](NodeMCUv1.0-pinout.jpg)
 ([image source](https://www.teachmemicro.com/nodemcu-pinout/))
 
-TODO: picture setup
+![setup](setup.jpg)
 
 # Software
 
@@ -52,7 +52,7 @@ I can now add `upload_port = /dev/ttyUSB0` to the server's `platformio.ini` file
 
 The *server* will wait for a message from the *client* indicating whether to turn on its LED or not. The *client* will connect to the *server* network and send it its data, depending on the state of a simple push button.
 
-TODO: Add text editor screenshot
+![editor](editor.png)
 
 Once the connection between the two devices is established, messages can be sent from one to the other and vice versa. But the hierarchy between them must remain. The server continues to be the server, as does the client. This is shamelessly called the master/slave relationship.
 
@@ -179,9 +179,11 @@ The connection is established. One chip talks to another on the WiFi network.
 
 And even if it doesn't seem impressive when exposed like that, this little `0` or `1` transported on a wireless network and telling the LED what to do opens up a lot of possibilities in my projects to come.
 
+![terminal](terminal.png)
+
 <video><source src="network-communication.mp4"></video>
 
-TODO: Add terminal screenshot
+
 
 
 # Useful links
