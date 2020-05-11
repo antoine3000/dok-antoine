@@ -183,7 +183,7 @@ And even if it doesn't seem impressive when exposed like that, this little `0` o
 
 <video><source src="network-communication.mp4"></video>
 
-
+(The NodeMCU don't fit well on the breadboard, I had to hold them in place during the experiment to be sure that the connections were good.)
 
 
 # Useful links

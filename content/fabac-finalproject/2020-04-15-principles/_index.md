@@ -12,6 +12,8 @@ These values will allow the device to determine how the plant is feeling, accord
 
 The device mimics the mechanisms and movements of the respiration, because it is a very common process between plants and animals, to represent the health and activity of the plant. For example, a plant that is in a good environment "breathes" slowly and deeply, and a plant that is in danger "breathes" briefly and jerky.
 
+![cycles](cycles.png)
+
 ## Interact with the living
 
 A touché sensor, or at least a calibrated capacitive sensor, will allow the device to sense a human-plant interaction and to reveal its nature.
@@ -43,6 +45,8 @@ On the `clone`, one can choose its communication channel and the types of data t
 - `plant 02` send `activity` and `moisture` to `clone 02`.
 - `plant 03` send `interaction` to `clone 03`
 
+![interface](interface.png)
+
 This kind of configuration allows to build any kind of networks, with several plants and tailor-made visualizations. One plant can be linked to several clones, and vice-versa.
 
 ### The panel
@@ -54,7 +58,25 @@ The panel, a wooden structure designed to assemble modules together, can hosts u
 - Massively used in a large room and re-creating a space forest, it invites an audience to interact with plants and clones
 - A device plugged to an houseplant, acting as a companion in the everyday life
 
+## Two possibilities
+
+### Mechanical system
+
+My first idea was to have a mechanical system that pushes rods on a flexible material in order to deform it and give it a unique shape according to the sensations of the plant.
+
 ![clone](clone01.png)
 ![clone](clone02.png)
+
+I like this solution because I can easily imagine having total control, mastering the speed / movement ratio of the rods and therefore the shape of the *clone*.
+
 ![clone](clone03.png)
 ![clone](clone04.png)
+
+But this solution requires a lot of material to be produced, and it will be too expensive compared to the idea that I have of it. I want to build something as affordable and easy to assemble as possible, to make sure it reaches a large audience.
+
+### Inflatable system
+
+The other system I have in mind uses air pressure to inflate or deflate a flexible bag. This replaces the need for ± 12 motors with a single solenoid and an air pump. The control of the final shape is reduced but also the technical barrier, which is a good point. In addition, the movement should be more organic.
+
+![inflat](inflat-01.png)
+![inflat](inflat-02.png)
