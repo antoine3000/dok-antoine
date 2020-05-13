@@ -4,14 +4,12 @@
 
 <article class="article">
   <h1 class="article__title">
-    {% if article.subtitle|length > 1 %}
-      {{ article.title }}: {{ article.subtitle }}
-    {% else %}
-      {{ article.title }}
-    {% endif %}
+    {{ article.title }}
   </h1>
   {{ article.content }}
-  
+  <footer>
+    <p><span>Created</span> {{ article.date_created }} ✎ <span>updated</span> {{ article.date_modified }}</p>
+  </footer>
 </article>
 
 {% endblock %}

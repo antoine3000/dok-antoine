@@ -1,7 +1,5 @@
 # dependencies
-import os
-import shutil
-import warnings
+import os, shutil, warnings, os.path, time
 from datetime import datetime
 from jinja2 import Environment, FileSystemLoader
 from markdown2 import markdown
@@ -48,17 +46,21 @@ for content_type in content_types:
     content_path = 'content/' + content_type
     content_metadata_name = content_type + '_metadata'
     ARTICLES = {}
-    ARTICLE_INFO = {}
+    # DC = date created
+    ARTICLE_DC = {}
+    # DM = date modified
+    ARTICLE_DM = {}
 
     for article_dir in os.listdir(content_path):
         dir_path = content_path + '/' + article_dir
         article_slug = article_dir[11:]
         article_date = article_dir[:10]
-        ARTICLE_INFO[article_slug] = article_date
+        ARTICLE_DC[article_slug] = article_date
         for item in os.listdir(dir_path):
             file_path = os.path.join(dir_path, item)
             if file_path.endswith('.md'):
                  # markdown file
+                ARTICLE_DM[article_slug] = time.ctime(os.path.getmtime(file_path))
                 with open(file_path, 'r') as file:
                     ARTICLES[article_slug] = markdown(
                         file.read(), extras=['metadata', 'tables', 'target-blank-links'])
@@ -69,11 +71,13 @@ for content_type in content_types:
 
     # reverse order
     ARTICLES = {
-        article: ARTICLES[article] for article in sorted(ARTICLES, key=lambda article: datetime.strptime(ARTICLE_INFO.get(article), '%Y-%m-%d'), reverse=False)
+        article: ARTICLES[article] for article in sorted(ARTICLES, key=lambda article: datetime.strptime(ARTICLE_DC.get(article), '%Y-%m-%d'), reverse=False)
     }
 
     for article in ARTICLES:
         article_metadata = ARTICLES[article].metadata
+        article_date_created = datetime.strptime(ARTICLE_DC.get(article), '%Y-%m-%d').strftime('%d/%m/%Y')
+        article_date_modified = datetime.strptime(ARTICLE_DM.get(article), '%a %b %d %H:%M:%S %Y').strftime('%d/%m/%Y')
         if 'tags' in article_metadata:
             tags = [article_metadata['tags']]
         else:
@@ -82,17 +86,13 @@ for content_type in content_types:
             thumbnail = article_metadata['thumbnail']
         else:
             thumbnail = ''
-        if 'subtitle' in article_metadata:
-            subtitle = article_metadata['subtitle']
-        else:
-            subtitle = ''
         article_data = {
             'title': article_metadata['title'],
-            'subtitle': subtitle,
             'content': ARTICLES[article],
             'thumbnail': thumbnail,
             'tags': tags,
-            'date': ARTICLE_INFO.get(article),
+            'date_created' : article_date_created,
+            'date_modified' : article_date_modified,
             'slug': content_type  + '-' + article
         }
         ARTICLES[article].metadata = article_data

@@ -5,7 +5,7 @@
 <!-- assignments -->
 <section class="index">
   <h2 class="index__subtitle">Fab Acacademy: assignments</h2>
-  <ol class="index__list">
+  <ul class="index__list">
     {% for post in assignments %}
       {% if not 'draft' in post.tags %}
         <li class="index__item">
@@ -13,19 +13,19 @@
         </li>
       {% endif %}
     {% endfor %}
-  </ol>
+  </ul>
 </section>
 
 <!-- final project -->
 <section class="index">
   <h2 class="index__subtitle">Fab Acacademy: final project</h2>
-  <ol class="index__list">
+  <ul class="index__list">
     {% for post in finalproject %}
     {% if not 'draft' in post.tags %}
     <li class="index__item"><a href="{{ post.slug }}.html" class="index__link">{{ post.title }}</a></li>
     {% endif %}
     {% endfor %}
-  </ol>
+  </ul>
 </section>
 
 <!-- pages -->
