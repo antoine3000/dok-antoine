@@ -24,6 +24,7 @@ title: References
 - Singing plant [(link)](https://www.instructables.com/id/Singing-plant-Make-your-plant-sing-with-Arduino-/)
 - Music of the plants [(link)](https://upliftconnect.com/music-of-the-plants/)
 - Plant talk [(link)](https://www.the-scientist.com/features/plant-talk-38209)
+- Electrical signals and their physiological significance in plants [(link)](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-3040.2006.01614.x)
 
 ## Communication
 
@@ -49,5 +50,3 @@ title: References
 - Breathing Flowerpot [(link)](http://fab.cba.mit.edu/classes/863.19/Harvard/people/hsingh/project.html)
 - Automated indoor hanging garden [(link)](http://fab.academany.org/2019/labs/berytech/students/nagi-abdelnour/final%20project%20dev.html)
 - Replicating superhydrophobic plant leaves [(link)](http://archive.fabacademy.org/archives/2017/woma/students/238/assignment12.html)
-
-

@@ -32,79 +32,66 @@
       Materials
     
   </h1>
-  <p>The device is made up of two elements: the <em>plant</em> and the <em>clone</em>.</p>
+  <p>My project is made up of three elements: the <em>plant</em>, the <em>clone</em> and the <em>panel</em>.</p>
 
-<h1>The plant</h1>
+<hr />
 
-<p>The <em>plant</em> is the element connected to a plant, it has sensors and a microcontroller equipped with a WiFi transceiver module (<a target="_blank" href="https://www.digikey.com/product-detail/en/espressif-systems/ESP32-WROOM-32/1904-1010-1-ND/8544305">ESP32-WROOM-32</a>).</p>
+<h2>The plant</h2>
 
-<h2>Soil moisture sensor</h2>
+<p>The <em>plant</em> is a device connected to a plant. It has sensors and a microcontroller equipped with a WiFi transceiver module. Its role is to sense data from the plant and its environment, process them and send them to the <em>clone</em>.</p>
 
-<p class="todo">TODO: soil moisture sensor - list of materials</p>
+<ul>
+<li>Microcontroller (ESP32)</li>
+<li>Light sensor</li>
+<li>Temperature sensor</li>
+<li>Soil moisture sensor</li>
+<li>Electrical activity sensor (ADC, Operational amplifier)</li>
+<li>Capacitive sensor</li>
+<li>Power supply</li>
+<li>Enclosure (wood and acrylic)</li>
+</ul>
 
 <h3>References</h3>
 
 <ul>
 <li><a target="_blank" href="https://docs.smartcitizen.me/Components/Soil/">Smart Citizen Docs - Soil sensors</a></li>
-<li><a target="_blank" href="https://wemakethings.net/chirp/">Chirp! - The plant watering alarm</a> (Moisture sensing and light sensing)</li>
-</ul>
-
-<h2>Light sensor</h2>
-
-<p class="todo">TODO: light sensor - list of materials</p>
-
-<h3>References</h3>
-
-<ul>
-<li><a target="_blank" href="https://wemakethings.net/chirp/">Chirp! - The plant watering alarm</a> (Moisture sensing and light sensing)</li>
-</ul>
-
-<h2>Temperature sensor</h2>
-
-<p class="todo">TODO: temperature sensor - list of materials</p>
-
-<h2>Electrical activity sensor</h2>
-
-<ul>
+<li><a target="_blank" href="https://wemakethings.net/chirp/">Chirp! - The plant watering alarm</a></li>
 <li>Analog to digital converter (ADC): <a target="_blank" href="https://www.digikey.com/product-detail/en/analog-devices-inc/AD8605ARTZ-REEL7/AD8605ARTZREEL7CT-ND/751314">AD8605ARTZ-REEL7</a></li>
 <li>Operational amplifier <a target="_blank" href="https://www.analog.com/media/en/technical-documentation/data-sheets/AD8605_8606_8608.pdf">AD8605, AD8606, AD86081</a></li>
 </ul>
 
-<p class="todo">TODO: electrical activity sensor - list of materials</p>
+<hr />
 
-<h1>The clone</h1>
+<h2>The clone</h2>
 
-<p>The <em>clone</em> is the element that represents the health and activity of the plant.</p>
+<p>The <em>clone</em> is a device that receives data from the plant and its environment and transforms them into physical movement using an air pump to inflate and deflate a flexible material, creating a movement inspired by our breathing cycle, revealing how the plant feels.</p>
 
-<p>It is also equipped with ESP32-WROOM-32, and receives its instructions via the WiFi protocol. Depending on the messages it receives, it is been activated, revealing how the plant feels.</p>
+<ul>
+<li>Air pump</li>
+<li>Solenoid</li>
+<li>Pipes</li>
+<li>Balloon (made out of recycled plastic)</li>
+<li>Cover (made out of flexible fabric)</li>
+<li>Power supply</li>
+<li>Enclosure (wood and acrylic)</li>
+</ul>
 
-<h2>Movement</h2>
+<h3>References</h3>
 
-<p>I'm exploring two different tracks concerning the behavior of the <em>clone</em>.</p>
+<ul>
+<li><a target="_blank" href="https://www.sparkfun.com/products/11270">Blower - Squirrel Cage (12V)</a></li>
+</ul>
 
-<p>It could be a balloon that inflates and deflates, causing an organic movement that is difficult to control, which must always be in action.</p>
+<hr />
 
-<p>Or a mechanical movement, slow and under control, which could be activated and deactivated at the speed of real changes in the plant and its environment, resulting in something contemplative and less energy consuming.</p>
+<h2>The panel</h2>
 
-<h3>Pneumatic</h3>
+<p>The <em>panel</em> is a wooden structure that can host up to five <em>clones</em> to create a more detailed and unique installation with custom parameters.</p>
 
-<p class="todo">TODO: pneumatic movement - list of materials</p>
-
-<h3>Mechanical</h3>
-
-<p class="todo">TODO: mechanical movement - list of materials</p>
-
-<h2>Channel selection</h2>
-
-<p class="todo">TODO: channel selection - list of materials</p>
-
-<h2>Modifiers selection</h2>
-
-<p class="todo">TODO: modifiers selection - list of materials</p>
-
-<h2>Enclosure</h2>
-
-<p class="todo">TODO: enclosure - list of materials</p>
+<ul>
+<li>Wood panels</li>
+<li>3D printed joinery</li>
+</ul>
 
   
 </article>

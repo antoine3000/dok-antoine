@@ -2,72 +2,52 @@
 title: Materials
 ---
 
-The device is made up of two elements: the *plant* and the *clone*.
+My project is made up of three elements: the *plant*, the *clone* and the *panel*.
 
-# The plant
+---
 
-The *plant* is the element connected to a plant, it has sensors and a microcontroller equipped with a WiFi transceiver module ([ESP32-WROOM-32](https://www.digikey.com/product-detail/en/espressif-systems/ESP32-WROOM-32/1904-1010-1-ND/8544305)).
+## The plant
 
-## Soil moisture sensor
+The *plant* is a device connected to a plant. It has sensors and a microcontroller equipped with a WiFi transceiver module. Its role is to sense data from the plant and its environment, process them and send them to the *clone*.
 
-TODO: soil moisture sensor - list of materials
+- Microcontroller (ESP32)
+- Light sensor
+- Temperature sensor
+- Soil moisture sensor
+- Electrical activity sensor (ADC, Operational amplifier)
+- Capacitive sensor
+- Power supply
+- Enclosure (wood and acrylic)
+
+### References
+  - [Smart Citizen Docs - Soil sensors](https://docs.smartcitizen.me/Components/Soil/)
+  - [Chirp! - The plant watering alarm](https://wemakethings.net/chirp/)
+  - Analog to digital converter (ADC): [AD8605ARTZ-REEL7](https://www.digikey.com/product-detail/en/analog-devices-inc/AD8605ARTZ-REEL7/AD8605ARTZREEL7CT-ND/751314)
+  - Operational amplifier [AD8605, AD8606, AD86081](https://www.analog.com/media/en/technical-documentation/data-sheets/AD8605_8606_8608.pdf)
+
+  ---
+
+## The clone
+
+The *clone* is a device that receives data from the plant and its environment and transforms them into physical movement using an air pump to inflate and deflate a flexible material, creating a movement inspired by our breathing cycle, revealing how the plant feels.
+
+- Air pump
+- Solenoid
+- Pipes
+- Balloon (made out of recycled plastic)
+- Cover (made out of flexible fabric)
+- Power supply
+- Enclosure (wood and acrylic)
 
 ### References
 
-- [Smart Citizen Docs - Soil sensors](https://docs.smartcitizen.me/Components/Soil/)
-- [Chirp! - The plant watering alarm](https://wemakethings.net/chirp/) (Moisture sensing and light sensing)
+- [Blower - Squirrel Cage (12V)](https://www.sparkfun.com/products/11270)
 
+---
 
-## Light sensor
+## The panel
 
-TODO: light sensor - list of materials
+The *panel* is a wooden structure that can host up to five *clones* to create a more detailed and unique installation with custom parameters.
 
-### References
-
-- [Chirp! - The plant watering alarm](https://wemakethings.net/chirp/) (Moisture sensing and light sensing)
-
-## Temperature sensor
-
-TODO: temperature sensor - list of materials
-
-## Electrical activity sensor
-
-- Analog to digital converter (ADC): [AD8605ARTZ-REEL7](https://www.digikey.com/product-detail/en/analog-devices-inc/AD8605ARTZ-REEL7/AD8605ARTZREEL7CT-ND/751314)
-- Operational amplifier [AD8605, AD8606, AD86081](https://www.analog.com/media/en/technical-documentation/data-sheets/AD8605_8606_8608.pdf)
-
-TODO: electrical activity sensor - list of materials
-
-# The clone
-
-The *clone* is the element that represents the health and activity of the plant.
-
-It is also equipped with ESP32-WROOM-32, and receives its instructions via the WiFi protocol. Depending on the messages it receives, it is been activated, revealing how the plant feels.
-
-## Movement
-
-I'm exploring two different tracks concerning the behavior of the *clone*.
-
-It could be a balloon that inflates and deflates, causing an organic movement that is difficult to control, which must always be in action.
-
-Or a mechanical movement, slow and under control, which could be activated and deactivated at the speed of real changes in the plant and its environment, resulting in something contemplative and less energy consuming.
-
-### Pneumatic
-
-
-TODO: pneumatic movement - list of materials
-
-### Mechanical
-
-TODO: mechanical movement - list of materials
-
-## Channel selection
-
-TODO: channel selection - list of materials
-
-## Modifiers selection
-
-TODO: modifiers selection - list of materials
-
-## Enclosure
-
-TODO: enclosure - list of materials
+- Wood panels
+- 3D printed joinery
