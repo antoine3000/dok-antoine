@@ -25,6 +25,8 @@ title: References
 - Music of the plants [(link)](https://upliftconnect.com/music-of-the-plants/)
 - Plant talk [(link)](https://www.the-scientist.com/features/plant-talk-38209)
 - Electrical signals and their physiological significance in plants [(link)](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-3040.2006.01614.x)
+- Plant friends [(link)](https://hackaday.io/project/1982-plant-friends)
+- Growerbot [(link)](https://hackaday.io/project/2154-growerbot)
 
 ## Communication
 
@@ -41,6 +43,8 @@ title: References
 - Robotic architecture [(link)](https://www.youtube.com/watch?v=m5VWHUvKt48)
 - Soft Roboto [(link)](https://www.youtube.com/watch?v=q2Q-taHAo7Q)
 - Soft Robots Inspired by Origami [(link)](https://www.youtube.com/watch?v=ARSKahntQDA)
+- Hexy the Open-Source, Low-Cost Hexapod  [(link)](http://arcbotics.com/products/hexy/)
+- Plant-Robot hybrid with actuators and electrical potential sensing for plant control[(link)](https://hackaday.io/project/134172-plantoid)
 
 ## Fab Academy References (related to plants)
 
