@@ -4,6 +4,7 @@ from datetime import datetime
 from jinja2 import Environment, FileSystemLoader
 from markdown2 import markdown
 from PIL import Image
+from feedgen.feed import FeedGenerator
 
 # templates
 env = Environment(loader=FileSystemLoader('templates'))
@@ -18,8 +19,17 @@ media_ext = ['jpg', 'jpeg', 'png']
 METADATA = {}
 folder_html = 'public/'
 folder_medias = 'public/medias/'
+main_url = 'https://antoine.studio/'
 # Temporary fix
 warnings.filterwarnings("ignore", "(Possibly )?corrupt EXIF data", UserWarning)
+# RSS
+fg = FeedGenerator()
+fg.title('antoine.studio')
+fg.author( {'name':'Antoine Jaunard'} )
+fg.link( href=main_url, rel='alternate' )
+fg.subtitle('Experimentation studio of Antoine jaunard')
+fg.language('en')
+rssfeed  = fg.rss_str(pretty=True)
 
 # Image utility
 def image_util(old_file, new_file):
@@ -109,6 +119,13 @@ for content_type in content_types:
         article_html = article_html.replace('<p>TODO:', '<p class="todo">TODO:')
         with open(article_file_path, 'w') as file:
             file.write(article_html)
+        # RSS
+        if 'draft' not in article_data['tags']:
+            fe = fg.add_entry()
+            fe.title(article_data['title'])
+            fe.link(href=main_url + article_data['slug'] + '.html')
+            # TODO: RSS date
+            # fe.pubDate(article_date_modified)
 
     METADATA[content_metadata_name] = [
         ARTICLES[article].metadata for article in ARTICLES]
@@ -157,6 +174,8 @@ for key, value in METADATA.items():
     filename = 'public/' + index_name + '.html'
     with open(filename, 'w') as file:
         file.write(index_html)
+# RSS
+fg.rss_file('public/rss.xml')
 
 # counting
 total_page = 0
