@@ -25,9 +25,9 @@ warnings.filterwarnings("ignore", "(Possibly )?corrupt EXIF data", UserWarning)
 # RSS
 fg = FeedGenerator()
 fg.title('antoine.studio')
-fg.author( {'name':'Antoine Jaunard'} )
+fg.author( {'name':'Antoine Jaunard', 'email': 'antoine.stuff@pm.me'} )
 fg.link( href=main_url, rel='alternate' )
-fg.subtitle('Experimentation studio of Antoine jaunard')
+fg.subtitle('experimental studio of Antoine Jaunard')
 fg.language('en')
 rssfeed  = fg.rss_str(pretty=True)
 
@@ -124,8 +124,9 @@ for content_type in content_types:
             fe = fg.add_entry()
             fe.title(article_data['title'])
             fe.link(href=main_url + article_data['slug'] + '.html')
-            # TODO: RSS date
-            # fe.pubDate(article_date_modified)
+            fe.author( {'name':'Antoine Jaunard', 'email': 'antoine.stuff@pm.me'} )
+            fe.pubDate(datetime.strptime(ARTICLE_DC.get(article), '%Y-%m-%d').strftime('%a %b %d %H:%M:%S %Y') + ' +0200')
+            fe.description(article_data['content'][:800] + '...')
 
     METADATA[content_metadata_name] = [
         ARTICLES[article].metadata for article in ARTICLES]

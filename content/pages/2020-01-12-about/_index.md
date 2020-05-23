@@ -13,6 +13,8 @@ This website is built with a custom static site generator that I wrote in Python
 
 If you want to contact me, don't hesitate to [send me a message](mailto:antoine.stuff@pm.me) on my encrypted email address or to [follow me](https://merveilles.town/@focus404) on an alternative social network that I trust. You can speak to me in French, English, Dutch (*maar alleen een beetje*) or Spanish (*se amable, aprendo*).
 
+Oh, there is also my [RSS feed](rss.xml).
+
 ![antoine-chill](antoine-chill.jpg)
 
 ## Fab Academy (2020)
