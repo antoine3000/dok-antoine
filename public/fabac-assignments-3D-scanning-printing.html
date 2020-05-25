@@ -59,7 +59,7 @@ To prepare the g-code, we have to <em>slice</em> our 3D model (.STL), to simulat
 
 <p>At Fab Lab Barcelona, a computer with <a target="_blank" href="https://ultimaker.com/software/ultimaker-cura">Ultimaker Cura</a> is attached to the machines, with all the presets of the differents printers saved in it. It's therefore easier to directly use it in order to slice our model instead of searching the presets and install them on our personal laptop.</p>
 
-<h3>Specific settings that we'd to specify</h3>
+<h3>Specific settings that we had to specify</h3>
 
 <ul>
 <li>layer height: <code>0.25mm</code></li>
@@ -158,7 +158,7 @@ hull() {
 
 <p>The very end of the printing was a bit problematic too. The supports didn't support the model enough and everything started to move according to the movements of the printer.</p>
 
-<p>At one point it really seemed like the oloid could fall. Fortunately, I was around the printer and I could hold my piece in place using my finger. That is something I'll have to consider the next time I have to think about supports.</p>
+<p>At one point it really seemed like the oloid could fall. Fortunately, I was around the printer and I could hold my piece in place using my finger. That is something I will have to consider the next time I have to think about supports.</p>
 
 <p><video controls preload="auto"><source type ="video/mp4" src ="medias/fabac-assignments-3D-scanning-printing-oloid-print-2.mp4"></video></p>
 
@@ -190,14 +190,14 @@ hull() {
 
 <h2>Requirements</h2>
 
-<p>Meshroom needs a <a target="_blank" href="https://en.wikipedia.org/wiki/CUDA">CUDA-Enabled GPU</a> in order to run properly. My computer doesn't have this type of processor, but I found a solution to get decent results without the full capacity of the software. I'll explain it later in the process.</p>
+<p>Meshroom needs a <a target="_blank" href="https://en.wikipedia.org/wiki/CUDA">CUDA-Enabled GPU</a> in order to run properly. My computer doesn't have this type of processor, but I found a solution to get decent results without the full capacity of the software. I will explain it later in the process.</p>
 
 <h3>Installation</h3>
 
 <ol>
 <li>Download the binary from <a target="_blank" href="https://alicevision.org/#meshroom">Meshroom home page</a></li>
 <li>Unzip it in any folder.</li>
-<li>Open a terminal and from this folder run <code>./Meshroom</code> to launch the GUI. In my case I've to type <code>~/Documents/Apps/Meshroom-2019.2.0/./Meshroom</code> to launch the app.</li>
+<li>Open a terminal and from this folder run <code>./Meshroom</code> to launch the GUI. In my case I have to type <code>~/Documents/Apps/Meshroom-2019.2.0/./Meshroom</code> to launch the app.</li>
 </ol>
 
 <h3>How-to</h3>
@@ -205,7 +205,7 @@ hull() {
 <ol>
 <li>Take pictures around the object you want to scan</li>
 <li>Import them into Meshroom, in drag and drop in the window.</li>
-<li>If you have a CUDA-Enabled GPU, simply press the <code>start</code> button. If not, you'll have to delete 3 nodes: <code>PrepareDenseScene</code> <code>DepthMap</code> and <code>DepthMapFilter</code> and connect the output of <code>StructureFromMotion</code> to the input of <code>Meshing</code>, and finally press the <code>start</code> button.</li>
+<li>If you have a CUDA-Enabled GPU, simply press the <code>start</code> button. If not, you will have to delete 3 nodes: <code>PrepareDenseScene</code> <code>DepthMap</code> and <code>DepthMapFilter</code> and connect the output of <code>StructureFromMotion</code> to the input of <code>Meshing</code>, and finally press the <code>start</code> button.</li>
 </ol>
 
 <h2>Problems I encountered</h2>
@@ -247,7 +247,7 @@ hull() {
 <p>The result is clearly worse than I imagined when thinking about photogrammetry. But it's an exploration, between cutting-edge technology and open source software driven by the community, between a beginner (me) and a very specific technique. I will have to practice taking appropriate photos for photogrammetry if I want to scan something for a real need.</p>
 
   <footer>
-    <p><span>Created</span> 26/02/2020 ✎ <span>updated</span> 01/05/2020</p>
+    <p><span>Created</span> 26/02/2020 ✎ <span>updated</span> 25/05/2020</p>
   </footer>
 </article>
 
