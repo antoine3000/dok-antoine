@@ -39,7 +39,7 @@ I used Inkscape to draw a basic but vector schema of my project. I did not have 
 
 ![schema](schema.png)
 
-File: [schema.svg](https://cloud.antoine.studio/index.php/s/RKRdTDDCXPsSt4t/download?path=%2F02-cad&files=schema.svg)
+File: [schema.svg](files/schema.svg)
 
 ### Shortcuts
 
@@ -128,7 +128,7 @@ Freecad is general-purpose parametric 3D CAD modeler software made to design rea
 
 ![freecad-tutorial](freecad-tutorial.png)
 
-File: [freecad-test.FCStd](https://cloud.antoine.studio/index.php/s/RKRdTDDCXPsSt4t/download?path=%2F02-cad&files=freecad-test.FCStd)
+File: [freecad-test.FCStd](files/freecad-test.FCStd)
 
 
 FreeCAD seems to have everything we need to design parts and machines, it seems really powerful. The thing that annoys me a little is the interface, I feel it over-complicated and I get lost easily, without knowing what I am doing. Maybe it comes from the fact that I "fell in love" with the "simplicity" of OpenSCAD? Anyway, I will have to use FreeCAD and OpenSCAD together, and I am quite satisfied with all the possibilities it offers.
@@ -148,7 +148,7 @@ Installation: `$ sudo snap install blender --classic`
 
 Blender is super powerful and can be used in a wide variety of fields. I don't see any real use for me right now, as I mainly focus on exporting models from my computer to the real world, instead of polishing virtual things. However, it will be my weapon of choice for quickly sketching an idea in 3D and animating it if necessary.
 
-File: [setup.blend](https://cloud.antoine.studio/index.php/s/RKRdTDDCXPsSt4t/download?path=%2F02-cad&files=setup.blend)
+File: [setup.blend](files/setup.blend)
 
 ### Shortcuts
 
@@ -161,8 +161,6 @@ File: [setup.blend](https://cloud.antoine.studio/index.php/s/RKRdTDDCXPsSt4t/dow
 - Insert faces: `i`
 
 ---
-
-TODO: Files < 10mb in this repo
 
 ## Conclusion
 
