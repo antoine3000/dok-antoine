@@ -91,5 +91,15 @@ p.todo {font-size: 0.8em; text-transform: uppercase; border: var(--border-sm) va
 .article footer {margin-top: calc(var(--spacing)*2);}
 .article footer p {margin-bottom: 0;}
 .article footer span {color: var(--color-heading-high);}
+.article .btn {
+  display: inline-block;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  background-color: var(--color-base);
+  border: var(--border-sm) var(--color-base) solid;
+  padding: calc(var(--spacing-sm) * 2);
+  color: var(--color-body);
+}
+
 /* embed */
 .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }

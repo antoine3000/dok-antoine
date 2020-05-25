@@ -70,3 +70,8 @@ templates
 - index.html
 main.py
 </pre>
+
+
+## Special content
+
+- Button: A link's url that begin with `btn:` will transform the link into a button.

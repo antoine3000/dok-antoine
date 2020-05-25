@@ -1,8 +1,16 @@
 ---
-title: Plant talk
+title: Project developement
 ---
 
 A device that helps humans communicate with plants.
+
+External resources:
+
+[List of materials](btn:https://ethercalc.org/g137zm2gagg7)
+[List of materials](btn:https://ethercalc.org/g137zm2gagg7)
+[List of materials](btn:https://ethercalc.org/g137zm2gagg7)
+
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSb3T6B5uFn92GdqucOxYV844uzvmDT444aCE5MOSVY-9Uq0Ki3ltZ_sPAvhXAJ7EGQAdITehuPNeJH/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 
 # Sensing
 
