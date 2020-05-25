@@ -4,7 +4,7 @@ title: Embedded programming
 
 Two weeks ago, I designed a pomodoro timer during the [Electronics design](fabac-assignments-electronics-design.html) week. It's now time to program it. I'm going to write the piece of code that will light my LEDs as time goes by and find a way to send it to the ATtiny1614 chip. I'm going to focus on the latter: how to send a program (= program) a chip. Well, that was the plan.
 
-Unfortunately, in the meantime, the coronavirus has hit Spain (and the whole world). We are now all in quarantine, with no access to the lab. I'll have to work from home, with the equipment I already have, nothing more.
+Unfortunately, in the meantime, the coronavirus has hit Spain (and the whole world). We are now all in quarantine, with no access to the lab. I will have to work from home, with the equipment I already have, nothing more.
 
 ![pomo-circuit-playground](pomo-circuit-playground.jpeg)
 
@@ -177,13 +177,13 @@ If it has been verified correctly, send it to your board to make it alive by typ
 
 ![pio-upload](pio-upload.jpeg)
 
-I've been using my pomodoro timer every day since I coded it, the Circuit Playground is always by my computer to remind me to take a 5-minutes break every 25 minutes and help me stay focused.
+I have been using my pomodoro timer every day since I coded it, the Circuit Playground is always by my computer to remind me to take a 5-minutes break every 25 minutes and help me stay focused.
 
 ---
 
 # Programming the ESP32 — Barduino
 
-We've been asked to assemble a Barduino few hours before the lab lockdown due to the coronavirus, in order to be able to experiment with it later at home.
+We have been asked to assemble a Barduino few hours before the lab lockdown due to the coronavirus, in order to be able to experiment with it later at home.
 
 > Barduino 2.0 started as a project to have a ESP32 fabacademy compatible board to help the students develope their work on top of it. This board was designed by Eduardo Chamorro Martin with the help of Josep Marti and Oscar Gonzalez in Fab Lab Barcelona 2020.
 >> [Barduino 2.0, Gitlab](https://gitlab.fabcloud.org/barcelonaworkshops/barduino-2.0)

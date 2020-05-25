@@ -4,7 +4,7 @@ title: Electronics design
 
 I knew almost nothing about electronics before following the Fab Academy.I had to learn and understand the very basics of a electronic circuit and its composents, but also of electricity and its flow.
 
-To do so, I designed a pomodoro timer from scratch. I've learn a lot throughout the process and I've the feeling that this new knowledge will play a key role in what I'll do for my personal project and afterwards.
+To do so, I designed a pomodoro timer from scratch. I have learn a lot throughout the process and I have the feeling that this new knowledge will play a key role in what I will do for my personal project and afterwards.
 
 ![pomo](pomo.jpeg)
 
@@ -21,8 +21,8 @@ I use a pomodoro timer daily to help me manage my time and effort in the tasks I
 
 The main component I'm using is the microcontroller [ATtiny1614](https://www.microchip.com/wwwproducts/en/ATTINY1614). It will allow me to program my inputs and outputs needed to run my project.
 
-As outputs, I've 4 LEDs that are used to visualize the time passing by and the interactions with the pomodoro timer.
-As inputs, I've to 2 switches (buttons) that allow me to start/pause/resume/reset the timer.
+As outputs, I have 4 LEDs that are used to visualize the time passing by and the interactions with the pomodoro timer.
+As inputs, I have to 2 switches (buttons) that allow me to start/pause/resume/reset the timer.
 
 I also need 6 resistor (one for each of the inputs/outputs), a capacitor, a FTDI header (to be able to communicate with the boards), a UPDI header (to program the board).
 
@@ -47,7 +47,7 @@ To design the schematic of the board, one should first import the right symbols.
 - `Delete` to delete it
 - `W` to draw a wire
 
-Then, you'll have to connect the elements together. To do so, a good practice is to divide the circuit into smaller and more understandable circuits. In my case, I design the switches, LED's, capacitor, ATtiny1614, FTDI and UPDI apart. It's then easier to get a full understanding of the circuit and it's also easier to manipulate.
+Then, you will have to connect the elements together. To do so, a good practice is to divide the circuit into smaller and more understandable circuits. In my case, I design the switches, LED's, capacitor, ATtiny1614, FTDI and UPDI apart. It's then easier to get a full understanding of the circuit and it's also easier to manipulate.
 
 ![schematics-design](schematics-design.jpeg)
 
@@ -70,7 +70,7 @@ Now is the "tricky" part: finding the best paths, the most compact as possible w
 - the ground closes the circuit, so it's easier to end with it
 - just because you seem to be close to the solution doesn't mean you are really close to the solution. You don't know that until the end, when you connect the last components together
 - what is possible in a CAD software may not be easy to do in real life
-- optimize your paths and think about how you'll solder the  components
+- optimize your paths and think about how you will solder the  components
 
 
 ### Preparing the files
@@ -98,7 +98,7 @@ Soldering was fun to do, I really like doing it, even if I started with a big mi
 
 ## Testing
 
-In order to test the board, you'll need a UPDI for the communication between the board and another computer and a FTDI to program the board itself. Luckily, these are the two I already made.
+In order to test the board, you will need a UPDI for the communication between the board and another computer and a FTDI to program the board itself. Luckily, these are the two I already made.
 
 The power comes from the UPDI, as well as the data.
 
@@ -138,4 +138,4 @@ And that's it.
 
 ## Programming
 
-I'll program this board to make it be a pomodoro timer in two weeks, during the *Embedded programming* assignement.
+I will program this board to make it be a pomodoro timer in two weeks, during the *Embedded programming* assignement.

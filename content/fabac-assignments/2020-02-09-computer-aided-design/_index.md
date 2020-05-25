@@ -2,7 +2,7 @@
 title: Computer-aided design
 ---
 
-A tour of open-source softwares for computer-aided design, in order to discover and learn some of the tools that I'll use to design my future projects.
+A tour of open-source softwares for computer-aided design, in order to discover and learn some of the tools that I will use to design my future projects.
 
 ## GIMP
 
@@ -35,7 +35,7 @@ Inkscape is a vector graphics editor.
 
 ![schema](schema-making.png)
 
-I used Inkscape to draw a basic but vector schema of my project. I did not have a good experience with this software: I had a few bugs, the software crashed several times, the manipulation of the vectors was not precise. Surely I need to spend more time on it, maybe to tweak it a bit, because the community behind the software seems to agree that it has great potential. Next time, I'll try a Python script experiment, an area where Inkscape seems very interesting.
+I used Inkscape to draw a basic but vector schema of my project. I did not have a good experience with this software: I had a few bugs, the software crashed several times, the manipulation of the vectors was not precise. Surely I need to spend more time on it, maybe to tweak it a bit, because the community behind the software seems to agree that it has great potential. Next time, I will try a Python script experiment, an area where Inkscape seems very interesting.
 
 ![schema](schema.png)
 
@@ -131,7 +131,7 @@ Freecad is general-purpose parametric 3D CAD modeler software made to design rea
 File: [freecad-test.FCStd](https://cloud.antoine.studio/index.php/s/RKRdTDDCXPsSt4t/download?path=%2F02-cad&files=freecad-test.FCStd)
 
 
-FreeCAD seems to have everything we need to design parts and machines, it seems really powerful. The thing that annoys me a little is the interface, I feel it over-complicated and I get lost easily, without knowing what I am doing. Maybe it comes from the fact that I "fell in love" with the "simplicity" of OpenSCAD? Anyway, I'll have to use FreeCAD and OpenSCAD together, and I am quite satisfied with all the possibilities it offers.
+FreeCAD seems to have everything we need to design parts and machines, it seems really powerful. The thing that annoys me a little is the interface, I feel it over-complicated and I get lost easily, without knowing what I am doing. Maybe it comes from the fact that I "fell in love" with the "simplicity" of OpenSCAD? Anyway, I will have to use FreeCAD and OpenSCAD together, and I am quite satisfied with all the possibilities it offers.
 
 Each view has a custom set of tools. So it's important to switch to the appropriated view before doing some manipulations. The more useful ones are `Sketcher` and `Part Design`.
 

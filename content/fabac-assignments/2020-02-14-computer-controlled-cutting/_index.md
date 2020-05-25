@@ -90,7 +90,7 @@ Once we had the piece on EnRoute, after a few crashes of the software due, we th
 
 <video><source src="multicam-test.mp4"></video>
 
-We didn't do enough tests to know well the machine because of the time we'd at our disposition. It would be interesting to compare the results with the other machine to know how much energy it does require and how fast is the industrial machine compare to the others. Anyway, here are the values we collected when testing the Multicam2000.
+We didn't do enough tests to know well the machine because of the time we had at our disposition. It would be interesting to compare the results with the other machine to know how much energy it does require and how fast is the industrial machine compare to the others. Anyway, here are the values we collected when testing the Multicam2000.
 
 | Machine | Material | Technique | Speed | Power |
 | --- | --- | --- | --- | --- |
@@ -98,7 +98,7 @@ We didn't do enough tests to know well the machine because of the time we'd at o
 
 ## Basic test to calculate the kerf
 
-I've seen on [various](http://fab.academany.org/2018/labs/fablabamsterdam/lasercut/group1.html) [documentations](https://fabacademy.org/2019/labs/waag/students/anne-vlaanderen/assignments/week4.html) a basic test which we can execute in order to calculate the kerf of a specific machine on a specific material. We wanted to test it by ourself.
+I have seen on [various](http://fab.academany.org/2018/labs/fablabamsterdam/lasercut/group1.html) [documentations](https://fabacademy.org/2019/labs/waag/students/anne-vlaanderen/assignments/week4.html) a basic test which we can execute in order to calculate the kerf of a specific machine on a specific material. We wanted to test it by ourself.
 
 ![kerf-explanations](kerf-explanations.png)
 
@@ -178,7 +178,7 @@ Let's (laser) cut it.
 
 ## Assembly
 
-Unforntunately, when assembling the dome, I realized that I messed up with the triangles sizes. I've defined the height of the triangle, from its base to its summit, instead of measuring one of its side … precipitation error. I was running out of time and the machines were hyper busy at the lab, so I decided to stop my test. I had enough information about the use of the lasercutters and I didn't want to waste more wood.
+Unforntunately, when assembling the dome, I realized that I messed up with the triangles sizes. I have defined the height of the triangle, from its base to its summit, instead of measuring one of its side … precipitation error. I was running out of time and the machines were hyper busy at the lab, so I decided to stop my test. I had enough information about the use of the lasercutters and I didn't want to waste more wood.
 
 I ended with a weird half geodesic dome that isn't as solid as it should be but wich was super fun to build, from A to Z.
 

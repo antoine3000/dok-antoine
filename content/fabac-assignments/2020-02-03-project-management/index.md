@@ -11,7 +11,7 @@ One of my goals for this academy is to use only open-source tools. I want to be 
 
 ## My computer
 
-Few months ago, I decided to switch from the closed Apple ecosystem to the wonderful and open world of Linux. I'm running [Elementary OS](https://elementary.io/), a distribution based on Ubuntu, on a mid-2014 macbook pro. This machine isn't the more convenient to run a Linux distribution but I'll keep using it as long as I can, even if I have some tiny hardware issues, simply because the more sustainable computer is the one I already have.
+Few months ago, I decided to switch from the closed Apple ecosystem to the wonderful and open world of Linux. I'm running [Elementary OS](https://elementary.io/), a distribution based on Ubuntu, on a mid-2014 macbook pro. This machine isn't the more convenient to run a Linux distribution but I will keep using it as long as I can, even if I have some tiny hardware issues, simply because the more sustainable computer is the one I already have.
 
 - Text editor: [VSCodium](https://vscodium.com/) + [NeoVim](https://neovim.io/)
 - Terminal: [Terminator](https://github.com/software-jessies-org/jessies/wiki/Terminator)
@@ -28,7 +28,7 @@ My ideal documentation tool is as light as possible and requires very little ene
 > A sustainable web site means ensuring support for older hardware, slower networks and improving the portability and archivability of the blog’s content.
 > > [Homebrewserver.club](https://homebrewserver.club/low-tech-website-howto.html) / [Low-tech Magazine](https://solar.lowtechmagazine.com/2018/09/how-to-build-a-lowtech-website.html)
 
-The best way to meet these requirements and to fully understand how it works is to write it, from scratch. So that's what I did, and that's what you've in front of you right now.
+The best way to meet these requirements and to fully understand how it works is to write it, from scratch. So that's what I did, and that's what you have in front of you right now.
 
 It may not be as efficient or extensible as other static site generators (like [Hugo](https://gohugo.io/), [Jekyll](https://jekyllrb.com/) or [Pelican](https://blog.getpelican.com/)) but everything works pretty well and I am satisfied with the tool I made, it is minimal and matches my values.
 
@@ -47,7 +47,7 @@ Files are organized in different folders depending on the content type (pages/ar
 
 ### Content organization
 
-There are four main types of content: `assignments/` (for our weekly assignments), `posts/` (for additional content that may not be linked to the academy), `pages/` (for more generic purposes), `flux/` (different from the others, it'll only be used to display a grid of images).
+There are four main types of content: `assignments/` (for our weekly assignments), `posts/` (for additional content that may not be linked to the academy), `pages/` (for more generic purposes), `flux/` (different from the others, it will only be used to display a grid of images).
 
 To add an new article inside the folder related to the desired content type (assignments, posts, pages), make a new directory named as follows: `YYYY-MM-DD-article-title`. The script will store the title to make the URL of the article and the date to keep things organized. Inside this newly created folder: create a `index.md` file wich will contain the text content and add the images (if necessary).
 

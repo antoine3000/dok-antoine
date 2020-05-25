@@ -29,7 +29,7 @@ To prepare the g-code, we have to *slice* our 3D model (.STL), to simulate and a
 
 At Fab Lab Barcelona, a computer with [Ultimaker Cura](https://ultimaker.com/software/ultimaker-cura) is attached to the machines, with all the presets of the differents printers saved in it. It's therefore easier to directly use it in order to slice our model instead of searching the presets and install them on our personal laptop.
 
-### Specific settings that we'd to specify
+### Specific settings that we had to specify
 
 - layer height: `0.25mm`
 - Wall thickness: `0.8mm` (= 2 lines)
@@ -122,7 +122,7 @@ Finally, Mikel discovered that the bed wasn't flat due to a wrong manipulation o
 
 The very end of the printing was a bit problematic too. The supports didn't support the model enough and everything started to move according to the movements of the printer.
 
-At one point it really seemed like the oloid could fall. Fortunately, I was around the printer and I could hold my piece in place using my finger. That is something I'll have to consider the next time I have to think about supports.
+At one point it really seemed like the oloid could fall. Fortunately, I was around the printer and I could hold my piece in place using my finger. That is something I will have to consider the next time I have to think about supports.
 
 <video><source src="oloid-print-2.mp4"></video>
 
@@ -150,20 +150,20 @@ There aren't many open source tools available and maintained for 3D scanning, bu
 
 ## Requirements
 
-Meshroom needs a [CUDA-Enabled GPU](https://en.wikipedia.org/wiki/CUDA) in order to run properly. My computer doesn't have this type of processor, but I found a solution to get decent results without the full capacity of the software. I'll explain it later in the process.
+Meshroom needs a [CUDA-Enabled GPU](https://en.wikipedia.org/wiki/CUDA) in order to run properly. My computer doesn't have this type of processor, but I found a solution to get decent results without the full capacity of the software. I will explain it later in the process.
 
 
 ### Installation
 
 1. Download the binary from [Meshroom home page](https://alicevision.org/#meshroom)
 2. Unzip it in any folder.
-3. Open a terminal and from this folder run `./Meshroom` to launch the GUI. In my case I've to type ` ~/Documents/Apps/Meshroom-2019.2.0/./Meshroom` to launch the app.
+3. Open a terminal and from this folder run `./Meshroom` to launch the GUI. In my case I have to type ` ~/Documents/Apps/Meshroom-2019.2.0/./Meshroom` to launch the app.
 
 ### How-to
 
 1. Take pictures around the object you want to scan
 2. Import them into Meshroom, in drag and drop in the window.
-3. If you have a CUDA-Enabled GPU, simply press the `start` button. If not, you'll have to delete 3 nodes: `PrepareDenseScene` `DepthMap` and `DepthMapFilter` and connect the output of `StructureFromMotion` to the input of `Meshing`, and finally press the `start` button.
+3. If you have a CUDA-Enabled GPU, simply press the `start` button. If not, you will have to delete 3 nodes: `PrepareDenseScene` `DepthMap` and `DepthMapFilter` and connect the output of `StructureFromMotion` to the input of `Meshing`, and finally press the `start` button.
 
 ## Problems I encountered
 

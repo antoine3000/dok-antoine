@@ -2,9 +2,9 @@
 title: Principles and practices
 ---
 
-For the next six months (from January to June 2020), I'll follow the [Fab Academy](https://fabacademy.org/) at [Fab Lab Barcelona](https://fablabbcn.org/). The FabAcademy is an intensive program to learn how to design and prototype projects using digital fabrication tools and machine, such as: computer-controlled cutting, electronics, 3D scanning and printing, electronics design,computer-controlled machining, embedded programming, molding and casting, networking and communications, mechanical design, interface and application programming and machine design.
+For the next six months (from January to June 2020), I will follow the [Fab Academy](https://fabacademy.org/) at [Fab Lab Barcelona](https://fablabbcn.org/). The FabAcademy is an intensive program to learn how to design and prototype projects using digital fabrication tools and machine, such as: computer-controlled cutting, electronics, 3D scanning and printing, electronics design,computer-controlled machining, embedded programming, molding and casting, networking and communications, mechanical design, interface and application programming and machine design.
 
-I've a background in graphic & web design and web development and I love to imagine and build experiences for the common using open-source tools. But working in the web industry, I got a little bored of building things from a computer to another. I started to feel the need of working with tangible materials. I want to learn how to repair the old instead of creating the new, to think about our energy consumption, to (re)think about how we use our tools in the everyday life and what it means, and to dedicate my practice to nature.
+I have a background in graphic & web design and web development and I love to imagine and build experiences for the common using open-source tools. But working in the web industry, I got a little bored of building things from a computer to another. I started to feel the need of working with tangible materials. I want to learn how to repair the old instead of creating the new, to think about our energy consumption, to (re)think about how we use our tools in the everyday life and what it means, and to dedicate my practice to nature.
 
 # Final project proposal
 

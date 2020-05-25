@@ -60,7 +60,7 @@ TODO: LCD screen description
 
 # Prototyping an incubator
 
-As I said above, my partner is building an incubator to help us grow mycellium (and other fermented food) and she asked me an hand to help her with the electronic part. In this context, I'll prototype an incubator by using the devices I already have. I'll do it by following the spiral methodology: a first round with the basic features, and then other ones with additional options.
+As I said above, my partner is building an incubator to help us grow mycellium (and other fermented food) and she asked me an hand to help her with the electronic part. In this context, I will prototype an incubator by using the devices I already have. I will do it by following the spiral methodology: a first round with the basic features, and then other ones with additional options.
 
 ## Round #01: the basics
 
@@ -69,7 +69,7 @@ For the first round, I would like to control a fan and a Peltier (thermoelectric
 > Thermoelectric coolers (TEC or Peltier) create a temperature differential on each side. One side gets hot and the other side gets cool. Therefore, they can be used to either warm something up or cool something down, depending on which side you use.
 >> [Sparkfun - Thermoelectric Cooler](https://www.sparkfun.com/products/15082)
 
-The Peltier could be used to warm up or cool down the space depending on the wanted temperature, to do so, we apparently have to reverse its polarity. I'll try to explore this track later. I'll focus on the warm side for now.
+The Peltier could be used to warm up or cool down the space depending on the wanted temperature, to do so, we apparently have to reverse its polarity. I will try to explore this track later. I will focus on the warm side for now.
 
 Because the fan and the Peltier device require a voltage of 12V and the arduino can only supply 5V, I added an external power supply in the circuit. It is then necessary to also include MOSFETs to control how and when the current flows through the devices.
 

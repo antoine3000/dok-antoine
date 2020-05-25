@@ -2,7 +2,7 @@
 title: Networking and communications
 ---
 
-For this week's assignment, I'll connect two [ESP8266](http://esp8266.net) / [NodeMCU](https://www.nodemcu.com/index_en.html) together on the WiFi network and exchange data between them.
+For this week's assignment, I will connect two [ESP8266](http://esp8266.net) / [NodeMCU](https://www.nodemcu.com/index_en.html) together on the WiFi network and exchange data between them.
 
 Understanding the basics of networking and how communication between devices works will be highly beneficial for my final project.
 
