@@ -4,15 +4,17 @@ title: Interactive plant
 
 A device that helps humans communicate with plants.
 
+[List of materials](btn:https://docs.google.com/spreadsheets/d/1nhU3fjO-yuVyLYuE5AC39vmvim1dWyxoJ2PYOr6acvA/edit?usp=sharing)
+
 # Sensing
 
 ## electrical activity of a plant
 
-An electrical potential sensor will be used to detect the electrical activity of a plant, and therefore to deduce its health and its probable sensations.
+An electrical potential sensor are used to detect the electrical activity of a plant, and therefore to deduce its health and its probable sensations.
 
 ## Human/plant interaction
 
-Capacitive sensors will be used to detect if a human is interacting with the plant.
+Capacitive sensors are used to detect if a human is interacting with the plant.
 
 # Interacting
 
@@ -35,3 +37,5 @@ Capacitive sensors will be used to detect if a human is interacting with the pla
 - [The Lessons To Be Learned From Forcing Plants To Play Music](https://www.npr.org/2020/02/21/807821340/the-lessons-to-be-learned-from-forcing-plants-to-play-music?t=1590083678926): The consumer version of the invention includes sensors that issue small signals through the plant, measuring variations in electrical resistance between two points within it. "The variation in the connection is largely related to how much water is between those two points, which changes a lot as the plant is moving water around while it's photosynthesizing, then we graphed that change as a wave, and then we translate that wave into pitch, so then essentially we're getting a stream of all these pitch messages coming from the plant."
 - [Biodata Sonification kit](https://github.com/electricityforprogress/BiodataSonificationBreadboardKit) using breadboard, for Arduino Uno 'Sheild'
 - [Biodata Sonification](https://www.instructables.com/id/Biodata-Sonification/) on Instructables
+- [Programmable-Air](https://www.programmableair.com/) is an open source hardware kit for controlling inflatable soft robots. [Github project](https://github.com/Programmable-Air).
+- [Open Soft Machines](http://opensoftmachines.com/)
