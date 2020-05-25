@@ -28,7 +28,7 @@
 
 <article class="article">
   <h1 class="article__title">
-    Sketches and ideas
+    Sketches, ideas and principles
   </h1>
   <p>This page is where I collect some of my thoughts on my final project idea.</p>
 
@@ -116,8 +116,157 @@ installation. Or a module could be kept apart as a stand-alone piece.</p>
 
 <p><a target="_blank" href="https://www.youtube.com/watch?v=PlEzyZadA90">How and why we measure photosynthesis</a></p>
 
+<hr />
+
+<h1>Principles</h1>
+
+<p>This project convert the data of a plant and its environment into a an installation which aims to invite us to get closer to nature and to observe how plants live and re/act.</p>
+
+<h2>Represent the health and activity of the plant</h2>
+
+<p>A portable device collects and analyzes light, air temperature and soil moisture level in a plant's environment, as well as its electrical activity.</p>
+
+<p>These values will allow the device to determine how the plant is feeling, according to its needs and whether it is satisfied or not.</p>
+
+<p>The device mimics the mechanisms and movements of the respiration, because it is a very common process between plants and animals, to represent the health and activity of the plant. For example, a plant that is in a good environment "breathes" slowly and deeply, and a plant that is in danger "breathes" briefly and jerky.</p>
+
+<p><img src ="medias/fabac-finalproject-sketches-ideas-cycles.png" alt="cycles" /></p>
+
+<h2>Interact with the living</h2>
+
+<p>A touché sensor, or at least a calibrated capacitive sensor, will allow the device to sense a human-plant interaction and to reveal its nature.</p>
+
+<ul>
+<li>Is it a caress, a strike or a caring touch?</li>
+<li>What does a plant feels when we touch it?</li>
+<li>What do we feel when we touch them?</li>
+</ul>
+
+<h2>Play with a modular system</h2>
+
+<p>A device is composed by two items. One is the <code>plant</code>, capturing data, linked to a plant. The other one is the <code>clone</code>, showing the health and activity of the plant.</p>
+
+<h3>Data type</h3>
+
+<ul>
+<li>Light level</li>
+<li>Air temperature level</li>
+<li>Soil moisture level</li>
+<li>Plant's electrical activity</li>
+<li>Plant-human interaction</li>
+</ul>
+
+<h3>Communication</h3>
+
+<p>On the <code>plant</code>, one can choose the communication channel (between 1 and 5) which will be used to send the data to the <code>clone</code>.</p>
+
+<p>On the <code>clone</code>, one can choose its communication channel and the types of data that are used to represent the health and activity of the plant.</p>
+
+<ul>
+<li><code>plant 01</code> send <code>light</code>, <code>temperature</code> and <code>interaction</code> to  <code>clone 01</code></li>
+<li><code>plant 02</code> send <code>activity</code> and <code>moisture</code> to <code>clone 02</code>.</li>
+<li><code>plant 03</code> send <code>interaction</code> to <code>clone 03</code></li>
+</ul>
+
+<p><img src ="medias/fabac-finalproject-sketches-ideas-interface.png" alt="interface" /></p>
+
+<p>This kind of configuration allows to build any kind of networks, with several plants and tailor-made visualizations. One plant can be linked to several clones, and vice-versa.</p>
+
+<h3>The panel</h3>
+
+<p>The panel, a wooden structure designed to assemble modules together, can hosts up to 5 <em>clones</em>, creating a more detailed installation that facilitates the understanding of the captured values.</p>
+
+<h2>Public</h2>
+
+<ul>
+<li>Massively used in a large room and re-creating a space forest, it invites an audience to interact with plants and clones</li>
+<li>A device plugged to an houseplant, acting as a companion in the everyday life</li>
+</ul>
+
+<h2>Two possibilities</h2>
+
+<h3>Mechanical system</h3>
+
+<p>My first idea was to have a mechanical system that pushes rods on a flexible material in order to deform it and give it a unique shape according to the sensations of the plant.</p>
+
+<p><img src ="medias/fabac-finalproject-sketches-ideas-clone01.png" alt="clone" />
+<img src ="medias/fabac-finalproject-sketches-ideas-clone02.png" alt="clone" /></p>
+
+<p>I like this solution because I can easily imagine having total control, mastering the speed / movement ratio of the rods and therefore the shape of the <em>clone</em>.</p>
+
+<p><img src ="medias/fabac-finalproject-sketches-ideas-clone03.png" alt="clone" />
+<img src ="medias/fabac-finalproject-sketches-ideas-clone04.png" alt="clone" /></p>
+
+<p>But this solution requires a lot of material to be produced, and it will be too expensive compared to the idea that I have of it. I want to build something as affordable and easy to assemble as possible, to make sure it reaches a large audience.</p>
+
+<h3>Inflatable system</h3>
+
+<p>The other system I have in mind uses air pressure to inflate or deflate a flexible bag. This replaces the need for ± 12 motors with a single solenoid and an air pump. The control of the final shape is reduced but also the technical barrier, which is a good point. In addition, the movement should be more organic.</p>
+
+<p><img src ="medias/fabac-finalproject-sketches-ideas-inflat-01.png" alt="inflat" />
+<img src ="medias/fabac-finalproject-sketches-ideas-inflat-02.png" alt="inflat" /></p>
+
+<hr />
+
+<h1>Materials</h1>
+
+<p>My project is made up of three elements: the <em>plant</em>, the <em>clone</em> and the <em>panel</em>.</p>
+
+<h2>The plant</h2>
+
+<p>The <em>plant</em> is a device connected to a plant. It has sensors and a microcontroller equipped with a WiFi transceiver module. Its role is to sense data from the plant and its environment, process them and send them to the <em>clone</em>.</p>
+
+<ul>
+<li>Microcontroller (ESP32)</li>
+<li>Light sensor</li>
+<li>Temperature sensor</li>
+<li>Soil moisture sensor</li>
+<li>Electrical activity sensor (ADC, Operational amplifier)</li>
+<li>Capacitive sensor</li>
+<li>Power supply</li>
+<li>Enclosure (wood and acrylic)</li>
+</ul>
+
+<h3>References</h3>
+
+<ul>
+<li><a target="_blank" href="https://docs.smartcitizen.me/Components/Soil/">Smart Citizen Docs - Soil sensors</a></li>
+<li><a target="_blank" href="https://wemakethings.net/chirp/">Chirp! - The plant watering alarm</a></li>
+<li>Analog to digital converter (ADC): <a target="_blank" href="https://www.digikey.com/product-detail/en/analog-devices-inc/AD8605ARTZ-REEL7/AD8605ARTZREEL7CT-ND/751314">AD8605ARTZ-REEL7</a></li>
+<li>Operational amplifier <a target="_blank" href="https://www.analog.com/media/en/technical-documentation/data-sheets/AD8605_8606_8608.pdf">AD8605, AD8606, AD86081</a></li>
+</ul>
+
+<h2>The clone</h2>
+
+<p>The <em>clone</em> is a device that receives data from the plant and its environment and transforms them into physical movement using an air pump to inflate and deflate a flexible material, creating a movement inspired by our breathing cycle, revealing how the plant feels.</p>
+
+<ul>
+<li>Air pump</li>
+<li>Solenoid</li>
+<li>Pipes</li>
+<li>Balloon (made out of recycled plastic)</li>
+<li>Cover (made out of flexible fabric)</li>
+<li>Power supply</li>
+<li>Enclosure (wood and acrylic)</li>
+</ul>
+
+<h3>References</h3>
+
+<ul>
+<li><a target="_blank" href="https://www.sparkfun.com/products/11270">Blower - Squirrel Cage (12V)</a></li>
+</ul>
+
+<h2>The panel</h2>
+
+<p>The <em>panel</em> is a wooden structure that can host up to five <em>clones</em> to create a more detailed and unique installation with custom parameters.</p>
+
+<ul>
+<li>Wood panels</li>
+<li>3D printed joinery</li>
+</ul>
+
   <footer>
-    <p><span>Created</span> 01/04/2020 ✎ <span>updated</span> 13/05/2020</p>
+    <p><span>Created</span> 01/04/2020 ✎ <span>updated</span> 25/05/2020</p>
   </footer>
 </article>
 

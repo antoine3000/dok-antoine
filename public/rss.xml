@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio/</link><description>experimental studio of Antoine Jaunard</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Mon, 25 May 2020 11:56:33 +0000</lastBuildDate><item><title>Networking and communications</title><link>https://antoine.studio/fabac-assignments-networking-communications.html</link><description>&lt;p&gt;For this week's assignment, I will connect two &lt;a target="_blank" href="http://esp8266.net"&gt;ESP8266&lt;/a&gt; / &lt;a target="_blank" href="https://www.nodemcu.com/index_en.html"&gt;NodeMCU&lt;/a&gt; together on the WiFi network and exchange data between them.&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio/</link><description>experimental studio of Antoine Jaunard</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Mon, 25 May 2020 12:09:18 +0000</lastBuildDate><item><title>Networking and communications</title><link>https://antoine.studio/fabac-assignments-networking-communications.html</link><description>&lt;p&gt;For this week's assignment, I will connect two &lt;a target="_blank" href="http://esp8266.net"&gt;ESP8266&lt;/a&gt; / &lt;a target="_blank" href="https://www.nodemcu.com/index_en.html"&gt;NodeMCU&lt;/a&gt; together on the WiFi network and exchange data between them.&lt;/p&gt;
 
 &lt;p&gt;Understanding the basics of networking and how communication between devices works will be highly beneficial for my final project.&lt;/p&gt;
 
@@ -147,7 +147,7 @@ A tool for documenting the things I learn.&lt;/p&gt;
 
 &lt;p&gt;This website is built with a custom static site generator that I wrote in Python. It's open-source by default, as all the things I (try to) do. Sources are available on &lt;a target="_blank" href="https://gitlab.com/antoine.j/antoine.studio"&gt;Gitlab&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;If you want to contact me, don't hesitate to &lt;a target="_blank" hr...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Sun, 12 Jan 2020 00:00:00 +0200</pubDate></item><item><title>Project developement</title><link>https://antoine.studio/fabac-finalproject-plant-talk.html</link><description>&lt;p&gt;A device that helps humans communicate with plants.&lt;/p&gt;
+&lt;p&gt;If you want to contact me, don't hesitate to &lt;a target="_blank" hr...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Sun, 12 Jan 2020 00:00:00 +0200</pubDate></item><item><title>Interactive plant</title><link>https://antoine.studio/fabac-finalproject-interactive-plant.html</link><description>&lt;p&gt;A device that helps humans communicate with plants.&lt;/p&gt;
 
 &lt;h1&gt;Sensing&lt;/h1&gt;
 
@@ -169,37 +169,7 @@ A tool for documenting the things I learn.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a target="_blank" href="https://hackaday.io/project/134172-plantoid"&gt;Plantoid&lt;/a&gt;, a pllant-Robot hybrid with actuators and electrical potential sensing for plant control&lt;/li&gt;
-&lt;li&gt;&lt;a target="_blank" href="https://backyardbrains.com/products/plantspikerbox"&gt;the Plant SpykerBox&lt;/a&gt;, a device that records and visual...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Thu, 21 May 2020 00:00:00 +0200</pubDate></item><item><title>Materials</title><link>https://antoine.studio/fabac-finalproject-materials.html</link><description>&lt;p&gt;My project is made up of three elements: the &lt;em&gt;plant&lt;/em&gt;, the &lt;em&gt;clone&lt;/em&gt; and the &lt;em&gt;panel&lt;/em&gt;.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2&gt;The plant&lt;/h2&gt;
-
-&lt;p&gt;The &lt;em&gt;plant&lt;/em&gt; is a device connected to a plant. It has sensors and a microcontroller equipped with a WiFi transceiver module. Its role is to sense data from the plant and its environment, process them and send them to the &lt;em&gt;clone&lt;/em&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Microcontroller (ESP32)&lt;/li&gt;
-&lt;li&gt;Light sensor&lt;/li&gt;
-&lt;li&gt;Temperature sensor&lt;/li&gt;
-&lt;li&gt;Soil moisture sensor&lt;/li&gt;
-&lt;li&gt;Electrical activity sensor (ADC, Operational amplifier)&lt;/li&gt;
-&lt;li&gt;Capacitive sensor&lt;/li&gt;
-&lt;li&gt;Power supply&lt;/li&gt;
-&lt;li&gt;Enclosure (wood and acrylic)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;References&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a target="_blank" href="https://docs.smartcitizen.me/Components/Soil/"&gt;Smart Citizen Docs - Soil sens...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Fri, 01 May 2020 00:00:00 +0200</pubDate></item><item><title>Principles</title><link>https://antoine.studio/fabac-finalproject-principles.html</link><description>&lt;p&gt;This project convert the data of a plant and its environment into a an installation which aims to invite us to get closer to nature and to observe how plants live and re/act.&lt;/p&gt;
-
-&lt;h2&gt;Represent the health and activity of the plant&lt;/h2&gt;
-
-&lt;p&gt;A portable device collects and analyzes light, air temperature and soil moisture level in a plant's environment, as well as its electrical activity.&lt;/p&gt;
-
-&lt;p&gt;These values will allow the device to determine how the plant is feeling, according to its needs and whether it is satisfied or not.&lt;/p&gt;
-
-&lt;p&gt;The device mimics the mechanisms and movements of the respiration, because it is a very common process between plants and animals, to represent the health and activity of the plant. For example, a plant that is in a good environment "breathes" slowly and deep...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Wed, 15 Apr 2020 00:00:00 +0200</pubDate></item><item><title>Sketches and ideas</title><link>https://antoine.studio/fabac-finalproject-sketches-ideas.html</link><description>&lt;p&gt;This page is where I collect some of my thoughts on my final project idea.&lt;/p&gt;
+&lt;li&gt;&lt;a target="_blank" href="https://backyardbrains.com/products/plantspikerbox"&gt;the Plant SpykerBox&lt;/a&gt;, a device that records and visual...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Thu, 21 May 2020 00:00:00 +0200</pubDate></item><item><title>Sketches, ideas and principles</title><link>https://antoine.studio/fabac-finalproject-sketches-ideas.html</link><description>&lt;p&gt;This page is where I collect some of my thoughts on my final project idea.&lt;/p&gt;
 
 &lt;h2&gt;Listen to what the plants have to say&lt;/h2&gt;
 

@@ -1,5 +1,5 @@
 ---
-title: Project developement
+title: Interactive plant
 ---
 
 A device that helps humans communicate with plants.
