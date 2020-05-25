@@ -66,7 +66,6 @@ char pass[] = "****";
 ### Server
 
 <pre>
-#include &lt;SPI.h&gt;
 #include &lt;ESP8266WiFi.h&gt;
 
 char ssid[] = "****";
@@ -124,7 +123,6 @@ void loop () {
 ### Client
 
 <pre>
-#include &lt;SPI.h&gt;
 #include &lt;ESP8266WiFi.h&gt;
 
 // wifi
