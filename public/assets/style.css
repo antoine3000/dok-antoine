@@ -31,7 +31,7 @@ a {color: var(--color-action); text-decoration: none;}
 img {max-width: 100%;}
 
 /* header */
-.header {position: sticky; top: var(--spacing); z-index: 2; display: flex; justify-content: space-between; margin-bottom: calc(var(--spacing));}
+.header {position: sticky; top: var(--spacing-sm); z-index: 2; display: flex; justify-content: space-between; margin-bottom: calc(var(--spacing-sm));}
 .header a {background-color: var(--color-body); padding: 0.3em 0;}
 .header .title a {color: var(--color-base);}
 .header .title a span {color: var(--color-action);}
@@ -40,7 +40,7 @@ img {max-width: 100%;}
 
 /* index */
 .index {margin-bottom: var(--spacing);}
-.index:last-of-type {margin-bottom: calc(var(--spacing)*2);}
+/* .index:last-of-type {margin-bottom: calc(var(--spacing)*2);} */
 /* .index__title {display: table; margin: 1.8em 0 0.8em 0; color: var(--color-base);border-bottom: var(--border-sm) solid var(--color-base); margin: 2.4em 0 1.8em 0;} */
 
 /* flux */
@@ -88,7 +88,10 @@ ol li::marker {color: var(--color-heading-high);}
 .article img, .article video, .article table, .article ul,.article ol, .embed-container, .article pre { margin-top: 1.4em; margin-bottom: 1.4em;}
 .article img {font-size: 0.8em; text-transform: uppercase; font-style: italic;}
 p.todo {font-size: 0.8em; text-transform: uppercase; border: var(--border-sm) var(--color-base) dotted; padding: var(--spacing-sm); opacity: 0.5;}
-.article footer {margin-top: calc(var(--spacing)*2);}
+.article footer {
+  margin-top: calc(var(--spacing));
+  margin-bottom: calc(var(--spacing-sm));
+}
 .article footer p {margin-bottom: 0;}
 .article footer span {color: var(--color-heading-high);}
 .article .btn {
@@ -100,6 +103,8 @@ p.todo {font-size: 0.8em; text-transform: uppercase; border: var(--border-sm) va
   padding: calc(var(--spacing-sm) * 2);
   color: var(--color-body);
 }
+/* footer */
+.footer .sep {display: block; margin-bottom: var(--spacing-sm);}
 
 /* embed */
 .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
