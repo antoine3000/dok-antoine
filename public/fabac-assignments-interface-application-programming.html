@@ -30,6 +30,7 @@
   <h1 class="article__title">
     Interface application programming
   </h1>
+  
   <p>This week is devoted to programming interfaces and applications, a subject that I really like. I would not say that I am a good programmer, I have little experience. But it's something I love to do: solve logic problems, create software that produces the result I want (or the result I didn't expect, because I also find unexpected things beautiful).</p>
 
 <p>I'm going to use <a target="_blank" href="https://openframeworks.cc/">openFrameworks</a> to create an interactive audio and visual piece, a kind of experimental musical instrument that reacts to its environment.</p>
@@ -38,43 +39,43 @@
 
 <hr />
 
-<h2>My coding journey</h2>
+<h2 id="my-coding-journey">My coding journey</h2>
 
-<h3>Processing (Java / Javascript)</h3>
+<h3 id="processing-java-javascript">Processing (Java / Javascript)</h3>
 
 <p>In art school, I had two years of digital art workshops. The main tool we used in this class was <a target="_blank" href="https://processing.org/">Processing</a>. And it was so refreshing. Being able to produce an artistic installation with algorithms was something I was looking for. But it was also the rise of another movement: Internet culture. This quickly made me drop Processing for its javascript version, <a target="_blank" href="https://p5js.org/">p5js</a> and html/css, in order to create websites. It was not really good, Processing (p5js) is not so exciting when it is stuck in a browser. But the mix of graphic design and coding was definitely the right direction for me. I had the insight I needed with Processing and the motivation to continue creating websites, and then to found my web studio.</p>
 
-<h3>Javascript</h3>
+<h3 id="javascript">Javascript</h3>
 
 <p>In my web studio, I made websites with html/css and Javascript. I used to mainly use <a target="_blank" href="https://en.wikipedia.org/wiki/JavaScript">vanilla Javascript</a> and <a target="_blank" href="https://vuejs.org/">Vue.js</a> to build reactives web interfaces. I always found it tricky and not really intuitive. Even if Javascript is powerful and can do many things, I find that it is also a kind of poison for the web: websites get heavier, they track you more and more, and they need an updated browser to be viewed. It is not a language in which I would like to invest myself more. I would even prefer the Internet without it, without advertising and tracking, filled with lighter websites that run on older browsers.</p>
 
-<h3>Python</h3>
+<h3 id="python">Python</h3>
 
 <p>Then I discovered Python, a language that also has many uses, but outside the browser. I'm at the very beginning of my Python's journey but I can already tell that I like it! My static website you are reading now is the result of the second program I wrote in Python (the first was a little expense tracking tool). I wrote about it <a target="_blank" href="fabac-assignments-project-management.html">during the first week</a> of the academy. I like the natural feeling of writing on Python, removing the syntax barrier and inviting us to focus on logic.</p>
 
-<h3>TidalCycles (Haskell)</h3>
+<h3 id="tidalcycles-haskell">TidalCycles (Haskell)</h3>
 
 <p>I sometimes do live coding music. Live coding means that I write music in real time, from a blank file. Compose rhythms with logical loops, create synth melodies with random variables. The pattern language I use is called <a target="_blank" href="https://tidalcycles.org">TidalCycles</a> and it is written in <a target="_blank" href="https://www.haskell.org/">Haskell</a>. I couldn't tell you much about the Haskell language, but I can tell you that programming music is super fun to do and reveals its beauty on performances rather than on pure compositions.</p>
 
-<h3>Arduino (C++)</h3>
+<h3 id="arduino-c">Arduino (C++)</h3>
 
 <p>Since the beginning of the academy, I started to learn a little C ++ and the Arduino framework in order to speak with microcontrollers and to obtain an interaction between machines and their environment. I really like the new perspective that this gives to my coding practice: I do not only write software from my computer for other computers, but I now interact with the "real" world, being able to better understand and interact with it. Learning the basics of C ++ helps me to better understand some of the main programming concepts, which I had previously learned on the fly, without structure.</p>
 
-<h2>What's next</h2>
+<h2 id="whats-next">What's next</h2>
 
 <p>The feeling of having given up on processing too soon mixed with the new excitement of writing programs for microcontrollers using Arduino and C++ makes me want to dig a lot deeper into the relationship between creative coding and the physical world.</p>
 
-<h3>openFrameworks</h3>
+<h3 id="openframeworks">openFrameworks</h3>
 
 <p>To explore that path, I don't want to specifically use Processing itself, which now seems a bit limited compared to what I want to do, but <a target="_blank" href="https://openframeworks.cc/">openFrameworks</a>, another Processing-type framework, written in C++ (like Arduino) and able to create more powerful programs and therefore produce more complex artistic installations or tools or whatever you want.</p>
 
 <hr />
 
-<h2>My first openFrameworks application</h2>
+<h2 id="my-first-openframeworks-application">My first openFrameworks application</h2>
 
 <p>For my first openFrameworks application, I would like to get sensor data and convert it to an interactive visual and audio piece. I'm going to use the <a target="_blank" href="https://learn.adafruit.com/adafruit-circuit-playground-express/overview">Circuit Playground Express</a> and its multiple integrated sensors and buttons to help me quickly prototype my idea.</p>
 
-<h3>Installation</h3>
+<h3 id="installation">Installation</h3>
 
 <p>I first had to install openFrameworks on my machine. Speaking of my machine, I switched from <a target="_blank" href="https://elementary.io/">Elementary OS</a> to <a target="_blank" href="https://manjaro.org/">Manjaro</a> two three weeks ago. I no longer depend on the <a target="_blank" href="https://en.wikipedia.org/wiki/APT_(software)">APT</a> package manager (Advanced Package Tool, from Debian) but from <a target="_blank" href="https://aur.archlinux.org/">AUR</a> (Arch User Repository), from the Arch Linux community.</p>
 
@@ -82,7 +83,7 @@
 
 <p>Fortunately, the openFrameworks <a target="_blank" href="https://openframeworks.cc/download/">download</a> and <a target="_blank" href="https://openframeworks.cc/setup/linux-install/">installation</a> pages are clear enough and the community is very (re)active and helpful. This gives me hope for my future use of this tool.</p>
 
-<h3>Project architecture</h3>
+<h3 id="project-architecture">Project architecture</h3>
 
 <p>Finding a minimal project architecture was more difficult than expected. The project generator provided by openFrameworks does not work on my system, for whatever reason.</p>
 
@@ -110,7 +111,7 @@ config.make
 <li>to compile and run: <code>make &amp;&amp; make run</code></li>
 </ul>
 
-<h3>Sending data from Arduino</h3>
+<h3 id="sending-data-from-arduino">Sending data from Arduino</h3>
 
 <p>The first step of my program is to collect the data from the sensors and transmit it to my oF program. To do this, I used a <a target="_blank" href="https://learn.adafruit.com/adafruit-circuit-playground-express/overview">Circuit Playground Express</a> and its built-in sensors, <a target="_blank" href="https: // platformio. org /">PlatformIO</a> to compile / send the code to the microcontroller and the <a target="_blank" href="https://learn.sparkfun.com/tutorials/serial-communication/all">serial communication</a> port.</p>
 
@@ -189,7 +190,7 @@ if (Serial.available()) {
 
 <p>We can now send and receive messages via the serial.</p>
 
-<h3>Receiving data to openFrameworks</h3>
+<h3 id="receiving-data-to-openframeworks">Receiving data to openFrameworks</h3>
 
 <p>First, I declare some variables in the <code>ofApp.h</code> file. The number <code>20</code> must be declared depending on the length of the message we receive.</p>
 
@@ -242,7 +243,7 @@ For example, the light sensor collects data in a range of 0 to 1023, but for eas
 
 <p>I can now receive data from the serial and convert it to the type of variable I need, in an easy-to-use range. I have everything I need to create my application.</p>
 
-<h3>Make something out of it</h3>
+<h3 id="make-something-out-of-it">Make something out of it</h3>
 
 <p>The application is getting the light level and the sound level around the microcontroller, compare them. If one is bigger than another.</p>
 
@@ -268,13 +269,13 @@ play the <code>cymbal</code> sound</li>
 
 <p class="todo">TODO: Make a screen-capture video</p>
 
-<h1>Conclusion</h1>
+<h1 id="conclusion">Conclusion</h1>
 
 <p>Setting up openFrameworks was not as easy as expected, but it was worth it. I really like the idea of having this great tool in my toolbox, it allows new ideas to be alive, to be shared. It also helps me learn the C++ language, which is also used to control microcontrollers. I am super happy with the new perspectives that this gives to my practice.</p>
 
 <hr />
 
-<h1>Useful links</h1>
+<h1 id="useful-links">Useful links</h1>
 
 <ul>
 <li><a target="_blank" href="https://docs.platformio.org/en/latest/faq.html#platformio-udev-rules">pio and linux</a></li>

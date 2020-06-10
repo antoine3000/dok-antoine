@@ -30,13 +30,14 @@
   <h1 class="article__title">
     Electronics design
   </h1>
+  
   <p>I knew almost nothing about electronics before following the Fab Academy.I had to learn and understand the very basics of a electronic circuit and its composents, but also of electricity and its flow.</p>
 
 <p>To do so, I designed a pomodoro timer from scratch. I have learn a lot throughout the process and I have the feeling that this new knowledge will play a key role in what I will do for my personal project and afterwards.</p>
 
 <p><img src ="medias/fabac-assignments-electronics-design-pomo.jpeg" alt="pomo" /></p>
 
-<h1>Pomodoro timer</h1>
+<h1 id="pomodoro-timer">Pomodoro timer</h1>
 
 <p>I use a pomodoro timer daily to help me manage my time and effort in the tasks I want to accomplish. For now, I'm using <a target="_blank" href="https://github.com/JaDogg/pydoro">Pydoro</a>, an open source pomodoro terminal timer written in Python but I would like to build mine and have it physically next to my laptop.</p>
 
@@ -50,7 +51,7 @@
 
 <p><img src ="medias/fabac-assignments-electronics-design-pomo-illu.png" alt="pomo-illu" /></p>
 
-<h2>Components</h2>
+<h2 id="components">Components</h2>
 
 <p>The main component I'm using is the microcontroller <a target="_blank" href="https://www.microchip.com/wwwproducts/en/ATTINY1614">ATtiny1614</a>. It will allow me to program my inputs and outputs needed to run my project.</p>
 
@@ -59,7 +60,7 @@ As inputs, I have to 2 switches (buttons) that allow me to start/pause/resume/re
 
 <p>I also need 6 resistor (one for each of the inputs/outputs), a capacitor, a FTDI header (to be able to communicate with the boards), a UPDI header (to program the board).</p>
 
-<h2>Design</h2>
+<h2 id="design">Design</h2>
 
 <p>I'm using <a target="_blank" href="https://kicad-pcb.org/">KiCAD</a>, a cross platform and <a target="_blank" href="https://gitlab.com/kicad">open-source</a> software, for designing electronics. The process is divided into two main steps: schematics design and PCB design.</p>
 
@@ -69,7 +70,7 @@ As inputs, I have to 2 switches (buttons) that allow me to start/pause/resume/re
 
 <p>In the context of Fab Labs, <a target="_blank" href="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/site/local/#material/extras/week06/assets/kicad_libraries.zip">this library</a> is very useful because it contains all the components we have at our disposition.</p>
 
-<h3>Schematics design</h3>
+<h3 id="schematics-design">Schematics design</h3>
 
 <p>To design the schematic of the board, one should first import the right symbols. In my case, the components I listed above on this page. to do so, select the <code>Place symbol</code> tool, click on the page and choose the symbol you want.</p>
 
@@ -89,13 +90,13 @@ As inputs, I have to 2 switches (buttons) that allow me to start/pause/resume/re
 
 <p>It's always important to check the datasheet of the components you're using. In this case, <a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny1614-DataSheet-DS40001995B.pdf">the datasheet of the ATtiny1614</a> helped me to verify the differents connections from the chip to the components.</p>
 
-<h3>PCB design</h3>
+<h3 id="pcb-design">PCB design</h3>
 
 <p>Now is the "tricky" part: finding the best paths, the most compact as possible while respecting the idea I had in mind. For instance, because I'm building a pomodoro timer, I want my 4 leds to be next to each other, and so has to be the resistors as well. It's about designing with constraints, something I really like, even if it took me hours to find a possible way to design my circuit.</p>
 
 <p><img src ="medias/fabac-assignments-electronics-design-pcb-design.jpeg" alt="pcb-design" /></p>
 
-<h4>Things I learned while designing it</h4>
+<h4 id="things-i-learned-while-designing-it">Things I learned while designing it</h4>
 
 <ul>
 <li>always start by connecting the chip to its direct components</li>
@@ -106,7 +107,7 @@ As inputs, I have to 2 switches (buttons) that allow me to start/pause/resume/re
 <li>optimize your paths and think about how you will solder the  components</li>
 </ul>
 
-<h3>Preparing the files</h3>
+<h3 id="preparing-the-files">Preparing the files</h3>
 
 <p>Once your design is ready (that means that all your components are linked together), you can export your files and prepare them to be sent to the mini milling machine. I used <a target="_blank" href="https://inkscape.org/">Inkscape</a>,<a target="_blank" href="https://www.gimp.org/">gimp</a> and <a target="_blank" href="http://fabmodules.org/">fab modules</a> to do so.</p>
 
@@ -117,7 +118,7 @@ As inputs, I have to 2 switches (buttons) that allow me to start/pause/resume/re
 
 <p>I used Fab Modules to generate the files needed by the mini milling machine using the same settings I set during the <a target="_blank" href="fabac-assignments-electronics-production.html">Electronics production</a> week.</p>
 
-<h2>Milling and soldering</h2>
+<h2 id="milling-and-soldering">Milling and soldering</h2>
 
 <p>The machine I used to mill my board is the Roland MonoFab SRM-20, this machine seems very reliable, I had no problem while using it.</p>
 
@@ -129,7 +130,7 @@ As inputs, I have to 2 switches (buttons) that allow me to start/pause/resume/re
 
 <p><img src ="medias/fabac-assignments-electronics-design-pomo.jpeg" alt="pomo" /></p>
 
-<h2>Testing</h2>
+<h2 id="testing">Testing</h2>
 
 <p>In order to test the board, you will need a UPDI for the communication between the board and another computer and a FTDI to program the board itself. Luckily, these are the two I already made.</p>
 
@@ -168,7 +169,7 @@ void loop() {
 
 <p><video controls preload="auto"><source type ="video/mp4" src ="medias/fabac-assignments-electronics-design-pomo-test.mp4"></video></p>
 
-<h2>Programming</h2>
+<h2 id="programming">Programming</h2>
 
 <p>I will program this board to make it be a pomodoro timer in two weeks, during the <em>Embedded programming</em> assignement.</p>
 

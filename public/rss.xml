@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio/</link><description>experimental studio of Antoine Jaunard</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Wed, 27 May 2020 12:11:48 +0000</lastBuildDate><item><title>Wildcard</title><link>https://antoine.studio/fabac-assignments-wildcard.html</link><description>&lt;p&gt;TODO: everything :)&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio/</link><description>experimental studio of Antoine Jaunard</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Wed, 10 Jun 2020 14:22:01 +0000</lastBuildDate><item><title>Machine design</title><link>https://antoine.studio/fabac-assignments-machine-design.html</link><description>&lt;p&gt;TODO: everything :)&lt;/p&gt;
+...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Mon, 01 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Wildcard</title><link>https://antoine.studio/fabac-assignments-wildcard.html</link><description>&lt;p&gt;TODO: everything :)&lt;/p&gt;
 ...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Wed, 20 May 2020 00:00:00 +0200</pubDate></item><item><title>Molding and casting</title><link>https://antoine.studio/fabac-assignments-molding-casting.html</link><description>&lt;p&gt;TODO: everything :)&lt;/p&gt;
 ...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Wed, 13 May 2020 00:00:00 +0200</pubDate></item><item><title>Networking and communications</title><link>https://antoine.studio/fabac-assignments-networking-communications.html</link><description>&lt;p&gt;For this week's assignment, I will connect two &lt;a target="_blank" href="http://esp8266.net"&gt;ESP8266&lt;/a&gt; / &lt;a target="_blank" href="https://www.nodemcu.com/index_en.html"&gt;NodeMCU&lt;/a&gt; together on the WiFi network and exchange data between them.&lt;/p&gt;
 
@@ -11,9 +12,9 @@
 
 &lt;hr /&gt;
 
-&lt;h1&gt;Hardware&lt;/h1&gt;
+&lt;h1 id="hardware"&gt;Hardware&lt;/h1&gt;
 
-&lt;p&gt;I'm using two &lt;a target="_blank" href="https://www.nodemcu.com...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Wed, 06 May 2020 00:00:00 +0200</pubDate></item><item><title>Invention, intellectual property, and income</title><link>https://antoine.studio/fabac-assignments-invention.html</link><description>&lt;p&gt;TODO: everything :)&lt;/p&gt;
+&lt;p&gt;I'm using two &lt;a target="_blank" href="https://w...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Wed, 06 May 2020 00:00:00 +0200</pubDate></item><item><title>Invention, intellectual property, and income</title><link>https://antoine.studio/fabac-assignments-invention.html</link><description>&lt;p&gt;TODO: everything :)&lt;/p&gt;
 ...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Wed, 29 Apr 2020 00:00:00 +0200</pubDate></item><item><title>Interface application programming</title><link>https://antoine.studio/fabac-assignments-interface-application-programming.html</link><description>&lt;p&gt;This week is devoted to programming interfaces and applications, a subject that I really like. I would not say that I am a good programmer, I have little experience. But it's something I love to do: solve logic problems, create software that produces the result I want (or the result I didn't expect, because I also find unexpected things beautiful).&lt;/p&gt;
 
 &lt;p&gt;I'm going to use &lt;a target="_blank" href="https://openframeworks.cc/"&gt;openFrameworks&lt;/a&gt; to create an interactive audio and visual piece, a kind of experimental musical instrument that reacts to its environment.&lt;/p&gt;
@@ -22,11 +23,11 @@
 
 &lt;hr /&gt;
 
-&lt;h2&gt;My coding journey&lt;/h2&gt;
+&lt;h2 id="my-coding-journey"&gt;My coding journey&lt;/h2&gt;
 
-&lt;h3&gt;Processing (Java / Javascript)&lt;/h3&gt;
+&lt;h3 id="processing-java-javascript"&gt;Processing (Java / Javascript)&lt;/h3&gt;
 
-&lt;p&gt;In art school, I had two years of digital art workshops. The main tool we used ...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Wed, 22 Apr 2020 00:00:00 +0200</pubDate></item><item><title>Output devices</title><link>https://antoine.studio/fabac-assignments-output-devices.html</link><description>&lt;p&gt;This week's assignement is about output devices: we are learning how to make various motors work, what are their mechanisms and principles, when and why use a specific one instead of another.&lt;/p&gt;
+&lt;p&gt;In art school, I had two...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Wed, 22 Apr 2020 00:00:00 +0200</pubDate></item><item><title>Output devices</title><link>https://antoine.studio/fabac-assignments-output-devices.html</link><description>&lt;p&gt;This week's assignement is about output devices: we are learning how to make various motors work, what are their mechanisms and principles, when and why use a specific one instead of another.&lt;/p&gt;
 
 &lt;p&gt;I'm going to lend a hand to &lt;a target="_blank" href="https://maudb.gitlab.io/dok/"&gt;Maud Bausier&lt;/a&gt;, my partner, who is building an incubator to grow mycelium or any fermented food (tempeh, sriracha, etc.). I think we could have enough material to finish a prototype at home (covid-19 restrictions).&lt;/p&gt;
 
@@ -49,11 +50,11 @@
 
 &lt;hr /&gt;
 
-&lt;h1&gt;Requirements&lt;/h1&gt;
+&lt;h1 id="requirements"&gt;Requirements&lt;/h1&gt;
 
-&lt;h3&gt;2D and 3D design&lt;/h...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Wed, 01 Apr 2020 00:00:00 +0200</pubDate></item><item><title>Input devices</title><link>https://antoine.studio/fabac-assignments-input-devices.html</link><description>&lt;p&gt;Let's play with sensors.&lt;/p&gt;
+&lt;h3 i...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Wed, 01 Apr 2020 00:00:00 +0200</pubDate></item><item><title>Input devices</title><link>https://antoine.studio/fabac-assignments-input-devices.html</link><description>&lt;p&gt;Let's play with sensors.&lt;/p&gt;
 
-&lt;h1&gt;Ultrasonic sensor HC-SR04&lt;/h1&gt;
+&lt;h1 id="ultrasonic-sensor-hc-sr04"&gt;Ultrasonic sensor HC-SR04&lt;/h1&gt;
 
 &lt;p&gt;The ultrasonic sensor HC-SR04 provides 2Cm to 400cm of non-contact measurement functionality with a ranging accuracy that can reach up to 3mm. Here is its &lt;a target="_blank" href="https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf"&gt;datasheet&lt;/a&gt;. This sensor has 4 pins that we have to connect to our dev board.&lt;/p&gt;
 
@@ -68,9 +69,8 @@
 
 &lt;p&gt;I'm using an Arduino UNO to use this sensor because it needs a voltage of 5V. Unfortunately, the Barduino and its ESP32 only has a voltage of 3.3V.&lt;/p&gt;
 
-&lt;h2&gt;Connection&lt;/h2&gt;
-
-&lt;p&gt;The connection is quite simple, the &lt;code&gt;V...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Wed, 25 Mar 2020 00:00:00 +0200</pubDate></item><item><title>Embedded programming</title><link>https://antoine.studio/fabac-assignments-embedded-programming.html</link><description>&lt;p&gt;Two weeks ago, I designed a pomodoro timer during the &lt;a target="_blank" href="fabac-assignments-electronics-design.html"&gt;Electronics design&lt;/a&gt; week. It's now time to program it. I'm going to write the piece of code that will light my LEDs as time goes by and find a way to send it to the ATtiny1614 chip. I'm going to focus on the latter: how to send a program (= program) a chip. Well, that was the plan.&lt;/p&gt;
+&lt;h2 id="connection"&gt;Connection&lt;/h2&gt;
+...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Wed, 25 Mar 2020 00:00:00 +0200</pubDate></item><item><title>Embedded programming</title><link>https://antoine.studio/fabac-assignments-embedded-programming.html</link><description>&lt;p&gt;Two weeks ago, I designed a pomodoro timer during the &lt;a target="_blank" href="fabac-assignments-electronics-design.html"&gt;Electronics design&lt;/a&gt; week. It's now time to program it. I'm going to write the piece of code that will light my LEDs as time goes by and find a way to send it to the ATtiny1614 chip. I'm going to focus on the latter: how to send a program (= program) a chip. Well, that was the plan.&lt;/p&gt;
 
 &lt;p&gt;Unfortunately, in the meantime, the coronavirus has hit Spain (and the whole world). We are now all in quarantine, with no access to the lab. I will have to work from home, with the equipment I already have, nothing more.&lt;/p&gt;
 
@@ -85,26 +85,26 @@
 
 &lt;p&gt;&lt;img src="pomo.jpeg" alt="pomo" /&gt;&lt;/p&gt;
 
-&lt;h1&gt;Pomodoro timer&lt;/h1&gt;
+&lt;h1 id="pomodoro-timer"&gt;Pomodoro timer&lt;/h1&gt;
 
-&lt;p&gt;I use a pomodoro timer daily to help me manage my time and effort in the tasks I want to accomplish. For now, I'm using &lt;a target="_blank" href="https://github.com/JaDogg/pydoro"&gt;Pydoro&lt;/a&gt;, an open source pomodoro terminal timer written in Python but I would like to build mine and have it p...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Wed, 04 Mar 2020 00:00:00 +0200</pubDate></item><item><title>3D scanning and printing</title><link>https://antoine.studio/fabac-assignments-3D-scanning-printing.html</link><description>&lt;p&gt;3D printing is not as simple as pressing the &lt;em&gt;print&lt;/em&gt; button and waiting for the model to be printed. It is crucial to know how to prepare a 3D model, how the printer works and what are its limits, and how to balance printing time with print quality. This week, I'm going to test a printer, scan and print something.&lt;/p&gt;
+&lt;p&gt;I use a pomodoro timer daily to help me manage my time and effort in the tasks I want to accomplish. For now, I'm using &lt;a target="_blank" href="https://github.com/JaDogg/pydoro"&gt;Pydoro&lt;/a&gt;, an open source pomodoro terminal timer written in Python but I would like to buil...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Wed, 04 Mar 2020 00:00:00 +0200</pubDate></item><item><title>3D scanning and printing</title><link>https://antoine.studio/fabac-assignments-3D-scanning-printing.html</link><description>&lt;p&gt;3D printing is not as simple as pressing the &lt;em&gt;print&lt;/em&gt; button and waiting for the model to be printed. It is crucial to know how to prepare a 3D model, how the printer works and what are its limits, and how to balance printing time with print quality. This week, I'm going to test a printer, scan and print something.&lt;/p&gt;
 
-&lt;h1&gt;Printing a 3D test file&lt;/h1&gt;
+&lt;h1 id="printing-a-3d-test-file"&gt;Printing a 3D test file&lt;/h1&gt;
 
-&lt;p&gt;For this week's group assignement, I teamed up with &lt;a target="_blank" href="https://fabacademy.org/2020/labs/barcelona/students/tue-ngo/"&gt;Tue&lt;/a&gt; and &lt;a target="_blank" href="https://fabacademy.org/2020/labs/barcelona/students/david-prieto/"&gt;David&lt;/a&gt;. We picked a &lt;a target="_blank" href="https://www.thingiverse.com/thing:1363023"&gt;test file&lt;/a&gt; from Thingiverse in order to test different features of one of the 3D printers we ha...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Wed, 26 Feb 2020 00:00:00 +0200</pubDate></item><item><title>Electronics production</title><link>https://antoine.studio/fabac-assignments-electronics-production.html</link><description>&lt;p&gt;It's the 4th week of the Fab Academy, we're now exploring the process of electronics production: How to make a in-circuit programmer from a &lt;a target="_blank" href="https://en.wikipedia.org/wiki/Printed_circuit_board"&gt;printed circuit board&lt;/a&gt; (PCB) and several electronic components, a programmer in wich I will send code to pilot my future electronic projects.&lt;/p&gt;
+&lt;p&gt;For this week's group assignement, I teamed up with &lt;a target="_blank" href="https://fabacademy.org/2020/labs/barcelona/students/tue-ngo/"&gt;Tue&lt;/a&gt; and &lt;a target="_blank" href="https://fabacademy.org/2020/labs/barcelona/students/david-prieto/"&gt;David&lt;/a&gt;. We picked a &lt;a target="_blank" href="https://www.thingiverse.com/thing:1363023"&gt;test file&lt;/a&gt; from Thingiverse in order to test different features of...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Wed, 26 Feb 2020 00:00:00 +0200</pubDate></item><item><title>Electronics production</title><link>https://antoine.studio/fabac-assignments-electronics-production.html</link><description>&lt;p&gt;It's the 4th week of the Fab Academy, we're now exploring the process of electronics production: How to make a in-circuit programmer from a &lt;a target="_blank" href="https://en.wikipedia.org/wiki/Printed_circuit_board"&gt;printed circuit board&lt;/a&gt; (PCB) and several electronic components, a programmer in wich I will send code to pilot my future electronic projects.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="ftdi-updi.jpg" alt="ftdi-updi" /&gt;&lt;/p&gt;
 
-&lt;h1&gt;Making an in-circuit programmer&lt;/h1&gt;
+&lt;h1 id="making-an-in-circuit-programmer"&gt;Making an in-circuit programmer&lt;/h1&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;In-system programming (ISP), also called in-circuit serial programming (ICSP), is the ability of some programmable logic devices, microcontrollers, and other embedded devices to be programmed while installed in a complete system, rather than requiring the chip to be programmed prior to installing it into the system....</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Wed, 19 Feb 2020 00:00:00 +0200</pubDate></item><item><title>Computer-controlled cutting</title><link>https://antoine.studio/fabac-assignments-computer-controlled-cutting.html</link><description>&lt;p&gt;This week is about exploring the possibilities of the computer-controlled cutting machines present in Fab Labs : the lasercutter and the vinylcutter. The first (group) assignement is to understand how the machines work and to obtain some of the values (specific to these machines) necessary to properly prepare the files before sending them to the machines. The second (personal) assignement is to design, lasercut, and document a parametric construction kit, and to cut something with the vinylcutter.&lt;/p&gt;
+  &lt;p&gt;In-system programming (ISP), also called in-circuit serial programming (ICSP), is the ability of some programmable logic devices, microcontrollers, and other embedded devices to be programmed while installed in a complete system, rather than requiring the chip to be programmed pr...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Wed, 19 Feb 2020 00:00:00 +0200</pubDate></item><item><title>Computer-controlled cutting</title><link>https://antoine.studio/fabac-assignments-computer-controlled-cutting.html</link><description>&lt;p&gt;This week is about exploring the possibilities of the computer-controlled cutting machines present in Fab Labs : the lasercutter and the vinylcutter. The first (group) assignement is to understand how the machines work and to obtain some of the values (specific to these machines) necessary to properly prepare the files before sending them to the machines. The second (personal) assignement is to design, lasercut, and document a parametric construction kit, and to cut something with the vinylcutter.&lt;/p&gt;
 
-&lt;h1&gt;Lasercutter&lt;/h1&gt;
+&lt;h1 id="lasercutter"&gt;Lasercutter&lt;/h1&gt;
 
-&lt;p&gt;The laser cutter is an excellent machine: it gives quick results, it is easy to learn, it works with different types of material (wood, acrylic, cardboard, etc.) and the cutting is very precise. Using joints allows you to go from 2D to 3D objects. It makes the las...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Fri, 14 Feb 2020 00:00:00 +0200</pubDate></item><item><title>Computer-aided design</title><link>https://antoine.studio/fabac-assignments-computer-aided-design.html</link><description>&lt;p&gt;A tour of open-source softwares for computer-aided design, in order to discover and learn some of the tools that I will use to design my future projects.&lt;/p&gt;
+&lt;p&gt;The laser cutter is an excellent machine: it gives quick results, it is easy to learn, it works with different types of material (wood, acrylic, cardboard, etc.) and the cutting is very precise. Using joints allows you to go from 2D to 3D objects....</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Fri, 14 Feb 2020 00:00:00 +0200</pubDate></item><item><title>Computer-aided design</title><link>https://antoine.studio/fabac-assignments-computer-aided-design.html</link><description>&lt;p&gt;A tour of open-source softwares for computer-aided design, in order to discover and learn some of the tools that I will use to design my future projects.&lt;/p&gt;
 
-&lt;h2&gt;GIMP&lt;/h2&gt;
+&lt;h2 id="gimp"&gt;GIMP&lt;/h2&gt;
 
 &lt;p&gt;GIMP is a raster graphics editor used for image retouching and editing, converting between different image formats, free-form drawing, …&lt;/p&gt;
 
@@ -116,7 +116,7 @@
 
 &lt;p&gt;&lt;img src="references.jpg" alt="references" /&gt;&lt;/p&gt;
 
-&lt;p&gt;File: &lt;a target="_blank" href="https://cloud.antoine.studio/i...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Sun, 09 Feb 2020 00:00:00 +0200</pubDate></item><item><title>Project management</title><link>https://antoine.studio/fabac-assignments-project-management.html</link><description>&lt;p&gt;An important part of the &lt;a target="_blank" href="https://fabacademy.org/"&gt;Fab Academy&lt;/a&gt;, apart from learning digital fabrication techniques, consists of documenting everything we do in order to create a shared and open knowledge base between all students, and for everybody.&lt;/p&gt;
+&lt;p&gt;File: &lt;a target="_blank" href="https://cloud.antoin...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Sun, 09 Feb 2020 00:00:00 +0200</pubDate></item><item><title>Project management</title><link>https://antoine.studio/fabac-assignments-project-management.html</link><description>&lt;p&gt;An important part of the &lt;a target="_blank" href="https://fabacademy.org/"&gt;Fab Academy&lt;/a&gt;, apart from learning digital fabrication techniques, consists of documenting everything we do in order to create a shared and open knowledge base between all students, and for everybody.&lt;/p&gt;
 
 &lt;p&gt;One of my goals for this academy is to use only open-source tools. I want to be able to see what is inside the tools I use, modify it in case of need and share with others the projects I do with the environment necessary for their functioning.&lt;/p&gt;
 
@@ -128,19 +128,18 @@
   &lt;/blockquote&gt;
 &lt;/blockquote&gt;
 
-&lt;h2&gt;My computer&lt;/h2&gt;
+&lt;h2 id="my-computer"&gt;My computer&lt;/h2&gt;
 
-&lt;p&gt;Few months ago, I decided to switch fr...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Mon, 03 Feb 2020 00:00:00 +0200</pubDate></item><item><title>Principles and practices</title><link>https://antoine.studio/fabac-assignments-principles-and-practices.html</link><description>&lt;p&gt;For the next six months (from January to June 2020), I will follow the &lt;a target="_blank" href="https://fabacademy.org/"&gt;Fab Academy&lt;/a&gt; at &lt;a target="_blank" href="https://fablabbcn.org/"&gt;Fab Lab Barcelona&lt;/a&gt;. The FabAcademy is an intensive program to learn how to design and prototype projects using digital fabrication tools and machine, such as: computer-controlled cutting, electronics, 3D scanning and printing, electronics design,computer-controlled machining, embedded programming, molding and casting, networking and communications, mechanical design, interface and application programming and machine design.&lt;/p&gt;
+&lt;p&gt;Few months ago, I dec...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Mon, 03 Feb 2020 00:00:00 +0200</pubDate></item><item><title>Principles and practices</title><link>https://antoine.studio/fabac-assignments-principles-and-practices.html</link><description>&lt;p&gt;For the next six months (from January to June 2020), I will follow the &lt;a target="_blank" href="https://fabacademy.org/"&gt;Fab Academy&lt;/a&gt; at &lt;a target="_blank" href="https://fablabbcn.org/"&gt;Fab Lab Barcelona&lt;/a&gt;. The FabAcademy is an intensive program to learn how to design and prototype projects using digital fabrication tools and machine, such as: computer-controlled cutting, electronics, 3D scanning and printing, electronics design,computer-controlled machining, embedded programming, molding and casting, networking and communications, mechanical design, interface and application programming and machine design.&lt;/p&gt;
 
-&lt;p&gt;I have a background in graphic &amp;amp; web design and web development and I love to imagine and build experiences for the common using open-source tools. But working in th...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Sun, 26 Jan 2020 00:00:00 +0200</pubDate></item><item><title>References</title><link>https://antoine.studio/pages-references.html</link><description>&lt;h2&gt;Technology&lt;/h2&gt;
+&lt;p&gt;I have a background in graphic &amp;amp; web design and web development and I love to imagine and build experiences for the common using open-source tools. But working in th...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Sun, 26 Jan 2020 00:00:00 +0200</pubDate></item><item><title>References</title><link>https://antoine.studio/pages-references.html</link><description>&lt;h2 id="technology"&gt;Technology&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;How to Build a Low-tech Website? &lt;a target="_blank" href="https://solar.lowtechmagazine.com/2018/09/how-to-build-a-lowtech-website.html"&gt;(link)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Jenny Odell: "How to Do Nothing: Resisting the Attention Economy" &lt;a target="_blank" href="https://www.youtube.com/watch?v=izjlP9qtmBU"&gt;(link)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;My website is a shifting house next to a river of knowledge &lt;a target="_blank" href="https://thecreativeindependent.com/people/laurel-schwulst-my-website-is-a-shifting-house-next-to-a-river-of-knowledge-what-could-yours-be/"&gt;(link)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Death to Bullshit &lt;a target="_blank" href="http://deathtobullshit.com/"&gt;(link)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;The Critical Engineering Manifesto &lt;a target="_blank" href="https://criticalengineering.org/en"&gt;(link)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;This...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Thu, 23 Jan 2020 00:00:00 +0200</pubDate></item><item><title>About</title><link>https://antoine.studio/pages-about.html</link><description>&lt;p&gt;Bonjour, my name is Antoine Jaunard (1990) and I'm from Brussels, Belgium. I recently moved to Barcelona (ES) via a lovely detour by Amsterdam (NL).&lt;/p&gt;
+&lt;li&gt;The Critical Engineering Manifesto &lt;a target="_blank" href="https://criticalengineering.org/en"&gt;(link)&lt;/...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Thu, 23 Jan 2020 00:00:00 +0200</pubDate></item><item><title>About</title><link>https://antoine.studio/pages-about.html</link><description>&lt;p&gt;Bonjour, my name is Antoine Jaunard (1990) and I'm from Brussels, Belgium. I recently moved to Barcelona (ES) via a lovely detour by Amsterdam (NL).&lt;/p&gt;
 
 &lt;p&gt;This website is my digital studio, a place where I can experiment without constrains.&lt;/p&gt;
 
@@ -149,35 +148,27 @@ A tool for documenting the things I learn.&lt;/p&gt;
 
 &lt;p&gt;This website is built with a custom static site generator that I wrote in Python. It's open-source by default, as all the things I (try to) do. Sources are available on &lt;a target="_blank" href="https://gitlab.com/antoine.j/antoine.studio"&gt;Gitlab&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;If you want to contact me, don't hesitate to &lt;a target="_blank" hr...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Sun, 12 Jan 2020 00:00:00 +0200</pubDate></item><item><title>Interactive plant</title><link>https://antoine.studio/fabac-finalproject-interactive-plant.html</link><description>&lt;p&gt;A device that helps humans communicate with plants.&lt;/p&gt;
+&lt;p&gt;If you want to contact me, don't hesitate to &lt;a target="_blank" hr...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Sun, 12 Jan 2020 00:00:00 +0200</pubDate></item><item><title>Interactive plant</title><link>https://antoine.studio/fabac-finalproject-interactive-plant.html</link><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
 
-&lt;p&gt;&lt;a target="_blank" href="btn:https://docs.google.com/spreadsheets/d/1nhU3fjO-yuVyLYuE5AC39vmvim1dWyxoJ2PYOr6acvA/edit?usp=sharing"&gt;List of materials&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A device that helps humans communicate with plants.&lt;/p&gt;
 
-&lt;h1&gt;Sensing&lt;/h1&gt;
+&lt;h1 id="external-resources"&gt;External resources&lt;/h1&gt;
 
-&lt;h2&gt;electrical activity of a plant&lt;/h2&gt;
+&lt;p&gt;&lt;a target="_blank" href="btn:http://board.antoine.studio/?controller=BoardViewController&amp;amp;action=readonly&amp;amp;token=3d91cde4a718ce18cd986a67eff38899f8eb1612ddae621507a00da28f4f"&gt;Kanban board&lt;/a&gt;
+&lt;a target="_blank" href="btn:https://cryptpad.fr/sheet/#/2/sheet/view/SazDmGarJfd57LlUPitUPgCZ9pZgQzFs9noQ3YGG68w/embed/"&gt;List of materials&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id="sensing"&gt;Sensing&lt;/h1&gt;
+
+&lt;h2 id="electrical-activity-of-a-plant"&gt;electrical activity of a plant&lt;/h2&gt;
 
 &lt;p&gt;An electrical potential sensor are used to detect the electrical activity of a plant, and therefore to deduce its health and its probable sensations.&lt;/p&gt;
 
-&lt;h2&gt;Human/plant interaction&lt;/h2&gt;
+&lt;h2 id="humanplant-interaction...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Thu, 21 May 2020 00:00:00 +0200</pubDate></item><item><title>Sketches, ideas and principles</title><link>https://antoine.studio/fabac-finalproject-sketches-ideas.html</link><description>&lt;p&gt;This page is where I collect some of my thoughts on my final project idea.&lt;/p&gt;
 
-&lt;p&gt;Depending on the first phase (which is sensing the electrical activity of a plant), I may need an extra capacitive sensor to detect if a human is interacting with the plant.&lt;/p&gt;
-
-&lt;h1&gt;Interacting&lt;/h1&gt;
-
-&lt;hr /&gt;
-
-&lt;h1&gt;References&lt;/h1&gt;
-
-&lt;h2&gt;Concept&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a target="_blank" href="https://www.media.mit.edu/projects/elowan-a...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Thu, 21 May 2020 00:00:00 +0200</pubDate></item><item><title>Sketches, ideas and principles</title><link>https://antoine.studio/fabac-finalproject-sketches-ideas.html</link><description>&lt;p&gt;This page is where I collect some of my thoughts on my final project idea.&lt;/p&gt;
-
-&lt;h2&gt;Listen to what the plants have to say&lt;/h2&gt;
+&lt;h2 id="listen-to-what-the-plants-have-to-say"&gt;Listen to what the plants have to say&lt;/h2&gt;
 
 &lt;p&gt;Plants communicate as we do. But it's hardly noticeable for us because we don't send and receive signals at the same speed as they do. This is why I would like to build a kind of machine that can help any plant to express its needs at a speed that we can actually perceive and understand. Or should I reformulate in a less human-centric way: a machine that can help humans understand what the plants have to say.&lt;/p&gt;
 
-&lt;h2&gt;A machine that helps us understand plants&lt;/h2&gt;
+&lt;h2 id="a-machine-that-helps-us-understand-plants"&gt;A machine that helps us understand plants&lt;/h2&gt;
 
-&lt;p&gt;The machine I have in mind is able to get the data from a plant [temperature, light level, air quality, humidity level, nutrient level, vibrations, ?] and transform it into something visual or ...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Wed, 01 Apr 2020 00:00:00 +0200</pubDate></item></channel></rss>
+&lt;p&gt;The machine I have in mind is able to get the data from a plant [temperature, light level, air quality,...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Wed, 01 Apr 2020 00:00:00 +0200</pubDate></item></channel></rss>

@@ -30,9 +30,10 @@
   <h1 class="article__title">
     3D scanning and printing
   </h1>
+  
   <p>3D printing is not as simple as pressing the <em>print</em> button and waiting for the model to be printed. It is crucial to know how to prepare a 3D model, how the printer works and what are its limits, and how to balance printing time with print quality. This week, I'm going to test a printer, scan and print something.</p>
 
-<h1>Printing a 3D test file</h1>
+<h1 id="printing-a-3d-test-file">Printing a 3D test file</h1>
 
 <p>For this week's group assignement, I teamed up with <a target="_blank" href="https://fabacademy.org/2020/labs/barcelona/students/tue-ngo/">Tue</a> and <a target="_blank" href="https://fabacademy.org/2020/labs/barcelona/students/david-prieto/">David</a>. We picked a <a target="_blank" href="https://www.thingiverse.com/thing:1363023">test file</a> from Thingiverse in order to test different features of one of the 3D printers we have in Fab Lab Barcelona, the <a target="_blank" href="https://www.creality3d.shop/products/creality-cr-10s-s5-3d-printer-diy-kit-large-printing-size-500x500x500mm">Creality3D CR-10 S5 3D</a>.</p>
 
@@ -50,7 +51,7 @@
 <li>2 different extrusion widths: 0.48mm &amp; 0.4mm</li>
 </ul>
 
-<h2>Slicing</h2>
+<h2 id="slicing">Slicing</h2>
 
 <p>To be able to print a 3D model, we have to send instructions to the printer, wich are written in <a target="_blank" href="https://en.wikipedia.org/wiki/G-code">g-code</a> and tells the motors where to move.
 To prepare the g-code, we have to <em>slice</em> our 3D model (.STL), to simulate and anticipate how the model will be printed, according to the printer settings and gravity law.</p>
@@ -59,7 +60,7 @@ To prepare the g-code, we have to <em>slice</em> our 3D model (.STL), to simulat
 
 <p>At Fab Lab Barcelona, a computer with <a target="_blank" href="https://ultimaker.com/software/ultimaker-cura">Ultimaker Cura</a> is attached to the machines, with all the presets of the differents printers saved in it. It's therefore easier to directly use it in order to slice our model instead of searching the presets and install them on our personal laptop.</p>
 
-<h3>Specific settings that we had to specify</h3>
+<h3 id="specific-settings-that-we-had-to-specify">Specific settings that we had to specify</h3>
 
 <ul>
 <li>layer height: <code>0.25mm</code></li>
@@ -68,7 +69,7 @@ To prepare the g-code, we have to <em>slice</em> our 3D model (.STL), to simulat
 <li>Print speed: <code>60mm/s</code> (= maximum for this printer)</li>
 </ul>
 
-<h2>Printing</h2>
+<h2 id="printing">Printing</h2>
 
 <p>The filament we use is a <code>PLA 1.75mm</code>. It's a plant-based material made from starches like soybeans or corn. It needs to be heated at 190-200C° to be used.</p>
 
@@ -81,13 +82,13 @@ To prepare the g-code, we have to <em>slice</em> our 3D model (.STL), to simulat
 <p><img src ="medias/fabac-assignments-3D-scanning-printing-testprint.JPG" alt="testprint" />
 <img src ="medias/fabac-assignments-3D-scanning-printing-testdetail.JPG" alt="testdetail" /></p>
 
-<h2>Results</h2>
+<h2 id="results">Results</h2>
 
 <p>As we can see in the images above, the definition of the print is quite good, the details are respected and the print angles can be large (in fact more than 45°). Even the small bridges without support were printed correctly. I am very satisfied with this test and the new possibilities that it lets us see.</p>
 
 <hr />
 
-<h1>Oloid</h1>
+<h1 id="oloid">Oloid</h1>
 
 <p>I'm exploring different types of shapes that could eventually be interesting regarding my final project. One of these is the oloid.</p>
 
@@ -110,7 +111,7 @@ printing, and not a subtractive technique, such as laser cutting or milling,
 because the shape itself must be worked in all directions, not just from bottom
 to top (or by using another machine, a robot, with more axes, but then the technique begins to be too complex for a small piece like this one).</p>
 
-<h2>Modeling</h2>
+<h2 id="modeling">Modeling</h2>
 
 <p><a target="_blank" href="https://www.openscad.org/">OpenSCAD</a>, the 3D CAD modeller that we use by writing code (as I said <a target="_blank" href="fabac-assignments-computer-aided-design.html">here</a>) has a function called <code>hull()</code> that displays the <a target="_blank" href="https://doc.cgal.org/latest/Convex_hull_2/index.html">convex hull</a> of child nodes.</p>
 
@@ -134,7 +135,7 @@ hull() {
 
 <p><video controls preload="auto"><source type ="video/mp4" src ="medias/fabac-assignments-3D-scanning-printing-oloid-openscad.mp4"></video></p>
 
-<h2>Slicing</h2>
+<h2 id="slicing-2">Slicing</h2>
 
 <p>The slicing process of the oloid model was very interesting because I had to add supports to keep the shape in place during printing. It helped me understand how supports work and how to generate them in a slicer software, which is actually super easy.</p>
 
@@ -142,7 +143,7 @@ hull() {
 
 <p>Here is the .std file I made for printing: <a target="_blank" href="medias/fabac-assignments-3D-scanning-printing-oloid.stl">oloid.stl</a></p>
 
-<h2>Printing</h2>
+<h2 id="printing-2">Printing</h2>
 
 <p>Printing this oloid was'nt as easy as the first test I did. My first attempt failed and I had to stop printing. It gave something like this:</p>
 
@@ -162,7 +163,7 @@ hull() {
 
 <p><video controls preload="auto"><source type ="video/mp4" src ="medias/fabac-assignments-3D-scanning-printing-oloid-print-2.mp4"></video></p>
 
-<h2>Result</h2>
+<h2 id="result">Result</h2>
 
 <p>The end result is quite good, even if I could have increased the quality if I had had more printing time. But let's say it's clearly sufficient for rapid prototyping.</p>
 
@@ -174,7 +175,7 @@ hull() {
 
 <hr />
 
-<h1>3D Scan</h1>
+<h1 id="3d-scan">3D Scan</h1>
 
 <p>There aren't many open source tools available and maintained for 3D scanning, but <a target="_blank" href="https://alicevision.org/#meshroom">Meshroom</a> is one of them. It is an open source photogrammetry software.</p>
 
@@ -188,11 +189,11 @@ hull() {
 
 <p><img src ="medias/fabac-assignments-3D-scanning-printing-scan-success.jpeg" alt="scan-success" /></p>
 
-<h2>Requirements</h2>
+<h2 id="requirements">Requirements</h2>
 
 <p>Meshroom needs a <a target="_blank" href="https://en.wikipedia.org/wiki/CUDA">CUDA-Enabled GPU</a> in order to run properly. My computer doesn't have this type of processor, but I found a solution to get decent results without the full capacity of the software. I will explain it later in the process.</p>
 
-<h3>Installation</h3>
+<h3 id="installation">Installation</h3>
 
 <ol>
 <li>Download the binary from <a target="_blank" href="https://alicevision.org/#meshroom">Meshroom home page</a></li>
@@ -200,7 +201,7 @@ hull() {
 <li>Open a terminal and from this folder run <code>./Meshroom</code> to launch the GUI. In my case I have to type <code>~/Documents/Apps/Meshroom-2019.2.0/./Meshroom</code> to launch the app.</li>
 </ol>
 
-<h3>How-to</h3>
+<h3 id="how-to">How-to</h3>
 
 <ol>
 <li>Take pictures around the object you want to scan</li>
@@ -208,7 +209,7 @@ hull() {
 <li>If you have a CUDA-Enabled GPU, simply press the <code>start</code> button. If not, you will have to delete 3 nodes: <code>PrepareDenseScene</code> <code>DepthMap</code> and <code>DepthMapFilter</code> and connect the output of <code>StructureFromMotion</code> to the input of <code>Meshing</code>, and finally press the <code>start</code> button.</li>
 </ol>
 
-<h2>Problems I encountered</h2>
+<h2 id="problems-i-encountered">Problems I encountered</h2>
 
 <p>I had some problems getting decent results with photogrammetry. Almost all of my attempts weren't even close to a recognizable 3D scan of the object I was trying to get the shape from.</p>
 
@@ -232,7 +233,7 @@ hull() {
 
 <p><img src ="medias/fabac-assignments-3D-scanning-printing-scan-success-2.jpeg" alt="scan-success" /></p>
 
-<h3>My tips for scanning an object with the photogrammetry process</h3>
+<h3 id="my-tips-for-scanning-an-object-with-the-photogrammetry-process">My tips for scanning an object with the photogrammetry process</h3>
 
 <ul>
 <li>the bigger the better</li>
@@ -242,7 +243,7 @@ hull() {
 <li>Matt objects are the easiest (by far!)</li>
 </ul>
 
-<h3>Conclusion</h3>
+<h3 id="conclusion">Conclusion</h3>
 
 <p>The result is clearly worse than I imagined when thinking about photogrammetry. But it's an exploration, between cutting-edge technology and open source software driven by the community, between a beginner (me) and a very specific technique. I will have to practice taking appropriate photos for photogrammetry if I want to scan something for a real need.</p>
 

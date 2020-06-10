@@ -30,6 +30,7 @@
   <h1 class="article__title">
     Output devices
   </h1>
+  
   <p>This week's assignement is about output devices: we are learning how to make various motors work, what are their mechanisms and principles, when and why use a specific one instead of another.</p>
 
 <p>I'm going to lend a hand to <a target="_blank" href="https://maudb.gitlab.io/dok/">Maud Bausier</a>, my partner, who is building an incubator to grow mycelium or any fermented food (tempeh, sriracha, etc.). I think we could have enough material to finish a prototype at home (covid-19 restrictions).</p>
@@ -38,14 +39,14 @@
 
 <p><img src ="medias/fabac-assignments-output-devices-incubator-overview.jpg" alt="incubator prototype" /></p>
 
-<h1>Motors</h1>
+<h1 id="motors">Motors</h1>
 
 <p>But first, I needed some basics about motors: a motor is mainly made of coils and magnets. When current goes through a coil, a magnetic field is generated around it. The higher the current, the greater the field. This magnetic field creates polarity which is used to create a rotational force. This force is called <a target="_blank" href="https://en.wikipedia.org/wiki/Torque">the torque</a> and its value depends on the motor's input current. More current implies stronger magnetic field in the coils, that means more attraction/repulsion.</p>
 
 <p><img src ="medias/fabac-assignments-output-devices-motor-coils.png" alt="motor coils" />
 Image source: <a target="_blank" href="https://itp.nyu.edu/physcomp/lessons/dc-motors/dc-motors-the-basics/">ITP Physical Computing</a></p>
 
-<h2>DC motor</h2>
+<h2 id="dc-motor">DC motor</h2>
 
 <p>Maybe the simplest and most common motor in electronics, it converts current electrical energy into mechanical energy. The motor spins in one direction. Switching its polarity changes its direction. Varying the current supplied varies the speed of the motor.</p>
 
@@ -54,7 +55,7 @@ Image source: <a target="_blank" href="https://itp.nyu.edu/physcomp/lessons/dc-m
 <p><img src ="medias/fabac-assignments-output-devices-dc-brush.jpg" alt="DC brush motor" />
 Image source: <a target="_blank" href="https://learn.sparkfun.com/tutorials/motors-and-selecting-the-right-one#what-makes-a-motor-move-">Sparkfun: Motors and selecting the right one</a></p>
 
-<h2>Stepper motor</h2>
+<h2 id="stepper-motor">Stepper motor</h2>
 
 <blockquote>
   <p>Stepper motors are different than regular DC motors in that they don’t turn continuously, but move in a series of steps. A stepper motor is a motor that has multiple coils, not just one. By energizing each coil in sequence, you attract the shaft magnets to each coil in the sequence, and you can turn the motor in precise steps, rather than simply rotating continually.</p>
@@ -64,7 +65,7 @@ Image source: <a target="_blank" href="https://learn.sparkfun.com/tutorials/moto
 
 <p>Source: <a target="_blank" href="https://itp.nyu.edu/physcomp/lessons/dc-motors/dc-motors-the-basics/">ITP Physical Computing</a></p>
 
-<h2>Servo</h2>
+<h2 id="servo">Servo</h2>
 
 <blockquote>
   <p>A Servo is a small device that has an output shaft. This shaft can be positioned to specific angular positions by sending the servo a coded signal. As long as the coded signal exists on the input line, the servo will maintain the angular position of the shaft. As the coded signal changes, the angular position of the shaft changes.</p>
@@ -81,23 +82,23 @@ Image source: <a target="_blank" href="https://www.youtube.com/watch?v=LXURLvga8
 
 <p>Servo motor appears to be the perfect candidate when we need a full control of the rotation angle, direction and speed of a motor.</p>
 
-<h1>MOSFET</h1>
+<h1 id="mosfet">MOSFET</h1>
 
 <p>A MOSFET (Metal Oxide Semiconductor Field Effect Transistor) is a semiconductor device which is used for switching electronic signals.</p>
 
 <p class="todo">TODO: MOSFET description</p>
 
-<h1>LCD screen</h1>
+<h1 id="lcd-screen">LCD screen</h1>
 
 <p class="todo">TODO: LCD screen description</p>
 
 <hr />
 
-<h1>Prototyping an incubator</h1>
+<h1 id="prototyping-an-incubator">Prototyping an incubator</h1>
 
 <p>As I said above, my partner is building an incubator to help us grow mycellium (and other fermented food) and she asked me an hand to help her with the electronic part. In this context, I will prototype an incubator by using the devices I already have. I will do it by following the spiral methodology: a first round with the basic features, and then other ones with additional options.</p>
 
-<h2>Round #01: the basics</h2>
+<h2 id="round-01-the-basics">Round #01: the basics</h2>
 
 <p>For the first round, I would like to control a fan and a Peltier (thermoelectric cooler) to get an ideal temperature into a closed space, using a Arduino UNO. The Peltier will be used to warm up the temperature and the fan will help us to either cool down or to distribute the heat evenly.</p>
 
@@ -113,7 +114,7 @@ Image source: <a target="_blank" href="https://www.youtube.com/watch?v=LXURLvga8
 
 <p>Because the fan and the Peltier device require a voltage of 12V and the arduino can only supply 5V, I added an external power supply in the circuit. It is then necessary to also include MOSFETs to control how and when the current flows through the devices.</p>
 
-<h3>Material</h3>
+<h3 id="material">Material</h3>
 
 <ul>
 <li>Arduino UNO (<a target="_blank" href="https://content.arduino.cc/assets/Pinout-UNOrev3_latest.pdf">pinout</a>)</li>
@@ -126,7 +127,7 @@ Image source: <a target="_blank" href="https://www.youtube.com/watch?v=LXURLvga8
 <li>Diode</li>
 </ul>
 
-<h3>Schematics</h3>
+<h3 id="schematics">Schematics</h3>
 
 <p>I did a schematic in <a target="_blank" href="https://www.kicad-pcb.org/">KiCAD</a> to help me understand the different components ad how to plug them together. Here is a <a target="_blank" href="medias/fabac-assignments-output-devices-incubator-schema.jpg">larger image</a> if you like.</p>
 
@@ -136,7 +137,7 @@ Image source: <a target="_blank" href="https://www.youtube.com/watch?v=LXURLvga8
 
 <p><img src ="medias/fabac-assignments-output-devices-incubator-circuit.jpg" alt="incubator prototype" /></p>
 
-<h3>Code</h3>
+<h3 id="code">Code</h3>
 
 <p>I attribute the pins values according to my schematics and define some settings, such as the ideal temperature and the accepted range, but also the fan and Peltier power.</p>
 
@@ -199,7 +200,7 @@ void loop(){
 
 <p><video controls preload="auto"><source type ="video/mp4" src ="medias/fabac-assignments-output-devices-incubator-prototype.mp4"></video></p>
 
-<h3>Results</h3>
+<h3 id="results">Results</h3>
 
 <p>The overall result of this prototype is quite good. The temperature is easily regulated with the Peltier and the fan, and the thermistor obtains precise values.</p>
 
@@ -213,11 +214,11 @@ void loop(){
 
 <p><img src ="medias/fabac-assignments-output-devices-incubator-power.jpg" alt="incubator prototype" /></p>
 
-<h1>Next</h1>
+<h1 id="next">Next</h1>
 
 <p>Now that the electronics work as I want, I hand over to my partner. The next step will probably be a real test with a closed space to see how quickly we can lower or increase the temperature inside. We are also thinking of using the fan to distribute the heat evenly. Be sure to read <a target="_blank" href="https://maudb.gitlab.io/dok/projects/biolab-kitchen/">Maud's documentation</a> to see her progress on the incubator.</p>
 
-<h3>References</h3>
+<h3 id="references">References</h3>
 
 <ul>
 <li><a target="_blank" href="https://biohackacademy.github.io/bha6/class/3/pdf/3.4%20Incubator%20design.pdf">Biohack Academy: Incubator</a></li>

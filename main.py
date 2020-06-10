@@ -1,5 +1,9 @@
 # dependencies
-import os, shutil, warnings, os.path, time
+import os
+import shutil
+import warnings
+import os.path
+import time
 from datetime import datetime
 from jinja2 import Environment, FileSystemLoader
 from markdown2 import markdown
@@ -25,16 +29,16 @@ warnings.filterwarnings("ignore", "(Possibly )?corrupt EXIF data", UserWarning)
 # RSS
 fg = FeedGenerator()
 fg.title('antoine.studio')
-fg.author( {'name':'Antoine Jaunard', 'email': 'antoine.stuff@pm.me'} )
-fg.link( href=main_url, rel='alternate' )
+fg.author({'name': 'Antoine Jaunard', 'email': 'antoine.stuff@pm.me'})
+fg.link(href=main_url, rel='alternate')
 fg.subtitle('experimental studio of Antoine Jaunard')
 fg.language('en')
-rssfeed  = fg.rss_str(pretty=True)
+rssfeed = fg.rss_str(pretty=True)
 
 # Image utility
 def image_util(old_file, new_file):
     if not os.path.isfile(new_file):
-    # copy the original to public/media
+        # copy the original to public/media
         shutil.copy2(old_file, new_file)
         if new_file.endswith(tuple(media_ext)):
             img = Image.open(new_file)
@@ -43,6 +47,7 @@ def image_util(old_file, new_file):
             hsize = int((float(img.size[1])*float(wpercent)))
             img = img.resize((base_width, hsize), Image.ANTIALIAS)
             img.save(new_file)
+
 
 # purge public folder
 for file_name in os.listdir(folder_html):
@@ -69,14 +74,16 @@ for content_type in content_types:
         for item in os.listdir(dir_path):
             file_path = os.path.join(dir_path, item)
             if file_path.endswith('.md'):
-                 # markdown file
-                ARTICLE_DM[article_slug] = time.ctime(os.path.getmtime(file_path))
+                # markdown file
+                ARTICLE_DM[article_slug] = time.ctime(
+                    os.path.getmtime(file_path))
                 with open(file_path, 'r') as file:
                     ARTICLES[article_slug] = markdown(
-                        file.read(), extras=['metadata', 'tables', 'target-blank-links'])
+                        file.read(), extras=['metadata', 'tables', 'target-blank-links', 'toc'])
             else:
                 # media file
-                media_file_path = 'public/medias/{slug}'.format(slug=content_type + '-' + article_slug + '-' + item)
+                media_file_path = 'public/medias/{slug}'.format(
+                    slug=content_type + '-' + article_slug + '-' + item)
                 image_util(file_path, media_file_path)
 
     # reverse order
@@ -86,8 +93,10 @@ for content_type in content_types:
 
     for article in ARTICLES:
         article_metadata = ARTICLES[article].metadata
-        article_date_created = datetime.strptime(ARTICLE_DC.get(article), '%Y-%m-%d').strftime('%d/%m/%Y')
-        article_date_modified = datetime.strptime(ARTICLE_DM.get(article), '%a %b %d %H:%M:%S %Y').strftime('%d/%m/%Y')
+        article_date_created = datetime.strptime(
+            ARTICLE_DC.get(article), '%Y-%m-%d').strftime('%d/%m/%Y')
+        article_date_modified = datetime.strptime(ARTICLE_DM.get(
+            article), '%a %b %d %H:%M:%S %Y').strftime('%d/%m/%Y')
         if 'tags' in article_metadata:
             tags = [article_metadata['tags']]
         else:
@@ -101,9 +110,10 @@ for content_type in content_types:
             'content': ARTICLES[article],
             'thumbnail': thumbnail,
             'tags': tags,
-            'date_created' : article_date_created,
-            'date_modified' : article_date_modified,
-            'slug': content_type  + '-' + article
+            'date_created': article_date_created,
+            'date_modified': article_date_modified,
+            'slug': content_type + '-' + article,
+            'toc': ARTICLES[article].toc_html
         }
         ARTICLES[article].metadata = article_data
         article_html = article_template.render(article=article_data)
@@ -111,12 +121,16 @@ for content_type in content_types:
             slug=article_data['slug'])
         os.makedirs(os.path.dirname(article_file_path), exist_ok=True)
         img_tag = '<img src ="medias/' + article_data['slug'] + '-'
-        video_tag = '<video controls preload="auto"><source type ="video/mp4" src ="medias/' + article_data['slug'] + '-'
-        doc_link = '<a target="_blank" href="medias/' + article_data['slug'] + '-'
+        video_tag = '<video controls preload="auto"><source type ="video/mp4" src ="medias/' + \
+            article_data['slug'] + '-'
+        doc_link = '<a target="_blank" href="medias/' + \
+            article_data['slug'] + '-'
         article_html = article_html.replace('<img src="', img_tag)
         article_html = article_html.replace('<video><source src="', video_tag)
-        article_html = article_html.replace('<a target="_blank" href="files/', doc_link)
-        article_html = article_html.replace('<p>TODO:', '<p class="todo">TODO:')
+        article_html = article_html.replace(
+            '<a target="_blank" href="files/', doc_link)
+        article_html = article_html.replace(
+            '<p>TODO:', '<p class="todo">TODO:')
         article_html = article_html.replace('href="btn:', 'class="btn" href="')
         with open(article_file_path, 'w') as file:
             file.write(article_html)
@@ -125,8 +139,10 @@ for content_type in content_types:
             fe = fg.add_entry()
             fe.title(article_data['title'])
             fe.link(href=main_url + article_data['slug'] + '.html')
-            fe.author( {'name':'Antoine Jaunard', 'email': 'antoine.stuff@pm.me'} )
-            fe.pubDate(datetime.strptime(ARTICLE_DC.get(article), '%Y-%m-%d').strftime('%a %b %d %H:%M:%S %Y') + ' +0200')
+            fe.author({'name': 'Antoine Jaunard',
+                       'email': 'antoine.stuff@pm.me'})
+            fe.pubDate(datetime.strptime(ARTICLE_DC.get(article),
+                                         '%Y-%m-%d').strftime('%a %b %d %H:%M:%S %Y') + ' +0200')
             fe.description(article_data['content'][:800] + '...')
 
     METADATA[content_metadata_name] = [
@@ -154,7 +170,7 @@ FILES = {
 FLUX['flux_metadata'] = [
     FILES[file] for file in FILES
 ]
-flux_html = flux_template.render(flux = FLUX['flux_metadata'])
+flux_html = flux_template.render(flux=FLUX['flux_metadata'])
 flux_html = flux_html.replace('<img src="public/', '<img src="')
 with open('public/flux.html', 'w') as file:
     file.write(flux_html)
@@ -186,5 +202,6 @@ for file_name in os.listdir(folder_html):
     if file_name.endswith('.html'):
         total_page = total_page + 1
 for file_name in os.listdir(folder_medias):
-        total_media = total_media + 1
-print('The website consists of', total_page, 'pages and', total_media, 'medias')
+    total_media = total_media + 1
+print('The website consists of', total_page,
+      'pages and', total_media, 'medias')

@@ -30,6 +30,7 @@
   <h1 class="article__title">
     Networking and communications
   </h1>
+  
   <p>For this week's assignment, I will connect two <a target="_blank" href="http://esp8266.net">ESP8266</a> / <a target="_blank" href="https://www.nodemcu.com/index_en.html">NodeMCU</a> together on the WiFi network and exchange data between them.</p>
 
 <p>Understanding the basics of networking and how communication between devices works will be highly beneficial for my final project.</p>
@@ -40,7 +41,7 @@
 
 <hr />
 
-<h1>Hardware</h1>
+<h1 id="hardware">Hardware</h1>
 
 <p>I'm using two <a target="_blank" href="https://www.nodemcu.com/index_en.html">NodeMCU</a> equipped with <a target="_blank" href="http://esp8266.net">ESP8266</a> chips, mounted on a breadboard to facilitate the prototyping phase. The first NodeMCU, the <em>server</em>, has a LED connected to its pin <code>4</code> (d2). The second NodeMCU, the <em>client</em>, has a push-button connected to its pin <code>4</code> (d2). The WiFi network is prodived through my home router.</p>
 
@@ -49,9 +50,9 @@
 
 <p><img src ="medias/fabac-assignments-networking-communications-setup.jpg" alt="setup" /></p>
 
-<h1>Software</h1>
+<h1 id="software">Software</h1>
 
-<h2>Project structure</h2>
+<h2 id="project-structure">Project structure</h2>
 
 <p>As I use PlatformIO to program my boards, the configuration of a project is fairly straightforward. I need one folder per board and an additional folder that wraps the two subfolders.</p>
 
@@ -76,7 +77,7 @@ framework = arduino
 
 <p>I can now add <code>upload_port = /dev/ttyUSB0</code> to the server's <code>platformio.ini</code> file and <code>upload_port = /dev/ttyUSB1</code> to the client. Depending on how I plugged them into my computer.</p>
 
-<h2>Code</h2>
+<h2 id="code">Code</h2>
 
 <p>The <em>server</em> will wait for a message from the <em>client</em> indicating whether to turn on its LED or not. The <em>client</em> will connect to the <em>server</em> network and send it its data, depending on the state of a simple push button.</p>
 
@@ -91,7 +92,7 @@ char ssid[] = "****";
 char pass[] = "****";
 </pre>
 
-<h3>Server</h3>
+<h3 id="server">Server</h3>
 
 <pre>
 #include &lt;ESP8266WiFi.h&gt;
@@ -148,7 +149,7 @@ void loop () {
 }
 </pre>
 
-<h3>Client</h3>
+<h3 id="client">Client</h3>
 
 <pre>
 #include &lt;ESP8266WiFi.h&gt;
@@ -199,7 +200,7 @@ void loop () {
 }
 </pre>
 
-<h1>Results</h1>
+<h1 id="results">Results</h1>
 
 <p>The connection is established. One chip talks to another on the WiFi network.</p>
 
@@ -211,7 +212,7 @@ void loop () {
 
 <p>(The NodeMCU don't fit well on the breadboard, I had to hold them in place during the experiment to be sure that the connections were good.)</p>
 
-<h1>Useful links</h1>
+<h1 id="useful-links">Useful links</h1>
 
 <ul>
 <li><a target="_blank" href="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/site/local/#material/extras/week14/networking">Fab Lab Barcelona - Networking class</a></li>

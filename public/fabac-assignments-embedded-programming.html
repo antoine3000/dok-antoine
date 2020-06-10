@@ -30,6 +30,7 @@
   <h1 class="article__title">
     Embedded programming
   </h1>
+  
   <p>Two weeks ago, I designed a pomodoro timer during the <a target="_blank" href="fabac-assignments-electronics-design.html">Electronics design</a> week. It's now time to program it. I'm going to write the piece of code that will light my LEDs as time goes by and find a way to send it to the ATtiny1614 chip. I'm going to focus on the latter: how to send a program (= program) a chip. Well, that was the plan.</p>
 
 <p>Unfortunately, in the meantime, the coronavirus has hit Spain (and the whole world). We are now all in quarantine, with no access to the lab. I will have to work from home, with the equipment I already have, nothing more.</p>
@@ -38,9 +39,9 @@
 
 <p>For this reason, I'm going to use a <a target="_blank" href="https://www.adafruit.com/product/3333">Circuit Playground Express</a>. This tiny board is already equipped with 10 mini NeoPixels, 1 motion sensor, 1 temperature sensor, 1 sound sensor, 1 mini speaker, 2 push buttons, 1 slide switch, infrared receiver and transmitter and 8 alligator-clip friendly input/output pins. It's a perfect board for quick prototyping and code experiments.</p>
 
-<h2>Pomodoro code</h2>
+<h2 id="pomodoro-code">Pomodoro code</h2>
 
-<h3>How I want to use my pomodoro</h3>
+<h3 id="how-i-want-to-use-my-pomodoro">How I want to use my pomodoro</h3>
 
 <ul>
 <li>Press the left button to start the timer</li>
@@ -55,7 +56,7 @@
 
 <p><video controls preload="auto"><source type ="video/mp4" src ="medias/fabac-assignments-embedded-programming-pomo-playground.mp4"></video></p>
 
-<h3>The code that does this using the Arduino framework</h3>
+<h3 id="the-code-that-does-this-using-the-arduino-framework">The code that does this using the Arduino framework</h3>
 
 <pre>
 bool button_left;
@@ -146,13 +147,13 @@ void loop() {
 }
 </pre>
 
-<h2>PlatformIO</h2>
+<h2 id="platformio">PlatformIO</h2>
 
 <p><a target="_blank" href="https://platformio.org/">PlatformIO</a> is a cross-platform, cross-architecture and multiple framework tool for embedded programming. It replaces Arduino IDE and offers a lot more subtilities and flexibility to write organized code for micro-controllers.</p>
 
 <p>I use PlatformIO as a replacement for Arduino IDE because it allows me to use the text editor I want (I use <a target="_blank" href="https://neovim.io/">Neovim</a>, an hyperextensible Vim-based text editor) and because it integrates librairies of more than 700 differents boards, including the ones I use. It also has a unified debugger and a static code analyze which seems super useful for large scale projects.</p>
 
-<h3>Initialization</h3>
+<h3 id="initialization">Initialization</h3>
 
 <p>Because PlatformIO is based on Python, the installation is pretty straight-forward using <em>pip</em>: <code>$ pip install -U platformio</code></p>
 
@@ -197,7 +198,7 @@ lib_deps =
   602
 </pre>
 
-<h3>Run &amp; upload</h3>
+<h3 id="run-upload">Run &amp; upload</h3>
 
 <p>Write your program into the <code>src</code> folder. The librairies have to be included at the very beginning of your program's files. In this case, the Arduino framework <code>#include &lt;Arduino.h&gt;</code> and the Circuit Playground framework <code>#include &lt;Adafruit_CircuitPlayground.h&gt;</code>.</p>
 
@@ -213,7 +214,7 @@ lib_deps =
 
 <hr />
 
-<h1>Programming the ESP32 — Barduino</h1>
+<h1 id="programming-the-esp32-barduino">Programming the ESP32 — Barduino</h1>
 
 <p>We have been asked to assemble a Barduino few hours before the lab lockdown due to the coronavirus, in order to be able to experiment with it later at home.</p>
 
@@ -244,11 +245,11 @@ framework = arduino
 
 <p><img src ="medias/fabac-assignments-embedded-programming-barduino-pinouts.png" alt="arduino-pinouts" /></p>
 
-<h3>Datasheet</h3>
+<h3 id="datasheet">Datasheet</h3>
 
 <p>Also, there is a <em>Programmer Slider Switch</em> that changes the behaviour of the chip and tells it wheter it's in programming mode or execution mode. Obviously, we have to turn it to the left, the programming mode, before uploading our program.</p>
 
-<h3>The blink program, using PIN 13</h3>
+<h3 id="the-blink-program-using-pin-13">The blink program, using PIN 13</h3>
 
 <pre>
  #include <Arduino.h>
@@ -271,28 +272,28 @@ framework = arduino
 
 <hr />
 
-<h1>Programming the ATtiny1614</h1>
+<h1 id="programming-the-attiny1614">Programming the ATtiny1614</h1>
 
 <p>The ATtiny1614 isn't yet supported by PlatformIO and therefore needs another method to be programmed. Fortunately, <a target="_blank" href="https://github.com/mraardvark/pyupdi">pyupdi</a> is here! Pyupdi is a Python UPDI driver for programming the "new" tinyAVR and megaAVR devices.</p>
 
-<h2>Connectivity</h2>
+<h2 id="connectivity">Connectivity</h2>
 
 <p>Power comes from a USB cable via a FTDI connector. The data comes from the UPDI connector and goes through another FTDI connector.</p>
 
-<h2>Install</h2>
+<h2 id="install">Install</h2>
 
 <p><code>git clone https://github.com/mraardvark/pyupdi</code></p>
 
 <p><code>pip install -r requirements.txt</code></p>
 
-<h2>Compile</h2>
+<h2 id="compile">Compile</h2>
 
 <p>The first thing to do is to compile the code with the Arduino IDE and then send it with <code>pyupdi</code>.
 To be able to compile the code, first install the <a target="_blank" href="https://github.com/SpenceKonde/megaTinyCore">megaTinyCore</a> library using the Libraries manager into the Arduino IDE and select the ATtiny1614 board.</p>
 
 <p>From the Arduini IDE console, locate the <code>.ino.hex</code> that is generated when you compile and copy its path. It should be something like <code>/tmp/arduino_build_342195/Blink.ino.hex</code>.</p>
 
-<h2>Upload</h2>
+<h2 id="upload">Upload</h2>
 
 <p>Once your program is correctly compiled, open a terminal to send it to your device.</p>
 
@@ -308,7 +309,7 @@ pyupdi.py -d tiny1614 -c /dev/ttyUSB0 -b 9600 -f /tmp/arduino_build_342195/Blink
 
 <hr />
 
-<h1>The basic way: Arduino IDE</h1>
+<h1 id="the-basic-way-arduino-ide">The basic way: Arduino IDE</h1>
 
 <p>One can also use Arduino IDE to load a piece of code into a device. It works perfectly well even if this solution is more basic and doesn't allow a lot of  fine tuning.</p>
 

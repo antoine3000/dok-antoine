@@ -6,6 +6,11 @@
   <h1 class="article__title">
     {{ article.title }}
   </h1>
+  {% if 'toc' in article.tags %}
+  <section class="toc">
+    {{ article.toc }}
+  </section>
+  {% endif %}
   {{ article.content }}
   <footer>
     <p>✎ <span>Created</span> {{ article.date_created }}</p>

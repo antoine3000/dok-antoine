@@ -30,6 +30,7 @@
   <h1 class="article__title">
     Project management
   </h1>
+  
   <p>An important part of the <a target="_blank" href="https://fabacademy.org/">Fab Academy</a>, apart from learning digital fabrication techniques, consists of documenting everything we do in order to create a shared and open knowledge base between all students, and for everybody.</p>
 
 <p>One of my goals for this academy is to use only open-source tools. I want to be able to see what is inside the tools I use, modify it in case of need and share with others the projects I do with the environment necessary for their functioning.</p>
@@ -42,7 +43,7 @@
   </blockquote>
 </blockquote>
 
-<h2>My computer</h2>
+<h2 id="my-computer">My computer</h2>
 
 <p>Few months ago, I decided to switch from the closed Apple ecosystem to the wonderful and open world of Linux. I'm running <a target="_blank" href="https://elementary.io/">Elementary OS</a>, a distribution based on Ubuntu, on a mid-2014 macbook pro. This machine isn't the more convenient to run a Linux distribution but I will keep using it as long as I can, even if I have some tiny hardware issues, simply because the more sustainable computer is the one I already have.</p>
 
@@ -56,7 +57,7 @@
 
 <hr />
 
-<h1>My ideal documentation tool</h1>
+<h1 id="my-ideal-documentation-tool">My ideal documentation tool</h1>
 
 <p>My ideal documentation tool is as light as possible and requires very little energy to operate; is perfectly understandable and does the tasks I want it to do - nothing more; evolves with my needs; has no Javascript, no cookies, no trackers.</p>
 
@@ -72,35 +73,35 @@
 
 <p>It may not be as efficient or extensible as other static site generators (like <a target="_blank" href="https://gohugo.io/">Hugo</a>, <a target="_blank" href="https://jekyllrb.com/">Jekyll</a> or <a target="_blank" href="https://blog.getpelican.com/">Pelican</a>) but everything works pretty well and I am satisfied with the tool I made, it is minimal and matches my values.</p>
 
-<h2>Sources</h2>
+<h2 id="sources">Sources</h2>
 
 <p>This documentation tool is open-source by default, as all the things I (try to) do. Sources are available on <a target="_blank" href="https://gitlab.com/antoine.j/antoine.studio">Gitlab</a>.</p>
 
 <p>Feel free to use it, copy it, do whatever you want, but keep in mind that it was written in one specific context and may not work properly in another.</p>
 
-<h2>Core functionalities</h2>
+<h2 id="core-functionalities">Core functionalities</h2>
 
 <p>In order to be able to develop this low-tech static site generator myself, I have to keep it simple and add functionalities one after the other according to my needs, as show in a <a target="_blank" href="https://en.wikipedia.org/wiki/Spiral_model">spiral model methodology</a>, in order to keep a tool wich works.</p>
 
 <p>Files are organized in different folders depending on the content type (pages/articles/assignments/flux), for clarity. Articles are written in <a target="_blank" href="https://en.wikipedia.org/wiki/Markdown">markdown</a>, to facilitate the writing process. Images are optimized and resized on the fly, to keep the generated website as light as possible. URLs are simple and stay the same even if the project architecture changes, because I might break it more than once.</p>
 
-<h3>Content organization</h3>
+<h3 id="content-organization">Content organization</h3>
 
 <p>There are four main types of content: <code>assignments/</code> (for our weekly assignments), <code>posts/</code> (for additional content that may not be linked to the academy), <code>pages/</code> (for more generic purposes), <code>flux/</code> (different from the others, it will only be used to display a grid of images).</p>
 
 <p>To add an new article inside the folder related to the desired content type (assignments, posts, pages), make a new directory named as follows: <code>YYYY-MM-DD-article-title</code>. The script will store the title to make the URL of the article and the date to keep things organized. Inside this newly created folder: create a <code>index.md</code> file wich will contain the text content and add the images (if necessary).</p>
 
-<h3>Website generation</h3>
+<h3 id="website-generation">Website generation</h3>
 
 <p>In order to run the script and therefore to generate the html files, go to the project folder (<code>cd Websites/antoine</code> in my case), and run <code>python main.py</code>.</p>
 
 <p>The script will generate the html files from the markdown files using the html templates written in <code>templates</code>. It will also copy the images from the content folder to the <code>public/medias</code> folder while compressing them. Refresh your web browser to see the changes.</p>
 
-<h3>Image optimization</h3>
+<h3 id="image-optimization">Image optimization</h3>
 
 <p>Depending on the file format of the images, the script may or may not optimize them. If an image is formatted as <code>.jpg</code>, <code>.jpeg</code> or <code>.png</code>, the script will resize it to acceptable size for the web. This will not modify the <code>.gif</code> images as it is a little more complex to manage without losing important attributes such as animation.</p>
 
-<h3>Dependencies</h3>
+<h3 id="dependencies">Dependencies</h3>
 
 <p>Even though I tried to keep the dependencies as low as possible, I had to use some existing tools to create mine. I will try to narrow the list when I gain more knowledge about programming in Python.</p>
 
@@ -113,7 +114,7 @@ from markdown2 import markdown
 from PIL import Image
 </pre>
 
-<h3>Project structure</h3>
+<h3 id="project-structure">Project structure</h3>
 
 <pre>
 content/
@@ -140,11 +141,11 @@ main.py
 
 <hr />
 
-<h1>GIT cheatsheet</h1>
+<h1 id="git-cheatsheet">GIT cheatsheet</h1>
 
 <p>Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</p>
 
-<h2>Useful commands</h2>
+<h2 id="useful-commands">Useful commands</h2>
 
 <p>Start a project from scratch: <code>git init</code> and then <code>git remote add origin {repository-url}</code></p>
 
@@ -168,7 +169,7 @@ main.py
 
 <p>Change your working branch: <code>git checkout {branch-name}</code></p>
 
-<h3>Visualization</h3>
+<h3 id="visualization">Visualization</h3>
 
 <p>Get the repo's status <code>git status</code> or the repo's history: <code>git log</code></p>
 
@@ -176,7 +177,7 @@ main.py
 
 <p>Get the the commit-tree of all branches: <code>git log --oneline --abbrev-commit --all --graph --decorate --color</code></p>
 
-<h3>Configuration</h3>
+<h3 id="configuration">Configuration</h3>
 
 <p>Keep the password in memory for the next 8 hours: <code>git config --global credential.helper 'cache --timeout 28800'</code></p>
 
@@ -186,9 +187,9 @@ main.py
 
 <hr />
 
-<h1>MISC</h1>
+<h1 id="misc">MISC</h1>
 
-<h3>Video compression</h3>
+<h3 id="video-compression">Video compression</h3>
 
 <p><code>ffmpeg -i video.mp4 -b 1000000 compressed-video.mp4</code> or <code>ffmpeg -i video.mp4 -b 1000000 -t 10 compressed-video.mp4</code> where <code>-t 10</code> is the duration (10 sec.)</p>
 
