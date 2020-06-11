@@ -10,7 +10,7 @@ A device that helps humans communicate with plants.
 # External resources
 
 [Kanban board](btn:http://board.antoine.studio/?controller=BoardViewController&action=readonly&token=3d91cde4a718ce18cd986a67eff38899f8eb1612ddae621507a00da28f4f)
-[List of materials](btn:https://cryptpad.fr/sheet/#/2/sheet/view/SazDmGarJfd57LlUPitUPgCZ9pZgQzFs9noQ3YGG68w/embed/)
+[List of materials](btn:https://docs.google.com/spreadsheets/d/1nhU3fjO-yuVyLYuE5AC39vmvim1dWyxoJ2PYOr6acvA/edit?usp=sharing)
 
 
 # Sensing
