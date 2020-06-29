@@ -92,6 +92,9 @@ img {
 .index {
   margin-bottom: var(--spacing);
 }
+.empty {
+  opacity: .3;
+}
 
 /* .index:last-of-type {margin-bottom: calc(var(--spacing)*2);} */
 
@@ -173,7 +176,7 @@ ul li {
 }
 
 ul li:before {
-  content: "-";
+  content: ">";
   position: absolute;
   top: 0;
   left: 0;

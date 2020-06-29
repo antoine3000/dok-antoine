@@ -4,12 +4,12 @@
 
 <!-- assignments -->
 <section class="index">
-  <h2 class="index__subtitle">Fab Acacademy: assignments</h2>
+  <h2 class="index__subtitle">Fab Academy: Assignments</h2>
   <ul class="index__list">
     {% for post in assignments %}
       {% if not 'draft' in post.tags %}
         <li class="index__item">
-          <a href="{{ post.slug }}.html" class="index__link">{{ post.title }}</a>
+          <a href="{{ post.slug }}.html" class="index__link {% if 'empty' in post.tags %}empty{% endif %}">{{ post.title }}</a>
         </li>
       {% endif %}
     {% endfor %}
@@ -18,11 +18,13 @@
 
 <!-- final project -->
 <section class="index">
-  <h2 class="index__subtitle">Fab Acacademy: final project</h2>
+  <h2 class="index__subtitle">Fab Academy: Final project <a href="fabac-finalproject-overview.html">⚑</a></h2>
   <ul class="index__list">
     {% for post in projects %}
     {% if not 'draft' in post.tags %}
-    <li class="index__item"><a href="{{ post.slug }}.html" class="index__link">{{ post.title }}</a></li>
+    <li class="index__item">
+      <a href="{{ post.slug }}.html" class="index__link {% if 'empty' in post.tags %}empty{% endif %}">{{ post.title }}</a>
+    </li>
     {% endif %}
     {% endfor %}
   </ul>

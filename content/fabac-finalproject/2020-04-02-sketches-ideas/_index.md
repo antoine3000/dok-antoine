@@ -1,5 +1,5 @@
 ---
-title: Sketches, ideas and principles
+title: Sketches and first ideas
 ---
 
 This page is where I collect some of my thoughts on my final project idea.

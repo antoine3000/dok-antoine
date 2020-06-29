@@ -1,37 +1,7 @@
 ---
-title: The green observatory
-tags: toc
+title: References and related projects
 ---
 
-# Introduction
-
-A device that transforms the electrical activity of plants into a physical and meditative movement that we, humans, can observe and contemplate.
-
-![breathing cycle](final-sketches-02.png)
-
-# External resources
-
-[Kanban board](btn:http://board.antoine.studio/?controller=BoardViewController&action=readonly&token=3d91cde4a718ce18cd986a67eff38899f8eb1612ddae621507a00da28f4f)
-[List of materials](btn:https://docs.google.com/spreadsheets/d/1nhU3fjO-yuVyLYuE5AC39vmvim1dWyxoJ2PYOr6acvA/edit?usp=sharing)
-
-# Structure
-
-![structure overview](structure-overview-01.png)
-![structure detail](structure-detail-01.png)
-
-# Sensing
-
-## electrical activity of a plant
-
-An electrical potential sensor are used to detect the electrical activity of a plant, and therefore to deduce its health and its probable sensations.
-
-## Human/plant interaction
-
-Depending on the first phase (which is sensing the electrical activity of a plant), I may need an extra capacitive sensor to detect if a human is interacting with the plant.
-
-# Interacting
-
-# References
 
 ## Concept
 
@@ -45,7 +15,7 @@ Depending on the first phase (which is sensing the electrical activity of a plan
 - [The PhytoSense façade system](http://www.iaacblog.com/programs/phytosense/) is an interactive green facade that uses swept frequency capacitive sensing to play with light depending on touch.
 - [Plant Wave](https://www.plantwave.com/): Tune into nature and listen to the music of plants.
 - [SCÍON](https://www.instruomodular.com/product/scion/) is a biofeedback sensor built into a quad random voltage generator.
-- [Pulsum Plantae](http://lessnullvoid.cc/content/2011/10/pulsum-plantae/) ([Github project](https://github.com/Lessnullvoid/Pulsum-Plantae)) is a project focused on bioelectrical activity readings from different types of plants. 
+- [Pulsum Plantae](http://lessnullvoid.cc/content/2011/10/pulsum-plantae/) ([Github project](https://github.com/Lessnullvoid/Pulsum-Plantae)) is a project focused on bioelectrical activity readings from different types of plants.
 - [Botanicus Interacticus](http://www.ivanpoupyrev.com/project/botanicus-interacticus) allows for rich and expressive interaction with plants.
 - [Thesis “Sonnengarten – Urban Light Installation with Human-Plant Interaction”](https://sonnengartenjena.wordpress.com/2020/05/26/thesis-sonnengarten-urban-light-installation-with-human-plant-interaction/)
 

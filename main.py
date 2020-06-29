@@ -17,7 +17,7 @@ index_template = env.get_template('index.html')
 article_template = env.get_template('article.html')
 flux_template = env.get_template('flux.html')
 # misc
-content_types = ['fabac-projects', 'pages', 'fabac-assignments']
+content_types = ['fabac-finalproject', 'pages', 'fabac-assignments']
 base_width = 1200
 media_ext = ['jpg', 'jpeg', 'png']
 METADATA = {}
@@ -178,7 +178,7 @@ with open('public/flux.html', 'w') as file:
 
 # generate home
 home_html = home_template.render(
-    projects=METADATA['fabac-projects_metadata'],
+    projects=METADATA['fabac-finalproject_metadata'],
     pages=METADATA['pages_metadata'],
     assignments=METADATA['fabac-assignments_metadata'],
 )

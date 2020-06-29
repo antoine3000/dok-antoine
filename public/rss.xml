@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio/</link><description>experimental studio of Antoine Jaunard</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Thu, 18 Jun 2020 08:26:40 +0000</lastBuildDate><item><title>Machine design</title><link>https://antoine.studio/fabac-assignments-machine-design.html</link><description>&lt;p&gt;TODO: everything :)&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio/</link><description>experimental studio of Antoine Jaunard</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Mon, 29 Jun 2020 16:06:32 +0000</lastBuildDate><item><title>Machine design</title><link>https://antoine.studio/fabac-assignments-machine-design.html</link><description>&lt;p&gt;TODO: everything :)&lt;/p&gt;
 ...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Mon, 01 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Wildcard</title><link>https://antoine.studio/fabac-assignments-wildcard.html</link><description>&lt;p&gt;TODO: everything :)&lt;/p&gt;
 ...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Wed, 20 May 2020 00:00:00 +0200</pubDate></item><item><title>Molding and casting</title><link>https://antoine.studio/fabac-assignments-molding-casting.html</link><description>&lt;p&gt;TODO: everything :)&lt;/p&gt;
 ...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Wed, 13 May 2020 00:00:00 +0200</pubDate></item><item><title>Networking and communications</title><link>https://antoine.studio/fabac-assignments-networking-communications.html</link><description>&lt;p&gt;For this week's assignment, I will connect two &lt;a target="_blank" href="http://esp8266.net"&gt;ESP8266&lt;/a&gt; / &lt;a target="_blank" href="https://www.nodemcu.com/index_en.html"&gt;NodeMCU&lt;/a&gt; together on the WiFi network and exchange data between them.&lt;/p&gt;
@@ -148,7 +148,34 @@ A tool for documenting the things I learn.&lt;/p&gt;
 
 &lt;p&gt;This website is built with a custom static site generator that I wrote in Python. It's open-source by default, as all the things I (try to) do. Sources are available on &lt;a target="_blank" href="https://gitlab.com/antoine.j/antoine.studio"&gt;Gitlab&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;If you want to contact me, don't hesitate to &lt;a target="_blank" hr...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Sun, 12 Jan 2020 00:00:00 +0200</pubDate></item><item><title>The green observatory</title><link>https://antoine.studio/fabac-projects-final.html</link><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;If you want to contact me, don't hesitate to &lt;a target="_blank" hr...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Sun, 12 Jan 2020 00:00:00 +0200</pubDate></item><item><title>Assembly: Putting everything together</title><link>https://antoine.studio/fabac-finalproject-assembly.html</link><description>&lt;p&gt;&lt;/p&gt;
+...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Sat, 06 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Code: From input to output</title><link>https://antoine.studio/fabac-finalproject-code-logic.html</link><description>&lt;p&gt;&lt;/p&gt;
+...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Fri, 05 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Respiratory movement: Flexible part</title><link>https://antoine.studio/fabac-finalproject-flexible-part.html</link><description>&lt;p&gt;&lt;/p&gt;
+...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Thu, 04 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Respiratory movement: programmable air</title><link>https://antoine.studio/fabac-finalproject-output-air-pumps.html</link><description>&lt;p&gt;&lt;/p&gt;
+...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Wed, 03 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Structure: design and fabrication</title><link>https://antoine.studio/fabac-finalproject-structure.html</link><description>&lt;p&gt;&lt;img src="structure-overview-01.png" alt="structure overview" /&gt;
+&lt;img src="structure-detail-01.png" alt="structure detail" /&gt;&lt;/p&gt;
+...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Tue, 02 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Sensing the electrical activity of a plant</title><link>https://antoine.studio/fabac-finalproject-input-plant-activity.html</link><description>&lt;p&gt;I found two main references very useful for my project. The two listen to the electrical activity of plant in order to produce music (or at least sounds).&lt;/p&gt;
+
+&lt;p&gt;The first is &lt;a target="_blank" href="http://lessnullvoid.cc/content/2011/10/pulsum-plantae/"&gt;Pulsum Plantae&lt;/a&gt; (&lt;a target="_blank" href="https://github.com/Lessnullvoid/Pulsum-Plantae"&gt;Github project&lt;/a&gt;). This project amplifies the low voltage of a plant to make it readable, then converts it into an interactive installation that makes sounds. Leslie Garcia, Thiago Hersan, and Paloma López (the artists) have opened the sources of their project to make it accessible to people like me, allowing me to learn how things work and what could be a technical solution for this specific project.&lt;/p&gt;
+
+&lt;p&gt;The other comes from &lt;a target="...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Mon, 01 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Principles and concept</title><link>https://antoine.studio/fabac-finalproject-principles-concept.html</link><description>&lt;p&gt;Why am I making another electronic device&lt;/p&gt;
+...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Fri, 15 May 2020 00:00:00 +0200</pubDate></item><item><title>References and related projects</title><link>https://antoine.studio/fabac-finalproject-references.html</link><description>&lt;h2 id="concept"&gt;Concept&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a target="_blank" href="https://www.media.mit.edu/projects/elowan-a-plant-robot-hybrid/overview/"&gt;Elowan (MIT Media Lab)&lt;/a&gt;
+is a cybernetic lifeform, a plant in direct dialogue with a machine. Using its own internal
+electrical signals, the plant is interfaced with a robotic extension that drives it toward light.&lt;/li&gt;
+&lt;li&gt;&lt;a target="_blank" href="https://hackaday.io/project/134172-plantoid"&gt;Plantoid&lt;/a&gt;, an hybrid with actuators and electrical
+potential sensing for plant control.&lt;/li&gt;
+&lt;li&gt;&lt;a target="_blank" href="https://backyardbrains.com/products/plantspikerbox"&gt;the Plant SpykerBox&lt;/a&gt;, a device that records and visualizes the signals emitted by plants offering users the unique opportunity to peer into the fascinating world of plant signaling and ...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Fri, 01 May 2020 00:00:00 +0200</pubDate></item><item><title>Sketches and first ideas</title><link>https://antoine.studio/fabac-finalproject-sketches-ideas.html</link><description>&lt;p&gt;This page is where I collect some of my thoughts on my final project idea.&lt;/p&gt;
+
+&lt;h2 id="listen-to-what-the-plants-have-to-say"&gt;Listen to what the plants have to say&lt;/h2&gt;
+
+&lt;p&gt;Plants communicate as we do. But it's hardly noticeable for us because we don't send and receive signals at the same speed as they do. This is why I would like to build a kind of machine that can help any plant to express its needs at a speed that we can actually perceive and understand. Or should I reformulate in a less human-centric way: a machine that can help humans understand what the plants have to say.&lt;/p&gt;
+
+&lt;h2 id="a-machine-that-helps-us-understand-plants"&gt;A machine that helps us understand plants&lt;/h2&gt;
+
+&lt;p&gt;The machine I have in mind is able to get the data from a plant [temperature, light level, air quality,...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Thu, 02 Apr 2020 00:00:00 +0200</pubDate></item><item><title>The Green Observatory: Overview</title><link>https://antoine.studio/fabac-finalproject-overview.html</link><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
 
 &lt;p&gt;A device that transforms the electrical activity of plants into a physical and meditative movement that we, humans, can observe and contemplate.&lt;/p&gt;
 
@@ -158,16 +185,4 @@ A tool for documenting the things I learn.&lt;/p&gt;
 
 &lt;p&gt;&lt;a target="_blank" href="btn:http://board.antoine.studio/?controller=BoardViewController&amp;amp;action=readonly&amp;amp;token=3d91cde4a718ce18cd986a67eff38899f8eb1612ddae621507a00da28f4f"&gt;Kanban board&lt;/a&gt;
 &lt;a target="_blank" href="btn:https://docs.google.com/spreadsheets/d/1nhU3fjO-yuVyLYuE5AC39vmvim1dWyxoJ2PYOr6acvA/edit?usp=sharing"&gt;List of materials&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id="structure"&gt;Structure&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src="structure-overview-01.png" alt="structure overview" /&gt;
-&lt;img src="structure-detai...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Thu, 21 May 2020 00:00:00 +0200</pubDate></item><item><title>Sketches, ideas and principles</title><link>https://antoine.studio/fabac-projects-sketches-ideas.html</link><description>&lt;p&gt;This page is where I collect some of my thoughts on my final project idea.&lt;/p&gt;
-
-&lt;h2 id="listen-to-what-the-plants-have-to-say"&gt;Listen to what the plants have to say&lt;/h2&gt;
-
-&lt;p&gt;Plants communicate as we do. But it's hardly noticeable for us because we don't send and receive signals at the same speed as they do. This is why I would like to build a kind of machine that can help any plant to express its needs at a speed that we can actually perceive and understand. Or should I reformulate in a less human-centric way: a machine that can help humans understand what the plants have to say.&lt;/p&gt;
-
-&lt;h2 id="a-machine-that-helps-us-understand-plants"&gt;A machine that helps us understand plants&lt;/h2&gt;
-
-&lt;p&gt;The machine I have in mind is able to get the data from a plant [temperature, light level, air quality,...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Wed, 01 Apr 2020 00:00:00 +0200</pubDate></item></channel></rss>
+...</description><author>antoine.stuff@pm.me (Antoine Jaunard)</author><pubDate>Wed, 01 Apr 2020 00:00:00 +0200</pubDate></item></channel></rss>
