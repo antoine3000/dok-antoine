@@ -74,7 +74,7 @@ a {
   h1, h2, h3, h4, h5, h6 {
     margin: 1em 0 0.5em 0;
   }
-  p, ul, ol, blockquote, table {
+  p, ul, ol, blockquote, .table, video {
     margin-bottom: 1em;
   }
   p + p {
@@ -113,5 +113,22 @@ a {
   pre {
     padding: 1em;
     overflow-x: auto;
+  }
+  .table {
+    overflow-x: auto;
+    border: $border-sm solid $base-color;
+    width: 100%;
+  }
+  table {
+    min-width: 100%;
+    th {@extend %ts-title-3;}
+    thead {border-bottom: $border-sm solid $base-color;}
+    td, th {
+      padding: $size-sm $size-md;
+      white-space: nowrap;
+    }
+    tr:nth-child(even) {
+      background-color: rgba($base-color, .1);
+    }
   }
 }

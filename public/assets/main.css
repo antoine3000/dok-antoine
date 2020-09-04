@@ -112,7 +112,7 @@ a {
   font-family: "jetbrains-bold", Helvetica, Arial, sans-serif;
   font-size: 1.25rem; }
 
-.toc__title--sub, .ts h3 {
+.toc__title--sub, .ts table th, .ts h3 {
   font-family: "jetbrains-bold", Helvetica, Arial, sans-serif;
   font-size: 1rem; }
 
@@ -128,7 +128,7 @@ a {
 .ts h1, .ts h2, .ts h3, .ts h4, .ts h5, .ts h6 {
   margin: 1em 0 0.5em 0; }
 
-.ts p, .ts ul, .ts ol, .ts blockquote, .ts table {
+.ts p, .ts ul, .ts ol, .ts blockquote, .ts .table, .ts video {
   margin-bottom: 1em; }
 
 .ts p + p {
@@ -161,6 +161,21 @@ a {
 .ts pre {
   padding: 1em;
   overflow-x: auto; }
+
+.ts .table {
+  overflow-x: auto;
+  border: 1px solid #000000;
+  width: 100%; }
+
+.ts table {
+  min-width: 100%; }
+  .ts table thead {
+    border-bottom: 1px solid #000000; }
+  .ts table td, .ts table th {
+    padding: 0.75rem 1rem;
+    white-space: nowrap; }
+  .ts table tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.1); }
 
 .header {
   display: flex;
@@ -228,7 +243,7 @@ img {
 .article__title {
   margin-bottom: 0.5rem; }
 
-.article__content > *:not(figure):not(pre) {
+.article__content > *:not(figure):not(pre):not(video) {
   max-width: 640px; }
 
 .article__featured {
@@ -275,6 +290,9 @@ img {
   background-color: #0000FF;
   color: #FFFFFF;
   padding: 1.25rem; }
+
+.ts video {
+  max-width: 100%; }
 
 html {
   font-size: 15px; }

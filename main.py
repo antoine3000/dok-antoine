@@ -85,6 +85,10 @@ def html_update(html, slug):
     file_link = '<a target="_blank" href="medias/' + slug + '-'
     html = html.replace('<img src="', img_tag)
     html = html.replace('<video><source src="', video_tag)
+    html = html.replace('<p><video', '<video')
+    html = html.replace('</video></p>', '</video>')
+    html = html.replace('<table>', '<div class="table"><table>')
+    html = html.replace('</table>', '</table></div>')
     html = html.replace('<a target="_blank" href="file:', file_link)
     html = html.replace('<p>TODO:', '<p class="todo">To do:')
     html = html.replace('href="button:', 'class="btn" href="')
