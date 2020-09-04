@@ -94,11 +94,13 @@ body {
   font-family: "jetbrains-italic", Helvetica, Arial, sans-serif; }
 
 a {
-  color: #0000FF;
-  text-decoration: none; }
+  color: #000000;
+  text-decoration: none;
+  background-color: #F9F9AC; }
   a:hover {
-    color: #0000FF;
-    text-decoration: underline; }
+    color: #000000;
+    text-decoration: underline;
+    background-color: #F9F9AC; }
 
 .article__title, .intro p, .index__title {
   font-family: "jetbrains-bold", Helvetica, Arial, sans-serif;
@@ -287,7 +289,7 @@ img {
 
 .ts .btn {
   display: table;
-  background-color: #0000FF;
+  background-color: #F9F9AC;
   color: #FFFFFF;
   padding: 1.25rem; }
 

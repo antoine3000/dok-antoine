@@ -29,11 +29,13 @@
 
 // Text styles - definition
 %ts-link {
-  color: $action-color;
+  color: $base-color;
   text-decoration: none;
+  background-color: $action-color;
   &:hover {
-    color: $action-color;
+    color: $base-color;
     text-decoration: underline;
+    background-color: $action-color;
   }
 }
 %ts-title-0 {
