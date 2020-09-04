@@ -11,7 +11,7 @@ One of my goals for this academy is to use only open-source tools. I want to be 
 > Practice shapes tools, tools shape practice
 > > [Open Source Publishing](http://osp.kitchen/)
 
-## My computer
+# My computer
 
 Few months ago, I decided to switch from the closed Apple ecosystem to the wonderful and open world of Linux. I'm running [Elementary OS](https://elementary.io/), a distribution based on Ubuntu, on a mid-2014 macbook pro. This machine isn't the more convenient to run a Linux distribution but I will keep using it as long as I can, even if I have some tiny hardware issues, simply because the more sustainable computer is the one I already have.
 
@@ -150,6 +150,6 @@ Configure an alias to display the commit-tree:  `git config --global alias.gg 'l
 
 # MISC
 
-### Video compression
+## Video compression
 
 `ffmpeg -i video.mp4 -b 1000000 compressed-video.mp4` or `ffmpeg -i video.mp4 -b 1000000 -t 10 compressed-video.mp4` where `-t 10` is the duration (10 sec.)

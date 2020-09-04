@@ -8,7 +8,7 @@
   margin-bottom: $size-xs;
 }
 .article__content {
-  & > *:not(figure) {
+  & > *:not(figure):not(pre) {
     max-width: $content-max-width;
   }
 }

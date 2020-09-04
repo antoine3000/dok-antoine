@@ -159,7 +159,8 @@ a {
   padding: 0.15em 0.4em; }
 
 .ts pre {
-  padding: 1em; }
+  padding: 1em;
+  overflow-x: auto; }
 
 .header {
   display: flex;
@@ -227,7 +228,7 @@ img {
 .article__title {
   margin-bottom: 0.5rem; }
 
-.article__content > *:not(figure) {
+.article__content > *:not(figure):not(pre) {
   max-width: 640px; }
 
 .article__featured {
