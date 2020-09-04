@@ -1,0 +1,10 @@
+// Intro
+
+.intro {
+  margin-bottom: $size-xl;
+  @extend %container-padding;
+  max-width: $content-max-width;
+  p {
+    @extend %ts-title-0;
+  }
+}

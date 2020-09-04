@@ -1,0 +1,34 @@
+// Header
+.header {
+  display: flex;
+  margin-top: $size-md;
+  margin-bottom: $size-xl;
+  @extend %container-padding;
+  .title {
+    margin-right: $size-sm;
+  }
+}
+
+// Navigation
+.nav__list {
+  list-style: none;
+  display: flex;
+}
+.nav__item {
+  display: block;
+  &:not(:last-child) {
+    margin-right: $size-sm;
+  }
+}
+
+// Footer
+.footer {
+  @extend %container-padding;
+  margin-top: $size-xxl;
+  padding-bottom: $size-lg;
+}
+
+// Image
+img {
+  display: block;
+}

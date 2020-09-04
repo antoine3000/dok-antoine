@@ -1,0 +1,86 @@
+// Typography
+
+%font-base {
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.6;
+  word-spacing: -0.3em;
+}
+
+%font-body {
+  font-family: $font-body;
+  @extend %font-base;
+}
+
+%font-body-italic {
+  font-family: $font-body-italic;
+  @extend %font-base;
+}
+
+%font-body-bold {
+  font-family: $font-body-bold;
+  @extend %font-base;
+}
+
+%font-body-bold-italic {
+  font-family: $font-body-bold-italic;
+  @extend %font-base;
+}
+
+// Text styles - definition
+%ts-link {
+  color: $action-color;
+  text-decoration: none;
+  &:hover {
+    color: $action-color;
+    text-decoration: underline;
+  }
+}
+%ts-title-0 {
+  font-family: $font-body-bold;
+  font-size: $size-xxl;
+}
+%ts-title-1 {
+  font-family: $font-body-bold;
+  font-size: $size-xl;
+}
+%ts-title-2 {
+  font-family: $font-body-bold;
+  font-size: $size-lg;
+}
+%ts-title-3 {
+  font-family: $font-body-bold;
+  font-size: $size-md;
+}
+%ts-title-4 {
+  font-family: $font-body;
+  font-size: $size-md;
+}
+%ts-small {
+  font-family: $font-body;
+  font-size: $size-sm;
+}
+
+// Text styles - application
+a {
+  @extend %ts-link;
+}
+
+.ts {
+  h1 {@extend %ts-title-1;}
+  h2 {@extend %ts-title-2;}
+  h3 {@extend %ts-title-3;}
+  h4, h5, h6 {@extend %ts-title-4;}
+  h1, h2, h3, h4, h5, h6 {
+    margin: 1em 0 0.5em 0;
+  }
+  p, ul, ol, blockquote, table {
+    margin-bottom: 1em;
+  }
+  ul {
+    padding-left: 1em;
+  }
+  ol {
+    padding-left: 2em;
+  }
+}

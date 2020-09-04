@@ -1,0 +1,14 @@
+<li class="index__item">
+  {% include "components/index_item_content.html" %}
+  {% if article.childs %}
+  <ul class="index__list--sub">
+    {% for child in article.childs %}
+    <li class="index__item--sub">
+      {% with article=child %}
+      {% include "components/index_item_content.html" %}
+      {% endwith %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</li>
