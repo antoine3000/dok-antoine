@@ -81,7 +81,7 @@ textarea {
   padding-left: 1.5rem;
   padding-right: 1.5rem; }
 
-body {
+.ts .todo, body {
   font-style: normal;
   font-weight: normal;
   line-height: 1.6;
@@ -89,6 +89,9 @@ body {
 
 body {
   font-family: "jetbrains-regular", Helvetica, Arial, sans-serif; }
+
+.ts .todo {
+  font-family: "jetbrains-italic", Helvetica, Arial, sans-serif; }
 
 a {
   color: #0000FF;
@@ -192,14 +195,13 @@ img {
   margin-right: 0.75rem; }
 
 .intro {
-  margin-bottom: 1.5rem;
-  max-width: 810px; }
+  margin-bottom: 1.5rem; }
 
 .article__title {
   margin-bottom: 0.5rem; }
 
 .article__content > *:not(figure) {
-  max-width: 810px; }
+  max-width: 640px; }
 
 .article__featured {
   margin-top: 1.25rem; }
@@ -234,6 +236,17 @@ img {
 
 .article footer {
   margin-top: 1.5rem; }
+
+.ts .todo {
+  display: table;
+  border: 1px dotted #000000;
+  padding: 0.75rem; }
+
+.ts .btn {
+  display: table;
+  background-color: #0000FF;
+  color: #FFFFFF;
+  padding: 1.25rem; }
 
 html {
   font-size: 15px; }

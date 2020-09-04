@@ -59,10 +59,14 @@ def metadata(article, slug, level, parent=None):
     article_metadata['title'] = article_metadata['title']
     article_metadata['content'] = articles[slug]['content']
     article_metadata['slug'] = slug
-    article_metadata['publication_date'] = datetime.strptime(
+    publication_date = datetime.strptime(
         article[:10], '%Y-%m-%d').strftime('%d/%m/%Y')
-    article_metadata['last_update'] = datetime.strptime(
-        article_metadata['last_update'], '%Y-%m-%d').strftime('%d/%m/%Y')
+    article_metadata['publication_date'] = publication_date
+    if 'last_update' in article_metadata:
+        article_metadata['last_update'] = datetime.strptime(
+            article_metadata['last_update'], '%Y-%m-%d').strftime('%d/%m/%Y')
+    else:
+        article_metadata['last_update'] = publication_date
     article_metadata['level'] = level
     if articles[slug]['content'].toc_html:
         article_metadata['toc'] = articles[slug]['content'].toc_html
@@ -82,7 +86,7 @@ def html_update(html, slug):
     html = html.replace('<img src="', img_tag)
     html = html.replace('<video><source src="', video_tag)
     html = html.replace('<a target="_blank" href="file:', file_link)
-    html = html.replace('<p>TODO:', '<p class="todo">TODO:')
+    html = html.replace('<p>TODO:', '<p class="todo">To do:')
     html = html.replace('href="button:', 'class="btn" href="')
     # figure
     soup = BeautifulSoup(html, 'lxml')

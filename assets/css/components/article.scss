@@ -67,3 +67,19 @@
 .article footer {
   margin-top: $size-xl;
 }
+
+// Todo's
+.ts .todo {
+  display: table;
+  @extend %font-body-italic;
+  border: $border-sm dotted $base-color;
+  padding: $size-sm;
+}
+
+// Button
+.ts .btn {
+  display: table;
+  background-color: $action-color;
+  color: $body-color;
+  padding: $size-lg;
+}
