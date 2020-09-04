@@ -81,7 +81,7 @@ textarea {
   padding-left: 1.5rem;
   padding-right: 1.5rem; }
 
-.ts .todo, body {
+.ts .todo, .ts blockquote p, body {
   font-style: normal;
   font-weight: normal;
   line-height: 1.6;
@@ -90,7 +90,7 @@ textarea {
 body {
   font-family: "jetbrains-regular", Helvetica, Arial, sans-serif; }
 
-.ts .todo {
+.ts .todo, .ts blockquote p {
   font-family: "jetbrains-italic", Helvetica, Arial, sans-serif; }
 
 a {
@@ -108,7 +108,7 @@ a {
   font-family: "jetbrains-bold", Helvetica, Arial, sans-serif;
   font-size: 1.5rem; }
 
-.ts h2 {
+.index:not(.index--featured) .index__link, .ts h2 {
   font-family: "jetbrains-bold", Helvetica, Arial, sans-serif;
   font-size: 1.25rem; }
 
@@ -120,7 +120,8 @@ a {
   font-family: "jetbrains-regular", Helvetica, Arial, sans-serif;
   font-size: 1rem; }
 
-.article figure figcaption {
+.article figure figcaption, .index--list .index__tags,
+.index--list .index__update, .ts blockquote blockquote p {
   font-family: "jetbrains-regular", Helvetica, Arial, sans-serif;
   font-size: 0.75rem; }
 
@@ -130,11 +131,35 @@ a {
 .ts p, .ts ul, .ts ol, .ts blockquote, .ts table {
   margin-bottom: 1em; }
 
+.ts p + p {
+  margin-top: -0.5em; }
+
 .ts ul {
   padding-left: 1em; }
 
 .ts ol {
   padding-left: 2em; }
+
+.ts blockquote {
+  border-left: 1px dotted #000000; }
+  .ts blockquote p {
+    font-size: 1.25rem;
+    padding-left: 1.25rem;
+    margin-bottom: 0; }
+  .ts blockquote blockquote {
+    border: none;
+    margin: 0; }
+
+.ts code,
+.ts pre {
+  background: #000000;
+  color: #FFFFFF; }
+
+.ts code {
+  padding: 0.15em 0.4em; }
+
+.ts pre {
+  padding: 1em; }
 
 .header {
   display: flex;
@@ -179,6 +204,8 @@ img {
 
 .index--featured .index__link {
   display: block; }
+  .index--featured .index__link > *:not(img) {
+    max-width: 640px; }
 
 .index--featured .item__image {
   max-width: 100%;

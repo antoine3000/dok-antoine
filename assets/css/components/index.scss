@@ -24,6 +24,16 @@
   .index__item--sub:before {
     content: "----";
   }
+  .index__tags,
+  .index__update {
+    @extend %ts-small;
+  }
+}
+
+.index:not(.index--featured) {
+  .index__link {
+    @extend %ts-title-2;
+  }
 }
 
 // Index featured
@@ -33,6 +43,9 @@
   }
   .index__link {
     display: block;
+    & > *:not(img) {
+      max-width: $content-max-width;
+    }
   }
   .item__image {
     max-width: 100%;

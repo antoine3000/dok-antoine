@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title property="schema:name">antoine.studio</title>
+<meta content="Documentation website of Antoine Jaunard" name="description"/>
+<meta content="Dok" property="schema:name"/>
+<meta content="Documentation website of Antoine Jaunard" property="schema:description"/>
+<link href="assets/main.min.css" rel="stylesheet"/>
+</head>
+<body>
+<main class="main">
+<header class="header">
+<nav class="nav">
+<ul class="nav__list">
+<li class="nav__item">
+<a class="nav__link" href="index.html">antoine.studio</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="content.html">content</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="about.html">about</a>
+</li>
+</ul>
+</nav>
+</header>
+<article class="article">
+<!-- title -->
+<h1 class="article__title">Project management</h1>
+<!-- parent -->
+<!-- tags -->
+<p class="article__tags">Tags:
+      
+      <a href="fab-academy-assignments.html">#fab-academy-assignments</a>
+</p>
+<!-- featured image -->
+<!-- toc -->
+<section class="article__toc">
+<h2 class="toc__title">Table of content</h2>
+<div class="toc__list"><ul>
+<li><a href="#my-computer">My computer</a></li>
+</ul>
+<li><a href="#my-ideal-documentation-tool">My ideal documentation tool</a>
+<ul>
+<li><a href="#sources">Sources</a></li>
+<li><a href="#core-functionalities">Core functionalities</a>
+<ul>
+<li><a href="#content-organization">Content organization</a></li>
+<li><a href="#website-generation">Website generation</a></li>
+<li><a href="#image-optimization">Image optimization</a></li>
+<li><a href="#dependencies">Dependencies</a></li>
+<li><a href="#project-structure">Project structure</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#git-cheatsheet">GIT cheatsheet</a>
+<ul>
+<li><a href="#useful-commands">Useful commands</a>
+<ul>
+<li><a href="#visualization">Visualization</a></li>
+<li><a href="#configuration">Configuration</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#misc">MISC</a>
+<ul>
+<li><a href="#video-compression">Video compression</a></li>
+</ul>
+</li></div>
+</section>
+<section class="article__content ts">
+<p>An important part of the <a href="https://fabacademy.org/" target="_blank">Fab Academy</a>, apart from learning digital fabrication techniques, consists of documenting everything we do in order to create a shared and open knowledge base between all students, and for everybody.</p>
+<p>One of my goals for this academy is to use only open-source tools. I want to be able to see what is inside the tools I use, modify it in case of need and share with others the projects I do with the environment necessary for their functioning.</p>
+<blockquote>
+<p>Practice shapes tools, tools shape practice</p>
+<blockquote>
+<p><a href="http://osp.kitchen/" target="_blank">Open Source Publishing</a></p>
+</blockquote>
+</blockquote>
+<h2 id="my-computer">My computer</h2>
+<p>Few months ago, I decided to switch from the closed Apple ecosystem to the wonderful and open world of Linux. I'm running <a href="https://elementary.io/" target="_blank">Elementary OS</a>, a distribution based on Ubuntu, on a mid-2014 macbook pro. This machine isn't the more convenient to run a Linux distribution but I will keep using it as long as I can, even if I have some tiny hardware issues, simply because the more sustainable computer is the one I already have.</p>
+<ul>
+<li>Text editor: <a href="https://vscodium.com/" target="_blank">VSCodium</a> + <a href="https://neovim.io/" target="_blank">NeoVim</a></li>
+<li>Terminal: <a href="https://github.com/software-jessies-org/jessies/wiki/Terminator" target="_blank">Terminator</a></li>
+<li>version control system: <a href="https://git-scm.com/" target="_blank">GIT</a></li>
+<li>Static site generator: my own "spaghetti script" that I wrote in Python</li>
+<li>Browser: <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a></li>
+</ul>
+<p class="todo">To do: Update the content, since I now use Manjaro Linux.</p>
+<h1 id="my-ideal-documentation-tool">My ideal documentation tool</h1>
+<p>My ideal documentation tool is as light as possible and requires very little energy to operate; is perfectly understandable and does the tasks I want it to do - nothing more; evolves with my needs; has no Javascript, no cookies, no trackers.</p>
+<blockquote>
+<p>A sustainable website means ensuring support for older hardware, slower networks and improving the portability and archivability of the blog’s content.</p>
+<blockquote>
+<p><a href="https://homebrewserver.club/low-tech-website-howto.html" target="_blank">Homebrewserver.club</a> / <a href="https://solar.lowtechmagazine.com/2018/09/how-to-build-a-lowtech-website.html" target="_blank">Low-tech Magazine</a></p>
+</blockquote>
+</blockquote>
+<p>The best way to meet these requirements and to fully understand how it works is to write it, from scratch. So that's what I did, and that's what you have in front of you right now.</p>
+<p>It may not be as efficient or extensible as other static site generators (like <a href="https://gohugo.io/" target="_blank">Hugo</a>, <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> or <a href="https://blog.getpelican.com/" target="_blank">Pelican</a>) but everything works pretty well and I am satisfied with the tool I made, it is minimal and matches my values.</p>
+<h2 id="sources">Sources</h2>
+<p>This documentation tool is open-source by default, as all the things I (try to) do. Sources are available on <a href="https://gitlab.com/antoine.j/dok-antoine-studio" target="_blank">Gitlab</a>.</p>
+<p>Feel free to use it, copy it, do whatever you want, but keep in mind that it was written in one specific context and may not work properly in another.</p>
+<h2 id="core-functionalities">Core functionalities</h2>
+<p>In order to be able to develop this low-tech static site generator myself, I have to keep it simple and add functionalities one after the other according to my needs, as show in a <a href="https://en.wikipedia.org/wiki/Spiral_model" target="_blank">spiral model methodology</a>, in order to keep a tool wich works.</p>
+<p class="todo">To do: Update the content, since I refactored everything :-)</p>
+<p>Files are organized in different folders depending on the content type (pages/articles/assignments/flux), for clarity. Articles are written in <a href="https://en.wikipedia.org/wiki/Markdown" target="_blank">markdown</a>, to facilitate the writing process. Images are optimized and resized on the fly, to keep the generated website as light as possible. URLs are simple and stay the same even if the project architecture changes, because I might break it more than once.</p>
+<h3 id="content-organization">Content organization</h3>
+<p>There are four main types of content: <code>assignments/</code> (for our weekly assignments), <code>posts/</code> (for additional content that may not be linked to the academy), <code>pages/</code> (for more generic purposes), <code>flux/</code> (different from the others, it will only be used to display a grid of images).</p>
+<p>To add an new article inside the folder related to the desired content type (assignments, posts, pages), make a new directory named as follows: <code>YYYY-MM-DD-article-title</code>. The script will store the title to make the URL of the article and the date to keep things organized. Inside this newly created folder: create a <code>index.md</code> file wich will contain the text content and add the images (if necessary).</p>
+<h3 id="website-generation">Website generation</h3>
+<p>In order to run the script and therefore to generate the html files, go to the project folder (<code>cd Websites/antoine</code> in my case), and run <code>python main.py</code>.</p>
+<p>The script will generate the html files from the markdown files using the html templates written in <code>templates</code>. It will also copy the images from the content folder to the <code>public/medias</code> folder while compressing them. Refresh your web browser to see the changes.</p>
+<h3 id="image-optimization">Image optimization</h3>
+<p>Depending on the file format of the images, the script may or may not optimize them. If an image is formatted as <code>.jpg</code>, <code>.jpeg</code> or <code>.png</code>, the script will resize it to acceptable size for the web. This will not modify the <code>.gif</code> images as it is a little more complex to manage without losing important attributes such as animation.</p>
+<h3 id="dependencies">Dependencies</h3>
+<p>Even though I tried to keep the dependencies as low as possible, I had to use some existing tools to create mine. I will try to narrow the list when I gain more knowledge about programming in Python.</p>
+<pre>
+import os
+import shutil
+from datetime import datetime
+from jinja2 import Environment, FileSystemLoader
+from markdown2 import markdown
+from PIL import Image
+</pre>
+<h3 id="project-structure">Project structure</h3>
+<pre>
+content/
+- assignments/
+- - 2020-01-01-assignement-title/
+- - - index.md
+- flux/
+- - image.jpg
+- pages/
+- - 2020-01-01-page-title/
+- - - index.md
+- posts/
+- - 2020-01-01-post-title/
+- - - index.md
+public
+templates
+- article.html
+- base.html
+- flux.html
+- home.html
+- index.html
+main.py
+</pre>
+<h1 id="git-cheatsheet">GIT cheatsheet</h1>
+<p>Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</p>
+<h2 id="useful-commands">Useful commands</h2>
+<p>Start a project from scratch: <code>git init</code> and then <code>git remote add origin {repository-url}</code></p>
+<p>Pull the last commits from the distant server: <code>git pull</code></p>
+<p>Add all the modifications to the stack: <code>git add .</code></p>
+<p>Do a commit with a description: <code>git commit -m "message"</code></p>
+<p>Push the commit(s) on the distant server: <code>git push</code></p>
+<p>Discard the changes on uncommited files: <code>git checkout .</code></p>
+<p>Create a new branch: <code>git branch {new-branch}</code></p>
+<p>Merge the current branch with another: <code>git merge {other-branch}</code></p>
+<p>Delete a local branch: <code>git branch -d {local-branch}</code></p>
+<p>Delete a remote branch: <code>git push origin --delete {remote-branch}</code></p>
+<p>Change your working branch: <code>git checkout {branch-name}</code></p>
+<h3 id="visualization">Visualization</h3>
+<p>Get the repo's status <code>git status</code> or the repo's history: <code>git log</code></p>
+<p>Get the list of branches:  <code>git branch</code> or <code>git branch -v</code> to get more info</p>
+<p>Get the the commit-tree of all branches: <code>git log --oneline --abbrev-commit --all --graph --decorate --color</code></p>
+<h3 id="configuration">Configuration</h3>
+<p>Keep the password in memory for the next 8 hours: <code>git config --global credential.helper 'cache --timeout 28800'</code></p>
+<p>Add a shortcut to add and commit at the same time: <code>git config --global alias.ac '!git add -A &amp;&amp; git commit'</code> and then <code>git ac -m "message"</code></p>
+<p>Configure an alias to display the commit-tree:  <code>git config --global alias.gg 'log --oneline --abbrev-commit --all --graph --decorate --color'</code> and then use <code>git gg</code></p>
+<h1 id="misc">MISC</h1>
+<h3 id="video-compression">Video compression</h3>
+<p><code>ffmpeg -i video.mp4 -b 1000000 compressed-video.mp4</code> or <code>ffmpeg -i video.mp4 -b 1000000 -t 10 compressed-video.mp4</code> where <code>-t 10</code> is the duration (10 sec.)</p>
+</section>
+<footer>
+<p>✎ <span>Created</span> 03/02/2020</p>
+<p>⁂ <span>Updated</span> 04/09/2020</p>
+</footer>
+</article>
+<footer class="footer">
+<p>Antoine Jaunard ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a></p>
+</footer>
+</main>
+</body>
+</html>

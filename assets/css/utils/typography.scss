@@ -77,10 +77,40 @@ a {
   p, ul, ol, blockquote, table {
     margin-bottom: 1em;
   }
+  p + p {
+    margin-top: -0.5em;
+  }
   ul {
     padding-left: 1em;
   }
   ol {
     padding-left: 2em;
+  }
+  blockquote {
+    border-left: $border-sm dotted $base-color;
+    p {
+      font-size: $size-lg;
+      @extend %font-body-italic;
+      padding-left: $size-lg;
+      margin-bottom: 0;
+    }
+    blockquote {
+      border: none;
+      margin: 0;
+      p {
+        @extend %ts-small;
+      }
+    }
+  }
+  code,
+  pre {
+    background: $base-color;
+    color: $body-color;
+  }
+  code {
+    padding: 0.15em 0.4em;
+  }
+  pre {
+    padding: 1em;
   }
 }
