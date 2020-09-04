@@ -114,6 +114,7 @@ def html_update(html, slug):
 
 # get everything
 content_0 = os.listdir(c)
+content_0.sort()
 for folder in content_0:
     # level 1
     folder_slug = folder[11:]
@@ -130,7 +131,9 @@ for folder in content_0:
                 article_items(subfolder_slug,  c + folder + '/' + subfolder)
                 articles[subfolder_slug]['metadata'] = metadata(
                     subfolder, subfolder_slug, 2, folder_slug)
+
 articles_metadata = [articles[article]['metadata'] for article in articles]
+
 print("⁂  Data: Collected")
 print("⁂  Images: Processed")
 
@@ -178,6 +181,7 @@ print("⁂  Tag pages: Created")
 
 # Reverse order
 articles_metadata.reverse()
+
 # Generate content page
 content_template = env.get_template('content.html')
 content_html = content_template.render(articles=articles_metadata, tags=tags)
