@@ -1,6 +1,7 @@
 ---
 title: About
 type: page
+last_update: 2020-09-04
 ---
 
 Bonjour, my name is Antoine Jaunard (1990) and I'm from Brussels, Belgium. I recently moved to Barcelona (ES) via a lovely detour by Amsterdam (NL).
@@ -28,7 +29,7 @@ It was all about learning how to learn, hacking systems, building things without
 
 # About this website
 
-This website is my digital studio, a place where I can experiment without constraints.
+This website is my digital studio, a place where I can experiment without i.
 
 It's also my personal assistant, it helps me when I doubt on how to do something I have done before. It invites me to write (and then find) my personal knowledge online.
 A tool for documenting the things I learn.
