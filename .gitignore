@@ -4,3 +4,6 @@ Pipfile.lock
 
 content/*/**/*.*
 !content/*/**/*.md
+
+.git
+.vscode

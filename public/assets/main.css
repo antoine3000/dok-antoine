@@ -193,13 +193,13 @@ img {
 
 .intro {
   margin-bottom: 1.5rem;
-  max-width: 760px; }
+  max-width: 810px; }
 
 .article__title {
   margin-bottom: 0.5rem; }
 
 .article__content > *:not(figure) {
-  max-width: 760px; }
+  max-width: 810px; }
 
 .article__featured {
   margin-top: 1.25rem; }
