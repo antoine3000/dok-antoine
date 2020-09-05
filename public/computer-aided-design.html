@@ -64,9 +64,9 @@
 <h1 id="gimp">GIMP</h1>
 <p>GIMP is a raster graphics editor used for image retouching and editing, converting between different image formats, free-form drawing, …</p>
 <p><code>$ sudo apt-get install gimp</code></p>
-<figure><img alt="references" src="medias/computer-aided-design-references-making.jpg"><figcaption>references</figcaption></figure>
+<p><figure class="md"><img alt="references" src="medias/computer-aided-design-references-making.jpg"><figcaption>references</figcaption></figure>
 <p>Even if I only used GIMP to draw a quick moodboard for my project, I directly had a good feeling with it, the software seems robust and well designed. There's a huge online community behind it, which makes finding tips and tricks super easy.</p>
-<figure><img alt="references" src="medias/computer-aided-design-references.jpg"><figcaption>references</figcaption></figure>
+<p><figure class="md"><img alt="references" src="medias/computer-aided-design-references.jpg"><figcaption>references</figcaption></figure>
 <p>File: <a href="https://cloud.antoine.studio/index.php/s/RKRdTDDCXPsSt4t/download?path=%2F02-cad&amp;files=references.xcf" target="_blank">references.xcf</a></p>
 <h2 id="shortcuts">Shortcuts</h2>
 <ul>
@@ -79,9 +79,9 @@
 <h1 id="inkscape">Inkscape</h1>
 <p>Inkscape is a vector graphics editor.</p>
 <p><code>$ sudo apt-get install inkscape</code></p>
-<figure><img alt="schema" src="medias/computer-aided-design-schema-making.png"><figcaption>schema</figcaption></figure>
+<p><figure class="md"><img alt="schema" src="medias/computer-aided-design-schema-making.png"><figcaption>schema</figcaption></figure>
 <p>I used Inkscape to draw a basic but vector schema of my project. I did not have a good experience with this software: I had a few bugs, the software crashed several times, the manipulation of the vectors was not precise. Surely I need to spend more time on it, maybe to tweak it a bit, because the community behind the software seems to agree that it has great potential. Next time, I will try a Python script experiment, an area where Inkscape seems very interesting.</p>
-<figure><img alt="schema" src="medias/computer-aided-design-schema.png"><figcaption>schema</figcaption></figure>
+<p><figure class="md"><img alt="schema" src="medias/computer-aided-design-schema.png"><figcaption>schema</figcaption></figure>
 <p>File: <a href="medias/computer-aided-design-schema.svg" target="_blank">schema.svg</a></p>
 <h2 id="shortcuts-2">Shortcuts</h2>
 <ul>
@@ -99,11 +99,11 @@
 <h1 id="openscad">OpenSCAD</h1>
 <p>OpenSCAD is a software for creating solid 3D CAD (computer-aided design) objects. It is a script-only based modeller that uses its own description language; parts can be previewed, but it cannot be interactively selected or modified by mouse in the 3D view. An OpenSCAD script specifies geometric primitives (such as spheres, boxes, cylinders, etc.) and defines how they are modified and combined (for instance by intersection, difference, envelope combination and Minkowski sums) to render a 3D model.</p>
 <p><code>$ sudo apt-get install openscad</code></p>
-<figure><img alt="openscad-box-1" src="medias/computer-aided-design-openscad-box-1.png"><figcaption>openscad-box-1</figcaption></figure>
+<p><figure class="md"><img alt="openscad-box-1" src="medias/computer-aided-design-openscad-box-1.png"><figcaption>openscad-box-1</figcaption></figure>
 <p>I really like the approach of using code to create 3D model. It's parametric by design, everything is always visible in the code (no secret), versioning is possible with GIT, sharing sources is light and easy. Even if writing code can scare some people, I think OpenSCAD remains the most accessible software for modeling 3D objects.</p>
 <p>Make sure to always have <a href="https://www.openscad.org/cheatsheet/index.html" target="_blank">this cheatsheet</a> close to you while writing models.</p>
 <p>I used OpenSCAD to design a basic printable box. As you can see in the second image, the modification of certain variables (declared at the top of the document) creates a new box.</p>
-<figure><img alt="openscad-box-2" src="medias/computer-aided-design-openscad-box-2.png"><figcaption>openscad-box-2</figcaption></figure>
+<p><figure class="md"><img alt="openscad-box-2" src="medias/computer-aided-design-openscad-box-2.png"><figcaption>openscad-box-2</figcaption></figure>
 <p>And here is the source code:</p>
 <pre>
 $fn = 40;
@@ -153,15 +153,15 @@ translate([width*2 + radius, 0, 0]){
 <h1 id="freecad">FreeCAD</h1>
 <p>Freecad is general-purpose parametric 3D CAD modeler software made to design real-life objects of any size. It is highly customizable and extensible and it can read and write to many open file formats.</p>
 <p><code>$ sudo apt-get install freecad</code></p>
-<figure><img alt="freecad-tutorial" src="medias/computer-aided-design-freecad-tutorial.png"><figcaption>freecad-tutorial</figcaption></figure>
+<p><figure class="md"><img alt="freecad-tutorial" src="medias/computer-aided-design-freecad-tutorial.png"><figcaption>freecad-tutorial</figcaption></figure>
 <p>File: <a href="medias/computer-aided-design-freecad-test.FCStd" target="_blank">freecad-test.FCStd</a></p>
 <p>FreeCAD seems to have everything we need to design parts and machines, it seems really powerful. The thing that annoys me a little is the interface, I feel it over-complicated and I get lost easily, without knowing what I am doing. Maybe it comes from the fact that I "fell in love" with the "simplicity" of OpenSCAD? Anyway, I will have to use FreeCAD and OpenSCAD together, and I am quite satisfied with all the possibilities it offers.</p>
 <p>Each view has a custom set of tools. So it's important to switch to the appropriated view before doing some manipulations. The more useful ones are <code>Sketcher</code> and <code>Part Design</code>.</p>
 <h1 id="blender">Blender</h1>
 <p>Blender is 3D computer graphics software used for creating animated films, visual effects, 3D printed models, motion graphics, …</p>
 <p>Installation: <code>$ sudo snap install blender --classic</code></p>
-<figure><img alt="setup" src="medias/computer-aided-design-setup.jpg"><figcaption>setup</figcaption></figure>
-<figure><img alt="setup2" src="medias/computer-aided-design-setup2.jpg"><figcaption>setup2</figcaption></figure>
+<p><figure class="md"><img alt="setup" src="medias/computer-aided-design-setup.jpg"><figcaption>setup</figcaption></figure>
+<figure class="md"><img alt="setup2" src="medias/computer-aided-design-setup2.jpg"><figcaption>setup2</figcaption></figure>
 <p>Blender is super powerful and can be used in a wide variety of fields. I don't see any real use for me right now, as I mainly focus on exporting models from my computer to the real world, instead of polishing virtual things. However, it will be my weapon of choice for quickly sketching an idea in 3D and animating it if necessary.</p>
 <p>File: <a href="medias/computer-aided-design-setup.blend" target="_blank">setup.blend</a></p>
 <h2 id="shortcuts-3">Shortcuts</h2>

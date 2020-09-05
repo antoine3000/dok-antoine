@@ -78,6 +78,9 @@ def metadata(article, slug, level, parent=None):
     articles[slug]['metadata'] = article_metadata
     return article_metadata
 
+def wrap(to_wrap, wrap_in):
+    contents = to_wrap.replace_with(wrap_in)
+    wrap_in.append(contents)
 
 def html_update(html, slug):
     img_tag = '<img src ="medias/' + slug + '-'
@@ -98,7 +101,17 @@ def html_update(html, slug):
         caption = soup.new_tag('figcaption')
         caption.append(img_tag['alt'])
         img_tag.append(caption)
-        img_tag.wrap(soup.new_tag('figure'))
+        fig_tag = soup.new_tag("figure")
+        img_src = img_tag['src']
+        if "large:" in img_src:
+            fig_tag['class'] = 'lg'
+            img_tag['src'] = img_src.replace('large:', '')
+        elif "small:" in img_src:
+            fig_tag['class'] = 'sm'
+            img_tag['src'] = img_src.replace('small:', '')
+        else:
+            fig_tag['class'] = 'md'
+        wrap(img_tag, fig_tag)
     html = str(soup)
     if (soup.select('.article--sub')):
         articles_sub = soup.select('.article--sub')

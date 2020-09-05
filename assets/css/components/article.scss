@@ -8,7 +8,7 @@
   margin-bottom: $size-xs;
 }
 .article__content {
-  & > *:not(figure):not(pre):not(video) {
+  & > *:not(.lg):not(pre) {
     max-width: $content-max-width;
   }
 }
@@ -47,8 +47,7 @@
 .article figure {
   margin-bottom: 1em;
   img {
-    max-width: 100%;
-    max-height: 90vh;
+    width: 100%;
   }
   figcaption {
     margin-top: $size-xxs;

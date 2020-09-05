@@ -9,7 +9,7 @@ This week is about exploring the possibilities of the computer-controlled cuttin
 
 The laser cutter is an excellent machine: it gives quick results, it is easy to learn, it works with different types of material (wood, acrylic, cardboard, etc.) and the cutting is very precise. Using joints allows you to go from 2D to 3D objects. It makes the laser cutter one of the best machines to quickly prototype an idea.
 
-![nesting-cut](nesting-cut.jpg)
+![nesting-cut](large:nesting-cut.jpg)
 
 ## Basics of lasercutting
 
@@ -218,7 +218,7 @@ The process of cutting something with a vinylcutter is straightforward:
   avaible material size.
 - Press the *Print* button, or type `Ctrl p` to start cutting.
 
-![password-process](password-process.jpg)
+![password-process](large:password-process.jpg)
 
 The next step is the get your cut out of the sheet, wich may not be easy depending on your design, if it's detailed or not. 
 
