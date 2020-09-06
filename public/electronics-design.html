@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title property="schema:name">antoine.studio</title>
+<meta content="Documentation website of Antoine Jaunard" name="description"/>
+<meta content="Dok" property="schema:name"/>
+<meta content="Documentation website of Antoine Jaunard" property="schema:description"/>
+<link href="assets/main.min.css" rel="stylesheet"/>
+</head>
+<body>
+<main class="main">
+<header class="header">
+<nav class="nav">
+<ul class="nav__list">
+<li class="nav__item">
+<a class="nav__link" href="index.html">antoine.studio</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="content.html">content</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="about.html">about</a>
+</li>
+</ul>
+</nav>
+</header>
+<article class="article">
+<!-- title -->
+<h1 class="article__title">Electronics design</h1>
+<!-- parent -->
+<!-- tags -->
+<p class="article__tags">Tags:
+      
+      <a href="fab-academy-assignments.html">#fab-academy-assignments</a>
+</p>
+<!-- featured image -->
+<!-- toc -->
+<section class="article__toc">
+<h2 class="toc__title">Table of content</h2>
+<div class="toc__list"><ul>
+<li><a href="#pomodoro-timer">Pomodoro timer</a>
+<ul>
+<li><a href="#components">Components</a></li>
+<li><a href="#design">Design</a>
+<ul>
+<li><a href="#schematics-design">Schematics design</a></li>
+<li><a href="#pcb-design">PCB design</a>
+<ul>
+<li><a href="#things-i-learned-while-designing-it">Things I learned while designing it</a></li>
+</ul></li>
+<li><a href="#preparing-the-files">Preparing the files</a></li>
+</ul></li>
+<li><a href="#milling-and-soldering">Milling and soldering</a></li>
+<li><a href="#testing">Testing</a></li>
+<li><a href="#programming">Programming</a></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section class="article__content ts">
+<p>I knew almost nothing about electronics before following the Fab Academy.I had to learn and understand the very basics of a electronic circuit and its composents, but also of electricity and its flow.</p>
+<p>To do so, I designed a pomodoro timer from scratch. I have learn a lot throughout the process and I have the feeling that this new knowledge will play a key role in what I will do for my personal project and afterwards.</p>
+<p><figure class="md"><img alt="pomo" src="medias/electronics-design-pomo.jpeg"><figcaption>pomo</figcaption></figure>
+<h1 id="pomodoro-timer">Pomodoro timer</h1>
+<p>I use a pomodoro timer daily to help me manage my time and effort in the tasks I want to accomplish. For now, I'm using <a href="https://github.com/JaDogg/pydoro" target="_blank">Pydoro</a>, an open source pomodoro terminal timer written in Python but I would like to build mine and have it physically next to my laptop.</p>
+<blockquote>
+<p>The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. The technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks. Each interval is known as a pomodoro, from the Italian word for 'tomato', after the tomato-shaped kitchen timer that Cirillo used as a university student.</p>
+<blockquote>
+<p><a href="https://en.wikipedia.org/wiki/Pomodoro_Technique" target="_blank">Pomodoro Technique, Wikipedia</a></p>
+</blockquote>
+</blockquote>
+<p><figure class="md"><img alt="pomo-illu" src="medias/electronics-design-pomo-illu.png"><figcaption>pomo-illu</figcaption></figure>
+<h2 id="components">Components</h2>
+<p>The main component I'm using is the microcontroller <a href="https://www.microchip.com/wwwproducts/en/ATTINY1614" target="_blank">ATtiny1614</a>. It will allow me to program my inputs and outputs needed to run my project.</p>
+<p>As outputs, I have 4 LEDs that are used to visualize the time passing by and the interactions with the pomodoro timer.
+As inputs, I have to 2 switches (buttons) that allow me to start/pause/resume/reset the timer.</p>
+<p>I also need 6 resistor (one for each of the inputs/outputs), a capacitor, a FTDI header (to be able to communicate with the boards), a UPDI header (to program the board).</p>
+<h2 id="design">Design</h2>
+<p>I'm using <a href="https://kicad-pcb.org/" target="_blank">KiCAD</a>, a cross platform and <a href="https://gitlab.com/kicad" target="_blank">open-source</a> software, for designing electronics. The process is divided into two main steps: schematics design and PCB design.</p>
+<p>Before making the schematics, I had to import symbols and footprints according to the components which I wanted to use (and which I had at my disposal in the laboratory).</p>
+<p>For the symbols, go to <code>Preferences &gt; Manage Symbol Librairies</code> to add <a href="https://github.com/KiCad/kicad-symbols" target="_blank">this</a> and <a href="https://kicad.github.io/symbols/MCU_Microchip_ATtiny" target="_blank">this</a>. For the footprints, go to <code>Preferences &gt; Manage Footprints Librairies</code> to add <a href="https://github.com/KiCad/kicad-footprints" target="_blank">this</a>.</p>
+<p>In the context of Fab Labs, <a href="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/site/local/#material/extras/week06/assets/kicad_libraries.zip" target="_blank">this library</a> is very useful because it contains all the components we have at our disposition.</p>
+<h3 id="schematics-design">Schematics design</h3>
+<p>To design the schematic of the board, one should first import the right symbols. In my case, the components I listed above on this page. to do so, select the <code>Place symbol</code> tool, click on the page and choose the symbol you want.</p>
+<ul>
+<li><code>R</code> to rotate the component</li>
+<li><code>C</code> to copy it</li>
+<li><code>M</code> to move it</li>
+<li><code>Delete</code> to delete it</li>
+<li><code>W</code> to draw a wire</li>
+</ul>
+<p>Then, you will have to connect the elements together. To do so, a good practice is to divide the circuit into smaller and more understandable circuits. In my case, I design the switches, LED's, capacitor, ATtiny1614, FTDI and UPDI apart. It's then easier to get a full understanding of the circuit and it's also easier to manipulate.</p>
+<p><figure class="md"><img alt="schematics-design" src="medias/electronics-design-schematics-design.jpeg"><figcaption>schematics-design</figcaption></figure>
+<p>Don't be confused, the real design mission is for the next step, now is just about connecting parts together, and about being understandable for the community if you plan to share your design or simply for your future self.</p>
+<p>It's always important to check the datasheet of the components you're using. In this case, <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny1614-DataSheet-DS40001995B.pdf" target="_blank">the datasheet of the ATtiny1614</a> helped me to verify the differents connections from the chip to the components.</p>
+<h3 id="pcb-design">PCB design</h3>
+<p>Now is the "tricky" part: finding the best paths, the most compact as possible while respecting the idea I had in mind. For instance, because I'm building a pomodoro timer, I want my 4 leds to be next to each other, and so has to be the resistors as well. It's about designing with constraints, something I really like, even if it took me hours to find a possible way to design my circuit.</p>
+<p><figure class="md"><img alt="pcb-design" src="medias/electronics-design-pcb-design.jpeg"><figcaption>pcb-design</figcaption></figure>
+<h4 id="things-i-learned-while-designing-it">Things I learned while designing it</h4>
+<ul>
+<li>always start by connecting the chip to its direct components</li>
+<li>rotate and rotate again the components until it makes sense</li>
+<li>the ground closes the circuit, so it's easier to end with it</li>
+<li>just because you seem to be close to the solution doesn't mean you are really close to the solution. You don't know that until the end, when you connect the last components together</li>
+<li>what is possible in a CAD software may not be easy to do in real life</li>
+<li>optimize your paths and think about how you will solder the  components</li>
+</ul>
+<h3 id="preparing-the-files">Preparing the files</h3>
+<p>Once your design is ready (that means that all your components are linked together), you can export your files and prepare them to be sent to the mini milling machine. I used <a href="https://inkscape.org/" target="_blank">Inkscape</a>, <a href="https://www.gimp.org/" target="_blank">gimp</a> and <a href="http://fabmodules.org/" target="_blank">fab modules</a> to do so.</p>
+<p><figure class="md"><img alt="pomo-traces" src="medias/electronics-design-pomo-traces.png"><figcaption>pomo-traces</figcaption></figure>
+<figure class="md"><img alt="pomo-cut" src="medias/electronics-design-pomo-cut.png"><figcaption>pomo-cut</figcaption></figure>
+<p><figure class="md"><img alt="fab-modules" src="medias/electronics-design-fab-modules.jpeg"><figcaption>fab-modules</figcaption></figure>
+<p>I used Fab Modules to generate the files needed by the mini milling machine using the same settings I set during the <a href="fabac-assignments-electronics-production.html" target="_blank">Electronics production</a> week.</p>
+<h2 id="milling-and-soldering">Milling and soldering</h2>
+<p>The machine I used to mill my board is the Roland MonoFab SRM-20, this machine seems very reliable, I had no problem while using it.</p>
+<p><figure class="md"><img alt="pomo-milling" src="medias/electronics-design-pomo-milling.jpeg"><figcaption>pomo-milling</figcaption></figure>
+<p><figure class="md"><img alt="pomo-board" src="medias/electronics-design-pomo-board.jpeg"><figcaption>pomo-board</figcaption></figure>
+<p>Soldering was fun to do, I really like doing it, even if I started with a big mistake: I was a little in a hurry, the lab was closing and I wanted my job to be done, my focus wasn't really there and I soldered the ATtiny1614 in the wrong direction. I know this little dot on the chip, which gives you the direction of the chip but I wasn't paying attention to it. What should have taken a  few minutes took me over an hour: desolder a 14-legs chip isn't that easy!</p>
+<p><figure class="md"><img alt="pomo" src="medias/electronics-design-pomo.jpeg"><figcaption>pomo</figcaption></figure>
+<h2 id="testing">Testing</h2>
+<p>In order to test the board, you will need a UPDI for the communication between the board and another computer and a FTDI to program the board itself. Luckily, these are the two I already made.</p>
+<p>The power comes from the UPDI, as well as the data.</p>
+<p><figure class="md"><img alt="pomo-plugged" src="medias/electronics-design-pomo-plugged.jpeg"><figcaption>pomo-plugged</figcaption></figure>
+<p>First, check if your computer recognizes the board correctly by typing <code>dmesg -w</code> in a terminal and see if a new device is detected when you un/plug the board. Save the ID of the board for later.</p>
+<p>A simple blink program using the Arduino IDE is the easiest way to check if the communication is possible — and therefore if the board has been done right. Here is the one I used:</p>
+<pre>
+void setup() {
+  pinMode(PA1, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(PA1, HIGH);
+  delay(1000);
+  digitalWrite(PA1, LOW);
+  delay(1000);
+}
+</pre>
+<p>To make it work, I needed the <a href="https://github.com/SpenceKonde/megaTinyCore" target="_blank">megaTinyCore</a> in order to <em>talk</em> with the ATtiny1614. Find it via the Arduino IDE menu <code>Tools &gt;   Boards &gt; Boards manager</code>.</p>
+<p>I used <a href="https://github.com/mraardvark/pyupdi" target="_blank">pyupdi</a> (a Python UPDI driver for programming the "new" tinyAVR and megaAVR devices) to send the code to the chip.</p>
+<p>To do so, I had to find the temporary file which is generated by Arduino IDE each time the code is compiled (look at the console and spot the .hex file) and send it via this command to the board.</p>
+<p><code>pyupdi.py -d tiny1614 -c /dev/ttyUSB0 -b 9600 -f /tmp/arduino_build_342195/Blink.ino.hex -v</code></p>
+<p>Where <code>/dev/ttyUSB0</code> corresponds to the value I got when I did <code>dmesg -w</code> earlier and <code>arduino_build_342195/Blink.ino.hex</code> corresponds to the temp file I wan to send.</p>
+<p>And that's it.</p>
+<video controls="" preload="auto"><source src="medias/electronics-design-pomo-test.mp4" type="video/mp4"/></video>
+<h2 id="programming">Programming</h2>
+<p>I will program this board to make it be a pomodoro timer in two weeks, during the <em>Embedded programming</em> assignement.</p>
+</section>
+<footer>
+<p>✎ <span>Created</span> 04/03/2020</p>
+<p>⁂ <span>Updated</span> 04/03/2020</p>
+</footer>
+</article>
+<footer class="footer">
+<p>Antoine Jaunard ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a></p>
+</footer>
+</main>
+</body>
+</html>
