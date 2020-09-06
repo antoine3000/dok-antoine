@@ -3,10 +3,11 @@ $white: #FFFFFF;
 $black: #000000;
 $blue: #0000FF;
 $yellow: #F9F9AC;
+$gray: #dbdbdb;
 
 // Colors abstraction
 $base-color: $black;
-$body-color: $white;
+$body-color: $gray;
 $action-color: $yellow;
 
 // Breakpoints

@@ -6,4 +6,8 @@
   p {
     @extend %ts-title-0;
   }
+  small {
+    display: block;
+    margin-top: $size-sm;
+  }
 }
