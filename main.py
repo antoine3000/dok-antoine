@@ -141,9 +141,10 @@ for folder in content_0:
     if contains_folder(c + folder):
         # level 2
         content_1 = os.listdir(c + folder)
+        content_1.sort()
         for subfolder in content_1:
             if os.path.isdir(c + folder + '/' + subfolder):
-                subfolder_slug = subfolder[11:]
+                subfolder_slug = folder_slug + "-" + subfolder[11:]
                 articles[subfolder_slug] = {}
                 article_items(subfolder_slug,  c + folder + '/' + subfolder)
                 articles[subfolder_slug]['metadata'] = metadata(

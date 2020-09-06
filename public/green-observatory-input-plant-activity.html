@@ -64,9 +64,9 @@
 <p>I will prototype them both and compare the results to see which one is best for my use.</p>
 <h2 id="sensor-prototype-n1-555-ic-timer">Sensor prototype n°1: 555 IC timer</h2>
 <p>The first sensor I want to prototype is build around a <a href="https://en.wikipedia.org/wiki/555_timer_IC" target="_blank">555 IC timer</a>. This component works as a square wave generator and the values it gives can be modified by changing the resistance of the circuit.</p>
-<p><figure class="md"><img alt="555 timer schematic" src="medias/input-plant-activity-schema555_00.png"><figcaption>555 timer schematic</figcaption></figure>
+<p><figure class="md"><img alt="555 timer schematic" src="medias/green-observatory-input-plant-activity-schema555_00.png"><figcaption>555 timer schematic</figcaption></figure>
 <p>This sensor is used to graph changes in galvanic response (electrical “skin” conductance/resistance) by producing a square wave of variable frequency and pulse width. The values I get from this custom sensor can help me understand what happens inside the veins of the plant, or at least understand its electrical activity.</p>
-<p><figure class="md"><img alt="Arduino and components" src="medias/input-plant-activity-IMG_8659.jpg"><figcaption>Arduino and components</figcaption></figure>
+<p><figure class="md"><img alt="Arduino and components" src="medias/green-observatory-input-plant-activity-IMG_8659.jpg"><figcaption>Arduino and components</figcaption></figure>
 <p>Here is the list of the components I used to assemble this sensor:</p>
 <ul>
 <li>555 Timer</li>
@@ -83,7 +83,7 @@
 </ul>
 <p>More information: <a href="https://docs.google.com/spreadsheets/d/1nhU3fjO-yuVyLYuE5AC39vmvim1dWyxoJ2PYOr6acvA/edit?usp=sharing" target="_blank">List of materials</a></p>
 <h3 id="from-input-to-output">From input to output</h3>
-<p><figure class="md"><img alt="Atom &amp; Arduino screenshot" src="medias/input-plant-activity-screenshot_00.png"><figcaption>Atom &amp; Arduino screenshot</figcaption></figure>
+<p><figure class="md"><img alt="Atom &amp; Arduino screenshot" src="medias/green-observatory-input-plant-activity-screenshot_00.png"><figcaption>Atom &amp; Arduino screenshot</figcaption></figure>
 <p>In order to know if the data I collect from the plants is usable, I first have to do some data treatment. In this case, I have to convert an digital input into something that looks more alive than just <code>0 1 0 1 1 0</code>.</p>
 <p>The idea of using the 555 IC timer is to measure how often the length of the <code>1</code> compared to the <code>0</code> and calculate the duty cycle.</p>
 <pre>
@@ -96,8 +96,8 @@ dutyCycle = float(durationHigh) / (durationHigh + durationLow) * 100;
 <p><a href="btn:fabac-finalproject-code-logic.html" target="_blank">From input to output</a></p>
 <h3 id="alocasia-amazonica">Alocasia Amazonica</h3>
 <p>The <em>Alocasia Amazonica</em> is one of my favorite plant, sitting on my desk. Its nerves are big and apparent which is supposed to make her a perfect candidate for my experiment.</p>
-<p><figure class="md"><img alt="" src="medias/input-plant-activity-IMG_8657.jpg"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/input-plant-activity-IMG_8664.jpg"><figcaption></figcaption></figure>
+<p><figure class="md"><img alt="" src="medias/green-observatory-input-plant-activity-IMG_8657.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/green-observatory-input-plant-activity-IMG_8664.jpg"><figcaption></figcaption></figure>
 <p>And the results are way better than what I expected. The plant is <em>super</em> reactive to any touch and gives me beautiful data which seems quite easy to manipulate.</p>
 <ul>
 <li>Duty cycle: from ~43% to ~47%</li>
@@ -106,8 +106,8 @@ dutyCycle = float(durationHigh) / (durationHigh + durationLow) * 100;
 </ul>
 <h3 id="strelitzia-reginae-birds-of-paradise">Strelitzia reginae (Birds of Paradise)</h3>
 <p>The <em>Strelitzia reginae</em> and its big leaves is even more reactive than the Alocasia. Small variations in the data I collect are visible, any simple touch anywhere on the plant makes a tiny jump in the curve. I played with it during an hour without getting bored a single second.</p>
-<p><figure class="md"><img alt="" src="medias/input-plant-activity-IMG_8669.jpg"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/input-plant-activity-IMG_8671.jpg"><figcaption></figcaption></figure>
+<p><figure class="md"><img alt="" src="medias/green-observatory-input-plant-activity-IMG_8669.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/green-observatory-input-plant-activity-IMG_8671.jpg"><figcaption></figcaption></figure>
 <ul>
 <li>Duty cycle: from ~40% to ~51%</li>
 <li>highly reactive to touch</li>
