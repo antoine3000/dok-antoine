@@ -1,13 +1,13 @@
 ---
 title: The Green Observatory
 tags: fab-academy-assignments
+featured: True
+featured_image: final-sketches-02.png
 ---
 
 # Introduction
 
 A device that transforms the electrical activity of plants into a physical and meditative movement that we, humans, can observe and contemplate.
-
-![breathing cycle](final-sketches-02.png)
 
 # Sensing the electrical activity of a plant
 

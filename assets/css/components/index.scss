@@ -22,11 +22,14 @@
     content: "-";
   }
   .index__item--sub:before {
-    content: "----";
+    content: "∟";
   }
   .index__tags,
   .index__update {
     @extend %ts-small;
+  }
+  .index__list--sub {
+    margin-left: 1em;
   }
 }
 
@@ -46,6 +49,7 @@
   }
   .index__link {
     display: block;
+    background-color: $body-color;
     & > *:not(img) {
       max-width: $content-max-width;
     }

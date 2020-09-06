@@ -1,6 +1,5 @@
 ---
 title: Sensing the electrical activity of a plant
-tags: toc
 ---
 
 # Introduction

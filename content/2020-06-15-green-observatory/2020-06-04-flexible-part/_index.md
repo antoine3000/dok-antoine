@@ -1,6 +1,5 @@
 ---
 title: Respiratory movement: Flexible part
-tags: toc
 ---
 
 # Making the mold

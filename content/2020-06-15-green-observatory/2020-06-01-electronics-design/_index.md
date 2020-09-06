@@ -1,6 +1,5 @@
 ---
 title: Electronics Design
-tags: toc
 ---
 
 

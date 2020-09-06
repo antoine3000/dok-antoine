@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *, *:before, *:after {
   box-sizing: border-box; }
 
@@ -231,13 +232,17 @@ img {
   content: "-"; }
 
 .index--list .index__item--sub:before {
-  content: "----"; }
+  content: "∟"; }
+
+.index--list .index__list--sub {
+  margin-left: 1em; }
 
 .index--featured .index__item:not(:last-child) {
   margin-bottom: 2rem; }
 
 .index--featured .index__link {
-  display: block; }
+  display: block;
+  background-color: #dbdbdb; }
   .index--featured .index__link > *:not(img) {
     max-width: 640px; }
 
