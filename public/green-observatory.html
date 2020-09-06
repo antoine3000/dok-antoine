@@ -46,6 +46,46 @@
 <li><a href="#external-resources">External resources</a></li>
 </ul>
 </div>
+<h3 class="toc__title--sub"><a href="green-observatory.html#electronics-design">Electronics Design</a></h3>
+<div class="toc__list--sub"><ul>
+<li><a href="#components">Components</a>
+<ul>
+<li><a href="#atmega16u2">ATMega16U2</a></li>
+<li><a href="#steps">Steps</a></li>
+<li><a href="#crystal">Crystal</a></li>
+</ul></li>
+<li><a href="#design-tips">Design tips</a></li>
+<li><a href="#export-kicad">Export Kicad</a></li>
+<li><a href="#soldering">Soldering</a>
+<ul>
+<li><a href="#debugging">Debugging</a></li>
+</ul></li>
+<li><a href="#isp-programming">ISP programming</a></li>
+<li><a href="#questions">Questions</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+</div>
+<h3 class="toc__title--sub"><a href="green-observatory.html#structure">Structure: design and fabrication</a></h3>
+<h3 class="toc__title--sub"><a href="green-observatory.html#assembly">Assembly: Putting everything together</a></h3>
+<h3 class="toc__title--sub"><a href="green-observatory.html#output-air-pumps">Respiratory movement: programmable air</a></h3>
+<h3 class="toc__title--sub"><a href="green-observatory.html#input-plant-activity">Sensing the electrical activity of a plant</a></h3>
+<div class="toc__list--sub"><ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#references">References</a></li>
+<li><a href="#sensors">Sensors</a>
+<ul>
+<li><a href="#sensor-prototype-n1-555-ic-timer">Sensor prototype n°1: 555 IC timer</a>
+<ul>
+<li><a href="#from-input-to-output">From input to output</a></li>
+<li><a href="#alocasia-amazonica">Alocasia Amazonica</a></li>
+<li><a href="#strelitzia-reginae-birds-of-paradise">Strelitzia reginae (Birds of Paradise)</a></li>
+</ul></li>
+<li><a href="#sensor-prototype-n2-op-amps">Sensor prototype n°2: Op-amps</a></li>
+</ul></li>
+<li><a href="#questions">Questions</a></li>
+</ul>
+</div>
+<h3 class="toc__title--sub"><a href="green-observatory.html#code-logic">Code: From input to output</a></h3>
 <h3 class="toc__title--sub"><a href="green-observatory.html#references">References and related projects</a></h3>
 <div class="toc__list--sub"><ul>
 <li><a href="#concept">Concept</a></li>
@@ -97,13 +137,26 @@
 </ul></li>
 </ul>
 </li></div>
+<h3 class="toc__title--sub"><a href="green-observatory.html#flexible-part">Respiratory movement: Flexible part</a></h3>
+<div class="toc__list--sub"><ul>
+<li><a href="#making-the-mold">Making the mold</a></li>
+<li><a href="#preparing-the-casting">Preparing the casting</a>
+<ul>
+<li><a href="#other-side">Other side</a></li>
+</ul></li>
+<li><a href="#casting">Casting</a>
+<ul>
+<li><a href="#mistakes-encountered">Mistakes encountered</a></li>
+</ul></li>
+</ul>
+</div>
 </section>
 <section class="article__content ts">
 <h1 id="introduction">Introduction</h1>
 <p>A device that transforms the electrical activity of plants into a physical and meditative movement that we, humans, can observe and contemplate.</p>
 <p><figure class="md"><img alt="breathing cycle" src="medias/green-observatory-final-sketches-02.png"><figcaption>breathing cycle</figcaption></figure>
 <h1 id="sensing-the-electrical-activity-of-a-plant">Sensing the electrical activity of a plant</h1>
-<p><figure class="md"><img alt="sensing the activity" src="medias/green-observatory-IMG_8664.jpg"><figcaption>sensing the activity</figcaption></figure>
+<p><figure class="md"><img alt="sensing the activity" src="medias/input-plant-activity-IMG_8664.jpg"><figcaption>sensing the activity</figcaption></figure>
 <p><a href="btn:fabac-finalproject-input-plant-activity.html" target="_blank">Sensing the electrical activity of a plant</a></p>
 <h1 id="external-resources">External resources</h1>
 <p><a href="btn:http://board.antoine.studio/?controller=BoardViewController&amp;action=readonly&amp;token=3d91cde4a718ce18cd986a67eff38899f8eb1612ddae621507a00da28f4f" target="_blank">Kanban board</a>
@@ -113,6 +166,250 @@
 <p>✎ <span>Created</span> 15/06/2020</p>
 <p>⁂ <span>Updated</span> 15/06/2020</p>
 </footer>
+<article class="article--sub" id="electronics-design">
+<!-- title -->
+<h1 class="article__title">Electronics Design <a href="electronics-design.html">●</a></h1>
+<!-- tags -->
+<p class="article__tags">Tags:
+        
+        <a href="fab-academy-assignments.html">#fab-academy-assignments</a>
+</p>
+<!-- content -->
+<section class="article__content ts">
+<h1 id="components">Components</h1>
+<ul>
+<li>4 solenoids</li>
+<li>1 air pump</li>
+<li>1 microchip ATMega16U2</li>
+</ul>
+<h2 id="atmega16u2">ATMega16U2</h2>
+<ul>
+<li>Same microshop used in the Arduino Uno in order to exchange information via USB</li>
+<li>Has enough pins for my project</li>
+</ul>
+<h2 id="steps">Steps</h2>
+<ul>
+<li>Understand the USB part of the Arduino Uno schematics</li>
+<li>Test how the mosfet + solenoid part is acting in term of voltage drop</li>
+<li>Check the footprints of the different elements
+<ul>
+<li>Are they available?</li>
+<li>Is it ok to solder them?</li>
+<li>Aren't the pads to close to each other, or the lines too thin (or thick)?</li>
+</ul></li>
+<li>Are all the components available at the lab?</li>
+</ul>
+<h2 id="crystal">Crystal</h2>
+<p>Oscar recommended using a resonator instead of the crystal because it is easier to use and solder than the crystals, but I found another piece of advice in the documentation from a former student.</p>
+<p>From Andrew Mao's <a href="http://fab.cba.mit.edu/classes/863.14/people/andrew_mao/week11/" target="_blank">documentation</a>:</p>
+<blockquote>
+<p>In order to use Full-speed (12 Mbit/s) USB, the microcontroller needs to be able to generate a precize 48 MHz clock with a deviation of no more than 0.25%. Since resonators have 0.5% tolerance, This means only quartz crystals can be used, and moreover they need to evenly divide into this frequency in order for a phase-locked loop to generate this clock. For the ATMega16U2, this will require a 8MHz or 16MHz crystal - no substitutes.</p>
+</blockquote>
+<p>But using a crystal induces having more components and thus harder to assemble. According to Oscar, at our level, in the Fab ecosystem, we don't especially need that precision. A resonator is totally fine for what I need.</p>
+<h1 id="design-tips">Design tips</h1>
+<ul>
+<li>Check the correct clearance before tracing the routes</li>
+<li>Apply a common ground at the end of the design</li>
+<li>Global deletation &gt; tracks, as soon as I'm blocked</li>
+<li>Clean tracks to be sure there are no undesired portions of track</li>
+</ul>
+<h1 id="export-kicad">Export Kicad</h1>
+<p>Oscar's project to export SVG to PNG from Kicad using the Inkscape API.
+No holes for now, so I'm using Via's. I've to document that.
+The outer zone of the traces file must be filled in black and then inverted when imported into fabmodules.org.
+- link to gitlab project
+- Command line SVG -&gt; PNG
+- What Oscar has been changed, for Python3 compatibility</p>
+<h1 id="soldering">Soldering</h1>
+<ul>
+<li>I have changed some components when I was doing my shopping list because not all of them were available at the lab. Here is the updated list and what I had planned to use:</li>
+<li>Mini USB is much easier to solder than the micro usb, that why I used it. The only thing with that USB version is that is a bit more complicated to find the right cable.</li>
+</ul>
+<h2 id="debugging">Debugging</h2>
+<ul>
+<li>When plugged to my computer, I first tried to read my USB ports by typing <code>$ lsusb</code> but the new device didn't appear there. Then I checked more deeply with <code>$ dmesg -w</code> and saw that I had an over-current condition on the new device's port.</li>
+</ul>
+<h1 id="isp-programming">ISP programming</h1>
+<p>First of all, I have to program the chip to tell it what will be its behaviour. For that I am going to use a AVRISP mkII programmer.</p>
+<h1 id="questions">Questions</h1>
+<p>QUESTION: How many pumps and solenoid are really needed?</p>
+<ul>
+<li>In the <em>Programmable Air</em> project, they use 2 pumps and 3 valves in order to be able to manipulate entirely an air flow. I would like to reach that precision level but I'm not sure how much is needed</li>
+</ul>
+<p>QUESTION: One single board or few modular ones?</p>
+<ul>
+<li>One single board is easier to do because everything is physically connected together and thus we don't have to think about communication between the different parts. On the other hand, a modular approach allows to prototype faster, to make errors and improvements without having to fabricate everything again. I will begin to design and fabricate a single board and then iterate to different modules according to my time management.</li>
+</ul>
+<h1 id="references">References</h1>
+<ul>
+<li><a href="https://www.arduino.cc/en/uploads/Main/arduino-uno-schematic.pdf" target="_blank">Arduino Uno Schematics</a></li>
+<li><a href="https://rheingoldheavy.com/arduino-from-scratch-part-7-arduino-usb-connection/" target="_blank">Arduino USB Connection</a></li>
+<li><a href="https://www.mouser.es/datasheet/2/268/doc7799-1315152.pdf" target="_blank">ATmega8U2/16U2/32U2 datasheet</a></li>
+<li><a href="http://fab.cba.mit.edu/classes/863.14/people/andrew_mao/week11/" target="_blank">AVR USB Devices and Programming</a></li>
+<li><a href="http://archive.fabacademy.org/2018/labs/barcelona/students/oscar-gonzalezfernandez//2018/04/18/Week-11-Output-Devices.html" target="_blank">Oscar's documentation</a></li>
+<li><a href="https://microcontrollerslab.com/atmega16-microcontroller-pinout-programming-features-applications/" target="_blank">ATMega16u2 pinouts</a></li>
+</ul>
+</section>
+<footer>
+<p>✎ <span>Created</span> 01/06/2020</p>
+<p>⁂ <span>Updated</span> 01/06/2020</p>
+</footer>
+</article>
+<article class="article--sub" id="structure">
+<!-- title -->
+<h1 class="article__title">Structure: design and fabrication <a href="structure.html">●</a></h1>
+<!-- tags -->
+<p class="article__tags">Tags:
+        
+        <a href="fab-academy-assignments.html">#fab-academy-assignments</a>
+</p>
+<!-- content -->
+<section class="article__content ts">
+<p><figure class="md"><img alt="structure overview" src="medias/structure-structure-overview-01.png"><figcaption>structure overview</figcaption></figure>
+<figure class="md"><img alt="structure detail" src="medias/structure-structure-detail-01.png"><figcaption>structure detail</figcaption></figure>
+</section>
+<footer>
+<p>✎ <span>Created</span> 02/06/2020</p>
+<p>⁂ <span>Updated</span> 02/06/2020</p>
+</footer>
+</article>
+<article class="article--sub" id="assembly">
+<!-- title -->
+<h1 class="article__title">Assembly: Putting everything together <a href="assembly.html">●</a></h1>
+<!-- tags -->
+<p class="article__tags">Tags:
+        
+        <a href="fab-academy-assignments.html">#fab-academy-assignments</a>
+</p>
+<!-- content -->
+<section class="article__content ts">
+<p></p>
+</section>
+<footer>
+<p>✎ <span>Created</span> 06/06/2020</p>
+<p>⁂ <span>Updated</span> 06/06/2020</p>
+</footer>
+</article>
+<article class="article--sub" id="output-air-pumps">
+<!-- title -->
+<h1 class="article__title">Respiratory movement: programmable air <a href="output-air-pumps.html">●</a></h1>
+<!-- tags -->
+<p class="article__tags">Tags:
+        
+        <a href="fab-academy-assignments.html">#fab-academy-assignments</a>
+</p>
+<!-- content -->
+<section class="article__content ts">
+<p></p>
+</section>
+<footer>
+<p>✎ <span>Created</span> 03/06/2020</p>
+<p>⁂ <span>Updated</span> 03/06/2020</p>
+</footer>
+</article>
+<article class="article--sub" id="input-plant-activity">
+<!-- title -->
+<h1 class="article__title">Sensing the electrical activity of a plant <a href="input-plant-activity.html">●</a></h1>
+<!-- tags -->
+<p class="article__tags">Tags:
+        
+        <a href="fab-academy-assignments.html">#fab-academy-assignments</a>
+</p>
+<!-- content -->
+<section class="article__content ts">
+<h1 id="introduction">Introduction</h1>
+<p>I selected two projects, related to mine, that listen to the electrical activity of plant in order to produce music (or at least sounds). They both are very useful for the understanding, design and fabrication of the sensing part of my project.</p>
+<h1 id="references">References</h1>
+<p>The first is <a href="http://lessnullvoid.cc/content/2011/10/pulsum-plantae/" target="_blank">Pulsum Plantae</a> (<a href="https://github.com/Lessnullvoid/Pulsum-Plantae" target="_blank">Github project</a>). This project amplifies the low voltage of a plant to make it readable, then converts it into an interactive installation that makes sounds. Leslie Garcia, Thiago Hersan, and Paloma López (the artists) have opened the sources of their project to make it accessible to people like me, allowing me to learn how things work and what could be a technical solution for this specific project.</p>
+<p>The other comes from <a href="http://philadelphia.thedelimagazine.com/9336/fyi-on-diys-phl-data-garden" target="_blank">Data Garden</a> and their <a href="https://www.midisprout.com/" target="_blank">Midi Sprout</a>. Midi Sprout is a device that converts the electrical activity of plants into midi signals that you can send to any device such as synthetizers in order to produce musical melodies made by plants. The project isn't open-source but, fortunately for me, someone (<a href="https://github.com/electricityforprogress" target="_blank">Sam Cusumano</a>) open-sourced the electronic part of it to make it accessible to all. It can be found <a href="https://www.instructables.com/id/Biodata-Sonification/" target="_blank">here</a> and <a href="https://github.com/electricityforprogress/BiodataSonificationBreadboardKit" target="_blank">there</a>.</p>
+<h1 id="sensors">Sensors</h1>
+<p>I will prototype them both and compare the results to see which one is best for my use.</p>
+<h2 id="sensor-prototype-n1-555-ic-timer">Sensor prototype n°1: 555 IC timer</h2>
+<p>The first sensor I want to prototype is build around a <a href="https://en.wikipedia.org/wiki/555_timer_IC" target="_blank">555 IC timer</a>. This component works as a square wave generator and the values it gives can be modified by changing the resistance of the circuit.</p>
+<p><figure class="md"><img alt="555 timer schematic" src="medias/input-plant-activity-schema555_00.png"><figcaption>555 timer schematic</figcaption></figure>
+<p>This sensor is used to graph changes in galvanic response (electrical “skin” conductance/resistance) by producing a square wave of variable frequency and pulse width. The values I get from this custom sensor can help me understand what happens inside the veins of the plant, or at least understand its electrical activity.</p>
+<p><figure class="md"><img alt="Arduino and components" src="medias/input-plant-activity-IMG_8659.jpg"><figcaption>Arduino and components</figcaption></figure>
+<p>Here is the list of the components I used to assemble this sensor:</p>
+<ul>
+<li>555 Timer</li>
+<li>Capacitor 0.0042uF</li>
+<li>Capacitor 1uF</li>
+<li>Capacitor 47uF</li>
+<li>Resistor 100K</li>
+<li>Jack Input 3.5mm</li>
+<li>Electrode pads</li>
+<li>Electrode lead</li>
+<li>Potentiometer 10k</li>
+<li>16MHz Crystal Oscillator</li>
+<li>ATmega328P (Arduino Uno, in case of this first prototype)</li>
+</ul>
+<p>More information: <a href="https://docs.google.com/spreadsheets/d/1nhU3fjO-yuVyLYuE5AC39vmvim1dWyxoJ2PYOr6acvA/edit?usp=sharing" target="_blank">List of materials</a></p>
+<h3 id="from-input-to-output">From input to output</h3>
+<p><figure class="md"><img alt="Atom &amp; Arduino screenshot" src="medias/input-plant-activity-screenshot_00.png"><figcaption>Atom &amp; Arduino screenshot</figcaption></figure>
+<p>In order to know if the data I collect from the plants is usable, I first have to do some data treatment. In this case, I have to convert an digital input into something that looks more alive than just <code>0 1 0 1 1 0</code>.</p>
+<p>The idea of using the 555 IC timer is to measure how often the length of the <code>1</code> compared to the <code>0</code> and calculate the duty cycle.</p>
+<pre>
+durationHigh = pulseIn(pinTimer, HIGH);
+durationLow = pulseIn(pinTimer, LOW);
+dutyCycle = float(durationHigh) / (durationHigh + durationLow) * 100;
+</pre>
+<p>It gives me a value in percentage that varies according to the conductivity of the plant.</p>
+<p>I will elaborate more about this topic on its dedicated page:</p>
+<p><a href="btn:fabac-finalproject-code-logic.html" target="_blank">From input to output</a></p>
+<h3 id="alocasia-amazonica">Alocasia Amazonica</h3>
+<p>The <em>Alocasia Amazonica</em> is one of my favorite plant, sitting on my desk. Its nerves are big and apparent which is supposed to make her a perfect candidate for my experiment.</p>
+<p><figure class="md"><img alt="" src="medias/input-plant-activity-IMG_8657.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/input-plant-activity-IMG_8664.jpg"><figcaption></figcaption></figure>
+<p>And the results are way better than what I expected. The plant is <em>super</em> reactive to any touch and gives me beautiful data which seems quite easy to manipulate.</p>
+<ul>
+<li>Duty cycle: from ~43% to ~47%</li>
+<li>Reacts when I touch</li>
+<li>Some interferences are perceptible (computer, keyboard) or reactions to stimuli?</li>
+</ul>
+<h3 id="strelitzia-reginae-birds-of-paradise">Strelitzia reginae (Birds of Paradise)</h3>
+<p>The <em>Strelitzia reginae</em> and its big leaves is even more reactive than the Alocasia. Small variations in the data I collect are visible, any simple touch anywhere on the plant makes a tiny jump in the curve. I played with it during an hour without getting bored a single second.</p>
+<p><figure class="md"><img alt="" src="medias/input-plant-activity-IMG_8669.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/input-plant-activity-IMG_8671.jpg"><figcaption></figcaption></figure>
+<ul>
+<li>Duty cycle: from ~40% to ~51%</li>
+<li>highly reactive to touch</li>
+<li>the curve oscillate more than with the Alocasia</li>
+</ul>
+<h2 id="sensor-prototype-n2-op-amps">Sensor prototype n°2: Op-amps</h2>
+<p class="todo">To do: Prototype with an Arduino Uno and a breadboard</p>
+<h1 id="questions">Questions</h1>
+<p>QUESTION: How to program the ATmega328P?</p>
+<ul>
+<li><p><a href="https://maker.pro/custom/tutorial/programming-an-atmega328-microcontroller-on-a-pcb" target="_blank"> How to Program an ATmega328 MCU on a Custom PCB</a></p></li>
+<li><p>SPI + add a Resonator 20MHZ (increase the speed)</p></li>
+</ul>
+<p>QUESTION: What connections do I need for sending data to the pumps?</p>
+<p>QUESTION: How to connect a power supply?</p>
+<p>QUESTION: How to convert 12V to 3V?</p>
+<p>QUESTION: Is 3V enough for the sensor?</p>
+</section>
+<footer>
+<p>✎ <span>Created</span> 01/06/2020</p>
+<p>⁂ <span>Updated</span> 01/06/2020</p>
+</footer>
+</article>
+<article class="article--sub" id="code-logic">
+<!-- title -->
+<h1 class="article__title">Code: From input to output <a href="code-logic.html">●</a></h1>
+<!-- tags -->
+<p class="article__tags">Tags:
+        
+        <a href="fab-academy-assignments.html">#fab-academy-assignments</a>
+</p>
+<!-- content -->
+<section class="article__content ts">
+<p></p>
+</section>
+<footer>
+<p>✎ <span>Created</span> 05/06/2020</p>
+<p>⁂ <span>Updated</span> 05/06/2020</p>
+</footer>
+</article>
 <article class="article--sub" id="references">
 <!-- title -->
 <h1 class="article__title">References and related projects <a href="references.html">●</a></h1>
@@ -332,6 +629,56 @@ installation. Or a module could be kept apart as a stand-alone piece.</p>
 <footer>
 <p>✎ <span>Created</span> 02/04/2020</p>
 <p>⁂ <span>Updated</span> 02/04/2020</p>
+</footer>
+</article>
+<article class="article--sub" id="flexible-part">
+<!-- title -->
+<h1 class="article__title">Respiratory movement: Flexible part <a href="flexible-part.html">●</a></h1>
+<!-- tags -->
+<p class="article__tags">Tags:
+        
+        <a href="fab-academy-assignments.html">#fab-academy-assignments</a>
+</p>
+<!-- content -->
+<section class="article__content ts">
+<h1 id="making-the-mold">Making the mold</h1>
+<ul>
+<li>freecad design</li>
+<li>laser cut test</li>
+<li>laser cut test, clean the lens</li>
+<li>assembling, holes too small, had to re-do them with the hand drill</li>
+</ul>
+<p>lasercut acrylic transparent 5mm: 95% power, 0.45 time, 20000HZ</p>
+<h1 id="preparing-the-casting">Preparing the casting</h1>
+<ul>
+<li>Spray release agent, mask and gloves, wait for 10 min</li>
+<li>calcuate the volumes I need to cast (Pi * radius * radius * height)</li>
+<li>50% of A, 50% of B, mix super well for 5 min</li>
+<li>put a timer of ~ 20 mins (according to the specs of the silicon I'm using)</li>
+<li>Pour the solutions slowly, to avoid the creation of bubbles, in the mold</li>
+<li>Wait for 5 hours</li>
+</ul>
+<h2 id="other-side">Other side</h2>
+<ul>
+<li>Unscrew the structure and flip the mold</li>
+<li>Clean everything</li>
+<li>Place the disk in the center, on the top of the first layer of silicon</li>
+<li>tape the holes (with transparent tape)</li>
+<li>Calculate the new volume to cast, and prepare the silicon mix</li>
+<li>Cast and try to reach around 1 or 2 mm of thickness</li>
+</ul>
+<h1 id="casting">Casting</h1>
+<h2 id="mistakes-encountered">Mistakes encountered</h2>
+<ul>
+<li>The two holes in the design were too small compared to the pipes, I had to enlarge them with an hand-drill</li>
+<li>I calculate the volume without substracting the inner pieces, I ended with a waste of silicon (which is expensive)</li>
+<li>I've used white tape, which is way more too visible and thus un-aesthetic</li>
+<li>The first try of casting the second layer was too thin, the inflation worked but I tore the membrane</li>
+</ul>
+</section>
+<footer>
+<p>✎ <span>Created</span> 04/06/2020</p>
+<p>⁂ <span>Updated</span> 04/06/2020</p>
 </footer>
 </article>
 </article>
