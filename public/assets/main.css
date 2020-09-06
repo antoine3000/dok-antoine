@@ -102,11 +102,11 @@ body, .article figure figcaption, .index--list .index__tags,
 a {
   color: #000000;
   text-decoration: none;
-  background-color: #F9F9AC; }
+  background-color: #dbdbdb; }
   a:hover {
     color: #000000;
     text-decoration: underline;
-    background-color: #F9F9AC; }
+    background-color: #dbdbdb; }
 
 .article__title, .intro p, .index__title {
   font-size: 2rem;
@@ -168,7 +168,7 @@ a {
 .ts code,
 .ts pre {
   background: #000000;
-  color: #dbdbdb; }
+  color: #FFFFFF; }
 
 .ts code {
   padding: 0.15em 0.4em; }
@@ -242,7 +242,7 @@ img {
 
 .index--featured .index__link {
   display: block;
-  background-color: #dbdbdb; }
+  background-color: #FFFFFF; }
   .index--featured .index__link > *:not(img) {
     max-width: 640px; }
 
@@ -269,7 +269,7 @@ img {
 .article__title {
   margin-bottom: 0.5rem; }
   .article__title a {
-    background-color: #dbdbdb; }
+    background-color: #FFFFFF; }
 
 .article__content {
   margin-top: 1rem; }
@@ -315,8 +315,8 @@ img {
 
 .ts .btn {
   display: table;
-  background-color: #F9F9AC;
-  color: #dbdbdb;
+  background-color: #dbdbdb;
+  color: #FFFFFF;
   padding: 1.25rem; }
 
 .ts video {
@@ -328,7 +328,7 @@ html {
     html {
       font-size: 13px; } }
 body {
-  background: #dbdbdb;
+  background: #FFFFFF;
   color: #000000;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased; }
