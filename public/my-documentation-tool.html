@@ -29,102 +29,30 @@
 </header>
 <article class="article">
 <!-- title -->
-<h1 class="article__title">Project management</h1>
+<h1 class="article__title">My documentation tool</h1>
 <!-- parent -->
+<p class="article__parent">This article is part of: <a href="project-management.html">Project management</a>.</p>
 <!-- tags -->
-<p class="article__tags">Tags:
-      
-      <a href="fab-academy-assignments.html">#fab-academy-assignments</a>
-</p>
 <!-- featured image -->
 <!-- toc -->
-<section class="article__content ts">
-<p>An important part of the <a href="https://fabacademy.org/" target="_blank">Fab Academy</a>, apart from learning digital fabrication techniques, consists of documenting everything we do in order to create a shared and open knowledge base between all students, and for everybody.</p>
-<p>One of my goals for this academy is to use only open-source tools. I want to be able to see what is inside the tools I use, modify it in case of need and share with others the projects I do with the environment necessary for their functioning.</p>
-<blockquote>
-<p>Practice shapes tools, tools shape practice</p>
-<blockquote>
-<p><a href="http://osp.kitchen/" target="_blank">Open Source Publishing</a></p>
-</blockquote>
-</blockquote>
-</section>
-<footer>
-<p>✎ <span>Created</span> 03/02/2020</p>
-<p>⁂ <span>Updated</span> 04/09/2020</p>
-</footer>
-<article class="article--sub" id="git-cheatsheet">
-<!-- title -->
-<h1 class="article__title">Git cheatsheet <a href="git-cheatsheet.html">●</a></h1>
-<!-- tags -->
-<p class="article__tags">Tags:
-        
-        <a href="fab-academy-assignments.html">#fab-academy-assignments</a>
-</p>
-<!-- content -->
-<section class="article__content ts">
-<h1 id="git-cheatsheet">GIT cheatsheet</h1>
-<p>Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</p>
-<h2 id="useful-commands">Useful commands</h2>
-<p>Start a project from scratch: <code>git init</code> and then <code>git remote add origin {repository-url}</code></p>
-<p>Pull the last commits from the distant server: <code>git pull</code></p>
-<p>Add all the modifications to the stack: <code>git add .</code></p>
-<p>Do a commit with a description: <code>git commit -m "message"</code></p>
-<p>Push the commit(s) on the distant server: <code>git push</code></p>
-<p>Discard the changes on uncommited files: <code>git checkout .</code></p>
-<p>Create a new branch: <code>git branch {new-branch}</code></p>
-<p>Merge the current branch with another: <code>git merge {other-branch}</code></p>
-<p>Delete a local branch: <code>git branch -d {local-branch}</code></p>
-<p>Delete a remote branch: <code>git push origin --delete {remote-branch}</code></p>
-<p>Change your working branch: <code>git checkout {branch-name}</code></p>
-<h3 id="visualization">Visualization</h3>
-<p>Get the repo's status <code>git status</code> or the repo's history: <code>git log</code></p>
-<p>Get the list of branches:  <code>git branch</code> or <code>git branch -v</code> to get more info</p>
-<p>Get the the commit-tree of all branches: <code>git log --oneline --abbrev-commit --all --graph --decorate --color</code></p>
-<h3 id="configuration">Configuration</h3>
-<p>Keep the password in memory for the next 8 hours: <code>git config --global credential.helper 'cache --timeout 28800'</code></p>
-<p>Add a shortcut to add and commit at the same time: <code>git config --global alias.ac '!git add -A &amp;&amp; git commit'</code> and then <code>git ac -m "message"</code></p>
-<p>Configure an alias to display the commit-tree:  <code>git config --global alias.gg 'log --oneline --abbrev-commit --all --graph --decorate --color'</code> and then use <code>git gg</code></p>
-</section>
-<footer>
-<p>✎ <span>Created</span> 06/02/2020</p>
-<p>⁂ <span>Updated</span> 06/02/2020</p>
-</footer>
-</article>
-<article class="article--sub" id="my-computer">
-<!-- title -->
-<h1 class="article__title">My computer <a href="my-computer.html">●</a></h1>
-<!-- tags -->
-<p class="article__tags">Tags:
-        
-        <a href="fab-academy-assignments.html">#fab-academy-assignments</a>
-</p>
-<!-- content -->
-<section class="article__content ts">
-<h1 id="my-computer">My computer</h1>
-<p>Few months ago, I decided to switch from the closed Apple ecosystem to the wonderful and open world of Linux. I'm running <a href="https://elementary.io/" target="_blank">Elementary OS</a>, a distribution based on Ubuntu, on a mid-2014 macbook pro. This machine isn't the more convenient to run a Linux distribution but I will keep using it as long as I can, even if I have some tiny hardware issues, simply because the more sustainable computer is the one I already have.</p>
+<section class="article__toc">
+<h2 class="toc__title">Table of content</h2>
+<div class="toc__list"><ul>
+<li><a href="#my-ideal-documentation-tool">My ideal documentation tool</a>
 <ul>
-<li>Text editor: <a href="https://vscodium.com/" target="_blank">VSCodium</a> + <a href="https://neovim.io/" target="_blank">NeoVim</a></li>
-<li>Terminal: <a href="https://github.com/software-jessies-org/jessies/wiki/Terminator" target="_blank">Terminator</a></li>
-<li>version control system: <a href="https://git-scm.com/" target="_blank">GIT</a></li>
-<li>Static site generator: my own "spaghetti script" that I wrote in Python</li>
-<li>Browser: <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a></li>
+<li><a href="#sources">Sources</a></li>
+<li><a href="#core-functionalities">Core functionalities</a>
+<ul>
+<li><a href="#content-organization">Content organization</a></li>
+<li><a href="#website-generation">Website generation</a></li>
+<li><a href="#image-optimization">Image optimization</a></li>
+<li><a href="#dependencies">Dependencies</a></li>
+<li><a href="#project-structure">Project structure</a></li>
+</ul></li>
+</ul></li>
 </ul>
-<p class="todo">To do: Update the content, since I now use Manjaro Linux.</p>
+</div>
 </section>
-<footer>
-<p>✎ <span>Created</span> 04/02/2020</p>
-<p>⁂ <span>Updated</span> 04/02/2020</p>
-</footer>
-</article>
-<article class="article--sub" id="my-documentation-tool">
-<!-- title -->
-<h1 class="article__title">My documentation tool <a href="my-documentation-tool.html">●</a></h1>
-<!-- tags -->
-<p class="article__tags">Tags:
-        
-        <a href="fab-academy-assignments.html">#fab-academy-assignments</a>
-</p>
-<!-- content -->
 <section class="article__content ts">
 <h1 id="my-ideal-documentation-tool">My ideal documentation tool</h1>
 <p>My ideal documentation tool is as light as possible and requires very little energy to operate; is perfectly understandable and does the tasks I want it to do - nothing more; evolves with my needs; has no Javascript, no cookies, no trackers.</p>
@@ -189,26 +117,6 @@ main.py
 <p>✎ <span>Created</span> 05/02/2020</p>
 <p>⁂ <span>Updated</span> 05/02/2020</p>
 </footer>
-</article>
-<article class="article--sub" id="other-tools">
-<!-- title -->
-<h1 class="article__title">Other tools <a href="other-tools.html">●</a></h1>
-<!-- tags -->
-<p class="article__tags">Tags:
-        
-        <a href="fab-academy-assignments.html">#fab-academy-assignments</a>
-</p>
-<!-- content -->
-<section class="article__content ts">
-<h1 id="misc">MISC</h1>
-<h2 id="video-compression">Video compression</h2>
-<p><code>ffmpeg -i video.mp4 -b 1000000 compressed-video.mp4</code> or <code>ffmpeg -i video.mp4 -b 1000000 -t 10 compressed-video.mp4</code> where <code>-t 10</code> is the duration (10 sec.)</p>
-</section>
-<footer>
-<p>✎ <span>Created</span> 07/02/2020</p>
-<p>⁂ <span>Updated</span> 07/02/2020</p>
-</footer>
-</article>
 </article>
 <footer class="footer">
 <p>Antoine Jaunard ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a></p>

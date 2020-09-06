@@ -268,6 +268,8 @@ img {
 
 .article__title {
   margin-bottom: 0.5rem; }
+  .article__title a {
+    background-color: #dbdbdb; }
 
 .article__content {
   margin-top: 1rem; }

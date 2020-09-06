@@ -6,6 +6,7 @@
 .article__title {
   @extend %ts-title-0;
   margin-bottom: $size-xs;
+  a {background-color: $body-color;}
 }
 .article__content {
   margin-top: $size-md;

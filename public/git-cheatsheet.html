@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title property="schema:name">antoine.studio</title>
+<meta content="Documentation website of Antoine Jaunard" name="description"/>
+<meta content="Dok" property="schema:name"/>
+<meta content="Documentation website of Antoine Jaunard" property="schema:description"/>
+<link href="assets/main.min.css" rel="stylesheet"/>
+</head>
+<body>
+<main class="main">
+<header class="header">
+<nav class="nav">
+<ul class="nav__list">
+<li class="nav__item">
+<a class="nav__link" href="index.html">antoine.studio</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="content.html">content</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="about.html">about</a>
+</li>
+</ul>
+</nav>
+</header>
+<article class="article">
+<!-- title -->
+<h1 class="article__title">Git cheatsheet</h1>
+<!-- parent -->
+<p class="article__parent">This article is part of: <a href="project-management.html">Project management</a>.</p>
+<!-- tags -->
+<!-- featured image -->
+<!-- toc -->
+<section class="article__toc">
+<h2 class="toc__title">Table of content</h2>
+<div class="toc__list"><ul>
+<li><a href="#git-cheatsheet">GIT cheatsheet</a>
+<ul>
+<li><a href="#useful-commands">Useful commands</a>
+<ul>
+<li><a href="#visualization">Visualization</a></li>
+<li><a href="#configuration">Configuration</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section class="article__content ts">
+<h1 id="git-cheatsheet">GIT cheatsheet</h1>
+<p>Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</p>
+<h2 id="useful-commands">Useful commands</h2>
+<p>Start a project from scratch: <code>git init</code> and then <code>git remote add origin {repository-url}</code></p>
+<p>Pull the last commits from the distant server: <code>git pull</code></p>
+<p>Add all the modifications to the stack: <code>git add .</code></p>
+<p>Do a commit with a description: <code>git commit -m "message"</code></p>
+<p>Push the commit(s) on the distant server: <code>git push</code></p>
+<p>Discard the changes on uncommited files: <code>git checkout .</code></p>
+<p>Create a new branch: <code>git branch {new-branch}</code></p>
+<p>Merge the current branch with another: <code>git merge {other-branch}</code></p>
+<p>Delete a local branch: <code>git branch -d {local-branch}</code></p>
+<p>Delete a remote branch: <code>git push origin --delete {remote-branch}</code></p>
+<p>Change your working branch: <code>git checkout {branch-name}</code></p>
+<h3 id="visualization">Visualization</h3>
+<p>Get the repo's status <code>git status</code> or the repo's history: <code>git log</code></p>
+<p>Get the list of branches:  <code>git branch</code> or <code>git branch -v</code> to get more info</p>
+<p>Get the the commit-tree of all branches: <code>git log --oneline --abbrev-commit --all --graph --decorate --color</code></p>
+<h3 id="configuration">Configuration</h3>
+<p>Keep the password in memory for the next 8 hours: <code>git config --global credential.helper 'cache --timeout 28800'</code></p>
+<p>Add a shortcut to add and commit at the same time: <code>git config --global alias.ac '!git add -A &amp;&amp; git commit'</code> and then <code>git ac -m "message"</code></p>
+<p>Configure an alias to display the commit-tree:  <code>git config --global alias.gg 'log --oneline --abbrev-commit --all --graph --decorate --color'</code> and then use <code>git gg</code></p>
+</section>
+<footer>
+<p>✎ <span>Created</span> 06/02/2020</p>
+<p>⁂ <span>Updated</span> 06/02/2020</p>
+</footer>
+</article>
+<footer class="footer">
+<p>Antoine Jaunard ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a></p>
+</footer>
+</main>
+</body>
+</html>
