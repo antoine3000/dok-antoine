@@ -22,9 +22,9 @@ Together with Constant Mathieu, we had run a small but good webdesign studio cal
 
 During our journey, we had the chance to work for/with a music festival (Schiev), a web radio (The Word Radio), a contemporary art museum (MIMA), a centre for contemporary art and an independent cinema (Netwerk Aalst), few architecture offices (Office KGDVS, V+, A Practice), an art school (La Cambre), and many more.
 
-## Ecole de Recherche Graphique (2010-2014)
+## École de Recherche Graphique (2010-2014)
 
-I'm graduated in Art and Graphic Design at the [Ecole de Recherche Graphique](http://erg.be) (ERG) of Brussels.
+I'm graduated in Art and Graphic Design at the [École de Recherche Graphique](http://erg.be) (ERG) of Brussels.
 It was all about learning how to learn, hacking systems, building things without any budget, finding the right tone to communicate with others.
 
 # About this website
