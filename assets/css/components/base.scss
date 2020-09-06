@@ -1,8 +1,13 @@
 // Header
 .header {
   display: flex;
-  margin-top: $size-md;
-  margin-bottom: $size-xl;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  .nav {
+    padding-top: $size-md;
+    padding-bottom: $size-xl;
+  }
   @extend %container-padding;
   .title {
     margin-right: $size-sm;

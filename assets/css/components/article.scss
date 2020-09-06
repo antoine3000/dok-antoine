@@ -8,6 +8,7 @@
   margin-bottom: $size-xs;
 }
 .article__content {
+  margin-top: $size-md;
   & > *:not(.lg):not(pre) {
     max-width: $content-max-width;
   }

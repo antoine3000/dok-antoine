@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title property="schema:name">antoine.studio</title>
+<meta content="Documentation website of Antoine Jaunard" name="description"/>
+<meta content="Dok" property="schema:name"/>
+<meta content="Documentation website of Antoine Jaunard" property="schema:description"/>
+<link href="assets/main.min.css" rel="stylesheet"/>
+</head>
+<body>
+<main class="main">
+<header class="header">
+<nav class="nav">
+<ul class="nav__list">
+<li class="nav__item">
+<a class="nav__link" href="index.html">antoine.studio</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="content.html">content</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="about.html">about</a>
+</li>
+</ul>
+</nav>
+</header>
+<article class="article">
+<!-- title -->
+<h1 class="article__title">Embedded programming</h1>
+<!-- parent -->
+<!-- tags -->
+<p class="article__tags">Tags:
+      
+      <a href="fab-academy-assignments.html">#fab-academy-assignments</a>
+</p>
+<!-- featured image -->
+<!-- toc -->
+<section class="article__toc">
+<h2 class="toc__title">Table of content</h2>
+<div class="toc__list"><ul>
+<li><a href="#pomodoro-code">Pomodoro code</a>
+<ul>
+<li><a href="#how-i-want-to-use-my-pomodoro">How I want to use my pomodoro</a></li>
+<li><a href="#the-code-that-does-this-using-the-arduino-framework">The code that does this using the Arduino framework</a></li>
+</ul></li>
+<li><a href="#platformio">PlatformIO</a>
+<ul>
+<li><a href="#initialization">Initialization</a></li>
+<li><a href="#run-upload">Run &amp; upload</a></li>
+</ul></li>
+</ul>
+<li><a href="#programming-the-esp32-barduino">Programming the ESP32 — Barduino</a>
+<ul>
+<li><a href="#datasheet">Datasheet</a></li>
+<li><a href="#the-blink-program-using-pin-13">The blink program, using PIN 13</a></li>
+</ul></li>
+<li><a href="#programming-the-attiny1614">Programming the ATtiny1614</a>
+<ul>
+<li><a href="#connectivity">Connectivity</a></li>
+<li><a href="#install">Install</a></li>
+<li><a href="#compile">Compile</a></li>
+<li><a href="#upload">Upload</a></li>
+</ul></li>
+<li><a href="#the-basic-way-arduino-ide">The basic way: Arduino IDE</a>
+</li></div>
+</section>
+<section class="article__content ts">
+<p>Two weeks ago, I designed a pomodoro timer during the <a href="fabac-assignments-electronics-design.html" target="_blank">Electronics design</a> week. It's now time to program it. I'm going to write the piece of code that will light my LEDs as time goes by and find a way to send it to the ATtiny1614 chip. I'm going to focus on the latter: how to send a program (= program) a chip. Well, that was the plan.</p>
+<p>Unfortunately, in the meantime, the coronavirus has hit Spain (and the whole world). We are now all in quarantine, with no access to the lab. I will have to work from home, with the equipment I already have, nothing more.</p>
+<p><figure class="md"><img alt="pomo-circuit-playground" src="medias/embedded-programming-pomo-circuit-playground.jpeg"><figcaption>pomo-circuit-playground</figcaption></figure>
+<p>For this reason, I'm going to use a <a href="https://www.adafruit.com/product/3333" target="_blank">Circuit Playground Express</a>. This tiny board is already equipped with 10 mini NeoPixels, 1 motion sensor, 1 temperature sensor, 1 sound sensor, 1 mini speaker, 2 push buttons, 1 slide switch, infrared receiver and transmitter and 8 alligator-clip friendly input/output pins. It's a perfect board for quick prototyping and code experiments.</p>
+<h2 id="pomodoro-code">Pomodoro code</h2>
+<h3 id="how-i-want-to-use-my-pomodoro">How I want to use my pomodoro</h3>
+<ul>
+<li>Press the left button to start the timer</li>
+<li>If it's running, press the left button to pause the timer</li>
+<li>If it's paused, press the left button to resume the timer</li>
+<li>If it's paused, press the right button to stop the timer</li>
+<li>When it's running, the LEDs light up one by one until the time limit</li>
+<li>When it's running and it's a work period, LEDs are red</li>
+<li>When it's running and it's a break period, LEDs are green</li>
+<li>When it's paused, all the LEDs are light up and blue</li>
+</ul>
+<video controls="" preload="auto"><source src="medias/embedded-programming-pomo-playground.mp4" type="video/mp4"/></video>
+<h3 id="the-code-that-does-this-using-the-arduino-framework">The code that does this using the Arduino framework</h3>
+<pre>
+bool button_left;
+bool button_right;
+bool is_active = false;
+bool is_paused = false;
+int counter = 0;
+int steps = 10;
+int pomo = 30 * 600;
+int pomo_work = pomo / 6 * 5;
+int pomo_break = pomo / 6 * 1;
+
+void setup() {
+  CircuitPlayground.begin();
+}
+
+void on_second(int counter) {
+  CircuitPlayground.clearPixels();
+  if (counter &lt;= pomo_work) {
+    // work
+    for (int i = 0; i &lt;= steps; i++) {
+      if (counter &gt; pomo_work / steps * i) {
+        CircuitPlayground.setPixelColor(i, 255,   0,   0);
+      }
+    }
+  } else if (counter &gt; pomo_work &amp;&amp; counter &lt;= pomo) {
+    // break
+    for (int i = 0; i &lt;= steps; i++) {
+      if (counter - pomo_work &gt; pomo_break / steps * i) {
+        CircuitPlayground.setPixelColor(i, 0,   255,   0);
+      }
+    }
+  }
+}
+
+void bip() {
+  CircuitPlayground.playTone(200, 10);
+}
+
+void loop() {
+  button_left = CircuitPlayground.leftButton();
+  button_right = CircuitPlayground.rightButton();
+
+  if (counter &gt; pomo) {
+    CircuitPlayground.clearPixels();
+    counter = 0;
+  }
+
+  if (button_left) {
+    CircuitPlayground.clearPixels();
+    if (!is_active) {
+      is_active = true;
+      bip();
+    } else if (is_active &amp;&amp; !is_paused) {
+      is_paused = true;
+      bip();
+    } else if (is_paused) {
+      is_paused = false;
+      bip();
+    }
+  }
+
+  if (button_right) {
+    if (is_active &amp;&amp; is_paused) {
+      is_active = false;
+      is_paused = false;
+      counter = 0;
+      CircuitPlayground.clearPixels();
+      bip();
+    }
+  }
+
+  if (is_active &amp;&amp; !is_paused) {
+    counter = counter + 1;
+  }
+
+  if (is_paused) {
+    for (int i = 0; i &lt;= steps; i++) {
+      CircuitPlayground.setPixelColor(i, 0,   0,   55);
+    }
+  }
+
+  if (counter % 10 == 0) {
+    on_second(counter);
+  }
+
+  delay(100);
+}
+</pre>
+<h2 id="platformio">PlatformIO</h2>
+<p><a href="https://platformio.org/" target="_blank">PlatformIO</a> is a cross-platform, cross-architecture and multiple framework tool for embedded programming. It replaces Arduino IDE and offers a lot more subtilities and flexibility to write organized code for micro-controllers.</p>
+<p>I use PlatformIO as a replacement for Arduino IDE because it allows me to use the text editor I want (I use <a href="https://neovim.io/" target="_blank">Neovim</a>, an hyperextensible Vim-based text editor) and because it integrates librairies of more than 700 differents boards, including the ones I use. It also has a unified debugger and a static code analyze which seems super useful for large scale projects.</p>
+<h3 id="initialization">Initialization</h3>
+<p>Because PlatformIO is based on Python, the installation is pretty straight-forward using <em>pip</em>: <code>$ pip install -U platformio</code></p>
+<p>An empty folder to host the project is needed for PlatformIO to set up its environment. Make a new one and go in it <code>$ mkdir my-project &amp;&amp; cd my-project</code> then type <code>$ pio init</code> to initialize this folder with the PlatformIO structure.</p>
+<blockquote>
+<p><code>pio</code> is the the shortcut for <code>platformio</code>, it's the exact same thing but shorter</p>
+</blockquote>
+<p>Then the structure should look like this:</p>
+<pre>
+platformio.ini
+src/
+- main.cpp
+- main.h
+- …
+lib/
+- input/
+- - input.cpp
+- - input.h
+- - …
+- output/
+- - output.cpp
+- - output.h
+- - …
+boards/
+- board_definition.json
+</pre>
+<p>Next, search for the depedencies ID you might need, in this case the <code>Adafruit_CircuitPlayground.h</code>, by typing <code>$ pio lib search "header:Adafruit_CircuitPlayground.h"</code>. The lib ID I need is <code>602</code>.</p>
+<p>Configure the project for this specific board, by following the datasheet found <a href="https://docs.platformio.org/en/latest/boards/atmelsam/adafruit_circuitplayground_m0.html" target="_blank">here</a>.</p>
+<p>These values have to be written in the <code>platformio.io</code> file.</p>
+<pre>
+[env:adafruit_circuitplayground_m0]
+platform = atmelsam
+board = adafruit_circuitplayground_m0
+lib_deps =
+  602
+</pre>
+<h3 id="run-upload">Run &amp; upload</h3>
+<p>Write your program into the <code>src</code> folder. The librairies have to be included at the very beginning of your program's files. In this case, the Arduino framework <code>#include &lt;Arduino.h&gt;</code> and the Circuit Playground framework <code>#include &lt;Adafruit_CircuitPlayground.h&gt;</code>.</p>
+<p>Once everything is set up (not that much actually, because PlatformIO does a few thing for us), launch the <code>$ pio run</code> command to run and compile the code.</p>
+<p><figure class="md"><img alt="pio-run" src="medias/embedded-programming-pio-run.jpeg"><figcaption>pio-run</figcaption></figure>
+<p>If it has been verified correctly, send it to your board to make it alive by typing <code>pio run -t upload</code>.</p>
+<p><figure class="md"><img alt="pio-upload" src="medias/embedded-programming-pio-upload.jpeg"><figcaption>pio-upload</figcaption></figure>
+<p>I have been using my pomodoro timer every day since I coded it, the Circuit Playground is always by my computer to remind me to take a 5-minutes break every 25 minutes and help me stay focused.</p>
+<hr/>
+<h1 id="programming-the-esp32-barduino">Programming the ESP32 — Barduino</h1>
+<p>We have been asked to assemble a Barduino few hours before the lab lockdown due to the coronavirus, in order to be able to experiment with it later at home.</p>
+<blockquote>
+<p>Barduino 2.0 started as a project to have a ESP32 fabacademy compatible board to help the students develope their work on top of it. This board was designed by Eduardo Chamorro Martin with the help of Josep Marti and Oscar Gonzalez in Fab Lab Barcelona 2020.</p>
+<blockquote>
+<p><a href="https://gitlab.fabcloud.org/barcelonaworkshops/barduino-2.0" target="_blank">Barduino 2.0, Gitlab</a></p>
+</blockquote>
+</blockquote>
+<p><figure class="md"><img alt="arduino-pic" src="medias/embedded-programming-barduino-pic.jpeg"><figcaption>arduino-pic</figcaption></figure>
+<p>To use that board with PlatformIO, <code>pio init</code> a new project specifically for the ESP32 chip.</p>
+<p><code>$ pio project init --board esp32-devkitlipo</code></p>
+<p>This command generates the <code>platformio.ini</code> files with the desired values.</p>
+<pre>
+[env:esp32-devkitlipo]
+platform = espressif32
+board = esp32-devkitlipo
+framework = arduino
+</pre>
+<p>Then, as we can see on the datasheet, the ID of the programmable test LED is <code>13</code>. We can use it to test if our board and our configuration work properly.</p>
+<p><figure class="md"><img alt="arduino-pinouts" src="medias/embedded-programming-barduino-pinouts.png"><figcaption>arduino-pinouts</figcaption></figure>
+<h3 id="datasheet">Datasheet</h3>
+<p>Also, there is a <em>Programmer Slider Switch</em> that changes the behaviour of the chip and tells it wheter it's in programming mode or execution mode. Obviously, we have to turn it to the left, the programming mode, before uploading our program.</p>
+<h3 id="the-blink-program-using-pin-13">The blink program, using PIN 13</h3>
+<pre>
+ #include <arduino.h>
+
+ int led_in = 13;
+
+ void setup() {
+   pinMode(led_in, OUTPUT);
+ }
+
+ void loop() {
+   digitalWrite(led_in, HIGH);
+   delay(1000);
+   digitalWrite(led_in, LOW);
+   delay(1000);
+ }
+</arduino.h></pre>
+<p>Turn the programming slider switch to the right, in execution mode, press the reset button and the test LED should blink. Olé.</p>
+<hr/>
+<h1 id="programming-the-attiny1614">Programming the ATtiny1614</h1>
+<p>The ATtiny1614 isn't yet supported by PlatformIO and therefore needs another method to be programmed. Fortunately, <a href="https://github.com/mraardvark/pyupdi" target="_blank">pyupdi</a> is here! Pyupdi is a Python UPDI driver for programming the "new" tinyAVR and megaAVR devices.</p>
+<h2 id="connectivity">Connectivity</h2>
+<p>Power comes from a USB cable via a FTDI connector. The data comes from the UPDI connector and goes through another FTDI connector.</p>
+<h2 id="install">Install</h2>
+<p><code>git clone https://github.com/mraardvark/pyupdi</code></p>
+<p><code>pip install -r requirements.txt</code></p>
+<h2 id="compile">Compile</h2>
+<p>The first thing to do is to compile the code with the Arduino IDE and then send it with <code>pyupdi</code>.
+To be able to compile the code, first install the <a href="https://github.com/SpenceKonde/megaTinyCore" target="_blank">megaTinyCore</a> library using the Libraries manager into the Arduino IDE and select the ATtiny1614 board.</p>
+<p>From the Arduini IDE console, locate the <code>.ino.hex</code> that is generated when you compile and copy its path. It should be something like <code>/tmp/arduino_build_342195/Blink.ino.hex</code>.</p>
+<h2 id="upload">Upload</h2>
+<p>Once your program is correctly compiled, open a terminal to send it to your device.</p>
+<p>First, run <code>ls /dev/* | greb usb</code> to know the name of your port. It should look like <code>/dev/ttyUSB0</code>.</p>
+<p>Then, run pyupdi with the name of the board you're working on <code>tiny1614</code>, the port where you want to send the code <code>/dev/ttyUSB0</code> and the code itself <code>/temp/arduino_buid_342195/Blink.ino.hex</code>.</p>
+<pre>
+pyupdi.py -d tiny1614 -c /dev/ttyUSB0 -b 9600 -f /tmp/arduino_build_342195/Blink.ino.hex -v
+</pre>
+<video controls="" preload="auto"><source src="medias/embedded-programming-pomo-test.mp4" type="video/mp4"/></video>
+<hr/>
+<h1 id="the-basic-way-arduino-ide">The basic way: Arduino IDE</h1>
+<p>One can also use Arduino IDE to load a piece of code into a device. It works perfectly well even if this solution is more basic and doesn't allow a lot of  fine tuning.</p>
+<ol>
+<li><a href="https://www.arduino.cc/en/Main/Software" target="_blank">Download Arduino IDE</a> and install it on you computer</li>
+<li>Find and install the Circuit Playground library with the built-in <code>Boards Manager</code></li>
+<li>Verify the code</li>
+<li>Upload the code</li>
+</ol>
+</section>
+<footer>
+<p>✎ <span>Created</span> 18/03/2020</p>
+<p>⁂ <span>Updated</span> 18/03/2020</p>
+</footer>
+</article>
+<footer class="footer">
+<p>Antoine Jaunard ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a></p>
+</footer>
+</main>
+</body>
+</html>
