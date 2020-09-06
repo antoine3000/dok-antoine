@@ -25,10 +25,12 @@
   <img src="{{ article.featured_image }}" alt="" class="article__featured">
   {% endif %}
   <!-- toc -->
-  {% if article.toc %}
+  {% if (article.toc) or (article.childs) %}
   <section class="article__toc">
     <h2 class="toc__title">Table of content</h2>
+    {% if article.toc %}
     <div class="toc__list">{{ article.toc }}</div>
+    {% endif %}
     {% if article.childs %}
       {% for child in article.childs %}
         <h3 class="toc__title--sub"><a href="{{ article.slug}}.html#{{ child.slug}}">{{ child.title }}</a></h3>

@@ -30,12 +30,13 @@
 // Text styles - definition
 %ts-link {
   color: $base-color;
-  text-decoration: none;
-  background-color: $action-color;
+  text-decoration: underline;
+  background-color: $body-color;
   &:hover {
     color: $base-color;
-    text-decoration: underline;
-    background-color: $action-color;
+    text-decoration: none;
+    background-color: $base-color;
+    color: $body-color;
   }
 }
 %ts-title-0 {
