@@ -82,14 +82,14 @@ textarea {
   padding-right: 1.5rem; }
 
 .toc__title--sub, .ts table th, .ts h3, .index:not(.index--featured) .index__link, .ts h2, .toc__title, .index--featured .item__title, .ts h1, .article__title, .intro p, .index__title, .ts .todo, .ts blockquote p, body, .article figure figcaption, .index--list .index__tags,
-.index--list .index__update, .ts blockquote blockquote p, .ts h4, .ts h5, .ts h6 {
+.index--list .index__update, .ts blockquote blockquote p, .index:not(.index--featured) .index__item--sub .index__link, .ts h4, .ts h5, .ts h6 {
   font-style: normal;
   font-weight: normal;
   line-height: 1.6;
   word-spacing: -0.3em; }
 
 body, .article figure figcaption, .index--list .index__tags,
-.index--list .index__update, .ts blockquote blockquote p, .ts h4, .ts h5, .ts h6 {
+.index--list .index__update, .ts blockquote blockquote p, .index:not(.index--featured) .index__item--sub .index__link, .ts h4, .ts h5, .ts h6 {
   font-family: "jetbrains-regular", Helvetica, Arial, sans-serif; }
 
 .ts .todo, .ts blockquote p {
@@ -121,6 +121,9 @@ a {
   font-size: 1rem; }
 
 .ts h4, .ts h5, .ts h6 {
+  font-size: 1rem; }
+
+.index:not(.index--featured) .index__item--sub .index__link {
   font-size: 1rem; }
 
 .article figure figcaption, .index--list .index__tags,

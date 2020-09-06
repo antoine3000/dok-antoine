@@ -34,6 +34,9 @@
   .index__link {
     @extend %ts-title-2;
   }
+  .index__item--sub .index__link {
+    @extend %ts-body;
+  }
 }
 
 // Index featured

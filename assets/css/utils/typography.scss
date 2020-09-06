@@ -59,6 +59,10 @@
   @extend %font-body;
   font-size: $size-md;
 }
+%ts-body {
+  @extend %font-body;
+  font-size: $size-md;
+}
 %ts-small {
   @extend %font-body;
   font-size: $size-sm;
