@@ -83,10 +83,11 @@ a {
   p, ul, ol, .table {
     margin-bottom: 1em;
   }
-  figure.md, figure.lg, video {
+  figure.md, figure.lg, video, .embed-container {
     margin:  2em 0;
     & + figure.md,
     & + figure.lg,
+    & + .embed-container,
     & + video {
       margin-top: -1em;
     }
@@ -107,7 +108,7 @@ a {
   blockquote {
     border-left: var(--border-sm) dotted var(--base-color);
     p {
-      font-size: var(--size-lg);
+      font-size: var(--size-md);
       @extend %font-body-italic;
       padding-left: var(--size-lg);
       margin-bottom: 0;

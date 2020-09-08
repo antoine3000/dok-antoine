@@ -154,9 +154,9 @@ a {
 .ts p, .ts ul, .ts ol, .ts .table {
   margin-bottom: 1em; }
 
-.ts figure.md, .ts figure.lg, .ts video {
+.ts figure.md, .ts figure.lg, .ts video, .ts .embed-container {
   margin: 2em 0; }
-  .ts figure.md + figure.md, .ts figure.md + figure.lg, .ts figure.md + video, .ts figure.lg + figure.md, .ts figure.lg + figure.lg, .ts figure.lg + video, .ts video + figure.md, .ts video + figure.lg, .ts video + video {
+  .ts figure.md + figure.md, .ts figure.md + figure.lg, .ts figure.md + .embed-container, .ts figure.md + video, .ts figure.lg + figure.md, .ts figure.lg + figure.lg, .ts figure.lg + .embed-container, .ts figure.lg + video, .ts video + figure.md, .ts video + figure.lg, .ts video + .embed-container, .ts video + video, .ts .embed-container + figure.md, .ts .embed-container + figure.lg, .ts .embed-container + .embed-container, .ts .embed-container + video {
     margin-top: -1em; }
 
 .ts p + p {
@@ -175,7 +175,7 @@ a {
 .ts blockquote {
   border-left: var(--border-sm) dotted var(--base-color); }
   .ts blockquote p {
-    font-size: var(--size-lg);
+    font-size: var(--size-md);
     padding-left: var(--size-lg);
     margin-bottom: 0; }
   .ts blockquote blockquote {
@@ -296,7 +296,7 @@ img {
 
 .article__content {
   margin-top: var(--size-md); }
-  .article__content > *:not(.lg):not(pre) {
+  .article__content > *:not(.lg):not(pre):not(.embed-container) {
     max-width: var(--content-max-width); }
 
 .article__featured {
@@ -355,6 +355,18 @@ img {
 .ts video {
   max-width: 100%; }
 
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden; }
+  .embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
 html {
   font-size: 15px; }
   @media (max-width: 767px) {
@@ -400,16 +412,3 @@ a {
 
 :root {
   --action-color: #000000; }
-
-.embed-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  max-width: 100%; }
-  .embed-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; }
