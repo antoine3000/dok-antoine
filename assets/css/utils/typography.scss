@@ -1,0 +1,19 @@
+// Typography
+
+%font-base {
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.6;
+  word-spacing: -0.4em;
+}
+
+%ts-link {
+  color: var(--base-color);
+  text-decoration: underline;
+  background-color: var(--body-color);
+  &:hover {
+    color: var(--body-color);
+    text-decoration: none;
+    background-color: var(--base-color);
+  }
+}

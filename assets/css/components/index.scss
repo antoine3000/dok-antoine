@@ -1,0 +1,10 @@
+.index a {
+  text-decoration: none;
+}
+
+.index--featured {
+  .index__link:hover .item__title {
+    background-color: var(--base-color);
+    color: var(--body-color);
+  }
+}

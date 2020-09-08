@@ -4,7 +4,6 @@
   font-style: normal;
   font-weight: normal;
   line-height: 1.6;
-  word-spacing: -0.3em;
 }
 
 %font-body {
@@ -84,9 +83,10 @@ a {
   p, ul, ol, .table {
     margin-bottom: 1em;
   }
-  figure, video {
+  figure.md, figure.lg, video {
     margin:  2em 0;
-    & + figure,
+    & + figure.md,
+    & + figure.lg,
     & + video {
       margin-top: -1em;
     }

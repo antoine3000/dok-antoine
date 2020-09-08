@@ -104,8 +104,7 @@ textarea {
 .index--list .index__update, .ts blockquote blockquote p, .index:not(.index--featured) .index__item--sub .index__link, .ts h4, .ts h5, .ts h6 {
   font-style: normal;
   font-weight: normal;
-  line-height: 1.6;
-  word-spacing: -0.3em; }
+  line-height: 1.6; }
 
 body, .article figure figcaption, .article__toc, .index--list .index__tags,
 .index--list .index__update, .ts blockquote blockquote p, .index:not(.index--featured) .index__item--sub .index__link, .ts h4, .ts h5, .ts h6 {
@@ -155,9 +154,9 @@ a {
 .ts p, .ts ul, .ts ol, .ts .table {
   margin-bottom: 1em; }
 
-.ts figure, .ts video {
+.ts figure.md, .ts figure.lg, .ts video {
   margin: 2em 0; }
-  .ts figure + figure, .ts figure + video, .ts video + figure, .ts video + video {
+  .ts figure.md + figure.md, .ts figure.md + figure.lg, .ts figure.md + video, .ts figure.lg + figure.md, .ts figure.lg + figure.lg, .ts figure.lg + video, .ts video + figure.md, .ts video + figure.lg, .ts video + video {
     margin-top: -1em; }
 
 .ts p + p {
@@ -327,7 +326,8 @@ img {
 .article figure.sm {
   max-width: 100%;
   width: 100%;
-  display: inline-block; }
+  display: inline-block;
+  vertical-align: top; }
   @media (min-width: 769px) {
     .article figure.sm {
       width: calc(var(--content-max-width)/2 - var(--size-sm)/2);
@@ -372,8 +372,11 @@ body {
     background-color: var(--action-color);
     color: var(--base-color); }
 
-:root {
-  --action-color: #000000; }
+.ts blockquote p, .ts .todo, body {
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.6;
+  word-spacing: -0.4em; }
 
 a {
   color: var(--base-color);
@@ -390,3 +393,6 @@ a {
 .index--featured .index__link:hover .item__title {
   background-color: var(--base-color);
   color: var(--body-color); }
+
+:root {
+  --action-color: #000000; }

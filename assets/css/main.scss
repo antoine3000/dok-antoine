@@ -1,27 +1,10 @@
+// DOK
 @import "__DOK/assets/css/main.scss";
+// Personal
+@import "utils/typography.scss";
+@import "components/index.scss";
 
 :root {
   --action-color: #000000;
 }
 
-%ts-link {
-  color: var(--base-color);
-  text-decoration: underline;
-  background-color: var(--body-color);
-  &:hover {
-    color: var(--body-color);
-    text-decoration: none;
-    background-color: var(--base-color);
-  }
-}
-
-.index a {
-  text-decoration: none;
-}
-
-.index--featured {
-  .index__link:hover .item__title {
-    background-color: var(--base-color);
-    color: var(--body-color);
-  }
-}
