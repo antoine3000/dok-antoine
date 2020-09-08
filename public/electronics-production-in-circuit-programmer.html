@@ -29,25 +29,19 @@
 </header>
 <article class="article">
 <!-- title -->
-<h1 class="article__title">Electronics production</h1>
+<h1 class="article__title">Making an in-circuit programmer</h1>
 <!-- parent -->
+<p class="article__parent">This article is part of: <a href="electronics-production.html">Electronics production</a>.</p>
 <!-- tags -->
 <p class="article__tags">Tags:
       
-      <a class="tag__link" href="fab-academy-assignments.html">#fab-academy-assignments</a>
+      <a class="tag__link" href="electronics.html">#electronics</a>
 </p>
 <!-- featured image -->
-<figure class="md"><img alt="" class="article__featured" src="medias/electronics-production-in-circuit-programmer-ftdi-updi.jpg"><figcaption></figcaption></figure>
 <!-- toc -->
 <section class="article__toc">
 <h2 class="toc__title">Table of content</h2>
-<h3 class="toc__title--sub"><a href="electronics-production.html#electronics-production-testing-the-milling-machine">Testing the compact milling machine</a></h3>
-<div class="toc__list--sub"><ul>
-<li><a href="#detailed-specs-of-the-machine">Detailed specs of the machine:</a></li>
-</ul>
-</div>
-<h3 class="toc__title--sub"><a href="electronics-production.html#electronics-production-in-circuit-programmer">Making an in-circuit programmer</a></h3>
-<div class="toc__list--sub"><ul>
+<div class="toc__list"><ul>
 <li><a href="#ftdi-updi">FTDI &amp; UPDI</a>
 <ul>
 <li><a href="#files-preparation">Files preparation</a>
@@ -61,66 +55,6 @@
 </ul>
 </div>
 </section>
-<section class="article__content ts">
-<p>It's the 4th week of the Fab Academy, we're now exploring the process of electronics production: How to make a in-circuit programmer from a <a href="https://en.wikipedia.org/wiki/Printed_circuit_board" target="_blank">printed circuit board</a> (PCB) and several electronic components, a programmer in wich I will send code to pilot my future electronic projects.</p>
-</section>
-<footer>
-<p>✎ <span>Created</span> 19/02/2020</p>
-<p>⁂ <span>Updated</span> 19/02/2020</p>
-</footer>
-<article class="article--sub" id="electronics-production-testing-the-milling-machine">
-<!-- title -->
-<h1 class="article__title">Testing the compact milling machine <a href="electronics-production-testing-the-milling-machine.html">●</a></h1>
-<!-- tags -->
-<p class="article__tags">Tags:
-        
-        <a href="fab-academy-assignments.html">#fab-academy-assignments</a>
-</p>
-<!-- content -->
-<section class="article__content ts">
-<p>The goal of this group assignment is for us to know the potential gaps between our traces, or how thin the traces could be. Since the machines were always occupied and the booking system at Fab Lab Barcelona was not really effective, our class couldn't have a chance to do many group tests. In the end, we were able to finish only 1 group test with the participation of the whole class.</p>
-<p>We used the Roland MonoFab SRM-20 machine to mill a test file.</p>
-<p><figure class="md"><img alt="linetest" src="medias/electronics-production-testing-the-milling-machine-linetest.png"><figcaption>linetest</figcaption></figure>
-<h2 id="detailed-specs-of-the-machine">Detailed specs of the machine:</h2>
-<ul>
-<li>Work area: 203 x 152 x 60mm</li>
-<li>Loadable workpiece weight: 2kg</li>
-<li>Operating speed: 6mm/min - 1,800mm/min</li>
-<li>Spindle speed: 3,000 – 7,000rpm</li>
-<li>Input Format : RML-1</li>
-<li>Material: Modeling Wax, Chemical Wood, Foam, Acrylic, PCB</li>
-</ul>
-<p><figure class="md"><img alt="group-1" src="medias/electronics-production-testing-the-milling-machine-group-1.png"><figcaption>group-1</figcaption></figure>
-<figure class="md"><img alt="group-2" src="medias/electronics-production-testing-the-milling-machine-group-2.png"><figcaption>group-2</figcaption></figure>
-<p>We prepared the <code>.rml</code> files using <a href="http://fabmodules.org/" target="_blank">Fab Modules</a>.</p>
-<ol>
-<li>Select <code>.png</code> input format and load the .png file</li>
-<li>Select <code>.rml</code> output format</li>
-<li>Select the proper process: <code>PCB traces (1/64)</code> or <code>PCB outline (1/32)</code>. This will define the cut depth (0.1mm for milling traces and 0.6mm for cutting).</li>
-<li>Select <code>SRM-20</code> in the output machine.</li>
-<li>Modify settings to origin <code>0,0,0 (x,y,z)</code>; <code>zjog = 12</code> (to make sure the milling bit will be lifted up while moving across the workpiece and avoid damaging both the traces and the fragile bit itself); and home <code>0,0,12 (x,y,z)</code>.</li>
-<li>Select the proper direction. If there are thin traces on the board, we need to select the conventional direction in order to avoid broken traces.</li>
-<li>Click the <code>calculate</code> button to calculate the toolpath and click the <code>save</code> button to save the <code>.rml</code> file.</li>
-</ol>
-<p><figure class="md"><img alt="linetest" src="medias/electronics-production-testing-the-milling-machine-testline-2.jpg"><figcaption>linetest</figcaption></figure>
-<p><figure class="md"><img alt="linetest" src="medias/electronics-production-testing-the-milling-machine-testline-1.jpg"><figcaption>linetest</figcaption></figure>
-<p>We had an issue with the outlines cutting. One side was not cut completely. We managed to generate the file multiple times and did the process again, but we still had the same problem. However, we could tell from the failed test that using the default settings of Fab Modules, the machine is able to mill up to 0.010mm thin trace.</p>
-<p>I hope we will find a way to better manage the time we have for the coming weeks. I would like to have more time with the machines, to be able to experiment more an go further than the assignments.</p>
-</section>
-<footer>
-<p>✎ <span>Created</span> 20/02/2020</p>
-<p>⁂ <span>Updated</span> 20/02/2020</p>
-</footer>
-</article>
-<article class="article--sub" id="electronics-production-in-circuit-programmer">
-<!-- title -->
-<h1 class="article__title">Making an in-circuit programmer <a href="electronics-production-in-circuit-programmer.html">●</a></h1>
-<!-- tags -->
-<p class="article__tags">Tags:
-        
-        <a href="fab-academy-assignments.html">#fab-academy-assignments</a>
-</p>
-<!-- content -->
 <section class="article__content ts">
 <blockquote>
 <p>In-system programming (ISP), also called in-circuit serial programming (ICSP), is the ability of some programmable logic devices, microcontrollers, and other embedded devices to be programmed while installed in a complete system, rather than requiring the chip to be programmed prior to installing it into the system.</p>
@@ -180,9 +114,9 @@
 <p>Take care to always lift the Z axis before moving on the X and Y axis. If not, the end-mill will scratch the surface and destroy the PCB.</p>
 <p><figure class="md"><img alt="xyz" src="medias/electronics-production-in-circuit-programmer-xyz-axes.jpg"><figcaption>xyz</figcaption></figure>
 <p>When the end mill and the XYZ axes are configured, press the <code>cut</code> button to load the appropriate file, then press the <code>setup</code> button to start the milling process.</p>
-<video controls="" preload="auto"><source src="medias/electronics-production-milling-process.mp4" type="video/mp4"/></video>
+<video controls="" preload="auto"><source src="medias/electronics-production-in-circuit-programmer-milling-process.mp4" type="video/mp4"/></video>
 <p>In resume, it's needed to run the cut two times. First time for the traces, using the 1/64 end-mill. Then a second time for the outline using the 1/32 end-mill. It implies that you will have to change the file and the end-mill at the middle of the milling process. Don't modify the X/Y axes by doing it or you will lose the exact position of your design. Only re-setup the Z axis when the 1/32 end-mill is in the machine.</p>
-<video controls="" preload="auto"><source src="medias/electronics-production-milling-process-2.mp4" type="video/mp4"/></video>
+<video controls="" preload="auto"><source src="medias/electronics-production-in-circuit-programmer-milling-process-2.mp4" type="video/mp4"/></video>
 <p>As you can see on the video above, I teamed up with <a href="https://fabacademy.org/2020/labs/barcelona/students/tue-ngo/" target="_blank">Tue</a>, <a href="https://fabacademy.org/2020/labs/barcelona/students/marco-cataffo/" target="_blank">Marco</a> and <a href="https://fabacademy.org/2020/labs/barcelona/students/roger-anguera/" target="_blank">Roger</a> in order to save time and materials. Machines are always super busy around here in Fab Lab Barcelona.</p>
 <p>We had some issues during the process:</p>
 <ul>
@@ -228,7 +162,6 @@
 <p>✎ <span>Created</span> 21/02/2020</p>
 <p>⁂ <span>Updated</span> 21/02/2020</p>
 </footer>
-</article>
 </article>
 <footer class="footer">
 <p>antoine.studio ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a></p>
