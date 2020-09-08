@@ -11,7 +11,14 @@ import yaml
 
 c = 'content/'
 m = 'public/medias/'
-env = Environment(loader=FileSystemLoader('templates'))
+a = "public/assets/"
+env = Environment(loader=FileSystemLoader('__DOK/templates'))
+scss_file = "assets/css/main.scss"
+scss_map = {scss_file: "public/assets/main.css"}
+css_map = {"public/assets/main.css": "public/assets/main.min.css"}
+fonts_path_dok = '__DOK/assets/fonts/'
+fonts_path_user = 'assets/fonts/'
+fonts_public = 'public/assets/fonts/'
 
 articles = {}
 
@@ -135,6 +142,16 @@ def content_order(list):
         if item == '.DS_Store':
             list.remove(item)
 
+# Make directories if they don't exist
+if not os.path.exists(m):
+    os.makedirs(m)
+
+if not os.path.exists(a):
+    os.makedirs(a)
+
+if not os.path.exists(fonts_public):
+    os.makedirs(fonts_public)
+
 # get everything
 content_0 = os.listdir(c)
 content_order(content_0)
@@ -184,8 +201,18 @@ for article in articles:
 print("⁂  Tags: Organized")
 
 # Settings
-with open('settings.yml', 'r') as file:
+settings_file = 'settings.yml'
+with open('__DOK/' + settings_file, 'r') as file:
     settings = yaml.load(file, Loader=yaml.FullLoader)
+if os.path.isfile(settings_file):
+    with open(settings_file, 'r') as file:
+        settings_user = yaml.load(file, Loader=yaml.FullLoader)
+
+settings.update(settings_user) 
+
+
+
+
 
 # Generate article pages
 article_template = env.get_template('article.html')
@@ -226,18 +253,6 @@ with open('public/index.html', 'w') as file:
 print("⁂  Home page: Created")
 
 # Scss to css
-public_asset_path  = "public/assets/"
-scss_file = "assets/css/personal/main.scss"
-scss_map = {scss_file: "public/assets/main.css"}
-css_map = {"public/assets/main.css": "public/assets/main.min.css"}
-fonts_path = 'assets/fonts/'
-fonts_public = 'public/assets/fonts/'
-
-# Create the folders if they don't exist
-if not os.path.exists(public_asset_path):
-    os.makedirs(public_asset_path)
-if not os.path.exists(fonts_public):
-    os.makedirs(fonts_public)
 
 def compile_scss(scss):
     for source, dest in scss.items():
@@ -253,6 +268,11 @@ def minify_css(css):
 
 
 # Copy fonts to public
+if os.path.isdir(fonts_path_user):
+    fonts_path = fonts_path_user
+else:
+    fonts_path = fonts_path_dok
+
 fonts = os.listdir(fonts_path)
 for font_file in fonts:
     if not os.path.isfile(fonts_public + font_file):
