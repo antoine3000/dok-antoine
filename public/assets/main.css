@@ -282,7 +282,7 @@ img {
 
 .intro {
   margin-bottom: var(--size-xl);
-  max-width: var(--content-max-width); }
+  max-width: calc(var(--content-max-width) * 2); }
   .intro small {
     display: block;
     margin-top: var(--size-sm); }
@@ -376,7 +376,7 @@ body {
   font-style: normal;
   font-weight: normal;
   line-height: 1.6;
-  word-spacing: -0.4em; }
+  word-spacing: -0.15em; }
 
 a {
   color: var(--base-color);
@@ -386,6 +386,10 @@ a {
     color: var(--body-color);
     text-decoration: none;
     background-color: var(--base-color); }
+
+.page--home {
+  --base-color: #FFFFFF;
+  --body-color: #000000; }
 
 .index a {
   text-decoration: none; }
