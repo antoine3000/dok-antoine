@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title property="schema:name">antoine.studio - Documentation tool</title>
+<meta content="Documentation tool" name="description"/>
+<meta content="antoine.studio" property="schema:name"/>
+<meta content="Documentation tool" property="schema:description"/>
+<link href="assets/main.min.css" rel="stylesheet"/>
+</head>
+<body class="page page--article">
+<main class="main">
+<header class="header">
+<nav class="nav">
+<ul class="nav__list">
+<li class="nav__item">
+<a class="nav__link" href="index.html">antoine.studio</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="content.html">content</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="about.html">about</a>
+</li>
+</ul>
+</nav>
+</header>
+<article class="article">
+<!-- title -->
+<h1 class="article__title">Oloid shape</h1>
+<!-- parent -->
+<p class="article__parent">This article is part of: <a href="3D-scanning-printing.html">3D scanning and printing</a>.</p>
+<!-- tags -->
+<!-- featured image -->
+<!-- toc -->
+<section class="article__toc">
+<h2 class="toc__title">Table of content</h2>
+<div class="toc__list"><ul>
+<li><a href="#modeling">Modeling</a></li>
+<li><a href="#slicing">Slicing</a></li>
+<li><a href="#printing">Printing</a></li>
+<li><a href="#result">Result</a></li>
+</ul>
+</div>
+</section>
+<section class="article__content ts">
+<p>I'm exploring different types of shapes that could eventually be interesting regarding my final project. One of these is the oloid.</p>
+<blockquote>
+<p>An oloid is a three-dimensional curved geometric object that was discovered by Paul Schatz in 1929. It is the convex hull of a skeletal frame made by placing two linked congruent circles in perpendicular planes, so that the center of each circle lies on the edge of the other circle. The distance between the circle centers equals the radius of the circles. One third of each circle's perimeter lies inside the convex hull, so the same shape may be also formed as the convex hull of the two remaining circular arcs each spanning an angle of 4π/3.</p>
+<blockquote>
+<p><a href="https://en.wikipedia.org/wiki/Oloid" target="_blank">Oloid, Wikipedia</a></p>
+</blockquote>
+</blockquote>
+<div class="embed-container">
+<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" src="https://www.youtube-nocookie.com/embed/GM3_JuFgJ2E"></iframe>
+</div>
+<p>An oloid is a geometric shape that only has one side. That means that if you make it roll on a flat surface, its entire surface will touch the flat surface at some point.</p>
+<p>The oloid shape can only be achieved by using an additive technique, such as 3D
+printing, and not a subtractive technique, such as laser cutting or milling,
+because the shape itself must be worked in all directions, not just from bottom
+to top (or by using another machine, a robot, with more axes, but then the technique begins to be too complex for a small piece like this one).</p>
+<h2 id="modeling">Modeling</h2>
+<p><a href="https://www.openscad.org/" target="_blank">OpenSCAD</a>, the 3D CAD modeller that we use by writing code (as I said <a href="fabac-assignments-computer-aided-design.html" target="_blank">here</a>) has a function called <code>hull()</code> that displays the <a href="https://doc.cgal.org/latest/Convex_hull_2/index.html" target="_blank">convex hull</a> of child nodes.</p>
+<p>This is why I to use OpenSCAD to model this particular shape instead of another more conventional tool like FreeCAD.</p>
+<pre>
+$fn = 180; // resolution
+radius = 20;
+
+hull() {
+  cylinder(r=radius, h=0.1, center=true);
+  rotate(a=90, v=[1,0,0]) {
+    translate([radius,0,0]) {
+      cylinder(r=radius, h=0.1, center=true);
+    }
+  }
+}
+</pre>
+<p>Here is the code I wrote to model the oloid. It's simple isn't it?</p>
+<video controls="" preload="auto"><source src="medias/3D-scanning-printing-oloid-shape-oloid-openscad.mp4" type="video/mp4"/></video>
+<h2 id="slicing">Slicing</h2>
+<p>The slicing process of the oloid model was very interesting because I had to add supports to keep the shape in place during printing. It helped me understand how supports work and how to generate them in a slicer software, which is actually super easy.</p>
+<p>To do so, I used <a href="https://ultimaker.com/software/ultimaker-cura" target="_blank">Ultimaker Cura</a> and its pre-configured <em>Support</em> options. In order to reduce the printing time and because I knew it from my previous test, I increased the overhang angle to 55° (instead of 45°).</p>
+<p>Here is the .std file I made for printing: <a href="files/oloid.stl" target="_blank">oloid.stl</a></p>
+<h2 id="printing">Printing</h2>
+<p>Printing this oloid was'nt as easy as the first test I did. My first attempt failed and I had to stop printing. It gave something like this:</p>
+<p><figure class="md"><img alt="oloid-fail" src="medias/3D-scanning-printing-oloid-shape-oloid-fail.jpg"><figcaption>oloid-fail</figcaption></figure>
+<p>I had to call one of my instructors, Mikel Llobera Guelbenzu, to find out what had happened. But even with him, we didn't know directly where this failure came from. We had to search together, and it was very beneficial for my learning.</p>
+<p>At first we thought it came from the amount of material coming from the extruder, as if there was a knot in the spool of filament. There was one, but after another test, it turned out that this wasn't the main problem.</p>
+<p>Finally, Mikel discovered that the bed wasn't flat due to a wrong manipulation on previous prints. We recalibrated it and relaunched the print, and yes: it went well!</p>
+<video controls="" preload="auto"><source src="medias/3D-scanning-printing-oloid-shape-oloid-print-1.mp4" type="video/mp4"/></video>
+<p>The very end of the printing was a bit problematic too. The supports didn't support the model enough and everything started to move according to the movements of the printer.</p>
+<p>At one point it really seemed like the oloid could fall. Fortunately, I was around the printer and I could hold my piece in place using my finger. That is something I will have to consider the next time I have to think about supports.</p>
+<video controls="" preload="auto"><source src="medias/3D-scanning-printing-oloid-shape-oloid-print-2.mp4" type="video/mp4"/></video>
+<h2 id="result">Result</h2>
+<p>The end result is quite good, even if I could have increased the quality if I had had more printing time. But let's say it's clearly sufficient for rapid prototyping.</p>
+<p><figure class="md"><img alt="oloid-result" src="medias/3D-scanning-printing-oloid-shape-oloid-result-1.jpg"><figcaption>oloid-result</figcaption></figure>
+<p>Look at this geometric beauty.</p>
+<video controls="" preload="auto"><source src="medias/3D-scanning-printing-oloid-shape-oloid-roll.mp4" type="video/mp4"/></video>
+</section>
+<footer>
+<p>✎ <span>Created</span> 27/02/2020</p>
+<p>⁂ <span>Updated</span> 27/02/2020</p>
+</footer>
+</article>
+<footer class="footer">
+<p>antoine.studio ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a></p>
+</footer>
+</main>
+</body>
+</html>

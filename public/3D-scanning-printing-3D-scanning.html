@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title property="schema:name">antoine.studio - Documentation tool</title>
+<meta content="Documentation tool" name="description"/>
+<meta content="antoine.studio" property="schema:name"/>
+<meta content="Documentation tool" property="schema:description"/>
+<link href="assets/main.min.css" rel="stylesheet"/>
+</head>
+<body class="page page--article">
+<main class="main">
+<header class="header">
+<nav class="nav">
+<ul class="nav__list">
+<li class="nav__item">
+<a class="nav__link" href="index.html">antoine.studio</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="content.html">content</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="about.html">about</a>
+</li>
+</ul>
+</nav>
+</header>
+<article class="article">
+<!-- title -->
+<h1 class="article__title">3D scanning</h1>
+<!-- parent -->
+<p class="article__parent">This article is part of: <a href="3D-scanning-printing.html">3D scanning and printing</a>.</p>
+<!-- tags -->
+<!-- featured image -->
+<!-- toc -->
+<section class="article__toc">
+<h2 class="toc__title">Table of content</h2>
+<div class="toc__list"><ul>
+<li><a href="#requirements">Requirements</a>
+<ul>
+<li><a href="#installation">Installation</a></li>
+</ul></li>
+<li><a href="#how-to">How-to</a></li>
+<li><a href="#problems-i-encountered">Problems I encountered</a></li>
+<li><a href="#my-tips-for-scanning-an-object-with-the-photogrammetry-process">My tips for scanning an object with the photogrammetry process</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+</div>
+</section>
+<section class="article__content ts">
+<p>There aren't many open source tools available and maintained for 3D scanning, but <a href="https://alicevision.org/#meshroom" target="_blank">Meshroom</a> is one of them. It is an open source photogrammetry software.</p>
+<blockquote>
+<p>Photogrammetry is the art, science and technology of obtaining reliable information about physical objects and the environment through the process of recording, measuring and interpreting photographic images and patterns of electromagnetic radiant imagery and other phenomena.</p>
+<blockquote>
+<p><a href="https://en.wikipedia.org/wiki/Photogrammetry" target="_blank">Photogrammetry, Wikipedia</a></p>
+</blockquote>
+</blockquote>
+<p><figure class="md"><img alt="scan-success" src="medias/3D-scanning-printing-3D-scanning-scan-success.jpeg"><figcaption>scan-success</figcaption></figure>
+<h1 id="requirements">Requirements</h1>
+<p>Meshroom needs a <a href="https://en.wikipedia.org/wiki/CUDA" target="_blank">CUDA-Enabled GPU</a> in order to run properly. My computer doesn't have this type of processor, but I found a solution to get decent results without the full capacity of the software. I will explain it later in the process.</p>
+<h2 id="installation">Installation</h2>
+<ol>
+<li>Download the binary from <a href="https://alicevision.org/#meshroom" target="_blank">Meshroom home page</a></li>
+<li>Unzip it in any folder.</li>
+<li>Open a terminal and from this folder run <code>./Meshroom</code> to launch the GUI. In my case I have to type <code>~/Documents/Apps/Meshroom-2019.2.0/./Meshroom</code> to launch the app.</li>
+</ol>
+<h1 id="how-to">How-to</h1>
+<ol>
+<li>Take pictures around the object you want to scan</li>
+<li>Import them into Meshroom, in drag and drop in the window.</li>
+<li>If you have a CUDA-Enabled GPU, simply press the <code>start</code> button. If not, you will have to delete 3 nodes: <code>PrepareDenseScene</code> <code>DepthMap</code> and <code>DepthMapFilter</code> and connect the output of <code>StructureFromMotion</code> to the input of <code>Meshing</code>, and finally press the <code>start</code> button.</li>
+</ol>
+<h1 id="problems-i-encountered">Problems I encountered</h1>
+<p>I had some problems getting decent results with photogrammetry. Almost all of my attempts weren't even close to a recognizable 3D scan of the object I was trying to get the shape from.</p>
+<p><figure class="md"><img alt="scan-fail" src="medias/3D-scanning-printing-3D-scanning-scan-fail-1.jpeg"><figcaption>scan-fail</figcaption></figure>
+<p>These things didn't work because the objects were either too reflective, or too small, or the light was changing from pictures to pictures, or my camera (from my phone) had a too small aperture.</p>
+<p><figure class="md"><img alt="scan-fail" src="medias/3D-scanning-printing-3D-scanning-scan-fail-2.jpeg"><figcaption>scan-fail</figcaption></figure>
+<figure class="md"><img alt="scan-fail" src="medias/3D-scanning-printing-3D-scanning-scan-fail-3.jpeg"><figcaption>scan-fail</figcaption></figure>
+<figure class="md"><img alt="scan-fail" src="medias/3D-scanning-printing-3D-scanning-scan-fail-4.jpeg"><figcaption>scan-fail</figcaption></figure>
+<p>I knew that Meshroom wasn't the problem because I tried with a set of pictures validated by the community, as something that works and that can be used to test the settings of the software.</p>
+<p><figure class="md"><img alt="scan-monument" src="medias/3D-scanning-printing-3D-scanning-scan-monument.jpeg"><figcaption>scan-monument</figcaption></figure>
+<p>Finally, a little desperate, I went to my roof to get some fresh air and I saw this plant pot, surrounded by tiles forming a grid around the object. It looked like a last try before giving up.</p>
+<video controls="" preload="auto"><source src="medias/3D-scanning-printing-3D-scanning-scan-success.mp4" type="video/mp4"/></video>
+<p>And it more or less worked… I got the shape of the pot, its structure and texture. Maybe I should have taken a lot more pictures of the plant, all its leaves and its little detail to get it rendered in the final scan.</p>
+<p><figure class="md"><img alt="scan-success" src="medias/3D-scanning-printing-3D-scanning-scan-success-2.jpeg"><figcaption>scan-success</figcaption></figure>
+<h1 id="my-tips-for-scanning-an-object-with-the-photogrammetry-process">My tips for scanning an object with the photogrammetry process</h1>
+<ul>
+<li>the bigger the better</li>
+<li>Preferably outside, with natural light</li>
+<li>No blurred area on the pictures, the software needs to understand the background</li>
+<li>A lot of pictures are needed (~70) from every angle</li>
+<li>Matt objects are the easiest (by far!)</li>
+</ul>
+<h1 id="conclusion">Conclusion</h1>
+<p>The result is clearly worse than I imagined when thinking about photogrammetry. But it's an exploration, between cutting-edge technology and open source software driven by the community, between a beginner (me) and a very specific technique. I will have to practice taking appropriate photos for photogrammetry if I want to scan something for a real need.</p>
+</section>
+<footer>
+<p>✎ <span>Created</span> 28/02/2020</p>
+<p>⁂ <span>Updated</span> 28/02/2020</p>
+</footer>
+</article>
+<footer class="footer">
+<p>antoine.studio ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a></p>
+</footer>
+</main>
+</body>
+</html>

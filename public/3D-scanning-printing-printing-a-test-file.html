@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title property="schema:name">antoine.studio - Documentation tool</title>
+<meta content="Documentation tool" name="description"/>
+<meta content="antoine.studio" property="schema:name"/>
+<meta content="Documentation tool" property="schema:description"/>
+<link href="assets/main.min.css" rel="stylesheet"/>
+</head>
+<body class="page page--article">
+<main class="main">
+<header class="header">
+<nav class="nav">
+<ul class="nav__list">
+<li class="nav__item">
+<a class="nav__link" href="index.html">antoine.studio</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="content.html">content</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="about.html">about</a>
+</li>
+</ul>
+</nav>
+</header>
+<article class="article">
+<!-- title -->
+<h1 class="article__title">Printing a test file</h1>
+<!-- parent -->
+<p class="article__parent">This article is part of: <a href="3D-scanning-printing.html">3D scanning and printing</a>.</p>
+<!-- tags -->
+<!-- featured image -->
+<!-- toc -->
+<section class="article__toc">
+<h2 class="toc__title">Table of content</h2>
+<div class="toc__list"><ul>
+<li><a href="#slicing">Slicing</a>
+<ul>
+<li><a href="#specific-settings-that-we-had-to-specify">Specific settings that we had to specify</a></li>
+</ul></li>
+<li><a href="#printing">Printing</a></li>
+<li><a href="#results">Results</a></li>
+</ul>
+</div>
+</section>
+<section class="article__content ts">
+<p>For this week's group assignement, I teamed up with <a href="https://fabacademy.org/2020/labs/barcelona/students/tue-ngo/" target="_blank">Tue</a> and <a href="https://fabacademy.org/2020/labs/barcelona/students/david-prieto/" target="_blank">David</a>. We picked a <a href="https://www.thingiverse.com/thing:1363023" target="_blank">test file</a> from Thingiverse in order to test different features of one of the 3D printers we have in Fab Lab Barcelona, the <a href="https://www.creality3d.shop/products/creality-cr-10s-s5-3d-printer-diy-kit-large-printing-size-500x500x500mm" target="_blank">Creality3D CR-10 S5 3D</a>.</p>
+<p><figure class="md"><img alt="test file" src="medias/3D-scanning-printing-printing-a-test-file-testfilecad.jpeg"><figcaption>test file</figcaption></figure>
+<p>This file allows us to test these features:</p>
+<ul>
+<li>z-height check</li>
+<li>warp check</li>
+<li>spike</li>
+<li>hole in wall</li>
+<li>raft test</li>
+<li>overhang Steps 50° - 70°</li>
+<li>2 different extrusion widths: 0.48mm &amp; 0.4mm</li>
+</ul>
+<h2 id="slicing">Slicing</h2>
+<p>To be able to print a 3D model, we have to send instructions to the printer, wich are written in <a href="https://en.wikipedia.org/wiki/G-code" target="_blank">g-code</a> and tells the motors where to move.
+To prepare the g-code, we have to <em>slice</em> our 3D model (.STL), to simulate and anticipate how the model will be printed, according to the printer settings and gravity law.</p>
+<p><figure class="md"><img alt="cura lab" src="medias/3D-scanning-printing-printing-a-test-file-cura-lab.JPG"><figcaption>cura lab</figcaption></figure>
+<p>At Fab Lab Barcelona, a computer with <a href="https://ultimaker.com/software/ultimaker-cura" target="_blank">Ultimaker Cura</a> is attached to the machines, with all the presets of the differents printers saved in it. It's therefore easier to directly use it in order to slice our model instead of searching the presets and install them on our personal laptop.</p>
+<h3 id="specific-settings-that-we-had-to-specify">Specific settings that we had to specify</h3>
+<ul>
+<li>layer height: <code>0.25mm</code></li>
+<li>Wall thickness: <code>0.8mm</code> (= 2 lines)</li>
+<li>Infill: <code>10%</code></li>
+<li>Print speed: <code>60mm/s</code> (= maximum for this printer)</li>
+</ul>
+<h2 id="printing">Printing</h2>
+<p>The filament we use is a <code>PLA 1.75mm</code>. It's a plant-based material made from starches like soybeans or corn. It needs to be heated at 190-200C° to be used.</p>
+<p><figure class="md"><img alt="testfileprint" src="medias/3D-scanning-printing-printing-a-test-file-testfileprint.JPG"><figcaption>testfileprint</figcaption></figure>
+<p>The printing was done in ~90 minutes without any troubles.</p>
+<video controls="" preload="auto"><source src="medias/3D-scanning-printing-printing-a-test-file-print-test.mp4" type="video/mp4"/></video>
+<p><figure class="md"><img alt="testprint" src="medias/3D-scanning-printing-printing-a-test-file-testprint.JPG"><figcaption>testprint</figcaption></figure>
+<figure class="md"><img alt="testdetail" src="medias/3D-scanning-printing-printing-a-test-file-testdetail.JPG"><figcaption>testdetail</figcaption></figure>
+<h2 id="results">Results</h2>
+<p>As we can see in the images above, the definition of the print is quite good, the details are respected and the print angles can be large (in fact more than 45°). Even the small bridges without support were printed correctly. I am very satisfied with this test and the new possibilities that it lets us see.</p>
+</section>
+<footer>
+<p>✎ <span>Created</span> 26/02/2020</p>
+<p>⁂ <span>Updated</span> 26/02/2020</p>
+</footer>
+</article>
+<footer class="footer">
+<p>antoine.studio ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a></p>
+</footer>
+</main>
+</body>
+</html>
