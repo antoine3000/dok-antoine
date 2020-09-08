@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title property="schema:name">antoine.studio - Documentation tool</title>
+<meta content="Documentation tool" name="description"/>
+<meta content="antoine.studio" property="schema:name"/>
+<meta content="Documentation tool" property="schema:description"/>
+<link href="assets/main.min.css" rel="stylesheet"/>
+</head>
+<body class="page page--article">
+<main class="main">
+<header class="header">
+<nav class="nav">
+<ul class="nav__list">
+<li class="nav__item">
+<a class="nav__link" href="index.html">antoine.studio</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="content.html">content</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="about.html">about</a>
+</li>
+</ul>
+</nav>
+</header>
+<article class="article">
+<!-- title -->
+<h1 class="article__title">Geodesic dome</h1>
+<!-- parent -->
+<p class="article__parent">This article is part of: <a href="computer-controlled-cutting.html">Computer-controlled cutting</a>.</p>
+<!-- tags -->
+<p class="article__tags">Tags:
+      
+      <a class="tag__link" href="laser-cutting.html">#laser-cutting</a>
+<a class="tag__link" href="structure.html">#structure</a>
+</p>
+<!-- featured image -->
+<!-- toc -->
+<section class="article__toc">
+<h2 class="toc__title">Table of content</h2>
+<div class="toc__list"><ul>
+<li><a href="#design">Design</a>
+<ul>
+<li><a href="#nesting">Nesting</a></li>
+</ul></li>
+<li><a href="#cutting">Cutting</a></li>
+<li><a href="#assembly">Assembly</a></li>
+<li><a href="#files">Files</a></li>
+</ul>
+</div>
+</section>
+<section class="article__content ts">
+<p>A <a href="https://en.wikipedia.org/wiki/Geodesic_dome" target="_blank">geodesic dome</a> is a structure based on a geodesic polyhedron. The triangular elements of the dome are structurally rigid and distribute the structural stress throughout the structure, making geodesic domes able to withstand very heavy loads for their size.</p>
+<p><figure class="md"><img alt="dome-reference" src="medias/computer-controlled-cutting-geodesic-dome-dome-reference.jpg"><figcaption>dome-reference</figcaption></figure>
+<h2 id="design">Design</h2>
+<p>I wanted to build a geodesic dome made up of two triangular faces and a joint. But because the structure of a geodesic dome is mainly made up of sticks instead of faces, finding documentation was not as easy as expected. Finally, <a href="https://simplydifferently.org/Geodesic_Dome_Notes?page=3#2V%20Icosahedron%20Dome" target="_blank">this website</a> helped me to find the geometric values.</p>
+<p><figure class="md"><img alt="dome-construction" src="medias/computer-controlled-cutting-geodesic-dome-dome-construction.png"><figcaption>dome-construction</figcaption></figure>
+<ul>
+<li>30 x triangle A-A-B (55.57°, 55.57°, 68.86°)</li>
+<li>10 x triangle B-B-B (60.00°, 60.00°, 60.00°) </li>
+<li>55 connectors (with an angle of 18°)</li>
+</ul>
+<p><figure class="md"><img alt="dome-freecad-0" src="medias/computer-controlled-cutting-geodesic-dome-dome-freecad-0.jpeg"><figcaption>dome-freecad-0</figcaption></figure>
+<p>I used FreeCAD to design the dome elements. I first filled out a spreadsheet with the parameters that I collected, so that I could use these parametric values to design the different parts and be able to change things quickly in case of change.</p>
+<p><figure class="md"><img alt="dome-freecad-3" src="medias/computer-controlled-cutting-geodesic-dome-dome-freecad-3.jpeg"><figcaption>dome-freecad-3</figcaption></figure>
+<p>Finding the kerf was a key point in this project because the pieces had to fit perfectly to keep the entire structure as solid as it should be. Because the dome will be made of <code>plywood 4mm</code> and due to the machine and its parameters, the kerf value is <code>0.15mm</code>.</p>
+<p><figure class="md"><img alt="dome-freecad-1" src="medias/computer-controlled-cutting-geodesic-dome-dome-freecad-1.jpeg"><figcaption>dome-freecad-1</figcaption></figure>
+<p>I added this value for the connector measurement, because the part had to fit into another. The lasercut decreases the size of the part, so by adding the value before cutting, I guarantee that the end result will be the expected result.</p>
+<p>And vice versa for the opposite part.</p>
+<p><figure class="md"><img alt="dome-freecad-2" src="medias/computer-controlled-cutting-geodesic-dome-dome-freecad-2.jpeg"><figcaption>dome-freecad-2</figcaption></figure>
+<h3 id="nesting">Nesting</h3>
+<p>In order to avoid wasting material and time (and therefore energy), I had to nest all of my shapes (95 in total) together as compact as possible. To achieve this perilous mission, I used <a href="https://deepnest.io/" target="_blank">Deepnest</a>, an open source nesting application.</p>
+<p>This tool does only one job and it does it very well.</p>
+<p><figure class="md"><img alt="dome-nesting" src="medias/computer-controlled-cutting-geodesic-dome-dome-nesting.jpeg"><figcaption>dome-nesting</figcaption></figure>
+<h2 id="cutting">Cutting</h2>
+<p>I first did a test on a cardboard to check if my design was well done and if the parts fit together, before cutting a more precious sheet of wood. It <em>seemed</em> to be the case.</p>
+<p><figure class="md"><img alt="dome-cardboard" src="medias/computer-controlled-cutting-geodesic-dome-dome-cardboard.jpg"><figcaption>dome-cardboard</figcaption></figure>
+<p>I did another test of the same three pieces on the real sheet of plywood I wanted to use, ultimate test before cutting the whole sheet. It was sucessful, everything seemed to fit correctly.</p>
+<p>In the lab, there are samples with cutting / engraving values on each material that could be used. I took the values from there. In my case:</p>
+<p><code>Plywood 4mm</code> <code>Power: 75</code> <code>Speed: 0.5</code></p>
+<p><figure class="md"><img alt="plywood4mm-values" src="medias/computer-controlled-cutting-geodesic-dome-plywood4mm-values.jpg"><figcaption>plywood4mm-values</figcaption></figure>
+<p>Let's (laser) cut it.</p>
+<video controls="" preload="auto"><source src="medias/computer-controlled-cutting-geodesic-dome-dome-cutting.mp4" type="video/mp4"/></video>
+<p><figure class="md"><img alt="dome-cutting" src="medias/computer-controlled-cutting-geodesic-dome-dome-cutting.jpg"><figcaption>dome-cutting</figcaption></figure>
+<h2 id="assembly">Assembly</h2>
+<p>Unforntunately, when assembling the dome, I realized that I messed up with the triangles sizes. I have defined the height of the triangle, from its base to its summit, instead of measuring one of its side … precipitation error. I was running out of time and the machines were hyper busy at the lab, so I decided to stop my test. I had enough information about the use of the lasercutters and I didn't want to waste more wood.</p>
+<p>I ended with a weird half geodesic dome that isn't as solid as it should be but wich was super fun to build, from A to Z.</p>
+<p><figure class="md"><img alt="dome-construct-1" src="medias/computer-controlled-cutting-geodesic-dome-dome-construct-1.jpg"><figcaption>dome-construct-1</figcaption></figure>
+<p><figure class="md"><img alt="dome-construct-2" src="medias/computer-controlled-cutting-geodesic-dome-dome-construct-2.jpg"><figcaption>dome-construct-2</figcaption></figure>
+<p><figure class="md"><img alt="dome-construct-3" src="medias/computer-controlled-cutting-geodesic-dome-dome-construct-3.jpg"><figcaption>dome-construct-3</figcaption></figure>
+<h2 id="files">Files</h2>
+<ul>
+<li>Geodesic dome parts (<a href="medias/computer-controlled-cutting-geodesic-dome-geodesic-dome.FCStd" target="_blank">FreeCAD</a> / <a href="medias/computer-controlled-cutting-geodesic-dome-geodesic-dome-4mm-nest.dxf" target="_blank">DXF</a>)</li>
+</ul>
+</section>
+<footer>
+<p>✎ <span>Created</span> 16/02/2020</p>
+<p>⁂ <span>Updated</span> 16/02/2020</p>
+</footer>
+</article>
+<footer class="footer">
+<p>antoine.studio ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a></p>
+</footer>
+</main>
+</body>
+</html>

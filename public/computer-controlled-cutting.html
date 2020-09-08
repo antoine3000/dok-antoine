@@ -37,12 +37,12 @@
       <a class="tag__link" href="fab-academy-assignments.html">#fab-academy-assignments</a>
 </p>
 <!-- featured image -->
+<figure class="md"><img alt="" class="article__featured" src="medias/computer-controlled-cutting-geodesic-dome-dome-construct-1.jpg"><figcaption></figcaption></figure>
 <!-- toc -->
 <section class="article__toc">
 <h2 class="toc__title">Table of content</h2>
-<div class="toc__list"><ul>
-<li><a href="#lasercutter">Lasercutter</a>
-<ul>
+<h3 class="toc__title--sub"><a href="computer-controlled-cutting.html#computer-controlled-cutting-laser-cutter-basics">Laser cutter</a></h3>
+<div class="toc__list--sub"><ul>
 <li><a href="#basics-of-lasercutting">Basics of lasercutting</a>
 <ul>
 <li><a href="#security">Security</a></li>
@@ -56,26 +56,51 @@
 <li><a href="#multicam-2000">Multicam 2000</a></li>
 </ul></li>
 <li><a href="#basic-test-to-calculate-the-kerf">Basic test to calculate the kerf</a></li>
-</ul></li>
-<li><a href="#geodesic-dome">Geodesic dome</a>
-<ul>
+</ul>
+<li><a href="#files">Files</a>
+</li></div>
+<h3 class="toc__title--sub"><a href="computer-controlled-cutting.html#computer-controlled-cutting-geodesic-dome">Geodesic dome</a></h3>
+<div class="toc__list--sub"><ul>
 <li><a href="#design">Design</a>
 <ul>
 <li><a href="#nesting">Nesting</a></li>
 </ul></li>
 <li><a href="#cutting">Cutting</a></li>
 <li><a href="#assembly">Assembly</a></li>
+<li><a href="#files">Files</a></li>
+</ul>
+</div>
+<h3 class="toc__title--sub"><a href="computer-controlled-cutting.html#computer-controlled-cutting-the-most-common-password-ever">The most common password ever</a></h3>
+<div class="toc__list--sub"><ul>
+<li><a href="#vinyl-cutter">Vinyl cutter</a>
+<ul>
+<li><a href="#process">Process</a></li>
 </ul></li>
-<li><a href="#the-most-common-password-ever">The most common password ever</a></li>
+<li><a href="#result">Result</a></li>
+<li><a href="#credit">Credit</a></li>
 <li><a href="#files">Files</a></li>
 </ul>
 </div>
 </section>
 <section class="article__content ts">
 <p>This week is about exploring the possibilities of the computer-controlled cutting machines present in Fab Labs : the lasercutter and the vinylcutter. The first (group) assignement is to understand how the machines work and to obtain some of the values (specific to these machines) necessary to properly prepare the files before sending them to the machines. The second (personal) assignement is to design, lasercut, and document a parametric construction kit, and to cut something with the vinylcutter.</p>
-<h1 id="lasercutter">Lasercutter</h1>
+</section>
+<footer>
+<p>✎ <span>Created</span> 14/02/2020</p>
+<p>⁂ <span>Updated</span> 14/02/2020</p>
+</footer>
+<article class="article--sub" id="computer-controlled-cutting-laser-cutter-basics">
+<!-- title -->
+<h1 class="article__title">Laser cutter <a href="computer-controlled-cutting-laser-cutter-basics.html">●</a></h1>
+<!-- tags -->
+<p class="article__tags">Tags:
+        
+        <a href="fab-academy-assignments.html">#fab-academy-assignments</a>
+</p>
+<!-- content -->
+<section class="article__content ts">
 <p>The laser cutter is an excellent machine: it gives quick results, it is easy to learn, it works with different types of material (wood, acrylic, cardboard, etc.) and the cutting is very precise. Using joints allows you to go from 2D to 3D objects. It makes the laser cutter one of the best machines to quickly prototype an idea.</p>
-<p><figure class="lg"><img alt="nesting-cut" src="medias/computer-controlled-cutting-nesting-cut.jpg"><figcaption>nesting-cut</figcaption></figure>
+<p><figure class="lg"><img alt="nesting-cut" src="medias/computer-controlled-cutting-laser-cutter-basics-nesting-cut.jpg"><figcaption>nesting-cut</figcaption></figure>
 <h2 id="basics-of-lasercutting">Basics of lasercutting</h2>
 <h3 id="security">Security</h3>
 <p>Because the lasercutter is fun and easy to use, it's also easy to forget that it can be dangerous. Here are some basic rules that accompany the use of the machine:</p>
@@ -94,7 +119,7 @@ you use, more information about this <a href="https://www.troteclaser.com/en-us/
 <p>Setting the focus is a mechanical &amp; low-tech process, the idea is simply to obtain the distance value between the nozzle and the material.</p>
 <h3 id="speed-power">Speed &amp; power</h3>
 <p>Speed and power are the two parameters that we have to adjust according to the desired results. The speed is defined in millimeters per second (0-400) and the power is defined in (a relative) percentage (0-100%). To cut something big, you will need to set a high power and a low speed, so that the laser stays longer at the same points and burns the material more. On the other hand, to slightly engrave, set a high speed and a low power, so that the laser does not have enough time to burn the material.</p>
-<p><figure class="md"><img alt="table-values" src="medias/computer-controlled-cutting-table-values.jpg"><figcaption>table-values</figcaption></figure>
+<p><figure class="md"><img alt="table-values" src="medias/computer-controlled-cutting-laser-cutter-basics-table-values.jpg"><figcaption>table-values</figcaption></figure>
 <h3 id="kerf">Kerf</h3>
 <p>The laser burns away a portion of material when it cuts through. This is known as the laser kerf and ranges from 0.08mm – 1mm depending on the material properties and thickness. It is super important the know the kerf value and to integrate it into the design, if we want to cut things perfectly.</p>
 <h2 id="get-to-know-the-machine">Get to know the machine</h2>
@@ -108,7 +133,7 @@ you use, more information about this <a href="https://www.troteclaser.com/en-us/
 <li>Laser power: 12-60W</li>
 </ul>
 <p>We chose to proceed with Cardboard 4mm and Plywood 4mm because we can find nice leftovers of those materials. For the <code>Material Settings</code> in <code>TROTEC JobControl</code>, we followed the information on the Laser Cut Sample at the Fab Lab. The parts to be engraved were color-coded with black, and the parts to be cut were color-coded with red.</p>
-<p><figure class="md"><img alt="screenshot-trotec" src="medias/computer-controlled-cutting-screenshot-trotec.jpg"><figcaption>screenshot-trotec</figcaption></figure>
+<p><figure class="md"><img alt="screenshot-trotec" src="medias/computer-controlled-cutting-laser-cutter-basics-screenshot-trotec.jpg"><figcaption>screenshot-trotec</figcaption></figure>
 <video controls="" preload="auto"><source src="medias/computer-controlled-cutting-test.mp4" type="video/mp4"/></video>
 <p>Here are the values we collected when testing the Trotec Speedy 100.</p>
 <div class="table"><table>
@@ -155,9 +180,9 @@ you use, more information about this <a href="https://www.troteclaser.com/en-us/
 <h3 id="multicam-2000">Multicam 2000</h3>
 <p>And the other group I'm part of is composed by <a href="https://fabacademy.org/2020/labs/barcelona/students/bruno-molteni" target="_blank">Bruno</a>, <a href="https://fabacademy.org/2020/labs/barcelona/students/marco-cataffo" target="_blank">Marco</a>, <a href="https://fabacademy.org/2020/labs/barcelona/students/roger-anguera" target="_blank">Roger</a>, and me.</p>
 <p>Our idea was to use one of the Trotec machines, either the 100 or the 400, but they were being used so we finally decided to do it on the old and huge <a href="https://wiki.fablabbcn.org/Multicam_2000_Laser_Cutter" target="_blank">Multicam 2000</a>. Our instructors Mikel Llobera &amp; Oscar González Fernández helped us throught the process. This would have been really impossible without them, given the complicated interface of the machine, not to mention that some parts of it are not working properly.</p>
-<p><figure class="md"><img alt="multicam-interface" src="medias/computer-controlled-cutting-multicam-interface.jpg"><figcaption>multicam-interface</figcaption></figure>
+<p><figure class="md"><img alt="multicam-interface" src="medias/computer-controlled-cutting-laser-cutter-basics-multicam-interface.jpg"><figcaption>multicam-interface</figcaption></figure>
 <p>On the multicam, you have to go through it's own software called EnRoute, that turns a DXF file into gcode that the machine can read. With EnRoute open and connected to the machine, you can load the file from it's 1980's-style handheld interface, which is both cumbersome and amusing at the same time.</p>
-<p><figure class="md"><img alt="finger-crossed" src="medias/computer-controlled-cutting-finger-crossed.jpg"><figcaption>finger-crossed</figcaption></figure>
+<p><figure class="md"><img alt="finger-crossed" src="medias/computer-controlled-cutting-laser-cutter-basics-finger-crossed.jpg"><figcaption>finger-crossed</figcaption></figure>
 <p>Once we had the piece on EnRoute, after a few crashes of the software due, we think, to the amount of different lines on the design, we learned that we would have issues with raster on that machine, so we had to remove the parts of the design that were supposed to be rastered.</p>
 <video controls="" preload="auto"><source src="medias/computer-controlled-cutting-multicam-test.mp4" type="video/mp4"/></video>
 <p>We didn't do enough tests to know well the machine because of the time we had at our disposition. It would be interesting to compare the results with the other machine to know how much energy it does require and how fast is the industrial machine compare to the others. Anyway, here are the values we collected when testing the Multicam2000.</p>
@@ -183,9 +208,9 @@ you use, more information about this <a href="https://www.troteclaser.com/en-us/
 </table></div>
 <h2 id="basic-test-to-calculate-the-kerf">Basic test to calculate the kerf</h2>
 <p>I have seen on <a href="http://fab.academany.org/2018/labs/fablabamsterdam/lasercut/group1.html" target="_blank">various</a> <a href="https://fabacademy.org/2019/labs/waag/students/anne-vlaanderen/assignments/week4.html" target="_blank">documentations</a> a basic test which we can execute in order to calculate the kerf of a specific machine on a specific material. We wanted to test it by ourself.</p>
-<p><figure class="md"><img alt="kerf-explanations" src="medias/computer-controlled-cutting-kerf-explanations.png"><figcaption>kerf-explanations</figcaption></figure>
+<p><figure class="md"><img alt="kerf-explanations" src="medias/computer-controlled-cutting-laser-cutter-basics-kerf-explanations.png"><figcaption>kerf-explanations</figcaption></figure>
 <p>The idea is to cut a material several times, bring the cut pieces together and compare the final total width with the initial width. The difference should be the space left by the cut, from which we can get the value of the kerf.</p>
-<p><figure class="md"><img alt="kerf-result" src="medias/computer-controlled-cutting-kerf-result.jpg"><figcaption>kerf-result</figcaption></figure>
+<p><figure class="md"><img alt="kerf-result" src="medias/computer-controlled-cutting-laser-cutter-basics-kerf-result.jpg"><figcaption>kerf-result</figcaption></figure>
 <div class="table"><table>
 <thead>
 <tr>
@@ -209,50 +234,90 @@ you use, more information about this <a href="https://www.troteclaser.com/en-us/
 </tbody>
 </table></div>
 <p>This technique could be applied to different materials with different settings (speed/power) by using this single template. </p>
-<h1 id="geodesic-dome">Geodesic dome</h1>
+<h1 id="files">Files</h1>
+<ul>
+<li>Lasercutting tester (<a href="medias/computer-controlled-cutting-lasercutting-tester.svg" target="_blank">SVG</a>) </li>
+<li>Kerf tester (<a href="medias/computer-controlled-cutting-kerf-tester.FCStd" target="_blank">FreeCAD</a> / <a href="medias/computer-controlled-cutting-kerf-tester.dxf" target="_blank">DXF</a>)</li>
+</ul>
+</section>
+<footer>
+<p>✎ <span>Created</span> 15/02/2020</p>
+<p>⁂ <span>Updated</span> 15/02/2020</p>
+</footer>
+</article>
+<article class="article--sub" id="computer-controlled-cutting-geodesic-dome">
+<!-- title -->
+<h1 class="article__title">Geodesic dome <a href="computer-controlled-cutting-geodesic-dome.html">●</a></h1>
+<!-- tags -->
+<p class="article__tags">Tags:
+        
+        <a href="fab-academy-assignments.html">#fab-academy-assignments</a>
+</p>
+<!-- content -->
+<section class="article__content ts">
 <p>A <a href="https://en.wikipedia.org/wiki/Geodesic_dome" target="_blank">geodesic dome</a> is a structure based on a geodesic polyhedron. The triangular elements of the dome are structurally rigid and distribute the structural stress throughout the structure, making geodesic domes able to withstand very heavy loads for their size.</p>
-<p><figure class="md"><img alt="dome-reference" src="medias/computer-controlled-cutting-dome-reference.jpg"><figcaption>dome-reference</figcaption></figure>
+<p><figure class="md"><img alt="dome-reference" src="medias/computer-controlled-cutting-geodesic-dome-dome-reference.jpg"><figcaption>dome-reference</figcaption></figure>
 <h2 id="design">Design</h2>
 <p>I wanted to build a geodesic dome made up of two triangular faces and a joint. But because the structure of a geodesic dome is mainly made up of sticks instead of faces, finding documentation was not as easy as expected. Finally, <a href="https://simplydifferently.org/Geodesic_Dome_Notes?page=3#2V%20Icosahedron%20Dome" target="_blank">this website</a> helped me to find the geometric values.</p>
-<p><figure class="md"><img alt="dome-construction" src="medias/computer-controlled-cutting-dome-construction.png"><figcaption>dome-construction</figcaption></figure>
+<p><figure class="md"><img alt="dome-construction" src="medias/computer-controlled-cutting-geodesic-dome-dome-construction.png"><figcaption>dome-construction</figcaption></figure>
 <ul>
 <li>30 x triangle A-A-B (55.57°, 55.57°, 68.86°)</li>
 <li>10 x triangle B-B-B (60.00°, 60.00°, 60.00°) </li>
 <li>55 connectors (with an angle of 18°)</li>
 </ul>
-<p><figure class="md"><img alt="dome-freecad-0" src="medias/computer-controlled-cutting-dome-freecad-0.jpeg"><figcaption>dome-freecad-0</figcaption></figure>
+<p><figure class="md"><img alt="dome-freecad-0" src="medias/computer-controlled-cutting-geodesic-dome-dome-freecad-0.jpeg"><figcaption>dome-freecad-0</figcaption></figure>
 <p>I used FreeCAD to design the dome elements. I first filled out a spreadsheet with the parameters that I collected, so that I could use these parametric values to design the different parts and be able to change things quickly in case of change.</p>
-<p><figure class="md"><img alt="dome-freecad-3" src="medias/computer-controlled-cutting-dome-freecad-3.jpeg"><figcaption>dome-freecad-3</figcaption></figure>
+<p><figure class="md"><img alt="dome-freecad-3" src="medias/computer-controlled-cutting-geodesic-dome-dome-freecad-3.jpeg"><figcaption>dome-freecad-3</figcaption></figure>
 <p>Finding the kerf was a key point in this project because the pieces had to fit perfectly to keep the entire structure as solid as it should be. Because the dome will be made of <code>plywood 4mm</code> and due to the machine and its parameters, the kerf value is <code>0.15mm</code>.</p>
-<p><figure class="md"><img alt="dome-freecad-1" src="medias/computer-controlled-cutting-dome-freecad-1.jpeg"><figcaption>dome-freecad-1</figcaption></figure>
+<p><figure class="md"><img alt="dome-freecad-1" src="medias/computer-controlled-cutting-geodesic-dome-dome-freecad-1.jpeg"><figcaption>dome-freecad-1</figcaption></figure>
 <p>I added this value for the connector measurement, because the part had to fit into another. The lasercut decreases the size of the part, so by adding the value before cutting, I guarantee that the end result will be the expected result.</p>
 <p>And vice versa for the opposite part.</p>
-<p><figure class="md"><img alt="dome-freecad-2" src="medias/computer-controlled-cutting-dome-freecad-2.jpeg"><figcaption>dome-freecad-2</figcaption></figure>
+<p><figure class="md"><img alt="dome-freecad-2" src="medias/computer-controlled-cutting-geodesic-dome-dome-freecad-2.jpeg"><figcaption>dome-freecad-2</figcaption></figure>
 <h3 id="nesting">Nesting</h3>
 <p>In order to avoid wasting material and time (and therefore energy), I had to nest all of my shapes (95 in total) together as compact as possible. To achieve this perilous mission, I used <a href="https://deepnest.io/" target="_blank">Deepnest</a>, an open source nesting application.</p>
 <p>This tool does only one job and it does it very well.</p>
-<p><figure class="md"><img alt="dome-nesting" src="medias/computer-controlled-cutting-dome-nesting.jpeg"><figcaption>dome-nesting</figcaption></figure>
+<p><figure class="md"><img alt="dome-nesting" src="medias/computer-controlled-cutting-geodesic-dome-dome-nesting.jpeg"><figcaption>dome-nesting</figcaption></figure>
 <h2 id="cutting">Cutting</h2>
 <p>I first did a test on a cardboard to check if my design was well done and if the parts fit together, before cutting a more precious sheet of wood. It <em>seemed</em> to be the case.</p>
-<p><figure class="md"><img alt="dome-cardboard" src="medias/computer-controlled-cutting-dome-cardboard.jpg"><figcaption>dome-cardboard</figcaption></figure>
+<p><figure class="md"><img alt="dome-cardboard" src="medias/computer-controlled-cutting-geodesic-dome-dome-cardboard.jpg"><figcaption>dome-cardboard</figcaption></figure>
 <p>I did another test of the same three pieces on the real sheet of plywood I wanted to use, ultimate test before cutting the whole sheet. It was sucessful, everything seemed to fit correctly.</p>
 <p>In the lab, there are samples with cutting / engraving values on each material that could be used. I took the values from there. In my case:</p>
 <p><code>Plywood 4mm</code> <code>Power: 75</code> <code>Speed: 0.5</code></p>
-<p><figure class="md"><img alt="plywood4mm-values" src="medias/computer-controlled-cutting-plywood4mm-values.jpg"><figcaption>plywood4mm-values</figcaption></figure>
+<p><figure class="md"><img alt="plywood4mm-values" src="medias/computer-controlled-cutting-geodesic-dome-plywood4mm-values.jpg"><figcaption>plywood4mm-values</figcaption></figure>
 <p>Let's (laser) cut it.</p>
 <video controls="" preload="auto"><source src="medias/computer-controlled-cutting-dome-cutting.mp4" type="video/mp4"/></video>
-<p><figure class="md"><img alt="dome-cutting" src="medias/computer-controlled-cutting-dome-cutting.jpg"><figcaption>dome-cutting</figcaption></figure>
+<p><figure class="md"><img alt="dome-cutting" src="medias/computer-controlled-cutting-geodesic-dome-dome-cutting.jpg"><figcaption>dome-cutting</figcaption></figure>
 <h2 id="assembly">Assembly</h2>
 <p>Unforntunately, when assembling the dome, I realized that I messed up with the triangles sizes. I have defined the height of the triangle, from its base to its summit, instead of measuring one of its side … precipitation error. I was running out of time and the machines were hyper busy at the lab, so I decided to stop my test. I had enough information about the use of the lasercutters and I didn't want to waste more wood.</p>
 <p>I ended with a weird half geodesic dome that isn't as solid as it should be but wich was super fun to build, from A to Z.</p>
-<p><figure class="md"><img alt="dome-construct-1" src="medias/computer-controlled-cutting-dome-construct-1.jpg"><figcaption>dome-construct-1</figcaption></figure>
-<p><figure class="md"><img alt="dome-construct-2" src="medias/computer-controlled-cutting-dome-construct-2.jpg"><figcaption>dome-construct-2</figcaption></figure>
-<p><figure class="md"><img alt="dome-construct-3" src="medias/computer-controlled-cutting-dome-construct-3.jpg"><figcaption>dome-construct-3</figcaption></figure>
-<h1 id="the-most-common-password-ever">The most common password ever</h1>
+<p><figure class="md"><img alt="dome-construct-1" src="medias/computer-controlled-cutting-geodesic-dome-dome-construct-1.jpg"><figcaption>dome-construct-1</figcaption></figure>
+<p><figure class="md"><img alt="dome-construct-2" src="medias/computer-controlled-cutting-geodesic-dome-dome-construct-2.jpg"><figcaption>dome-construct-2</figcaption></figure>
+<p><figure class="md"><img alt="dome-construct-3" src="medias/computer-controlled-cutting-geodesic-dome-dome-construct-3.jpg"><figcaption>dome-construct-3</figcaption></figure>
+<h2 id="files">Files</h2>
+<ul>
+<li>Geodesic dome parts (<a href="medias/computer-controlled-cutting-geodesic-dome.FCStd" target="_blank">FreeCAD</a> / <a href="medias/computer-controlled-cutting-geodesic-dome-4mm-nest.dxf" target="_blank">DXF</a>)</li>
+</ul>
+</section>
+<footer>
+<p>✎ <span>Created</span> 16/02/2020</p>
+<p>⁂ <span>Updated</span> 16/02/2020</p>
+</footer>
+</article>
+<article class="article--sub" id="computer-controlled-cutting-the-most-common-password-ever">
+<!-- title -->
+<h1 class="article__title">The most common password ever <a href="computer-controlled-cutting-the-most-common-password-ever.html">●</a></h1>
+<!-- tags -->
+<p class="article__tags">Tags:
+        
+        <a href="fab-academy-assignments.html">#fab-academy-assignments</a>
+</p>
+<!-- content -->
+<section class="article__content ts">
 <p>According to <a href="https://en.wikipedia.org/wiki/List_of_the_most_common_passwords" target="_blank">this page</a>, the most common password ever is … <code>123456</code>. It's so basic and evident I wanted to stick it on my laptop to send the subtle message to the people around me that their password is <em>maybe</em> not the best.</p>
 <p>And you, is this one of your passwords?</p>
-<p><figure class="md"><img alt="password" src="medias/computer-controlled-cutting-password.png"><figcaption>password</figcaption></figure>
-<p>The vinylutter we have at Fab Lab Barcelona is a <a href="https://www.rolanddga.com/es/soporte/products/cutting/camm-1-gx-24-24-vinyl-cutter" target="_blank">Roland CAMM-1 Servo GX-24</a>.</p>
+<p><figure class="md"><img alt="password" src="medias/computer-controlled-cutting-the-most-common-password-ever-password.png"><figcaption>password</figcaption></figure>
+<h2 id="vinyl-cutter">Vinyl cutter</h2>
+<p>The vinyl cutter we have at Fab Lab Barcelona is a <a href="https://www.rolanddga.com/es/soporte/products/cutting/camm-1-gx-24-24-vinyl-cutter" target="_blank">Roland CAMM-1 Servo GX-24</a>.</p>
 <ul>
 <li>Work area: 584 x 24998mm</li>
 <li>Cutting speed: up to 500mm/s</li>
@@ -260,6 +325,7 @@ you use, more information about this <a href="https://www.troteclaser.com/en-us/
 <li>Cutting width: 50-700 mm</li>
 <li>Cutting force: 30 to 250gf</li>
 </ul>
+<h3 id="process">Process</h3>
 <p>The process of cutting something with a vinylcutter is straightforward:</p>
 <ul>
 <li>Prepare your .EPS file</li>
@@ -274,23 +340,23 @@ material but only the surface.</li>
 avaible material size.</li>
 <li>Press the <em>Print</em> button, or type <code>Ctrl p</code> to start cutting.</li>
 </ul>
-<p><figure class="lg"><img alt="password-process" src="medias/computer-controlled-cutting-password-process.jpg"><figcaption>password-process</figcaption></figure>
+<p><figure class="lg"><img alt="password-process" src="medias/computer-controlled-cutting-the-most-common-password-ever-password-process.jpg"><figcaption>password-process</figcaption></figure>
 <p>The next step is the get your cut out of the sheet, wich may not be easy depending on your design, if it's detailed or not. </p>
 <p>A good practice is to apply several strips of adhesive tape on the cut sheet to stick the different pieces together and then apply it where you want to stick your sticker. It works <em>almost</em> like a charm (it always does, right?).</p>
-<p><figure class="md"><img alt="password-final" src="medias/computer-controlled-cutting-password-final.jpg"><figcaption>password-final</figcaption></figure>
+<h2 id="result">Result</h2>
+<p><figure class="md"><img alt="password-final" src="medias/computer-controlled-cutting-the-most-common-password-ever-password-final.jpg"><figcaption>password-final</figcaption></figure>
+<h2 id="credit">Credit</h2>
 <p>The font used: is open-source; is designed by Raphaël Bastide; is called Terminal Grotesque. <a href="https://github.com/raphaelbastide/Terminal-Grotesque/" target="_blank">Find it on Github</a>.</p>
-<h1 id="files">Files</h1>
+<h2 id="files">Files</h2>
 <ul>
-<li>Lasercutting tester (<a href="medias/computer-controlled-cutting-lasercutting-tester.svg" target="_blank">SVG</a>) </li>
-<li>Kerf tester (<a href="medias/computer-controlled-cutting-kerf-tester.FCStd" target="_blank">FreeCAD</a> / <a href="medias/computer-controlled-cutting-kerf-tester.dxf" target="_blank">DXF</a>)</li>
-<li>Geodesic dome parts (<a href="medias/computer-controlled-cutting-geodesic-dome.FCStd" target="_blank">FreeCAD</a> / <a href="medias/computer-controlled-cutting-geodesic-dome-4mm-nest.dxf" target="_blank">DXF</a>)</li>
 <li>The most common password ever (<a href="medias/computer-controlled-cutting-password.eps" target="_blank">EPS</a>)</li>
 </ul>
 </section>
 <footer>
-<p>✎ <span>Created</span> 14/02/2020</p>
-<p>⁂ <span>Updated</span> 14/02/2020</p>
+<p>✎ <span>Created</span> 17/02/2020</p>
+<p>⁂ <span>Updated</span> 17/02/2020</p>
 </footer>
+</article>
 </article>
 <footer class="footer">
 <p>antoine.studio ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a></p>
