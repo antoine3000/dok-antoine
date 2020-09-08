@@ -8,65 +8,64 @@
 }
 
 %font-body {
-  font-family: $font-body;
+  font-family: var(--font-body);
   @extend %font-base;
 }
 
 %font-body-italic {
-  font-family: $font-body-italic;
+  font-family: var(--font-body-italic);
   @extend %font-base;
 }
 
 %font-body-bold {
-  font-family: $font-body-bold;
+  font-family: var(--font-body-bold);
   @extend %font-base;
 }
 
 %font-body-bold-italic {
-  font-family: $font-body-bold-italic;
+  font-family: var(--font-body-bold-italic);
   @extend %font-base;
 }
 
 // Text styles - definition
 %ts-link {
-  color: $base-color;
-  text-decoration: underline;
-  background-color: $body-color;
+  color: var(--base-color);
+  text-decoration: none;
+  background-color: var(--action-color);
   &:hover {
-    color: $base-color;
-    text-decoration: none;
-    background-color: $base-color;
-    color: $body-color;
+    color: var(--base-color);
+    text-decoration: underline;
+    background-color: var(--action-color);
   }
 }
 %ts-title-0 {
   @extend %font-body-bold;
-  font-size: $size-xxl;
+  font-size: var(--size-xxl);
   line-height: 1.2;
 }
 %ts-title-1 {
   @extend %font-body-bold;
-  font-size: $size-xl;
+  font-size: var(--size-xl);
 }
 %ts-title-2 {
   @extend %font-body-bold;
-  font-size: $size-lg;
+  font-size: var(--size-lg);
 }
 %ts-title-3 {
   @extend %font-body-bold;
-  font-size: $size-md;
+  font-size: var(--size-md);
 }
 %ts-title-4 {
   @extend %font-body;
-  font-size: $size-md;
+  font-size: var(--size-md);
 }
 %ts-body {
   @extend %font-body;
-  font-size: $size-md;
+  font-size: var(--size-md);
 }
 %ts-small {
   @extend %font-body;
-  font-size: $size-sm;
+  font-size: var(--size-sm);
 }
 
 // Text styles - application
@@ -106,11 +105,11 @@ a {
     padding-left: 2em;
   }
   blockquote {
-    border-left: $border-sm dotted $base-color;
+    border-left: var(--border-sm) dotted var(--base-color);
     p {
-      font-size: $size-lg;
+      font-size: var(--size-lg);
       @extend %font-body-italic;
-      padding-left: $size-lg;
+      padding-left: var(--size-lg);
       margin-bottom: 0;
     }
     blockquote {
@@ -123,8 +122,8 @@ a {
   }
   code,
   pre {
-    background: $base-color;
-    color: $body-color;
+    background: var(--base-color);
+    color: var(--body-color);
   }
   code {
     padding: 0.15em 0.4em;
@@ -135,19 +134,19 @@ a {
   }
   .table {
     overflow-x: auto;
-    border: $border-sm solid $base-color;
+    border: var(--border-sm) solid var(--base-color);
     width: 100%;
   }
   table {
     min-width: 100%;
     th {@extend %ts-title-3;}
-    thead {border-bottom: $border-sm solid $base-color;}
+    thead {border-bottom: var(--border-sm) solid var(--base-color);}
     td, th {
-      padding: $size-sm $size-md;
+      padding: var(--size-sm) var(--size-md);
       white-space: nowrap;
     }
     tr:nth-child(even) {
-      background-color: rgba($base-color, .1);
+      background-color: rgba(var(--base-color), .1);
     }
   }
 }

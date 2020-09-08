@@ -5,12 +5,12 @@
   top: 0;
   z-index: 2;
   .nav {
-    padding-top: $size-md;
-    padding-bottom: $size-xl;
+    padding-top: var(--size-md);
+    padding-bottom: var(--size-xl);
   }
   @extend %container-padding;
   .title {
-    margin-right: $size-sm;
+    margin-right: var(--size-sm);
   }
 }
 
@@ -22,15 +22,15 @@
 .nav__item {
   display: block;
   &:not(:last-child) {
-    margin-right: $size-sm;
+    margin-right: var(--size-sm);
   }
 }
 
 // Footer
 .footer {
   @extend %container-padding;
-  margin-top: $size-xxl;
-  padding-bottom: $size-lg;
+  margin-top: var(--size-xxl);
+  padding-bottom: var(--size-lg);
 }
 
 // Image

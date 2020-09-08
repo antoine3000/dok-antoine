@@ -1,13 +1,14 @@
 // Intro
 
 .intro {
-  margin-bottom: $size-xl;
+  margin-bottom: var(--size-xl);
   @extend %container-padding;
+  max-width: var(--content-max-width);
   p {
     @extend %ts-title-0;
   }
   small {
     display: block;
-    margin-top: $size-sm;
+    margin-top: var(--size-sm);
   }
 }

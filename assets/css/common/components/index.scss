@@ -2,12 +2,12 @@
 .index {
   @extend %container-padding;
   & + .index {
-    margin-top: $size-lg;
+    margin-top: var(--size-lg);
   }
 }
 .index__title {
   @extend %ts-title-0;
-  margin-bottom: $size-sm;
+  margin-bottom: var(--size-sm);
 }
 .index__list {
   &,
@@ -45,35 +45,29 @@
 // Index featured
 .index--featured {
   .index__item:not(:last-child) {
-    margin-bottom: $size-xxl;
+    margin-bottom: var(--size-xxl);
   }
   .index__link {
     display: block;
-    background-color: $body-color;
-    color: $base-color;
+    background-color: var(--body-color);
+    color: var(--base-color);
     & > *:not(img) {
-      max-width: $content-max-width;
+      max-width: var(--content-max-width);
     }
     .item__title {
       display: table;
-    }
-    &:hover {
-      .item__title {
-        background-color: $base-color;
-        color: $body-color;
-      }
     }
   }
   .item__image {
     max-width: 100%;
     max-height: 90vh;
-    margin-bottom: $size-sm;
+    margin-bottom: var(--size-sm);
   }
   .item__title {
     @extend %ts-title-1;
   }
   .item__excerpt {
-    margin-top: $size-sm;
+    margin-top: var(--size-sm);
   }
 }
 
@@ -83,6 +77,6 @@
     display: flex;
   }
   .index__item:not(:last-child) {
-    margin-right: $size-sm;
+    margin-right: var(--size-sm);
   }
 }

@@ -5,10 +5,10 @@
     <meta charset=utf-8>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title property="schema:name">antoine.studio</title>
-    <meta name="description" content="Documentation website of Antoine Jaunard">
-    <meta property="schema:name" content="Dok">
-    <meta property="schema:description" content="Documentation website of Antoine Jaunard">
+    <title property="schema:name">{{ settings.title }} - {{ settings.description }}</title>
+    <meta name="description" content="{{ settings.description }}">
+    <meta property="schema:name" content="{{ settings.title }}">
+    <meta property="schema:description" content="{{ settings.description }}">
     <link rel="stylesheet" href="assets/main.min.css">
   </head>
 
@@ -18,7 +18,7 @@
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="index.html" class="nav__link">antoine.studio</a>
+              <a href="index.html" class="nav__link">{{ settings.title }}</a>
             </li>
             <li class="nav__item">
               <a href="content.html" class="nav__link">content</a>
@@ -31,7 +31,7 @@
       </header>
       {% block content %}{% endblock %}
       <footer class="footer">
-        <p>Antoine Jaunard ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a></p>
+        <p>{{ settings.title }} ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a></p>
       </footer>
     </main>
   </body>

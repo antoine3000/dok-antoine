@@ -7,6 +7,7 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 import rcssmin
 import sass
+import yaml
 
 c = 'content/'
 m = 'public/medias/'
@@ -128,10 +129,15 @@ def html_update(html, slug):
     html = html.replace('</figure></p>', '</figure>')
     return (html)
 
+def content_order(list):
+    list.sort()
+    for item in list:
+        if item == '.DS_Store':
+            list.remove(item)
 
 # get everything
 content_0 = os.listdir(c)
-content_0.sort()
+content_order(content_0)
 for folder in content_0:
     # level 1
     folder_slug = folder[11:]
@@ -141,7 +147,7 @@ for folder in content_0:
     if contains_folder(c + folder):
         # level 2
         content_1 = os.listdir(c + folder)
-        content_1.sort()
+        content_order(content_1)
         for subfolder in content_1:
             if os.path.isdir(c + folder + '/' + subfolder):
                 subfolder_slug = folder_slug + "-" + subfolder[11:]
@@ -177,12 +183,17 @@ for article in articles:
         parent_metadata['childs'].append(articles[article]['metadata'])
 print("⁂  Tags: Organized")
 
+# Settings
+with open('settings.yml', 'r') as file:
+    settings = yaml.load(file, Loader=yaml.FullLoader)
+
 # Generate article pages
 article_template = env.get_template('article.html')
 for article in articles:
     article_metadata = articles[article]['metadata']
     article_url = 'public/' + article_metadata['slug'] + '.html'
-    article_html = article_template.render(article=article_metadata)
+    article_html = article_template.render(
+        article=article_metadata, settings=settings)
     article_html_updated = html_update(article_html, article_metadata['slug'])
     with open(article_url, 'w') as file:
         file.write(article_html_updated)
@@ -192,7 +203,7 @@ print("⁂  Article pages: Created")
 tag_template = env.get_template('tag.html')
 for tag in tags:
     tag_url = 'public/' + tag + '.html'
-    tag_html = tag_template.render(title=tag, articles=tags[tag])
+    tag_html = tag_template.render(title=tag, articles=tags[tag], settings=settings)
     with open(tag_url, 'w') as file:
         file.write(tag_html)
 print("⁂  Tag pages: Created")
@@ -202,22 +213,31 @@ articles_metadata.reverse()
 
 # Generate content page
 content_template = env.get_template('content.html')
-content_html = content_template.render(articles=articles_metadata, tags=tags)
+content_html = content_template.render(articles=articles_metadata, tags=tags, settings=settings)
 with open('public/content.html', 'w') as file:
     file.write(content_html)
 print("⁂  Content page: Created")
 
 # Generate home page
 home_template = env.get_template('home.html')
-home_html = home_template.render(articles=articles_metadata)
+home_html = home_template.render(articles=articles_metadata, settings=settings)
 with open('public/index.html', 'w') as file:
     file.write(home_html)
 print("⁂  Home page: Created")
 
 # Scss to css
-scss_file = "assets/css/main.scss"
+public_asset_path  = "public/assets/"
+scss_file = "assets/css/personal/main.scss"
 scss_map = {scss_file: "public/assets/main.css"}
 css_map = {"public/assets/main.css": "public/assets/main.min.css"}
+fonts_path = 'assets/fonts/'
+fonts_public = 'public/assets/fonts/'
+
+# Create the folders if they don't exist
+if not os.path.exists(public_asset_path):
+    os.makedirs(public_asset_path)
+if not os.path.exists(fonts_public):
+    os.makedirs(fonts_public)
 
 def compile_scss(scss):
     for source, dest in scss.items():
@@ -232,6 +252,13 @@ def minify_css(css):
                 outfile.write(rcssmin.cssmin(infile.read()))
 
 
+# Copy fonts to public
+fonts = os.listdir(fonts_path)
+for font_file in fonts:
+    if not os.path.isfile(fonts_public + font_file):
+        shutil.copy2(fonts_path + font_file, fonts_public + font_file)
+
+# Compile, minimize css
 if os.path.isfile(scss_file):
     compile_scss(scss_map)
     print("⁂  SCSS: compiled")

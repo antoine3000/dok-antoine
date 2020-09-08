@@ -19,10 +19,10 @@ html {
 
 body {
   @extend %font-body;
-  background: $body-color;
-  color: $base-color;
+  background: var(--body-color);
+  color: var(--base-color);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  ::-moz-selection { background-color: $action-color; color: $body-color; }
-  ::selection { background-color: $action-color; color: $body-color; }
+  ::-moz-selection { background-color: var(--action-color); color: var(--base-color); }
+  ::selection { background-color: var(--action-color); color: var(--base-color); }
 }

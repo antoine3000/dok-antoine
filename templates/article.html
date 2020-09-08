@@ -15,10 +15,9 @@
   {% if article.tags %}
     <p class="article__tags">Tags:
       {% for tag in article.tags %}
-      <a href="{{ tag }}.html">#{{ tag }}</a>
+      <a href="{{ tag }}.html" class="tags__link">#{{ tag }}</a>
       {% endfor %}
     </p>
-  </ul>
   {% endif %}
   <!-- featured image -->
   {% if article.featured_image %}
