@@ -2,9 +2,6 @@
 title: My documentation tool
 ---
 
-
-# My ideal documentation tool
-
 My ideal documentation tool is as light as possible and requires very little energy to operate; is perfectly understandable and does the tasks I want it to do - nothing more; evolves with my needs; has no Javascript, no cookies, no trackers.
 
 > A sustainable website means ensuring support for older hardware, slower networks and improving the portability and archivability of the blog’s content.

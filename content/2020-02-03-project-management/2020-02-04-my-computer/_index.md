@@ -2,8 +2,6 @@
 title: My computer
 ---
 
-# My computer
-
 Few months ago, I decided to switch from the closed Apple ecosystem to the wonderful and open world of Linux. I'm running [Elementary OS](https://elementary.io/), a distribution based on Ubuntu, on a mid-2014 macbook pro. This machine isn't the more convenient to run a Linux distribution but I will keep using it as long as I can, even if I have some tiny hardware issues, simply because the more sustainable computer is the one I already have.
 
 - Text editor: [VSCodium](https://vscodium.com/) + [NeoVim](https://neovim.io/)

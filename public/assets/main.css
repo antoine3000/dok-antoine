@@ -101,13 +101,14 @@ textarea {
   padding-right: var(--size-xl); }
 
 .toc__title--sub, .ts table th, .ts h3, .index:not(.index--featured) .index__link, .ts h2, .toc__title, .index--featured .item__title, .ts h1, .article__title, .intro p, .index__title, .ts .todo, .ts blockquote p, body, .index--grid .index__list figcaption, .article figure figcaption, .article__toc, .index--list .index__tags,
-.index--list .index__update, .ts blockquote blockquote p, .index:not(.index--featured) .index__item--sub .index__link, .ts h4, .ts h5, .ts h6 {
+.index--list .index__update, .ts blockquote blockquote p, .index__item--sub, .index:not(.index--featured) .index__item--sub .index__link, .ts h4, .ts h5, .ts h6 {
   font-style: normal;
   font-weight: normal;
   line-height: 1.6; }
 
 body, .index--grid .index__list figcaption, .article figure figcaption, .article__toc, .index--list .index__tags,
-.index--list .index__update, .ts blockquote blockquote p, .index:not(.index--featured) .index__item--sub .index__link, .ts h4, .ts h5, .ts h6 {
+.index--list .index__update, .ts blockquote blockquote p, .index__item--sub,
+.index:not(.index--featured) .index__link, .index:not(.index--featured) .index__item--sub .index__link, .ts h4, .ts h5, .ts h6 {
   font-family: var(--font-body); }
 
 .ts .todo, .ts blockquote p {
@@ -135,13 +136,14 @@ a {
 .index:not(.index--featured) .index__link, .ts h2 {
   font-size: var(--size-lg); }
 
-.toc__title--sub, .ts table th, .ts h3 {
+.toc__title, .toc__title--sub, .ts table th, .ts h3 {
   font-size: var(--size-md); }
 
 .ts h4, .ts h5, .ts h6 {
   font-size: var(--size-md); }
 
-.index:not(.index--featured) .index__item--sub .index__link {
+.index__item--sub,
+.index:not(.index--featured) .index__link, .index:not(.index--featured) .index__item--sub .index__link {
   font-size: var(--size-md); }
 
 .index--grid .index__list figcaption, .article figure figcaption, .article__toc, .index--list .index__tags,
@@ -245,18 +247,26 @@ img {
 .index__list, .index__list--sub {
   list-style: none; }
 
-.index--list .index__item:before {
-  content: "-"; }
+.index--list .index__item {
+  padding-left: var(--size-md);
+  position: relative; }
+  .index--list .index__item:before {
+    content: "-";
+    position: absolute;
+    left: 0;
+    top: 0.1em; }
 
-.index--list .index__item--sub:before {
-  content: "∟"; }
+.index--list .index__item--sub {
+  padding-left: var(--size-xl);
+  position: relative; }
+  .index--list .index__item--sub:before {
+    content: "∟";
+    position: absolute;
+    left: 0; }
 
 .index--list .index__tags,
 .index--list .index__update {
   display: inline-block; }
-
-.index--list .index__list--sub {
-  margin-left: 1em; }
 
 .index--featured .index__item:not(:last-child) {
   margin-bottom: var(--size-xxl); }
@@ -406,37 +416,37 @@ body {
     background-color: var(--action-color);
     color: var(--base-color); }
 
-.ts blockquote p, .ts .todo, body {
+.toc__title, .index__item--sub,
+.index:not(.index--featured) .index__link, .ts blockquote p, .ts .todo, body {
   font-style: normal;
   font-weight: normal;
   line-height: 1.6;
   word-spacing: -0.15em; }
 
-a {
-  color: var(--base-color);
-  text-decoration: underline;
-  background-color: var(--body-color); }
-  a:hover {
-    color: var(--body-color);
-    text-decoration: none;
-    background-color: var(--base-color); }
-
-.page--home {
-  --base-color: #FFFFFF;
-  --body-color: #000000; }
-
-.index a {
-  text-decoration: none; }
+.intro {
+  max-width: 100%; }
 
 .index--list .index__item {
   margin-bottom: var(--size-xxs); }
 
-.index--featured .index__link:hover .item__title {
-  background-color: var(--base-color);
-  color: var(--body-color); }
+.article__toc {
+  display: inline-block;
+  border: var(--border-sm) dotted var(--base-color);
+  padding: var(--size-md);
+  border-radius: var(--size-md); }
 
-.index--grid figcaption a {
-  text-decoration: underline; }
+.toc__title {
+  margin-bottom: var(--size-xs); }
+
+.article--sub {
+  margin-top: var(--size-xl);
+  padding-top: var(--size-xl); }
 
 :root {
-  --action-color: #000000; }
+  --body-color: #cacaca; }
+
+.header {
+  margin-bottom: var(--size-md); }
+
+.index__title {
+  margin-bottom: var(--size-lg); }

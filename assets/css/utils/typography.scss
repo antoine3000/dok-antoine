@@ -7,13 +7,12 @@
   word-spacing: -0.15em;
 }
 
-%ts-link {
-  color: var(--base-color);
-  text-decoration: underline;
-  background-color: var(--body-color);
-  &:hover {
-    color: var(--body-color);
-    text-decoration: none;
-    background-color: var(--base-color);
-  }
-}
+// %ts-link {
+//   color: var(--action-color);
+//   background-color: var(--body-color);
+//   &:hover {
+//     color: var(--body-color);
+//     background-color: var(--action-color);
+//     text-decoration: none;
+//   }
+// }

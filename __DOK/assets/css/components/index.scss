@@ -16,21 +16,33 @@
   }
 }
 
+
+
 // Index list
 .index--list {
-  .index__item:before {
-    content: "-";
+  .index__item {
+    padding-left: var(--size-md);
+    position: relative;
+    &:before {
+      content: "-";
+      position: absolute;
+      left: 0;
+      top: 0.1em;
+    }
   }
-  .index__item--sub:before {
-    content: "∟";
+  .index__item--sub {
+    padding-left: var(--size-xl);
+    position: relative;
+    &:before {
+      content: "∟";
+      position: absolute;
+      left: 0;
+    }
   }
   .index__tags,
   .index__update {
     @extend %ts-small;
     display: inline-block;
-  }
-  .index__list--sub {
-    margin-left: 1em;
   }
 }
 

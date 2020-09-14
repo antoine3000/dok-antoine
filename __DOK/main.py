@@ -39,7 +39,6 @@ def contains_folder(folder):
 
 
 def image_process(origin, destination):
-    destination = destination.lower()
     if not os.path.isfile(destination):
         shutil.copy2(origin, destination)
         image_max_size = 1200
@@ -79,8 +78,6 @@ def metadata(article, slug, level, parent=None):
     else:
         article_metadata['last_update'] = publication_date
     article_metadata['level'] = level
-    if 'featured_image' in article_metadata:
-        article_metadata['featured_image'] = article_metadata['featured_image'].lower()
     if articles[slug]['content'].toc_html:
         article_metadata['toc'] = articles[slug]['content'].toc_html
     if 'tags' in article_metadata:
@@ -115,7 +112,7 @@ def html_update(html, slug):
         caption.append(img_tag['alt'])
         img_tag.append(caption)
         fig_tag = soup.new_tag("figure")
-        img_src = img_tag['src'].lower()
+        img_src = img_tag['src']
 
         if "large:" in img_src:
             fig_tag['class'] = 'lg'

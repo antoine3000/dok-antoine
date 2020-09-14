@@ -1,0 +1,18 @@
+// Article
+
+.article__toc {
+  display: inline-block;
+  border: var(--border-sm) dotted var(--base-color);
+  padding: var(--size-md);
+  border-radius: var(--size-md);
+}
+
+.toc__title {
+  @extend %ts-title-3;
+  margin-bottom: var(--size-xs);
+}
+
+.article--sub {
+  margin-top: var(--size-xl);
+  padding-top: var(--size-xl);
+}
