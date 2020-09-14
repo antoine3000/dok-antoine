@@ -27,6 +27,7 @@
   .index__tags,
   .index__update {
     @extend %ts-small;
+    display: inline-block;
   }
   .index__list--sub {
     margin-left: 1em;
@@ -75,6 +76,7 @@
 .index--tags {
   .index__list {
     display: flex;
+    flex-wrap: wrap;
   }
   .index__item:not(:last-child) {
     margin-right: var(--size-sm);

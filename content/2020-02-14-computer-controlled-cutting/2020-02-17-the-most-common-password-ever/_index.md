@@ -42,7 +42,7 @@ A good practice is to apply several strips of adhesive tape on the cut sheet to 
 
 ## Result
 
-![password-final](password-final.jpg)
+![password-final](password-final.jpg:flux)
 
 ## Credit
 

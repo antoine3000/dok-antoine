@@ -21,6 +21,8 @@ fonts_path_user = 'assets/fonts/'
 fonts_public = 'public/assets/fonts/'
 
 articles = {}
+flux = {}
+tags = {}
 
 print('')
 print('--------------------------')
@@ -37,6 +39,7 @@ def contains_folder(folder):
 
 
 def image_process(origin, destination):
+    destination = destination.lower()
     if not os.path.isfile(destination):
         shutil.copy2(origin, destination)
         image_max_size = 1200
@@ -76,6 +79,8 @@ def metadata(article, slug, level, parent=None):
     else:
         article_metadata['last_update'] = publication_date
     article_metadata['level'] = level
+    if 'featured_image' in article_metadata:
+        article_metadata['featured_image'] = article_metadata['featured_image'].lower()
     if articles[slug]['content'].toc_html:
         article_metadata['toc'] = articles[slug]['content'].toc_html
     if 'tags' in article_metadata:
@@ -110,7 +115,8 @@ def html_update(html, slug):
         caption.append(img_tag['alt'])
         img_tag.append(caption)
         fig_tag = soup.new_tag("figure")
-        img_src = img_tag['src']
+        img_src = img_tag['src'].lower()
+
         if "large:" in img_src:
             fig_tag['class'] = 'lg'
             img_tag['src'] = img_src.replace('large:', '')
@@ -119,6 +125,12 @@ def html_update(html, slug):
             img_tag['src'] = img_src.replace('small:', '')
         else:
             fig_tag['class'] = 'md'
+        
+        if ":flux" in img_src:
+            img_tag['src'] = img_tag['src'].replace(':flux', '')
+            image_flux(str(img_tag['src']), slug)
+
+
         wrap(img_tag, fig_tag)
     html = str(soup)
     if (soup.select('.article--sub')):
@@ -141,6 +153,14 @@ def content_order(list):
     for item in list:
         if item == '.DS_Store':
             list.remove(item)
+
+def image_flux(image, slug):
+    container = articles[slug]['metadata']['title']
+    if (os.path.isfile('public/' + image)) and (not image in flux):
+        flux[image] = {}
+        flux[image]['image'] = image
+        flux[image]['link'] = slug
+        flux[image]['container'] = container
 
 # Make directories if they don't exist
 if not os.path.exists(m):
@@ -179,7 +199,6 @@ print("⁂  Data: Collected")
 print("⁂  Images: Processed")
 
 # Re-organize the stuff I need
-tags = {}
 for article in articles:
     article_metadata = articles[article]['metadata']
     if 'tags' in article_metadata:
@@ -210,10 +229,6 @@ if os.path.isfile(settings_file):
 
 settings.update(settings_user) 
 
-
-
-
-
 # Generate article pages
 article_template = env.get_template('article.html')
 for article in articles:
@@ -235,6 +250,16 @@ for tag in tags:
         file.write(tag_html)
 print("⁂  Tag pages: Created")
 
+# Generate Flux page
+flux_metadata = [flux[item] for item in flux]
+flux_metadata.reverse()
+flux_template = env.get_template('flux.html')
+flux_html = flux_template.render(articles=flux_metadata, settings=settings)
+flux_slug = settings['flux']['slug']
+with open('public/' + flux_slug + '.html', 'w') as file:
+    file.write(flux_html)
+print("⁂  " + flux_slug + ": Created")
+
 # Reverse order
 articles_metadata.reverse()
 
@@ -253,7 +278,6 @@ with open('public/index.html', 'w') as file:
 print("⁂  Home page: Created")
 
 # Scss to css
-
 def compile_scss(scss):
     for source, dest in scss.items():
         mode = 'a' if os.path.exists(dest) else 'w'

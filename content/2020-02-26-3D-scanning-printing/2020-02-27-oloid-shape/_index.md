@@ -74,7 +74,7 @@ At one point it really seemed like the oloid could fall. Fortunately, I was arou
 
 The end result is quite good, even if I could have increased the quality if I had had more printing time. But let's say it's clearly sufficient for rapid prototyping.
 
-![oloid-result](oloid-result-1.jpg)
+![oloid-result](oloid-result-1.jpg:flux)
 
 Look at this geometric beauty.
 

@@ -17,7 +17,7 @@ I am fascinated by nature, by all the plants and their survival mechanisms, all 
 
 What if we could have a tangible way to visualize how plants communicate, a way to understand them more easily? Would we respect them more?
 
-![first-sketch](first-sketch.jpg)
+![first-sketch](large:first-sketch.jpg:flux)
 
 
 

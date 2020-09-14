@@ -72,7 +72,7 @@ I ended with a weird half geodesic dome that isn't as solid as it should be but 
 
 ![dome-construct-2](dome-construct-2.jpg)
 
-![dome-construct-3](dome-construct-3.jpg)
+![dome-construct-3](dome-construct-3.jpg:flux)
 
 ## Files
 

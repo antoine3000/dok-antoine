@@ -112,7 +112,7 @@ To solder electronics components on a board, it is easier to start with the cent
 
 The first few minutes of soldering are a bit frustrating, the parts are very small and precision is not easy on this scale. And we have to begin with the most complex part (to get it done before continuing). But once I got used to it, it became a very pleasant moment of mindfulness.
 
-![soldering-macro](large:soldering-macro.jpg)
+![soldering-macro](large:soldering-macro.jpg:flux)
 ![soldering-ftdi](large:soldering-ftdi.JPG)
 
 Unfortunately, I forgot to take pictures during the soldering process, I was totally into it, I guess. [This tutorial](https://www.youtube.com/watch?v=QKbJxytERvg) helped me understand how to do.

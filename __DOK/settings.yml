@@ -1,3 +1,7 @@
 title: "Dok"
 description: "Documentation tool"
 introduction: "Dok, a low-tech tool that allows you to document (almost) everything"
+flux:
+  visibility: True
+  title: "flux"
+  slug: "flux"
