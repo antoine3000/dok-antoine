@@ -32,30 +32,15 @@
 </header>
 <article class="article">
 <!-- title -->
-<h1 class="article__title">Output devices</h1>
+<h1 class="article__title">Prototyping an incubator</h1>
 <!-- parent -->
+<p class="article__parent">This article is part of: <a href="output-devices.html">Output devices</a>.</p>
 <!-- tags -->
-<p class="article__tags">Tags:
-      
-      <a class="tag__link" href="fab-academy-assignments.html">#fab-academy-assignments</a>
-</p>
 <!-- featured image -->
 <!-- toc -->
 <section class="article__toc">
 <h2 class="toc__title">Table of content</h2>
 <div class="toc__list"><ul>
-<li><a href="#motors">Motors</a>
-<ul>
-<li><a href="#dc-motor">DC motor</a></li>
-<li><a href="#stepper-motor">Stepper motor</a></li>
-<li><a href="#servo">Servo</a></li>
-</ul></li>
-<li><a href="#mosfet">MOSFET</a></li>
-<li><a href="#lcd-screen">LCD screen</a></li>
-</ul>
-</div>
-<h3 class="toc__title--sub"><a href="output-devices.html#output-devices-incubator">Prototyping an incubator</a></h3>
-<div class="toc__list--sub"><ul>
 <li><a href="#round-01-the-basics">Round #01: the basics</a>
 <ul>
 <li><a href="#material">Material</a></li>
@@ -70,56 +55,6 @@
 </ul>
 </li></div>
 </section>
-<section class="article__content ts">
-<p>This week's assignement is about output devices: we are learning how to make various motors work, what are their mechanisms and principles, when and why use a specific one instead of another.</p>
-<p>I'm going to lend a hand to <a href="https://maudb.gitlab.io/dok/" target="_blank">Maud Bausier</a>, my partner, who is building an incubator to grow mycelium or any fermented food (tempeh, sriracha, etc.). I think we could have enough material to finish a prototype at home (covid-19 restrictions).</p>
-<p>The main challenges for the moment concern electronics, which consists of: a thermistor (to know the temperature inside the incubator), a Peltier (to heat it), a fan (to cool it), an LCD screen (to know what's going on) and two push buttons to set the desired temperature inside the incubator.</p>
-<p><figure class="md"><img alt="incubator prototype" src="medias/output-devices-incubator-incubator-overview.jpg"><figcaption>incubator prototype</figcaption></figure>
-<h1 id="motors">Motors</h1>
-<p>But first, I needed some basics about motors: a motor is mainly made of coils and magnets. When current goes through a coil, a magnetic field is generated around it. The higher the current, the greater the field. This magnetic field creates polarity which is used to create a rotational force. This force is called <a href="https://en.wikipedia.org/wiki/Torque" target="_blank">the torque</a> and its value depends on the motor's input current. More current implies stronger magnetic field in the coils, that means more attraction/repulsion.</p>
-<p><figure class="md"><img alt="motor coils" src="medias/output-devices-motor-coils.png"><figcaption>motor coils</figcaption></figure>
-Image source: <a href="https://itp.nyu.edu/physcomp/lessons/dc-motors/dc-motors-the-basics/" target="_blank">ITP Physical Computing</a></p>
-<h2 id="dc-motor">DC motor</h2>
-<p>Maybe the simplest and most common motor in electronics, it converts current electrical energy into mechanical energy. The motor spins in one direction. Switching its polarity changes its direction. Varying the current supplied varies the speed of the motor.</p>
-<p>There are two main kinds of DC motor: the brushed one and the brushless one. The first one is more commonly used because it is the cheaper one. The brushless is bit more expensive, but it is less noisy and can last a lot longer because it doesn't need to be maintained, simply because there is almost no friction inside it.</p>
-<p><figure class="md"><img alt="DC brush motor" src="medias/output-devices-dc-brush.jpg"><figcaption>DC brush motor</figcaption></figure>
-Image source: <a href="https://learn.sparkfun.com/tutorials/motors-and-selecting-the-right-one#what-makes-a-motor-move-" target="_blank">Sparkfun: Motors and selecting the right one</a></p>
-<h2 id="stepper-motor">Stepper motor</h2>
-<blockquote>
-<p>Stepper motors are different than regular DC motors in that they don’t turn continuously, but move in a series of steps. A stepper motor is a motor that has multiple coils, not just one. By energizing each coil in sequence, you attract the shaft magnets to each coil in the sequence, and you can turn the motor in precise steps, rather than simply rotating continually.</p>
-</blockquote>
-<p><figure class="md"><img alt="stepper motor" src="medias/output-devices-stepper-motor.jpg"><figcaption>stepper motor</figcaption></figure>
-<p>Source: <a href="https://itp.nyu.edu/physcomp/lessons/dc-motors/dc-motors-the-basics/" target="_blank">ITP Physical Computing</a></p>
-<h2 id="servo">Servo</h2>
-<blockquote>
-<p>A Servo is a small device that has an output shaft. This shaft can be positioned to specific angular positions by sending the servo a coded signal. As long as the coded signal exists on the input line, the servo will maintain the angular position of the shaft. As the coded signal changes, the angular position of the shaft changes.</p>
-<blockquote>
-<p><a href="http://www.seattlerobotics.org/guide/servos.html" target="_blank">Seattle Robotic Society</a></p>
-</blockquote>
-</blockquote>
-<p><figure class="md"><img alt="Servo motor" src="medias/output-devices-servo-motor.jpg"><figcaption>Servo motor</figcaption></figure>
-Image source: <a href="https://www.youtube.com/watch?v=LXURLvga8bQ" target="_blank">How Servo Motors Work &amp; How To Control Servos using Arduino</a></p>
-<p>As we can see on the image above, a servo motor is composed by a DC motor, a potentionmeter and embedded circuit to control them.</p>
-<p>Servo motor appears to be the perfect candidate when we need a full control of the rotation angle, direction and speed of a motor.</p>
-<h1 id="mosfet">MOSFET</h1>
-<p>A MOSFET (Metal Oxide Semiconductor Field Effect Transistor) is a semiconductor device which is used for switching electronic signals.</p>
-<p class="todo">To do: MOSFET description</p>
-<h1 id="lcd-screen">LCD screen</h1>
-<p class="todo">To do: LCD screen description</p>
-</section>
-<footer>
-<p>✎ <span>Created</span> 15/04/2020</p>
-<p>⁂ <span>Updated</span> 15/04/2020</p>
-</footer>
-<article class="article--sub" id="output-devices-incubator">
-<!-- title -->
-<h1 class="article__title">Prototyping an incubator <a href="output-devices-incubator.html">●</a></h1>
-<!-- tags -->
-<p class="article__tags">Tags:
-        
-        <a href="fab-academy-assignments.html">#fab-academy-assignments</a>
-</p>
-<!-- content -->
 <section class="article__content ts">
 <p>As I said, my partner is building an incubator to help us grow mycellium (and other fermented food) and she asked me an hand to help her with the electronic part. In this context, I will prototype an incubator by using the devices I already have. I will do it by following the spiral methodology: a first round with the basic features, and then other ones with additional options.</p>
 <h2 id="round-01-the-basics">Round #01: the basics</h2>
@@ -203,7 +138,7 @@ void loop(){
   delay(1000);
 }
 </pre>
-<video controls="" preload="auto"><source src="medias/output-devices-incubator-prototype.mp4" type="video/mp4"/></video>
+<video controls="" preload="auto"><source src="medias/output-devices-incubator-incubator-prototype.mp4" type="video/mp4"/></video>
 <h3 id="results">Results</h3>
 <p>The overall result of this prototype is quite good. The temperature is easily regulated with the Peltier and the fan, and the thermistor obtains precise values.</p>
 <p><figure class="md"><img alt="incubator prototype" src="medias/output-devices-incubator-incubator-overview.jpg"><figcaption>incubator prototype</figcaption></figure>
@@ -229,7 +164,6 @@ void loop(){
 <p>✎ <span>Created</span> 16/04/2020</p>
 <p>⁂ <span>Updated</span> 16/04/2020</p>
 </footer>
-</article>
 </article>
 <footer class="footer">
 <p>antoine.studio ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a></p>
