@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title property="schema:name">antoine.studio - Documentation tool</title>
+<meta content="Documentation tool" name="description"/>
+<meta content="antoine.studio" property="schema:name"/>
+<meta content="Documentation tool" property="schema:description"/>
+<link href="assets/main.min.css" rel="stylesheet"/>
+</head>
+<body class="page page--article">
+<main class="main">
+<header class="header">
+<nav class="nav">
+<ul class="nav__list">
+<li class="nav__item">
+<a class="nav__link" href="index.html">antoine.studio</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="content.html">content</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="about.html">about</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="flux.html">flux</a>
+</li>
+</ul>
+</nav>
+</header>
+<article class="article">
+<!-- title -->
+<h1 class="article__title">My first openFrameworks application</h1>
+<!-- parent -->
+<p class="article__parent">This article is part of: <a href="interface-application-programming.html">Interface application programming</a>.</p>
+<!-- tags -->
+<!-- featured image -->
+<!-- toc -->
+<section class="article__toc">
+<h2 class="toc__title">Table of content</h2>
+<div class="toc__list"><ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#project-architecture">Project architecture</a></li>
+<li><a href="#sending-data-from-arduino">Sending data from Arduino</a></li>
+<li><a href="#receiving-data-to-openframeworks">Receiving data to openFrameworks</a></li>
+<li><a href="#make-something-out-of-it">Make something out of it</a></li>
+<li><a href="#result">Result</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#useful-links">Useful links</a></li>
+</ul>
+</div>
+</section>
+<section class="article__content ts">
+<p>For my first openFrameworks application, I would like to get sensor data and convert it to an interactive visual and audio piece. I'm going to use the <a href="https://learn.adafruit.com/adafruit-circuit-playground-express/overview" target="_blank">Circuit Playground Express</a> and its multiple integrated sensors and buttons to help me quickly prototype my idea.</p>
+<h1 id="installation">Installation</h1>
+<p>I first had to install openFrameworks on my machine. Speaking of my machine, I switched from <a href="https://elementary.io/" target="_blank">Elementary OS</a> to <a href="https://manjaro.org/" target="_blank">Manjaro</a> two three weeks ago. I no longer depend on the <a href="https://en.wikipedia.org/wiki/APT_(software)" target="_blank">APT</a> package manager (Advanced Package Tool, from Debian) but from <a href="https://aur.archlinux.org/" target="_blank">AUR</a> (Arch User Repository), from the Arch Linux community.</p>
+<p>My first intention was to look for the openFrameworks package in PAMAC, the graphical AUR package manager for Manjaro Linux, but unfortunately the package is broken there. Which means manual installation is the thing to do. I must say that AUR packages are generally super easy to install, which makes them quite convenient. Too bad this is not the case for openframeworks, and I don't understand enough how it works to lend a hand. Maybe later.</p>
+<p>Fortunately, the openFrameworks <a href="https://openframeworks.cc/download/" target="_blank">download</a> and <a href="https://openframeworks.cc/setup/linux-install/" target="_blank">installation</a> pages are clear enough and the community is very (re)active and helpful. This gives me hope for my future use of this tool.</p>
+<h1 id="project-architecture">Project architecture</h1>
+<p>Finding a minimal project architecture was more difficult than expected. The project generator provided by openFrameworks does not work on my system, for whatever reason.</p>
+<p>Fortunately, <a href="https://github.com/hiroMTB/vscode_oF" target="_blank">a project on github</a> shows how to start an openFrameworks project when using VSCode as a text editor. I no longer use this editor but the structure shown there is easily reproducible for any other text editor (I am currently juggling between Vim, Emacs and Atom).</p>
+<p>That's why I uploaded my own version of a <a href="https://gitlab.com/antoine.j/openframerworks-starter" target="_blank">minimal starter kit for openFrameworks projects</a> on Gitlab, hopefully it will help other people get started on their projects.</p>
+<pre>
+bin/
+obj/linux64/Release
+src/
+- main.cpp
+- ofApp.cpp
+- ofApp.h
+Makefile
+addons.make
+config.make
+</pre>
+<p>When oF (openFrameworks) and the starter kit are correctly installed, go to the project folder and use these commands:</p>
+<ul>
+<li>to compile the C++ code: <code>make</code></li>
+<li>to run the program: <code>make run</code></li>
+<li>to compile and run: <code>make &amp;&amp; make run</code></li>
+</ul>
+<h1 id="sending-data-from-arduino">Sending data from Arduino</h1>
+<p>The first step of my program is to collect the data from the sensors and transmit it to my oF program. To do this, I used a <a href="https://learn.adafruit.com/adafruit-circuit-playground-express/overview" target="_blank">Circuit Playground Express</a> and its built-in sensors, <a href="https: // platformio. org /" target="_blank">PlatformIO</a> to compile / send the code to the microcontroller and the <a href="https://learn.sparkfun.com/tutorials/serial-communication/all" target="_blank">serial communication</a> port.</p>
+<p>To create a Pio project, inside the main oF project, which will be used to talk to the Circuit Playground:</p>
+<p><code>$ mkdir pio &amp;&amp; cd pio &amp;&amp; pio project init --board adafruit_circuitplayground_m0</code></p>
+<p>Then, create a new <code>main.cpp</code> file into the <code>pio/src</code> folder.</p>
+<pre>
+#include &lt;Arduino.h&gt;
+#include &lt;Adafruit_CircuitPlayground.h&gt;
+
+float lightValue, soundValue;
+bool buttonLeft, buttonRight;
+bool dark = false;
+
+void setup() {
+  CircuitPlayground.begin();
+  Serial.begin(9600);
+}
+
+void darkSwitch() {
+  if (dark) {
+    for (int i = 0; i &lt; 10; i++) {
+      CircuitPlayground.setPixelColor(i, 0,   0,   255);
+    }
+  } else {
+    CircuitPlayground.clearPixels();
+  }
+}
+
+void loop() {
+  // get
+  lightValue = CircuitPlayground.lightSensor();
+  soundValue = CircuitPlayground.mic.soundPressureLevel(10);
+  buttonLeft = CircuitPlayground.leftButton();
+  buttonRight = CircuitPlayground.rightButton();
+  // send
+  Serial.print(String(lightValue) + "," + String(soundValue) + "," + String(buttonLeft) + "," + String(buttonRight));
+  if (Serial.available()) {
+    // receive
+    char inByte = Serial.read();
+    if (inByte == 1) {
+    // the received data is '1'
+    dark = !dark;
+  }
+}
+darkSwitch();
+delay(100);
+}
+</pre>
+<p>(<a href="https://www.freeformatter.com/html-escape.html" target="_blank">this tool</a> helped me to format the code in order to display it correctly in a <code>&lt;pre&gt;</code> tag)</p>
+<p>The main thing here is this line:</p>
+<pre>
+Serial.print(String(lightValue) + "," + String(soundValue) + "," + String(buttonLeft) + "," + String(buttonRight));
+</pre>
+<p>It converts the values to a string format, using the <code>String ()</code> <a href="https://www.arduino.cc/reference/en/language/variables/data-types/stringobject/" target="_blank">function</a>, separates them with a <code>,</code> and prints them on the serial. It can be a <code>,</code> character or any other character that helps you differentiate between the data you are processing.</p>
+<p>Another important part of this program is:</p>
+<pre>
+if (Serial.available()) {
+  // receive
+  char inByte = Serial.read();
+  if (inByte == 1) {    // Whether the received data is '1'
+  dark = !dark;
+}
+</pre>
+<p>This means that the <code>inByte</code> variable is updated if a serial message is available. It switches the variable "dark" if the program receives a <code>1</code> (true) from the serial. This message is sent by the oF program.</p>
+<p>We can now send and receive messages via the serial.</p>
+<h1 id="receiving-data-to-openframeworks">Receiving data to openFrameworks</h1>
+<p>First, I declare some variables in the <code>ofApp.h</code> file. The number <code>20</code> must be declared depending on the length of the message we receive.</p>
+<pre>
+char receivedData[20]; // length we receive
+char sendData = 1;
+ofSerial serial;
+</pre>
+<p>I call my custom function into update().</p>
+<pre>
+void ofApp::update(){
+    serialValues();
+}
+</pre>
+<p>In <code>serialValues()</code>, while the serial is available, we write the data in a <code>receivedDate</code> variable and run another <code>valuesConversion</code> function to do something with it.</p>
+<p>I prefer to keep these two functions separate to facilitate their reuse later. I will definitely reuse the <code>serialValues</code> function as it is, but I don't think that will be the case for <code>valuesConversion ()</code>.</p>
+<pre>
+void ofApp::serialValues() {
+    while(serial.available() &gt; 0) {
+        serial.readBytes(receivedData, 20);
+        valuesConversion();
+    }
+}
+</pre>
+<p>Then I parse the <code>receivedData</code> to make an array, which I write in <code>values</code>. I can now call <code>values.at(0)</code> to get the first value, and so on. The separator <code>,</code> must correspond to the separator that we chose previously, in the Arduino code.</p>
+<pre>
+void ofApp::valuesConversion() {
+    vector<string> values;
+    values = ofSplitString(receivedData, ",");
+    lightValue = ofToFloat(values.at(0));
+    soundValue = ofToFloat(values.at(1));
+    buttonLeft = ofToBool(values.at(2));
+    buttonRight = ofToBool(values.at(3));
+    lightLevel = ofMap(lightValue, 0, 1023, 0, 100);
+    soundLevel = ofMap(soundValue, 50, 100, 0, 100);
+    cout &lt;&lt; "light: " &lt;&lt; lightLevel &lt;&lt; " / sound: " &lt;&lt; soundLevel &lt;&lt; endl;
+    cout &lt;&lt; "left: " &lt;&lt; buttonLeft &lt;&lt; " / right: " &lt;&lt; buttonRight &lt;&lt; endl;
+}
+</string></pre>
+<p>The <code>ofMap()</code> function allows us to map a value, from its initial range to a new one.
+For example, the light sensor collects data in a range of 0 to 1023, but for ease of use, I convert it to another value, from 0 to 100.</p>
+<p>I can now receive data from the serial and convert it to the type of variable I need, in an easy-to-use range. I have everything I need to create my application.</p>
+<h1 id="make-something-out-of-it">Make something out of it</h1>
+<p>The application is getting the light level and the sound level around the microcontroller, compare them. If one is bigger than another.</p>
+<p><a href="https://gitlab.com/antoine.j/musical-playground" target="_blank">The source code of the program is here</a> and is obviously free and open-source.</p>
+<ul>
+<li><a href="https://gitlab.com/antoine.j/musical-playground/-/blob/master/src/ofApp.h" target="_blank">ofApp.h</a>, where I declare the variables and call the functions</li>
+<li><p><a href="https://gitlab.com/antoine.j/musical-playground/-/blob/master/src/ofApp.cpp" target="_blank">ofApp.cpp</a>, the main program</p></li>
+<li><p>If the light level is higher than the sound level: <br/>
+play the <code>drop</code> sound &amp;&amp; display its level horizontally.</p></li>
+<li>If the sound level is higher than the hight level: <br/>
+play the <code>kick</code> sound &amp;&amp; display its level vertically.</li>
+<li>If the mouse is pressed: <br/>
+reverse the colors and light the LEDs on the Circuit playground</li>
+<li>If the left button is pressed: <br/>
+play the <code>clap</code> sound</li>
+<li>If the right button is pressed: <br/>
+play the <code>cymbal</code> sound</li>
+</ul>
+<h1 id="result">Result</h1>
+<video controls="" preload="auto"><source src="medias/interface-application-programming-first-of-application-musical-playground-c.mp4" type="video/mp4"/></video>
+<h1 id="conclusion">Conclusion</h1>
+<p>Setting up openFrameworks was not as easy as expected, but it was worth it. I really like the idea of having this great tool in my toolbox, it allows new ideas to be alive, to be shared. It also helps me learn the C++ language, which is also used to control microcontrollers. I am super happy with the new perspectives that this gives to my practice.</p>
+<h1 id="useful-links">Useful links</h1>
+<ul>
+<li><a href="https://docs.platformio.org/en/latest/faq.html#platformio-udev-rules" target="_blank">pio and linux</a></li>
+<li><a href="https://docs.platformio.org/en/latest/boards/atmelsam/adafruit_circuitplayground_m0.html" target="_blank">pio playground express</a></li>
+<li><a href="https://openframeworks.cc/documentation/communication/ofSerial/" target="_blank">oF ofSerial</a></li>
+<li><a href="https://maker.pro/arduino/projects/how-to-send-and-receive-data-through-the-openframeworks-platform-using-arduino" target="_blank">tutorial data send/receive</a></li>
+<li><a href="https://learn.adafruit.com/circuit-playground-lesson-number-0/light-sensor" target="_blank">light sensor</a></li>
+<li><a href="https://learn.adafruit.com/circuit-playground-lesson-number-0/sound-sensor" target="_blank">sound sensor</a></li>
+<li><a href="https://learn.adafruit.com/circuit-playground-lesson-number-0/accelerometer" target="_blank">accelerometer</a></li>
+<li><a href="https://openframeworks.cc/documentation/utils/ofUtils/#!show_ofToFloat" target="_blank">ofToFloat</a></li>
+<li><a href="https://forum.openframeworks.cc/t/reading-multiple-analog-input-from-arduino/29805" target="_blank">muliple analog arduino</a></li>
+<li><a href="https://forum.openframeworks.cc/t/how-can-separate-values-from-arduino/24246" target="_blank">separate values arduino</a></li>
+<li><a href="https://maker.pro/arduino/projects/how-to-send-and-receive-data-through-the-openframeworks-platform-using-arduino" target="_blank">how to send and receive data</a></li>
+</ul>
+</section>
+<footer>
+<p>✎ <span>Created</span> 24/04/2020</p>
+<p>⁂ <span>Updated</span> 24/04/2020</p>
+</footer>
+</article>
+<footer class="footer">
+<p>antoine.studio ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a></p>
+</footer>
+</main>
+</body>
+</html>
