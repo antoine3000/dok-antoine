@@ -43,31 +43,45 @@
 <!-- toc -->
 <section class="article__toc">
 <h2 class="toc__title">Table of content</h2>
-<div class="toc__list"><ul>
-<li><a href="#ultrasonic-sensor-hc-sr04">Ultrasonic sensor HC-SR04</a>
-<ul>
+<h3 class="toc__title--sub"><a href="input-devices.html#input-devices-ultrasonic-sensor">Ultrasonic sensor HC-SR04</a></h3>
+<div class="toc__list--sub"><ul>
 <li><a href="#connection">Connection</a></li>
 <li><a href="#code">Code</a>
 <ul>
 <li><a href="#explanations">Explanations</a></li>
 </ul></li>
-</ul></li>
-<li><a href="#thermistor">Thermistor</a>
-<ul>
-<li><a href="#connection-2">Connection</a></li>
-<li><a href="#code-2">Code</a></li>
-</ul></li>
-<li><a href="#moisture-level-sensor">Moisture level sensor</a>
-<ul>
-<li><a href="#connection-3">Connection</a></li>
-<li><a href="#code-3">Code</a></li>
-</ul></li>
+</ul>
+</div>
+<h3 class="toc__title--sub"><a href="input-devices.html#input-devices-thermistor">Thermistor</a></h3>
+<div class="toc__list--sub"><ul>
+<li><a href="#connection">Connection</a></li>
+<li><a href="#code">Code</a></li>
+</ul>
+</div>
+<h3 class="toc__title--sub"><a href="input-devices.html#input-devices-moisture-sensor">Moisture level sensor</a></h3>
+<div class="toc__list--sub"><ul>
+<li><a href="#connection">Connection</a></li>
+<li><a href="#code">Code</a></li>
 </ul>
 </div>
 </section>
 <section class="article__content ts">
 <p>Let's play with sensors.</p>
-<h1 id="ultrasonic-sensor-hc-sr04">Ultrasonic sensor HC-SR04</h1>
+</section>
+<footer>
+<p>✎ <span>Created</span> 25/03/2020</p>
+<p>⁂ <span>Updated</span> 25/03/2020</p>
+</footer>
+<article class="article--sub" id="input-devices-ultrasonic-sensor">
+<!-- title -->
+<h1 class="article__title">Ultrasonic sensor HC-SR04 <a href="input-devices-ultrasonic-sensor.html">●</a></h1>
+<!-- tags -->
+<p class="article__tags">Tags:
+        
+        <a href="fab-academy-assignments.html">#fab-academy-assignments</a>
+</p>
+<!-- content -->
+<section class="article__content ts">
 <p>The ultrasonic sensor HC-SR04 provides 2Cm to 400cm of non-contact measurement functionality with a ranging accuracy that can reach up to 3mm. Here is its <a href="https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf" target="_blank">datasheet</a>. This sensor has 4 pins that we have to connect to our dev board.</p>
 <ul>
 <li>5V supply</li>
@@ -75,11 +89,11 @@
 <li>Echo Pulse Output</li>
 <li>GND</li>
 </ul>
-<p><figure class="md"><img alt="uno-ultrasonic-inuse" src="medias/input-devices-uno-ultrasonic-inuse.jpg"><figcaption>uno-ultrasonic-inuse</figcaption></figure>
+<p><figure class="md"><img alt="uno-ultrasonic-inuse" src="medias/input-devices-ultrasonic-sensor-uno-ultrasonic-inuse.jpg"><figcaption>uno-ultrasonic-inuse</figcaption></figure>
 <p>I'm using an Arduino UNO to use this sensor because it needs a voltage of 5V. Unfortunately, the Barduino and its ESP32 only has a voltage of 3.3V.</p>
 <h2 id="connection">Connection</h2>
 <p>The connection is quite simple, the <code>VCC</code> goes to the <code>5V</code>, the <code>GND</code> to the <code>GND</code>, the <code>Echo</code> to a digital pin, let's say the <code>12</code> and the <code>Trig</code> to another digital pin, the <code>11</code>.</p>
-<p><figure class="md"><img alt="uno-ultrasonci-schematic" src="medias/input-devices-uno-ultrasonic.jpg"><figcaption>uno-ultrasonci-schematic</figcaption></figure>
+<p><figure class="md"><img alt="uno-ultrasonci-schematic" src="medias/input-devices-ultrasonic-sensor-uno-ultrasonic.jpg"><figcaption>uno-ultrasonci-schematic</figcaption></figure>
 <p>(<a href="https://randomnerdtutorials.com/complete-guide-for-ultrasonic-sensor-hc-sr04/" target="_blank">image source</a>)</p>
 <h2 id="code">Code</h2>
 <p>Here is the basic code to read data from the ultrasonic sensor, to convert them into readable values (cm) and print it on the serial monitor.</p>
@@ -113,7 +127,22 @@ void loop() {
 <p>Compile it and upload it to the UNO <code>pio run -t upload</code> and open the serial monitor <code>pio device monitor</code> to see the distance value calculated by the ultrasonic sensor. I'm impressed how fast and accurate it is.</p>
 <h3 id="explanations">Explanations</h3>
 <p><code>cm =  (duration/2) / 29.1</code> is how we convert the duration to a distance, using a formula: <code>distance = (traveltime/2) * speed of sound</code>. The speed of sound is <code>343m/s</code> wich is equal to 1/29.1 cm/uS. We need to divide the <code>traveltime</code> by 2 because the wave we sent hit the object and then returned back to the sensor.</p>
-<h1 id="thermistor">Thermistor</h1>
+</section>
+<footer>
+<p>✎ <span>Created</span> 26/03/2020</p>
+<p>⁂ <span>Updated</span> 26/03/2020</p>
+</footer>
+</article>
+<article class="article--sub" id="input-devices-thermistor">
+<!-- title -->
+<h1 class="article__title">Thermistor <a href="input-devices-thermistor.html">●</a></h1>
+<!-- tags -->
+<p class="article__tags">Tags:
+        
+        <a href="fab-academy-assignments.html">#fab-academy-assignments</a>
+</p>
+<!-- content -->
+<section class="article__content ts">
 <p>Or how to measure temperature using a resistor.</p>
 <blockquote>
 <p>To measure the temperature, we need to measure the resistance. However, a microcontroller does not have a resistance-meter built in. Instead, it only has a voltage reader known as a analog-digital-converter. So what we have to do is convert the resistance into a voltage, and we will do that by adding another resistor and connecting them in series. Now you just measure the voltage in the middle, as the resistance changes, the voltage changes too, according to the simple voltage-divider equation. We just need to keep one resistor fixed</p>
@@ -121,13 +150,13 @@ void loop() {
 <p>Analog Voltage Reading Method, <a href="https://learn.adafruit.com/thermistor/using-a-thermistor" target="_blank">Adafruit</a></p>
 </blockquote>
 </blockquote>
-<p><figure class="md"><img alt="thermo-photo-1" src="medias/input-devices-uno-thermo-photo-1.jpg"><figcaption>thermo-photo-1</figcaption></figure>
-<figure class="md"><img alt="thermo-photo-2" src="medias/input-devices-uno-thermo-photo-2.jpg"><figcaption>thermo-photo-2</figcaption></figure>
-<h2 id="connection-2">Connection</h2>
+<p><figure class="md"><img alt="thermo-photo-1" src="medias/input-devices-thermistor-uno-thermo-photo-1.jpg"><figcaption>thermo-photo-1</figcaption></figure>
+<figure class="md"><img alt="thermo-photo-2" src="medias/input-devices-thermistor-uno-thermo-photo-2.jpg"><figcaption>thermo-photo-2</figcaption></figure>
+<h2 id="connection">Connection</h2>
 <p>The thermistor is linked to the <code>5V</code> pin and to an analog pin <code>0</code> through a 10k resistor, and to <code>GND</code>.</p>
-<p><figure class="md"><img alt="uno-thermi" src="medias/input-devices-uno-thermi.png"><figcaption>uno-thermi</figcaption></figure>
+<p><figure class="md"><img alt="uno-thermi" src="medias/input-devices-thermistor-uno-thermi.png"><figcaption>uno-thermi</figcaption></figure>
 <p>(<a href="https://learn.adafruit.com/thermistor/using-a-thermistor" target="_blank">image source</a>)</p>
-<h2 id="code-2">Code</h2>
+<h2 id="code">Code</h2>
 <p>Here is the piece of code that print the value of the analog pin <code>0</code> and convert its values into a Celcius temperature.</p>
 <pre>
 int analogPin = 0;
@@ -146,11 +175,26 @@ void loop() {
 }
 </pre>
 <p class="todo">To do: Update values according to <a href="https://computers.tutsplus.com/tutorials/how-to-read-temperatures-with-arduino--mac-53714" target="_blank">this tutorial</a></p>
-<h1 id="moisture-level-sensor">Moisture level sensor</h1>
+</section>
+<footer>
+<p>✎ <span>Created</span> 27/03/2020</p>
+<p>⁂ <span>Updated</span> 27/03/2020</p>
+</footer>
+</article>
+<article class="article--sub" id="input-devices-moisture-sensor">
+<!-- title -->
+<h1 class="article__title">Moisture level sensor <a href="input-devices-moisture-sensor.html">●</a></h1>
+<!-- tags -->
+<p class="article__tags">Tags:
+        
+        <a href="fab-academy-assignments.html">#fab-academy-assignments</a>
+</p>
+<!-- content -->
+<section class="article__content ts">
 <p>Water is a conductive element, and the more water there is in the soil the more electricity can flow through it. So, in order to measure the soil moisture level, we can integrate it into an electrical circuit and measure the voltage. The more voltage in the circuit, the more water there is in the soil.</p>
-<p><figure class="md"><img alt="moist-setup" src="medias/input-devices-moist-setup.jpg"><figcaption>moist-setup</figcaption></figure>
+<p><figure class="md"><img alt="moist-setup" src="medias/input-devices-moisture-sensor-moist-setup.jpg"><figcaption>moist-setup</figcaption></figure>
 <p>To represent it, I built a small system that lights a green LED when the soil is wet and a red LED when it's dry.</p>
-<h2 id="connection-3">Connection</h2>
+<h2 id="connection">Connection</h2>
 <ul>
 <li>5V from the Arduino UNO to the soil</li>
 <li>A0 (anaolog) from the Arduino UNO to the soil</li>
@@ -159,8 +203,8 @@ void loop() {
 <li>12 (digital) to the green LED through a 220Ω resistor</li>
 <li>LED's to the GND (digital)</li>
 </ul>
-<p><figure class="md"><img alt="moist-closeup" src="medias/input-devices-moist-closeup.jpg"><figcaption>moist-closeup</figcaption></figure>
-<h2 id="code-3">Code</h2>
+<p><figure class="md"><img alt="moist-closeup" src="medias/input-devices-moisture-sensor-moist-closeup.jpg"><figcaption>moist-closeup</figcaption></figure>
+<h2 id="code">Code</h2>
 <p>The code is basic. If the analog pin gets a high voltage, it means that the soil is moist and the plant is <em>happy</em> so we turn on the green LED, and vice versa.</p>
 <p>I plan to write a more complex code in the coming weeks, a code that takes into account the amount of water needed for each specific plant, and to alert when it's too dry <em>or</em> too weet.</p>
 <pre>
@@ -191,9 +235,10 @@ void loop() {
 <video controls="" preload="auto"><source src="medias/input-devices-moist-test.mp4" type="video/mp4">
 </source></video></section>
 <footer>
-<p>✎ <span>Created</span> 25/03/2020</p>
-<p>⁂ <span>Updated</span> 25/03/2020</p>
+<p>✎ <span>Created</span> 28/03/2020</p>
+<p>⁂ <span>Updated</span> 28/03/2020</p>
 </footer>
+</article>
 </article>
 <footer class="footer">
 <p>antoine.studio ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a></p>

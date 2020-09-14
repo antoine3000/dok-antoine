@@ -427,6 +427,9 @@ a {
 .index a {
   text-decoration: none; }
 
+.index--list .index__item {
+  margin-bottom: var(--size-xs); }
+
 .index--featured .index__link:hover .item__title {
   background-color: var(--base-color);
   color: var(--body-color); }

@@ -180,8 +180,6 @@ If it has been verified correctly, send it to your board to make it alive by typ
 
 I have been using my pomodoro timer every day since I coded it, the Circuit Playground is always by my computer to remind me to take a 5-minutes break every 25 minutes and help me stay focused.
 
----
-
 # Programming the ESP32 — Barduino
 
 We have been asked to assemble a Barduino few hours before the lab lockdown due to the coronavirus, in order to be able to experiment with it later at home.
@@ -233,8 +231,6 @@ Also, there is a *Programmer Slider Switch* that changes the behaviour of the ch
 
 Turn the programming slider switch to the right, in execution mode, press the reset button and the test LED should blink. Olé.
 
----
-
 # Programming the ATtiny1614
 
 The ATtiny1614 isn't yet supported by PlatformIO and therefore needs another method to be programmed. Fortunately, [pyupdi](https://github.com/mraardvark/pyupdi) is here! Pyupdi is a Python UPDI driver for programming the "new" tinyAVR and megaAVR devices.
@@ -269,8 +265,6 @@ pyupdi.py -d tiny1614 -c /dev/ttyUSB0 -b 9600 -f /tmp/arduino_build_342195/Blink
 </pre>
 
 <video><source src="pomo-test.mp4"></video>
-
----
 
 # The basic way: Arduino IDE
 

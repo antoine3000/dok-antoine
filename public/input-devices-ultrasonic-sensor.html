@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title property="schema:name">antoine.studio - Documentation tool</title>
+<meta content="Documentation tool" name="description"/>
+<meta content="antoine.studio" property="schema:name"/>
+<meta content="Documentation tool" property="schema:description"/>
+<link href="assets/main.min.css" rel="stylesheet"/>
+</head>
+<body class="page page--article">
+<main class="main">
+<header class="header">
+<nav class="nav">
+<ul class="nav__list">
+<li class="nav__item">
+<a class="nav__link" href="index.html">antoine.studio</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="content.html">content</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="about.html">about</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="flux.html">flux</a>
+</li>
+</ul>
+</nav>
+</header>
+<article class="article">
+<!-- title -->
+<h1 class="article__title">Ultrasonic sensor HC-SR04</h1>
+<!-- parent -->
+<p class="article__parent">This article is part of: <a href="input-devices.html">Input devices</a>.</p>
+<!-- tags -->
+<!-- featured image -->
+<!-- toc -->
+<section class="article__toc">
+<h2 class="toc__title">Table of content</h2>
+<div class="toc__list"><ul>
+<li><a href="#connection">Connection</a></li>
+<li><a href="#code">Code</a>
+<ul>
+<li><a href="#explanations">Explanations</a></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section class="article__content ts">
+<p>The ultrasonic sensor HC-SR04 provides 2Cm to 400cm of non-contact measurement functionality with a ranging accuracy that can reach up to 3mm. Here is its <a href="https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf" target="_blank">datasheet</a>. This sensor has 4 pins that we have to connect to our dev board.</p>
+<ul>
+<li>5V supply</li>
+<li>Trigger Pulse Input</li>
+<li>Echo Pulse Output</li>
+<li>GND</li>
+</ul>
+<p><figure class="md"><img alt="uno-ultrasonic-inuse" src="medias/input-devices-ultrasonic-sensor-uno-ultrasonic-inuse.jpg"><figcaption>uno-ultrasonic-inuse</figcaption></figure>
+<p>I'm using an Arduino UNO to use this sensor because it needs a voltage of 5V. Unfortunately, the Barduino and its ESP32 only has a voltage of 3.3V.</p>
+<h2 id="connection">Connection</h2>
+<p>The connection is quite simple, the <code>VCC</code> goes to the <code>5V</code>, the <code>GND</code> to the <code>GND</code>, the <code>Echo</code> to a digital pin, let's say the <code>12</code> and the <code>Trig</code> to another digital pin, the <code>11</code>.</p>
+<p><figure class="md"><img alt="uno-ultrasonci-schematic" src="medias/input-devices-ultrasonic-sensor-uno-ultrasonic.jpg"><figcaption>uno-ultrasonci-schematic</figcaption></figure>
+<p>(<a href="https://randomnerdtutorials.com/complete-guide-for-ultrasonic-sensor-hc-sr04/" target="_blank">image source</a>)</p>
+<h2 id="code">Code</h2>
+<p>Here is the basic code to read data from the ultrasonic sensor, to convert them into readable values (cm) and print it on the serial monitor.</p>
+<p>To quickly create a <a href="https://platformio.org/" target="_blank">PlatformIO</a> project for the Arduino UNO, open a terminal and navigate to a freshly created folder and type <code>$ pio project init --board uno</code>. As simple as that.</p>
+<p>Create in new <code>main.cpp</code> file into the <code>src</code> folder.</p>
+<pre>
+int trigPin = 11;
+int echoPin = 12;
+long duration, cm;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+}
+
+void loop() {
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(5);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  pinMode(echoPin, INPUT);
+  duration = pulseIn(echoPin, HIGH);
+  cm = (duration/2) / 29.1;
+  Serial.print(cm);
+  Serial.print("cm");
+  delay(250);
+}
+</pre>
+<p>Compile it and upload it to the UNO <code>pio run -t upload</code> and open the serial monitor <code>pio device monitor</code> to see the distance value calculated by the ultrasonic sensor. I'm impressed how fast and accurate it is.</p>
+<h3 id="explanations">Explanations</h3>
+<p><code>cm =  (duration/2) / 29.1</code> is how we convert the duration to a distance, using a formula: <code>distance = (traveltime/2) * speed of sound</code>. The speed of sound is <code>343m/s</code> wich is equal to 1/29.1 cm/uS. We need to divide the <code>traveltime</code> by 2 because the wave we sent hit the object and then returned back to the sensor.</p>
+</section>
+<footer>
+<p>✎ <span>Created</span> 26/03/2020</p>
+<p>⁂ <span>Updated</span> 26/03/2020</p>
+</footer>
+</article>
+<footer class="footer">
+<p>antoine.studio ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a></p>
+</footer>
+</main>
+</body>
+</html>

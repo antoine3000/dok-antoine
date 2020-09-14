@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title property="schema:name">antoine.studio - Documentation tool</title>
+<meta content="Documentation tool" name="description"/>
+<meta content="antoine.studio" property="schema:name"/>
+<meta content="Documentation tool" property="schema:description"/>
+<link href="assets/main.min.css" rel="stylesheet"/>
+</head>
+<body class="page page--article">
+<main class="main">
+<header class="header">
+<nav class="nav">
+<ul class="nav__list">
+<li class="nav__item">
+<a class="nav__link" href="index.html">antoine.studio</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="content.html">content</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="about.html">about</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="flux.html">flux</a>
+</li>
+</ul>
+</nav>
+</header>
+<article class="article">
+<!-- title -->
+<h1 class="article__title">Moisture level sensor</h1>
+<!-- parent -->
+<p class="article__parent">This article is part of: <a href="input-devices.html">Input devices</a>.</p>
+<!-- tags -->
+<!-- featured image -->
+<!-- toc -->
+<section class="article__toc">
+<h2 class="toc__title">Table of content</h2>
+<div class="toc__list"><ul>
+<li><a href="#connection">Connection</a></li>
+<li><a href="#code">Code</a></li>
+</ul>
+</div>
+</section>
+<section class="article__content ts">
+<p>Water is a conductive element, and the more water there is in the soil the more electricity can flow through it. So, in order to measure the soil moisture level, we can integrate it into an electrical circuit and measure the voltage. The more voltage in the circuit, the more water there is in the soil.</p>
+<p><figure class="md"><img alt="moist-setup" src="medias/input-devices-moisture-sensor-moist-setup.jpg"><figcaption>moist-setup</figcaption></figure>
+<p>To represent it, I built a small system that lights a green LED when the soil is wet and a red LED when it's dry.</p>
+<h2 id="connection">Connection</h2>
+<ul>
+<li>5V from the Arduino UNO to the soil</li>
+<li>A0 (anaolog) from the Arduino UNO to the soil</li>
+<li>A0 (analog) from the Arduino UNO to the GND (analog) through a 10kΩ resistor</li>
+<li>11 (digital) to the red LED through a 220Ω resistor</li>
+<li>12 (digital) to the green LED through a 220Ω resistor</li>
+<li>LED's to the GND (digital)</li>
+</ul>
+<p><figure class="md"><img alt="moist-closeup" src="medias/input-devices-moisture-sensor-moist-closeup.jpg"><figcaption>moist-closeup</figcaption></figure>
+<h2 id="code">Code</h2>
+<p>The code is basic. If the analog pin gets a high voltage, it means that the soil is moist and the plant is <em>happy</em> so we turn on the green LED, and vice versa.</p>
+<p>I plan to write a more complex code in the coming weeks, a code that takes into account the amount of water needed for each specific plant, and to alert when it's too dry <em>or</em> too weet.</p>
+<pre>
+int ledGreen = 12;
+int ledRed = 11;
+int contactVal = 0;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(ledGreen, OUTPUT);
+  pinMode(ledRed, OUTPUT);
+}
+
+void loop() {
+  contactVal = analogRead(0);
+  Serial.println(contactVal);
+  if (contactVal &gt;= 350) {
+    digitalWrite(ledRed, LOW);
+    digitalWrite(ledGreen, HIGH);
+  } else {
+    digitalWrite(ledRed, HIGH);
+    digitalWrite(ledGreen, LOW);
+  }
+  delay(250);
+}
+</pre>
+<p>Here is my tiny system in action, olé.</p>
+<video controls="" preload="auto"><source src="medias/input-devices-moisture-sensor-moist-test.mp4" type="video/mp4">
+</source></video></section>
+<footer>
+<p>✎ <span>Created</span> 28/03/2020</p>
+<p>⁂ <span>Updated</span> 28/03/2020</p>
+</footer>
+</article>
+<footer class="footer">
+<p>antoine.studio ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a></p>
+</footer>
+</main>
+</body>
+</html>

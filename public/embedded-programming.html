@@ -222,7 +222,6 @@ lib_deps =
 <p>If it has been verified correctly, send it to your board to make it alive by typing <code>pio run -t upload</code>.</p>
 <p><figure class="md"><img alt="pio-upload" src="medias/embedded-programming-pio-upload.jpeg"><figcaption>pio-upload</figcaption></figure>
 <p>I have been using my pomodoro timer every day since I coded it, the Circuit Playground is always by my computer to remind me to take a 5-minutes break every 25 minutes and help me stay focused.</p>
-<hr/>
 <h1 id="programming-the-esp32-barduino">Programming the ESP32 — Barduino</h1>
 <p>We have been asked to assemble a Barduino few hours before the lab lockdown due to the coronavirus, in order to be able to experiment with it later at home.</p>
 <blockquote>
@@ -263,7 +262,6 @@ framework = arduino
  }
 </arduino.h></pre>
 <p>Turn the programming slider switch to the right, in execution mode, press the reset button and the test LED should blink. Olé.</p>
-<hr/>
 <h1 id="programming-the-attiny1614">Programming the ATtiny1614</h1>
 <p>The ATtiny1614 isn't yet supported by PlatformIO and therefore needs another method to be programmed. Fortunately, <a href="https://github.com/mraardvark/pyupdi" target="_blank">pyupdi</a> is here! Pyupdi is a Python UPDI driver for programming the "new" tinyAVR and megaAVR devices.</p>
 <h2 id="connectivity">Connectivity</h2>
@@ -283,7 +281,6 @@ To be able to compile the code, first install the <a href="https://github.com/Sp
 pyupdi.py -d tiny1614 -c /dev/ttyUSB0 -b 9600 -f /tmp/arduino_build_342195/Blink.ino.hex -v
 </pre>
 <video controls="" preload="auto"><source src="medias/embedded-programming-pomo-test.mp4" type="video/mp4"/></video>
-<hr/>
 <h1 id="the-basic-way-arduino-ide">The basic way: Arduino IDE</h1>
 <p>One can also use Arduino IDE to load a piece of code into a device. It works perfectly well even if this solution is more basic and doesn't allow a lot of  fine tuning.</p>
 <ol>

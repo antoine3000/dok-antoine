@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title property="schema:name">antoine.studio - Documentation tool</title>
+<meta content="Documentation tool" name="description"/>
+<meta content="antoine.studio" property="schema:name"/>
+<meta content="Documentation tool" property="schema:description"/>
+<link href="assets/main.min.css" rel="stylesheet"/>
+</head>
+<body class="page page--article">
+<main class="main">
+<header class="header">
+<nav class="nav">
+<ul class="nav__list">
+<li class="nav__item">
+<a class="nav__link" href="index.html">antoine.studio</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="content.html">content</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="about.html">about</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="flux.html">flux</a>
+</li>
+</ul>
+</nav>
+</header>
+<article class="article">
+<!-- title -->
+<h1 class="article__title">Thermistor</h1>
+<!-- parent -->
+<p class="article__parent">This article is part of: <a href="input-devices.html">Input devices</a>.</p>
+<!-- tags -->
+<!-- featured image -->
+<!-- toc -->
+<section class="article__toc">
+<h2 class="toc__title">Table of content</h2>
+<div class="toc__list"><ul>
+<li><a href="#connection">Connection</a></li>
+<li><a href="#code">Code</a></li>
+</ul>
+</div>
+</section>
+<section class="article__content ts">
+<p>Or how to measure temperature using a resistor.</p>
+<blockquote>
+<p>To measure the temperature, we need to measure the resistance. However, a microcontroller does not have a resistance-meter built in. Instead, it only has a voltage reader known as a analog-digital-converter. So what we have to do is convert the resistance into a voltage, and we will do that by adding another resistor and connecting them in series. Now you just measure the voltage in the middle, as the resistance changes, the voltage changes too, according to the simple voltage-divider equation. We just need to keep one resistor fixed</p>
+<blockquote>
+<p>Analog Voltage Reading Method, <a href="https://learn.adafruit.com/thermistor/using-a-thermistor" target="_blank">Adafruit</a></p>
+</blockquote>
+</blockquote>
+<p><figure class="md"><img alt="thermo-photo-1" src="medias/input-devices-thermistor-uno-thermo-photo-1.jpg"><figcaption>thermo-photo-1</figcaption></figure>
+<figure class="md"><img alt="thermo-photo-2" src="medias/input-devices-thermistor-uno-thermo-photo-2.jpg"><figcaption>thermo-photo-2</figcaption></figure>
+<h2 id="connection">Connection</h2>
+<p>The thermistor is linked to the <code>5V</code> pin and to an analog pin <code>0</code> through a 10k resistor, and to <code>GND</code>.</p>
+<p><figure class="md"><img alt="uno-thermi" src="medias/input-devices-thermistor-uno-thermi.png"><figcaption>uno-thermi</figcaption></figure>
+<p>(<a href="https://learn.adafruit.com/thermistor/using-a-thermistor" target="_blank">image source</a>)</p>
+<h2 id="code">Code</h2>
+<p>Here is the piece of code that print the value of the analog pin <code>0</code> and convert its values into a Celcius temperature.</p>
+<pre>
+int analogPin = 0;
+int beta = 3950;
+int resistance = 10;
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  long a = analogRead(analogPin);
+  float temp = beta / (log((1025.0*10/a-10)/10) + beta/298.0)-273.0;
+  Serial.println(temp);
+  delay(1000);
+}
+</pre>
+<p class="todo">To do: Update values according to <a href="https://computers.tutsplus.com/tutorials/how-to-read-temperatures-with-arduino--mac-53714" target="_blank">this tutorial</a></p>
+</section>
+<footer>
+<p>✎ <span>Created</span> 27/03/2020</p>
+<p>⁂ <span>Updated</span> 27/03/2020</p>
+</footer>
+</article>
+<footer class="footer">
+<p>antoine.studio ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a></p>
+</footer>
+</main>
+</body>
+</html>
