@@ -1,6 +1,6 @@
 ---
 title: Applications and implications
-tags: fab-academy-assignments, empty
+tags: fab-academy-assignments, to-do
 ---
 For this weeks's assignement, we were asked to answer a series of questions about our final project. I don't really know where I'm going with my project but I guess that's the point of this week: write some very practical facts and see where my main idea goes, and how far I can define it. Let's do that.
 

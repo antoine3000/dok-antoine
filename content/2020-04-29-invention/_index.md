@@ -1,6 +1,6 @@
 ---
 title: Invention, intellectual property, and income
-tags: empty, fab-academy-assignments
+tags: fab-academy-assignments, to-do
 ---
 
 TODO: everything :)

@@ -1,6 +1,6 @@
 ---
 title: Wildcard
-tags: empty, fab-academy-assignments
+tags: fab-academy-assignments, to-do
 ---
 
 TODO: everything :)
