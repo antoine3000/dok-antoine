@@ -1,6 +1,6 @@
 ---
 title: Interface application programming
-tags: fab-academy-assignments, test
+tags: fab-academy-assignments
 ---
 
 This week is devoted to programming interfaces and applications, a subject that I really like. I would not say that I am a good programmer, I have little experience. But it's something I love to do: solve logic problems, create software that produces the result I want (or the result I didn't expect, because I also find unexpected things beautiful).

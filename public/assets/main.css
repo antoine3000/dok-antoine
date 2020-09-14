@@ -332,7 +332,8 @@ img {
   max-width: 100%;
   width: 100%;
   display: inline-block;
-  vertical-align: top; }
+  vertical-align: top;
+  margin-bottom: var(--size-md); }
   @media (min-width: 769px) {
     .article figure.sm {
       width: calc(var(--content-max-width)/2 - var(--size-sm)/2);

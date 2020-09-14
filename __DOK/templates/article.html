@@ -57,9 +57,9 @@
       <!-- title -->
       <h1 class="article__title">{{ child.title }} <a href="{{ child.slug }}.html">●</a></h1>
       <!-- tags -->
-      {% if article.tags %}
+      {% if child.tags %}
       <p class="article__tags">Tags:
-        {% for tag in article.tags %}
+        {% for tag in child.tags %}
         <a href="{{ tag }}.html">#{{ tag }}</a>
         {% endfor %}
       </p>
