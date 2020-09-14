@@ -32,19 +32,16 @@
 </header>
 <article class="article">
 <!-- title -->
-<h1 class="article__title">Electronics design</h1>
+<h1 class="article__title">Pomodoro timer</h1>
 <!-- parent -->
+<p class="article__parent">This article is part of: <a href="electronics-design.html">Electronics design</a>.</p>
 <!-- tags -->
-<p class="article__tags">Tags:
-      
-      <a class="tag__link" href="fab-academy-assignments.html">#fab-academy-assignments</a>
-</p>
 <!-- featured image -->
+<figure class="md"><img alt="" class="article__featured" src="medias/electronics-design-pomodoro-timer-pomo.jpeg"><figcaption></figcaption></figure>
 <!-- toc -->
 <section class="article__toc">
 <h2 class="toc__title">Table of content</h2>
-<h3 class="toc__title--sub"><a href="electronics-design.html#electronics-design-pomodoro-timer">Pomodoro timer</a></h3>
-<div class="toc__list--sub"><ul>
+<div class="toc__list"><ul>
 <li><a href="#components">Components</a></li>
 <li><a href="#design">Design</a>
 <ul>
@@ -61,24 +58,6 @@
 </ul>
 </div>
 </section>
-<section class="article__content ts">
-<p>I knew almost nothing about electronics before following the Fab Academy.I had to learn and understand the very basics of a electronic circuit and its composents, but also of electricity and its flow.</p>
-<p>To do so, I designed a pomodoro timer from scratch. I have learn a lot throughout the process and I have the feeling that this new knowledge will play a key role in what I will do for my personal project and afterwards.</p>
-<p><figure class="md"><img alt="pomo" src="medias/electronics-design-pomodoro-timer-pomo.jpeg"><figcaption>pomo</figcaption></figure>
-</section>
-<footer>
-<p>✎ <span>Created</span> 04/03/2020</p>
-<p>⁂ <span>Updated</span> 04/03/2020</p>
-</footer>
-<article class="article--sub" id="electronics-design-pomodoro-timer">
-<!-- title -->
-<h1 class="article__title">Pomodoro timer <a href="electronics-design-pomodoro-timer.html">●</a></h1>
-<!-- tags -->
-<p class="article__tags">Tags:
-        
-        <a href="fab-academy-assignments.html">#fab-academy-assignments</a>
-</p>
-<!-- content -->
 <section class="article__content ts">
 <p>I use a pomodoro timer daily to help me manage my time and effort in the tasks I want to accomplish. For now, I'm using <a href="https://github.com/JaDogg/pydoro" target="_blank">Pydoro</a>, an open source pomodoro terminal timer written in Python but I would like to build mine and have it physically next to my laptop.</p>
 <blockquote>
@@ -159,7 +138,7 @@ void loop() {
 <p><code>pyupdi.py -d tiny1614 -c /dev/ttyUSB0 -b 9600 -f /tmp/arduino_build_342195/Blink.ino.hex -v</code></p>
 <p>Where <code>/dev/ttyUSB0</code> corresponds to the value I got when I did <code>dmesg -w</code> earlier and <code>arduino_build_342195/Blink.ino.hex</code> corresponds to the temp file I wan to send.</p>
 <p>And that's it.</p>
-<video controls="" preload="auto"><source src="medias/electronics-design-pomo-test.mp4" type="video/mp4"/></video>
+<video controls="" preload="auto"><source src="medias/electronics-design-pomodoro-timer-pomo-test.mp4" type="video/mp4"/></video>
 <h2 id="programming">Programming</h2>
 <p>I will program this board to make it be a pomodoro timer in two weeks, during the <em>Embedded programming</em> assignement.</p>
 </section>
@@ -167,7 +146,6 @@ void loop() {
 <p>✎ <span>Created</span> 05/03/2020</p>
 <p>⁂ <span>Updated</span> 05/03/2020</p>
 </footer>
-</article>
 </article>
 <footer class="footer">
 <p>antoine.studio ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a></p>
