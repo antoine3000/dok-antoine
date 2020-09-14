@@ -115,7 +115,7 @@ To prepare the g-code, we have to <em>slice</em> our 3D model (.STL), to simulat
 <p>The filament we use is a <code>PLA 1.75mm</code>. It's a plant-based material made from starches like soybeans or corn. It needs to be heated at 190-200C° to be used.</p>
 <p><figure class="md"><img alt="testfileprint" src="medias/3D-scanning-printing-printing-a-test-file-testfileprint.JPG"><figcaption>testfileprint</figcaption></figure>
 <p>The printing was done in ~90 minutes without any troubles.</p>
-<video controls="" preload="auto"><source src="medias/3D-scanning-printing-print-test.mp4" type="video/mp4"/></video>
+<video controls="" preload="auto"><source src="medias/3D-scanning-printing-printing-a-test-file-print-test.mp4" type="video/mp4"/></video>
 <p><figure class="md"><img alt="testprint" src="medias/3D-scanning-printing-printing-a-test-file-testprint.JPG"><figcaption>testprint</figcaption></figure>
 <figure class="md"><img alt="testdetail" src="medias/3D-scanning-printing-printing-a-test-file-testdetail.JPG"><figcaption>testdetail</figcaption></figure>
 <h2 id="results">Results</h2>
@@ -164,7 +164,7 @@ hull() {
 }
 </pre>
 <p>Here is the code I wrote to model the oloid. It's simple isn't it?</p>
-<video controls="" preload="auto"><source src="medias/3D-scanning-printing-oloid-openscad.mp4" type="video/mp4"/></video>
+<video controls="" preload="auto"><source src="medias/3D-scanning-printing-oloid-shape-oloid-openscad.mp4" type="video/mp4"/></video>
 <h2 id="slicing">Slicing</h2>
 <p>The slicing process of the oloid model was very interesting because I had to add supports to keep the shape in place during printing. It helped me understand how supports work and how to generate them in a slicer software, which is actually super easy.</p>
 <p>To do so, I used <a href="https://ultimaker.com/software/ultimaker-cura" target="_blank">Ultimaker Cura</a> and its pre-configured <em>Support</em> options. In order to reduce the printing time and because I knew it from my previous test, I increased the overhang angle to 55° (instead of 45°).</p>
@@ -175,15 +175,15 @@ hull() {
 <p>I had to call one of my instructors, Mikel Llobera Guelbenzu, to find out what had happened. But even with him, we didn't know directly where this failure came from. We had to search together, and it was very beneficial for my learning.</p>
 <p>At first we thought it came from the amount of material coming from the extruder, as if there was a knot in the spool of filament. There was one, but after another test, it turned out that this wasn't the main problem.</p>
 <p>Finally, Mikel discovered that the bed wasn't flat due to a wrong manipulation on previous prints. We recalibrated it and relaunched the print, and yes: it went well!</p>
-<video controls="" preload="auto"><source src="medias/3D-scanning-printing-oloid-print-1.mp4" type="video/mp4"/></video>
+<video controls="" preload="auto"><source src="medias/3D-scanning-printing-oloid-shape-oloid-print-1.mp4" type="video/mp4"/></video>
 <p>The very end of the printing was a bit problematic too. The supports didn't support the model enough and everything started to move according to the movements of the printer.</p>
 <p>At one point it really seemed like the oloid could fall. Fortunately, I was around the printer and I could hold my piece in place using my finger. That is something I will have to consider the next time I have to think about supports.</p>
-<video controls="" preload="auto"><source src="medias/3D-scanning-printing-oloid-print-2.mp4" type="video/mp4"/></video>
+<video controls="" preload="auto"><source src="medias/3D-scanning-printing-oloid-shape-oloid-print-2.mp4" type="video/mp4"/></video>
 <h2 id="result">Result</h2>
 <p>The end result is quite good, even if I could have increased the quality if I had had more printing time. But let's say it's clearly sufficient for rapid prototyping.</p>
 <p><figure class="md"><img alt="oloid-result" src="medias/3D-scanning-printing-oloid-shape-oloid-result-1.jpg"><figcaption>oloid-result</figcaption></figure>
 <p>Look at this geometric beauty.</p>
-<video controls="" preload="auto"><source src="medias/3D-scanning-printing-oloid-roll.mp4" type="video/mp4"/></video>
+<video controls="" preload="auto"><source src="medias/3D-scanning-printing-oloid-shape-oloid-roll.mp4" type="video/mp4"/></video>
 </section>
 <footer>
 <p>✎ <span>Created</span> 27/02/2020</p>
@@ -228,7 +228,7 @@ hull() {
 <p>I knew that Meshroom wasn't the problem because I tried with a set of pictures validated by the community, as something that works and that can be used to test the settings of the software.</p>
 <p><figure class="md"><img alt="scan-monument" src="medias/3D-scanning-printing-3D-scanning-scan-monument.jpeg"><figcaption>scan-monument</figcaption></figure>
 <p>Finally, a little desperate, I went to my roof to get some fresh air and I saw this plant pot, surrounded by tiles forming a grid around the object. It looked like a last try before giving up.</p>
-<video controls="" preload="auto"><source src="medias/3D-scanning-printing-scan-success.mp4" type="video/mp4"/></video>
+<video controls="" preload="auto"><source src="medias/3D-scanning-printing-3D-scanning-scan-success.mp4" type="video/mp4"/></video>
 <p>And it more or less worked… I got the shape of the pot, its structure and texture. Maybe I should have taken a lot more pictures of the plant, all its leaves and its little detail to get it rendered in the final scan.</p>
 <p><figure class="md"><img alt="scan-success" src="medias/3D-scanning-printing-3D-scanning-scan-success-2.jpeg"><figcaption>scan-success</figcaption></figure>
 <h1 id="my-tips-for-scanning-an-object-with-the-photogrammetry-process">My tips for scanning an object with the photogrammetry process</h1>

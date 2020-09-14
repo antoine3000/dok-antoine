@@ -95,7 +95,7 @@ def wrap(to_wrap, wrap_in):
 def html_update(html, slug):
     img_tag = '<img src ="medias/' + slug + '-'
     video_tag = '<video controls preload="auto"><source type ="video/mp4" src ="medias/' + slug + '-'
-    file_link = '<a target="_blank" href="medias/' + slug + '-'
+    file_link = '<a target="_blank" class="link-file" href="medias/' + slug + '-'
     html = html.replace('<img src="', img_tag)
     html = html.replace('<video><source src="', video_tag)
     html = html.replace('<p><video', '<video')
@@ -135,10 +135,20 @@ def html_update(html, slug):
         for article_sub in articles_sub:
             article_sub_slug = article_sub.get('id')
             article_imgs = article_sub.select('img')
+            article_vids = article_sub.select('video source')
+            article_files = article_sub.select('.link-file')
             for article_img in article_imgs:
                 article_sub_img = str(article_img['src']).replace(
                     'medias/' + slug, 'medias/' + article_sub_slug)
                 html = html.replace(article_img['src'], article_sub_img)
+            for article_vid in article_vids:
+                article_sub_vid = str(article_vid['src']).replace(
+                    'medias/' + slug, 'medias/' + article_sub_slug)
+                html = html.replace(article_vid['src'], article_sub_vid)
+            for article_file in article_files:
+                article_sub_file = str(article_file['href']).replace(
+                    'medias/' + slug, 'medias/' + article_sub_slug)
+                html = html.replace(article_file['href'], article_sub_file)
     html = html.replace('<p><figure>', '<figure>')
     html = html.replace('</img></figure></p>', '</figure>')
     html = html.replace('</img></figure>', '</figure>')
