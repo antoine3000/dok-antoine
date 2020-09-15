@@ -1,5 +1,8 @@
 title: "Dok"
 description: "Documentation tool"
+main_url: "https://dok.dok"
+author_name: "Dok Dok"
+language: "en"
 introduction: "Dok, a low-tech tool that allows you to document (almost) everything"
 flux:
   visibility: True

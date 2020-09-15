@@ -5,6 +5,7 @@ from PIL import Image
 from jinja2 import Environment, FileSystemLoader
 from bs4 import BeautifulSoup
 from datetime import datetime
+from feedgen.feed import FeedGenerator
 import rcssmin
 import sass
 import yaml
@@ -291,9 +292,33 @@ with open('public/index.html', 'w') as file:
     file.write(home_html)
 print("⁂  Home page: Created")
 
+# Generate RSS feed
+fg = FeedGenerator()
+main_url = settings['main_url']
+fg.title(settings['title'])
+fg.author({'name': settings['author_name']})
+fg.link(href=main_url, rel='alternate')
+fg.subtitle(settings['description'])
+fg.language(settings['language'])
+rssfeed = fg.rss_str(pretty=True)
+
+for article in articles_metadata:
+    if 'last_update' in article.keys():
+        date = article['last_update']
+    else:
+        date = article['publication_date']
+    if not "draft" in article.values():
+        fe = fg.add_entry()
+        fe.title(article['title'])
+        fe.link(href=main_url + '/' + article['slug'] + '.html')
+        fe.author({'name': settings['author_name']})
+        fe.pubDate(datetime.strptime(date,
+                                     '%d/%m/%Y').strftime('%a %b %d %H:%M:%S %Y') + ' +0200')
+        fe.description(article['content'][:800] + '...')
+fg.rss_file('public/rss.xml')
+print("⁂  RSS Feed: Updated")
+
 # Scss to css
-
-
 def compile_scss(scss):
     for source, dest in scss.items():
         mode = 'a' if os.path.exists(dest) else 'w'
