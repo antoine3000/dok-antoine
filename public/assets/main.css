@@ -448,6 +448,9 @@ body {
   margin-top: var(--size-xl);
   padding-top: var(--size-xl); }
 
+.ts .btn:before {
+  content: "→ "; }
+
 :root {
   --body-color: #cacaca; }
 
