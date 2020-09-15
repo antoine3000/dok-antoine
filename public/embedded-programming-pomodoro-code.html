@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title property="schema:name">antoine.studio - Documentation tool</title>
+<meta content="Documentation tool" name="description"/>
+<meta content="antoine.studio" property="schema:name"/>
+<meta content="Documentation tool" property="schema:description"/>
+<link href="assets/main.min.css" rel="stylesheet"/>
+</head>
+<body class="page page--article">
+<main class="main">
+<header class="header">
+<nav class="nav">
+<ul class="nav__list">
+<li class="nav__item">
+<a class="nav__link" href="index.html">antoine.studio</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="content.html">content</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="flux.html">flux</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="about.html">about</a>
+</li>
+</ul>
+</nav>
+</header>
+<article class="article">
+<!-- title -->
+<h1 class="article__title">Pomodoro code</h1>
+<!-- parent -->
+<p class="article__parent">This article is part of: <a href="embedded-programming.html">Embedded programming</a>.</p>
+<!-- tags -->
+<!-- featured image -->
+<!-- toc -->
+<section class="article__toc">
+<h2 class="toc__title">Table of content</h2>
+<div class="toc__list"><ul>
+<li><a href="#how-i-want-to-use-my-pomodoro">How I want to use my pomodoro</a></li>
+<li><a href="#the-code-that-does-this">The code that does this</a></li>
+</ul>
+</div>
+</section>
+<section class="article__content ts">
+<h1 id="how-i-want-to-use-my-pomodoro">How I want to use my pomodoro</h1>
+<ul>
+<li>Press the left button to start the timer</li>
+<li>If it's running, press the left button to pause the timer</li>
+<li>If it's paused, press the left button to resume the timer</li>
+<li>If it's paused, press the right button to stop the timer</li>
+<li>When it's running, the LEDs light up one by one until the time limit</li>
+<li>When it's running and it's a work period, LEDs are red</li>
+<li>When it's running and it's a break period, LEDs are green</li>
+<li>When it's paused, all the LEDs are light up and blue</li>
+</ul>
+<video controls="" preload="auto"><source src="medias/embedded-programming-pomodoro-code-pomo-playground.mp4" type="video/mp4"/></video>
+<h1 id="the-code-that-does-this">The code that does this</h1>
+<p>For this software I am using the Arduino framework. This framework, like any other framework, is a collection of shortcuts that aims to make the programmer's life easier. At the end of the day, the code you write using a framework is compiled into its original language, which is, in this case, C ++.</p>
+<pre>
+bool button_left;
+bool button_right;
+bool is_active = false;
+bool is_paused = false;
+int counter = 0;
+int steps = 10;
+int pomo = 30 * 600;
+int pomo_work = pomo / 6 * 5;
+int pomo_break = pomo / 6 * 1;
+
+void setup() {
+  CircuitPlayground.begin();
+}
+
+void on_second(int counter) {
+  CircuitPlayground.clearPixels();
+  if (counter &lt;= pomo_work) {
+    // work
+    for (int i = 0; i &lt;= steps; i++) {
+      if (counter &gt; pomo_work / steps * i) {
+        CircuitPlayground.setPixelColor(i, 255,   0,   0);
+      }
+    }
+  } else if (counter &gt; pomo_work &amp;&amp; counter &lt;= pomo) {
+    // break
+    for (int i = 0; i &lt;= steps; i++) {
+      if (counter - pomo_work &gt; pomo_break / steps * i) {
+        CircuitPlayground.setPixelColor(i, 0,   255,   0);
+      }
+    }
+  }
+}
+
+void bip() {
+  CircuitPlayground.playTone(200, 10);
+}
+
+void loop() {
+  button_left = CircuitPlayground.leftButton();
+  button_right = CircuitPlayground.rightButton();
+
+  if (counter &gt; pomo) {
+    CircuitPlayground.clearPixels();
+    counter = 0;
+  }
+
+  if (button_left) {
+    CircuitPlayground.clearPixels();
+    if (!is_active) {
+      is_active = true;
+      bip();
+    } else if (is_active &amp;&amp; !is_paused) {
+      is_paused = true;
+      bip();
+    } else if (is_paused) {
+      is_paused = false;
+      bip();
+    }
+  }
+
+  if (button_right) {
+    if (is_active &amp;&amp; is_paused) {
+      is_active = false;
+      is_paused = false;
+      counter = 0;
+      CircuitPlayground.clearPixels();
+      bip();
+    }
+  }
+
+  if (is_active &amp;&amp; !is_paused) {
+    counter = counter + 1;
+  }
+
+  if (is_paused) {
+    for (int i = 0; i &lt;= steps; i++) {
+      CircuitPlayground.setPixelColor(i, 0,   0,   55);
+    }
+  }
+
+  if (counter % 10 == 0) {
+    on_second(counter);
+  }
+
+  delay(100);
+}
+</pre>
+</section>
+<footer>
+<p>✎ <span>Created</span> 18/03/2020</p>
+<p>⁂ <span>Updated</span> 18/03/2020</p>
+</footer>
+</article>
+<footer class="footer">
+<p>antoine.studio ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a></p>
+</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title property="schema:name">antoine.studio - Documentation tool</title>
+<meta content="Documentation tool" name="description"/>
+<meta content="antoine.studio" property="schema:name"/>
+<meta content="Documentation tool" property="schema:description"/>
+<link href="assets/main.min.css" rel="stylesheet"/>
+</head>
+<body class="page page--article">
+<main class="main">
+<header class="header">
+<nav class="nav">
+<ul class="nav__list">
+<li class="nav__item">
+<a class="nav__link" href="index.html">antoine.studio</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="content.html">content</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="flux.html">flux</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="about.html">about</a>
+</li>
+</ul>
+</nav>
+</header>
+<article class="article">
+<!-- title -->
+<h1 class="article__title">Programming the ESP32 — Barduino</h1>
+<!-- parent -->
+<p class="article__parent">This article is part of: <a href="embedded-programming.html">Embedded programming</a>.</p>
+<!-- tags -->
+<!-- featured image -->
+<!-- toc -->
+<section class="article__toc">
+<h2 class="toc__title">Table of content</h2>
+<div class="toc__list"><ul>
+<li><a href="#pinout">Pinout</a></li>
+<li><a href="#programmer-slider-switch">Programmer slider switch</a></li>
+<li><a href="#blink-program">Blink program</a></li>
+</ul>
+</div>
+</section>
+<section class="article__content ts">
+<p>We have been asked to assemble a Barduino few hours before the lab lockdown due to the coronavirus, in order to be able to experiment with it later at home.</p>
+<blockquote>
+<p>Barduino 2.0 started as a project to have a ESP32 fabacademy compatible board to help the students develope their work on top of it. This board was designed by Eduardo Chamorro Martin with the help of Josep Marti and Oscar Gonzalez in Fab Lab Barcelona 2020.</p>
+<blockquote>
+<p><a href="https://gitlab.fabcloud.org/barcelonaworkshops/barduino-2.0" target="_blank">Barduino 2.0, Gitlab</a></p>
+</blockquote>
+</blockquote>
+<p><figure class="md"><img alt="arduino-pic" src="medias/embedded-programming-esp32-barduino-barduino-pic.jpeg"><figcaption>arduino-pic</figcaption></figure>
+<p>To use that board with PlatformIO, <code>pio init</code> a new project specifically for the ESP32 chip.</p>
+<p><code>$ pio project init --board esp32-devkitlipo</code></p>
+<p>This command generates the <code>platformio.ini</code> files with the desired values.</p>
+<pre>
+[env:esp32-devkitlipo]
+platform = espressif32
+board = esp32-devkitlipo
+framework = arduino
+</pre>
+<h2 id="pinout">Pinout</h2>
+<p><figure class="lg"><img alt="arduino-pinouts" src="medias/embedded-programming-esp32-barduino-barduino-pinouts.png"><figcaption>arduino-pinouts</figcaption></figure>
+<p>Then, as we can see on the datasheet, the ID of the programmable test LED is <code>13</code>. We can use it to test if our board and our configuration work properly.</p>
+<h2 id="programmer-slider-switch">Programmer slider switch</h2>
+<p>Also, there is a <em>Programmer Slider Switch</em> that changes the behaviour of the chip and tells it wheter it's in programming mode or execution mode. Obviously, we have to turn it to the left, the programming mode, before uploading our program.</p>
+<h2 id="blink-program">Blink program</h2>
+<p>Using PIN 13, as seen above.</p>
+<pre>
+ #include <arduino.h>
+
+ int led_in = 13;
+
+ void setup() {
+   pinMode(led_in, OUTPUT);
+ }
+
+ void loop() {
+   digitalWrite(led_in, HIGH);
+   delay(1000);
+   digitalWrite(led_in, LOW);
+   delay(1000);
+ }
+</arduino.h></pre>
+<p>Turn the programming slider switch to the right, in execution mode, press the reset button and the test LED should blink. Olé.</p>
+</section>
+<footer>
+<p>✎ <span>Created</span> 21/03/2020</p>
+<p>⁂ <span>Updated</span> 21/03/2020</p>
+</footer>
+</article>
+<footer class="footer">
+<p>antoine.studio ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a></p>
+</footer>
+</main>
+</body>
+</html>

@@ -100,7 +100,8 @@ textarea {
   padding-left: var(--size-xl);
   padding-right: var(--size-xl); }
 
-.toc__title--sub, .ts table th, .ts h3, .index:not(.index--featured) .index__link, .ts h2, .toc__title, .index--featured .item__title, .ts h1, .article__title, .intro p, .index__title, .ts .todo, .ts blockquote p, body, .index--grid .index__list figcaption, .article figure figcaption, .article__toc, .index--list .index__tags,
+.ts em strong,
+.ts strong em, .ts strong, .toc__title--sub, .ts table th, .ts h3, .index:not(.index--featured) .index__link, .ts h2, .toc__title, .index--featured .item__title, .ts h1, .article__title, .intro p, .index__title, .ts .todo, .ts em, .ts blockquote p, body, .index--grid .index__list figcaption, .article figure figcaption, .article__toc, .index--list .index__tags,
 .index--list .index__update, .ts blockquote blockquote p, .index__item--sub, .index:not(.index--featured) .index__item--sub .index__link, .ts h4, .ts h5, .ts h6 {
   font-style: normal;
   font-weight: normal;
@@ -111,11 +112,15 @@ body, .index--grid .index__list figcaption, .article figure figcaption, .article
 .index:not(.index--featured) .index__link, .index:not(.index--featured) .index__item--sub .index__link, .ts h4, .ts h5, .ts h6 {
   font-family: var(--font-body); }
 
-.ts .todo, .ts blockquote p {
+.ts .todo, .ts em, .ts blockquote p {
   font-family: var(--font-body-italic); }
 
-.toc__title--sub, .ts table th, .ts h3, .index:not(.index--featured) .index__link, .ts h2, .toc__title, .index--featured .item__title, .ts h1, .article__title, .intro p, .index__title {
+.ts strong, .toc__title--sub, .ts table th, .ts h3, .index:not(.index--featured) .index__link, .ts h2, .toc__title, .index--featured .item__title, .ts h1, .article__title, .intro p, .index__title {
   font-family: var(--font-body-bold); }
+
+.ts em strong,
+.ts strong em {
+  font-family: var(--font-body-bold-italic); }
 
 a {
   color: var(--base-color);
@@ -417,7 +422,8 @@ body {
     color: var(--base-color); }
 
 .toc__title, .index__item--sub,
-.index:not(.index--featured) .index__link, .ts blockquote p, .ts .todo, body {
+.index:not(.index--featured) .index__link, .ts blockquote p, .ts em, .ts strong, .ts em strong,
+.ts strong em, .ts .todo, body {
   font-style: normal;
   font-weight: normal;
   line-height: 1.6;

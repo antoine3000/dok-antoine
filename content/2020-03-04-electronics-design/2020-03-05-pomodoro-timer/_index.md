@@ -2,6 +2,7 @@
 title: Pomodoro timer
 featured: True
 featured_image: pomo.jpeg
+last_update: 2020-09-15
 ---
 
 I use a pomodoro timer daily to help me manage my time and effort in the tasks I want to accomplish. For now, I'm using [Pydoro](https://github.com/JaDogg/pydoro), an open source pomodoro terminal timer written in Python but I would like to build mine and have it physically next to my laptop.
@@ -86,7 +87,11 @@ The machine I used to mill my board is the Roland MonoFab SRM-20, this machine s
 
 ![pomo-board](pomo-board.jpeg)
 
-Soldering was fun to do, I really like doing it, even if I started with a big mistake: I was a little in a hurry, the lab was closing and I wanted my job to be done, my focus wasn't really there and I soldered the ATtiny1614 in the wrong direction. I know this little dot on the chip, which gives you the direction of the chip but I wasn't paying attention to it. What should have taken a  few minutes took me over an hour: desolder a 14-legs chip isn't that easy!
+Soldering was fun to do, I really like doing it, even if I started with a big mistake: I was a little in a hurry, the lab was closing and I wanted my job to be done, my focus wasn't really there and I soldered the ATtiny1614 in the wrong direction. I know this little dot on the chip, which gives you the direction of the chip but I wasn't paying attention to it. What should have taken a few minutes took me over an hour: desolder a 14-legs chip isn't that easy!
+
+I managed to unsolder the ATTiny chip with a heatgun: hold the chip in tweezers and heat the solder around the chip with a heatgun, and finally let the gravity do its job. The chip will stay in the tweezers while the board drops onto the worktable.
+
+The heatgun can reach a high temperature and therefore burn the board, so care must be take not to heat the board for too long. Burning your precious is the last thing you want to do right now.
 
 ![pomo](pomo.jpeg)
 
@@ -94,10 +99,11 @@ Soldering was fun to do, I really like doing it, even if I started with a big mi
 
 In order to test the board, you will need a UPDI for the communication between the board and another computer and a FTDI to program the board itself. Luckily, these are the two I already made.
 
-The power comes from the UPDI, as well as the data.
+The power comes from the FTDI and the data from the UPDI.
 
 
 ![pomo-plugged](pomo-plugged.jpeg)
+![With FTDI and UPDI connection](pomo-connect.jpg)
 
 First, check if your computer recognizes the board correctly by typing `dmesg -w` in a terminal and see if a new device is detected when you un/plug the board. Save the ID of the board for later.
 
@@ -133,3 +139,12 @@ And that's it.
 ## Programming
 
 I will program this board to make it be a pomodoro timer in two weeks, during the *Embedded programming* assignement.
+
+## Files
+
+- Kicad project: [pomodoro-final.zip](file:pomodoro-final.zip)
+- Cut PNG file: [pomo-cut.png](file:pomo-cut.png)
+- Cut RML file: [pomo-cut.rml](file:pomo-cut.rml)
+- Cut XCF file: [pomo-cut.xcf](file:pomo-cut.xcf)
+- Traces PNG file: [pomo-traces.png](file:pomo-traces.png)
+- Traces RML file: [pomo-traces.rml](file:pomo-traces.rml)

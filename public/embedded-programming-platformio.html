@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title property="schema:name">antoine.studio - Documentation tool</title>
+<meta content="Documentation tool" name="description"/>
+<meta content="antoine.studio" property="schema:name"/>
+<meta content="Documentation tool" property="schema:description"/>
+<link href="assets/main.min.css" rel="stylesheet"/>
+</head>
+<body class="page page--article">
+<main class="main">
+<header class="header">
+<nav class="nav">
+<ul class="nav__list">
+<li class="nav__item">
+<a class="nav__link" href="index.html">antoine.studio</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="content.html">content</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="flux.html">flux</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="about.html">about</a>
+</li>
+</ul>
+</nav>
+</header>
+<article class="article">
+<!-- title -->
+<h1 class="article__title">PlatformIO</h1>
+<!-- parent -->
+<p class="article__parent">This article is part of: <a href="embedded-programming.html">Embedded programming</a>.</p>
+<!-- tags -->
+<!-- featured image -->
+<!-- toc -->
+<section class="article__toc">
+<h2 class="toc__title">Table of content</h2>
+<div class="toc__list"><ul>
+<li><a href="#initialization">Initialization</a></li>
+<li><a href="#run-upload">Run &amp; upload</a></li>
+</ul>
+</div>
+</section>
+<section class="article__content ts">
+<p><a href="https://platformio.org/" target="_blank">PlatformIO</a> is a cross-platform, cross-architecture and multiple framework tool for embedded programming. It replaces Arduino IDE and offers a lot more subtilities and flexibility to write organized code for micro-controllers.</p>
+<p>I use PlatformIO as a replacement for Arduino IDE because it allows me to use the text editor I want (I use <a href="https://neovim.io/" target="_blank">Neovim</a>, an hyperextensible Vim-based text editor) and because it integrates librairies of more than 700 differents boards, including the ones I use. It also has a unified debugger and a static code analyze which seems super useful for large scale projects.</p>
+<h3 id="initialization">Initialization</h3>
+<p>Because PlatformIO is based on Python, the installation is pretty straight-forward using <em>pip</em>: <code>$ pip install -U platformio</code></p>
+<p>An empty folder to host the project is needed for PlatformIO to set up its environment. Make a new one and go in it <code>$ mkdir my-project &amp;&amp; cd my-project</code> then type <code>$ pio init</code> to initialize this folder with the PlatformIO structure.</p>
+<blockquote>
+<p><code>pio</code> is the the shortcut for <code>platformio</code>, it's the exact same thing but shorter</p>
+</blockquote>
+<p>Then the structure should look like this:</p>
+<pre>
+platformio.ini
+src/
+- main.cpp
+- main.h
+- …
+lib/
+- input/
+- - input.cpp
+- - input.h
+- - …
+- output/
+- - output.cpp
+- - output.h
+- - …
+boards/
+- board_definition.json
+</pre>
+<p>Next, search for the depedencies ID you might need, in this case the <code>Adafruit_CircuitPlayground.h</code>, by typing <code>$ pio lib search "header:Adafruit_CircuitPlayground.h"</code>. The lib ID I need is <code>602</code>.</p>
+<p>Configure the project for this specific board, by following the datasheet found <a href="https://docs.platformio.org/en/latest/boards/atmelsam/adafruit_circuitplayground_m0.html" target="_blank">here</a>.</p>
+<p>These values have to be written in the <code>platformio.io</code> file.</p>
+<pre>
+[env:adafruit_circuitplayground_m0]
+platform = atmelsam
+board = adafruit_circuitplayground_m0
+lib_deps =
+  602
+</pre>
+<h3 id="run-upload">Run &amp; upload</h3>
+<p>Write your program into the <code>src</code> folder. The librairies have to be included at the very beginning of your program's files. In this case, the Arduino framework <code>#include &lt;Arduino.h&gt;</code> and the Circuit Playground framework <code>#include &lt;Adafruit_CircuitPlayground.h&gt;</code>.</p>
+<p>Once everything is set up (not that much actually, because PlatformIO does a few thing for us), launch the <code>$ pio run</code> command to run and compile the code.</p>
+<p><figure class="lg"><img alt="pio-run" src="medias/embedded-programming-platformio-pio-run.jpeg"><figcaption>pio-run</figcaption></figure>
+<p>If it has been verified correctly, send it to your board to make it alive by typing <code>pio run -t upload</code>.</p>
+<p><figure class="lg"><img alt="pio-upload" src="medias/embedded-programming-platformio-pio-upload.jpeg"><figcaption>pio-upload</figcaption></figure>
+<p>I have been using my pomodoro timer every day since I coded it, the Circuit Playground is always by my computer to remind me to take a 5-minutes break every 25 minutes and help me stay focused.</p>
+</section>
+<footer>
+<p>✎ <span>Created</span> 22/03/2020</p>
+<p>⁂ <span>Updated</span> 22/03/2020</p>
+</footer>
+</article>
+<footer class="footer">
+<p>antoine.studio ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a></p>
+</footer>
+</main>
+</body>
+</html>

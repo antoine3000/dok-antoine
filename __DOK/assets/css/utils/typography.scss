@@ -150,4 +150,14 @@ a {
       background-color: rgba(var(--base-color), .1);
     }
   }
+  em {
+    @extend %font-body-italic;
+  }
+  strong {
+    @extend %font-body-bold;
+  }
+  em strong,
+  strong em {
+    @extend %font-body-bold-italic;
+  }
 }

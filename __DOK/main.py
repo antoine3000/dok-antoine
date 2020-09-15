@@ -29,6 +29,7 @@ print('--------------------------')
 print('Dok')
 print('--------------------------')
 
+
 def contains_folder(folder):
     items = os.listdir(folder)
     contains_folder = False
@@ -57,7 +58,7 @@ def article_items(slug, path):
         if item.endswith('.md'):
             with open(item_path, 'r') as file:
                 md = markdown(file.read(), extras=[
-                            'metadata', 'tables', 'target-blank-links', 'toc'])
+                    'metadata', 'tables', 'target-blank-links', 'toc'])
                 articles[slug]['content'] = md
         elif not os.path.isdir(item_path):
             media_path = m + slug + '-' + item
@@ -88,9 +89,11 @@ def metadata(article, slug, level, parent=None):
     articles[slug]['metadata'] = article_metadata
     return article_metadata
 
+
 def wrap(to_wrap, wrap_in):
     contents = to_wrap.replace_with(wrap_in)
     wrap_in.append(contents)
+
 
 def html_update(html, slug):
     img_tag = '<img src ="medias/' + slug + '-'
@@ -122,11 +125,10 @@ def html_update(html, slug):
             img_tag['src'] = img_src.replace('small:', '')
         else:
             fig_tag['class'] = 'md'
-        
+
         if ":flux" in img_src:
             img_tag['src'] = img_tag['src'].replace(':flux', '')
             image_flux(str(img_tag['src']), slug)
-
 
         wrap(img_tag, fig_tag)
     html = str(soup)
@@ -155,11 +157,13 @@ def html_update(html, slug):
     html = html.replace('</figure></p>', '</figure>')
     return (html)
 
+
 def content_order(list):
     list.sort()
     for item in list:
         if item == '.DS_Store':
             list.remove(item)
+
 
 def image_flux(image, slug):
     container = articles[slug]['metadata']['title']
@@ -168,6 +172,7 @@ def image_flux(image, slug):
         flux[image]['image'] = image
         flux[image]['link'] = slug
         flux[image]['container'] = container
+
 
 # Make directories if they don't exist
 if not os.path.exists(m):
@@ -234,7 +239,7 @@ if os.path.isfile(settings_file):
     with open(settings_file, 'r') as file:
         settings_user = yaml.load(file, Loader=yaml.FullLoader)
 
-settings.update(settings_user) 
+settings.update(settings_user)
 
 # Generate article pages
 article_template = env.get_template('article.html')
@@ -252,7 +257,8 @@ print("⁂  Article pages: Created")
 tag_template = env.get_template('tag.html')
 for tag in tags:
     tag_url = 'public/' + tag + '.html'
-    tag_html = tag_template.render(title=tag, articles=tags[tag], settings=settings)
+    tag_html = tag_template.render(
+        title=tag, articles=tags[tag], settings=settings)
     with open(tag_url, 'w') as file:
         file.write(tag_html)
 print("⁂  Tag pages: Created")
@@ -272,7 +278,8 @@ articles_metadata.reverse()
 
 # Generate content page
 content_template = env.get_template('content.html')
-content_html = content_template.render(articles=articles_metadata, tags=tags, settings=settings)
+content_html = content_template.render(
+    articles=articles_metadata, tags=tags, settings=settings)
 with open('public/content.html', 'w') as file:
     file.write(content_html)
 print("⁂  Content page: Created")
@@ -285,11 +292,14 @@ with open('public/index.html', 'w') as file:
 print("⁂  Home page: Created")
 
 # Scss to css
+
+
 def compile_scss(scss):
     for source, dest in scss.items():
         mode = 'a' if os.path.exists(dest) else 'w'
         with open(dest, "w") as outfile:
             outfile.write(sass.compile(filename=source))
+
 
 def minify_css(css):
     for source, dest in css.items():

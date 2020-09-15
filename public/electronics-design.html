@@ -38,6 +38,7 @@
 <p class="article__tags">Tags:
       
       <a class="tag__link" href="fab-academy-assignments.html">#fab-academy-assignments</a>
+<a class="tag__link" href="to-review.html">#to-review</a>
 </p>
 <!-- featured image -->
 <!-- toc -->
@@ -58,6 +59,7 @@
 <li><a href="#milling-and-soldering">Milling and soldering</a></li>
 <li><a href="#testing">Testing</a></li>
 <li><a href="#programming">Programming</a></li>
+<li><a href="#files">Files</a></li>
 </ul>
 </div>
 </section>
@@ -129,12 +131,15 @@ As inputs, I have to 2 switches (buttons) that allow me to start/pause/resume/re
 <p>The machine I used to mill my board is the Roland MonoFab SRM-20, this machine seems very reliable, I had no problem while using it.</p>
 <p><figure class="md"><img alt="pomo-milling" src="medias/electronics-design-pomodoro-timer-pomo-milling.jpeg"><figcaption>pomo-milling</figcaption></figure>
 <p><figure class="md"><img alt="pomo-board" src="medias/electronics-design-pomodoro-timer-pomo-board.jpeg"><figcaption>pomo-board</figcaption></figure>
-<p>Soldering was fun to do, I really like doing it, even if I started with a big mistake: I was a little in a hurry, the lab was closing and I wanted my job to be done, my focus wasn't really there and I soldered the ATtiny1614 in the wrong direction. I know this little dot on the chip, which gives you the direction of the chip but I wasn't paying attention to it. What should have taken a  few minutes took me over an hour: desolder a 14-legs chip isn't that easy!</p>
+<p>Soldering was fun to do, I really like doing it, even if I started with a big mistake: I was a little in a hurry, the lab was closing and I wanted my job to be done, my focus wasn't really there and I soldered the ATtiny1614 in the wrong direction. I know this little dot on the chip, which gives you the direction of the chip but I wasn't paying attention to it. What should have taken a few minutes took me over an hour: desolder a 14-legs chip isn't that easy!</p>
+<p>I managed to unsolder the ATTiny chip with a heatgun: hold the chip in tweezers and heat the solder around the chip with a heatgun, and finally let the gravity do its job. The chip will stay in the tweezers while the board drops onto the worktable.</p>
+<p>The heatgun can reach a high temperature and therefore burn the board, so care must be take not to heat the board for too long. Burning your precious is the last thing you want to do right now.</p>
 <p><figure class="md"><img alt="pomo" src="medias/electronics-design-pomodoro-timer-pomo.jpeg"><figcaption>pomo</figcaption></figure>
 <h2 id="testing">Testing</h2>
 <p>In order to test the board, you will need a UPDI for the communication between the board and another computer and a FTDI to program the board itself. Luckily, these are the two I already made.</p>
-<p>The power comes from the UPDI, as well as the data.</p>
+<p>The power comes from the FTDI and the data from the UPDI.</p>
 <p><figure class="md"><img alt="pomo-plugged" src="medias/electronics-design-pomodoro-timer-pomo-plugged.jpeg"><figcaption>pomo-plugged</figcaption></figure>
+<figure class="md"><img alt="With FTDI and UPDI connection" src="medias/electronics-design-pomodoro-timer-pomo-connect.jpg"><figcaption>With FTDI and UPDI connection</figcaption></figure>
 <p>First, check if your computer recognizes the board correctly by typing <code>dmesg -w</code> in a terminal and see if a new device is detected when you un/plug the board. Save the ID of the board for later.</p>
 <p>A simple blink program using the Arduino IDE is the easiest way to check if the communication is possible — and therefore if the board has been done right. Here is the one I used:</p>
 <pre>
@@ -158,10 +163,19 @@ void loop() {
 <video controls="" preload="auto"><source src="medias/electronics-design-pomodoro-timer-pomo-test.mp4" type="video/mp4"/></video>
 <h2 id="programming">Programming</h2>
 <p>I will program this board to make it be a pomodoro timer in two weeks, during the <em>Embedded programming</em> assignement.</p>
+<h2 id="files">Files</h2>
+<ul>
+<li>Kicad project: <a class="link-file" href="medias/electronics-design-pomodoro-timer-pomodoro-final.zip" target="_blank">pomodoro-final.zip</a></li>
+<li>Cut PNG file: <a class="link-file" href="medias/electronics-design-pomodoro-timer-pomo-cut.png" target="_blank">pomo-cut.png</a></li>
+<li>Cut RML file: <a class="link-file" href="medias/electronics-design-pomodoro-timer-pomo-cut.rml" target="_blank">pomo-cut.rml</a></li>
+<li>Cut XCF file: <a class="link-file" href="medias/electronics-design-pomodoro-timer-pomo-cut.xcf" target="_blank">pomo-cut.xcf</a></li>
+<li>Traces PNG file: <a class="link-file" href="medias/electronics-design-pomodoro-timer-pomo-traces.png" target="_blank">pomo-traces.png</a></li>
+<li>Traces RML file: <a class="link-file" href="medias/electronics-design-pomodoro-timer-pomo-traces.rml" target="_blank">pomo-traces.rml</a></li>
+</ul>
 </section>
 <footer>
 <p>✎ <span>Created</span> 05/03/2020</p>
-<p>⁂ <span>Updated</span> 05/03/2020</p>
+<p>⁂ <span>Updated</span> 15/09/2020</p>
 </footer>
 </article>
 </article>

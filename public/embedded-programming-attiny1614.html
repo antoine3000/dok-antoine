@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title property="schema:name">antoine.studio - Documentation tool</title>
+<meta content="Documentation tool" name="description"/>
+<meta content="antoine.studio" property="schema:name"/>
+<meta content="Documentation tool" property="schema:description"/>
+<link href="assets/main.min.css" rel="stylesheet"/>
+</head>
+<body class="page page--article">
+<main class="main">
+<header class="header">
+<nav class="nav">
+<ul class="nav__list">
+<li class="nav__item">
+<a class="nav__link" href="index.html">antoine.studio</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="content.html">content</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="flux.html">flux</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="about.html">about</a>
+</li>
+</ul>
+</nav>
+</header>
+<article class="article">
+<!-- title -->
+<h1 class="article__title">Programming the ATtiny1614</h1>
+<!-- parent -->
+<p class="article__parent">This article is part of: <a href="embedded-programming.html">Embedded programming</a>.</p>
+<!-- tags -->
+<!-- featured image -->
+<!-- toc -->
+<section class="article__toc">
+<h2 class="toc__title">Table of content</h2>
+<div class="toc__list"><ul>
+<li><a href="#connectivity">Connectivity</a></li>
+<li><a href="#install">Install</a></li>
+<li><a href="#compile">Compile</a></li>
+<li><a href="#upload">Upload</a></li>
+</ul>
+</div>
+</section>
+<section class="article__content ts">
+<p>The ATtiny1614 isn't yet supported by PlatformIO and therefore needs another method to be programmed. Fortunately, <a href="https://github.com/mraardvark/pyupdi" target="_blank">pyupdi</a> is here! Pyupdi is a Python UPDI driver for programming the "new" tinyAVR and megaAVR devices.</p>
+<h2 id="connectivity">Connectivity</h2>
+<p>Power comes from a USB cable via a FTDI connector. The data comes from the UPDI connector and goes through another FTDI connector.</p>
+<h2 id="install">Install</h2>
+<p><code>git clone https://github.com/mraardvark/pyupdi</code></p>
+<p><code>pip install -r requirements.txt</code></p>
+<h2 id="compile">Compile</h2>
+<p>The first thing to do is to compile the code with the Arduino IDE and then send it with <code>pyupdi</code>.
+To be able to compile the code, first install the <a href="https://github.com/SpenceKonde/megaTinyCore" target="_blank">megaTinyCore</a> library using the Libraries manager into the Arduino IDE and select the ATtiny1614 board.</p>
+<p>From the Arduini IDE console, locate the <code>.ino.hex</code> that is generated when you compile and copy its path. It should be something like <code>/tmp/arduino_build_342195/Blink.ino.hex</code>.</p>
+<h2 id="upload">Upload</h2>
+<p>Once your program is correctly compiled, open a terminal to send it to your device.</p>
+<p>First, run <code>ls /dev/* | greb usb</code> to know the name of your port. It should look like <code>/dev/ttyUSB0</code>.</p>
+<p>Then, run pyupdi with the name of the board you're working on <code>tiny1614</code>, the port where you want to send the code <code>/dev/ttyUSB0</code> and the code itself <code>/temp/arduino_buid_342195/Blink.ino.hex</code>.</p>
+<pre>
+pyupdi.py -d tiny1614 -c /dev/ttyUSB0 -b 9600 -f /tmp/arduino_build_342195/Blink.ino.hex -v
+</pre>
+<video controls="" preload="auto"><source src="medias/embedded-programming-attiny1614-pomo-test.mp4" type="video/mp4"/></video>
+</section>
+<footer>
+<p>✎ <span>Created</span> 20/03/2020</p>
+<p>⁂ <span>Updated</span> 20/03/2020</p>
+</footer>
+</article>
+<footer class="footer">
+<p>antoine.studio ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a></p>
+</footer>
+</main>
+</body>
+</html>
