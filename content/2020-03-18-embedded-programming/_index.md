@@ -1,6 +1,6 @@
 ---
 title: Embedded programming
-tags: fab-academy-assignments
+tags: fab-academy-assignments, to-review
 ---
 
 Two weeks ago, I designed a pomodoro timer during the [Electronics design](fabac-assignments-electronics-design.html) week. It's now time to program it. I'm going to write the piece of code that will light my LEDs as time goes by and find a way to send it to the ATtiny1614 chip. I'm going to focus on the latter: how to send a program (= program) a chip. Well, that was the plan.
