@@ -451,6 +451,24 @@ body {
 .ts .btn:before {
   content: "→ "; }
 
+.ts hr {
+  margin: var(--size-xxl) 0;
+  border: none;
+  height: var(--border-sm);
+  background-color: var(--base-color); }
+
+.ts ul {
+  list-style: none;
+  padding: 0; }
+  .ts ul li {
+    padding-left: var(--size-md);
+    position: relative; }
+    .ts ul li:before {
+      content: "-";
+      position: absolute;
+      left: 0;
+      top: 0.1em; }
+
 :root {
   --body-color: #cacaca; }
 

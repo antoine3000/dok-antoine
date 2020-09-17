@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Tue, 15 Sep 2020 19:18:51 +0000</lastBuildDate><item><title>About</title><link>https://antoine.studio/about.html</link><description>&lt;p&gt;Bonjour, my name is Antoine Jaunard (1990) and I'm from Brussels, Belgium. I recently moved to Barcelona (ES) via a lovely detour by Amsterdam (NL).&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Thu, 17 Sep 2020 11:16:48 +0000</lastBuildDate><item><title>About</title><link>https://antoine.studio/about.html</link><description>&lt;p&gt;Bonjour, my name is Antoine Jaunard (1990) and I'm from Brussels, Belgium. I recently moved to Barcelona (ES) via a lovely detour by Amsterdam (NL).&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="antoine-chill.jpg" alt="antoine-chill" /&gt;&lt;/p&gt;
 
@@ -294,26 +294,19 @@ To be able to compile the code, f...</description><pubDate>Fri, 20 Mar 2020 00:0
 &lt;p&gt;I covered this topic on a different article.&lt;/p&gt;
 
 &lt;p&gt;&lt;a target="_blank" href="button:green-observatory-input-plant-activity.html"&gt;Sensing plants activity&lt;/a&gt;&lt;/p&gt;
-...</description><pubDate>Tue, 15 Sep 2020 00:00:00 +0200</pubDate></item><item><title>Applications and implications</title><link>https://antoine.studio/applications-implications.html</link><description>&lt;p&gt;For this weeks's assignement, we were asked to answer a series of questions about our final project. I don't really know where I'm going with my project but I guess that's the point of this week: write some very practical facts and see where my main idea goes, and how far I can define it. Let's do that.&lt;/p&gt;
+...</description><pubDate>Tue, 15 Sep 2020 00:00:00 +0200</pubDate></item><item><title>Applications and implications</title><link>https://antoine.studio/applications-implications.html</link><description>&lt;h1 id="about-my-final-project"&gt;About my final project&lt;/h1&gt;
 
-&lt;p&gt;TODO: Answer the following questions&lt;/p&gt;
+&lt;p&gt;For this weeks's assignement, we were asked to answer a series of questions about our final project. I don't really know where I'm going with my project but I guess that's the point of this week: write some very practical facts and see where my main idea goes, and how far I can define it. Let's do that.&lt;/p&gt;
+
+&lt;h2 id="what-will-it-do"&gt;What will it do?&lt;/h2&gt;
+
+&lt;p&gt;I would like to design and fabricate an object that helps us, humans, to listen to plants in order to better understand them and therefore respect them more.&lt;/p&gt;
+
+&lt;p&gt;I've found two majors ways of listening to plants:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;What will it do?&lt;/li&gt;
-&lt;li&gt;Who's done what beforehand?&lt;/li&gt;
-&lt;li&gt;What will you design?&lt;/li&gt;
-&lt;li&gt;What materials and components will be used?&lt;/li&gt;
-&lt;li&gt;Where will come from?&lt;/li&gt;
-&lt;li&gt;How much will they cost?&lt;/li&gt;
-&lt;li&gt;What parts and systems will be made?&lt;/li&gt;
-&lt;li&gt;What processes will be used?&lt;/li&gt;
-&lt;li&gt;What questions need to be answered?&lt;/li&gt;
-&lt;li&gt;How will it be evaluated?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id="requirements"&gt;Requirements&lt;/h1&gt;
-
-&lt;h3 id="2d-an...</description><pubDate>Wed, 01 Apr 2020 00:00:00 +0200</pubDate></item><item><title>Output devices</title><link>https://antoine.studio/output-devices.html</link><description>&lt;p&gt;This week's assignement is about output devices: we are learning how to make various motors work, what are their mechanisms and principles, when and why use a specific one instead of another.&lt;/p&gt;
+&lt;li&gt;Detect their electrical activity and deduce what their reactions are related to.&lt;/li&gt;
+&lt;li&gt;Using the data from their environment and deduce if th...</description><pubDate>Thu, 17 Sep 2020 00:00:00 +0200</pubDate></item><item><title>Output devices</title><link>https://antoine.studio/output-devices.html</link><description>&lt;p&gt;This week's assignement is about output devices: we are learning how to make various motors work, what are their mechanisms and principles, when and why use a specific one instead of another.&lt;/p&gt;
 
 &lt;p&gt;I'm going to lend a hand to &lt;a target="_blank" href="https://maudb.gitlab.io/dok/"&gt;Maud Bausier&lt;/a&gt;, my partner, who is building an incubator to grow mycelium or any fermented food (tempeh, sriracha, etc.). I think we could have enough material to finish a prototype at home (covid-19 restrictions).&lt;/p&gt;
 

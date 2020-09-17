@@ -22,3 +22,25 @@
     content: "→ ";
   }
 }
+
+.ts hr {
+  margin: var(--size-xxl) 0;
+  border: none;
+  height: var(--border-sm);
+  background-color: var(--base-color);
+}
+
+.ts ul {
+  list-style: none;
+  padding: 0;
+  li {
+    padding-left: var(--size-md);
+    position: relative;
+    &:before {
+      content: "-";
+      position: absolute;
+      left: 0;
+      top: 0.1em;
+    }
+  }
+}
