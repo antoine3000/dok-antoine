@@ -6,3 +6,37 @@
   line-height: 1.6;
   word-spacing: -0.15em;
 }
+
+%ts-link {
+  color: var(--body-color);
+  padding: 0.15em;
+  border: var(--border-sm) solid var(--base-color);
+  text-decoration: none;
+  &:hover {
+    background-color: var(--body-color);
+    text-decoration: none;
+  }
+}
+
+.tags__link,
+.tag__link {
+  background-color: var(--body-color);
+  color: var(--base-color);
+}
+
+.article__title a {
+  border: none;
+}
+
+.ts {
+  code,
+  pre {
+    background-color: var(--code-color);
+  }
+}
+
+.index--featured {
+  .index__link {
+    border: none;
+  }
+}
