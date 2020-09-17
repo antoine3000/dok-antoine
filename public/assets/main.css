@@ -2,7 +2,7 @@
 *, *:before, *:after {
   box-sizing: border-box; }
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, .index--featured .item__title, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -26,7 +26,7 @@ q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none; }
 
-a img {
+a img, .index--featured .item__title img {
   border: none; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
@@ -122,11 +122,11 @@ body, .index--grid .index__list figcaption, .article figure figcaption, .article
 .ts strong em {
   font-family: var(--font-body-bold-italic); }
 
-a {
+a, .index--featured .item__title {
   color: var(--base-color);
   text-decoration: none;
   background-color: var(--action-color); }
-  a:hover {
+  a:hover, .index--featured .item__title:hover {
     color: var(--base-color);
     text-decoration: underline;
     background-color: var(--action-color); }
@@ -309,7 +309,7 @@ img {
 
 .article__title {
   margin-bottom: var(--size-xs); }
-  .article__title a {
+  .article__title a, .article__title .index--featured .item__title, .index--featured .article__title .item__title {
     background-color: var(--body-color);
     color: var(--base-color);
     text-decoration: none; }
@@ -426,32 +426,33 @@ body {
 .ts strong em, .ts .todo, body {
   font-style: normal;
   font-weight: normal;
-  line-height: 1.6;
+  line-height: 1.5;
   word-spacing: -0.15em; }
 
-a {
+a, .index--featured .item__title {
+  background: linear-gradient(90deg, var(--special-color-2) 0%, var(--special-color-1) 100%); }
+
+a, .index--featured .item__title {
   color: var(--body-color);
-  padding: 0.15em;
-  border: var(--border-sm) solid var(--base-color);
+  padding: 0.2em;
   text-decoration: none; }
-  a:hover {
+  a:hover, .index--featured .item__title:hover {
     background-color: var(--body-color);
     text-decoration: none; }
 
 .tags__link,
 .tag__link {
-  background-color: var(--body-color);
-  color: var(--base-color); }
+  background: none;
+  color: var(--base-color);
+  border: var(--border-sm) solid var(--base-color);
+  border-radius: var(--size-xs);
+  padding: 0 var(--size-xxs); }
 
-.article__title a {
-  border: none; }
-
-.ts code,
-.ts pre {
-  background-color: var(--code-color); }
+.article__title a, .article__title .index--featured .item__title, .index--featured .article__title .item__title {
+  background: none; }
 
 .index--featured .index__link {
-  border: none; }
+  background: none; }
 
 .intro {
   max-width: 100%; }
@@ -496,8 +497,15 @@ a {
 :root {
   --body-color: #f0f0f0;
   --action-color: #000000;
-  --code-color: #16bf70; }
+  --special-color-1: #00ff57;
+  --special-color-2: #666;
+  --content-max-width: 720px; }
 
+html {
+  font-size: 16px; }
+  @media (max-width: 767px) {
+    html {
+      font-size: 13px; } }
 .header {
   margin-bottom: var(--size-md); }
 

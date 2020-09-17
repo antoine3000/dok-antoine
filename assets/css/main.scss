@@ -11,7 +11,16 @@
   --body-color: #f0f0f0;
   // --base-color: #000000;
   --action-color: #000000;
-  --code-color: #16bf70;
+  --special-color-1: #00ff57;
+  --special-color-2: #666;
+  --content-max-width: 720px;
+}
+
+html {
+  font-size: 16px;
+  @include media("<sm") {
+    font-size: 13px;
+  }
 }
 
 .index__item--sub,

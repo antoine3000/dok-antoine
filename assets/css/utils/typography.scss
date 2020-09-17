@@ -3,15 +3,20 @@
 %font-base {
   font-style: normal;
   font-weight: normal;
-  line-height: 1.6;
+  line-height: 1.5;
   word-spacing: -0.15em;
 }
 
+%background-special {
+  background: linear-gradient(90deg,var(--special-color-2) 0%, var(--special-color-1) 100%); 
+}
+
+
 %ts-link {
   color: var(--body-color);
-  padding: 0.15em;
-  border: var(--border-sm) solid var(--base-color);
+  padding: 0.2em;
   text-decoration: none;
+  @extend %background-special;
   &:hover {
     background-color: var(--body-color);
     text-decoration: none;
@@ -20,23 +25,22 @@
 
 .tags__link,
 .tag__link {
-  background-color: var(--body-color);
+  background: none;
   color: var(--base-color);
+  border: var(--border-sm) solid var(--base-color);
+  border-radius: var(--size-xs);
+  padding: 0 var(--size-xxs);
 }
 
 .article__title a {
-  border: none;
-}
-
-.ts {
-  code,
-  pre {
-    background-color: var(--code-color);
-  }
+  background: none;
 }
 
 .index--featured {
   .index__link {
-    border: none;
+    background: none;
+  }
+  .item__title {
+    @extend a;
   }
 }
