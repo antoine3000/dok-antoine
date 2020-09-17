@@ -1,6 +1,6 @@
 ---
 title: Applications and implications
-tags: fab-academy-assignments, to-do
+tags: fab-academy-assignments, to-review
 last_update: 2020-09-17
 ---
 
