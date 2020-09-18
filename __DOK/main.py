@@ -44,13 +44,16 @@ def image_process(origin, destination):
     if not os.path.isfile(destination):
         shutil.copy2(origin, destination)
         image_max_size = 1200
+        fill_color = '#FFFFFF'
         if destination.endswith(tuple(['jpg', 'jpeg', 'png'])):
             img = Image.open(destination)
+            if img.mode in ('RGBA', 'LA'):
+                background = Image.new(img.mode[:-1], img.size, fill_color)
+                background.paste(img, img.split()[-1])
+                img = background
             wpercent = (image_max_size/float(img.size[0]))
             hsize = int((float(img.size[1])*float(wpercent)))
             img = img.resize((image_max_size, hsize), Image.ANTIALIAS)
-            if destination.endswith(tuple(['jpg', 'jpeg'])):
-                img.convert("RGB")
             img.save(destination)
 
 
@@ -321,6 +324,8 @@ fg.rss_file('public/rss.xml')
 print("⁂  RSS Feed: Updated")
 
 # Scss to css
+
+
 def compile_scss(scss):
     for source, dest in scss.items():
         mode = 'a' if os.path.exists(dest) else 'w'

@@ -43,6 +43,7 @@
   .index__update {
     @extend %ts-small;
     display: inline-block;
+    margin-bottom: var(--size-xxs);
   }
 }
 

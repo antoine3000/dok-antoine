@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Thu, 17 Sep 2020 16:06:17 +0000</lastBuildDate><item><title>About</title><link>https://antoine.studio/about.html</link><description>&lt;p&gt;Bonjour, my name is Antoine Jaunard (1990) and I'm from Brussels, Belgium. I recently moved to Barcelona (ES) via a lovely detour by Amsterdam (NL).&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Fri, 18 Sep 2020 13:57:20 +0000</lastBuildDate><item><title>About</title><link>https://antoine.studio/about.html</link><description>&lt;p&gt;Bonjour, my name is Antoine Jaunard (1990) and I'm from Brussels, Belgium. I recently moved to Barcelona (ES) via a lovely detour by Amsterdam (NL).&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="antoine-chill.jpg" alt="antoine-chill" /&gt;&lt;/p&gt;
 
@@ -328,15 +328,11 @@ To be able to compile the code, f...</description><pubDate>Fri, 20 Mar 2020 00:0
 
 &lt;p&gt;I first had to install openFrameworks on my machine. Speaking of my machine, I switched from &lt;a target="_blank" href="https://elementary.io/"&gt;Elementary OS&lt;/a&gt; to &lt;a target="_blank" href="https://manjaro.org/"&gt;Manjaro&lt;/a&gt; two three weeks ago. I no longer depend on the &lt;a target="_blank" href="https://en.wikipedia.org/wiki/APT_(software)"&gt;APT&lt;/a&gt; package manager (Advanced Package ...</description><pubDate>Fri, 24 Apr 2020 00:00:00 +0200</pubDate></item><item><title>Invention, intellectual property, and income</title><link>https://antoine.studio/invention.html</link><description>&lt;p&gt;For the week's assignment, I was asked to develop a dissemination plan for my final project. I'll try to explain my vision for open-source hardware and software, and why I find them absolutely necessary.&lt;/p&gt;
 
-&lt;h1 id="project-dissemination-plan"&gt;Project dissemination plan&lt;/h1&gt;
+&lt;h1 id="grow-an-audience"&gt;Grow an audience&lt;/h1&gt;
 
-&lt;h2 id="growing-an-audience"&gt;Growing an audience&lt;/h2&gt;
+&lt;p&gt;I think one of the characteristics of a good project is that it spreads by itself. Explaining your project to your peers will allow them, if they find it as interesting as you think it is, to spread it into their circle. This will indirectly expand your audience.&lt;/p&gt;
 
-&lt;p&gt;I think one of the characteristics of a good project is that it spreads by itself. Only by explaining it to your peers, and if they find it as interesting as you think it is, will you spread the right word to their circle, indirectly expanding your audience.&lt;/p&gt;
-
-&lt;h2 id="showing-the-process"&gt;Showing the process&lt;/h2&gt;
-
-&lt;p&gt;But once the audience increases, you have to have a good tool to maintain it, to cultivate it. For me, the right tools to achieve this are ...</description><pubDate>Wed, 29 Apr 2020 00:00:00 +0200</pubDate></item><item><title>Networking and communications</title><link>https://antoine.studio/networking-communications.html</link><description>&lt;p&gt;For this week's assignment, I will connect two &lt;a target="_blank" href="http://esp8266.net"&gt;ESP8266&lt;/a&gt; / &lt;a target="_blank" href="https://www.nodemcu.com/index_en.html"&gt;NodeMCU&lt;/a&gt; together on the WiFi network and exchange data between them.&lt;/p&gt;
+&lt;p&gt;If your local audience isn't responsive to your project, find another place to talk about it. Internet is filled with tiny niches that could extend your message. &lt;a target="_blank" href="https://joinmastodon.org/"&gt;Mastodon&lt;/a&gt;, for example, is a decentralized soci...</description><pubDate>Fri, 18 Sep 2020 00:00:00 +0200</pubDate></item><item><title>Networking and communications</title><link>https://antoine.studio/networking-communications.html</link><description>&lt;p&gt;For this week's assignment, I will connect two &lt;a target="_blank" href="http://esp8266.net"&gt;ESP8266&lt;/a&gt; / &lt;a target="_blank" href="https://www.nodemcu.com/index_en.html"&gt;NodeMCU&lt;/a&gt; together on the WiFi network and exchange data between them.&lt;/p&gt;
 
 &lt;p&gt;Understanding the basics of networking and how communication between devices works will be highly beneficial for my final project.&lt;/p&gt;
 

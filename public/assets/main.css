@@ -271,7 +271,8 @@ img {
 
 .index--list .index__tags,
 .index--list .index__update {
-  display: inline-block; }
+  display: inline-block;
+  margin-bottom: var(--size-xxs); }
 
 .index--featured .index__item:not(:last-child) {
   margin-bottom: var(--size-xxl); }
