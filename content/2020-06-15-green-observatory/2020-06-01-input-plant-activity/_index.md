@@ -60,7 +60,7 @@ It gives me a value in percentage that varies according to the conductivity of t
 
 I will elaborate more about this topic on its dedicated page:
 
-[From input to output](btn:fabac-finalproject-code-logic.html)
+[From input to output](button:fabac-finalproject-code-logic.html)
 
 ### Alocasia Amazonica
 

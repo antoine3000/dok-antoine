@@ -78,3 +78,24 @@ Mini-cnc milling for the electronic board, cnc milling for the structure, 3D pri
 ## How will it be evaluated?
 
 I would say that a "proof of concept" might be enough within the frame of this academy. Getting relevant data from plants doesn't seem like an easy task and I don't want to get lost in this part. I would like to have a system that at least offers the possibility of human/plant interaction when “plugged in” to a relevant dataset.
+
+## Resources management
+
+In order to track the different tasks I would like to accomplish and the total cost of my project, I have implemented two additional tools.
+
+### Time
+
+The first is a Kanban board. It helps me keep track of a to-do list organized by status. What needs to be done, what is in progress, what needs to be reviewed, what is done.
+
+[Kanban board](button:http://board.antoine.studio/?controller=BoardViewController&action=readonly&token=3d91cde4a718ce18cd986a67eff38899f8eb1612ddae621507a00da28f4f)
+
+### Budget
+
+The second one is a list of materials I need and their cost. I also keep track of the availability of the items there: Is it available at the lab, should I order it and if so, where.
+
+[List of materials](button:https://docs.google.com/spreadsheets/d/1nhU3fjO-yuVyLYuE5AC39vmvim1dWyxoJ2PYOr6acvA/edit?usp=sharing)
+
+
+
+
+

@@ -1,6 +1,6 @@
 ---
 title: Invention, intellectual property, and income
-tags: fab-academy-assignments, to-review
+tags: fab-academy-assignments
 last_update: 2020-09-18
 ---
 

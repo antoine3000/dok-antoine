@@ -94,7 +94,7 @@
 
 // Button
 .ts .btn {
-  display: table;
+  display: inline-block;
   background-color: var(--action-color);
   color: var(--base-color);
   padding: var(--size-lg);
