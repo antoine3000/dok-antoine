@@ -507,6 +507,14 @@ html {
   @media (max-width: 767px) {
     html {
       font-size: 13px; } }
+body ::-moz-selection {
+  background-color: var(--action-color);
+  color: var(--body-color); }
+
+body ::selection {
+  background-color: var(--action-color);
+  color: var(--body-color); }
+
 .header {
   margin-bottom: var(--size-md); }
 

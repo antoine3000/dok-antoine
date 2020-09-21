@@ -23,6 +23,11 @@ html {
   }
 }
 
+body {
+  ::-moz-selection { background-color: var(--action-color); color: var(--body-color); }
+  ::selection { background-color: var(--action-color); color: var(--body-color); }
+}
+
 .index__item--sub,
 .index:not(.index--featured) .index__link {
   @extend %ts-body;

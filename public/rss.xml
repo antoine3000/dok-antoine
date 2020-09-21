@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Mon, 21 Sep 2020 11:11:34 +0000</lastBuildDate><item><title>About</title><link>https://antoine.studio/about.html</link><description>&lt;p&gt;Bonjour, my name is Antoine Jaunard (1990) and I'm from Brussels, Belgium. I recently moved to Barcelona (ES) via a lovely detour by Amsterdam (NL).&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Mon, 21 Sep 2020 15:38:42 +0000</lastBuildDate><item><title>About</title><link>https://antoine.studio/about.html</link><description>&lt;p&gt;Bonjour, my name is Antoine Jaunard (1990) and I'm from Brussels, Belgium. I recently moved to Barcelona (ES) via a lovely detour by Amsterdam (NL).&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="antoine-chill.jpg" alt="antoine-chill" /&gt;&lt;/p&gt;
 
@@ -173,7 +173,17 @@
   &lt;p&gt;The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. The technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks. Each interval is known as a pomodoro, from the Italian word for 'tomato', after the tomato-shaped kitchen timer that Cirillo used as a university student.&lt;/p&gt;
   
   &lt;blockquote&gt;
-    &lt;p&gt;&lt;a target="_blank" href="https://en.wikiped...</description><pubDate>Tue, 15 Sep 2020 00:00:00 +0200</pubDate></item><item><title>Computer-controlled machining</title><link>https://antoine.studio/computer-controlled-machining.html</link><description>&lt;p&gt;This week's assignement was turned updside down by the corona virus. Fab Lab Barcelona had to close its doors due to the pandemy, for at least three weeks. I will catch up with it as soon as possible.&lt;/p&gt;
+    &lt;p&gt;&lt;a target="_blank" href="https://en.wikiped...</description><pubDate>Tue, 15 Sep 2020 00:00:00 +0200</pubDate></item><item><title>Test equipment</title><link>https://antoine.studio/electronics-design-test-equipment.html</link><description>&lt;p&gt;This week's group assignment is about how to use the test equipment in order to test/debug/understand electronic circuits. Because of the covid-19 situtation, I did this assignment alone, from my home.&lt;/p&gt;
+
+&lt;h1 id="multimeter"&gt;Multimeter&lt;/h1&gt;
+
+&lt;p&gt;A useful resource to understand how to use a multimeter is &lt;a target="_blank" href="https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/all"&gt;this tutorial&lt;/a&gt; from Sparkfun. It covers all the basics we should know.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="multimeter.jpg" alt="" /&gt;&lt;/p&gt;
+
+&lt;p&gt;The selection knob allows to set the multimeter to read different things such as milliamps (mA) of current, voltage (V) and resistance (Ω). The different positions of a multimeter are there to adjust the scale, depending on the values you are measuring.&lt;/p&gt;
+
+&lt;h2 id="voltage...</description><pubDate>Mon, 21 Sep 2020 00:00:00 +0200</pubDate></item><item><title>Computer-controlled machining</title><link>https://antoine.studio/computer-controlled-machining.html</link><description>&lt;p&gt;This week's assignement was turned updside down by the corona virus. Fab Lab Barcelona had to close its doors due to the pandemy, for at least three weeks. I will catch up with it as soon as possible.&lt;/p&gt;
 
 &lt;p&gt;TODO: everything :)&lt;/p&gt;
 ...</description><pubDate>Wed, 11 Mar 2020 00:00:00 +0200</pubDate></item><item><title>Embedded programming</title><link>https://antoine.studio/embedded-programming.html</link><description>&lt;p&gt;Two weeks ago, I designed a pomodoro timer during the &lt;a target="_blank" href="fabac-assignments-electronics-design.html"&gt;Electronics design&lt;/a&gt; week. It's now time to program it. I'm going to write the piece of code that will light my LEDs as time goes by and find a way to send it to the ATtiny1614 chip. I'm going to focus on the latter: how to send a program (= program) a chip. Well, that was the plan.&lt;/p&gt;

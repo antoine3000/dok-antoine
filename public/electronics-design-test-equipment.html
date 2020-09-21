@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title property="schema:name">antoine.studio - Documentation tool</title>
+<meta content="Documentation tool" name="description"/>
+<meta content="antoine.studio" property="schema:name"/>
+<meta content="Documentation tool" property="schema:description"/>
+<link href="assets/main.min.css" rel="stylesheet"/>
+</head>
+<body class="page page--article">
+<main class="main">
+<header class="header">
+<nav class="nav">
+<ul class="nav__list">
+<li class="nav__item">
+<a class="nav__link" href="index.html">antoine.studio</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="content.html">content</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="flux.html">flux</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="about.html">about</a>
+</li>
+</ul>
+</nav>
+</header>
+<article class="article">
+<!-- title -->
+<h1 class="article__title">Test equipment</h1>
+<!-- parent -->
+<p class="article__parent">This article is part of: <a href="electronics-design.html">Electronics design</a>.</p>
+<!-- tags -->
+<!-- featured image -->
+<!-- toc -->
+<section class="article__toc">
+<h2 class="toc__title">Table of content</h2>
+<div class="toc__list"><ul>
+<li><a href="#multimeter">Multimeter</a>
+<ul>
+<li><a href="#voltage-resistance">Voltage &amp; resistance</a></li>
+<li><a href="#current">Current</a></li>
+<li><a href="#continuity">Continuity</a></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section class="article__content ts">
+<p>This week's group assignment is about how to use the test equipment in order to test/debug/understand electronic circuits. Because of the covid-19 situtation, I did this assignment alone, from my home.</p>
+<h1 id="multimeter">Multimeter</h1>
+<p>A useful resource to understand how to use a multimeter is <a href="https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/all" target="_blank">this tutorial</a> from Sparkfun. It covers all the basics we should know.</p>
+<p><figure class="md"><img alt="" src="medias/electronics-design-test-equipment-multimeter.jpg"><figcaption></figcaption></figure>
+<p>The selection knob allows to set the multimeter to read different things such as milliamps (mA) of current, voltage (V) and resistance (Ω). The different positions of a multimeter are there to adjust the scale, depending on the values you are measuring.</p>
+<h2 id="voltage-resistance">Voltage &amp; resistance</h2>
+<p>Voltage and resistance can be measured the same way, as they both required to be measured in parallel.</p>
+<p>Set the multimeter to the appropriate (voltage (V) or resistance (Ω)) function. Connect the black probe to the ground (-) and the red probe to power (+). This should give you the voltage pr resistance of the circuit. If you measure it the other way around, you'll get the opposite values (negative).</p>
+<h2 id="current">Current</h2>
+<p>Measuring current requires to connect the multimeter in the circuit, not only in parallel but in series. The current has to go through the multimeter in order to be measured.</p>
+<p>Interupt your circuit with the two probes of the multimeter, set it to the current function (A) and you'll get the value you're looking for.</p>
+<h2 id="continuity">Continuity</h2>
+<blockquote>
+<p>Continuity testing is the act of testing the resistance between two points. If there is very low resistance (less than a few Ωs), the two points are connected electrically, and a tone is emitted. If there is more than a few Ωs of resistance, than the circuit is open, and no tone is emitted.</p>
+</blockquote>
+<p>This is super useful when testing a freshly milled PCB, to ensure that all paths have been cut as they should be, that there is no short in the circuit. Or later, that the components are properly soldered.</p>
+</section>
+<footer>
+<p>✎ <span>Created</span> 06/03/2020</p>
+<p>⁂ <span>Updated</span> 21/09/2020</p>
+</footer>
+</article>
+<footer class="footer">
+<p>antoine.studio ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a> — <a href="https://antoine.studio/rss.xml">RSS feed</a></p>
+</footer>
+</main>
+</body>
+</html>

@@ -62,6 +62,16 @@
 <li><a href="#files">Files</a></li>
 </ul>
 </div>
+<h3 class="toc__title--sub"><a href="electronics-design.html#electronics-design-test-equipment">Test equipment</a></h3>
+<div class="toc__list--sub"><ul>
+<li><a href="#multimeter">Multimeter</a>
+<ul>
+<li><a href="#voltage-resistance">Voltage &amp; resistance</a></li>
+<li><a href="#current">Current</a></li>
+<li><a href="#continuity">Continuity</a></li>
+</ul></li>
+</ul>
+</div>
 </section>
 <section class="article__content ts">
 <p>I knew almost nothing about electronics before following the Fab Academy.I had to learn and understand the very basics of a electronic circuit and its composents, but also of electricity and its flow.</p>
@@ -176,6 +186,34 @@ void loop() {
 <footer>
 <p>✎ <span>Created</span> 05/03/2020</p>
 <p>⁂ <span>Updated</span> 15/09/2020</p>
+</footer>
+</article>
+<article class="article--sub" id="electronics-design-test-equipment">
+<!-- title -->
+<h1 class="article__title">Test equipment <a href="electronics-design-test-equipment.html">●</a></h1>
+<!-- tags -->
+<!-- content -->
+<section class="article__content ts">
+<p>This week's group assignment is about how to use the test equipment in order to test/debug/understand electronic circuits. Because of the covid-19 situtation, I did this assignment alone, from my home.</p>
+<h1 id="multimeter">Multimeter</h1>
+<p>A useful resource to understand how to use a multimeter is <a href="https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/all" target="_blank">this tutorial</a> from Sparkfun. It covers all the basics we should know.</p>
+<p><figure class="md"><img alt="" src="medias/electronics-design-test-equipment-multimeter.jpg"><figcaption></figcaption></figure>
+<p>The selection knob allows to set the multimeter to read different things such as milliamps (mA) of current, voltage (V) and resistance (Ω). The different positions of a multimeter are there to adjust the scale, depending on the values you are measuring.</p>
+<h2 id="voltage-resistance">Voltage &amp; resistance</h2>
+<p>Voltage and resistance can be measured the same way, as they both required to be measured in parallel.</p>
+<p>Set the multimeter to the appropriate (voltage (V) or resistance (Ω)) function. Connect the black probe to the ground (-) and the red probe to power (+). This should give you the voltage pr resistance of the circuit. If you measure it the other way around, you'll get the opposite values (negative).</p>
+<h2 id="current">Current</h2>
+<p>Measuring current requires to connect the multimeter in the circuit, not only in parallel but in series. The current has to go through the multimeter in order to be measured.</p>
+<p>Interupt your circuit with the two probes of the multimeter, set it to the current function (A) and you'll get the value you're looking for.</p>
+<h2 id="continuity">Continuity</h2>
+<blockquote>
+<p>Continuity testing is the act of testing the resistance between two points. If there is very low resistance (less than a few Ωs), the two points are connected electrically, and a tone is emitted. If there is more than a few Ωs of resistance, than the circuit is open, and no tone is emitted.</p>
+</blockquote>
+<p>This is super useful when testing a freshly milled PCB, to ensure that all paths have been cut as they should be, that there is no short in the circuit. Or later, that the components are properly soldered.</p>
+</section>
+<footer>
+<p>✎ <span>Created</span> 06/03/2020</p>
+<p>⁂ <span>Updated</span> 21/09/2020</p>
 </footer>
 </article>
 </article>
