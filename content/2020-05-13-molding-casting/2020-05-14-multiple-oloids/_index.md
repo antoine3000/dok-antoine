@@ -19,10 +19,13 @@ I'll use the oloid model I already did as a starting point.
 
 ![](mold-freecad.png)
 
+The main idea is to model the wax block according to its actual dimensions `88mm * 36mm * 146mm`, make a pocket to host half of the desired object, add guides and pouring holes.
+
+Then, because my oloid is symmetrical and because it fits into the wax block, I could duplicate what I did to make both sides of the mold at the same time. If the wax block had been smaller, I would have milled once and made two molds with the same wax block.
+
 ## Guides
 
 I added guides to the model so that I could easily close the two sides together, making sure they are in the perfect position.
-
 
 ![](mold-detail-1.png)
 
@@ -43,7 +46,9 @@ I'll use the milling machine *Roland monoFab SRM-20* to mill my block of wax.
 
 I generated the `.rml` files using [Fab Modules](http://fabmodules.org/). We have to produce two files, one for the rough cut and the other for the finish cut.
 
-## Global process
+## Global
+
+These are the settings I used to generate the toolpaths.
 
 - input format: `.stl`
 - modifiy the units/in to `25.4` and dpi to `500` (to use millimeters instead of inches)
@@ -58,7 +63,7 @@ I generated the `.rml` files using [Fab Modules](http://fabmodules.org/). We hav
 - Calculate
 - Save
 
-### Wax rough cut
+## Wax rough cut
 
 - tool diameter: `3.175 mm`
 - type: `flat end-mill`
@@ -66,13 +71,19 @@ I generated the `.rml` files using [Fab Modules](http://fabmodules.org/). We hav
 
 ![Screenshot of the generated paths in Fab Modules, rough cut](fabmodules-rough.png)
 
-### Wax finish cut
+## Wax finish cut
 
 - tool diameter: `3.175 mm`
 - type: `ball end-mill`
 - tool overlap: `90%`
 
 ![Screenshot of the generated paths in Fab Modules, final cut](fabmodules-finish.png)
+
+# Files
+
+- 3D model > [oloid-model-mold.FCStd](file:oloid-model-mold.FCStd)
+- Fabrication file, rought cut > [oloid-wax-rough-3-175-flat.rml](file:oloid-wax-rough-3-175-flat.rml)
+- Fabrication file, final cut [oloid-wax-final-3-175-ball.rml](file:oloid-wax-final-3-175-ball.rml)
 
 
 

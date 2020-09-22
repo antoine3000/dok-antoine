@@ -54,12 +54,11 @@
 </ul></li>
 <li><a href="#generate-toolpaths">Generate toolpaths</a>
 <ul>
-<li><a href="#global-process">Global process</a>
-<ul>
+<li><a href="#global">Global</a></li>
 <li><a href="#wax-rough-cut">Wax rough cut</a></li>
 <li><a href="#wax-finish-cut">Wax finish cut</a></li>
 </ul></li>
-</ul></li>
+<li><a href="#files">Files</a></li>
 </ul>
 </div>
 </section>
@@ -88,6 +87,8 @@ For this <em>Molding &amp; Casting</em> week, I'm going to mold an oloid and to 
 </ol>
 <p>I'll use the oloid model I already did as a starting point.</p>
 <p><figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-mold-freecad.png"><figcaption></figcaption></figure>
+<p>The main idea is to model the wax block according to its actual dimensions <code>88mm * 36mm * 146mm</code>, make a pocket to host half of the desired object, add guides and pouring holes.</p>
+<p>Then, because my oloid is symmetrical and because it fits into the wax block, I could duplicate what I did to make both sides of the mold at the same time. If the wax block had been smaller, I would have milled once and made two molds with the same wax block.</p>
 <h2 id="guides">Guides</h2>
 <p>I added guides to the model so that I could easily close the two sides together, making sure they are in the perfect position.</p>
 <p><figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-mold-detail-1.png"><figcaption></figcaption></figure>
@@ -102,7 +103,8 @@ For this <em>Molding &amp; Casting</em> week, I'm going to mold an oloid and to 
 <h1 id="generate-toolpaths">Generate toolpaths</h1>
 <p>I'll use the milling machine <em>Roland monoFab SRM-20</em> to mill my block of wax.</p>
 <p>I generated the <code>.rml</code> files using <a href="http://fabmodules.org/" target="_blank">Fab Modules</a>. We have to produce two files, one for the rough cut and the other for the finish cut.</p>
-<h2 id="global-process">Global process</h2>
+<h2 id="global">Global</h2>
+<p>These are the settings I used to generate the toolpaths.</p>
 <ul>
 <li>input format: <code>.stl</code></li>
 <li>modifiy the units/in to <code>25.4</code> and dpi to <code>500</code> (to use millimeters instead of inches)</li>
@@ -117,20 +119,26 @@ For this <em>Molding &amp; Casting</em> week, I'm going to mold an oloid and to 
 <li>Calculate</li>
 <li>Save</li>
 </ul>
-<h3 id="wax-rough-cut">Wax rough cut</h3>
+<h2 id="wax-rough-cut">Wax rough cut</h2>
 <ul>
 <li>tool diameter: <code>3.175 mm</code></li>
 <li>type: <code>flat end-mill</code></li>
 <li>tool overlap: <code>50%</code></li>
 </ul>
 <p><figure class="md"><img alt="Screenshot of the generated paths in Fab Modules, rough cut" src="medias/molding-casting-multiple-oloids-fabmodules-rough.png"><figcaption>Screenshot of the generated paths in Fab Modules, rough cut</figcaption></figure>
-<h3 id="wax-finish-cut">Wax finish cut</h3>
+<h2 id="wax-finish-cut">Wax finish cut</h2>
 <ul>
 <li>tool diameter: <code>3.175 mm</code></li>
 <li>type: <code>ball end-mill</code></li>
 <li>tool overlap: <code>90%</code></li>
 </ul>
 <p><figure class="md"><img alt="Screenshot of the generated paths in Fab Modules, final cut" src="medias/molding-casting-multiple-oloids-fabmodules-finish.png"><figcaption>Screenshot of the generated paths in Fab Modules, final cut</figcaption></figure>
+<h1 id="files">Files</h1>
+<ul>
+<li>3D model &gt; <a class="link-file" href="medias/molding-casting-multiple-oloids-oloid-model-mold.FCStd" target="_blank">oloid-model-mold.FCStd</a></li>
+<li>Fabrication file, rought cut &gt; <a class="link-file" href="medias/molding-casting-multiple-oloids-oloid-wax-rough-3-175-flat.rml" target="_blank">oloid-wax-rough-3-175-flat.rml</a></li>
+<li>Fabrication file, final cut <a class="link-file" href="medias/molding-casting-multiple-oloids-oloid-wax-final-3-175-ball.rml" target="_blank">oloid-wax-final-3-175-ball.rml</a></li>
+</ul>
 </section>
 <footer>
 <p>✎ <span>Created</span> 14/05/2020</p>
