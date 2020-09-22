@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Mon, 21 Sep 2020 15:40:30 +0000</lastBuildDate><item><title>About</title><link>https://antoine.studio/about.html</link><description>&lt;p&gt;Bonjour, my name is Antoine Jaunard (1990) and I'm from Brussels, Belgium. I recently moved to Barcelona (ES) via a lovely detour by Amsterdam (NL).&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Tue, 22 Sep 2020 12:13:12 +0000</lastBuildDate><item><title>About</title><link>https://antoine.studio/about.html</link><description>&lt;p&gt;Bonjour, my name is Antoine Jaunard (1990) and I'm from Brussels, Belgium. I recently moved to Barcelona (ES) via a lovely detour by Amsterdam (NL).&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="antoine-chill.jpg" alt="antoine-chill" /&gt;&lt;/p&gt;
 
@@ -353,7 +353,24 @@ To be able to compile the code, f...</description><pubDate>Fri, 20 Mar 2020 00:0
 &lt;h1 id="hardware"&gt;Hardware&lt;/h1&gt;
 
 &lt;p&gt;I'm using two &lt;a target="_blank" href="https://www.nodem...</description><pubDate>Wed, 06 May 2020 00:00:00 +0200</pubDate></item><item><title>Molding and casting</title><link>https://antoine.studio/molding-casting.html</link><description>&lt;p&gt;TODO: everything :)&lt;/p&gt;
-...</description><pubDate>Wed, 13 May 2020 00:00:00 +0200</pubDate></item><item><title>Wildcard</title><link>https://antoine.studio/wildcard.html</link><description>&lt;p&gt;TODO: everything :)&lt;/p&gt;
+...</description><pubDate>Wed, 13 May 2020 00:00:00 +0200</pubDate></item><item><title>Multiple oloids</title><link>https://antoine.studio/molding-casting-multiple-oloids.html</link><description>&lt;p&gt;&lt;img src="oloid-model.png" alt="" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Remember the oloid I printed during the &lt;a target="_blank" href="3D-scanning-printing-oloid-shape.html"&gt;3D printing&lt;/a&gt; week?
+For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold an oloid and to cast it in the variety of materials that we have here, in Fab Lab Barcelona.&lt;/p&gt;
+
+&lt;h1 id="mold-design"&gt;Mold design&lt;/h1&gt;
+
+&lt;p&gt;The molding and casting workflow consists of:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Milling a positive version of the desired object into a block of wax&lt;/li&gt;
+&lt;li&gt;Filling it with silicon to get a negative (and flexible) mold&lt;/li&gt;
+&lt;li&gt;Filling the previously made mold with another type of silicon of resin to get the final (and positive) object.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I'll use the oloid model I already did as a starting point.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="mold-free...</description><pubDate>Thu, 14 May 2020 00:00:00 +0200</pubDate></item><item><title>Wildcard</title><link>https://antoine.studio/wildcard.html</link><description>&lt;p&gt;TODO: everything :)&lt;/p&gt;
 ...</description><pubDate>Wed, 20 May 2020 00:00:00 +0200</pubDate></item><item><title>Machine design</title><link>https://antoine.studio/machine-design.html</link><description>&lt;p&gt;TODO: everything :)&lt;/p&gt;
 ...</description><pubDate>Mon, 01 Jun 2020 00:00:00 +0200</pubDate></item><item><title>The Green Observatory</title><link>https://antoine.studio/green-observatory.html</link><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
 
