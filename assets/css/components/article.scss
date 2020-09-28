@@ -21,6 +21,7 @@
   &:before {
     content: "→ ";
   }
+  color: var(--body-color);
 }
 
 .ts hr {

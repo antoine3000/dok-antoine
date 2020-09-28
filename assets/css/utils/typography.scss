@@ -8,7 +8,9 @@
 }
 
 %background-special {
-  background: linear-gradient(90deg,var(--special-color-2) 0%, var(--special-color-1) 100%); 
+  background: var(--special-color);
+  // background: radial-gradient(circle,var(--special-color-1) 0%,var(--special-color-2) 100%);
+  // background: linear-gradient(90deg,var(--special-color-1) 0%, var(--special-color-2) 100%); 
 }
 
 
@@ -17,6 +19,7 @@
   padding: 0.2em;
   text-decoration: none;
   @extend %background-special;
+  border-radius: var(--size-xxs);
   &:hover {
     background-color: var(--body-color);
     text-decoration: none;

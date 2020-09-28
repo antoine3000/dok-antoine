@@ -8,11 +8,12 @@
 
 
 :root {
-  --body-color: #f0f0f0;
+  --body-color: #cfcfcf;
   // --base-color: #000000;
-  --action-color: #000000;
-  --special-color-1: #00ff57;
-  --special-color-2: #666;
+  --action-color: var(--base-color);
+  --special-color: var(--base-color);
+  --special-color-1: rgb(113, 52, 255);
+  --special-color-2: rgb(113, 52, 255);
   --content-max-width: 720px;
 }
 
