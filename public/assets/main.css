@@ -216,6 +216,13 @@ a, .index--featured .item__title {
   .ts table tr:nth-child(even) {
     background-color: rgba(var(--base-color), 0.1); }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
+  .main .footer {
+    margin-top: auto; }
+
 .header {
   display: flex;
   position: sticky;
@@ -237,7 +244,7 @@ a, .index--featured .item__title {
     margin-right: var(--size-sm); }
 
 .footer {
-  margin-top: var(--size-xxl);
+  padding-top: var(--size-xxl);
   padding-bottom: var(--size-lg); }
 
 img {

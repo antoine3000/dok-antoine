@@ -9,7 +9,7 @@
 <section class="index index--featured">
   <ul class="index__list">
     {% for article in articles %}
-    {% if (article.featured) and (not 'draft' in article.type) %}
+    {% if (article.featured == True) and (not 'draft' in article.type) %}
     <li class="index__item">
       <a class="index__link" href="{{ article.slug }}.html">
         <img src="medias/{{ article.slug }}-{{ article.featured_image }}" alt="{{ article.title }}" class="item__image">

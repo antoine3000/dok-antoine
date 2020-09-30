@@ -1,6 +1,6 @@
 ---
 title: Pomodoro timer
-featured: True
+featured: False
 featured_image: pomo.jpeg
 last_update: 2020-09-15
 ---
