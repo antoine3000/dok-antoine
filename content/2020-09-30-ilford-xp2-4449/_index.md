@@ -4,12 +4,12 @@ tags: photography
 featured_image: 4449-11.jpg
 ---
 
-These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona.
+These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.
 
+![](large:4449-01.jpg)
 ![](large:4449-02.jpg)
 ![](large:4449-03.jpg)
 ![](large:4449-04.jpg)
-![](large:4449-01.jpg)
 ![](large:4449-05.jpg)
 ![](large:4449-06.jpg)
 ![](large:4449-07.jpg)
