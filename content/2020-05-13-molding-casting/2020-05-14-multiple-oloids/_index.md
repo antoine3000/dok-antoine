@@ -79,6 +79,8 @@ These are the settings I used to generate the toolpaths.
 
 ![Screenshot of the generated paths in Fab Modules, final cut](fabmodules-finish.png)
 
+## 
+
 # Files
 
 - 3D model > [oloid-model-mold.FCStd](file:oloid-model-mold.FCStd)
