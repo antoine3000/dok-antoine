@@ -8,3 +8,4 @@ flux:
   visibility: True
   title: "flux"
   slug: "flux"
+webring: False

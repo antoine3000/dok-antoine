@@ -36,7 +36,9 @@
       </header>
       {% block content %}{% endblock %}
       <footer class="footer">
-        <p>{{ settings.title }} ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a> — <a href="{{ settings.main_url }}/rss.xml">RSS feed</a></p>
+        <p>{{ settings.title }} ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a> — <a
+            href="{{ settings.main_url }}/rss.xml">RSS feed</a> {% if settings.webring == True %}- <a
+            href="https://webring.xxiivv.com/#random" target="_blank">Webring</a>{% endif %}</p>
       </footer>
     </main>
   </body>
