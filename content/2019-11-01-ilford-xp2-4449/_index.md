@@ -2,6 +2,7 @@
 title: Ilford XP2 - 4449
 tags: photography
 featured_image: 4449-11.jpg
+last_update: 2020-09-30
 ---
 
 These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.
