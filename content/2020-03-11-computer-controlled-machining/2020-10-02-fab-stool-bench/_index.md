@@ -6,13 +6,15 @@ I wanted to have a stool and bench for my flat, so I designed and fabricated the
 
 I designed one element, the stool, with parametric values and then produced the other element, the bench, automatically. This process can be useful for everyone, to adapt the furnitures (or anything else) to their needs and the context in which it will be used.
 
-![stool view](overview.png)
-
 # Design
 
-I designed this project on paper and then in [Freecad](https://www.freecadweb.org/), my favorite open-source software for 3D modeling.
+I first designed this project on paper and then in [Freecad](https://www.freecadweb.org/), my favorite open-source software for 3D modeling.
 
 The stool/bench consists of a seat, two legs and a stretcher. The bench is simply the long version of the stool.
+
+![](stool-view-1.png)
+![front view](stool-view-4.png)
+![top view](stool-view-5.png)
 
 ## Parametric values
 
@@ -42,6 +44,8 @@ To avoid this, it is common practice to create dog bone shapes by adding holes t
 ![](dogbones2.png)
 
 ### Export
+
+When the different parts are well designed, take into account the tolerance of the CNC and have dogbones shapes to ensure that the actual measurements will be as expected, export all parts in a technical drawing sheet at the correct scale (1:1). This sheet should be exported as a `.dxf` file and then imported into RhinoCAM.
 
 ![](techdraw.png)
 
