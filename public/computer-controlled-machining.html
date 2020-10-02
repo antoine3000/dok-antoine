@@ -194,12 +194,14 @@
 <li>Corner coordinates <code>0, 0, 0</code></li>
 <li>Dimensions <code>2,400 x 1,250 x 15</code></li>
 </ul>
+<p><figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-rhino-overview.png"><figcaption></figcaption></figure>
 <h2 id="screw-marks">Screw marks</h2>
 <ul>
 <li>Copy the material rectangle and offset it by <code>20mm</code></li>
 <li>Create <code>Points</code> along the offset line to fix the material</li>
 <li>Add more <code>Points</code> around the critical part that could move during the process. If it is needed to add a screw inside a pocket, make sure to place two of them to avoid any rotational movement.</li>
 </ul>
+<p><figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-engraving.png"><figcaption></figcaption></figure>
 <h2 id="tool">Tool</h2>
 <ul>
 <li>Create a new <code>Tool</code>
@@ -220,6 +222,7 @@
 </ul></li>
 <li><code>Save</code> the new tool</li>
 </ul>
+<p><figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-tool.png"><figcaption></figcaption></figure>
 <p>To calculate the <code>Cut speed</code> value, check the chipload value of the material (for plywood, using a 6mm endmill, range is <code>.011″-.013″</code>, according to this <a href="https://gdptooling.com/chipload-calc/#" target="_blank">calculator</a>). Then RPM * number of flutes * minimum value * 25.4 (in to cm) = minimum cut speed. Then do the same for the maximum value. Finally, use a value in the middle to ensure the happiness of the machine.</p>
 <h2 id="engraving-pocketing-profiling">Engraving, pocketing, profiling</h2>
 <p>Do each step on a different layer.</p>
@@ -252,13 +255,17 @@
 <li>Sorting: <code>Minimum Distance Sort</code></li>
 <li><code>Generate</code></li>
 </ul>
+<p><figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-pocketing.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-in-profiling.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-out-profiling.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-perspective.png"><figcaption></figcaption></figure>
 <h2 id="export-to-g-code">Export to G-code</h2>
-<p>Two files need to be exported. The first one contain the data for the screws, that we will launch first. Then all the other operations (pocketing, inner profiling, outer profiling) on the second file, that we'll launch once the material is screwed to the bed of the machine.</p>
+<p>Two files must be exported. The first one contains the screw data, which we will run first. Then all the other operations (pocketing, inner profiling, outer profiling) on the second file, which we will launch once the material is screwed to the machine bed.</p>
 <ul>
 <li>Right click on a operation &gt; <code>Post</code></li>
 <li>File name: something like <code>01-screws-6mm</code> or <code>02-6mm</code></li>
 <li>Save as type: <code>*.nc</code></li>
-<li>Current post: <code>CNC_STEP_BCN</code> (which contains all the informations relative to the specific machine I'll use)</li>
+<li>Current post: <code>CNC_STEP_BCN</code> (which contains all the information about the specific machine I will be using)</li>
 </ul>
 <h2 id="resources">Resources</h2>
 <ul>

@@ -64,11 +64,15 @@ When the different parts are well designed, take into account the tolerance of t
 - Corner coordinates `0, 0, 0`
 - Dimensions `2,400 x 1,250 x 15`
 
+![](rhino-overview.png)
+
 ## Screw marks
 
 - Copy the material rectangle and offset it by `20mm`
 - Create `Points` along the offset line to fix the material
 - Add more `Points` around the critical part that could move during the process. If it is needed to add a screw inside a pocket, make sure to place two of them to avoid any rotational movement.
+
+![](engraving.png)
 
 ## Tool
 
@@ -85,6 +89,8 @@ When the different parts are well designed, take into account the tolerance of t
       - Plunge, approach , engage, retract, departure: `2500` (cut speed/2)
       - Transfer: `Use rapid` (and set 10000 for RhinoCAM simulation)
 - `Save` the new tool
+
+![](tool.png)
 
 To calculate the `Cut speed` value, check the chipload value of the material (for plywood, using a 6mm endmill, range is `.011″-.013″`, according to this [calculator](https://gdptooling.com/chipload-calc/#)). Then RPM * number of flutes * minimum value * 25.4 (in to cm) = minimum cut speed. Then do the same for the maximum value. Finally, use a value in the middle to ensure the happiness of the machine.
 
@@ -114,14 +120,19 @@ Do each step on a different layer.
 - Sorting: `Minimum Distance Sort`
 - `Generate`
 
+![](pocketing.png)
+![](in-profiling.png)
+![](out-profiling.png)
+![](perspective.png)
+
 ## Export to G-code
 
-Two files need to be exported. The first one contain the data for the screws, that we will launch first. Then all the other operations (pocketing, inner profiling, outer profiling) on the second file, that we'll launch once the material is screwed to the bed of the machine.
+Two files must be exported. The first one contains the screw data, which we will run first. Then all the other operations (pocketing, inner profiling, outer profiling) on the second file, which we will launch once the material is screwed to the machine bed.
 
 - Right click on a operation > `Post`
 - File name: something like `01-screws-6mm` or `02-6mm`
 - Save as type: `*.nc`
-- Current post: `CNC_STEP_BCN` (which contains all the informations relative to the specific machine I'll use)
+- Current post: `CNC_STEP_BCN` (which contains all the information about the specific machine I will be using)
 
 ## Resources
 
