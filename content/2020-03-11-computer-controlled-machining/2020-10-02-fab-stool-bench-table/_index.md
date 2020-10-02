@@ -1,8 +1,8 @@
 ---
-title: Fab stool & bench
+title: Fab stool/bench/table
 ---
 
-I wanted to have a stool and bench for my flat, so I designed and fabricated them using the large CNC at Fab Lab Barcelona.
+I wanted to have a stool/bench/table for my flat, so I designed and fabricated them using the large CNC at Fab Lab Barcelona.
 
 I designed one element, the stool, with parametric values and then produced the other element, the bench, automatically. This process can be useful for everyone, to adapt the furnitures (or anything else) to their needs and the context in which it will be used.
 
@@ -135,6 +135,23 @@ Two files must be exported. The first one contains the screw data, which we will
 - Current post: `CNC_STEP_BCN` (which contains all the information about the specific machine I will be using)
 
 # Fabrication
+
+1. Mount the material on the machine bed
+2. Mount the desired endmill and tighten it properly
+3. In the machine software (KinetiC-NC) go to Jog/Setup, move to zero position
+4. Set the Z position using the mechanical button: put the large button under the endmill and set the Z, the sotftware will know what the correct Z value is
+5. Run the first file to obtain the srew positions on the material
+6. Screw the material to the machine bed
+7. Re-set the Z because the material should be lower than before now that it is properly fixed
+8. Run the second file containing all the other instructions
+9. Cut the brigdes using an hammer and a chisel
+10. Unscrew the screws
+11. Sand the egdes of the pieces to obtain a nice result
+
+# Remarks
+
+It was supposed to be stool, and then maybe an extra version to make a bench. But I'm not sure how I messed up with the dimensions and ended up with a bench/table. Yep it's bigger than I had imagined.
+
 
 # Conclusion
 
