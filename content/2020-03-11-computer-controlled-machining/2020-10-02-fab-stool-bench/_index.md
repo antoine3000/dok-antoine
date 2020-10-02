@@ -51,6 +51,83 @@ When the different parts are well designed, take into account the tolerance of t
 
 # Toolpaths
 
+## File import
+
+- Import the `.dxf` file into Rhino
+- `Join` the different paths together and `Group` them to be sure that no lines will float alone
+
+## Box stock
+
+- Create a rectangle the size of your material `2,400 mm x 1,250 mm`
+- `Stock > Box stock` and select the rectangle
+- Select `Height`
+- Corner coordinates `0, 0, 0`
+- Dimensions `2,400 x 1,250 x 15`
+
+## Screw marks
+
+- Copy the material rectangle and offset it by `20mm`
+- Create `Points` along the offset line to fix the material
+- Add more `Points` around the critical part that could move during the process. If it is needed to add a screw inside a pocket, make sure to place two of them to avoid any rotational movement.
+
+## Tool
+
+- Create a new `Tool`
+  - Flat mill downcut
+  - Number of flutes: `1`
+  - Tool diameter: `6 mm`
+  - Tool length: `35 mm`
+  - Shoulder length: `32 mm`
+  - Flute length: `30 mm`
+  - Feeds & Speeds
+      - Speed: `18000 RPM` (the machine can operate between 18000 and 24000 RPM, but the minimum is enough)
+      - Cut speed: `5500`
+      - Plunge, approach , engage, retract, departure: `2500` (cut speed/2)
+      - Transfer: `Use rapid` (and set 10000 for RhinoCAM simulation)
+- `Save` the new tool
+
+To calculate the `Cut speed` value, check the chipload value of the material (for plywood, using a 6mm endmill, range is `.011″-.013″`, according to this [calculator](https://gdptooling.com/chipload-calc/#)). Then RPM * number of flutes * minimum value * 25.4 (in to cm) = minimum cut speed. Then do the same for the maximum value. Finally, use a value in the middle to ensure the happiness of the machine.
+
+## Engraving, pocketing, profiling
+
+Do each step on a different layer.
+
+- Control geometry: select the appropriate zones and `generate`
+- Tool: select the previoulsy created tool
+- Feeds and speeds: Load from tool
+- Clearance Plane: Stock Max Z + Dist: `20 mm` for the screws (this will prevent the tool from scratching the material, if it's bent, during its movements) , then `10 mm` for the rest
+- Cut Parameters:
+  - Tolerance: `0.03 mm` for the screws then `0.01 mm` for the rest
+  - Stock: `0`
+  - Cut direction: `Climb (Down cut)`
+  - Start Point: `Inside` or `Outside` depending on the design
+  - Stepover Distance: `25 %`
+- Cut levels
+  - Total Cut Depth: `3` for the screws, then `15.5` (material thickness + margin) for the rest
+  - Rough Depth Cut: `3` (3 mm on each layer, we don't want to force the tool)
+- Entry/Exit: `None` and `None`, this is not needed for wood
+- Advanced Cut Parameters (for the profiling)
+  - Bridges: `Rectangular`
+  - Bidge Height: `4`
+  - Bidge Length: `4`
+  - Number of brigdes: Depends on the design
+- Sorting: `Minimum Distance Sort`
+- `Generate`
+
+## Export to G-code
+
+Two files need to be exported. The first one contain the data for the screws, that we will launch first. Then all the other operations (pocketing, inner profiling, outer profiling) on the second file, that we'll launch once the material is screwed to the bed of the machine.
+
+- Right click on a operation > `Post`
+- File name: something like `01-screws-6mm` or `02-6mm`
+- Save as type: `*.nc`
+- Current post: `CNC_STEP_BCN` (which contains all the informations relative to the specific machine I'll use)
+
+## Resources
+
+- Fab Lab Barcelona's [documentation](https://fabacademy.org/2020/labs/barcelona/local/#material/week07/)
+- Tue's [documentation](http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assignments/week-07-computer-controlled-machining.html)
+
 # Fabrication
 
 # Conclusion

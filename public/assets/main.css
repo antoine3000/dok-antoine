@@ -507,6 +507,8 @@ a, .index--featured .item__title {
       position: absolute;
       left: 0;
       top: 0.1em; }
+  .ts ul ul {
+    margin-bottom: 0; }
 
 .ts figure.lg img {
   width: auto;

@@ -51,7 +51,16 @@
 <li><a href="#export">Export</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#toolpaths">Toolpaths</a></li>
+<li><a href="#toolpaths">Toolpaths</a>
+<ul>
+<li><a href="#file-import">File import</a></li>
+<li><a href="#box-stock">Box stock</a></li>
+<li><a href="#screw-marks">Screw marks</a></li>
+<li><a href="#tool">Tool</a></li>
+<li><a href="#engraving-pocketing-profiling">Engraving, pocketing, profiling</a></li>
+<li><a href="#export-to-g-code">Export to G-code</a></li>
+<li><a href="#resources">Resources</a></li>
+</ul></li>
 <li><a href="#fabrication">Fabrication</a></li>
 <li><a href="#conclusion">Conclusion</a></li>
 </ul>
@@ -84,6 +93,90 @@
 <p>When the different parts are well designed, take into account the tolerance of the CNC and have dogbones shapes to ensure that the actual measurements will be as expected, export all parts in a technical drawing sheet at the correct scale (1:1). This sheet should be exported as a <code>.dxf</code> file and then imported into RhinoCAM.</p>
 <p><figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-techdraw.png"><figcaption></figcaption></figure>
 <h1 id="toolpaths">Toolpaths</h1>
+<h2 id="file-import">File import</h2>
+<ul>
+<li>Import the <code>.dxf</code> file into Rhino</li>
+<li><code>Join</code> the different paths together and <code>Group</code> them to be sure that no lines will float alone</li>
+</ul>
+<h2 id="box-stock">Box stock</h2>
+<ul>
+<li>Create a rectangle the size of your material <code>2,400 mm x 1,250 mm</code></li>
+<li><code>Stock &gt; Box stock</code> and select the rectangle</li>
+<li>Select <code>Height</code></li>
+<li>Corner coordinates <code>0, 0, 0</code></li>
+<li>Dimensions <code>2,400 x 1,250 x 15</code></li>
+</ul>
+<h2 id="screw-marks">Screw marks</h2>
+<ul>
+<li>Copy the material rectangle and offset it by <code>20mm</code></li>
+<li>Create <code>Points</code> along the offset line to fix the material</li>
+<li>Add more <code>Points</code> around the critical part that could move during the process. If it is needed to add a screw inside a pocket, make sure to place two of them to avoid any rotational movement.</li>
+</ul>
+<h2 id="tool">Tool</h2>
+<ul>
+<li>Create a new <code>Tool</code>
+<ul>
+<li>Flat mill downcut</li>
+<li>Number of flutes: <code>1</code></li>
+<li>Tool diameter: <code>6 mm</code></li>
+<li>Tool length: <code>35 mm</code></li>
+<li>Shoulder length: <code>32 mm</code></li>
+<li>Flute length: <code>30 mm</code></li>
+<li>Feeds &amp; Speeds
+<ul>
+<li>Speed: <code>18000 RPM</code> (the machine can operate between 18000 and 24000 RPM, but the minimum is enough)</li>
+<li>Cut speed: <code>5500</code></li>
+<li>Plunge, approach , engage, retract, departure: <code>2500</code> (cut speed/2)</li>
+<li>Transfer: <code>Use rapid</code> (and set 10000 for RhinoCAM simulation)</li>
+</ul></li>
+</ul></li>
+<li><code>Save</code> the new tool</li>
+</ul>
+<p>To calculate the <code>Cut speed</code> value, check the chipload value of the material (for plywood, using a 6mm endmill, range is <code>.011″-.013″</code>, according to this <a href="https://gdptooling.com/chipload-calc/#" target="_blank">calculator</a>). Then RPM * number of flutes * minimum value * 25.4 (in to cm) = minimum cut speed. Then do the same for the maximum value. Finally, use a value in the middle to ensure the happiness of the machine.</p>
+<h2 id="engraving-pocketing-profiling">Engraving, pocketing, profiling</h2>
+<p>Do each step on a different layer.</p>
+<ul>
+<li>Control geometry: select the appropriate zones and <code>generate</code></li>
+<li>Tool: select the previoulsy created tool</li>
+<li>Feeds and speeds: Load from tool</li>
+<li>Clearance Plane: Stock Max Z + Dist: <code>20 mm</code> for the screws (this will prevent the tool from scratching the material, if it's bent, during its movements) , then <code>10 mm</code> for the rest</li>
+<li>Cut Parameters:
+<ul>
+<li>Tolerance: <code>0.03 mm</code> for the screws then <code>0.01 mm</code> for the rest</li>
+<li>Stock: <code>0</code></li>
+<li>Cut direction: <code>Climb (Down cut)</code></li>
+<li>Start Point: <code>Inside</code> or <code>Outside</code> depending on the design</li>
+<li>Stepover Distance: <code>25 %</code></li>
+</ul></li>
+<li>Cut levels
+<ul>
+<li>Total Cut Depth: <code>3</code> for the screws, then <code>15.5</code> (material thickness + margin) for the rest</li>
+<li>Rough Depth Cut: <code>3</code> (3 mm on each layer, we don't want to force the tool)</li>
+</ul></li>
+<li>Entry/Exit: <code>None</code> and <code>None</code>, this is not needed for wood</li>
+<li>Advanced Cut Parameters (for the profiling)
+<ul>
+<li>Bridges: <code>Rectangular</code></li>
+<li>Bidge Height: <code>4</code></li>
+<li>Bidge Length: <code>4</code></li>
+<li>Number of brigdes: Depends on the design</li>
+</ul></li>
+<li>Sorting: <code>Minimum Distance Sort</code></li>
+<li><code>Generate</code></li>
+</ul>
+<h2 id="export-to-g-code">Export to G-code</h2>
+<p>Two files need to be exported. The first one contain the data for the screws, that we will launch first. Then all the other operations (pocketing, inner profiling, outer profiling) on the second file, that we'll launch once the material is screwed to the bed of the machine.</p>
+<ul>
+<li>Right click on a operation &gt; <code>Post</code></li>
+<li>File name: something like <code>01-screws-6mm</code> or <code>02-6mm</code></li>
+<li>Save as type: <code>*.nc</code></li>
+<li>Current post: <code>CNC_STEP_BCN</code> (which contains all the informations relative to the specific machine I'll use)</li>
+</ul>
+<h2 id="resources">Resources</h2>
+<ul>
+<li>Fab Lab Barcelona's <a href="https://fabacademy.org/2020/labs/barcelona/local/#material/week07/" target="_blank">documentation</a></li>
+<li>Tue's <a href="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assignments/week-07-computer-controlled-machining.html" target="_blank">documentation</a></li>
+</ul>
 <h1 id="fabrication">Fabrication</h1>
 <h1 id="conclusion">Conclusion</h1>
 </section>
