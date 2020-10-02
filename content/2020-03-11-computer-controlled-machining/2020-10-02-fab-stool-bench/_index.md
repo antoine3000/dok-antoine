@@ -24,7 +24,7 @@ I used parametric values in order to easily modify values such as the lengths of
 
 Once the document is well organised and the values in the part design workbench call up values from the datasheet, changing the values automatically changes the rest. This allows me to design without knowing everything in advance, such as the diameter of the milling cutter that will be used to mill the project, and above all it allows the design to be adapted quickly and almost frictionlessly to new constraints.
 
-## Be ready for fabrication
+## Preparing for production
 
 ### Tolerance
 
@@ -134,11 +134,20 @@ Two files must be exported. The first one contains the screw data, which we will
 - Save as type: `*.nc`
 - Current post: `CNC_STEP_BCN` (which contains all the information about the specific machine I will be using)
 
-## Resources
-
-- Fab Lab Barcelona's [documentation](https://fabacademy.org/2020/labs/barcelona/local/#material/week07/)
-- Tue's [documentation](http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assignments/week-07-computer-controlled-machining.html)
-
 # Fabrication
 
 # Conclusion
+
+It's really nice to design something knowing how it will be made afterwards. Designing with constraints, understanding the material and taking into account all the little details that can make a difference. That's part of the reason I'm doing this Fab Academy. CNC is a wonderful machine that can produce all kinds of results, and I'm looking forward to discovering them all.
+
+At first it was intimidating. The machine is powerful and can be harmful if not used properly and there is a wide range of settings to know and understand to produce the right instructions for the machine (G-code). But once all this is demystified, all that remains is fun and new possibilities.
+
+
+# Files
+
+- Stool v1, Freecad design file -> [a-stool.FCStd](file:a-stool.FCStd)
+- Stool v1, Freecad fabrication file -> [a-stool-fab.FCStd](file:a-stool-fab.FCStd)
+- Stool v1, DXF export -> [a-stool-fab.dxf](file:a-stool-fab.dxf)
+- Stool v1, RhinoCAM file -> [stool-v1-a-stool-fab.3dm](file:stool-v1-a-stool-fab.3dm)
+- Stool v1, g-code step 1 -> [stool-v1-01-screws-6mm.nc](stool-v1-01-screws-6mm.nc)
+- Stool v1, g-code step 2 -> [stool-v1-02-6mm.nc](stool-v1-02-6mm.nc)

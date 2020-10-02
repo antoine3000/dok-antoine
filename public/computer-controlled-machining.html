@@ -63,7 +63,7 @@
 <li><a href="#design">Design</a>
 <ul>
 <li><a href="#parametric-values">Parametric values</a></li>
-<li><a href="#be-ready-for-fabrication">Be ready for fabrication</a>
+<li><a href="#preparing-for-production">Preparing for production</a>
 <ul>
 <li><a href="#tolerance">Tolerance</a></li>
 <li><a href="#dogbones">Dogbones</a></li>
@@ -78,10 +78,10 @@
 <li><a href="#tool">Tool</a></li>
 <li><a href="#engraving-pocketing-profiling">Engraving, pocketing, profiling</a></li>
 <li><a href="#export-to-g-code">Export to G-code</a></li>
-<li><a href="#resources">Resources</a></li>
 </ul></li>
 <li><a href="#fabrication">Fabrication</a></li>
 <li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#files">Files</a></li>
 </ul>
 </div>
 </section>
@@ -167,7 +167,7 @@
 <p>I used parametric values in order to easily modify values such as the lengths of the seat, the height of the legs, the thickness of the material, the endmill diameter I will use, the length of the slots, etc.</p>
 <p><figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-parametric-values.png"><figcaption></figcaption></figure>
 <p>Once the document is well organised and the values in the part design workbench call up values from the datasheet, changing the values automatically changes the rest. This allows me to design without knowing everything in advance, such as the diameter of the milling cutter that will be used to mill the project, and above all it allows the design to be adapted quickly and almost frictionlessly to new constraints.</p>
-<h2 id="be-ready-for-fabrication">Be ready for fabrication</h2>
+<h2 id="preparing-for-production">Preparing for production</h2>
 <h3 id="tolerance">Tolerance</h3>
 <p>It is strongly recommended to take a tolerance value into account when working with a CNC machine. This is because the machine will not produce a perfect result and if the cuts are too tight, there is a good chance that it will be almost impossible to put the project together.</p>
 <p><figure class="md"><img alt="Tolerance detail" src="medias/computer-controlled-machining-fab-stool-bench-tolerance.png"><figcaption>Tolerance detail</figcaption></figure>
@@ -267,13 +267,19 @@
 <li>Save as type: <code>*.nc</code></li>
 <li>Current post: <code>CNC_STEP_BCN</code> (which contains all the information about the specific machine I will be using)</li>
 </ul>
-<h2 id="resources">Resources</h2>
-<ul>
-<li>Fab Lab Barcelona's <a href="https://fabacademy.org/2020/labs/barcelona/local/#material/week07/" target="_blank">documentation</a></li>
-<li>Tue's <a href="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assignments/week-07-computer-controlled-machining.html" target="_blank">documentation</a></li>
-</ul>
 <h1 id="fabrication">Fabrication</h1>
 <h1 id="conclusion">Conclusion</h1>
+<p>It's really nice to design something knowing how it will be made afterwards. Designing with constraints, understanding the material and taking into account all the little details that can make a difference. That's part of the reason I'm doing this Fab Academy. CNC is a wonderful machine that can produce all kinds of results, and I'm looking forward to discovering them all.</p>
+<p>At first it was intimidating. The machine is powerful and can be harmful if not used properly and there is a wide range of settings to know and understand to produce the right instructions for the machine (G-code). But once all this is demystified, all that remains is fun and new possibilities.</p>
+<h1 id="files">Files</h1>
+<ul>
+<li>Stool v1, Freecad design file -&gt; <a class="link-file" href="medias/computer-controlled-machining-fab-stool-bench-a-stool.FCStd" target="_blank">a-stool.FCStd</a></li>
+<li>Stool v1, Freecad fabrication file -&gt; <a class="link-file" href="medias/computer-controlled-machining-fab-stool-bench-a-stool-fab.FCStd" target="_blank">a-stool-fab.FCStd</a></li>
+<li>Stool v1, DXF export -&gt; <a class="link-file" href="medias/computer-controlled-machining-fab-stool-bench-a-stool-fab.dxf" target="_blank">a-stool-fab.dxf</a></li>
+<li>Stool v1, RhinoCAM file -&gt; <a class="link-file" href="medias/computer-controlled-machining-fab-stool-bench-stool-v1-a-stool-fab.3dm" target="_blank">stool-v1-a-stool-fab.3dm</a></li>
+<li>Stool v1, g-code step 1 -&gt; <a href="stool-v1-01-screws-6mm.nc" target="_blank">stool-v1-01-screws-6mm.nc</a></li>
+<li>Stool v1, g-code step 2 -&gt; <a href="stool-v1-02-6mm.nc" target="_blank">stool-v1-02-6mm.nc</a></li>
+</ul>
 </section>
 <footer>
 <p>✎ <span>Created</span> 02/10/2020</p>
