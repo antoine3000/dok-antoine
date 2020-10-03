@@ -1,5 +1,6 @@
 ---
 title: Multiple oloids
+last_update: 2020-10-03
 ---
 
 ![](oloid-model.png)
