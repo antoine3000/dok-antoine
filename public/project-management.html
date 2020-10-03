@@ -69,6 +69,7 @@
 <h3 class="toc__title--sub"><a href="project-management.html#project-management-other-tools">Other tools</a></h3>
 <div class="toc__list--sub"><ul>
 <li><a href="#video-compression">Video compression</a></li>
+<li><a href="#imagemagick-recipes">Imagemagick recipes</a></li>
 </ul>
 </div>
 </section>
@@ -217,10 +218,15 @@ main.py
 <section class="article__content ts">
 <h2 id="video-compression">Video compression</h2>
 <p><code>ffmpeg -i video.mp4 -b 1000000 compressed-video.mp4</code> or <code>ffmpeg -i video.mp4 -b 1000000 -t 10 compressed-video.mp4</code> where <code>-t 10</code> is the duration (10 sec.)</p>
+<h2 id="imagemagick-recipes">Imagemagick recipes</h2>
+<p><a href="https://imagemagick.org/index.php" target="_blank">Imagemagick</a> can resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves. Via the terminal.</p>
+<ul>
+<li>Rotate <code>mogrify -rotate 180 *.jpg</code></li>
+</ul>
 </section>
 <footer>
 <p>✎ <span>Created</span> 07/02/2020</p>
-<p>⁂ <span>Updated</span> 07/02/2020</p>
+<p>⁂ <span>Updated</span> 03/10/2020</p>
 </footer>
 </article>
 </article>

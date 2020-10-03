@@ -79,7 +79,43 @@ These are the settings I used to generate the toolpaths.
 
 ![Screenshot of the generated paths in Fab Modules, final cut](fabmodules-finish.png)
 
-## 
+# Fabrication
+
+![](wax-block.jpg)
+![](milling-z.jpg)
+
+<video><source src="milling.mp4"></video>
+
+![](wax-wax.jpg)
+
+![](final-result-2.jpg)
+![](final-result-3.jpg)
+![](final-result-4.jpg)
+
+<video><source src="final-result.mp4"></video>
+
+![](first-result-1.jpg)
+![](first-result-2.jpg)
+![](first-result-3.jpg)
+
+<video><source src="mix-well.mp4"></video>
+
+![](mold-detail-1.jpg)
+![](mold-detail-2.jpg)
+![](mold-press.jpg)
+![](pine-resin-1.jpg)
+![](pine-resin-2.jpg)
+![](pine-resin-3.jpg)
+![](pine-resin-4.jpg)
+![](pine-resin-5.jpg)
+![](pine-resin-6.jpg)
+![](pine-resin-7.jpg)
+![](pine-resin-8.jpg)
+![](plastic-resin-1.jpg)
+![](plastic-resin-2.jpg)
+![](plastic-resin-3.jpg)
+
+
 
 # Files
 

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Fri, 02 Oct 2020 15:13:12 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Sat, 03 Oct 2020 16:55:32 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="large:4449-01.jpg" alt="" /&gt;
 &lt;img src="large:4449-02.jpg" alt="" /&gt;
@@ -78,7 +78,15 @@
 &lt;p&gt;Merge the current branch ...</description><pubDate>Thu, 06 Feb 2020 00:00:00 +0200</pubDate></item><item><title>Other tools</title><link>https://antoine.studio/project-management-other-tools.html</link><description>&lt;h2 id="video-compression"&gt;Video compression&lt;/h2&gt;
 
 &lt;p&gt;&lt;code&gt;ffmpeg -i video.mp4 -b 1000000 compressed-video.mp4&lt;/code&gt; or &lt;code&gt;ffmpeg -i video.mp4 -b 1000000 -t 10 compressed-video.mp4&lt;/code&gt; where &lt;code&gt;-t 10&lt;/code&gt; is the duration (10 sec.)&lt;/p&gt;
-...</description><pubDate>Fri, 07 Feb 2020 00:00:00 +0200</pubDate></item><item><title>Computer-aided design</title><link>https://antoine.studio/computer-aided-design.html</link><description>&lt;p&gt;A tour of open-source softwares for computer-aided design, in order to discover and learn some of the tools that I will use to design my future projects.&lt;/p&gt;
+
+&lt;h2 id="imagemagick-recipes"&gt;Imagemagick recipes&lt;/h2&gt;
+
+&lt;p&gt;&lt;a target="_blank" href="https://imagemagick.org/index.php"&gt;Imagemagick&lt;/a&gt; can resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves. Via the terminal.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Rotate &lt;code&gt;mogrify -rotate 180 *.jpg&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+...</description><pubDate>Sat, 03 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Computer-aided design</title><link>https://antoine.studio/computer-aided-design.html</link><description>&lt;p&gt;A tour of open-source softwares for computer-aided design, in order to discover and learn some of the tools that I will use to design my future projects.&lt;/p&gt;
 
 &lt;h1 id="gimp"&gt;GIMP&lt;/h1&gt;
 
