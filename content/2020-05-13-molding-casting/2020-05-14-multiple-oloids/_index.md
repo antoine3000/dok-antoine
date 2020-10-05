@@ -82,11 +82,11 @@ These are the settings I used to generate the toolpaths.
 
 # Fabrication
 
-Now that the files are ready, let's play with this reproduction technique. The first step will be to mill the negative mold, then mold the positive mold from it, to finally be able to cast the oloid shape I designed in various materials.
+Now that the files are ready, let's play with this reproduction technique. The first step will be to mill the positive mold, then mold the negative mold from it, to finally be able to cast the oloid shape I designed in various materials.
 
-## Milling the negative mold
+## Milling the positive mold
 
-The negative mold is made out of a block of wax. The wax is soft enough to allow a high accurancy and can easily be re-used multiple times. 
+The positive mold is made out of a block of wax. The wax is soft enough to allow a high accurancy and can easily be re-used multiple times. 
 
 ![File-A-Wax block](wax-block.jpg)
 
@@ -104,26 +104,60 @@ Milling a block of wax produces a messy environment full of wax flakes. But don'
 
 ![](wax-wax.jpg)
 
-The final result is quite impressive. The lines we can see have been produced by the rough cut, but then the finish cut smoothes everything super well.
-
-The end result is quite impressive. The lines we can see were produced by the rough cut, but the final cut smoothes everything superbly.
+The final result is quite impressive. The lines we can see were produced by the rough cut, but the final cut smoothes everything superbly.
 
 ![](large:wax-milled.jpg)
 
 ## Molding the positive mold
 
+This step consists of making a positive mold using silicon and the previously milled negative mold. The general idea is quite simple: fill the mold with silicon, wait and unmold. Let's now take a detailed look at the different steps.
+
+### Knowing the quantity of material required
+
+As we don't want to prepare too much material, silicon in this case, and waste it, it is good practice to measure the volume of our mold in order to prepare the right amount of material. To do this, a simple trick is to fill the mold with water and measure the volume.
+
 ![](small:wax-release-1.jpg)
 ![](small:wax-release-2.jpg)
+
+### Applying a release agent on the mold
+
+Silicon can stick super well to the wax and become very though to unmold. To avoid this tricky situation, apply a release agent to the mold of wax.
+
+This release agent is a super-thin layer of silicon that will help considerably to unmold the future mass of silicon without damaging it.
+
+Apply it evenly on the clean and dry wax and wait 10 minutes for it to dry.
+
 ![](wax-release.jpg)
+
+### Mixing and pouring
+
+The [Easyplat 00-40](https://www.feroca.com/en/platino-adicion/620-easyplat-00-40-silicona-de-platino-para-moldes-.html) silicon is active when the two parts are mixed together.
+
+These two parts must be equal in weight and volume. Their sum must therefore correspond to the previous value we obtained by calculating the volume of the mould with water.
 
 ![](easyplat.jpg)
 
+They will begin to dry 30 minutes after they have come into contact with each other. Set an alarm to make sure you don't take longer than you have.
+
 <video><source src="mix-well.mp4"></video>
+
+A good tip for lazy people, fix a wooden stick in a screwdriver to mix the mixture effortlessly.
+
 <video><source src="pouring.mp4"></video>
 
-![](silicon-result-1.jpg)
-![](silicon-result-2.jpg)
-![](silicon-result-3.jpg)
+Pour the silicon slowly and with a stream as thin as possible to avoid creating bubbles. But don't forget that time is limited, you have to find the right balance between quality and speed.
+
+This silicon mix takes between 3 and 6 hours to dry perfectly, depending on the room's temperature. I don't want to take a risk on this part, I let it dry the full night.
+
+![](large:silicon-result-1.jpg)
+![](large:silicon-result-2.jpg)
+
+
+### Result
+
+And this is the result! It's as clean as expected, all the little details are there. The process went smoothly, what a pleasure.
+
+![](large:silicon-result-3.jpg)
 ![](large:silicon-result-4.jpg)
 ![](large:silicon-result-5.jpg)
 

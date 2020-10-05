@@ -382,7 +382,9 @@ img {
   border: var(--border-sm) solid var(--base-color); }
 
 .ts video {
-  max-width: 100%; }
+  max-width: 100%;
+  width: 100%;
+  display: block; }
 
 .embed-container {
   position: relative;
