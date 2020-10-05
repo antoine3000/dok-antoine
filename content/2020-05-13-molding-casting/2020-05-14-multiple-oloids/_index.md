@@ -133,7 +133,7 @@ Apply it evenly on the clean and dry wax and wait 10 minutes for it to dry.
 
 The [Easyplat 00-40](https://www.feroca.com/en/platino-adicion/620-easyplat-00-40-silicona-de-platino-para-moldes-.html) silicon is active when the two parts are mixed together.
 
-These two parts must be equal in weight and volume. Their sum must therefore correspond to the previous value we obtained by calculating the volume of the mould with water.
+These two parts must be equal in weight and volume. Their sum must therefore correspond to the previous value we obtained by calculating the volume of the mold with water.
 
 ![](easyplat.jpg)
 
@@ -164,23 +164,54 @@ And this is the result! It's as clean as expected, all the little details are th
 
 # (re)Production
 
-![](mold-press.jpg)
-![](setup.jpg)
+The positive mold produced the negative mold which can now be used to produce positive objects! I'm going to test different materials that are at my disposal at the Fab Lab Barcelona. I will use platinum silicon, pine resin and urethane resin. They seem to have a very different finish from each other. I can't wait to see the result.
 
-## Platinum silicone
+![My dirty setup](setup.jpg)
+
+## Platinum silicon
+
+The first thing to do is to measure the volume of material needed to fill the mold. Once again, pour water into your mold, as mine is symmetrical, I can do it on one side and multiply the volume obtained by two.
+
+Then prepare the right amount of material. For this platinum silicon, we can do it by weight or by volume. I decided to do it by volume because it requires less calculation, the ratio is 1:1.
+
+As before, the two liquids are activated when they are in contact with each other, check the working time that the mixture allows you and set a timer.
+
+![](mold-press.jpg)
+
+Press the two parts of the mold together to be sure that there is no leak, and that is it, we are ready to pour the silicon into it.
 
 <video><source src="pouring-first-material.mp4"></video>
 
+After a bit more than an hour, the material is supposed to be dry and the mold can be unmold. I always prefer to be careful and count the extra time before demoulding, I don't want to lose this long process because of my impatience.
+
 ![](first-result-1.jpg)
+
+Here is the result. The last step is now to cut the two pipes and sand the piece to obtain a smooth surface.
+
 ![](first-result-2.jpg)
+
+As you can see, there is a colour change on the upper part. This is because I didn't prepare enough material before pouring it into the mould. I had to quickly remix a small amount of material to pour it before the silicone dried. I thought I had done it quickly enough so as not to mark the final object, but I was wrong. A tiny time difference causes a visible in the final product.
+
+Luckily for my geometry experiment, this has no effect on the volume, the feel is the same all over the surface of the oloid.
+
 ![](first-result-3.jpg)
+
+
 
 ## Pine resin
 
-![](pine-resin-1.jpg)
+Next on my list of experiments is pine resin. It is a natural material that seems easy to work with. Just melt the resin before pouring it into the mould.
+
 ![](pine-resin-2.jpg)
-![](pine-resin-3.jpg)
+
+I wasn't sure how much to use, but I soon realised that this variable is not so important with this material. Any surplus will be reusable once the pine resin has dried. The only thing I can lose here is the curing time.
+
+![](pine-resin-1.jpg)
+![Look at this beaty](pine-resin-3.jpg)
 ![](pine-resin-4.jpg)
+
+The pine resin melted in less than 20 minutes. Once it is ready, the next steps are the same as for the previous test material above.
+
 ![](pine-resin-5.jpg)
 ![](pine-resin-6.jpg)
 ![](pine-resin-7.jpg)
