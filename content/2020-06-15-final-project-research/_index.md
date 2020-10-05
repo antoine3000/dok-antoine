@@ -1,20 +1,17 @@
 ---
-title: The Green Observatory
-tags: fab-academy-assignments, to-do
-featured: False
-featured_image: final-sketches-02.png
-type: draft
+title: Final project: research
 ---
 
 # Introduction
 
-A device that transforms the electrical activity of plants into a physical and meditative movement that we, humans, can observe and contemplate.
+This article is a place for me to post ideas about my final project. It is not intended to be clear or readable. At least, not at the moment. I have compiled my notes and the elements that were used in the realisation of my final project on the [page](green-observatory.html) dedicated to it.
 
-# Sensing the electrical activity of a plant
+In short, I'm designing a device that listens to the electrical activity of plants and transforms it into a physical and meditative movement that we humans can observe and contemplate. I call it *The Green Observatory*.
 
-![sensing the activity](IMG_8664.jpg)
+[The Green Osbservatory](button:green-observatory.html)
 
-[Sensing the electrical activity of a plant](button:fabac-finalproject-input-plant-activity.html)
+
+![](IMG_8664.jpg)
 
 
 # External resources

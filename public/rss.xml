@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Mon, 05 Oct 2020 10:23:14 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Mon, 05 Oct 2020 10:59:04 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="large:4449-01.jpg" alt="" /&gt;
 &lt;img src="large:4449-02.jpg" alt="" /&gt;
@@ -413,7 +413,19 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 
 &lt;p&gt;&lt;img src="mold-free...</description><pubDate>Sun, 04 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Wildcard</title><link>https://antoine.studio/wildcard.html</link><description>&lt;p&gt;TODO: everything :)&lt;/p&gt;
 ...</description><pubDate>Wed, 20 May 2020 00:00:00 +0200</pubDate></item><item><title>Machine design</title><link>https://antoine.studio/machine-design.html</link><description>&lt;p&gt;TODO: everything :)&lt;/p&gt;
-...</description><pubDate>Mon, 01 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Sketches and first ideas</title><link>https://antoine.studio/final-project-research-sketches-ideas.html</link><description>&lt;p&gt;This page is where I collect some of my thoughts on my final project idea.&lt;/p&gt;
+...</description><pubDate>Mon, 01 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Final project: research</title><link>https://antoine.studio/final-project-research.html</link><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;This article is a place for me to post ideas about my final project. It is not intended to be clear or readable. At least, not at the moment. I have compiled my notes and the elements that were used in the realisation of my final project on the &lt;a target="_blank" href="green-observatory.html"&gt;page&lt;/a&gt; dedicated to it.&lt;/p&gt;
+
+&lt;p&gt;In short, I'm designing a device that listens to the electrical activity of plants and transforms it into a physical and meditative movement that we humans can observe and contemplate. I call it &lt;em&gt;The Green Observatory&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a target="_blank" href="button:green-observatory.html"&gt;The Green Osbservatory&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="IMG_8664.jpg" alt="" /&gt;&lt;/p&gt;
+
+&lt;h1 id="external-resources"&gt;External resources&lt;/h1&gt;
+
+&lt;p&gt;&lt;a targ...</description><pubDate>Mon, 15 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Sketches and first ideas</title><link>https://antoine.studio/final-project-research-sketches-ideas.html</link><description>&lt;p&gt;This page is where I collect some of my thoughts on my final project idea.&lt;/p&gt;
 
 &lt;h1 id="listen-to-what-the-plants-have-to-say"&gt;Listen to what the plants have to say&lt;/h1&gt;
 
@@ -429,8 +441,7 @@ is a cybernetic lifeform, a plant in direct dialogue with a machine. Using its o
 electrical signals, the plant is interfaced with a robotic extension that drives it toward light.&lt;/li&gt;
 &lt;li&gt;&lt;a target="_blank" href="https://hackaday.io/project/134172-plantoid"&gt;Plantoid&lt;/a&gt;, an hybrid with actuators and electrical
 potential sensing for plant control.&lt;/li&gt;
-&lt;li&gt;&lt;a target="_blank" href="https://backyardbrains.com/products/plantspikerbox"&gt;the Plant SpykerBox&lt;/a&gt;, a device that records and visualizes the signals emitted by plants offering users the unique opportunity to peer into the fascinating world of plant signaling and ...</description><pubDate>Fri, 01 May 2020 00:00:00 +0200</pubDate></item><item><title>Principles and concept</title><link>https://antoine.studio/final-project-research-principles-concept.html</link><description>&lt;p&gt;Why am I making another electronic device&lt;/p&gt;
-...</description><pubDate>Fri, 15 May 2020 00:00:00 +0200</pubDate></item><item><title>Electronics Design</title><link>https://antoine.studio/final-project-research-electronics-design.html</link><description>&lt;h1 id="components"&gt;Components&lt;/h1&gt;
+&lt;li&gt;&lt;a target="_blank" href="https://backyardbrains.com/products/plantspikerbox"&gt;the Plant SpykerBox&lt;/a&gt;, a device that records and visualizes the signals emitted by plants offering users the unique opportunity to peer into the fascinating world of plant signaling and ...</description><pubDate>Fri, 01 May 2020 00:00:00 +0200</pubDate></item><item><title>Electronics Design</title><link>https://antoine.studio/final-project-research-electronics-design.html</link><description>&lt;h1 id="components"&gt;Components&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;4 solenoids&lt;/li&gt;
@@ -469,8 +480,7 @@ potential sensing for plant control.&lt;/li&gt;
 
 &lt;p&gt;The first is &lt;a target="_blank" href="http://lessnullvoid.cc/content/2011/10/pulsum-plantae/"&gt;Pulsum Plantae&lt;/a&gt; (&lt;a target="_blank" href="https://github.com/Lessnullvoid/Pulsum-Plantae"&gt;Github project&lt;/a&gt;). This project amplifies the low voltage of a plant to make it readable, then converts it into an interactive installation that makes sounds. Leslie Garcia, Thiago Hersan, and Paloma López (the artists) have opened the sources of their project to make it acces...</description><pubDate>Mon, 01 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Structure: design and fabrication</title><link>https://antoine.studio/final-project-research-structure.html</link><description>&lt;p&gt;&lt;img src="structure-overview-01.png" alt="structure overview" /&gt;
 &lt;img src="structure-detail-01.png" alt="structure detail" /&gt;&lt;/p&gt;
-...</description><pubDate>Tue, 02 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Respiratory movement: programmable air</title><link>https://antoine.studio/final-project-research-output-air-pumps.html</link><description>&lt;p&gt;&lt;/p&gt;
-...</description><pubDate>Wed, 03 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Respiratory movement: Flexible part</title><link>https://antoine.studio/final-project-research-flexible-part.html</link><description>&lt;h1 id="making-the-mold"&gt;Making the mold&lt;/h1&gt;
+...</description><pubDate>Tue, 02 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Respiratory movement: Flexible part</title><link>https://antoine.studio/final-project-research-flexible-part.html</link><description>&lt;h1 id="making-the-mold"&gt;Making the mold&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;freecad design&lt;/li&gt;
@@ -495,9 +505,8 @@ potential sensing for plant control.&lt;/li&gt;
 &lt;h2 id="other-side"&gt;Other side&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Un...</description><pubDate>Thu, 04 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Code: From input to output</title><link>https://antoine.studio/final-project-research-code-logic.html</link><description>&lt;p&gt;&lt;/p&gt;
-...</description><pubDate>Fri, 05 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Assembly: Putting everything together</title><link>https://antoine.studio/final-project-research-assembly.html</link><description>&lt;p&gt;&lt;/p&gt;
-...</description><pubDate>Sat, 06 Jun 2020 00:00:00 +0200</pubDate></item><item><title>The Green Observatory</title><link>https://antoine.studio/green-observatory.html</link><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
+&lt;li&gt;Un...</description><pubDate>Thu, 04 Jun 2020 00:00:00 +0200</pubDate></item><item><title>The Green Observatory</title><link>https://antoine.studio/green-observatory.html</link><description>&lt;p&gt;&lt;/p&gt;
+...</description><pubDate>Mon, 15 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Introduction</title><link>https://antoine.studio/green-observatory-introduction.html</link><description>&lt;p&gt;&lt;/p&gt;
 ...</description><pubDate>Mon, 15 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Electronics: Input</title><link>https://antoine.studio/green-observatory-input.html</link><description>&lt;p&gt;&lt;/p&gt;
 ...</description><pubDate>Tue, 16 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Electronics: Output</title><link>https://antoine.studio/green-observatory-output.html</link><description>&lt;p&gt;&lt;/p&gt;
 ...</description><pubDate>Wed, 17 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Making of the inflatable part</title><link>https://antoine.studio/green-observatory-inflatable.html</link><description>&lt;p&gt;&lt;/p&gt;
