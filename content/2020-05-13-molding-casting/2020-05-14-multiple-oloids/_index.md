@@ -1,6 +1,6 @@
 ---
 title: Multiple oloids
-last_update: 2020-10-03
+last_update: 2020-10-04
 ---
 
 ![](oloid-model.png)
@@ -14,7 +14,7 @@ The molding and casting workflow consists of:
 
 1. Milling a positive version of the desired object into a block of wax
 2. Filling it with silicon to get a negative (and flexible) mold
-3. Filling the previously made mold with another type of silicon of resin to get the final (and positive) object.
+3. Filling the previously made mold with another type of silicon or resin to get the final (and positive) object.
 
 I'll use the oloid model I already did as a starting point.
 
@@ -82,28 +82,67 @@ These are the settings I used to generate the toolpaths.
 
 # Fabrication
 
-![](wax-block.jpg)
-![](milling-z.jpg)
+Now that the files are ready, let's play with this reproduction technique. The first step will be to mill the negative mold, then mold the positive mold from it, to finally be able to cast the oloid shape I designed in various materials.
+
+## Milling the negative mold
+
+The negative mold is made out of a block of wax. The wax is soft enough to allow a high accurancy and can easily be re-used multiple times. 
+
+![File-A-Wax block](wax-block.jpg)
+
+For this project, I was lucky to start with a brand new block of wax. If that wasn't the case, I would have had to mill the first layer to make sure the block was perfectly flat and the right size.
+
+I used the [MonoFab SRM-20](https://www.rolanddga.com/products/3d/srm-20-small-milling-machine), the same one we use to mill PCB's, to mill the wax. I like how this machine is accurate and reliable in different tasks.
+
+![Setting the XYZ positions](milling-z.jpg)
+
+To set properly the X and Y, the center of the endmill has to be exactly on top of the bottom left corner of the block of wax.
 
 <video><source src="milling.mp4"></video>
 
+Milling a block of wax produces a messy environment full of wax flakes. But don't worry, we recover everything at the end of the process to melt it down and transform it into another block of wax. Almost no waste!
+
 ![](wax-wax.jpg)
 
-![](final-result-2.jpg)
-![](final-result-3.jpg)
-![](final-result-4.jpg)
+The final result is quite impressive. The lines we can see have been produced by the rough cut, but then the finish cut smoothes everything super well.
 
-<video><source src="final-result.mp4"></video>
+The end result is quite impressive. The lines we can see were produced by the rough cut, but the final cut smoothes everything superbly.
+
+![](large:wax-milled.jpg)
+
+## Molding the positive mold
+
+![](small:wax-release-1.jpg)
+![](small:wax-release-2.jpg)
+![](wax-release.jpg)
+
+![](easyplat.jpg)
+
+<video><source src="mix-well.mp4"></video>
+<video><source src="pouring.mp4"></video>
+
+![](silicon-result-1.jpg)
+![](silicon-result-2.jpg)
+![](silicon-result-3.jpg)
+![](large:silicon-result-4.jpg)
+![](large:silicon-result-5.jpg)
+
+
+# (re)Production
+
+![](mold-press.jpg)
+![](setup.jpg)
+
+## Platinum silicone
+
+<video><source src="pouring-first-material.mp4"></video>
 
 ![](first-result-1.jpg)
 ![](first-result-2.jpg)
 ![](first-result-3.jpg)
 
-<video><source src="mix-well.mp4"></video>
+## Pine resin
 
-![](mold-detail-1.jpg)
-![](mold-detail-2.jpg)
-![](mold-press.jpg)
 ![](pine-resin-1.jpg)
 ![](pine-resin-2.jpg)
 ![](pine-resin-3.jpg)
@@ -112,9 +151,38 @@ These are the settings I used to generate the toolpaths.
 ![](pine-resin-6.jpg)
 ![](pine-resin-7.jpg)
 ![](pine-resin-8.jpg)
+
+## Urethane resin
+
 ![](plastic-resin-1.jpg)
 ![](plastic-resin-2.jpg)
 ![](plastic-resin-3.jpg)
+![](plastic-resin-4.jpg)
+![](plastic-resin-5.jpg)
+![](plastic-resin-6.jpg)
+![](plastic-resin-7.jpg)
+
+
+
+
+
+
+
+# Final results
+
+![](final-result-2.jpg)
+![](final-result-3.jpg)
+![](final-result-4.jpg)
+
+<video><source src="final-result.mp4"></video>
+
+
+
+
+
+
+
+
 
 
 

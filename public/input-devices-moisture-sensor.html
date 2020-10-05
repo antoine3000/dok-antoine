@@ -48,7 +48,7 @@
 </section>
 <section class="article__content ts">
 <p>Water is a conductive element, and the more water there is in the soil the more electricity can flow through it. So, in order to measure the soil moisture level, we can integrate it into an electrical circuit and measure the voltage. The more voltage in the circuit, the more water there is in the soil.</p>
-<p><figure class="md"><img alt="moist-setup" src="medias/input-devices-moisture-sensor-moist-setup.jpg"><figcaption>moist-setup</figcaption></figure>
+<figure class="md"><img alt="moist-setup" src="medias/input-devices-moisture-sensor-moist-setup.jpg"><figcaption>moist-setup</figcaption></figure>
 <p>To represent it, I built a small system that lights a green LED when the soil is wet and a red LED when it's dry.</p>
 <h2 id="connection">Connection</h2>
 <ul>
@@ -59,7 +59,7 @@
 <li>12 (digital) to the green LED through a 220Ω resistor</li>
 <li>LED's to the GND (digital)</li>
 </ul>
-<p><figure class="md"><img alt="moist-closeup" src="medias/input-devices-moisture-sensor-moist-closeup.jpg"><figcaption>moist-closeup</figcaption></figure>
+<figure class="md"><img alt="moist-closeup" src="medias/input-devices-moisture-sensor-moist-closeup.jpg"><figcaption>moist-closeup</figcaption></figure>
 <h2 id="code">Code</h2>
 <p>The code is basic. If the analog pin gets a high voltage, it means that the soil is moist and the plant is <em>happy</em> so we turn on the green LED, and vice versa.</p>
 <p>I plan to write a more complex code in the coming weeks, a code that takes into account the amount of water needed for each specific plant, and to alert when it's too dry <em>or</em> too weet.</p>

@@ -66,9 +66,9 @@
 <p>I decided to keep it simple to have a working example easily reproducible, without project-specific elements that make the code more complex. Therefore, the interaction must be basic: press a button on one side and light a led on the other side.</p>
 <h1 id="hardware">Hardware</h1>
 <p>I'm using two <a href="https://www.nodemcu.com/index_en.html" target="_blank">NodeMCU</a> equipped with <a href="http://esp8266.net" target="_blank">ESP8266</a> chips, mounted on a breadboard to facilitate the prototyping phase. The first NodeMCU, the <em>server</em>, has a LED connected to its pin <code>4</code> (d2). The second NodeMCU, the <em>client</em>, has a push-button connected to its pin <code>4</code> (d2). The WiFi network is prodived through my home router.</p>
-<p><figure class="md"><img alt="NodeMCUv1.0-pinout.jpg" src="medias/networking-communications-NodeMCUv1.0-pinout.jpg"><figcaption>NodeMCUv1.0-pinout.jpg</figcaption></figure>
+<figure class="md"><img alt="NodeMCUv1.0-pinout.jpg" src="medias/networking-communications-NodeMCUv1.0-pinout.jpg"><figcaption>NodeMCUv1.0-pinout.jpg</figcaption></figure>
 (<a href="https://www.teachmemicro.com/nodemcu-pinout/" target="_blank">image source</a>)</p>
-<p><figure class="md"><img alt="setup" src="medias/networking-communications-setup.jpg"><figcaption>setup</figcaption></figure>
+<figure class="md"><img alt="setup" src="medias/networking-communications-setup.jpg"><figcaption>setup</figcaption></figure>
 <h1 id="software">Software</h1>
 <h2 id="project-structure">Project structure</h2>
 <p>As I use PlatformIO to program my boards, the configuration of a project is fairly straightforward. I need one folder per board and an additional folder that wraps the two subfolders.</p>
@@ -89,7 +89,7 @@ framework = arduino
 <p>I can now add <code>upload_port = /dev/ttyUSB0</code> to the server's <code>platformio.ini</code> file and <code>upload_port = /dev/ttyUSB1</code> to the client. Depending on how I plugged them into my computer.</p>
 <h2 id="code">Code</h2>
 <p>The <em>server</em> will wait for a message from the <em>client</em> indicating whether to turn on its LED or not. The <em>client</em> will connect to the <em>server</em> network and send it its data, depending on the state of a simple push button.</p>
-<p><figure class="md"><img alt="editor" src="medias/networking-communications-editor.png"><figcaption>editor</figcaption></figure>
+<figure class="md"><img alt="editor" src="medias/networking-communications-editor.png"><figcaption>editor</figcaption></figure>
 <p>Once the connection between the two devices is established, messages can be sent from one to the other and vice versa. But the hierarchy between them must remain. The server continues to be the server, as does the client. This is shamelessly called the master/slave relationship.</p>
 <p>In the code below, <code>****</code> must be replaced by the name and password of the WiFi network.</p>
 <pre>
@@ -203,7 +203,7 @@ void loop () {
 <h1 id="results">Results</h1>
 <p>The connection is established. One chip talks to another on the WiFi network.</p>
 <p>And even if it doesn't seem impressive when exposed like that, this little <code>0</code> or <code>1</code> transported on a wireless network and telling the LED what to do opens up a lot of possibilities in my projects to come.</p>
-<p><figure class="md"><img alt="terminal" src="medias/networking-communications-terminal.png"><figcaption>terminal</figcaption></figure>
+<figure class="md"><img alt="terminal" src="medias/networking-communications-terminal.png"><figcaption>terminal</figcaption></figure>
 <video controls="" preload="auto"><source src="medias/networking-communications-network-communication.mp4" type="video/mp4"/></video>
 <p>(The NodeMCU don't fit well on the breadboard, I had to hold them in place during the experiment to be sure that the connections were good.)</p>
 <h1 id="useful-links">Useful links</h1>

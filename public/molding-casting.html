@@ -58,13 +58,24 @@
 <li><a href="#wax-rough-cut">Wax rough cut</a></li>
 <li><a href="#wax-finish-cut">Wax finish cut</a></li>
 </ul></li>
-<li><a href="#fabrication">Fabrication</a></li>
+<li><a href="#fabrication">Fabrication</a>
+<ul>
+<li><a href="#milling-the-negative-mold">Milling the negative mold</a></li>
+<li><a href="#molding-the-positive-mold">Molding the positive mold</a></li>
+</ul></li>
+<li><a href="#reproduction">(re)Production</a>
+<ul>
+<li><a href="#platinum-silicone">Platinum silicone</a></li>
+<li><a href="#pine-resin">Pine resin</a></li>
+<li><a href="#urethane-resin">Urethane resin</a></li>
+</ul></li>
+<li><a href="#final-results">Final results</a></li>
 <li><a href="#files">Files</a></li>
 </ul>
 </div>
 </section>
 <section class="article__content ts">
-<p class="todo">To do: everything :)</p>
+<p>For this week's assignment, I will design and mill a two-sided mold to make multiple oloids using the <em>molding and casting</em> technique. As part of the group assignment, I will explore various materials, which unfortunately I cannot do as a group due to this strange period of the COVID-19 pandemic.</p>
 </section>
 <footer>
 <p>✎ <span>Created</span> 13/05/2020</p>
@@ -76,7 +87,7 @@
 <!-- tags -->
 <!-- content -->
 <section class="article__content ts">
-<p><figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-oloid-model.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-oloid-model.png"><figcaption></figcaption></figure>
 <p>Remember the oloid I printed during the <a href="3D-scanning-printing-oloid-shape.html" target="_blank">3D printing</a> week?
 For this <em>Molding &amp; Casting</em> week, I'm going to mold an oloid and to cast it in the variety of materials that we have here, in Fab Lab Barcelona.</p>
 <h1 id="mold-design">Mold design</h1>
@@ -84,18 +95,18 @@ For this <em>Molding &amp; Casting</em> week, I'm going to mold an oloid and to 
 <ol>
 <li>Milling a positive version of the desired object into a block of wax</li>
 <li>Filling it with silicon to get a negative (and flexible) mold</li>
-<li>Filling the previously made mold with another type of silicon of resin to get the final (and positive) object.</li>
+<li>Filling the previously made mold with another type of silicon or resin to get the final (and positive) object.</li>
 </ol>
 <p>I'll use the oloid model I already did as a starting point.</p>
-<p><figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-mold-freecad.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-mold-freecad.png"><figcaption></figcaption></figure>
 <p>The main idea is to model the wax block according to its actual dimensions <code>88mm * 36mm * 146mm</code>, make a pocket to host half of the desired object, add guides and pouring holes.</p>
 <p>Then, because my oloid is symmetrical and because it fits into the wax block, I could duplicate what I did to make both sides of the mold at the same time. If the wax block had been smaller, I would have milled once and made two molds with the same wax block.</p>
 <h2 id="guides">Guides</h2>
 <p>I added guides to the model so that I could easily close the two sides together, making sure they are in the perfect position.</p>
-<p><figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-mold-detail-1.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-mold-detail-1.png"><figcaption></figcaption></figure>
 <h2 id="pouring-hole-and-air-flow">Pouring hole and air flow</h2>
 <p>I had to add two holes to the model, one to pour the material into the mold and the second to allow the air to escape. Without the second, it would be almost impossible to pour the material into the enclosed space.</p>
-<p><figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-mold-detail-2.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-mold-detail-2.png"><figcaption></figcaption></figure>
 <h2 id="resources">Resources</h2>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=5lwENZeNiNg" target="_blank">Tutorial</a> on how to modify a <code>.stl</code> model in Freecad</li>
@@ -126,30 +137,50 @@ For this <em>Molding &amp; Casting</em> week, I'm going to mold an oloid and to 
 <li>type: <code>flat end-mill</code></li>
 <li>tool overlap: <code>50%</code></li>
 </ul>
-<p><figure class="md"><img alt="Screenshot of the generated paths in Fab Modules, rough cut" src="medias/molding-casting-multiple-oloids-fabmodules-rough.png"><figcaption>Screenshot of the generated paths in Fab Modules, rough cut</figcaption></figure>
+<figure class="md"><img alt="Screenshot of the generated paths in Fab Modules, rough cut" src="medias/molding-casting-multiple-oloids-fabmodules-rough.png"><figcaption>Screenshot of the generated paths in Fab Modules, rough cut</figcaption></figure>
 <h2 id="wax-finish-cut">Wax finish cut</h2>
 <ul>
 <li>tool diameter: <code>3.175 mm</code></li>
 <li>type: <code>ball end-mill</code></li>
 <li>tool overlap: <code>90%</code></li>
 </ul>
-<p><figure class="md"><img alt="Screenshot of the generated paths in Fab Modules, final cut" src="medias/molding-casting-multiple-oloids-fabmodules-finish.png"><figcaption>Screenshot of the generated paths in Fab Modules, final cut</figcaption></figure>
+<figure class="md"><img alt="Screenshot of the generated paths in Fab Modules, final cut" src="medias/molding-casting-multiple-oloids-fabmodules-finish.png"><figcaption>Screenshot of the generated paths in Fab Modules, final cut</figcaption></figure>
 <h1 id="fabrication">Fabrication</h1>
-<p><figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-wax-block.jpg"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-milling-z.jpg"><figcaption></figcaption></figure>
+<p>Now that the files are ready, let's play with this reproduction technique. The first step will be to mill the negative mold, then mold the positive mold from it, to finally be able to cast the oloid shape I designed in various materials.</p>
+<h2 id="milling-the-negative-mold">Milling the negative mold</h2>
+<p>The negative mold is made out of a block of wax. The wax is soft enough to allow a high accurancy and can easily be re-used multiple times. </p>
+<figure class="md"><img alt="File-A-Wax block" src="medias/molding-casting-multiple-oloids-wax-block.jpg"><figcaption>File-A-Wax block</figcaption></figure>
+<p>For this project, I was lucky to start with a brand new block of wax. If that wasn't the case, I would have had to mill the first layer to make sure the block was perfectly flat and the right size.</p>
+<p>I used the <a href="https://www.rolanddga.com/products/3d/srm-20-small-milling-machine" target="_blank">MonoFab SRM-20</a>, the same one we use to mill PCB's, to mill the wax. I like how this machine is accurate and reliable in different tasks.</p>
+<figure class="md"><img alt="Setting the XYZ positions" src="medias/molding-casting-multiple-oloids-milling-z.jpg"><figcaption>Setting the XYZ positions</figcaption></figure>
+<p>To set properly the X and Y, the center of the endmill has to be exactly on top of the bottom left corner of the block of wax.</p>
 <video controls="" preload="auto"><source src="medias/molding-casting-multiple-oloids-milling.mp4" type="video/mp4"/></video>
-<p><figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-wax-wax.jpg"><figcaption></figcaption></figure>
-<p><figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-final-result-2.jpg"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-final-result-3.jpg"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-final-result-4.jpg"><figcaption></figcaption></figure>
-<video controls="" preload="auto"><source src="medias/molding-casting-multiple-oloids-final-result.mp4" type="video/mp4"/></video>
-<p><figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-first-result-1.jpg"><figcaption></figcaption></figure>
+<p>Milling a block of wax produces a messy environment full of wax flakes. But don't worry, we recover everything at the end of the process to melt it down and transform it into another block of wax. Almost no waste!</p>
+<figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-wax-wax.jpg"><figcaption></figcaption></figure>
+<p>The final result is quite impressive. The lines we can see have been produced by the rough cut, but then the finish cut smoothes everything super well.</p>
+<p>The end result is quite impressive. The lines we can see were produced by the rough cut, but the final cut smoothes everything superbly.</p>
+<figure class="lg"><img alt="" src="medias/molding-casting-multiple-oloids-wax-milled.jpg"><figcaption></figcaption></figure>
+<h2 id="molding-the-positive-mold">Molding the positive mold</h2>
+<figure class="sm"><img alt="" src="medias/molding-casting-multiple-oloids-wax-release-1.jpg"><figcaption></figcaption></figure>
+<figure class="sm"><img alt="" src="medias/molding-casting-multiple-oloids-wax-release-2.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-wax-release.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-easyplat.jpg"><figcaption></figcaption></figure>
+<video controls="" preload="auto"><source src="medias/molding-casting-multiple-oloids-mix-well.mp4" type="video/mp4"/></video>
+<video controls="" preload="auto"><source src="medias/molding-casting-multiple-oloids-pouring.mp4" type="video/mp4"/></video>
+<figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-silicon-result-1.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-silicon-result-2.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-silicon-result-3.jpg"><figcaption></figcaption></figure>
+<figure class="lg"><img alt="" src="medias/molding-casting-multiple-oloids-silicon-result-4.jpg"><figcaption></figcaption></figure>
+<figure class="lg"><img alt="" src="medias/molding-casting-multiple-oloids-silicon-result-5.jpg"><figcaption></figcaption></figure>
+<h1 id="reproduction">(re)Production</h1>
+<figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-mold-press.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-setup.jpg"><figcaption></figcaption></figure>
+<h2 id="platinum-silicone">Platinum silicone</h2>
+<video controls="" preload="auto"><source src="medias/molding-casting-multiple-oloids-pouring-first-material.mp4" type="video/mp4"/></video>
+<figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-first-result-1.jpg"><figcaption></figcaption></figure>
 <figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-first-result-2.jpg"><figcaption></figcaption></figure>
 <figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-first-result-3.jpg"><figcaption></figcaption></figure>
-<video controls="" preload="auto"><source src="medias/molding-casting-multiple-oloids-mix-well.mp4" type="video/mp4"/></video>
-<p><figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-mold-detail-1.jpg"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-mold-detail-2.jpg"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-mold-press.jpg"><figcaption></figcaption></figure>
+<h2 id="pine-resin">Pine resin</h2>
 <figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-pine-resin-1.jpg"><figcaption></figcaption></figure>
 <figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-pine-resin-2.jpg"><figcaption></figcaption></figure>
 <figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-pine-resin-3.jpg"><figcaption></figcaption></figure>
@@ -158,9 +189,19 @@ For this <em>Molding &amp; Casting</em> week, I'm going to mold an oloid and to 
 <figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-pine-resin-6.jpg"><figcaption></figcaption></figure>
 <figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-pine-resin-7.jpg"><figcaption></figcaption></figure>
 <figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-pine-resin-8.jpg"><figcaption></figcaption></figure>
+<h2 id="urethane-resin">Urethane resin</h2>
 <figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-plastic-resin-1.jpg"><figcaption></figcaption></figure>
 <figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-plastic-resin-2.jpg"><figcaption></figcaption></figure>
 <figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-plastic-resin-3.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-plastic-resin-4.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-plastic-resin-5.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-plastic-resin-6.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-plastic-resin-7.jpg"><figcaption></figcaption></figure>
+<h1 id="final-results">Final results</h1>
+<figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-final-result-2.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-final-result-3.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/molding-casting-multiple-oloids-final-result-4.jpg"><figcaption></figcaption></figure>
+<video controls="" preload="auto"><source src="medias/molding-casting-multiple-oloids-final-result.mp4" type="video/mp4"/></video>
 <h1 id="files">Files</h1>
 <ul>
 <li>3D model &gt; <a class="link-file" href="medias/molding-casting-multiple-oloids-oloid-model-mold.FCStd" target="_blank">oloid-model-mold.FCStd</a></li>
@@ -170,7 +211,7 @@ For this <em>Molding &amp; Casting</em> week, I'm going to mold an oloid and to 
 </section>
 <footer>
 <p>✎ <span>Created</span> 14/05/2020</p>
-<p>⁂ <span>Updated</span> 03/10/2020</p>
+<p>⁂ <span>Updated</span> 04/10/2020</p>
 </footer>
 </article>
 </article>

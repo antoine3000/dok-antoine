@@ -84,7 +84,7 @@
 <section class="article__content ts">
 <p>Two weeks ago, I designed a pomodoro timer during the <a href="fabac-assignments-electronics-design.html" target="_blank">Electronics design</a> week. It's now time to program it. I'm going to write the piece of code that will light my LEDs as time goes by and find a way to send it to the ATtiny1614 chip. I'm going to focus on the latter: how to send a program (= program) a chip. Well, that was the plan.</p>
 <p>Unfortunately, in the meantime, the coronavirus has hit Spain (and the whole world). We are now all in quarantine, with no access to the lab. I will have to work from home, with the equipment I already have, nothing more.</p>
-<p><figure class="md"><img alt="pomo-circuit-playground" src="medias/embedded-programming-pomo-circuit-playground.jpeg"><figcaption>pomo-circuit-playground</figcaption></figure>
+<figure class="md"><img alt="pomo-circuit-playground" src="medias/embedded-programming-pomo-circuit-playground.jpeg"><figcaption>pomo-circuit-playground</figcaption></figure>
 <p>For this reason, I'm going to use a <a href="https://www.adafruit.com/product/3333" target="_blank">Circuit Playground Express</a>. This tiny board is already equipped with 10 mini NeoPixels, 1 motion sensor, 1 temperature sensor, 1 sound sensor, 1 mini speaker, 2 push buttons, 1 slide switch, infrared receiver and transmitter and 8 alligator-clip friendly input/output pins. It's a perfect board for quick prototyping and code experiments.</p>
 </section>
 <footer>
@@ -274,7 +274,7 @@ pyupdi.py -d tiny1614 -c /dev/ttyUSB0 -b 9600 -f /tmp/arduino_build_342195/Blink
 <p><a href="https://gitlab.fabcloud.org/barcelonaworkshops/barduino-2.0" target="_blank">Barduino 2.0, Gitlab</a></p>
 </blockquote>
 </blockquote>
-<p><figure class="md"><img alt="arduino-pic" src="medias/embedded-programming-esp32-barduino-barduino-pic.jpeg"><figcaption>arduino-pic</figcaption></figure>
+<figure class="md"><img alt="arduino-pic" src="medias/embedded-programming-esp32-barduino-barduino-pic.jpeg"><figcaption>arduino-pic</figcaption></figure>
 <p>To use that board with PlatformIO, <code>pio init</code> a new project specifically for the ESP32 chip.</p>
 <p><code>$ pio project init --board esp32-devkitlipo</code></p>
 <p>This command generates the <code>platformio.ini</code> files with the desired values.</p>
@@ -285,7 +285,7 @@ board = esp32-devkitlipo
 framework = arduino
 </pre>
 <h2 id="pinout">Pinout</h2>
-<p><figure class="lg"><img alt="arduino-pinouts" src="medias/embedded-programming-esp32-barduino-barduino-pinouts.png"><figcaption>arduino-pinouts</figcaption></figure>
+<figure class="lg"><img alt="arduino-pinouts" src="medias/embedded-programming-esp32-barduino-barduino-pinouts.png"><figcaption>arduino-pinouts</figcaption></figure>
 <p>Then, as we can see on the datasheet, the ID of the programmable test LED is <code>13</code>. We can use it to test if our board and our configuration work properly.</p>
 <h2 id="programmer-slider-switch">Programmer slider switch</h2>
 <p>Also, there is a <em>Programmer Slider Switch</em> that changes the behaviour of the chip and tells it wheter it's in programming mode or execution mode. Obviously, we have to turn it to the left, the programming mode, before uploading our program.</p>
@@ -360,9 +360,9 @@ lib_deps =
 <h3 id="run-upload">Run &amp; upload</h3>
 <p>Write your program into the <code>src</code> folder. The librairies have to be included at the very beginning of your program's files. In this case, the Arduino framework <code>#include &lt;Arduino.h&gt;</code> and the Circuit Playground framework <code>#include &lt;Adafruit_CircuitPlayground.h&gt;</code>.</p>
 <p>Once everything is set up (not that much actually, because PlatformIO does a few thing for us), launch the <code>$ pio run</code> command to run and compile the code.</p>
-<p><figure class="lg"><img alt="pio-run" src="medias/embedded-programming-platformio-pio-run.jpeg"><figcaption>pio-run</figcaption></figure>
+<figure class="lg"><img alt="pio-run" src="medias/embedded-programming-platformio-pio-run.jpeg"><figcaption>pio-run</figcaption></figure>
 <p>If it has been verified correctly, send it to your board to make it alive by typing <code>pio run -t upload</code>.</p>
-<p><figure class="lg"><img alt="pio-upload" src="medias/embedded-programming-platformio-pio-upload.jpeg"><figcaption>pio-upload</figcaption></figure>
+<figure class="lg"><img alt="pio-upload" src="medias/embedded-programming-platformio-pio-upload.jpeg"><figcaption>pio-upload</figcaption></figure>
 <p>I have been using my pomodoro timer every day since I coded it, the Circuit Playground is always by my computer to remind me to take a 5-minutes break every 25 minutes and help me stay focused.</p>
 </section>
 <footer>

@@ -157,7 +157,7 @@ def html_update(html, slug):
                 article_sub_file = str(article_file['href']).replace(
                     'medias/' + slug, 'medias/' + article_sub_slug)
                 html = html.replace(article_file['href'], article_sub_file)
-    html = html.replace('<p><figure>', '<figure>')
+    html = html.replace('<p><figure', '<figure')
     html = html.replace('</img></figure></p>', '</figure>')
     html = html.replace('</img></figure>', '</figure>')
     html = html.replace('</figure></p>', '</figure>')
