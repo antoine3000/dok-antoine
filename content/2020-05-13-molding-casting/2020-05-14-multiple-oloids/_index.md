@@ -1,6 +1,8 @@
 ---
 title: Multiple oloids
 last_update: 2020-10-04
+featured_image: final-result-2.jpg
+tags: molding-casting
 ---
 
 ![](oloid-model.png)
@@ -112,6 +114,13 @@ The final result is quite impressive. The lines we can see were produced by the 
 
 This step consists of making a positive mold using silicon and the previously milled negative mold. The general idea is quite simple: fill the mold with silicon, wait and unmold. Let's now take a detailed look at the different steps.
 
+### About silicon
+
+> Silicon is a chemical element with the symbol Si and atomic number 14. It is a hard, brittle crystalline solid with a blue-grey metallic lustre, and is a tetravalent metalloid and semiconductor.
+> > [Wikipedia](https://en.wikipedia.org/wiki/Silicon)
+
+![](silicon.jpg)
+
 ### Knowing the quantity of material required
 
 As we don't want to prepare too much material, silicon in this case, and waste it, it is good practice to measure the volume of our mold in order to prepare the right amount of material. To do this, a simple trick is to fill the mold with water and measure the volume.
@@ -182,7 +191,7 @@ Press the two parts of the mold together to be sure that there is no leak, and t
 
 <video><source src="pouring-first-material.mp4"></video>
 
-After a bit more than an hour, the material is supposed to be dry and the mold can be unmold. I always prefer to be careful and count the extra time before demoulding, I don't want to lose this long process because of my impatience.
+After a bit more than an hour, the material is supposed to be dry and the mold can be unmold. I always prefer to be careful and count the extra time before demolding, I don't want to lose this long process because of my impatience.
 
 ![](first-result-1.jpg)
 
@@ -190,21 +199,23 @@ Here is the result. The last step is now to cut the two pipes and sand the piece
 
 ![](first-result-2.jpg)
 
-As you can see, there is a colour change on the upper part. This is because I didn't prepare enough material before pouring it into the mould. I had to quickly remix a small amount of material to pour it before the silicone dried. I thought I had done it quickly enough so as not to mark the final object, but I was wrong. A tiny time difference causes a visible in the final product.
+As you can see, there is a colour change on the upper part. This is because I didn't prepare enough material before pouring it into the mold. I had to quickly remix a small amount of material to pour it before the silicone dried. I thought I had done it quickly enough so as not to mark the final object, but I was wrong. A tiny time difference causes a visible in the final product.
 
 Luckily for my geometry experiment, this has no effect on the volume, the feel is the same all over the surface of the oloid.
 
 ![](first-result-3.jpg)
 
+### Conclusion
 
+I like the rendering of this platinum silicon. It almost looks like it is made of clay. It's easy to work with, the final result is super smooth and respects all the details the object can have.
 
 ## Pine resin
 
-Next on my list of experiments is pine resin. It is a natural material that seems easy to work with. Just melt the resin before pouring it into the mould.
+Next on my list of experiments is pine resin. It is a natural material that seems easy to work with. Just melt the resin before pouring it into the mold.
 
 ![](pine-resin-2.jpg)
 
-I wasn't sure how much to use, but I soon realised that this variable is not so important with this material. Any surplus will be reusable once the pine resin has dried. The only thing I can lose here is the curing time.
+I wasn't sure how much to use, but I soon realised that this variable is not so important with this material. Any surplus will be reusable once the pine resin has dried. The only thing I can lose here is the cooking time.
 
 ![](pine-resin-1.jpg)
 ![Look at this beaty](pine-resin-3.jpg)
@@ -217,20 +228,30 @@ The pine resin melted in less than 20 minutes. Once it is ready, the next steps 
 ![](pine-resin-7.jpg)
 ![](pine-resin-8.jpg)
 
+### Conclusion
+
+I really like the result of this pine resin. It is imperfect, fragile, organic. I don't think it meets the expectations that one can have when one thinks of digital fabrication, as a process that can produce the same result over and over again when everything is set up correctly. This material leaves room for an unexpected textured result.
+
 ## Urethane resin
+
+My latest experience is with urethane resin. The result produced is supposed to be white/transparent. But I wanted to play with it a bit more, when I mixed the two parts together I added a drop of black pigment without mixing it well to get a kind of marbled effect. It didn't work as expected because of the texture of the material, but at least I know that now, I think it would have worked better with platinum silicon.
 
 ![](plastic-resin-1.jpg)
 ![](plastic-resin-2.jpg)
 ![](plastic-resin-3.jpg)
+
+The urethane resin began to react within minutes of being poured into the mold. I didn't know what to expect at the time, but the reaction didn't last long, so I didn't have to do anything. I guess this reaction is normal. Phew!
+
 ![](plastic-resin-4.jpg)
 ![](plastic-resin-5.jpg)
 ![](plastic-resin-6.jpg)
 ![](plastic-resin-7.jpg)
 
+### Conclusion
 
+The bubbles present in the final object make me say that this material needs to be worked with more care, to make sure that the mixture is well made, to pour it very slowly into the mold.
 
-
-
+I'm not a big fan of this material, it looks like (or is) a cheap, lightweight plastic. Though I think it can be useful in a context where weight is important. I'm glad to have tested this material, but I don't think I'm going to use it again.
 
 
 # Final results
@@ -238,6 +259,12 @@ The pine resin melted in less than 20 minutes. Once it is ready, the next steps 
 ![](final-result-2.jpg)
 ![](final-result-3.jpg)
 ![](final-result-4.jpg)
+
+## Conclusion
+
+I love making molds and casted objects, playing with these different materials and spending time experimenting with textures. I think this technique has an important role to play in Fab Labs, as we can get well polished results and easily reproduce objects in "mass".
+
+Watch the following video to see the final result and to observe the oloid family rolling strangely :)
 
 <video><source src="final-result.mp4"></video>
 
