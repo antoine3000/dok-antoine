@@ -37,6 +37,7 @@
 <p class="article__parent">This article is part of: <a href="computer-controlled-machining.html">Computer-controlled machining</a>.</p>
 <!-- tags -->
 <!-- featured image -->
+<figure class="md"><img alt="" class="article__featured" src="medias/computer-controlled-machining-fab-stool-bench-table-stool-3.jpg"><figcaption></figcaption></figure>
 <!-- toc -->
 <section class="article__toc">
 <h2 class="toc__title">Table of content</h2>
@@ -61,18 +62,18 @@
 <li><a href="#export-to-g-code">Export to G-code</a></li>
 </ul></li>
 <li><a href="#fabrication">Fabrication</a></li>
-<li><a href="#remarks">Remarks</a></li>
+<li><a href="#result">Result</a></li>
 <li><a href="#conclusion">Conclusion</a></li>
 <li><a href="#files">Files</a></li>
 </ul>
 </div>
 </section>
 <section class="article__content ts">
-<p>I wanted to have a stool/bench/table for my flat, so I designed and fabricated them using the large CNC at Fab Lab Barcelona.</p>
-<p>I designed one element, the stool, with parametric values and then produced the other element, the bench, automatically. This process can be useful for everyone, to adapt the furnitures (or anything else) to their needs and the context in which it will be used.</p>
+<p>I wanted to have a stool/bench/table for my apartment, a kind of furniture that can be different things because of its dimensions. So I designed and fabricated it using the large CNC at Fab Lab Barcelona.</p>
+<p>I designed it with parametric values. This process can be useful for everyone, to adapt the furnitures (or anything else) to their needs and the context in which it will be used.</p>
 <h1 id="design">Design</h1>
 <p>I first designed this project on paper and then in <a href="https://www.freecadweb.org/" target="_blank">Freecad</a>, my favorite open-source software for 3D modeling.</p>
-<p>The stool/bench consists of a seat, two legs and a stretcher. The bench is simply the long version of the stool.</p>
+<p>The stool/bench/table consists of a seat, two legs and a stretcher.</p>
 <figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-table-stool-view-1.png"><figcaption></figcaption></figure>
 <figure class="md"><img alt="front view" src="medias/computer-controlled-machining-fab-stool-bench-table-stool-view-4.png"><figcaption>front view</figcaption></figure>
 <figure class="md"><img alt="top view" src="medias/computer-controlled-machining-fab-stool-bench-table-stool-view-5.png"><figcaption>top view</figcaption></figure>
@@ -85,6 +86,7 @@
 <p>It is strongly recommended to take a tolerance value into account when working with a CNC machine. This is because the machine will not produce a perfect result and if the cuts are too tight, there is a good chance that it will be almost impossible to put the project together.</p>
 <figure class="md"><img alt="Tolerance detail" src="medias/computer-controlled-machining-fab-stool-bench-table-tolerance.png"><figcaption>Tolerance detail</figcaption></figure>
 <p>In this case I used a tolerance value of <code>0.2 mm</code>. This means that there is an extra <code>0.1 mm</code> on each side of the cut to make sure that the parts fit together.</p>
+<p>Update: the tolerance value I used wasn't enough, I had to sand the mortises in order to join the different elements together.</p>
 <h3 id="dogbones">Dogbones</h3>
 <p>Right angles are not accessible by the endmills, which will produce an undesirable result.</p>
 <p>To avoid this, it is common practice to create dog bone shapes by adding holes the size of the endmill in the right angles. The space left by the cut will then correspond to the piece that is supposed to fit into it.</p>
@@ -194,8 +196,10 @@
 <li>Unscrew the screws</li>
 <li>Sand the egdes of the pieces to obtain a nice result</li>
 </ol>
-<h1 id="remarks">Remarks</h1>
-<p>It was supposed to be stool, and then maybe an extra version to make a bench. But I'm not sure how I messed up with the dimensions and ended up with a bench/table. Yep it's bigger than I had imagined.</p>
+<h1 id="result">Result</h1>
+<figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-table-stool-1.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-table-stool-2.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-table-stool-3.jpg"><figcaption></figcaption></figure>
 <h1 id="conclusion">Conclusion</h1>
 <p>It's really nice to design something knowing how it will be made afterwards. Designing with constraints, understanding the material and taking into account all the little details that can make a difference. That's part of the reason I'm doing this Fab Academy. CNC is a wonderful machine that can produce all kinds of results, and I'm looking forward to discovering them all.</p>
 <p>At first it was intimidating. The machine is powerful and can be harmful if not used properly and there is a wide range of settings to know and understand to produce the right instructions for the machine (G-code). But once all this is demystified, all that remains is fun and new possibilities.</p>

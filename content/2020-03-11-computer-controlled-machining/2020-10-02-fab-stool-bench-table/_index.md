@@ -1,16 +1,17 @@
 ---
 title: Fab stool/bench/table
+featured_image: stool-3.jpg
 ---
 
-I wanted to have a stool/bench/table for my flat, so I designed and fabricated them using the large CNC at Fab Lab Barcelona.
+I wanted to have a stool/bench/table for my apartment, a kind of furniture that can be different things because of its dimensions. So I designed and fabricated it using the large CNC at Fab Lab Barcelona.
 
-I designed one element, the stool, with parametric values and then produced the other element, the bench, automatically. This process can be useful for everyone, to adapt the furnitures (or anything else) to their needs and the context in which it will be used.
+I designed it with parametric values. This process can be useful for everyone, to adapt the furnitures (or anything else) to their needs and the context in which it will be used.
 
 # Design
 
 I first designed this project on paper and then in [Freecad](https://www.freecadweb.org/), my favorite open-source software for 3D modeling.
 
-The stool/bench consists of a seat, two legs and a stretcher. The bench is simply the long version of the stool.
+The stool/bench/table consists of a seat, two legs and a stretcher.
 
 ![](stool-view-1.png)
 ![front view](stool-view-4.png)
@@ -33,6 +34,8 @@ It is strongly recommended to take a tolerance value into account when working w
 ![Tolerance detail](tolerance.png)
 
 In this case I used a tolerance value of `0.2 mm`. This means that there is an extra `0.1 mm` on each side of the cut to make sure that the parts fit together.
+
+Update: the tolerance value I used wasn't enough, I had to sand the mortises in order to join the different elements together.
 
 ### Dogbones
 
@@ -148,10 +151,11 @@ Two files must be exported. The first one contains the screw data, which we will
 10. Unscrew the screws
 11. Sand the egdes of the pieces to obtain a nice result
 
-# Remarks
+# Result
 
-It was supposed to be stool, and then maybe an extra version to make a bench. But I'm not sure how I messed up with the dimensions and ended up with a bench/table. Yep it's bigger than I had imagined.
-
+![](stool-1.jpg)
+![](stool-2.jpg)
+![](stool-3.jpg)
 
 # Conclusion
 
