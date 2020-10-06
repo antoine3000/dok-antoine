@@ -1,6 +1,6 @@
 ---
 title: Multiple oloids
-last_update: 2020-10-04
+last_update: 2020-10-06
 featured_image: final-result-2.jpg
 tags: molding-casting
 ---

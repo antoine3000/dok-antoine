@@ -1,6 +1,7 @@
 ---
 title: Fab stool/bench/table
 featured_image: stool-3.jpg
+last_update: 2020-10-06
 ---
 
 I wanted to have a stool/bench/table for my apartment, a kind of furniture that can be different things because of its dimensions. So I designed and fabricated it using the large CNC at Fab Lab Barcelona.
