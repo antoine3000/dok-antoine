@@ -115,7 +115,7 @@ Do each step on a different layer.
 - Cut levels
   - Total Cut Depth: `3` for the screws, then `15.5` (material thickness + margin) for the rest
   - Rough Depth Cut: `3` (3 mm on each layer, we don't want to force the tool)
-- Entry/Exit: `None` and `None`, this is not needed for wood
+- Entry/Exit: `None` and `None`, this is not needed for wood'()
 - Advanced Cut Parameters (for the profiling)
   - Bridges: `Rectangular`
   - Bidge Height: `4`
@@ -151,6 +151,16 @@ Two files must be exported. The first one contains the screw data, which we will
 9. Cut the brigdes using an hammer and a chisel
 10. Unscrew the screws
 11. Sand the egdes of the pieces to obtain a nice result
+
+![](cnc-milling-2.jpg)
+![](cnc-milling-1.jpg)
+
+<video><source src="cnc-milling-web.mp4"></video>
+
+![](cnc-milling-3.jpg)
+![](cnc-milling-4.jpg)
+
+
 
 # Result
 
