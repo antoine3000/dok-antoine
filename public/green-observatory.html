@@ -46,6 +46,32 @@
 <h2 class="toc__title">Table of content</h2>
 <h3 class="toc__title--sub"><a href="green-observatory.html#green-observatory-introduction">Introduction</a></h3>
 <h3 class="toc__title--sub"><a href="green-observatory.html#green-observatory-input">Electronics: Input</a></h3>
+<div class="toc__list--sub"><ul>
+<li><a href="#introduction">Introduction</a>
+<ul>
+<li><a href="#research">Research</a></li>
+</ul></li>
+<li><a href="#key-electronics-components">Key electronics components</a>
+<ul>
+<li><a href="#atmega-16-u2">ATMega 16-U2</a></li>
+<li><a href="#resonator-24-mhz">Resonator 24 MHz</a></li>
+<li><a href="#mini-usb">Mini USB</a></li>
+<li><a href="#555-ic-timer">555 IC Timer</a></li>
+</ul></li>
+<li><a href="#design">Design</a></li>
+<li><a href="#fabrication">Fabrication</a>
+<ul>
+<li><a href="#milling">Milling</a></li>
+<li><a href="#soldering">Soldering</a></li>
+<li><a href="#testing">Testing</a></li>
+</ul></li>
+<li><a href="#result">Result</a></li>
+<li><a href="#atmega-16-u2-2">ATMega 16-U2</a></li>
+<li><a href="#programmation">Programmation</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#files">Files</a></li>
+</ul>
+</div>
 <h3 class="toc__title--sub"><a href="green-observatory.html#green-observatory-output">Electronics: Output</a></h3>
 <h3 class="toc__title--sub"><a href="green-observatory.html#green-observatory-inflatable">Making of the inflatable part</a></h3>
 <div class="toc__list--sub"><ul>
@@ -63,6 +89,7 @@
 <li><a href="#first-step">First step</a></li>
 <li><a href="#second-step">Second step</a></li>
 <li><a href="#corrections-2">Corrections</a></li>
+<li><a href="#mistakes-encountered">Mistakes encountered</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#result">Result</a></li>
@@ -99,7 +126,55 @@
 <!-- tags -->
 <!-- content -->
 <section class="article__content ts">
-<p></p>
+<h1 id="introduction">Introduction</h1>
+<p>The goal of this project is to build an electronic board that can receive signals from a plant via electrodes placed on its leaves and send instructions to another board dedicated to the outputs (12 V). The calculations are performed by the microchip. The data can be read on a computer via USB.</p>
+<h2 id="research">Research</h2>
+<p>I have previously researched and created a prototype of what could be an easy setup to (try) listen to the electrical activity of plants. I did this using an Arduino Uno and a 555 IC timer on a breadboard. You can read more on the page dedicated to this topic.</p>
+<p><a class="btn" href="final-project-research-input-plant-activity.html" target="_blank">Research / Sensing the electrical activity of a plant</a></p>
+<p>I don't know how relevant the data I collect is though, but I feel that detecting any kind of electrical activity from a plant is good for my project.</p>
+<p>Don't forget that the main idea of my project is to invite humans to observe nature and to get closer to it. I am not looking for scientific accuracy at all costs, although I would ideally like to achieve it.</p>
+<figure class="md"><img alt="First prototype" src="medias/green-observatory-input-prototype.jpg"><figcaption>First prototype</figcaption></figure>
+<h1 id="key-electronics-components">Key electronics components</h1>
+<h2 id="atmega-16-u2">ATMega 16-U2</h2>
+<p>After some discussions with my instructors at Fab Lab Barcelona, I decided to test the (poorly documented) <code>ATMega 16-U2</code> chip. It is available in the lab inventory, it speaks USB, has the minimum requirements for my project (and this is the microchip used in the Arduino Uno to exchange data via USB). I always prefer to use appropriate hardware, and especially in this context of custom electronics.</p>
+<p>I thought it was a good idea to design my electronics around this chip (but it wasn't). I will talk later about the problems I encountered with the ATMEGA 16-U2, and why using it might be a bad idea.</p>
+<h2 id="resonator-24-mhz">Resonator 24 MHz</h2>
+<p>An additional cystal/resonator must be coupled to the ATMega 16-U2 for it to work with USB.
+According to Andrew Mao's <a href="http://fab.cba.mit.edu/classes/863.14/people/andrew_mao/week11/" target="_blank">documentation</a>:</p>
+<blockquote>
+<p>In order to use Full-speed (12 Mbit/s) USB, the microcontroller needs to be able to generate a precize 48 MHz clock with a deviation of no more than 0.25%. Since resonators have 0.5% tolerance, This means only quartz crystals can be used, and moreover they need to evenly divide into this frequency in order for a phase-locked loop to generate this clock. For the ATMega16U2, this will require a 8MHz or 16MHz crystal - no substitutes.</p>
+</blockquote>
+<p>Oscar Gonzalez, one of my instructors, recommended that I use a resonator rather than a crystal because it is easier to design and solder, since it is only one piece, than a crystal. A resonator offers an extra precision that I don't need in my project.</p>
+<p>Any crystal/resonator that operates at a frequency that is a multiple of 12 should work. It could be a <code>12 MHz</code>, <code>24 MHZ</code> or <code>48 MHz</code>. I opted for the <code>resonator 24 MHz</code> because it is available in the lab's inventory.</p>
+<h2 id="mini-usb">Mini USB</h2>
+<p>I opted for a mini USB port rather than a micro USB, even if the latter is more used nowadays. The micro USB is so small that it is difficult to solder, but also very fragile. Therefore it is not recommended to use it for prototypes. However, I think it would be better to use it for a final product, simply because people are more likely to already have a cable compatible with it.</p>
+<h2 id="555-ic-timer">555 IC Timer</h2>
+<p>This component works as a square wave generator and the values it gives can be modified by changing the resistance of the circuit. If the plant has a variation in its electrical activity, its resistance changes and so the square wave generated by the timer.</p>
+<p>Update: Neil Gershenfeld, during my final presentation, told me that this component is now obsolete and that every new microchip has its function integrated. To be honest, I'm not sure what to make of his remark, I have to investigate a little more.</p>
+<h1 id="design">Design</h1>
+<p>I design electronics boards with <a href="https://kicad-pcb.org/" target="_blank">KiCad</a>, a cross platform and open source electronics design automation suite.</p>
+<figure class="md"><img alt="" src="medias/green-observatory-input-design-01.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/green-observatory-input-design-02.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/green-observatory-input-design-03.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/green-observatory-input-design-04.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/green-observatory-input-design-05.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/green-observatory-input-design-06.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/green-observatory-input-design-07.png"><figcaption></figcaption></figure>
+<h1 id="fabrication">Fabrication</h1>
+<h2 id="milling">Milling</h2>
+<h2 id="soldering">Soldering</h2>
+<h2 id="testing">Testing</h2>
+<h1 id="result">Result</h1>
+<h1 id="atmega-16-u2-2">ATMega 16-U2</h1>
+<h1 id="programmation">Programmation</h1>
+<h1 id="conclusion">Conclusion</h1>
+<h1 id="files">Files</h1>
+<figure class="md"><img alt="" src="medias/green-observatory-input-input-01.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/green-observatory-input-input-02.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/green-observatory-input-input-03.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/green-observatory-input-input-04.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/green-observatory-input-input-05.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/green-observatory-input-input-06.jpg"><figcaption></figcaption></figure>
 </section>
 <footer>
 <p>✎ <span>Created</span> 16/06/2020</p>
@@ -174,15 +249,29 @@
 <figure class="md"><img alt="" src="medias/green-observatory-inflatable-inflatable-process-11.jpg"><figcaption></figcaption></figure>
 <h3 id="second-step">Second step</h3>
 <p>Then for the second step, I removed the disk in the middle, fliped the silicon piece and put the disk in the center again. I then poured a thin layer of silicon on top of it. Remember that the idea is to capture the acrylic disc in the middle of the silicone while keeping empty spaces for air circulation.</p>
+<ul>
+<li>Unscrew the structure and flip the mold</li>
+<li>Clean everything</li>
+<li>Place the disc in the center, on the first silicon layer.</li>
+<li>glue the holes (with transparent adhesive tape)</li>
+<li>Calculate the new volume to be cast, and prepare the silicon mixture</li>
+<li>Pour and try to reach a thickness of about 1.5 mm.</li>
+</ul>
 <figure class="md"><img alt="" src="medias/green-observatory-inflatable-inflatable-process-19.jpg"><figcaption></figcaption></figure>
 <figure class="md"><img alt="" src="medias/green-observatory-inflatable-inflatable-process-14.jpg"><figcaption></figcaption></figure>
-<p>The ideal thickness is between <code>1.5 mm</code> to <code>3 mm</code>. The thinner it is, the flexer but also more fragile it will be. This step may require several tests.</p>
+<p>The ideal thickness is between <code>1 mm</code> to <code>2.5 mm</code>. The thinner it is, the flexer but also more fragile it will be. This step may require several tests.</p>
 <h3 id="corrections-2">Corrections</h3>
 <p>Silicon is a very tolerant material. Errors can (almost) always be corrected.</p>
 <ul>
 <li>If the mixing has not been done correctly, the silicon will not stick. It is then easy to peel it off and redo the step that went wrong.</li>
 <li>If the top layer is too thin and therefore fragile, simply cover it with another thin layer to complete it. The two layers of silicon will merge and leave no trace.</li>
 <li>If the top layer is too thick and you see it before it is completely dry, peel it off, clean it and start again.</li>
+</ul>
+<h3 id="mistakes-encountered">Mistakes encountered</h3>
+<ul>
+<li>When mixing the silicon, I calculated the volume needed to fill the mold without subtracting the internal parts, I ended up with a waste of silicon (which is expensive)</li>
+<li>I used white masking tape in the first version I did, which was much too visible and therefore un-aesthetic</li>
+<li>During my first attempt, the second layer of silicone was too thin, the inflation worked but I tore the membrane</li>
 </ul>
 <figure class="md"><img alt="" src="medias/green-observatory-inflatable-inflatable-process-20.jpg"><figcaption></figcaption></figure>
 <h1 id="result">Result</h1>

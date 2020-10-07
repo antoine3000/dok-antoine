@@ -91,18 +91,3 @@ The *Strelitzia reginae* and its big leaves is even more reactive than the Aloca
 
 TODO: Prototype with an Arduino Uno and a breadboard
 
-# Questions
-
-QUESTION: How to program the ATmega328P?
-
-- [ How to Program an ATmega328 MCU on a Custom PCB](https://maker.pro/custom/tutorial/programming-an-atmega328-microcontroller-on-a-pcb)
-
-- SPI + add a Resonator 20MHZ (increase the speed)
-
-QUESTION: What connections do I need for sending data to the pumps?
-
-QUESTION: How to connect a power supply?
-
-QUESTION: How to convert 12V to 3V?
-
-QUESTION: Is 3V enough for the sensor?

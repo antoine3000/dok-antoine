@@ -82,11 +82,19 @@ As you can see, I used two acrylic sticks pushed into the holes of the disc to m
 
 Then for the second step, I removed the disk in the middle, fliped the silicon piece and put the disk in the center again. I then poured a thin layer of silicon on top of it. Remember that the idea is to capture the acrylic disc in the middle of the silicone while keeping empty spaces for air circulation.
 
+- Unscrew the structure and flip the mold
+- Clean everything
+- Place the disc in the center, on the first silicon layer.
+- glue the holes (with transparent adhesive tape)
+- Calculate the new volume to be cast, and prepare the silicon mixture
+- Pour and try to reach a thickness of about 1.5 mm.
+
+
 ![](inflatable-process-19.jpg)
 ![](inflatable-process-14.jpg)
 
 
-The ideal thickness is between `1.5 mm` to `3 mm`. The thinner it is, the flexer but also more fragile it will be. This step may require several tests.
+The ideal thickness is between `1 mm` to `2.5 mm`. The thinner it is, the flexer but also more fragile it will be. This step may require several tests.
 
 ### Corrections
 
@@ -95,6 +103,13 @@ Silicon is a very tolerant material. Errors can (almost) always be corrected.
 - If the mixing has not been done correctly, the silicon will not stick. It is then easy to peel it off and redo the step that went wrong.
 - If the top layer is too thin and therefore fragile, simply cover it with another thin layer to complete it. The two layers of silicon will merge and leave no trace.
 - If the top layer is too thick and you see it before it is completely dry, peel it off, clean it and start again.
+
+### Mistakes encountered
+
+- When mixing the silicon, I calculated the volume needed to fill the mold without subtracting the internal parts, I ended up with a waste of silicon (which is expensive)
+- I used white masking tape in the first version I did, which was much too visible and therefore un-aesthetic
+- During my first attempt, the second layer of silicone was too thin, the inflation worked but I tore the membrane
+
 
 ![](inflatable-process-20.jpg)
 
