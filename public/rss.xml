@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Wed, 07 Oct 2020 12:41:45 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Wed, 07 Oct 2020 14:15:00 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="large:4449-01.jpg" alt="" /&gt;
 &lt;img src="large:4449-02.jpg" alt="" /&gt;
@@ -395,7 +395,7 @@ To be able to compile the code, f...</description><pubDate>Fri, 20 Mar 2020 00:0
 &lt;h1 id="hardware"&gt;Hardware&lt;/h1&gt;
 
 &lt;p&gt;I'm using two &lt;a target="_blank" href="https://www.nodem...</description><pubDate>Wed, 06 May 2020 00:00:00 +0200</pubDate></item><item><title>Molding and casting</title><link>https://antoine.studio/molding-casting.html</link><description>&lt;p&gt;For this week's assignment, I will design and mill a two-sided mold to make multiple oloids using the &lt;em&gt;molding and casting&lt;/em&gt; technique. As part of the group assignment, I will explore various materials, which unfortunately I cannot do as a group due to this strange period of the COVID-19 pandemic.&lt;/p&gt;
-...</description><pubDate>Wed, 13 May 2020 00:00:00 +0200</pubDate></item><item><title>Multiple oloids</title><link>https://antoine.studio/molding-casting-multiple-oloids.html</link><description>&lt;p&gt;&lt;img src="oloid-model.png" alt="" /&gt;&lt;/p&gt;
+...</description><pubDate>Wed, 13 May 2020 00:00:00 +0200</pubDate></item><item><title>Multiple oloids</title><link>https://antoine.studio/molding-casting-multiple-oloids.html</link><description>&lt;p&gt;&lt;img src="oloid-model.png:flux" alt="" /&gt;&lt;/p&gt;
 
 &lt;p&gt;Remember the oloid I printed during the &lt;a target="_blank" href="3D-scanning-printing-oloid-shape.html"&gt;3D printing&lt;/a&gt; week?
 For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold an oloid and to cast it in the variety of materials that we have here, in Fab Lab Barcelona.&lt;/p&gt;
@@ -412,7 +412,7 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 
 &lt;p&gt;I'll use the oloid model I already did as a starting point.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="mold-free...</description><pubDate>Tue, 06 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Wildcard</title><link>https://antoine.studio/wildcard.html</link><description>&lt;p&gt;For this week's assignement, we were asked to design and produce something with a digital fabrication process that is not covered by any other assignment.&lt;/p&gt;
+&lt;p&gt;&lt;img src="mold...</description><pubDate>Tue, 06 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Wildcard</title><link>https://antoine.studio/wildcard.html</link><description>&lt;p&gt;For this week's assignement, we were asked to design and produce something with a digital fabrication process that is not covered by any other assignment.&lt;/p&gt;
 
 &lt;p&gt;I decided to present the fabrication of an inflatable part. This was documented as part of my final project. You can find its content on the page dedicated to it.&lt;/p&gt;
 

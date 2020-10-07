@@ -71,7 +71,7 @@ The first step consists of using the mold with the disc fixed in the center and 
 ![](small:inflatable-process-08.jpg)
 ![](small:inflatable-process-09.jpg)
 
-![](large:inflatable-process-16.jpg)
+![](large:inflatable-process-16.jpg:flux)
 ![](large:inflatable-process-17.jpg)
 
 As you can see, I used two acrylic sticks pushed into the holes of the disc to make sure that the silicon cannot block future air passages.
@@ -104,7 +104,7 @@ I'm super happy with the result. The silicon piece I produced got the texture I 
 
 <video><source src="inflatable-process-18.mp4"></video>
 
-![the inflatable part mounted on my final project](inflatable-result.jpg)
+![the inflatable part mounted on my final project](inflatable-result.jpg:flux)
 
 # Conclusion
 

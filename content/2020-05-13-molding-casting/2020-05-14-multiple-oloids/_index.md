@@ -5,7 +5,7 @@ featured_image: final-result-2.jpg
 tags: molding-casting
 ---
 
-![](oloid-model.png)
+![](oloid-model.png:flux)
 
 Remember the oloid I printed during the [3D printing](3D-scanning-printing-oloid-shape.html) week?
 For this *Molding & Casting* week, I'm going to mold an oloid and to cast it in the variety of materials that we have here, in Fab Lab Barcelona.
@@ -126,7 +126,7 @@ This step consists of making a positive mold using silicon and the previously mi
 As we don't want to prepare too much material, silicon in this case, and waste it, it is good practice to measure the volume of our mold in order to prepare the right amount of material. To do this, a simple trick is to fill the mold with water and measure the volume.
 
 ![](small:wax-release-1.jpg)
-![](small:wax-release-2.jpg)
+![](small:wax-release-2.jpg:flux)
 
 ### Applying a release agent on the mold
 
@@ -218,7 +218,7 @@ Next on my list of experiments is pine resin. It is a natural material that seem
 I wasn't sure how much to use, but I soon realised that this variable is not so important with this material. Any surplus will be reusable once the pine resin has dried. The only thing I can lose here is the cooking time.
 
 ![](pine-resin-1.jpg)
-![Look at this beaty](pine-resin-3.jpg)
+![Look at this beaty](pine-resin-3.jpg:flux)
 ![](pine-resin-4.jpg)
 
 The pine resin melted in less than 20 minutes. Once it is ready, the next steps are the same as for the previous test material above.
@@ -226,7 +226,7 @@ The pine resin melted in less than 20 minutes. Once it is ready, the next steps 
 ![](pine-resin-5.jpg)
 ![](pine-resin-6.jpg)
 ![](pine-resin-7.jpg)
-![](pine-resin-8.jpg)
+![](pine-resin-8.jpg:flux)
 
 ### Conclusion
 

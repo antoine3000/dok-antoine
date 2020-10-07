@@ -157,7 +157,7 @@ Two files must be exported. The first one contains the screw data, which we will
 
 <video><source src="cnc-milling-web.mp4"></video>
 
-![](cnc-milling-3.jpg)
+![](cnc-milling-3.jpg:flux)
 ![](cnc-milling-4.jpg)
 
 
@@ -165,8 +165,8 @@ Two files must be exported. The first one contains the screw data, which we will
 # Result
 
 ![](stool-1.jpg)
-![](stool-2.jpg)
-![](stool-3.jpg)
+![](stool-2.jpg:flux)
+![](stool-3.jpg:flux)
 
 # Conclusion
 
