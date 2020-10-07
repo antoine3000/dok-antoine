@@ -49,37 +49,62 @@ Update: Neil Gershenfeld, during my final presentation, told me that this compon
 
 # Design
 
-I design electronics boards with [KiCad](https://kicad-pcb.org/), a cross platform and open source electronics design automation suite.
+I design electronics boards with [KiCad](https://kicad-pcb.org/), a cross platform and open source electronics design automation suite. You will find the files at the end of this article.
 
-![](design-01.png)
-![](design-02.png)
+I have already explained how to [design electronics](file:///home/antoine/repo/dok-antoine-studio/public/electronics-design.html) and how to [produce electronics](file:///home/antoine/repo/dok-antoine-studio/public/electronics-production.html). Feel free to read my documentation on these subjects.
+
+## Schematics
+
 ![](design-03.png)
 ![](design-04.png)
 ![](design-05.png)
 ![](design-06.png)
 ![](design-07.png)
 
+## PCB design
+
+![](design-01.png)
+![](design-02.png)
+
+### Tips
+
+- Verify the correct clearance before tracing the routes
+- Global deletation > tracks, to delete all the tracks as soon as I'm blocked. It's easier to retrace everything correctly than trying to modify existing tracks that don't work
+- Clean tracks to make sure there are no unwanted portions of tracks
+- Trace a common ground at the end of the design process
+  
 # Fabrication
 
-## Milling
+![Fresh out of the mini milling machine](input-01.jpg)
+![My shopping list, just before the soldering](input-02.jpg)
+![A trick solder to solder the microchip without making it move](input-03.jpg)
+![](input-04.jpg)
+![](input-05.jpg)
 
-## Soldering
+## Debugging
 
-## Testing
+I thought my electronic board was well made, or at least it looked like it. But when I tried to connect it to my computer, I got nothing except an error message saying that an element was asking an higher voltage than what my computer can provide, which means there is a short somewhere.
 
-# Result
+I spent hours trying to find the short, but since I have a common ground, meaning that everything except the tracks is ground, it was very difficult to find it.
+
+Finally, I decided to redo my board, but this time whit constant continuity check between each operation, that is the only way to make sure that everything is as it should be.
+
+
+![First and second attempt](input-06.jpg)
+
+In the end, I discovered that a track passing under a component was grounded because the clearance I had defined in my design was too small. I scratched a bit the PCB between the track and the common group to separate them, and it worked. That lesson took me hours of work.
 
 # ATMega 16-U2
+
+The ATMega 16-U2, as I said before, was supposed to be a good candidate for my electronic project, but it was not.
+
+This chip is the second chip of an Arduino Uno, being there only for the USB protocol, even though this chip is much better than that. But because of this context, all the research that can be done on the Internet on this subject is always drowned under a huge layer of results concerning the Uno. This makes searching for information very difficult, if not impossible.
+
+Also, the datasheet of the ATMega 16-U2 is very cryptic. There is no clear pinout diagram, which is more than useful for programming.
+
 
 # Programmation
 
 # Conclusion
 
 # Files
-
-![](input-01.jpg)
-![](input-02.jpg)
-![](input-03.jpg)
-![](input-04.jpg)
-![](input-05.jpg)
-![](input-06.jpg)
