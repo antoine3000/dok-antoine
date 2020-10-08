@@ -64,6 +64,10 @@
         {% endfor %}
       </p>
       {% endif %}
+      <!-- featured image -->
+      {% if child.featured_image %}
+      <img src="{{ child.featured_image }}" alt="" class="article__featured">
+      {% endif %}
       <!-- content -->
       <section class="article__content ts">
         {{ child.content }}

@@ -68,6 +68,12 @@ I have already explained how to [design electronics](file:///home/antoine/repo/d
 ![](design-01.png)
 ![](design-02.png)
 
+## Export
+
+![Drills](board-low-Drills.png)
+![Edge cuts](board-low-Edge_Cuts.png)
+![Circuit](board-low-F_Cu.png)
+
 ### Tips
 
 - Verify the correct clearance before tracing the routes
@@ -389,6 +395,10 @@ How boring would a project be if everything worked as planned, right?
 
 # Files
 
-kicad, sml, code
-
+- Kicad electronics design files: [green-observatory.zip](green-observatory.zip)
+- Green observatory - Electronics design: [Gitlab repository](https://gitlab.com/antoinestudio/green-observatory)
+- - Green observatory - Logic (code): [Gitlab repository](https://gitlab.com/antoinestudio/green-observatory-logic)
+- Fabrication file: [board-low-Drills.png](board-low-Drills.png)
+- Fabrication file: [board-low-Edge_Cuts.png](board-low-Edge_Cuts.png)
+- Fabrication file: [board-low-F_Cu.png](board-low-F_Cu.png)
 - 
