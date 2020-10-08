@@ -1,6 +1,7 @@
 ---
 title: Electronics: Input
 featured_image: final-result.png
+last_update: 2020-10-08
 ---
 
 # Introduction
@@ -387,3 +388,7 @@ How boring would a project be if everything worked as planned, right?
 
 
 # Files
+
+kicad, sml, code
+
+- 
