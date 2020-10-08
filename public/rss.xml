@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Wed, 07 Oct 2020 18:14:20 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Thu, 08 Oct 2020 10:46:08 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="large:4449-01.jpg" alt="" /&gt;
 &lt;img src="large:4449-02.jpg" alt="" /&gt;
@@ -345,7 +345,7 @@ To be able to compile the code, f...</description><pubDate>Fri, 20 Mar 2020 00:0
 
 &lt;p&gt;I covered this topic on a different article.&lt;/p&gt;
 
-&lt;p&gt;&lt;a target="_blank" href="button:green-observatory-input-plant-activity.html"&gt;Sensing plants activity&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a target="_blank" href="button:green-observatory-input.html"&gt;Sensing plants activity&lt;/a&gt;&lt;/p&gt;
 ...</description><pubDate>Tue, 15 Sep 2020 00:00:00 +0200</pubDate></item><item><title>Applications and implications</title><link>https://antoine.studio/applications-implications.html</link><description>&lt;h1 id="about-my-final-project"&gt;About my final project&lt;/h1&gt;
 
 &lt;p&gt;For this weeks's assignement, we were asked to answer a series of questions about our final project. I don't really know where I'm going with my project but I guess that's the point of this week: write some very practical facts and see where my main idea goes, and how far I can define it. Let's do that.&lt;/p&gt;
@@ -491,15 +491,13 @@ potential sensing for plant control.&lt;/li&gt;
 ...</description><pubDate>Mon, 15 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Introduction</title><link>https://antoine.studio/green-observatory-introduction.html</link><description>&lt;p&gt;&lt;/p&gt;
 ...</description><pubDate>Mon, 15 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Electronics: Input</title><link>https://antoine.studio/green-observatory-input.html</link><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
 
-&lt;p&gt;The goal of this project is to build an electronic board that can receive signals from a plant via electrodes placed on its leaves and send instructions to another board dedicated to the outputs (12 V). The calculations are performed by the microchip. The data can be read on a computer via USB.&lt;/p&gt;
+&lt;p&gt;The goal of this project is to build an electronic board (low power, 5V) that can receive signals from a plant via electrodes placed on its leaves and send instructions to another board dedicated to the outputs (high power, 12 V). The calculations are performed by the microchip. The data can be read on a computer via USB.&lt;/p&gt;
 
 &lt;h2 id="research"&gt;Research&lt;/h2&gt;
 
 &lt;p&gt;I have previously researched and created a prototype of what could be an easy setup to (try) listen to the electrical activity of plants. I did this using an Arduino Uno and a 555 IC timer on a breadboard. You can read more on the page dedicated to this topic.&lt;/p&gt;
 
-&lt;p&gt;&lt;a target="_blank" href="button:final-project-research-input-plant-activity.html"&gt;Research / Sensing the electrical activity of a plant&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I ...</description><pubDate>Tue, 16 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Electronics: Output</title><link>https://antoine.studio/green-observatory-output.html</link><description>&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a target="_blank" href="button:final-project-research-input-plant-activity.html"&gt;Research / Sensing the electrical activi...</description><pubDate>Tue, 16 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Electronics: Output</title><link>https://antoine.studio/green-observatory-output.html</link><description>&lt;p&gt;&lt;/p&gt;
 ...</description><pubDate>Wed, 17 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Making of the inflatable part</title><link>https://antoine.studio/green-observatory-inflatable.html</link><description>&lt;p&gt;An important part of my final project is the inflatable part, which will help us understand the electrical activity of plants. This part should produce organic movements that react to a flow of air.&lt;/p&gt;
 
 &lt;p&gt;So I have to produce a silicone part that has an air pocket inside that could be inflated and deflated by pushing and pulling a flow of air inside through two pipes (in and out).&lt;/p&gt;
