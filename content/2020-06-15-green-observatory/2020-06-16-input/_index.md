@@ -18,7 +18,7 @@ I don't know how relevant the data I collect is though, but I feel that detectin
 
 Don't forget that the main idea of my project is to invite humans to observe nature and to get closer to it. I am not looking for scientific accuracy at all costs, although I would ideally like to achieve it.
 
-![First prototype](prototype.jpg)
+![First prototype](prototype.jpg:flux)
 
 # Key electronics components
 
@@ -83,7 +83,7 @@ I have already explained how to [design electronics](file:///home/antoine/repo/d
   
 # Fabrication
 
-![Fresh out of the mini milling machine](input-01.jpg)
+![Fresh out of the mini milling machine](input-01.jpg:flux)
 ![My shopping list, just before the soldering](input-02.jpg)
 ![A trick solder to solder the microchip without making it move](input-03.jpg)
 ![](input-04.jpg)
@@ -98,7 +98,7 @@ I spent hours trying to find the short, but since I have a common ground, meanin
 Finally, I decided to redo my board, but this time whit constant continuity check between each operation, that is the only way to make sure that everything is as it should be.
 
 
-![First and second attempt](input-06.jpg)
+![First and second attempt](input-06.jpg:flux)
 
 In the end, I discovered that a track passing under a component was grounded because the clearance I had defined in my design was too small. I scratched a bit the PCB between the track and the common group to separate them, and it worked. That lesson took me hours of work.
 
@@ -383,6 +383,7 @@ int main(void)
 Here is a video shot of my final project, where you can see the inflatable part reacting to the electronics. As I said before, it doesn't react to the activity of the plan but to the operations I wrote previously in the code. This makes it more of a *proof of concept* than a functional part.
 
 <video><source src="electronics-detail-muted.mp4"></video>
+![](final-result.png:flux)
 
 # Conclusion
 
