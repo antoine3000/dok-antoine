@@ -76,10 +76,8 @@
 <ul>
 <li><a href="#limitations">Limitations</a></li>
 <li><a href="#makefile">Makefile</a></li>
-<li><a href="#maincpp">Main.cpp</a>
-<ul>
+<li><a href="#maincpp">Main.cpp</a></li>
 <li><a href="#analog-debugging">Analog debugging</a></li>
-</ul></li>
 </ul></li>
 <li><a href="#result">Result</a></li>
 <li><a href="#conclusion">Conclusion</a></li>
@@ -87,6 +85,21 @@
 </ul>
 </div>
 <h3 class="toc__title--sub"><a href="green-observatory.html#green-observatory-output">Electronics: Output</a></h3>
+<div class="toc__list--sub"><ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#key-electronics-components">Key electronics components</a>
+<ul>
+<li><a href="#air-pump">Air pump</a></li>
+<li><a href="#solenoids">Solenoids</a></li>
+</ul></li>
+<li><a href="#design">Design</a></li>
+<li><a href="#fabrication">Fabrication</a></li>
+<li><a href="#programmation">Programmation</a></li>
+<li><a href="#result">Result</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#files">Files</a></li>
+</ul>
+</div>
 <h3 class="toc__title--sub"><a href="green-observatory.html#green-observatory-inflatable">Making of the inflatable part</a></h3>
 <div class="toc__list--sub"><ul>
 <li><a href="#strategy">Strategy</a></li>
@@ -144,7 +157,7 @@
 <!-- content -->
 <section class="article__content ts">
 <h1 id="introduction">Introduction</h1>
-<p>The goal of this project is to build an electronic board (low power, 5V) that can receive signals from a plant via electrodes placed on its leaves and send instructions to another board dedicated to the outputs (high power, 12 V). The calculations are performed by the microchip. The data can be read on a computer via USB.</p>
+<p>An electronic board (low power, 5V) that receives signals from a plant via electrodes placed on its leaves and sends instructions to <a href="green-observatory-output.html" target="_blank">another board</a> dedicated to the outputs (high power, 12 V). Calculations are performed by a ATmega 16-U2 microchip. The data can be read on a computer via USB.</p>
 <h2 id="research">Research</h2>
 <p>I have previously researched and created a prototype of what could be an easy setup to (try) listen to the electrical activity of plants. I did this using an Arduino Uno and a 555 IC timer on a breadboard. You can read more on the page dedicated to this topic.</p>
 <p><a class="btn" href="final-project-research-input-plant-activity.html" target="_blank">Research / Sensing the electrical activity of a plant</a></p>
@@ -269,7 +282,7 @@ fuse:
 <li>Hold time</li>
 </ol>
 <p>So I wrote my code according to this logic. I invite you to read it below. It should be sufficiently documented to be readable.</p>
-<h3 id="analog-debugging">Analog debugging</h3>
+<h2 id="analog-debugging">Analog debugging</h2>
 <p>Since I don't have access to the Arduino monitor to understand what's going on with the electronics, I had to find another way to get feedback. Luckily, I have an LED on my board that I can use as a "morse" signal. I use it in a certain context, if <code>this happens</code> then <code>blink 1 time</code> but if <code>that happens</code> then <code>blink 2 times</code>.</p>
 <p>Of course, it's not an ideal workflow, but it helped me a lot to understand my electronic project and to continue programming it. To be honest, I love this kind of low-tech solution.</p>
 <pre>
@@ -490,13 +503,28 @@ int main(void)
 <h1 class="article__title">Electronics: Output <a href="green-observatory-output.html">●</a></h1>
 <!-- tags -->
 <!-- featured image -->
+<figure class="md"><img alt="" class="article__featured" src="medias/green-observatory-output-output-01.png"><figcaption></figcaption></figure>
 <!-- content -->
 <section class="article__content ts">
-<p></p>
+<h1 id="introduction">Introduction</h1>
+<p>An electronic board that receives signals from <a href="green-observatory-input.html" target="_blank">an input</a> and controls an air flow using an air pump and four solenoids.</p>
+<p>Note that this project is inspired by <a href="https://www.programmableair.com/" target="_blank">Programmable Air</a>, I simplified it by using one pump instead of two. Once again, thanks to open-source :)</p>
+<h1 id="key-electronics-components">Key electronics components</h1>
+<h2 id="air-pump">Air pump</h2>
+<p>The <a href="https://www.sparkfun.com/products/10398" target="_blank">air pump</a> operates at 12V and has enough suction for my project.</p>
+<h2 id="solenoids">Solenoids</h2>
+<p><a class="link-file" href="medias/green-observatory-output-CJV23.pdf" target="_blank">CJV23 datasheet</a></p>
+<h1 id="design">Design</h1>
+<h1 id="fabrication">Fabrication</h1>
+<h1 id="programmation">Programmation</h1>
+<p><a class="btn" href="green-observatory-input.html#programmation" target="_blank">Input #programmation</a></p>
+<h1 id="result">Result</h1>
+<h1 id="conclusion">Conclusion</h1>
+<h1 id="files">Files</h1>
 </section>
 <footer>
 <p>✎ <span>Created</span> 17/06/2020</p>
-<p>⁂ <span>Updated</span> 17/06/2020</p>
+<p>⁂ <span>Updated</span> 08/10/2020</p>
 </footer>
 </article>
 <article class="article--sub" id="green-observatory-inflatable">

@@ -94,25 +94,6 @@
 <li><a href="#technique">Technique</a></li>
 </ul>
 </div>
-<h3 class="toc__title--sub"><a href="final-project-research.html#final-project-research-electronics-design">Electronics Design</a></h3>
-<div class="toc__list--sub"><ul>
-<li><a href="#components">Components</a>
-<ul>
-<li><a href="#atmega16u2">ATMega16U2</a></li>
-<li><a href="#steps">Steps</a></li>
-<li><a href="#crystal">Crystal</a></li>
-</ul></li>
-<li><a href="#design-tips">Design tips</a></li>
-<li><a href="#export-kicad">Export Kicad</a></li>
-<li><a href="#soldering">Soldering</a>
-<ul>
-<li><a href="#debugging">Debugging</a></li>
-</ul></li>
-<li><a href="#isp-programming">ISP programming</a></li>
-<li><a href="#questions">Questions</a></li>
-<li><a href="#references">References</a></li>
-</ul>
-</div>
 <h3 class="toc__title--sub"><a href="final-project-research.html#final-project-research-input-plant-activity">Sensing the electrical activity of a plant</a></h3>
 <div class="toc__list--sub"><ul>
 <li><a href="#introduction">Introduction</a></li>
@@ -142,8 +123,8 @@
 <a class="btn" href="https://docs.google.com/spreadsheets/d/1nhU3fjO-yuVyLYuE5AC39vmvim1dWyxoJ2PYOr6acvA/edit?usp=sharing" target="_blank">List of materials</a></p>
 </section>
 <footer>
-<p>✎ <span>Created</span> 15/06/2020</p>
-<p>⁂ <span>Updated</span> 15/06/2020</p>
+<p>✎ <span>Created</span> 15/01/2020</p>
+<p>⁂ <span>Updated</span> 15/01/2020</p>
 </footer>
 <article class="article--sub" id="final-project-research-sketches-ideas">
 <!-- title -->
@@ -341,92 +322,6 @@ potential sensing for plant control.</li>
 <footer>
 <p>✎ <span>Created</span> 01/05/2020</p>
 <p>⁂ <span>Updated</span> 01/05/2020</p>
-</footer>
-</article>
-<article class="article--sub" id="final-project-research-electronics-design">
-<!-- title -->
-<h1 class="article__title">Electronics Design <a href="final-project-research-electronics-design.html">●</a></h1>
-<!-- tags -->
-<!-- featured image -->
-<!-- content -->
-<section class="article__content ts">
-<h1 id="components">Components</h1>
-<ul>
-<li>4 solenoids</li>
-<li>1 air pump</li>
-<li>1 microchip ATMega16U2</li>
-</ul>
-<h2 id="atmega16u2">ATMega16U2</h2>
-<ul>
-<li>Same microshop used in the Arduino Uno in order to exchange information via USB</li>
-<li>Has enough pins for my project</li>
-</ul>
-<h2 id="steps">Steps</h2>
-<ul>
-<li>Understand the USB part of the Arduino Uno schematics</li>
-<li>Test how the mosfet + solenoid part is acting in term of voltage drop</li>
-<li>Check the footprints of the different elements
-<ul>
-<li>Are they available?</li>
-<li>Is it ok to solder them?</li>
-<li>Aren't the pads to close to each other, or the lines too thin (or thick)?</li>
-</ul></li>
-<li>Are all the components available at the lab?</li>
-</ul>
-<h2 id="crystal">Crystal</h2>
-<p>Oscar recommended using a resonator instead of the crystal because it is easier to use and solder than the crystals, but I found another piece of advice in the documentation from a former student.</p>
-<p>From Andrew Mao's <a href="http://fab.cba.mit.edu/classes/863.14/people/andrew_mao/week11/" target="_blank">documentation</a>:</p>
-<blockquote>
-<p>In order to use Full-speed (12 Mbit/s) USB, the microcontroller needs to be able to generate a precize 48 MHz clock with a deviation of no more than 0.25%. Since resonators have 0.5% tolerance, This means only quartz crystals can be used, and moreover they need to evenly divide into this frequency in order for a phase-locked loop to generate this clock. For the ATMega16U2, this will require a 8MHz or 16MHz crystal - no substitutes.</p>
-</blockquote>
-<p>But using a crystal induces having more components and thus harder to assemble. According to Oscar, at our level, in the Fab ecosystem, we don't especially need that precision. A resonator is totally fine for what I need.</p>
-<h1 id="design-tips">Design tips</h1>
-<ul>
-<li>Check the correct clearance before tracing the routes</li>
-<li>Apply a common ground at the end of the design</li>
-<li>Global deletation &gt; tracks, as soon as I'm blocked</li>
-<li>Clean tracks to be sure there are no undesired portions of track</li>
-</ul>
-<h1 id="export-kicad">Export Kicad</h1>
-<p>Oscar's project to export SVG to PNG from Kicad using the Inkscape API.
-No holes for now, so I'm using Via's. I've to document that.
-The outer zone of the traces file must be filled in black and then inverted when imported into fabmodules.org.
-- link to gitlab project
-- Command line SVG -&gt; PNG
-- What Oscar has been changed, for Python3 compatibility</p>
-<h1 id="soldering">Soldering</h1>
-<ul>
-<li>I have changed some components when I was doing my shopping list because not all of them were available at the lab. Here is the updated list and what I had planned to use:</li>
-<li>Mini USB is much easier to solder than the micro usb, that why I used it. The only thing with that USB version is that is a bit more complicated to find the right cable.</li>
-</ul>
-<h2 id="debugging">Debugging</h2>
-<ul>
-<li>When plugged to my computer, I first tried to read my USB ports by typing <code>$ lsusb</code> but the new device didn't appear there. Then I checked more deeply with <code>$ dmesg -w</code> and saw that I had an over-current condition on the new device's port.</li>
-</ul>
-<h1 id="isp-programming">ISP programming</h1>
-<p>First of all, I have to program the chip to tell it what will be its behaviour. For that I am going to use a AVRISP mkII programmer.</p>
-<h1 id="questions">Questions</h1>
-<p>QUESTION: How many pumps and solenoid are really needed?</p>
-<ul>
-<li>In the <em>Programmable Air</em> project, they use 2 pumps and 3 valves in order to be able to manipulate entirely an air flow. I would like to reach that precision level but I'm not sure how much is needed</li>
-</ul>
-<p>QUESTION: One single board or few modular ones?</p>
-<ul>
-<li>One single board is easier to do because everything is physically connected together and thus we don't have to think about communication between the different parts. On the other hand, a modular approach allows to prototype faster, to make errors and improvements without having to fabricate everything again. I will begin to design and fabricate a single board and then iterate to different modules according to my time management.</li>
-</ul>
-<h1 id="references">References</h1>
-<ul>
-<li><a href="https://www.arduino.cc/en/uploads/Main/arduino-uno-schematic.pdf" target="_blank">Arduino Uno Schematics</a></li>
-<li><a href="https://rheingoldheavy.com/arduino-from-scratch-part-7-arduino-usb-connection/" target="_blank">Arduino USB Connection</a></li>
-<li><a href="https://www.mouser.es/datasheet/2/268/doc7799-1315152.pdf" target="_blank">ATmega8U2/16U2/32U2 datasheet</a></li>
-<li><a href="http://fab.cba.mit.edu/classes/863.14/people/andrew_mao/week11/" target="_blank">AVR USB Devices and Programming</a></li>
-<li><a href="http://archive.fabacademy.org/2018/labs/barcelona/students/oscar-gonzalezfernandez//2018/04/18/Week-11-Output-Devices.html" target="_blank">Oscar's documentation</a></li>
-<li><a href="https://microcontrollerslab.com/atmega16-microcontroller-pinout-programming-features-applications/" target="_blank">ATMega16u2 pinouts</a></li>
-</ul>
-</section>
-<footer>
-<p>✎ <span>Created</span> 01/06/2020</p>
-<p>⁂ <span>Updated</span> 01/06/2020</p>
 </footer>
 </article>
 <article class="article--sub" id="final-project-research-input-plant-activity">

@@ -6,7 +6,7 @@ last_update: 2020-10-08
 
 # Introduction
 
-The goal of this project is to build an electronic board (low power, 5V) that can receive signals from a plant via electrodes placed on its leaves and send instructions to another board dedicated to the outputs (high power, 12 V). The calculations are performed by the microchip. The data can be read on a computer via USB.
+An electronic board (low power, 5V) that receives signals from a plant via electrodes placed on its leaves and sends instructions to [another board](green-observatory-output.html) dedicated to the outputs (high power, 12 V). Calculations are performed by a ATmega 16-U2 microchip. The data can be read on a computer via USB.
 
 ## Research
 
@@ -184,7 +184,7 @@ The idea is to simulate a breathing movement with my device. This movement is co
    
 So I wrote my code according to this logic. I invite you to read it below. It should be sufficiently documented to be readable.
 
-### Analog debugging
+## Analog debugging
 
 Since I don't have access to the Arduino monitor to understand what's going on with the electronics, I had to find another way to get feedback. Luckily, I have an LED on my board that I can use as a "morse" signal. I use it in a certain context, if `this happens` then `blink 1 time` but if `that happens` then `blink 2 times`.
 

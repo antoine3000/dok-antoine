@@ -218,7 +218,7 @@ Next on my list of experiments is pine resin. It is a natural material that seem
 I wasn't sure how much to use, but I soon realised that this variable is not so important with this material. Any surplus will be reusable once the pine resin has dried. The only thing I can lose here is the cooking time.
 
 ![](pine-resin-1.jpg)
-![Look at this beaty](pine-resin-3.jpg:flux)
+![Look at this beauty](pine-resin-3.jpg:flux)
 ![](pine-resin-4.jpg)
 
 The pine resin melted in less than 20 minutes. Once it is ready, the next steps are the same as for the previous test material above.
