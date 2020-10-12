@@ -18,7 +18,7 @@ I don't know how relevant the data I collect is though, but I feel that detectin
 
 Don't forget that the main idea of my project is to invite humans to observe nature and to get closer to it. I am not looking for scientific accuracy at all costs, although I would ideally like to achieve it.
 
-![First prototype](prototype.jpg:flux)
+![First prototype](large:prototype.jpg:flux)
 
 # Key electronics components
 

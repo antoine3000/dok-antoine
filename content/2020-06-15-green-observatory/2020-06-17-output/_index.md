@@ -41,8 +41,8 @@ I have already explained how to [design electronics](file:///home/antoine/repo/d
 
 ## PCB design
 
-![](design-05.png:flux)
-![](design-06.png:flux)
+![](large:design-05.png:flux)
+![](large:design-06.png:flux)
 
 ## Export
 
@@ -67,7 +67,7 @@ Unfortunately, powering my circuit with these wrong mosfets burned the buck-boos
 
 To see a video of the final result -> [Green Observatory - Presentation](green-observatory-presentation.html)
 
-![](electronics.jpg)
+![](large:electronics.jpg)
 
 
 # Conclusion

@@ -145,9 +145,12 @@
 <h1 class="article__title">Introduction <a href="green-observatory-introduction.html">●</a></h1>
 <!-- tags -->
 <!-- featured image -->
+<figure class="md"><img alt="" class="article__featured" src="medias/green-observatory-introduction-overview.jpg"><figcaption></figcaption></figure>
 <!-- content -->
 <section class="article__content ts">
-<p></p>
+<p><em>The Green Observatory</em> is how I chose to name my Fab Academy final project. <em>The Green Observatory</em> is a device that listens to the electrical activity of plants and represents it with a physical and meditative movement that we, humans, can observe and contemplate.</p>
+<p>I designed, fabricated, programmed and documented this project in Barcelona in 2020. I used open-source software only and all the sources of the design and fabrication files are also open.</p>
+<p>This project wouldn't have been possible without the precious help of my Fab Academy instructors, Oscar Gonzalez, Eduardo Chamorro Martin and Josep Martí, muchas gracias!</p>
 </section>
 <footer>
 <p>✎ <span>Created</span> 15/06/2020</p>
@@ -169,7 +172,7 @@
 <p><a class="btn" href="final-project-research-input-plant-activity.html" target="_blank">Research / Sensing the electrical activity of a plant</a></p>
 <p>I don't know how relevant the data I collect is though, but I feel that detecting any kind of electrical activity from a plant is good for my project.</p>
 <p>Don't forget that the main idea of my project is to invite humans to observe nature and to get closer to it. I am not looking for scientific accuracy at all costs, although I would ideally like to achieve it.</p>
-<figure class="md"><img alt="First prototype" src="medias/green-observatory-input-prototype.jpg"><figcaption>First prototype</figcaption></figure>
+<figure class="lg"><img alt="First prototype" src="medias/green-observatory-input-prototype.jpg"><figcaption>First prototype</figcaption></figure>
 <h1 id="key-electronics-components">Key electronics components</h1>
 <h2 id="atmega-16-u2">ATmega 16-U2</h2>
 <p>After some discussions with my instructors at Fab Lab Barcelona, I decided to test the (poorly documented) <code>ATmega 16-U2</code> chip. It is available in the lab inventory, it speaks USB, has the minimum requirements for my project (and this is the microchip used in the Arduino Uno to exchange data via USB). I always prefer to use appropriate hardware, and especially in this context of custom electronics.</p>
@@ -529,8 +532,8 @@ int main(void)
 <figure class="md"><img alt="Mosfets" src="medias/green-observatory-input-design-03.png"><figcaption>Mosfets</figcaption></figure>
 <figure class="md"><img alt="Pump (identical to solenoids)" src="medias/green-observatory-input-design-04.png"><figcaption>Pump (identical to solenoids)</figcaption></figure>
 <h2 id="pcb-design">PCB design</h2>
-<figure class="md"><img alt="" src="medias/green-observatory-input-design-05.png"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/green-observatory-input-design-06.png"><figcaption></figcaption></figure>
+<figure class="lg"><img alt="" src="medias/green-observatory-input-design-05.png"><figcaption></figcaption></figure>
+<figure class="lg"><img alt="" src="medias/green-observatory-input-design-06.png"><figcaption></figcaption></figure>
 <h2 id="export">Export</h2>
 <figure class="md"><img alt="Drills" src="medias/green-observatory-output-board-high-Drills.png"><figcaption>Drills</figcaption></figure>
 <figure class="md"><img alt="Edge cuts" src="medias/green-observatory-output-board-high-Edge_Cuts.png"><figcaption>Edge cuts</figcaption></figure>
@@ -544,7 +547,7 @@ int main(void)
 <p>Unfortunately, powering my circuit with these wrong mosfets burned the buck-boost. It was no big deal, because it was used to power <a href="green-observatory-input.html" target="_blank">another board</a> that could also be powered by USB. I'll try to replace the buck-boost with a <a href="https://en.wikipedia.org/wiki/Small-outline_transistor" target="_blank">SOT</a> (small outline transistor), it should be cheaper and easier to use.</p>
 <h1 id="result">Result</h1>
 <p>To see a video of the final result -&gt; <a href="green-observatory-presentation.html" target="_blank">Green Observatory - Presentation</a></p>
-<figure class="md"><img alt="" src="medias/green-observatory-output-electronics.jpg"><figcaption></figcaption></figure>
+<figure class="lg"><img alt="" src="medias/green-observatory-output-electronics.jpg"><figcaption></figcaption></figure>
 <h1 id="conclusion">Conclusion</h1>
 <p>I'm very happy with the result of this PCB. Even with this Frankenstein look, because of the replacement of the mosfets.</p>
 <p>Of course, I would like to redo it more cleanly, now that I've understood the mistakes I made, but in doing so I would be very tempted to change something: I would love to have a silent system. But that would mean a smaller pump (5V) and therefore less suction, which means a smaller inflatable, a smaller device. I keep this option in mind, as a V2 of this project.</p>
