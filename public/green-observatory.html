@@ -91,10 +91,16 @@
 <ul>
 <li><a href="#air-pump">Air pump</a></li>
 <li><a href="#solenoids">Solenoids</a></li>
+<li><a href="#buck-boost">Buck-boost</a></li>
 </ul></li>
-<li><a href="#design">Design</a></li>
+<li><a href="#design">Design</a>
+<ul>
+<li><a href="#schematics">Schematics</a></li>
+<li><a href="#pcb-design">PCB design</a></li>
+<li><a href="#export">Export</a></li>
+</ul></li>
 <li><a href="#fabrication">Fabrication</a></li>
-<li><a href="#programmation">Programmation</a></li>
+<li><a href="#problems-encountered">Problems encountered</a></li>
 <li><a href="#result">Result</a></li>
 <li><a href="#conclusion">Conclusion</a></li>
 <li><a href="#files">Files</a></li>
@@ -157,7 +163,7 @@
 <!-- content -->
 <section class="article__content ts">
 <h1 id="introduction">Introduction</h1>
-<p>An electronic board (low power, 5V) that receives signals from a plant via electrodes placed on its leaves and sends instructions to <a href="green-observatory-output.html" target="_blank">another board</a> dedicated to the outputs (high power, 12 V). Calculations are performed by a ATmega 16-U2 microchip. The data can be read on a computer via USB.</p>
+<p>An electronic board (low power, 5V) that receives signals from a plant via electrodes placed on its leaves and sends instructions to <a href="green-observatory-output.html" target="_blank">another board</a> dedicated to the outputs (low power, 12 V). Calculations are performed by a ATmega 16-U2 microchip. The data can be read on a computer via USB.</p>
 <h2 id="research">Research</h2>
 <p>I have previously researched and created a prototype of what could be an easy setup to (try) listen to the electrical activity of plants. I did this using an Arduino Uno and a 555 IC timer on a breadboard. You can read more on the page dedicated to this topic.</p>
 <p><a class="btn" href="final-project-research-input-plant-activity.html" target="_blank">Research / Sensing the electrical activity of a plant</a></p>
@@ -316,7 +322,7 @@ fuse:
 #define pin_sol_4 (1 &lt;&lt; PB6)
 
 // Define variables
-unsigned long duration_high;
+unsigned long duration_low;
 unsigned long duration_low;
 float duty_cycle = 50;
 
@@ -394,26 +400,26 @@ void breathe(int time)
 unsigned long pulseIn(char pin, bool state, long unsigned int timeout)
 {
     unsigned long max_loops = microsecondsToClockCycles(timeout);
-    unsigned long average_high = 0;
     unsigned long average_low = 0;
-    unsigned long total_high = 0;
+    unsigned long average_low = 0;
+    unsigned long total_low = 0;
     unsigned long total_low = 0;
     for (long unsigned int i = 0; i &lt; max_loops; i++)
     {
         if (pin)
         {
-            total_high++;
+            total_low++;
         }
         else
         {
             total_low++;
         }
     }
-    average_high = total_high / max_loops;
+    average_low = total_low / max_loops;
     average_low = total_low / max_loops;
     if (state)
     {
-        return average_high;
+        return average_low;
     }
     else
     {
@@ -482,20 +488,17 @@ int main(void)
 <p>How boring would a project be if everything worked as planned, right? </p>
 <h1 id="files">Files</h1>
 <ul>
-<li>Kicad electronics design files: <a href="green-observatory.zip" target="_blank">green-observatory.zip</a></li>
+<li>Kicad electronics design files: <a class="link-file" href="medias/green-observatory-input-green-observatory.zip" target="_blank">green-observatory.zip</a></li>
 <li>Green observatory - Electronics design: <a href="https://gitlab.com/antoinestudio/green-observatory" target="_blank">Gitlab repository</a></li>
-<li><ul>
 <li>Green observatory - Logic (code): <a href="https://gitlab.com/antoinestudio/green-observatory-logic" target="_blank">Gitlab repository</a></li>
-</ul></li>
-<li>Fabrication file: <a href="board-low-Drills.png" target="_blank">board-low-Drills.png</a></li>
-<li>Fabrication file: <a href="board-low-Edge_Cuts.png" target="_blank">board-low-Edge_Cuts.png</a></li>
-<li>Fabrication file: <a href="board-low-F_Cu.png" target="_blank">board-low-F_Cu.png</a></li>
-- 
+<li>Fabrication file: <a class="link-file" href="medias/green-observatory-input-board-low-Drills.png" target="_blank">board-low-Drills.png</a> + <a class="link-file" href="medias/green-observatory-input-board-low-Drills.rml" target="_blank">board-low-Drills.rml</a></li>
+<li>Fabrication file: <a class="link-file" href="medias/green-observatory-input-board-low-Edge_Cuts.png" target="_blank">board-low-Edge<em>Cuts.png</em></a> + <a class="link-file" href="medias/green-observatory-input-board-low-Edge_Cuts.rml" target="_blank">board-low-EdgeCuts.rml</a></li>
+<li>Fabrication file: <a class="link-file" href="medias/green-observatory-input-board-low-F_Cu.png" target="_blank">board-low-F<em>Cu.png</em></a> + <a class="link-file" href="medias/green-observatory-input-board-low-F_Cu.rml" target="_blank">board-low-FCu.rml</a></li>
 </ul>
 </section>
 <footer>
 <p>✎ <span>Created</span> 16/06/2020</p>
-<p>⁂ <span>Updated</span> 08/10/2020</p>
+<p>⁂ <span>Updated</span> 12/10/2020</p>
 </footer>
 </article>
 <article class="article--sub" id="green-observatory-output">
@@ -507,24 +510,57 @@ int main(void)
 <!-- content -->
 <section class="article__content ts">
 <h1 id="introduction">Introduction</h1>
-<p>An electronic board that receives signals from <a href="green-observatory-input.html" target="_blank">an input</a> and controls an air flow using an air pump and four solenoids.</p>
+<p>An electronic board that receives signals from <a href="green-observatory-input.html" target="_blank">an input</a> and controls an air fhigh using an air pump and four solenoids.</p>
 <p>Note that this project is inspired by <a href="https://www.programmableair.com/" target="_blank">Programmable Air</a>, I simplified it by using one pump instead of two. Once again, thanks to open-source :)</p>
+<figure class="md"><img alt="First sketch" src="medias/green-observatory-output-schema.jpg"><figcaption>First sketch</figcaption></figure>
 <h1 id="key-electronics-components">Key electronics components</h1>
 <h2 id="air-pump">Air pump</h2>
-<p>The <a href="https://www.sparkfun.com/products/10398" target="_blank">air pump</a> operates at 12V and has enough suction for my project.</p>
+<p>The <a href="https://www.sparkfun.com/products/10398" target="_blank">air pump</a> operates at 12V and has sufficient suction for my project. The only drawback is that it is very noisy. It will not produce the complete meditative experience I am looking for, but it will work for this first prototype. This pump was available at the lab.</p>
 <h2 id="solenoids">Solenoids</h2>
-<p><a class="link-file" href="medias/green-observatory-output-CJV23.pdf" target="_blank">CJV23 datasheet</a></p>
+<p>The four CJV23 solenoids (<a class="link-file" href="medias/green-observatory-output-CJV23.pdf" target="_blank">datasheet</a>) are the same as those used in the Programmable Air project. I took it as a reference because it's not so easy to find valves for air circuits (and not for water). I found them on <a href="https://www.ebay.es/itm/324162624034" target="_blank">ebay</a>.</p>
+<h2 id="buck-boost">Buck-boost</h2>
+<p>I use a buck-boost from <a href="https://www.adafruit.com/product/2190" target="_blank">Adrafuit</a> (which was available at the lab) to convert 12V (input) to 5V (output). this alhighs me to power the high voltage circuit from this high voltage board.</p>
 <h1 id="design">Design</h1>
+<p>I design electronics boards with <a href="https://kicad-pcb.org/" target="_blank">KiCad</a>, a cross platform and open source electronics design automation suite. You will find the files at the end of this article.</p>
+<p>I have already explained how to <a class="link-file" href="medias/green-observatory-input-///home/antoine/repo/dok-antoine-studio/public/electronics-design.html" target="_blank">design electronics</a> and how to <a class="link-file" href="medias/green-observatory-input-///home/antoine/repo/dok-antoine-studio/public/electronics-production.html" target="_blank">produce electronics</a>. Feel free to read my documentation on these subjects.</p>
+<h2 id="schematics">Schematics</h2>
+<figure class="md"><img alt="Misc." src="medias/green-observatory-input-design-01.png"><figcaption>Misc.</figcaption></figure>
+<figure class="md"><img alt="Solenoids" src="medias/green-observatory-input-design-02.png"><figcaption>Solenoids</figcaption></figure>
+<figure class="md"><img alt="Mosfets" src="medias/green-observatory-input-design-03.png"><figcaption>Mosfets</figcaption></figure>
+<figure class="md"><img alt="Pump (identical to solenoids)" src="medias/green-observatory-input-design-04.png"><figcaption>Pump (identical to solenoids)</figcaption></figure>
+<h2 id="pcb-design">PCB design</h2>
+<figure class="md"><img alt="" src="medias/green-observatory-input-design-05.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/green-observatory-input-design-06.png"><figcaption></figcaption></figure>
+<h2 id="export">Export</h2>
+<figure class="md"><img alt="Drills" src="medias/green-observatory-output-board-high-Drills.png"><figcaption>Drills</figcaption></figure>
+<figure class="md"><img alt="Edge cuts" src="medias/green-observatory-output-board-high-Edge_Cuts.png"><figcaption>Edge cuts</figcaption></figure>
+<figure class="md"><img alt="Circuit" src="medias/green-observatory-output-board-high-F_Cu.png"><figcaption>Circuit</figcaption></figure>
 <h1 id="fabrication">Fabrication</h1>
-<h1 id="programmation">Programmation</h1>
-<p><a class="btn" href="green-observatory-input.html#programmation" target="_blank">Input #programmation</a></p>
+<figure class="md"><img alt="" src="medias/green-observatory-output-fabrication-01.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/green-observatory-output-fabrication-02.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="High and low voltage together" src="medias/green-observatory-output-fabrication-03.jpg"><figcaption>High and low voltage together</figcaption></figure>
+<h1 id="problems-encountered">Problems encountered</h1>
+<p>Also, when designing the PCB, I chose a wrong mosfet element. When I realized this, I replaced the symbol I was using in the schematics but I didn't update the footprint. Therefore, after milling and soldering the PCB, I realized that the mosfets were not connected as they should be. To avoid redoing everything (the Fab Academy deadline was too short), I had to use another type of mosfets with long legs that can be bent in the right position.  An unaesthetic technique that works.</p>
+<p>Unfortunately, powering my circuit with these wrong mosfets burned the buck-boost. It was no big deal, because it was used to power <a href="green-observatory-input.html" target="_blank">another board</a> that could also be powered by USB. I'll try to replace the buck-boost with a <a href="https://en.wikipedia.org/wiki/Small-outline_transistor" target="_blank">SOT</a> (small outline transistor), it should be cheaper and easier to use.</p>
 <h1 id="result">Result</h1>
+<p>To see a video of the final result -&gt; <a href="green-observatory-presentation.html" target="_blank">Green Observatory - Presentation</a></p>
+<figure class="md"><img alt="" src="medias/green-observatory-output-electronics.jpg"><figcaption></figcaption></figure>
 <h1 id="conclusion">Conclusion</h1>
+<p>I'm very happy with the result of this PCB. Even with this Frankenstein look, because of the replacement of the mosfets.</p>
+<p>Of course, I would like to redo it more cleanly, now that I've understood the mistakes I made, but in doing so I would be very tempted to change something: I would love to have a silent system. But that would mean a smaller pump (5V) and therefore less suction, which means a smaller inflatable, a smaller device. I keep this option in mind, as a V2 of this project.</p>
 <h1 id="files">Files</h1>
+<ul>
+<li>Kicad electronics design files: <a class="link-file" href="medias/green-observatory-input-green-observatory.zip" target="_blank">green-observatory.zip</a></li>
+<li>Green observatory - Electronics design: <a href="https://gitlab.com/antoinestudio/green-observatory" target="_blank">Gitlab repository</a></li>
+<li>Green observatory - Logic (code): <a href="https://gitlab.com/antoinestudio/green-observatory-logic" target="_blank">Gitlab repository</a></li>
+<li>Fabrication file: <a class="link-file" href="medias/green-observatory-output-board-high-Drills.png" target="_blank">board-high-Drills.png</a> + <a class="link-file" href="medias/green-observatory-output-board-high-Drills.rml" target="_blank">board-high-Drills.rml</a></li>
+<li>Fabrication file: <a class="link-file" href="medias/green-observatory-output-board-high-Edge_Cuts.png" target="_blank">board-high-Edge<em>Cuts.png</em></a> + <a class="link-file" href="medias/green-observatory-output-board-high-Edge_Cuts.rml" target="_blank">board-high-EdgeCuts.rml</a></li>
+<li>Fabrication file: <a class="link-file" href="medias/green-observatory-output-board-high-F_Cu.png" target="_blank">board-high-F<em>Cu.png</em></a> + <a class="link-file" href="medias/green-observatory-output-board-high-F_Cu.rml" target="_blank">board-high-FCu.rml</a></li>
+</ul>
 </section>
 <footer>
 <p>✎ <span>Created</span> 17/06/2020</p>
-<p>⁂ <span>Updated</span> 08/10/2020</p>
+<p>⁂ <span>Updated</span> 12/10/2020</p>
 </footer>
 </article>
 <article class="article--sub" id="green-observatory-inflatable">

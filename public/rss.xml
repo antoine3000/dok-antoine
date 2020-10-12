@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Fri, 09 Oct 2020 12:38:59 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Mon, 12 Oct 2020 21:07:32 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="large:4449-01.jpg" alt="" /&gt;
 &lt;img src="large:4449-02.jpg" alt="" /&gt;
@@ -460,29 +460,25 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 ...</description><pubDate>Mon, 15 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Introduction</title><link>https://antoine.studio/green-observatory-introduction.html</link><description>&lt;p&gt;&lt;/p&gt;
 ...</description><pubDate>Mon, 15 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Electronics: Input</title><link>https://antoine.studio/green-observatory-input.html</link><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
 
-&lt;p&gt;An electronic board (low power, 5V) that receives signals from a plant via electrodes placed on its leaves and sends instructions to &lt;a target="_blank" href="green-observatory-output.html"&gt;another board&lt;/a&gt; dedicated to the outputs (high power, 12 V). Calculations are performed by a ATmega 16-U2 microchip. The data can be read on a computer via USB.&lt;/p&gt;
+&lt;p&gt;An electronic board (low power, 5V) that receives signals from a plant via electrodes placed on its leaves and sends instructions to &lt;a target="_blank" href="green-observatory-output.html"&gt;another board&lt;/a&gt; dedicated to the outputs (low power, 12 V). Calculations are performed by a ATmega 16-U2 microchip. The data can be read on a computer via USB.&lt;/p&gt;
 
 &lt;h2 id="research"&gt;Research&lt;/h2&gt;
 
 &lt;p&gt;I have previously researched and created a prototype of what could be an easy setup to (try) listen to the electrical activity of plants. I did this using an Arduino Uno and a 555 IC timer on a breadboard. You can read more on the page dedicated to this topic.&lt;/p&gt;
 
-&lt;p&gt;&lt;a target="_blank" href="button:final-project-research-input-plant-activity.html"&gt;Research / S...</description><pubDate>Thu, 08 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Electronics: Output</title><link>https://antoine.studio/green-observatory-output.html</link><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;&lt;a target="_blank" href="button:final-project-research-input-plant-activity.html"&gt;Research / Se...</description><pubDate>Mon, 12 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Electronics: Output</title><link>https://antoine.studio/green-observatory-output.html</link><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
 
-&lt;p&gt;An electronic board that receives signals from &lt;a target="_blank" href="green-observatory-input.html"&gt;an input&lt;/a&gt; and controls an air flow using an air pump and four solenoids.&lt;/p&gt;
+&lt;p&gt;An electronic board that receives signals from &lt;a target="_blank" href="green-observatory-input.html"&gt;an input&lt;/a&gt; and controls an air fhigh using an air pump and four solenoids.&lt;/p&gt;
 
 &lt;p&gt;Note that this project is inspired by &lt;a target="_blank" href="https://www.programmableair.com/"&gt;Programmable Air&lt;/a&gt;, I simplified it by using one pump instead of two. Once again, thanks to open-source :)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="schema.jpg" alt="First sketch" /&gt;&lt;/p&gt;
 
 &lt;h1 id="key-electronics-components"&gt;Key electronics components&lt;/h1&gt;
 
 &lt;h2 id="air-pump"&gt;Air pump&lt;/h2&gt;
 
-&lt;p&gt;The &lt;a target="_blank" href="https://www.sparkfun.com/products/10398"&gt;air pump&lt;/a&gt; operates at 12V and has enough suction for my project.&lt;/p&gt;
-
-&lt;h2 id="solenoids"&gt;Solenoids&lt;/h2&gt;
-
-&lt;p&gt;&lt;a target="_blank" href="file:CJV23.pdf"&gt;CJV23 datasheet&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=...</description><pubDate>Thu, 08 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Making of the inflatable part</title><link>https://antoine.studio/green-observatory-inflatable.html</link><description>&lt;p&gt;An important part of my final project is the inflatable part, which will help us understand the electrical activity of plants. This part should produce organic movements that react to a flow of air.&lt;/p&gt;
+&lt;p&gt;The &lt;a target="_blank" href="https://www.sparkfun.com/products/10398"&gt;air pump&lt;/a&gt; operates at 12V and has sufficient suction for my project. The only drawback is that it is very noisy. It will not pro...</description><pubDate>Mon, 12 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Making of the inflatable part</title><link>https://antoine.studio/green-observatory-inflatable.html</link><description>&lt;p&gt;An important part of my final project is the inflatable part, which will help us understand the electrical activity of plants. This part should produce organic movements that react to a flow of air.&lt;/p&gt;
 
 &lt;p&gt;So I have to produce a silicone part that has an air pocket inside that could be inflated and deflated by pushing and pulling a flow of air inside through two pipes (in and out).&lt;/p&gt;
 

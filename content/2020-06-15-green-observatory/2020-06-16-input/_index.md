@@ -1,12 +1,12 @@
 ---
 title: Electronics: Input
 featured_image: final-result.png
-last_update: 2020-10-08
+last_update: 2020-10-12
 ---
 
 # Introduction
 
-An electronic board (low power, 5V) that receives signals from a plant via electrodes placed on its leaves and sends instructions to [another board](green-observatory-output.html) dedicated to the outputs (high power, 12 V). Calculations are performed by a ATmega 16-U2 microchip. The data can be read on a computer via USB.
+An electronic board (low power, 5V) that receives signals from a plant via electrodes placed on its leaves and sends instructions to [another board](green-observatory-output.html) dedicated to the outputs (low power, 12 V). Calculations are performed by a ATmega 16-U2 microchip. The data can be read on a computer via USB.
 
 ## Research
 
@@ -221,7 +221,7 @@ Of course, it's not an ideal workflow, but it helped me a lot to understand my e
 #define pin_sol_4 (1 << PB6)
 
 // Define variables
-unsigned long duration_high;
+unsigned long duration_low;
 unsigned long duration_low;
 float duty_cycle = 50;
 
@@ -299,26 +299,26 @@ void breathe(int time)
 unsigned long pulseIn(char pin, bool state, long unsigned int timeout)
 {
 	unsigned long max_loops = microsecondsToClockCycles(timeout);
-	unsigned long average_high = 0;
 	unsigned long average_low = 0;
-	unsigned long total_high = 0;
+	unsigned long average_low = 0;
+	unsigned long total_low = 0;
 	unsigned long total_low = 0;
 	for (long unsigned int i = 0; i < max_loops; i++)
 	{
 		if (pin)
 		{
-			total_high++;
+			total_low++;
 		}
 		else
 		{
 			total_low++;
 		}
 	}
-	average_high = total_high / max_loops;
+	average_low = total_low / max_loops;
 	average_low = total_low / max_loops;
 	if (state)
 	{
-		return average_high;
+		return average_low;
 	}
 	else
 	{
@@ -396,10 +396,9 @@ How boring would a project be if everything worked as planned, right?
 
 # Files
 
-- Kicad electronics design files: [green-observatory.zip](green-observatory.zip)
+- Kicad electronics design files: [green-observatory.zip](file:green-observatory.zip)
 - Green observatory - Electronics design: [Gitlab repository](https://gitlab.com/antoinestudio/green-observatory)
-- - Green observatory - Logic (code): [Gitlab repository](https://gitlab.com/antoinestudio/green-observatory-logic)
-- Fabrication file: [board-low-Drills.png](board-low-Drills.png)
-- Fabrication file: [board-low-Edge_Cuts.png](board-low-Edge_Cuts.png)
-- Fabrication file: [board-low-F_Cu.png](board-low-F_Cu.png)
-- 
+- Green observatory - Logic (code): [Gitlab repository](https://gitlab.com/antoinestudio/green-observatory-logic)
+- Fabrication file: [board-low-Drills.png](file:board-low-Drills.png) + [board-low-Drills.rml](file:board-low-Drills.rml)
+- Fabrication file: [board-low-Edge_Cuts.png](file:board-low-Edge_Cuts.png) + [board-low-Edge_Cuts.rml](file:board-low-Edge_Cuts.rml)
+- Fabrication file: [board-low-F_Cu.png](file:board-low-F_Cu.png) + [board-low-F_Cu.rml](file:board-low-F_Cu.rml)
