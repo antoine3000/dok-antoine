@@ -5,12 +5,6 @@
   border: var(--border-sm) dotted var(--base-color);
   padding: var(--size-md);
   border-radius: var(--size-md);
-  @include media('>sm') {
-    columns: 2;
-  }
-  @include media('>md') {
-    columns: 3;
-  }
 }
 
 .toc__title {
