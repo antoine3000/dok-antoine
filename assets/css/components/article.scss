@@ -5,10 +5,23 @@
   border: var(--border-sm) dotted var(--base-color);
   padding: var(--size-md);
   border-radius: var(--size-md);
+  @include media('>sm') {
+    columns: 2;
+  }
+  @include media('>md') {
+    columns: 3;
+  }
 }
 
 .toc__title {
   @extend %ts-title-3;
+  margin-bottom: var(--size-md);
+}
+
+.article__toc .toc__title--sub {
+  // @extend %font-body;
+  font-size: var(--size-sm);
+  margin-top: var(--size-lg);
   margin-bottom: var(--size-xs);
 }
 

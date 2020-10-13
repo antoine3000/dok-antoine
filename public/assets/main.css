@@ -479,8 +479,18 @@ a, .index--featured .item__title {
   border: var(--border-sm) dotted var(--base-color);
   padding: var(--size-md);
   border-radius: var(--size-md); }
-
+  @media (min-width: 769px) {
+    .article__toc {
+      columns: 2; } }
+  @media (min-width: 1025px) {
+    .article__toc {
+      columns: 3; } }
 .toc__title {
+  margin-bottom: var(--size-md); }
+
+.article__toc .toc__title--sub {
+  font-size: var(--size-sm);
+  margin-top: var(--size-lg);
   margin-bottom: var(--size-xs); }
 
 .article--sub {
