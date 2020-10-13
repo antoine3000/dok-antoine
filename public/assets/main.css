@@ -479,12 +479,7 @@ a, .index--featured .item__title {
   border: var(--border-sm) dotted var(--base-color);
   padding: var(--size-md);
   border-radius: var(--size-md); }
-  @media (min-width: 769px) {
-    .page:not(.page--article) .article__toc {
-      columns: 2; } }
-  @media (min-width: 1025px) {
-    .page:not(.page--article) .article__toc {
-      columns: 3; } }
+
 .toc__title {
   margin-bottom: var(--size-md); }
 

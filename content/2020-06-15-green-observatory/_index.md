@@ -14,6 +14,10 @@ I designed, fabricated, programmed and documented this project in Barcelona in 2
 
 <video><source src="presentation-compressed.mp4"></video>
 
+![](result-03.jpg)
+![](result-02.jpg)
+![](result-01.jpg)
+
 # Thanks
 
 This project wouldn't have been possible without the precious help of my Fab Academy instructors, Oscar Gonzalez, Eduardo Chamorro Martin and Josep Martí, muchas gracias!
