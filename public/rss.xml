@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Tue, 13 Oct 2020 11:37:28 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Thu, 15 Oct 2020 19:23:00 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="large:4449-01.jpg" alt="" /&gt;
 &lt;img src="large:4449-02.jpg" alt="" /&gt;
@@ -460,7 +460,7 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 
 &lt;p&gt;&lt;em&gt;The Green Observatory&lt;/em&gt; is how I chose to name my Fab Academy final project. &lt;em&gt;The Green Observatory&lt;/em&gt; is a device that listens to the electrical activity of plants and represents it with a physical and meditative movement that we, humans, can observe and contemplate.&lt;/p&gt;
 
-&lt;p&gt;I designed, fabricated, programmed and documented this project in Barcelona in 2020. I used open-source software only and all the sources of the design and fabrication files are also open.&lt;/p&gt;
+&lt;p&gt;I designed, fabricated, programmed and documented this project in Barcelona in 2020. I used open-source software only and so are all my design and fabrication files.&lt;/p&gt;
 
 &lt;h1 id="presentation"&gt;Presentation&lt;/h1&gt;
 
@@ -472,7 +472,7 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 
 &lt;h1 id="thanks"&gt;Thanks&lt;/h1&gt;
 
-&lt;p&gt;This project wouldn't...</description><pubDate>Mon, 15 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Electronics: Input</title><link>https://antoine.studio/green-observatory-input.html</link><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;This project wouldn't have been possible wit...</description><pubDate>Mon, 15 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Electronics: Input</title><link>https://antoine.studio/green-observatory-input.html</link><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
 
 &lt;p&gt;An electronic board (low power, 5V) that receives signals from a plant via electrodes placed on its leaves and sends instructions to &lt;a target="_blank" href="green-observatory-output.html"&gt;another board&lt;/a&gt; dedicated to the outputs (low power, 12 V). Calculations are performed by a ATmega 16-U2 microchip. The data can be read on a computer via USB.&lt;/p&gt;
 
@@ -501,5 +501,28 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 &lt;p&gt;The strategy that Eduardo Chamorro (one of my instructors) and I came up with is to build a mold using a piece of laser-cut acrylic to cast a first layer of silicon and then redo another layer while inserting another piece of acrylic that will allow us to preserve an air pocket inside the cast silicon piece.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Design a structure that can be lasercutted&lt;/li...</description><pubDate>Wed, 07 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Making of the structure</title><link>https://antoine.studio/green-observatory-structure.html</link><description>&lt;p&gt;&lt;/p&gt;
-...</description><pubDate>Fri, 19 Jun 2020 00:00:00 +0200</pubDate></item></channel></rss>
+&lt;li&gt;Design a structure that can be lasercutted&lt;/li...</description><pubDate>Wed, 07 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Making of the structure</title><link>https://antoine.studio/green-observatory-structure.html</link><description>&lt;h1 id="cnc-milled-structure"&gt;CNC milled structure&lt;/h1&gt;
+
+&lt;p&gt;The structure was designed with &lt;a target="_blank" href="https://www.freecadweb.org/"&gt;Freecad&lt;/a&gt; and made to be milled with a CNC. the upper disc supports the inflatable part.&lt;/p&gt;
+
+&lt;h2 id="design"&gt;Design&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src="design-01.png" alt="" /&gt;
+&lt;img src="design-02.png" alt="" /&gt;
+&lt;img src="design-03.png" alt="" /&gt;
+&lt;img src="design-04.png" alt="" /&gt;
+&lt;img src="design-06.png" alt="" /&gt;
+&lt;img src="design-07.png" alt="" /&gt;
+&lt;img src="design-08.png" alt="" /&gt;
+&lt;img src="design-09.png" alt="" /&gt;
+&lt;img src="design-10.png" alt="" /&gt;
+&lt;img src="design-13.png" alt="" /&gt;&lt;/p&gt;
+
+&lt;h2 id="fabrication"&gt;Fabrication&lt;/h2&gt;
+
+&lt;h1 id="3d-printed-connector"&gt;3D printed connector&lt;/h1&gt;
+
+&lt;h2 id="design-2"&gt;Design&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src="design-05.png" alt="" /&gt;
+&lt;img s...</description><pubDate>Fri, 19 Jun 2020 00:00:00 +0200</pubDate></item></channel></rss>

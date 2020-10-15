@@ -137,11 +137,25 @@
 </ul>
 </div>
 <h3 class="toc__title--sub"><a href="green-observatory.html#green-observatory-structure">Making of the structure</a></h3>
+<div class="toc__list--sub"><ul>
+<li><a href="#cnc-milled-structure">CNC milled structure</a>
+<ul>
+<li><a href="#design">Design</a></li>
+<li><a href="#fabrication">Fabrication</a></li>
+</ul></li>
+<li><a href="#3d-printed-connector">3D printed connector</a>
+<ul>
+<li><a href="#design-2">Design</a></li>
+</ul></li>
+<li><a href="#result">Result</a></li>
+<li><a href="#files">Files</a></li>
+</ul>
+</div>
 </section>
 <section class="article__content ts">
 <h1 id="introduction">Introduction</h1>
 <p><em>The Green Observatory</em> is how I chose to name my Fab Academy final project. <em>The Green Observatory</em> is a device that listens to the electrical activity of plants and represents it with a physical and meditative movement that we, humans, can observe and contemplate.</p>
-<p>I designed, fabricated, programmed and documented this project in Barcelona in 2020. I used open-source software only and all the sources of the design and fabrication files are also open.</p>
+<p>I designed, fabricated, programmed and documented this project in Barcelona in 2020. I used open-source software only and so are all my design and fabrication files.</p>
 <h1 id="presentation">Presentation</h1>
 <video controls="" preload="auto"><source src="medias/green-observatory-presentation-compressed.mp4" type="video/mp4"/></video>
 <figure class="md"><img alt="" src="medias/green-observatory-result-03.jpg"><figcaption></figcaption></figure>
@@ -522,15 +536,15 @@ int main(void)
 <p>I use a buck-boost from <a href="https://www.adafruit.com/product/2190" target="_blank">Adrafuit</a> (which was available at the lab) to convert 12V (input) to 5V (output). this alhighs me to power the high voltage circuit from this high voltage board.</p>
 <h1 id="design">Design</h1>
 <p>I design electronics boards with <a href="https://kicad-pcb.org/" target="_blank">KiCad</a>, a cross platform and open source electronics design automation suite. You will find the files at the end of this article.</p>
-<p>I have already explained how to <a class="link-file" href="medias/green-observatory-input-///home/antoine/repo/dok-antoine-studio/public/electronics-design.html" target="_blank">design electronics</a> and how to <a class="link-file" href="medias/green-observatory-input-///home/antoine/repo/dok-antoine-studio/public/electronics-production.html" target="_blank">produce electronics</a>. Feel free to read my documentation on these subjects.</p>
+<p>I have already explained how to <a class="link-file" href="medias/green-observatory-output-///home/antoine/repo/dok-antoine-studio/public/electronics-design.html" target="_blank">design electronics</a> and how to <a class="link-file" href="medias/green-observatory-output-///home/antoine/repo/dok-antoine-studio/public/electronics-production.html" target="_blank">produce electronics</a>. Feel free to read my documentation on these subjects.</p>
 <h2 id="schematics">Schematics</h2>
-<figure class="md"><img alt="Misc." src="medias/green-observatory-input-design-01.png"><figcaption>Misc.</figcaption></figure>
-<figure class="md"><img alt="Solenoids" src="medias/green-observatory-input-design-02.png"><figcaption>Solenoids</figcaption></figure>
-<figure class="md"><img alt="Mosfets" src="medias/green-observatory-input-design-03.png"><figcaption>Mosfets</figcaption></figure>
-<figure class="md"><img alt="Pump (identical to solenoids)" src="medias/green-observatory-input-design-04.png"><figcaption>Pump (identical to solenoids)</figcaption></figure>
+<figure class="md"><img alt="Misc." src="medias/green-observatory-output-design-01.png"><figcaption>Misc.</figcaption></figure>
+<figure class="md"><img alt="Solenoids" src="medias/green-observatory-output-design-02.png"><figcaption>Solenoids</figcaption></figure>
+<figure class="md"><img alt="Mosfets" src="medias/green-observatory-output-design-03.png"><figcaption>Mosfets</figcaption></figure>
+<figure class="md"><img alt="Pump (identical to solenoids)" src="medias/green-observatory-output-design-04.png"><figcaption>Pump (identical to solenoids)</figcaption></figure>
 <h2 id="pcb-design">PCB design</h2>
-<figure class="lg"><img alt="" src="medias/green-observatory-input-design-05.png"><figcaption></figcaption></figure>
-<figure class="lg"><img alt="" src="medias/green-observatory-input-design-06.png"><figcaption></figcaption></figure>
+<figure class="lg"><img alt="" src="medias/green-observatory-output-design-05.png"><figcaption></figcaption></figure>
+<figure class="lg"><img alt="" src="medias/green-observatory-output-design-06.png"><figcaption></figcaption></figure>
 <h2 id="export">Export</h2>
 <figure class="md"><img alt="Drills" src="medias/green-observatory-output-board-high-Drills.png"><figcaption>Drills</figcaption></figure>
 <figure class="md"><img alt="Edge cuts" src="medias/green-observatory-output-board-high-Edge_Cuts.png"><figcaption>Edge cuts</figcaption></figure>
@@ -550,7 +564,7 @@ int main(void)
 <p>Of course, I would like to redo it more cleanly, now that I've understood the mistakes I made, but in doing so I would be very tempted to change something: I would love to have a silent system. But that would mean a smaller pump (5V) and therefore less suction, which means a smaller inflatable, a smaller device. I keep this option in mind, as a V2 of this project.</p>
 <h1 id="files">Files</h1>
 <ul>
-<li>Kicad electronics design files: <a class="link-file" href="medias/green-observatory-input-green-observatory.zip" target="_blank">green-observatory.zip</a></li>
+<li>Kicad electronics design files: <a class="link-file" href="medias/green-observatory-output-green-observatory.zip" target="_blank">green-observatory.zip</a></li>
 <li>Green observatory - Electronics design: <a href="https://gitlab.com/antoinestudio/green-observatory" target="_blank">Gitlab repository</a></li>
 <li>Green observatory - Logic (code): <a href="https://gitlab.com/antoinestudio/green-observatory-logic" target="_blank">Gitlab repository</a></li>
 <li>Fabrication file: <a class="link-file" href="medias/green-observatory-output-board-high-Drills.png" target="_blank">board-high-Drills.png</a> + <a class="link-file" href="medias/green-observatory-output-board-high-Drills.rml" target="_blank">board-high-Drills.rml</a></li>
@@ -668,9 +682,30 @@ int main(void)
 <h1 class="article__title">Making of the structure <a href="green-observatory-structure.html">●</a></h1>
 <!-- tags -->
 <!-- featured image -->
+<figure class="md"><img alt="" class="article__featured" src="medias/green-observatory-structure-result-01.jpg"><figcaption></figcaption></figure>
 <!-- content -->
 <section class="article__content ts">
-<p></p>
+<h1 id="cnc-milled-structure">CNC milled structure</h1>
+<p>The structure was designed with <a href="https://www.freecadweb.org/" target="_blank">Freecad</a> and made to be milled with a CNC. the upper disc supports the inflatable part.</p>
+<h2 id="design">Design</h2>
+<figure class="md"><img alt="" src="medias/green-observatory-structure-design-01.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/green-observatory-structure-design-02.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/green-observatory-structure-design-03.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/green-observatory-structure-design-04.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/green-observatory-structure-design-06.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/green-observatory-structure-design-07.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/green-observatory-structure-design-08.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/green-observatory-structure-design-09.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/green-observatory-structure-design-10.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/green-observatory-structure-design-13.png"><figcaption></figcaption></figure>
+<h2 id="fabrication">Fabrication</h2>
+<h1 id="3d-printed-connector">3D printed connector</h1>
+<h2 id="design-2">Design</h2>
+<figure class="md"><img alt="" src="medias/green-observatory-structure-design-05.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/green-observatory-structure-design-11.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/green-observatory-structure-design-12.png"><figcaption></figcaption></figure>
+<h1 id="result">Result</h1>
+<h1 id="files">Files</h1>
 </section>
 <footer>
 <p>✎ <span>Created</span> 19/06/2020</p>

@@ -146,17 +146,18 @@ def html_update(html, slug):
             article_vids = article_sub.select('video source')
             article_files = article_sub.select('.link-file')
             for article_img in article_imgs:
-                article_sub_img = str(article_img['src']).replace(
+                article_sub_img_src = article_img['src'].replace(
                     'medias/' + slug, 'medias/' + article_sub_slug)
-                html = html.replace(article_img['src'], article_sub_img)
+                article_img['src'] = article_sub_img_src
             for article_vid in article_vids:
-                article_sub_vid = str(article_vid['src']).replace(
+                article_sub_vid = article_vid['src'].replace(
                     'medias/' + slug, 'medias/' + article_sub_slug)
-                html = html.replace(article_vid['src'], article_sub_vid)
+                article_vid['src'] = article_sub_vid
             for article_file in article_files:
-                article_sub_file = str(article_file['href']).replace(
+                article_sub_file = article_file['href'].replace(
                     'medias/' + slug, 'medias/' + article_sub_slug)
-                html = html.replace(article_file['href'], article_sub_file)
+                article_file['href'] = article_sub_file
+    html = str(soup)
     html = html.replace('<p><figure', '<figure')
     html = html.replace('</img></figure></p>', '</figure>')
     html = html.replace('</img></figure>', '</figure>')
