@@ -8,17 +8,17 @@
   <h1 class="article__title">{{ article.title }}</h1>
   <!-- parent -->
   {% if article.parent %}
-    {% for parent in article.parent %}
-      <p class="article__parent">This article is part of: <a href="{{ parent.slug }}.html">{{ parent.title }}</a>.</p>
-    {% endfor %}
+  {% for parent in article.parent %}
+  <p class="article__parent">This article is part of: <a href="{{ parent.slug }}.html">{{ parent.title }}</a>.</p>
+  {% endfor %}
   {% endif %}
   <!-- tags -->
   {% if article.tags %}
-    <p class="article__tags">Tags:
-      {% for tag in article.tags %}
-      <a href="{{ tag }}.html" class="tag__link">#{{ tag }}</a>
-      {% endfor %}
-    </p>
+  <p class="article__tags">Tags:
+    {% for tag in article.tags %}
+    <a href="{{ tag }}.html" class="tag__link">#{{ tag }}</a>
+    {% endfor %}
+  </p>
   {% endif %}
   <!-- featured image -->
   {% if article.featured_image %}
@@ -32,16 +32,16 @@
     <div class="toc__list">{{ article.toc }}</div>
     {% endif %}
     {% if article.childs %}
-      {% for child in article.childs %}
-        <h3 class="toc__title--sub"><a href="{{ article.slug}}.html#{{ child.slug}}">{{ child.title }}</a></h3>
-        {% if child.toc %}
-          <div class="toc__list--sub">{{ child.toc }}</div>
-        {% endif %}
-      {% endfor %}
+    {% for child in article.childs %}
+    <h3 class="toc__title--sub"><a href="{{ article.slug}}.html#{{ child.slug}}">{{ child.title }}</a></h3>
+    {% if child.toc %}
+    <div class="toc__list--sub">{{ child.toc }}</div>
+    {% endif %}
+    {% endfor %}
     {% endif %}
   </section>
   {% endif %}
-  
+
   <section class="article__content ts">
     {{ article.content }}
   </section>
@@ -50,35 +50,35 @@
     <p>✎ <span>Created</span> {{ article.publication_date }}</p>
     <p>⁂ <span>Updated</span> {{ article.last_update }}</p>
   </footer>
-  
+
   {% if article.childs %}
-    {% for child in article.childs %}
-    <article class="article--sub" id="{{ child.slug }}">
-      <!-- title -->
-      <h1 class="article__title">{{ child.title }} <a href="{{ child.slug }}.html">●</a></h1>
-      <!-- tags -->
-      {% if child.tags %}
-      <p class="article__tags">Tags:
-        {% for tag in child.tags %}
-        <a href="{{ tag }}.html">#{{ tag }}</a>
-        {% endfor %}
-      </p>
-      {% endif %}
-      <!-- featured image -->
-      {% if child.featured_image %}
-      <img src="{{ child.featured_image }}" alt="" class="article__featured">
-      {% endif %}
-      <!-- content -->
-      <section class="article__content ts">
-        {{ child.content }}
-      </section>
-      <footer>
-        <p>✎ <span>Created</span> {{ child.publication_date }}</p>
-        <p>⁂ <span>Updated</span> {{ child.last_update }}</p>
-      </footer>
-    </article>
-    {% endfor %}
+  {% for child in article.childs %}
+  <article class="article--sub" id="{{ child.slug }}">
+    <!-- title -->
+    <h1 class="article__title">{{ child.title }} <a href="{{ child.slug }}.html">●</a></h1>
+    <!-- tags -->
+    {% if child.tags %}
+    <p class="article__tags">Tags:
+      {% for tag in child.tags %}
+      <a href="{{ tag }}.html">#{{ tag }}</a>
+      {% endfor %}
+    </p>
+    {% endif %}
+    <!-- featured image -->
+    {% if child.featured_image %}
+    <img src="{{ child.featured_image }}" alt="" class="article__featured">
+    {% endif %}
+    <!-- content -->
+    <section class="article__content ts">
+      {{ child.content }}
+    </section>
+    <footer>
+      <p>✎ <span>Created</span> {{ child.publication_date }}</p>
+      <p>⁂ <span>Updated</span> {{ child.last_update }}</p>
+    </footer>
+  </article>
+  {% endfor %}
   {% endif %}
-  
+
 </article>
 {% endblock %}
