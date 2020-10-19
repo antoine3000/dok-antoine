@@ -6,7 +6,7 @@ featured_image: overview.jpg:flux
 
 # Introduction
 
-*The Green Observatory* is how I chose to name my Fab Academy final project. *The Green Observatory* is a device that listens to the electrical activity of plants and represents it with a physical and meditative movement that we, humans, can observe and contemplate.
+*The Green Observatory*, my Fab Academy final project, is a device that listens to the electrical activity of plants and represents it with a physical and meditative movement that we, humans, can observe and contemplate.
 
 I designed, fabricated, programmed and documented this project in Barcelona in 2020. I used open-source software only and so are all my design and fabrication files.
 
@@ -18,7 +18,7 @@ I designed, fabricated, programmed and documented this project in Barcelona in 2
 
 ![](result-03.jpg)
 ![](result-02.jpg)
-![](result-01.jpg)
+![](structure.jpg)
 
 # Thanks
 
