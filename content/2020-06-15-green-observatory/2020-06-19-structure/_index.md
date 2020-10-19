@@ -1,7 +1,7 @@
 ---
 title: Making of the structure
 featured_image: result-01.jpg
-last_update: 2020-10-19
+last_update: 2020-10-18
 ---
 
 The structure was designed with [Freecad](https://www.freecadweb.org/) and made to be milled with a CNC machine on a 9mm thick plywood panel. The upper disk supports the inflatable part and the lower disk supports the electronics. A 3D printed part ensures the desired angle of the structure.
