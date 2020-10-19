@@ -18,7 +18,7 @@ Finding a minimal project architecture was more difficult than expected. The pro
 
 Fortunately, [a project on github](https://github.com/hiroMTB/vscode_oF) shows how to start an openFrameworks project when using VSCode as a text editor. I no longer use this editor but the structure shown there is easily reproducible for any other text editor (I am currently juggling between Vim, Emacs and Atom).
 
-That's why I uploaded my own version of a [minimal starter kit for openFrameworks projects](https://gitlab.com/antoine.j/openframerworks-starter) on Gitlab, hopefully it will help other people get started on their projects.
+That's why I uploaded my own version of a [minimal starter kit for openFrameworks projects](https://gitlab.com/antoinestudio/openframerworks-starter) on Gitlab, hopefully it will help other people get started on their projects.
 
 <pre>
 bin/
@@ -176,10 +176,10 @@ I can now receive data from the serial and convert it to the type of variable I 
 
 The application is getting the light level and the sound level around the microcontroller, compare them. If one is bigger than another.
 
-[The source code of the program is here](https://gitlab.com/antoine.j/musical-playground) and is obviously free and open-source.
+[The source code of the program is here](https://gitlab.com/antoinestudio/musical-playground) and is obviously free and open-source.
 
-- [ofApp.h](https://gitlab.com/antoine.j/musical-playground/-/blob/master/src/ofApp.h), where I declare the variables and call the functions
-- [ofApp.cpp](https://gitlab.com/antoine.j/musical-playground/-/blob/master/src/ofApp.cpp), the main program
+- [ofApp.h](https://gitlab.com/antoinestudio/musical-playground/-/blob/master/src/ofApp.h), where I declare the variables and call the functions
+- [ofApp.cpp](https://gitlab.com/antoinestudio/musical-playground/-/blob/master/src/ofApp.cpp), the main program
 
 - If the light level is higher than the sound level:  
 play the `drop` sound && display its level horizontally.

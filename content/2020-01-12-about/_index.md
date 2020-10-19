@@ -34,7 +34,7 @@ This website is my digital studio, a place where I can experiment without constr
 It's also my personal assistant, it helps me when I doubt on how to do something I have done before. It invites me to write (and then find) my personal knowledge online.
 A tool for documenting the things I learn.
 
-This website is built with a custom static site generator that I wrote in Python. It's open-source by default, as all the things I (try to) do. Sources are available on [Gitlab](https://gitlab.com/antoine.j/dok-antoine-studio).
+This website is built with a custom static site generator that I wrote in Python. It's open-source by default, as all the things I (try to) do. Sources are available on [Gitlab](https://gitlab.com/antoinestudio/dok-antoine-studio).
 
 # Contact
 

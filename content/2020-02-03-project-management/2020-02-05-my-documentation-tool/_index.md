@@ -13,7 +13,7 @@ It may not be as efficient or extensible as other static site generators (like [
 
 ## Sources
 
-This documentation tool is open-source by default, as all the things I (try to) do. Sources are available on [Gitlab](https://gitlab.com/antoine.j/dok-antoine-studio).
+This documentation tool is open-source by default, as all the things I (try to) do. Sources are available on [Gitlab](https://gitlab.com/antoinestudio/dok-antoine-studio).
 
 Feel free to use it, copy it, do whatever you want, but keep in mind that it was written in one specific context and may not work properly in another.
 
