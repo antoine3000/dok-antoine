@@ -20,7 +20,7 @@ The keys, the parts that lock the structure, are not straight but have a small a
 ![](small:design-08.png)
 ![](small:design-09.png)
 
-![Space for cable management](design-10.png)
+![Space for cable management](design-10.png:flux)
 ![3D printed connector](design-05.png)
 ![](small:design-11.png)
 ![](small:design-12.png)
