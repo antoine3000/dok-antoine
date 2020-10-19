@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Thu, 15 Oct 2020 20:03:38 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Mon, 19 Oct 2020 16:10:15 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="large:4449-01.jpg" alt="" /&gt;
 &lt;img src="large:4449-02.jpg" alt="" /&gt;
@@ -458,7 +458,7 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 ...</description><pubDate>Wed, 07 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Machine design</title><link>https://antoine.studio/machine-design.html</link><description>&lt;p&gt;TODO: everything :)&lt;/p&gt;
 ...</description><pubDate>Mon, 01 Jun 2020 00:00:00 +0200</pubDate></item><item><title>The Green Observatory</title><link>https://antoine.studio/green-observatory.html</link><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;The Green Observatory&lt;/em&gt; is how I chose to name my Fab Academy final project. &lt;em&gt;The Green Observatory&lt;/em&gt; is a device that listens to the electrical activity of plants and represents it with a physical and meditative movement that we, humans, can observe and contemplate.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;The Green Observatory&lt;/em&gt;, my Fab Academy final project, is a device that listens to the electrical activity of plants and represents it with a physical and meditative movement that we, humans, can observe and contemplate.&lt;/p&gt;
 
 &lt;p&gt;I designed, fabricated, programmed and documented this project in Barcelona in 2020. I used open-source software only and so are all my design and fabrication files.&lt;/p&gt;
 
@@ -468,11 +468,11 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 
 &lt;p&gt;&lt;img src="result-03.jpg" alt="" /&gt;
 &lt;img src="result-02.jpg" alt="" /&gt;
-&lt;img src="result-01.jpg" alt="" /&gt;&lt;/p&gt;
+&lt;img src="structure.jpg" alt="" /&gt;&lt;/p&gt;
 
 &lt;h1 id="thanks"&gt;Thanks&lt;/h1&gt;
 
-&lt;p&gt;This project wouldn't have been possible wit...</description><pubDate>Mon, 15 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Electronics: Input</title><link>https://antoine.studio/green-observatory-input.html</link><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;This project wouldn't have been possible without the precious help of my Fab Academy instructors,...</description><pubDate>Mon, 15 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Electronics: Input</title><link>https://antoine.studio/green-observatory-input.html</link><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
 
 &lt;p&gt;An electronic board (low power, 5V) that receives signals from a plant via electrodes placed on its leaves and sends instructions to &lt;a target="_blank" href="green-observatory-output.html"&gt;another board&lt;/a&gt; dedicated to the outputs (low power, 12 V). Calculations are performed by a ATmega 16-U2 microchip. The data can be read on a computer via USB.&lt;/p&gt;
 
@@ -506,12 +506,13 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 &lt;h1 id="design"&gt;Design&lt;/h1&gt;
 
 &lt;p&gt;&lt;img src="design-01.png" alt="" /&gt;
-&lt;img src="design-02.png" alt="" /&gt;
 &lt;img src="design-03.png" alt="" /&gt;
-&lt;img src="design-04.png" alt="" /&gt;
-&lt;img src="design-06.png" alt="" /&gt;
-&lt;img src="design-07.png" alt="with a small angle to ensure that it will be possible to push it into the other part" /&gt;
-&lt;img src="design-08.png" alt="" /&gt;
-&lt;img src="design-09.png" alt="" /&gt;
-&lt;img src="design-10.png" alt="Space for cable management" /&gt;
-&lt;img src="desig...</description><pubDate>Fri, 19 Jun 2020 00:00:00 +0200</pubDate></item></channel></rss>
+&lt;img src="small:design-02.png" alt="" /&gt;
+&lt;img src="small:design-04.png" alt="" /&gt;
+&lt;img src="design-06.png" alt="" /&gt;&lt;/p&gt;
+
+&lt;p&gt;The keys, the parts that lock the structure, are not straight but have a small angle to be able to drive them into the other part.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="design-07.png" alt="Small angle" /&gt;
+&lt;img src="small:design-08.png" alt="" /&gt;
+&lt;img src="small:des...</description><pubDate>Mon, 19 Oct 2020 00:00:00 +0200</pubDate></item></channel></rss>
