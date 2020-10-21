@@ -1,6 +1,6 @@
 ---
 title: The Green Observatory
-tags: fab-academy-assignments, to-review
+tags: fab-academy-assignments
 featured_image: overview.jpg:flux
 ---
 

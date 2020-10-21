@@ -1,6 +1,6 @@
 ---
 title: Molding and casting
-tags: fab-academy-assignments, to-review
+tags: fab-academy-assignments
 ---
 
 

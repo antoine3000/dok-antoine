@@ -1,6 +1,6 @@
 ---
 title: Wildcard
-tags: fab-academy-assignments, to-review
+tags: fab-academy-assignments
 last_update: 2020-10-07
 ---
 
