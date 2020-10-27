@@ -68,7 +68,7 @@ These are the settings I used to generate the toolpaths.
 
 ## Wax rough cut
 
-- tool diameter: `3.175 mm`
+- tool diameter: `0.3175 mm`
 - type: `flat end-mill`
 - tool overlap: `50%`
 
@@ -76,7 +76,7 @@ These are the settings I used to generate the toolpaths.
 
 ## Wax finish cut
 
-- tool diameter: `3.175 mm`
+- tool diameter: `0.3175 mm`
 - type: `ball end-mill`
 - tool overlap: `90%`
 
@@ -267,13 +267,6 @@ I love making molds and casted objects, playing with these different materials a
 Watch the following video to see the final result and to observe the oloid family rolling strangely :)
 
 <video><source src="final-result.mp4"></video>
-
-
-
-
-
-
-
 
 
 
