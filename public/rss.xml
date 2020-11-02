@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Tue, 27 Oct 2020 21:12:29 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Mon, 02 Nov 2020 18:14:52 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="large:4449-01.jpg" alt="" /&gt;
 &lt;img src="large:4449-02.jpg" alt="" /&gt;
@@ -339,7 +339,13 @@ To be able to compile the code, f...</description><pubDate>Fri, 20 Mar 2020 00:0
 &lt;li&gt;Upload the code&lt;/li&gt;
 &lt;/ol&gt;
 ...</description><pubDate>Mon, 23 Mar 2020 00:00:00 +0200</pubDate></item><item><title>Input devices</title><link>https://antoine.studio/input-devices.html</link><description>&lt;p&gt;Let's play with sensors.&lt;/p&gt;
-...</description><pubDate>Wed, 25 Mar 2020 00:00:00 +0200</pubDate></item><item><title>Ultrasonic sensor HC-SR04</title><link>https://antoine.studio/input-devices-ultrasonic-sensor.html</link><description>&lt;p&gt;The ultrasonic sensor HC-SR04 provides 2Cm to 400cm of non-contact measurement functionality with a ranging accuracy that can reach up to 3mm. Here is its &lt;a target="_blank" href="https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf"&gt;datasheet&lt;/a&gt;. This sensor has 4 pins that we have to connect to our dev board.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Part of this assignment is also covered on my final project's page.&lt;/p&gt;
+
+&lt;p&gt;&lt;a target="_blank" href="button:green-observatory-input.html"&gt;The Green Observatory: Input&lt;/a&gt;&lt;/p&gt;
+...</description><pubDate>Mon, 02 Nov 2020 00:00:00 +0200</pubDate></item><item><title>Ultrasonic sensor HC-SR04</title><link>https://antoine.studio/input-devices-ultrasonic-sensor.html</link><description>&lt;p&gt;The ultrasonic sensor HC-SR04 provides 2Cm to 400cm of non-contact measurement functionality with a ranging accuracy that can reach up to 3mm. Here is its &lt;a target="_blank" href="https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf"&gt;datasheet&lt;/a&gt;. This sensor has 4 pins that we have to connect to our dev board.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;5V supply&lt;/li&gt;
@@ -398,7 +404,7 @@ To be able to compile the code, f...</description><pubDate>Fri, 20 Mar 2020 00:0
 
 &lt;p&gt;I'm going to lend a hand to &lt;a target="_blank" href="https://maudb.gitlab.io/dok/"&gt;Maud Bausier&lt;/a&gt;, my partner, who is building an incubator to grow mycelium or any fermented food (tempeh, sriracha, etc.). I think we could have enough material to finish a prototype at home (covid-19 restrictions).&lt;/p&gt;
 
-&lt;p&gt;The main challenges for the moment concern electronics, which consists of: a thermistor (to know the temperature inside the incubator), a Peltier (to heat it), a fan (to cool it), an LCD screen (to know what's going on) and two push buttons to set the desired temperature inside the incuba...</description><pubDate>Wed, 15 Apr 2020 00:00:00 +0200</pubDate></item><item><title>Prototyping an incubator</title><link>https://antoine.studio/output-devices-incubator.html</link><description>&lt;p&gt;As I said, my partner is building an incubator to help us grow mycellium (and other fermented food) and she asked me an hand to help her with the electronic part. In this context, I will prototype an incubator by using the devices I already have. I will do it by following the spiral methodology: a first round with the basic features, and then other ones with additional options.&lt;/p&gt;
+&lt;p&gt;The main challenges for the moment concern electronics, which consists of: a thermistor (to know the temperature inside the incubator), a Peltier (to heat it), a fan (to cool it), an LCD screen (to know what's going on) and two push buttons to set the desired temperature inside the incuba...</description><pubDate>Mon, 02 Nov 2020 00:00:00 +0200</pubDate></item><item><title>Prototyping an incubator</title><link>https://antoine.studio/output-devices-incubator.html</link><description>&lt;p&gt;As I said, my partner is building an incubator to help us grow mycellium (and other fermented food) and she asked me an hand to help her with the electronic part. In this context, I will prototype an incubator by using the devices I already have. I will do it by following the spiral methodology: a first round with the basic features, and then other ones with additional options.&lt;/p&gt;
 
 &lt;h2 id="round-01-the-basics"&gt;Round #01: the basics&lt;/h2&gt;
 

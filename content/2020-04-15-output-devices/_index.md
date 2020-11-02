@@ -1,6 +1,7 @@
 ---
 title: Output devices
 tags: fab-academy-assignments
+last_update: 2020-11-02
 ---
 
 This week's assignement is about output devices: we are learning how to make various motors work, what are their mechanisms and principles, when and why use a specific one instead of another.
@@ -10,6 +11,14 @@ I'm going to lend a hand to [Maud Bausier](https://maudb.gitlab.io/dok/), my par
 The main challenges for the moment concern electronics, which consists of: a thermistor (to know the temperature inside the incubator), a Peltier (to heat it), a fan (to cool it), an LCD screen (to know what's going on) and two push buttons to set the desired temperature inside the incubator.
 
 ![incubator prototype](incubator-overview.jpg)
+
+---
+
+Part of this assignment is also covered on my final project's page.
+
+[The Green Observatory: Output](button:green-observatory-output.html)
+
+---
 
 # Motors
 

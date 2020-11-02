@@ -9,3 +9,4 @@ In the frame of my Fab Academy final project, I'm exploring how to sense the ele
 I covered this topic on a different article.
 
 [Sensing plants activity](button:green-observatory-input.html)
+
