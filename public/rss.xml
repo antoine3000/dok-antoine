@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Mon, 02 Nov 2020 18:14:52 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Tue, 03 Nov 2020 22:18:31 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="large:4449-01.jpg" alt="" /&gt;
 &lt;img src="large:4449-02.jpg" alt="" /&gt;
@@ -521,4 +521,10 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 
 &lt;p&gt;&lt;img src="design-07.png" alt="Small angle" /&gt;
 &lt;img src="small:design-08.png" alt="" /&gt;
-&lt;img src="small:des...</description><pubDate>Sun, 18 Oct 2020 00:00:00 +0200</pubDate></item></channel></rss>
+&lt;img src="small:des...</description><pubDate>Sun, 18 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Tempeh Machine</title><link>https://antoine.studio/incubator.html</link><description>&lt;p&gt;Together with my partner &lt;a target="_blank" href="https://maudb.gitlab.io/dok/"&gt;Maud Bausier&lt;/a&gt;, we are making an incubator.&lt;/p&gt;
+
+&lt;p&gt;As vegans, tempeh (fermeted food in general) is an important part of our diet. It is full of proteins, macrobiotics and it is delicious.&lt;/p&gt;
+
+&lt;p&gt;We started producing our own tempeh when we lived in Amsterdam, where we had a small room dedicated to a boiler, ensuring a constant temperature all year round. But that changed when we moved to Barcelona, where the temperature in the flat is practically the same as the outside temperature, because the windows are almost always open, which involves temperature variations that prevent us from producing the tempeh we love.&lt;/p&gt;
+
+&lt;p&gt;That's why we built an incubator, called Tempeh Machine, to help us ferment our delic...</description><pubDate>Tue, 03 Nov 2020 00:00:00 +0200</pubDate></item></channel></rss>
