@@ -12,6 +12,10 @@ First of all, we had to find out how to make the machine we had in mind, which w
 
 I'm very happy with the way our project went, even if we didn't reach the final stage we were aiming for: Our machine doesn't play pong. But it can move its pallet according to the position of the ball, which is already something great for us. More time and testing could help us to develop the final version of our machine, perhaps in the near future? Let's see how it goes.
 
+You can find our full documentation on our specific *Pong Machine* website.
+
+[Full documentation](button:http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/barcelona-machines/pong-machine/)
+
 # Task management
 
 With Benjamin, we did almost the whole project together because it was easier for us to learn the different steps together and help each other in real time. It's certainly not the best way to go fast, but it's certainly the best way to learn and act as a team. Nevertheless, we naturally divided the tasks according to our personal taste.
