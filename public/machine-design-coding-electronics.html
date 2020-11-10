@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title property="schema:name">antoine.studio - Documentation tool</title>
+<meta content="Documentation tool" name="description"/>
+<meta content="antoine.studio" property="schema:name"/>
+<meta content="Documentation tool" property="schema:description"/>
+<link href="assets/main.min.css" rel="stylesheet"/>
+</head>
+<body class="page page--article">
+<main class="main">
+<header class="header">
+<nav class="nav">
+<ul class="nav__list">
+<li class="nav__item">
+<a class="nav__link" href="index.html">antoine.studio</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="content.html">content</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="flux.html">flux</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="about.html">about</a>
+</li>
+</ul>
+</nav>
+</header>
+<article class="article">
+<!-- title -->
+<h1 class="article__title">Coding the electronics</h1>
+<!-- parent -->
+<p class="article__parent">This article is part of: <a href="machine-design.html">Machine design</a>.</p>
+<!-- tags -->
+<!-- featured image -->
+<!-- toc -->
+<section class="article__toc">
+<h2 class="toc__title">Table of content</h2>
+<div class="toc__list"><ul>
+<li><a href="#calibration">Calibration</a></li>
+<li><a href="#positioning">Positioning</a></li>
+<li><a href="#source-code">Source code</a></li>
+</ul>
+</div>
+</section>
+<section class="article__content ts">
+<p>The following code does two main things for our Pong Machine. The first is the calibration of the stepper motor, in order to know how many steps separate the beginning from the end of the rail, and therefore to know how to move the paddle. The second is to update the position of the motor according to any crossed lines in the field, in order to follow the ball. Later, it will actuate the solenoid to push the ball forward.</p>
+<h1 id="calibration">Calibration</h1>
+<p>To calibrate, I run the stepper motor in one direction until it reaches an endstop, then I make it move in the other direction counting all the steps the motor takes until we reach the other endstop. Once we know how many steps separate the beginning from the end, we can place the motor in the middle and start the game.</p>
+<video controls="" preload="auto"><source src="medias/machine-design-coding-electronics-calibration-compressed.mp4" type="video/mp4"/></video>
+<pre><code>
+void motorCalibration()
+{
+  endstopStatus = digitalRead(endstop);
+  while (endstopStatus == true)
+  {
+    // to right
+    motorStep(false, 1, 0);
+    endstopStatus = digitalRead(endstop);
+  }
+  motorStep(true, 30, 50);
+  endstopStatus = digitalRead(endstop);
+  while (endstopStatus == true)
+  {
+    // to left
+    motorStep(true, 1, 0);
+    endstopStatus = digitalRead(endstop);
+    totalSteps++;
+  }
+  totalSteps = totalSteps + 30;
+  Serial.println(totalSteps);
+  // send motor to center
+  laneSteps = totalSteps / 4;
+  motorStep(false, totalSteps / 2, 50);
+}
+</code></pre>
+<h1 id="positioning">Positioning</h1>
+<p>To position correctly the pad according to any crossed lines we had to think about good logic. And the simplest one is always the best.</p>
+<figure class="md"><img alt="" src="medias/machine-design-coding-electronics-logic.jpg"><figcaption></figcaption></figure>
+<p>Each <code>lane</code> has a numerical value between 0 and 4 and each <code>line</code> also has a numerical value between 0 and 3.</p>
+<p>The game is started with the motor in the centre, in lane <code>2</code>. As soon as a line is crossed, we check whether the value of the line is lower or higher than the value of the lane, which indicates whether the ball is moving to the right or to the left.</p>
+<p>Then, knowing the direction and the line crossed, we know in which lane the motor must move. But for how many steps? For the difference between its current position and its final position multiplied by the number of steps that make up a lane.</p>
+<p>Let's say that the previous calibration gave us <code>1000 steps</code> between the beginning and the end of the track. We have 5 lanes in our field, which means that each lane has a width of <code>200 steps</code>. If our motor is on lane <code>2</code> and the line <code>3</code> is crossed: 3 is higher than 2, this means that we are going to the right, and the motor has to move on 1 lane (3 - 2), which corresponds to <code>200 steps to the right.</code> And so on.</p>
+<video controls="" preload="auto"><source src="medias/machine-design-coding-electronics-moving-with-the-ball.mp4" type="video/mp4"/></video>
+<pre><code>
+void updatePos(int line)
+{
+  if (line &lt; position)
+  {
+    diffPosition = position - line;
+    motorStep(true, laneSteps * diffPosition, 50);
+    position = line;
+  }
+  else
+  {
+    diffPosition = (line + 1) - position;
+    motorStep(false, laneSteps * diffPosition, 50);
+    position = line + 1;
+  }
+}
+</code></pre>
+<h1 id="source-code">Source code</h1>
+<p>Here is full code that I wrote to run our prototype.</p>
+<pre><code>
+// Pong Machine - One side
+
+//   2   4   6   8
+// 1 | 3 | 5 | 7 | 9
+// ----------------- A
+
+// Stepper motor pins
+#define motorEnable 8
+#define motorStp 3
+#define motorDir 6
+
+// Line pins
+#define line0 A2
+#define line1 A1
+#define line2 A0
+#define line3 A3
+
+// Line status
+bool line0Status = false;
+bool line1Status = false;
+bool line2Status = false;
+bool line3Status = false;
+
+// Endstop pin
+#define endstop 10
+int endstopStatus;
+
+// Lanes
+int laneNumber = 5;
+int totalSteps = 0;
+int laneSteps;
+
+// Position
+int position = 2;
+int diffPosition;
+int moveSteps;
+
+void motorStep(bool dir, int steps, int inDelay)
+{
+  digitalWrite(motorDir, dir);
+  delay(inDelay);
+  for (int i = 0; i &lt; steps; i++)
+  {
+    endstopStatus = digitalRead(endstop);
+    digitalWrite(motorStp, HIGH);
+    delayMicroseconds(800);
+    digitalWrite(motorStp, LOW);
+    delayMicroseconds(800);
+  }
+}
+
+void motorCalibration()
+{
+  endstopStatus = digitalRead(endstop);
+  while (endstopStatus == true)
+  {
+    // to right
+    motorStep(false, 1, 0);
+    endstopStatus = digitalRead(endstop);
+  }
+  motorStep(true, 30, 50);
+  endstopStatus = digitalRead(endstop);
+  while (endstopStatus == true)
+  {
+    // to left
+    motorStep(true, 1, 0);
+    endstopStatus = digitalRead(endstop);
+    totalSteps++;
+  }
+  totalSteps = totalSteps + 30;
+  Serial.println(totalSteps);
+  // send motor to center
+  laneSteps = totalSteps / 4;
+  motorStep(false, totalSteps / 2, 50);
+}
+
+void updatePos(int line)
+{
+  if (line &lt; position)
+  {
+    diffPosition = position - line;
+    motorStep(true, laneSteps * diffPosition, 50);
+    position = line;
+  }
+  else
+  {
+    diffPosition = (line + 1) - position;
+    motorStep(false, laneSteps * diffPosition, 50);
+    position = line + 1;
+  }
+}
+
+void setup()
+{
+  Serial.begin(9600);
+  delay(1000);
+  pinMode(motorEnable, OUTPUT);
+  pinMode(motorStp, OUTPUT);
+  pinMode(motorDir, OUTPUT);
+  pinMode(endstop, INPUT_PULLUP);
+  pinMode(line0, INPUT);
+  pinMode(line1, INPUT);
+  pinMode(line2, INPUT);
+  pinMode(line3, INPUT);
+  digitalWrite(motorEnable, LOW);
+  motorCalibration();
+}
+
+void loop()
+{
+  // Update line status
+  line0Status = digitalRead(line0);
+  line1Status = digitalRead(line1);
+  line2Status = digitalRead(line2);
+  line3Status = digitalRead(line3);
+  // Update position
+  if (line0Status)
+  {
+    updatePos(0);
+  }
+  else if (line1Status)
+  {
+    updatePos(1);
+  }
+  else if (line2Status)
+  {
+    updatePos(2);
+  }
+  else if (line3Status)
+  {
+    updatePos(3);
+  }
+}
+</code></pre>
+<figure class="lg"><img alt="" src="medias/machine-design-coding-electronics-coding-session.jpg"><figcaption></figcaption></figure>
+</section>
+<footer>
+<p>✎ <span>Created</span> 10/11/2020</p>
+<p>⁂ <span>Updated</span> 10/11/2020</p>
+</footer>
+</article>
+<footer class="footer">
+<p>antoine.studio ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a> — <a href="https://antoine.studio/rss.xml">RSS feed</a> </p>
+</footer>
+</main>
+</body>
+</html>

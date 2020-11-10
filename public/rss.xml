@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Tue, 03 Nov 2020 22:38:38 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Tue, 10 Nov 2020 15:55:08 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="large:4449-01.jpg" alt="" /&gt;
 &lt;img src="large:4449-02.jpg" alt="" /&gt;
@@ -461,8 +461,15 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 &lt;p&gt;&lt;a target="_blank" href="button:green-observatory-inflatable.html"&gt;Making of the inflatable part&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="inflatable-result.jpg" alt="" /&gt;&lt;/p&gt;
-...</description><pubDate>Wed, 07 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Machine design</title><link>https://antoine.studio/machine-design.html</link><description>&lt;p&gt;TODO: everything :)&lt;/p&gt;
-...</description><pubDate>Mon, 01 Jun 2020 00:00:00 +0200</pubDate></item><item><title>The Green Observatory</title><link>https://antoine.studio/green-observatory.html</link><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
+...</description><pubDate>Wed, 07 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Machine design</title><link>https://antoine.studio/machine-design.html</link><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;For the Machine Design week at the Fab Academy, we were asked to make a machine of any type, but one that we could operate and automate. I teamed up with &lt;a target="_blank" href="https://fabacademy.org/2020/labs/barcelona/students/benjamin-scott/"&gt;Benjamin Scott&lt;/a&gt; and we decided to go for a machine that plays Pong again itself. We call it the &lt;em&gt;Pong Machine&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;First of all, we had to find out how to make the machine we had in mind, which was not easy when we launched this project in June 2020, towards the official end of the Academy. A few months later, as the Covid-19 crisis subsides, we have a better understanding of the tools we have in the lab, how the mechanics work, what we have to produce by ourselves and what we can take fr...</description><pubDate>Tue, 10 Nov 2020 00:00:00 +0200</pubDate></item><item><title>Coding the electronics</title><link>https://antoine.studio/machine-design-coding-electronics.html</link><description>&lt;p&gt;The following code does two main things for our Pong Machine. The first is the calibration of the stepper motor, in order to know how many steps separate the beginning from the end of the rail, and therefore to know how to move the paddle. The second is to update the position of the motor according to any crossed lines in the field, in order to follow the ball. Later, it will actuate the solenoid to push the ball forward.&lt;/p&gt;
+
+&lt;h1 id="calibration"&gt;Calibration&lt;/h1&gt;
+
+&lt;p&gt;To calibrate, I run the stepper motor in one direction until it reaches an endstop, then I make it move in the other direction counting all the steps the motor takes until we reach the other endstop. Once we know how many steps separate the beginning from the end, we can place the motor in the middle and start the game.&lt;/p...</description><pubDate>Tue, 10 Nov 2020 00:00:00 +0200</pubDate></item><item><title>The Green Observatory</title><link>https://antoine.studio/green-observatory.html</link><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
 
 &lt;p&gt;&lt;em&gt;The Green Observatory&lt;/em&gt;, my Fab Academy final project, is a device that listens to the electrical activity of plants and represents it with a physical and meditative movement that we, humans, can observe and contemplate.&lt;/p&gt;
 
