@@ -1,6 +1,6 @@
 ---
 title: Electronics
-featured_image: incubator-shield.JPG:flux
+featured_image: incubator-shield.jpg:flux
 ---
 
 The electronic part of the incubator must remain as simple as possible, to offer the possibility of being understood and modified by others. I don't want to lock the users in a device they don't understand.
@@ -70,5 +70,5 @@ The files to make the barduino can be found on its gitlab [repository](https://g
 
 Fab Lab Barcelona ordered several PCBs from their PCB design in order to speed up the production of the Barduino (which is used in various projects). Only the assembly, the soldering of the components, is necessary to make it work.
 
-![](incubator-traces.JPG)
+![](incubator-traces.jpgg)
 ![](incub-overview.jpg)

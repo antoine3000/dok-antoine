@@ -8,7 +8,7 @@ As I said, my partner is building an incubator to help us grow mycellium (and ot
 
 I have started a new project dedicated to the incubator and the sub-projects it brings. Everything is documented under [incubator-v0-1.html](incubator-v0-1.html).
 
-![](incubator-shield.JPG)
+![](incubator-shield.jpg)
 
 [Incubator](button:incubator-v0-1.html)
 
