@@ -182,6 +182,12 @@ And even if it doesn't seem impressive when exposed like that, this little `0` o
 
 (The NodeMCU don't fit well on the breadboard, I had to hold them in place during the experiment to be sure that the connections were good.)
 
+# Incubator
+
+Part of this assignment is also covered with the [Incubator](incubator-v0-1.html) project.
+
+[Incubator v0.1](button:incubator-v0-1.html)
+
 
 # Useful links
 - [Fab Lab Barcelona - Networking class](http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/site/local/#material/extras/week14/networking)
@@ -189,3 +195,5 @@ And even if it doesn't seem impressive when exposed like that, this little `0` o
 - [ESP8266 Sending Data Over Wi-Fi to another ESP8266](https://robotzero.one/sending-data-esp8266-to-esp8266/)
 - [ESP8266 - post data to website](https://www.instructables.com/id/Arduino-Esp8266-Post-Data-to-Website/)
 - [Arduino Wire library](https://www.arduino.cc/en/Reference/Wire)
+
+

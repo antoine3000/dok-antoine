@@ -69,3 +69,6 @@ The [SRM-20](https://www.rolanddga.com/products/3d/srm-20-small-milling-machine)
 The files to make the barduino can be found on its gitlab [repository](https://gitlab.com/fablabbcn-projects/electronics/barduino/-/tree/master/barduino-microusb-2.2).
 
 Fab Lab Barcelona ordered several PCBs from their PCB design in order to speed up the production of the Barduino (which is used in various projects). Only the assembly, the soldering of the components, is necessary to make it work.
+
+![](incubator-traces.JPG)
+![](incub-overview.jpg)

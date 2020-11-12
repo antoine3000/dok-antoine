@@ -4,6 +4,14 @@ title: Prototyping an incubator
 
 As I said, my partner is building an incubator to help us grow mycellium (and other fermented food) and she asked me an hand to help her with the electronic part. In this context, I will prototype an incubator by using the devices I already have. I will do it by following the spiral methodology: a first round with the basic features, and then other ones with additional options.
 
+## Update 2020-11
+
+I have started a new project dedicated to the incubator and the sub-projects it brings. Everything is documented under [incubator-v0-1.html](incubator-v0-1.html).
+
+![](incubator-shield.JPG)
+
+[Incubator](button:incubator-v0-1.html)
+
 ## Round #01: the basics
 
 For the first round, I would like to control a fan and a Peltier (thermoelectric cooler) to get an ideal temperature into a closed space, using a Arduino UNO. The Peltier will be used to warm up the temperature and the fan will help us to either cool down or to distribute the heat evenly.
