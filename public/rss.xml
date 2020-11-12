@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Wed, 11 Nov 2020 18:44:01 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Thu, 12 Nov 2020 18:55:49 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="large:4449-01.jpg" alt="" /&gt;
 &lt;img src="large:4449-02.jpg" alt="" /&gt;
@@ -543,13 +543,13 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 
 &lt;p&gt;&lt;img src="design-07.png" alt="Small angle" /&gt;
 &lt;img src="small:design-08.png" alt="" /&gt;
-&lt;img src="small:des...</description><pubDate>Sun, 18 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Tempeh Machine</title><link>https://antoine.studio/incubator.html</link><description>&lt;p&gt;Together with my partner &lt;a target="_blank" href="https://maudb.gitlab.io/dok/"&gt;Maud Bausier&lt;/a&gt;, we are making an incubator.&lt;/p&gt;
+&lt;img src="small:des...</description><pubDate>Sun, 18 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Incubator v0.1</title><link>https://antoine.studio/incubator-v0-1.html</link><description>&lt;p&gt;Together with my partner &lt;a target="_blank" href="https://maudb.gitlab.io/dok/"&gt;Maud Bausier&lt;/a&gt;, we are making an incubator.&lt;/p&gt;
 
 &lt;p&gt;As vegans, tempeh (fermeted food in general) is an important part of our diet. It is full of proteins, macrobiotics and it is delicious.&lt;/p&gt;
 
 &lt;p&gt;We started producing our own tempeh when we lived in Amsterdam, where we had a small room dedicated to a boiler, ensuring a constant temperature all year round. But that changed when we moved to Barcelona, where the temperature in the flat is practically the same as the outside temperature, because the windows are almost always open, which involves temperature variations that prevent us from producing the tempeh we love.&lt;/p&gt;
 
-&lt;p&gt;That's why we are making an incubator, called &lt;em&gt;Tempeh Machine&lt;/em&gt;, to help us fer...</description><pubDate>Tue, 03 Nov 2020 00:00:00 +0200</pubDate></item><item><title>Electronics</title><link>https://antoine.studio/incubator-electronics.html</link><description>&lt;p&gt;The electronic part of the incubator must remain as simple as possible, to offer the possibility of being understood and modified by others. I don't want to lock the users in a device they don't understand.&lt;/p&gt;
+&lt;p&gt;That's why we are making an incubator, called &lt;em&gt;Tempeh Machine&lt;/em&gt;, to help us fer...</description><pubDate>Tue, 03 Nov 2020 00:00:00 +0200</pubDate></item><item><title>Electronics</title><link>https://antoine.studio/incubator-v0-1-electronics.html</link><description>&lt;p&gt;The electronic part of the incubator must remain as simple as possible, to offer the possibility of being understood and modified by others. I don't want to lock the users in a device they don't understand.&lt;/p&gt;
 
 &lt;p&gt;It is built as an extra board that comes with a Barduino, allowing it to operate with two 12V outputs and one 5V input.&lt;/p&gt;
 
@@ -557,7 +557,22 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 
 &lt;h2 id="barduino"&gt;Barduino&lt;/h2&gt;
 
-&lt;p&gt;A &lt;a target="_blank" href="https://gitlab.com/fablabbcn-projects/electronics/barduino"&gt;Barduino&lt;/a&gt;, an ESP32 development board made in Barcelona, is used as the brain. This allows me to use a Wifi compatible board with a functional USB connection without having to do it (again) by myself. Moreover, it allows me to design a shield (something I've never done before) and to participa...</description><pubDate>Mon, 09 Nov 2020 00:00:00 +0200</pubDate></item><item><title>Interface</title><link>https://antoine.studio/incubator-interface.html</link><description>&lt;p&gt;I decided to go screenless for this project, and to use the screen that we already have in our pocket: the one from our phone. This choice is motivated by the resource I have at my disposal. Ideally, in the next version, I would add a tiny screen to make the incubator totally independent of other technologies. I don't want to force the use of a smartphone (because I would like to stop using mine).&lt;/p&gt;
+&lt;p&gt;A &lt;a target="_blank" href="https://gitlab.com/fablabbcn-projects/electronics/barduino"&gt;Barduino&lt;/a&gt;, an ESP32 development board made in Barcelona, is used as the brain. This allows me to use a Wifi compatible board with a functional USB connection without having to do it (again) by myself. Moreover, it allows me to design a shield (something I've never done before) and to participa...</description><pubDate>Mon, 09 Nov 2020 00:00:00 +0200</pubDate></item><item><title>Interface example</title><link>https://antoine.studio/incubator-v0-1-interface-example.html</link><description>&lt;p&gt;To make sure I understand how a web interface is made via an ESP32, I started with a very basic example. The only thing this minimal example will do is to light on and off the RGB LED connected to the Barduino (ESP32) through the incubator shield I designed via a web interface accessible from any browser (desktop and mobile).&lt;/p&gt;
 
-&lt;p&gt;To do this, I have created a simple web interface that can be reached from the Wifi network provided by the ESP32 microchip. The interface allows us to see and change the temperature inside the incubator.&lt;/p&gt;
-...</description><pubDate>Tue, 10 Nov 2020 00:00:00 +0200</pubDate></item></channel></rss>
+&lt;p&gt;&lt;video&gt;&lt;source src="esp-interface-minimal.mp4"&gt;&lt;/video&gt;
+&lt;img src="small:interface-screenshot.png" alt="very very minimal" /&gt;&lt;/p&gt;
+
+&lt;h2 id="key-elements"&gt;Key elements&lt;/h2&gt;
+
+&lt;h3 id="librairies"&gt;Librairies&lt;/h3&gt;
+
+&lt;p&gt;Include the librairies: Arduino framework, AnalogWrite to manipulate analog output with the ESP32 and Wifi, the one that interests us here.&lt;/p&gt;
+
+&lt;pre&gt;
+#include &amp;lt;Arduino.h&amp;gt;
+#include &amp;lt;analogWrite.h&amp;gt;
+#include &amp;lt;WiFi.h&amp;gt;
+&lt;/pre&gt;
+
+&lt;h3 id="w...</description><pubDate>Tue, 10 Nov 2020 00:00:00 +0200</pubDate></item><item><title>Interface</title><link>https://antoine.studio/incubator-v0-1-interface.html</link><description>&lt;p&gt;I decided to go screenless for this project, and to use the screen that we already have in our pocket: the one from our phone. This choice is motivated by the resource I have at my disposal. Ideally, in the next version, I would add a tiny screen to make the incubator totally independent of other technologies. I don't want to force the use of a smartphone (because I would like to stop using mine).&lt;/p&gt;
+...</description><pubDate>Thu, 12 Nov 2020 00:00:00 +0200</pubDate></item></channel></rss>

@@ -549,3 +549,6 @@ body ::selection {
 
 .index__title {
   margin-bottom: var(--size-lg); }
+
+.article__content pre {
+  margin-bottom: var(--size-sm); }

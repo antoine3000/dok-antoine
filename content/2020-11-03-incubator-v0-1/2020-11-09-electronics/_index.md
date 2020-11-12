@@ -1,5 +1,6 @@
 ---
 title: Electronics
+featured_image: incubator-shield.JPG:flux
 ---
 
 The electronic part of the incubator must remain as simple as possible, to offer the possibility of being understood and modified by others. I don't want to lock the users in a device they don't understand.
