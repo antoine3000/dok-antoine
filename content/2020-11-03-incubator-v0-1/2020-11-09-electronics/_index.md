@@ -70,5 +70,5 @@ The files to make the barduino can be found on its gitlab [repository](https://g
 
 Fab Lab Barcelona ordered several PCBs from their PCB design in order to speed up the production of the Barduino (which is used in various projects). Only the assembly, the soldering of the components, is necessary to make it work.
 
-![](incubator-traces.jpgg)
+![](incubator-traces.jpg)
 ![](incub-overview.jpg)
