@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title property="schema:name">antoine.studio - Documentation tool</title>
+<meta content="Documentation tool" name="description"/>
+<meta content="antoine.studio" property="schema:name"/>
+<meta content="Documentation tool" property="schema:description"/>
+<link href="assets/main.min.css" rel="stylesheet"/>
+</head>
+<body class="page page--article">
+<main class="main">
+<header class="header">
+<nav class="nav">
+<ul class="nav__list">
+<li class="nav__item">
+<a class="nav__link" href="index.html">antoine.studio</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="content.html">content</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="flux.html">flux</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="about.html">about</a>
+</li>
+</ul>
+</nav>
+</header>
+<article class="article">
+<!-- title -->
+<h1 class="article__title">Electronics</h1>
+<!-- parent -->
+<p class="article__parent">This article is part of: <a href="incubator-v0-2.html">Incubator v0.2</a>.</p>
+<!-- tags -->
+<!-- featured image -->
+<figure class="md"><img alt="" class="article__featured" src="medias/incubator-v0-2-electronics-pcb-result.jpg"><figcaption></figcaption></figure>
+<!-- toc -->
+<section class="article__toc">
+<h2 class="toc__title">Table of content</h2>
+<div class="toc__list"><ul>
+<li><a href="#schematics">Schematics</a></li>
+<li><a href="#pcb-design">PCB design</a>
+<ul>
+<li><a href="#robustness-and-therefore-longevity">Robustness and therefore longevity</a></li>
+</ul></li>
+<li><a href="#fabrication-and-soldering">Fabrication and soldering</a>
+<ul>
+<li><a href="#little-mistake">Little mistake</a></li>
+</ul></li>
+<li><a href="#result">Result</a></li>
+</ul>
+</div>
+</section>
+<section class="article__content ts">
+<p>This is the continuation of <a href="incubator-v0-1-electronics.html" target="_blank">the electronics of the v0.1</a>.</p>
+<p>In the previous version I had some problems with the ESP32 pins I was using. The one I had chosen for the heating pad could not be used as an output and the one I had chosen for the DHT11 sensor could not read values for any reason. I found out which pins to use after a session of testing all the pins and whether or not they could meet my needs.</p>
+<p>Also, during my tests, I realised that the DHT11 sensor doesn't really need 5V to work, even though I thought it would be better/safe to use it this way. This means that I can remove some components from the PCB (the level shifter that converted 3.3V to 5V), which simplified the PCB design.</p>
+<h1 id="schematics">Schematics</h1>
+<figure class="lg"><img alt="" src="medias/incubator-v0-2-electronics-schematics.svg"><figcaption></figcaption></figure>
+<h1 id="pcb-design">PCB design</h1>
+<figure class="md"><img alt="" src="medias/incubator-v0-2-electronics-pcb-3d.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/incubator-v0-2-electronics-pcb.svg"><figcaption></figcaption></figure>
+<h2 id="robustness-and-therefore-longevity">Robustness and therefore longevity</h2>
+<p>This time, I decided to solder some components on the back of the PCB, as this will be easier to solder and will ensure the robustness and therefore the longevity of the design.</p>
+<p>The components that will be soldered on the back are the Barduino (header), the barrel jack, the terminals (heating pad, fan, DHT11 sensor). To ensure the circuit connectivity, I have inverted the footprint of the Barduino and the barrel jack (I don't have to do this for the terminals as I will simply invert the cables).</p>
+<h1 id="fabrication-and-soldering">Fabrication and soldering</h1>
+<p>I fabricated this board at the Fab Lab Barcelona using a Roland SRM-20 milling machine. Then I took it home to solder it quietly with a good cup of tea.</p>
+<figure class="md"><img alt="" src="medias/incubator-v0-2-electronics-pcb-process-02.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/incubator-v0-2-electronics-pcb-process-01.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/incubator-v0-2-electronics-pcb-process-03.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/incubator-v0-2-electronics-pcb-process-06.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/incubator-v0-2-electronics-pcb-process-07.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/incubator-v0-2-electronics-pcb-process-04.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/incubator-v0-2-electronics-pcb-process-05.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/incubator-v0-2-electronics-pcb-process-08.jpg"><figcaption></figcaption></figure>
+<h2 id="little-mistake">Little mistake</h2>
+<p>While making the schematics, I called the 3.3 volt line "3V3" and "3.3V", which produced a disconnected line. I had to solder a resistor tab between the 3.3V and one of the DHT11 sensor pads to make it work. I need to correct this in the next version.</p>
+<h1 id="result">Result</h1>
+<p>The prototype now works perfectly. The DHT11 sensor measures the temperature and humidity inside the box, the heating pad heats to maintain the temperature at the desired value and the fan circulates the air to distribute the heat properly.</p>
+<figure class="md"><img alt="" src="medias/incubator-v0-2-electronics-electronics-result-01.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/incubator-v0-2-electronics-electronics-result-02.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/incubator-v0-2-electronics-electronics-result-03.jpg"><figcaption></figcaption></figure>
+</section>
+<footer>
+<p>✎ <span>Created</span> 22/11/2020</p>
+<p>⁂ <span>Updated</span> 22/11/2020</p>
+</footer>
+</article>
+<footer class="footer">
+<p>antoine.studio ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a> — <a href="https://antoine.studio/rss.xml">RSS feed</a> </p>
+</footer>
+</main>
+</body>
+</html>
