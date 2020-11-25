@@ -50,3 +50,7 @@ The prototype now works perfectly. The DHT11 sensor measures the temperature and
 ![](electronics-result-02.jpg)
 ![](electronics-result-03.jpg)
 
+# Files
+
+- Design and fabrication files: [incubator-electronics-v0-2.zip](file:incubator-electronics-v0-2.zip)
+
