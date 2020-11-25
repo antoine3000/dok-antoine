@@ -30,7 +30,7 @@ I use a buck-boost from [Adrafuit](https://www.adafruit.com/product/2190) (which
 
 I design electronics boards with [KiCad](https://kicad-pcb.org/), a cross platform and open source electronics design automation suite. You will find the files at the end of this article.
 
-I have already explained how to [design electronics](file:///home/antoine/repo/dok-antoine-studio/public/electronics-design.html) and how to [produce electronics](file:///home/antoine/repo/dok-antoine-studio/public/electronics-production.html). Feel free to read my documentation on these subjects.
+I have already explained how to [design electronics](electronics-design.html) and how to [produce electronics](electronics-production.html). Feel free to read my documentation on these subjects.
 
 ## Schematics
 
