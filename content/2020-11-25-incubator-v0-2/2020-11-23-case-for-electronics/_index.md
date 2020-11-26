@@ -1,6 +1,6 @@
 ---
 title: A case for the electronics
-featured_image: case-result-01.jpg
+featured_image: case-result-01.jpg:flux
 ---
 
 Now that the [electronics](incubator-v0-2-electronics.html) is working, I need to protect it a little to avoid mishandling that could damage it. To do this, I will design a case which will then be printed in 3D.

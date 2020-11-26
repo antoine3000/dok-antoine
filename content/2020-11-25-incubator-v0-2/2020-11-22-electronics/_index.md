@@ -1,6 +1,6 @@
 ---
 title: Electronics
-featured_image: pcb-result.jpg
+featured_image: pcb-result.jpg:flux
 ---
 
 This is the continuation of [the electronics of the v0.1](incubator-v0-1-electronics.html).
