@@ -61,6 +61,8 @@
 <ul>
 <li><a href="#what-must-remain-accessible">What must remain accessible</a></li>
 <li><a href="#a-way-to-fix-it">A way to fix it</a></li>
+<li><a href="#from-kicad-to-freecad">From KiCAD to FreeCAD</a></li>
+<li><a href="#views">Views</a></li>
 </ul></li>
 <li><a href="#fabrication">Fabrication</a></li>
 <li><a href="#result">Result</a></li>
@@ -133,6 +135,7 @@
 <p>Now that the <a href="incubator-v0-2-electronics.html" target="_blank">electronics</a> is working, I need to protect it a little to avoid mishandling that could damage it. To do this, I will design a case which will then be printed in 3D.</p>
 <h1 id="design">Design</h1>
 <p>The main idea of this design is to have all the functions accessible while having a light reflection that communicates the state of the incubator (if it is heating up, or if it has reached the desired temperature, or if it is cooling down).</p>
+<p class="todo">To do: Add technical details</p>
 <h2 id="what-must-remain-accessible">What must remain accessible</h2>
 <ul>
 <li>the USB port</li>
@@ -144,18 +147,25 @@
 </ul>
 <h2 id="a-way-to-fix-it">A way to fix it</h2>
 <p>Also, we need to find a way to fix the electronics in the case and then the case in the incubator, for this I will use M3 bolts and nuts. I downloaded a <a href="https://grabcad.com/library/m3-hex-nut-1" target="_blank">3D model</a> of the M3 nut that I incorporated into my design.</p>
+<h2 id="from-kicad-to-freecad">From KiCAD to FreeCAD</h2>
+<p>Both <a href="https://www.kicad.org/" target="_blank">KiCAD</a> (Electronics design) and <a href="https://www.freecadweb.org/" target="_blank">FreeCAD</a> (2D and 3D parametric modeler) are open-source and work hand in hand in order to facilitate the use of one after the other. FreeCAD's <a href="https://wiki.freecadweb.org/KicadStepUp_Workbench" target="_blank">KicadStepUp workbench</a> allows to import a 3D model from a PCB designed in KiCAD to start designing from it.</p>
+<h2 id="views">Views</h2>
 <figure class="md"><img alt="" src="medias/incubator-v0-2-case-for-electronics-case-01.png"><figcaption></figcaption></figure>
 <figure class="md"><img alt="" src="medias/incubator-v0-2-case-for-electronics-case-02.png"><figcaption></figcaption></figure>
 <figure class="md"><img alt="" src="medias/incubator-v0-2-case-for-electronics-case-03.png"><figcaption></figcaption></figure>
 <figure class="md"><img alt="" src="medias/incubator-v0-2-case-for-electronics-case-04.png"><figcaption></figcaption></figure>
 <figure class="md"><img alt="" src="medias/incubator-v0-2-case-for-electronics-case-05.png"><figcaption></figcaption></figure>
 <h1 id="fabrication">Fabrication</h1>
-<p>I designed the case in Freecad as usual and then printed it with a mini Prusa 3D printer. I'm always amazed at the final quality of this printer.</p>
-<p>The print was done in ~4 hours.</p>
+<p>I printed this project at home using our new Mini Prusa 3D printer. I'm always amazed at the final quality of this printer. The only thing I have to adjust is the way I make my supports. They always marked my prints badly, which reduces the quality. The print was done in ~4 hours.</p>
 <figure class="md"><img alt="" src="medias/incubator-v0-2-case-for-electronics-slicer.png"><figcaption></figcaption></figure>
 <figure class="md"><img alt="" src="medias/incubator-v0-2-case-for-electronics-printer.jpg"><figcaption></figcaption></figure>
 <h1 id="result">Result</h1>
 <p>It went so well. The reflection of the light is as I had imagined and my measurements were good! Well, almost good, because I had to cut my USB cable to fit my design.</p>
+<figure class="md"><img alt="" src="medias/incubator-v0-2-case-for-electronics-case-result-01.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/incubator-v0-2-case-for-electronics-case-result-05.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/incubator-v0-2-case-for-electronics-case-result-02.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/incubator-v0-2-case-for-electronics-case-result-03.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" src="medias/incubator-v0-2-case-for-electronics-case-result-06.jpg"><figcaption></figcaption></figure>
 </section>
 <footer>
 <p>✎ <span>Created</span> 23/11/2020</p>
