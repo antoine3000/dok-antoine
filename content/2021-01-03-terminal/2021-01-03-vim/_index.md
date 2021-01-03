@@ -4,6 +4,7 @@ title: Vim
 
 leader key `,`
 
+- quit `q`
 - move `h j k l`
 - visual mode `v`
 - normal mode `esc`
@@ -29,3 +30,4 @@ leader key `,`
 - go the last line `G`
 - open files `, space`
 - open files in the buffer `, b`
+- close current file (buffer) `:bd`

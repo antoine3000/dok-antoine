@@ -10,5 +10,4 @@ title: Kitty terminal
 - open a new tab `shift + cmd + t`
 - go to next tab `shift + cmd + ->`
 - go to previous tab `shift + cmd + <-`
-- new
 
