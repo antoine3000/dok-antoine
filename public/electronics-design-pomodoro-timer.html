@@ -60,24 +60,24 @@
 </div>
 </section>
 <section class="article__content ts">
-<p>I use a pomodoro timer daily to help me manage my time and effort in the tasks I want to accomplish. For now, I'm using <a href="https://github.com/JaDogg/pydoro" target="_blank">Pydoro</a>, an open source pomodoro terminal timer written in Python but I would like to build mine and have it physically next to my laptop.</p>
+<p>I use a pomodoro timer daily to help me manage my time and effort in the tasks I want to accomplish. For now, I'm using <a href="https://github.com/JaDogg/pydoro" rel="noopener" target="_blank">Pydoro</a>, an open source pomodoro terminal timer written in Python but I would like to build mine and have it physically next to my laptop.</p>
 <blockquote>
 <p>The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. The technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks. Each interval is known as a pomodoro, from the Italian word for 'tomato', after the tomato-shaped kitchen timer that Cirillo used as a university student.</p>
 <blockquote>
-<p><a href="https://en.wikipedia.org/wiki/Pomodoro_Technique" target="_blank">Pomodoro Technique, Wikipedia</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Pomodoro_Technique" rel="noopener" target="_blank">Pomodoro Technique, Wikipedia</a></p>
 </blockquote>
 </blockquote>
 <figure class="md"><img alt="pomo-illu" src="medias/electronics-design-pomodoro-timer-pomo-illu.png"><figcaption>pomo-illu</figcaption></figure>
 <h2 id="components">Components</h2>
-<p>The main component I'm using is the microcontroller <a href="https://www.microchip.com/wwwproducts/en/ATTINY1614" target="_blank">ATtiny1614</a>. It will allow me to program my inputs and outputs needed to run my project.</p>
+<p>The main component I'm using is the microcontroller <a href="https://www.microchip.com/wwwproducts/en/ATTINY1614" rel="noopener" target="_blank">ATtiny1614</a>. It will allow me to program my inputs and outputs needed to run my project.</p>
 <p>As outputs, I have 4 LEDs that are used to visualize the time passing by and the interactions with the pomodoro timer.
 As inputs, I have to 2 switches (buttons) that allow me to start/pause/resume/reset the timer.</p>
 <p>I also need 6 resistor (one for each of the inputs/outputs), a capacitor, a FTDI header (to be able to communicate with the boards), a UPDI header (to program the board).</p>
 <h2 id="design">Design</h2>
-<p>I'm using <a href="https://kicad-pcb.org/" target="_blank">KiCAD</a>, a cross platform and <a href="https://gitlab.com/kicad" target="_blank">open-source</a> software, for designing electronics. The process is divided into two main steps: schematics design and PCB design.</p>
+<p>I'm using <a href="https://kicad-pcb.org/" rel="noopener" target="_blank">KiCAD</a>, a cross platform and <a href="https://gitlab.com/kicad" rel="noopener" target="_blank">open-source</a> software, for designing electronics. The process is divided into two main steps: schematics design and PCB design.</p>
 <p>Before making the schematics, I had to import symbols and footprints according to the components which I wanted to use (and which I had at my disposal in the laboratory).</p>
-<p>For the symbols, go to <code>Preferences &gt; Manage Symbol Librairies</code> to add <a href="https://github.com/KiCad/kicad-symbols" target="_blank">this</a> and <a href="https://kicad.github.io/symbols/MCU_Microchip_ATtiny" target="_blank">this</a>. For the footprints, go to <code>Preferences &gt; Manage Footprints Librairies</code> to add <a href="https://github.com/KiCad/kicad-footprints" target="_blank">this</a>.</p>
-<p>In the context of Fab Labs, <a href="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/site/local/#material/extras/week06/assets/kicad_libraries.zip" target="_blank">this library</a> is very useful because it contains all the components we have at our disposition.</p>
+<p>For the symbols, go to <code>Preferences &gt; Manage Symbol Librairies</code> to add <a href="https://github.com/KiCad/kicad-symbols" rel="noopener" target="_blank">this</a> and <a href="https://kicad.github.io/symbols/MCU_Microchip_ATtiny" rel="noopener" target="_blank">this</a>. For the footprints, go to <code>Preferences &gt; Manage Footprints Librairies</code> to add <a href="https://github.com/KiCad/kicad-footprints" rel="noopener" target="_blank">this</a>.</p>
+<p>In the context of Fab Labs, <a href="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/site/local/#material/extras/week06/assets/kicad_libraries.zip" rel="noopener" target="_blank">this library</a> is very useful because it contains all the components we have at our disposition.</p>
 <h3 id="schematics-design">Schematics design</h3>
 <p>To design the schematic of the board, one should first import the right symbols. In my case, the components I listed above on this page. to do so, select the <code>Place symbol</code> tool, click on the page and choose the symbol you want.</p>
 <ul>
@@ -90,7 +90,7 @@ As inputs, I have to 2 switches (buttons) that allow me to start/pause/resume/re
 <p>Then, you will have to connect the elements together. To do so, a good practice is to divide the circuit into smaller and more understandable circuits. In my case, I design the switches, LED's, capacitor, ATtiny1614, FTDI and UPDI apart. It's then easier to get a full understanding of the circuit and it's also easier to manipulate.</p>
 <figure class="md"><img alt="schematics-design" src="medias/electronics-design-pomodoro-timer-schematics-design.jpeg"><figcaption>schematics-design</figcaption></figure>
 <p>Don't be confused, the real design mission is for the next step, now is just about connecting parts together, and about being understandable for the community if you plan to share your design or simply for your future self.</p>
-<p>It's always important to check the datasheet of the components you're using. In this case, <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny1614-DataSheet-DS40001995B.pdf" target="_blank">the datasheet of the ATtiny1614</a> helped me to verify the differents connections from the chip to the components.</p>
+<p>It's always important to check the datasheet of the components you're using. In this case, <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny1614-DataSheet-DS40001995B.pdf" rel="noopener" target="_blank">the datasheet of the ATtiny1614</a> helped me to verify the differents connections from the chip to the components.</p>
 <h3 id="pcb-design">PCB design</h3>
 <p>Now is the "tricky" part: finding the best paths, the most compact as possible while respecting the idea I had in mind. For instance, because I'm building a pomodoro timer, I want my 4 leds to be next to each other, and so has to be the resistors as well. It's about designing with constraints, something I really like, even if it took me hours to find a possible way to design my circuit.</p>
 <figure class="md"><img alt="pcb-design" src="medias/electronics-design-pomodoro-timer-pcb-design.jpeg"><figcaption>pcb-design</figcaption></figure>
@@ -104,11 +104,11 @@ As inputs, I have to 2 switches (buttons) that allow me to start/pause/resume/re
 <li>optimize your paths and think about how you will solder the  components</li>
 </ul>
 <h3 id="preparing-the-files">Preparing the files</h3>
-<p>Once your design is ready (that means that all your components are linked together), you can export your files and prepare them to be sent to the mini milling machine. I used <a href="https://inkscape.org/" target="_blank">Inkscape</a>, <a href="https://www.gimp.org/" target="_blank">gimp</a> and <a href="http://fabmodules.org/" target="_blank">fab modules</a> to do so.</p>
+<p>Once your design is ready (that means that all your components are linked together), you can export your files and prepare them to be sent to the mini milling machine. I used <a href="https://inkscape.org/" rel="noopener" target="_blank">Inkscape</a>, <a href="https://www.gimp.org/" rel="noopener" target="_blank">gimp</a> and <a href="http://fabmodules.org/" rel="noopener" target="_blank">fab modules</a> to do so.</p>
 <figure class="md"><img alt="pomo-traces" src="medias/electronics-design-pomodoro-timer-pomo-traces.png"><figcaption>pomo-traces</figcaption></figure>
 <figure class="md"><img alt="pomo-cut" src="medias/electronics-design-pomodoro-timer-pomo-cut.png"><figcaption>pomo-cut</figcaption></figure>
 <figure class="md"><img alt="fab-modules" src="medias/electronics-design-pomodoro-timer-fab-modules.jpeg"><figcaption>fab-modules</figcaption></figure>
-<p>I used Fab Modules to generate the files needed by the mini milling machine using the same settings I set during the <a href="fabac-assignments-electronics-production.html" target="_blank">Electronics production</a> week.</p>
+<p>I used Fab Modules to generate the files needed by the mini milling machine using the same settings I set during the <a href="fabac-assignments-electronics-production.html" rel="noopener" target="_blank">Electronics production</a> week.</p>
 <h2 id="milling-and-soldering">Milling and soldering</h2>
 <p>The machine I used to mill my board is the Roland MonoFab SRM-20, this machine seems very reliable, I had no problem while using it.</p>
 <figure class="md"><img alt="pomo-milling" src="medias/electronics-design-pomodoro-timer-pomo-milling.jpeg"><figcaption>pomo-milling</figcaption></figure>
@@ -136,8 +136,8 @@ void loop() {
   delay(1000);
 }
 </pre>
-<p>To make it work, I needed the <a href="https://github.com/SpenceKonde/megaTinyCore" target="_blank">megaTinyCore</a> in order to <em>talk</em> with the ATtiny1614. Find it via the Arduino IDE menu <code>Tools &gt;   Boards &gt; Boards manager</code>.</p>
-<p>I used <a href="https://github.com/mraardvark/pyupdi" target="_blank">pyupdi</a> (a Python UPDI driver for programming the "new" tinyAVR and megaAVR devices) to send the code to the chip.</p>
+<p>To make it work, I needed the <a href="https://github.com/SpenceKonde/megaTinyCore" rel="noopener" target="_blank">megaTinyCore</a> in order to <em>talk</em> with the ATtiny1614. Find it via the Arduino IDE menu <code>Tools &gt;   Boards &gt; Boards manager</code>.</p>
+<p>I used <a href="https://github.com/mraardvark/pyupdi" rel="noopener" target="_blank">pyupdi</a> (a Python UPDI driver for programming the "new" tinyAVR and megaAVR devices) to send the code to the chip.</p>
 <p>To do so, I had to find the temporary file which is generated by Arduino IDE each time the code is compiled (look at the console and spot the .hex file) and send it via this command to the board.</p>
 <p><code>pyupdi.py -d tiny1614 -c /dev/ttyUSB0 -b 9600 -f /tmp/arduino_build_342195/Blink.ino.hex -v</code></p>
 <p>Where <code>/dev/ttyUSB0</code> corresponds to the value I got when I did <code>dmesg -w</code> earlier and <code>arduino_build_342195/Blink.ino.hex</code> corresponds to the temp file I wan to send.</p>
@@ -147,12 +147,12 @@ void loop() {
 <p>I will program this board to make it be a pomodoro timer in two weeks, during the <em>Embedded programming</em> assignement.</p>
 <h2 id="files">Files</h2>
 <ul>
-<li>Kicad project: <a class="link-file" href="medias/electronics-design-pomodoro-timer-pomodoro-final.zip" target="_blank">pomodoro-final.zip</a></li>
-<li>Cut PNG file: <a class="link-file" href="medias/electronics-design-pomodoro-timer-pomo-cut.png" target="_blank">pomo-cut.png</a></li>
-<li>Cut RML file: <a class="link-file" href="medias/electronics-design-pomodoro-timer-pomo-cut.rml" target="_blank">pomo-cut.rml</a></li>
-<li>Cut XCF file: <a class="link-file" href="medias/electronics-design-pomodoro-timer-pomo-cut.xcf" target="_blank">pomo-cut.xcf</a></li>
-<li>Traces PNG file: <a class="link-file" href="medias/electronics-design-pomodoro-timer-pomo-traces.png" target="_blank">pomo-traces.png</a></li>
-<li>Traces RML file: <a class="link-file" href="medias/electronics-design-pomodoro-timer-pomo-traces.rml" target="_blank">pomo-traces.rml</a></li>
+<li>Kicad project: <a href="file:pomodoro-final.zip" rel="noopener" target="_blank">pomodoro-final.zip</a></li>
+<li>Cut PNG file: <a href="file:pomo-cut.png" rel="noopener" target="_blank">pomo-cut.png</a></li>
+<li>Cut RML file: <a href="file:pomo-cut.rml" rel="noopener" target="_blank">pomo-cut.rml</a></li>
+<li>Cut XCF file: <a href="file:pomo-cut.xcf" rel="noopener" target="_blank">pomo-cut.xcf</a></li>
+<li>Traces PNG file: <a href="file:pomo-traces.png" rel="noopener" target="_blank">pomo-traces.png</a></li>
+<li>Traces RML file: <a href="file:pomo-traces.rml" rel="noopener" target="_blank">pomo-traces.rml</a></li>
 </ul>
 </section>
 <footer>

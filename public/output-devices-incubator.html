@@ -59,39 +59,39 @@
 <section class="article__content ts">
 <p>As I said, my partner is building an incubator to help us grow mycellium (and other fermented food) and she asked me an hand to help her with the electronic part. In this context, I will prototype an incubator by using the devices I already have. I will do it by following the spiral methodology: a first round with the basic features, and then other ones with additional options.</p>
 <h2 id="update-2020-11">Update 2020-11</h2>
-<p>I have started a new project dedicated to the incubator and the sub-projects it brings. Everything is documented under <a href="incubator-v0-1.html" target="_blank">incubator-v0-1.html</a>.</p>
+<p>I have started a new project dedicated to the incubator and the sub-projects it brings. Everything is documented under <a href="incubator-v0-1.html" rel="noopener" target="_blank">incubator-v0-1.html</a>.</p>
 <figure class="md"><img alt="" src="medias/output-devices-incubator-incubator-shield.jpg"><figcaption></figcaption></figure>
-<p><a class="btn" href="incubator-v0-1.html" target="_blank">Incubator</a></p>
+<p><a class="btn" href="incubator-v0-1.html" rel="noopener" target="_blank">Incubator</a></p>
 <h2 id="round-01-the-basics">Round #01: the basics</h2>
 <p>For the first round, I would like to control a fan and a Peltier (thermoelectric cooler) to get an ideal temperature into a closed space, using a Arduino UNO. The Peltier will be used to warm up the temperature and the fan will help us to either cool down or to distribute the heat evenly.</p>
 <blockquote>
 <p>Thermoelectric coolers (TEC or Peltier) create a temperature differential on each side. One side gets hot and the other side gets cool. Therefore, they can be used to either warm something up or cool something down, depending on which side you use.</p>
 <blockquote>
-<p><a href="https://www.sparkfun.com/products/15082" target="_blank">Sparkfun - Thermoelectric Cooler</a></p>
+<p><a href="https://www.sparkfun.com/products/15082" rel="noopener" target="_blank">Sparkfun - Thermoelectric Cooler</a></p>
 </blockquote>
 </blockquote>
 <p>The Peltier could be used to warm up or cool down the space depending on the wanted temperature, to do so, we apparently have to reverse its polarity. I will try to explore this track later. I will focus on the warm side for now.</p>
 <p>Because the fan and the Peltier device require a voltage of 12V and the arduino can only supply 5V, I added an external power supply in the circuit. It is then necessary to also include MOSFETs to control how and when the current flows through the devices.</p>
 <h3 id="material">Material</h3>
 <ul>
-<li>Arduino UNO (<a href="https://content.arduino.cc/assets/Pinout-UNOrev3_latest.pdf" target="_blank">pinout</a>)</li>
-<li>Thermoelectric Cooler (<a href="https://www.sparkfun.com/products/15082" target="_blank">info</a> / <a href="https://cdn.sparkfun.com/assets/a/d/2/a/7 TEC112707Thermoelectric_Module_Datasheet.pdf" target="_blank">datasheet</a>)</li>
+<li>Arduino UNO (<a href="https://content.arduino.cc/assets/Pinout-UNOrev3_latest.pdf" rel="noopener" target="_blank">pinout</a>)</li>
+<li>Thermoelectric Cooler (<a href="https://www.sparkfun.com/products/15082" rel="noopener" target="_blank">info</a> / <a href="https://cdn.sparkfun.com/assets/a/d/2/a/7 TEC112707Thermoelectric_Module_Datasheet.pdf" rel="noopener" target="_blank">datasheet</a>)</li>
 <li>12V Axial Fan (EverFlow R127025BU DC 12V 0.40AMP 4-pin connector)</li>
 <li>10K thermistor</li>
-<li>MOSFET N-CH (<a href="https://media.digikey.com/pdf/Data%20Sheets/NXP%20PDFs/IRFZ44N_Rev1.pdf" target="_blank">datasheet</a>)</li>
+<li>MOSFET N-CH (<a href="https://media.digikey.com/pdf/Data%20Sheets/NXP%20PDFs/IRFZ44N_Rev1.pdf" rel="noopener" target="_blank">datasheet</a>)</li>
 <li>12V external supply</li>
 <li>10K resistors</li>
 <li>Diode</li>
 </ul>
 <h3 id="schematics">Schematics</h3>
-<p>I did a schematic in <a href="https://www.kicad-pcb.org/" target="_blank">KiCAD</a> to help me understand the different components ad how to plug them together. Here is a <a href="files/incubator-schema.jpg" target="_blank">larger image</a> if you like.</p>
+<p>I did a schematic in <a href="https://www.kicad-pcb.org/" rel="noopener" target="_blank">KiCAD</a> to help me understand the different components ad how to plug them together. Here is a <a href="files/incubator-schema.jpg" rel="noopener" target="_blank">larger image</a> if you like.</p>
 <figure class="md"><img alt="incubator-schema" src="medias/output-devices-incubator-incubator-schema.jpg"><figcaption>incubator-schema</figcaption></figure>
-<p>File: <a href="files/incubator_01.pro" target="_blank">incubator_01.pro</a></p>
+<p>File: <a href="files/incubator_01.pro" rel="noopener" target="_blank">incubator_01.pro</a></p>
 <figure class="md"><img alt="incubator prototype" src="medias/output-devices-incubator-incubator-circuit.jpg"><figcaption>incubator prototype</figcaption></figure>
 <h3 id="code">Code</h3>
 <p>I attribute the pins values according to my schematics and define some settings, such as the ideal temperature and the accepted range, but also the fan and Peltier power.</p>
 <p>I do not want the system to go from a stage "It is too hot, I have to cool the temperature" to a stage "It is too cold, let's heat it now" too quickly. This is why I implemented the value <code>tempRange</code>, saying that there are acceptable values around the ideal, which makes the system less reactive but constant.</p>
-<p>The fan and the Peltier do not have to operate at their maximum value all the time. This is why I plugged them on PWM pins, to be more subtle than just <code>HIGH</code> and <code>LOW</code> values. A pulse-width modulation (PWM) pin allow us to simulate an analog behavior by manipulating the frequency of the signal (read the <a href="https://www.arduino.cc/en/Tutorial/SecretsOfArduinoPWM" target="_blank">Secrets of Arduino PWM</a>).</p>
+<p>The fan and the Peltier do not have to operate at their maximum value all the time. This is why I plugged them on PWM pins, to be more subtle than just <code>HIGH</code> and <code>LOW</code> values. A pulse-width modulation (PWM) pin allow us to simulate an analog behavior by manipulating the frequency of the signal (read the <a href="https://www.arduino.cc/en/Tutorial/SecretsOfArduinoPWM" rel="noopener" target="_blank">Secrets of Arduino PWM</a>).</p>
 <p>In addition, I introduced the values <code>powerFan</code> and<code>powerPeltier</code>, by mapping a value between 0 and 99 (easier to manipulate) to the real value going from 0 to 255 (analog style), to declare the necessary power to both devices. According to the test I did, a value between 20 and 40 is sufficient and prevents the system from overheating, damaging the wires or the devices.</p>
 <pre>
 // PINS
@@ -152,17 +152,17 @@ void loop(){
 <p>I put the thermistor and the Pelier in a cup, to allow the system to increase its temperature without losing too much heat in the surrounding environment. The fan is positioned in front of them, which gives us the possibility to expel the hot air.</p>
 <figure class="md"><img alt="incubator prototype" src="medias/output-devices-incubator-incubator-power.jpg"><figcaption>incubator prototype</figcaption></figure>
 <h1 id="next">Next</h1>
-<p>Now that the electronics work as I want, I hand over to my partner. The next step will probably be a real test with a closed space to see how quickly we can lower or increase the temperature inside. We are also thinking of using the fan to distribute the heat evenly. Be sure to read <a href="https://maudb.gitlab.io/dok/projects/biolab-kitchen/" target="_blank">Maud's documentation</a> to see her progress on the incubator.</p>
+<p>Now that the electronics work as I want, I hand over to my partner. The next step will probably be a real test with a closed space to see how quickly we can lower or increase the temperature inside. We are also thinking of using the fan to distribute the heat evenly. Be sure to read <a href="https://maudb.gitlab.io/dok/projects/biolab-kitchen/" rel="noopener" target="_blank">Maud's documentation</a> to see her progress on the incubator.</p>
 <h3 id="references">References</h3>
 <ul>
-<li><a href="https://biohackacademy.github.io/bha6/class/3/pdf/3.4%20Incubator%20design.pdf" target="_blank">Biohack Academy: Incubator</a></li>
-<li><a href="https://maudb.gitlab.io/dok/projects/biolab-kitchen/" target="_blank">BioLab Kitchen by Maud Bausier</a></li>
-<li><a href="https://bildr.org/2012/03/rfp30n06le-arduino/" target="_blank">High-Power Control: Arduino + N-Channel MOSFET</a></li>
-<li><a href="https://www.sparkfun.com/news/819" target="_blank">Sparkfun: MOSFETS explained</a></li>
-<li><a href="https://allpinouts.org/pinouts/connectors/motherboards/motherboard-cpu-4-pin-fan/" target="_blank">4 Pin Fan</a></li>
-<li><a href="https://nodemcu.readthedocs.io/en/master/" target="_blank">NodeMCU documentation</a></li>
-<li><a href="https://www.instructables.com/id/NodeMCU-ESP8266-Details-and-Pinout/" target="_blank">NodeMCU details and Pinout</a></li>
-<li><a href="https://docs.platformio.org/en/latest/boards/espressif8266/nodemcuv2.html" target="_blank">PlatformIO NodeMCU 1.0</a></li>
+<li><a href="https://biohackacademy.github.io/bha6/class/3/pdf/3.4%20Incubator%20design.pdf" rel="noopener" target="_blank">Biohack Academy: Incubator</a></li>
+<li><a href="https://maudb.gitlab.io/dok/projects/biolab-kitchen/" rel="noopener" target="_blank">BioLab Kitchen by Maud Bausier</a></li>
+<li><a href="https://bildr.org/2012/03/rfp30n06le-arduino/" rel="noopener" target="_blank">High-Power Control: Arduino + N-Channel MOSFET</a></li>
+<li><a href="https://www.sparkfun.com/news/819" rel="noopener" target="_blank">Sparkfun: MOSFETS explained</a></li>
+<li><a href="https://allpinouts.org/pinouts/connectors/motherboards/motherboard-cpu-4-pin-fan/" rel="noopener" target="_blank">4 Pin Fan</a></li>
+<li><a href="https://nodemcu.readthedocs.io/en/master/" rel="noopener" target="_blank">NodeMCU documentation</a></li>
+<li><a href="https://www.instructables.com/id/NodeMCU-ESP8266-Details-and-Pinout/" rel="noopener" target="_blank">NodeMCU details and Pinout</a></li>
+<li><a href="https://docs.platformio.org/en/latest/boards/espressif8266/nodemcuv2.html" rel="noopener" target="_blank">PlatformIO NodeMCU 1.0</a></li>
 </ul>
 </section>
 <footer>

@@ -53,7 +53,7 @@
 <blockquote>
 <p>An oloid is a three-dimensional curved geometric object that was discovered by Paul Schatz in 1929. It is the convex hull of a skeletal frame made by placing two linked congruent circles in perpendicular planes, so that the center of each circle lies on the edge of the other circle. The distance between the circle centers equals the radius of the circles. One third of each circle's perimeter lies inside the convex hull, so the same shape may be also formed as the convex hull of the two remaining circular arcs each spanning an angle of 4π/3.</p>
 <blockquote>
-<p><a href="https://en.wikipedia.org/wiki/Oloid" target="_blank">Oloid, Wikipedia</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Oloid" rel="noopener" target="_blank">Oloid, Wikipedia</a></p>
 </blockquote>
 </blockquote>
 <div class="embed-container">
@@ -65,7 +65,7 @@ printing, and not a subtractive technique, such as laser cutting or milling,
 because the shape itself must be worked in all directions, not just from bottom
 to top (or by using another machine, a robot, with more axes, but then the technique begins to be too complex for a small piece like this one).</p>
 <h2 id="modeling">Modeling</h2>
-<p><a href="https://www.openscad.org/" target="_blank">OpenSCAD</a>, the 3D CAD modeller that we use by writing code (as I said <a href="fabac-assignments-computer-aided-design.html" target="_blank">here</a>) has a function called <code>hull()</code> that displays the <a href="https://doc.cgal.org/latest/Convex_hull_2/index.html" target="_blank">convex hull</a> of child nodes.</p>
+<p><a href="https://www.openscad.org/" rel="noopener" target="_blank">OpenSCAD</a>, the 3D CAD modeller that we use by writing code (as I said <a href="fabac-assignments-computer-aided-design.html" rel="noopener" target="_blank">here</a>) has a function called <code>hull()</code> that displays the <a href="https://doc.cgal.org/latest/Convex_hull_2/index.html" rel="noopener" target="_blank">convex hull</a> of child nodes.</p>
 <p>This is why I to use OpenSCAD to model this particular shape instead of another more conventional tool like FreeCAD.</p>
 <pre>
 $fn = 180; // resolution
@@ -84,8 +84,8 @@ hull() {
 <video controls="" preload="auto"><source src="medias/3D-scanning-printing-oloid-shape-oloid-openscad.mp4" type="video/mp4"/></video>
 <h2 id="slicing">Slicing</h2>
 <p>The slicing process of the oloid model was very interesting because I had to add supports to keep the shape in place during printing. It helped me understand how supports work and how to generate them in a slicer software, which is actually super easy.</p>
-<p>To do so, I used <a href="https://ultimaker.com/software/ultimaker-cura" target="_blank">Ultimaker Cura</a> and its pre-configured <em>Support</em> options. In order to reduce the printing time and because I knew it from my previous test, I increased the overhang angle to 55° (instead of 45°).</p>
-<p>Here is the .std file I made for printing: <a href="files/oloid.stl" target="_blank">oloid.stl</a></p>
+<p>To do so, I used <a href="https://ultimaker.com/software/ultimaker-cura" rel="noopener" target="_blank">Ultimaker Cura</a> and its pre-configured <em>Support</em> options. In order to reduce the printing time and because I knew it from my previous test, I increased the overhang angle to 55° (instead of 45°).</p>
+<p>Here is the .std file I made for printing: <a href="files/oloid.stl" rel="noopener" target="_blank">oloid.stl</a></p>
 <h2 id="printing">Printing</h2>
 <p>Printing this oloid was'nt as easy as the first test I did. My first attempt failed and I had to stop printing. It gave something like this:</p>
 <figure class="md"><img alt="oloid-fail" src="medias/3D-scanning-printing-oloid-shape-oloid-fail.jpg"><figcaption>oloid-fail</figcaption></figure>

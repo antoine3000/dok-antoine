@@ -69,28 +69,28 @@
 <p>It is built as an extra board that comes with a Barduino, allowing it to operate with two 12V outputs and one 5V input.</p>
 <h1 id="components">Components</h1>
 <h2 id="barduino">Barduino</h2>
-<p>A <a href="https://gitlab.com/fablabbcn-projects/electronics/barduino" target="_blank">Barduino</a>, an ESP32 development board made in Barcelona, is used as the brain. This allows me to use a Wifi compatible board with a functional USB connection without having to do it (again) by myself. Moreover, it allows me to design a shield (something I've never done before) and to participate in an open-source project that I'd like to support.</p>
+<p>A <a href="https://gitlab.com/fablabbcn-projects/electronics/barduino" rel="noopener" target="_blank">Barduino</a>, an ESP32 development board made in Barcelona, is used as the brain. This allows me to use a Wifi compatible board with a functional USB connection without having to do it (again) by myself. Moreover, it allows me to design a shield (something I've never done before) and to participate in an open-source project that I'd like to support.</p>
 <h2 id="humidity-and-temperature-sensor">Humidity and temperature sensor</h2>
-<p>A <a href="https://www.adafruit.com/product/386" target="_blank">DHT11</a> humidity and temperature sensor provides information on what is happening in the incubator. I use the DHT11 mainly because it is available in the laboratory. I am not entirely satisfied with this sensor because it is slow and sometimes skips some data. It is clearly sufficient for this project because I don't need a high efficiency sensor, but it is not ideal.</p>
+<p>A <a href="https://www.adafruit.com/product/386" rel="noopener" target="_blank">DHT11</a> humidity and temperature sensor provides information on what is happening in the incubator. I use the DHT11 mainly because it is available in the laboratory. I am not entirely satisfied with this sensor because it is slow and sometimes skips some data. It is clearly sufficient for this project because I don't need a high efficiency sensor, but it is not ideal.</p>
 <h2 id="heating-pad">Heating pad</h2>
-<p>A <a href="https://www.adafruit.com/product/1481" target="_blank">heating pad</a> (<a href="https://cdn-shop.adafruit.com/datasheets/Ultra+Heating+Fabric.pdf" target="_blank">datasheet</a>) is used to warm up the temperature inside the incubator. When supplied with 12V, it can reach up to 110°C. It is not necessary to reach this temperature, but it will allow us to have the desired temperature even if the incubator is not fully insulated.</p>
+<p>A <a href="https://www.adafruit.com/product/1481" rel="noopener" target="_blank">heating pad</a> (<a href="https://cdn-shop.adafruit.com/datasheets/Ultra+Heating+Fabric.pdf" rel="noopener" target="_blank">datasheet</a>) is used to warm up the temperature inside the incubator. When supplied with 12V, it can reach up to 110°C. It is not necessary to reach this temperature, but it will allow us to have the desired temperature even if the incubator is not fully insulated.</p>
 <h2 id="fan">Fan</h2>
-<p>A <a href="https://www.sparkfun.com/products/16034" target="_blank">12V fan</a> is used to distribute the heat evenly inside the incubator, or to try to cool it down in case it gets too hot (which could easily happen in the Barcelona sun).</p>
+<p>A <a href="https://www.sparkfun.com/products/16034" rel="noopener" target="_blank">12V fan</a> is used to distribute the heat evenly inside the incubator, or to try to cool it down in case it gets too hot (which could easily happen in the Barcelona sun).</p>
 <h2 id="rgb-led">RGB LED</h2>
 <p>An RGB LED is used to communicate basic information to the user. Does the incubator heat or cool? Has it reached the desired temperature? etc.</p>
 <h1 id="schematics">Schematics</h1>
 <figure class="md"><img alt="" src="medias/incubator-v0-1-electronics-schematics.svg"><figcaption></figcaption></figure>
 <h2 id="interesting-points">Interesting points</h2>
 <ul>
-<li>A <a href="https://www.onsemi.com/pub/Collateral/NCP1117-D.PDF" target="_blank">voltage regulator</a> is used to convert 12V to 5V (which is used by the sensor and the Barduino)</li>
-<li>A small <a href="https://www.onsemi.com/pub/Collateral/NDS355AN-D.PDF" target="_blank">mosfet</a> and two resistors are used as a level shifter to convert 3.3V to 5V on the line to the sensor, so it only <em>speaks</em> in 5V.</li>
-<li>Big <a href="https://www.onsemi.com/pub/Collateral/RFD16N05LSM-D.PDF" target="_blank">mosfets</a> are used on the 12V lines to let the current flow to the two outputs, the fan and the heating pad.</li>
+<li>A <a href="https://www.onsemi.com/pub/Collateral/NCP1117-D.PDF" rel="noopener" target="_blank">voltage regulator</a> is used to convert 12V to 5V (which is used by the sensor and the Barduino)</li>
+<li>A small <a href="https://www.onsemi.com/pub/Collateral/NDS355AN-D.PDF" rel="noopener" target="_blank">mosfet</a> and two resistors are used as a level shifter to convert 3.3V to 5V on the line to the sensor, so it only <em>speaks</em> in 5V.</li>
+<li>Big <a href="https://www.onsemi.com/pub/Collateral/RFD16N05LSM-D.PDF" rel="noopener" target="_blank">mosfets</a> are used on the 12V lines to let the current flow to the two outputs, the fan and the heating pad.</li>
 <li>A diode is used on the fan line to ensure that the current won't fly back on the unwanted direction when the motor stops, thus protecting the circuit.</li>
 <li>A OΩ resistor has been added to act as a jumper to facilitate the PCB design.</li>
 </ul>
 <h2 id="known-errors">known errors</h2>
 <ul>
-<li>the GPIO 34, 35, 36, 39 on the ESP32 are only inputs (<a href="https://randomnerdtutorials.com/esp32-pinout-reference-gpios/" target="_blank">source</a>) and therefore can't be used for the fan or the heating pad. I discovered this only after the fabrication, I had to add an extra cable from an empty pin to the heating pad line (where was the error). Good to know for next time.</li>
+<li>the GPIO 34, 35, 36, 39 on the ESP32 are only inputs (<a href="https://randomnerdtutorials.com/esp32-pinout-reference-gpios/" rel="noopener" target="_blank">source</a>) and therefore can't be used for the fan or the heating pad. I discovered this only after the fabrication, I had to add an extra cable from an empty pin to the heating pad line (where was the error). Good to know for next time.</li>
 </ul>
 <h1 id="pcb-design">PCB design</h1>
 <figure class="md"><img alt="3D view generated from KiCAD" src="medias/incubator-v0-1-electronics-incubator-esp-3D.png"><figcaption>3D view generated from KiCAD</figcaption></figure>
@@ -100,12 +100,12 @@
 <h2 id="incubator-shield">Incubator shield</h2>
 <figure class="md"><img alt="" src="medias/incubator-v0-1-electronics-fab-01.jpg"><figcaption></figcaption></figure>
 <figure class="md"><img alt="" src="medias/incubator-v0-1-electronics-fab-02.jpg"><figcaption></figcaption></figure>
-<p>The <a href="https://www.rolanddga.com/products/3d/srm-20-small-milling-machine" target="_blank">SRM-20</a> milling machine wasn't properly calibrated when I used it because it had just received a new motor. The quality of my milling is therefore not the best, but after a close check with a multimeter, I can confirm that all the tracks are correctly connected.</p>
+<p>The <a href="https://www.rolanddga.com/products/3d/srm-20-small-milling-machine" rel="noopener" target="_blank">SRM-20</a> milling machine wasn't properly calibrated when I used it because it had just received a new motor. The quality of my milling is therefore not the best, but after a close check with a multimeter, I can confirm that all the tracks are correctly connected.</p>
 <figure class="md"><img alt="" src="medias/incubator-v0-1-electronics-fab-03.jpg"><figcaption></figcaption></figure>
 <figure class="md"><img alt="" src="medias/incubator-v0-1-electronics-fab-04.jpg"><figcaption></figcaption></figure>
 <figure class="md"><img alt="" src="medias/incubator-v0-1-electronics-fab-05.jpg"><figcaption></figcaption></figure>
 <h2 id="barduino-2">Barduino</h2>
-<p>The files to make the barduino can be found on its gitlab <a href="https://gitlab.com/fablabbcn-projects/electronics/barduino/-/tree/master/barduino-microusb-2.2" target="_blank">repository</a>.</p>
+<p>The files to make the barduino can be found on its gitlab <a href="https://gitlab.com/fablabbcn-projects/electronics/barduino/-/tree/master/barduino-microusb-2.2" rel="noopener" target="_blank">repository</a>.</p>
 <p>Fab Lab Barcelona ordered several PCBs from their PCB design in order to speed up the production of the Barduino (which is used in various projects). Only the assembly, the soldering of the components, is necessary to make it work.</p>
 <figure class="md"><img alt="" src="medias/incubator-v0-1-electronics-incubator-traces.jpg"><figcaption></figcaption></figure>
 <figure class="md"><img alt="" src="medias/incubator-v0-1-electronics-incub-overview.jpg"><figcaption></figcaption></figure>

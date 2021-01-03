@@ -47,8 +47,8 @@
 </div>
 </section>
 <section class="article__content ts">
-<p><a href="https://platformio.org/" target="_blank">PlatformIO</a> is a cross-platform, cross-architecture and multiple framework tool for embedded programming. It replaces Arduino IDE and offers a lot more subtilities and flexibility to write organized code for micro-controllers.</p>
-<p>I use PlatformIO as a replacement for Arduino IDE because it allows me to use the text editor I want (I use <a href="https://neovim.io/" target="_blank">Neovim</a>, an hyperextensible Vim-based text editor) and because it integrates librairies of more than 700 differents boards, including the ones I use. It also has a unified debugger and a static code analyze which seems super useful for large scale projects.</p>
+<p><a href="https://platformio.org/" rel="noopener" target="_blank">PlatformIO</a> is a cross-platform, cross-architecture and multiple framework tool for embedded programming. It replaces Arduino IDE and offers a lot more subtilities and flexibility to write organized code for micro-controllers.</p>
+<p>I use PlatformIO as a replacement for Arduino IDE because it allows me to use the text editor I want (I use <a href="https://neovim.io/" rel="noopener" target="_blank">Neovim</a>, an hyperextensible Vim-based text editor) and because it integrates librairies of more than 700 differents boards, including the ones I use. It also has a unified debugger and a static code analyze which seems super useful for large scale projects.</p>
 <h3 id="initialization">Initialization</h3>
 <p>Because PlatformIO is based on Python, the installation is pretty straight-forward using <em>pip</em>: <code>$ pip install -U platformio</code></p>
 <p>An empty folder to host the project is needed for PlatformIO to set up its environment. Make a new one and go in it <code>$ mkdir my-project &amp;&amp; cd my-project</code> then type <code>$ pio init</code> to initialize this folder with the PlatformIO structure.</p>
@@ -75,7 +75,7 @@ boards/
 - board_definition.json
 </pre>
 <p>Next, search for the depedencies ID you might need, in this case the <code>Adafruit_CircuitPlayground.h</code>, by typing <code>$ pio lib search "header:Adafruit_CircuitPlayground.h"</code>. The lib ID I need is <code>602</code>.</p>
-<p>Configure the project for this specific board, by following the datasheet found <a href="https://docs.platformio.org/en/latest/boards/atmelsam/adafruit_circuitplayground_m0.html" target="_blank">here</a>.</p>
+<p>Configure the project for this specific board, by following the datasheet found <a href="https://docs.platformio.org/en/latest/boards/atmelsam/adafruit_circuitplayground_m0.html" rel="noopener" target="_blank">here</a>.</p>
 <p>These values have to be written in the <code>platformio.io</code> file.</p>
 <pre>
 [env:adafruit_circuitplayground_m0]

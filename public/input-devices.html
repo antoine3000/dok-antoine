@@ -71,7 +71,7 @@
 <p>Let's play with sensors.</p>
 <hr/>
 <p>Part of this assignment is also covered on my final project's page.</p>
-<p><a class="btn" href="green-observatory-input.html" target="_blank">The Green Observatory: Input</a></p>
+<p><a class="btn" href="green-observatory-input.html" rel="noopener" target="_blank">The Green Observatory: Input</a></p>
 </section>
 <footer>
 <p>✎ <span>Created</span> 25/03/2020</p>
@@ -84,7 +84,7 @@
 <!-- featured image -->
 <!-- content -->
 <section class="article__content ts">
-<p>The ultrasonic sensor HC-SR04 provides 2Cm to 400cm of non-contact measurement functionality with a ranging accuracy that can reach up to 3mm. Here is its <a href="https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf" target="_blank">datasheet</a>. This sensor has 4 pins that we have to connect to our dev board.</p>
+<p>The ultrasonic sensor HC-SR04 provides 2Cm to 400cm of non-contact measurement functionality with a ranging accuracy that can reach up to 3mm. Here is its <a href="https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf" rel="noopener" target="_blank">datasheet</a>. This sensor has 4 pins that we have to connect to our dev board.</p>
 <ul>
 <li>5V supply</li>
 <li>Trigger Pulse Input</li>
@@ -96,10 +96,10 @@
 <h2 id="connection">Connection</h2>
 <p>The connection is quite simple, the <code>VCC</code> goes to the <code>5V</code>, the <code>GND</code> to the <code>GND</code>, the <code>Echo</code> to a digital pin, let's say the <code>12</code> and the <code>Trig</code> to another digital pin, the <code>11</code>.</p>
 <figure class="md"><img alt="uno-ultrasonci-schematic" src="medias/input-devices-ultrasonic-sensor-uno-ultrasonic.jpg"><figcaption>uno-ultrasonci-schematic</figcaption></figure>
-<p>(<a href="https://randomnerdtutorials.com/complete-guide-for-ultrasonic-sensor-hc-sr04/" target="_blank">image source</a>)</p>
+<p>(<a href="https://randomnerdtutorials.com/complete-guide-for-ultrasonic-sensor-hc-sr04/" rel="noopener" target="_blank">image source</a>)</p>
 <h2 id="code">Code</h2>
 <p>Here is the basic code to read data from the ultrasonic sensor, to convert them into readable values (cm) and print it on the serial monitor.</p>
-<p>To quickly create a <a href="https://platformio.org/" target="_blank">PlatformIO</a> project for the Arduino UNO, open a terminal and navigate to a freshly created folder and type <code>$ pio project init --board uno</code>. As simple as that.</p>
+<p>To quickly create a <a href="https://platformio.org/" rel="noopener" target="_blank">PlatformIO</a> project for the Arduino UNO, open a terminal and navigate to a freshly created folder and type <code>$ pio project init --board uno</code>. As simple as that.</p>
 <p>Create in new <code>main.cpp</code> file into the <code>src</code> folder.</p>
 <pre>
 int trigPin = 11;
@@ -146,7 +146,7 @@ void loop() {
 <blockquote>
 <p>To measure the temperature, we need to measure the resistance. However, a microcontroller does not have a resistance-meter built in. Instead, it only has a voltage reader known as a analog-digital-converter. So what we have to do is convert the resistance into a voltage, and we will do that by adding another resistor and connecting them in series. Now you just measure the voltage in the middle, as the resistance changes, the voltage changes too, according to the simple voltage-divider equation. We just need to keep one resistor fixed</p>
 <blockquote>
-<p>Analog Voltage Reading Method, <a href="https://learn.adafruit.com/thermistor/using-a-thermistor" target="_blank">Adafruit</a></p>
+<p>Analog Voltage Reading Method, <a href="https://learn.adafruit.com/thermistor/using-a-thermistor" rel="noopener" target="_blank">Adafruit</a></p>
 </blockquote>
 </blockquote>
 <figure class="md"><img alt="thermo-photo-1" src="medias/input-devices-thermistor-uno-thermo-photo-1.jpg"><figcaption>thermo-photo-1</figcaption></figure>
@@ -154,7 +154,7 @@ void loop() {
 <h2 id="connection">Connection</h2>
 <p>The thermistor is linked to the <code>5V</code> pin and to an analog pin <code>0</code> through a 10k resistor, and to <code>GND</code>.</p>
 <figure class="md"><img alt="uno-thermi" src="medias/input-devices-thermistor-uno-thermi.png"><figcaption>uno-thermi</figcaption></figure>
-<p>(<a href="https://learn.adafruit.com/thermistor/using-a-thermistor" target="_blank">image source</a>)</p>
+<p>(<a href="https://learn.adafruit.com/thermistor/using-a-thermistor" rel="noopener" target="_blank">image source</a>)</p>
 <h2 id="code">Code</h2>
 <p>Here is the piece of code that print the value of the analog pin <code>0</code> and convert its values into a Celcius temperature.</p>
 <pre>
@@ -173,7 +173,7 @@ void loop() {
   delay(1000);
 }
 </pre>
-<p class="todo">To do: Update values according to <a href="https://computers.tutsplus.com/tutorials/how-to-read-temperatures-with-arduino--mac-53714" target="_blank">this tutorial</a></p>
+<p class="todo">To do: Update values according to <a href="https://computers.tutsplus.com/tutorials/how-to-read-temperatures-with-arduino--mac-53714" rel="noopener" target="_blank">this tutorial</a></p>
 </section>
 <footer>
 <p>✎ <span>Created</span> 27/03/2020</p>
@@ -245,7 +245,7 @@ void loop() {
 <p>In the frame of my Fab Academy final project, I'm exploring how to sense the electrical activity of plants.</p>
 <figure class="md"><img alt="Listen to what we can observe from this lovely plant" src="medias/input-devices-sensing-plants-activity-IMG_8664.jpg"><figcaption>Listen to what we can observe from this lovely plant</figcaption></figure>
 <p>I covered this topic on a different article.</p>
-<p><a class="btn" href="green-observatory-input.html" target="_blank">Sensing plants activity</a></p>
+<p><a class="btn" href="green-observatory-input.html" rel="noopener" target="_blank">Sensing plants activity</a></p>
 </section>
 <footer>
 <p>✎ <span>Created</span> 15/09/2020</p>

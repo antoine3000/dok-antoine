@@ -50,7 +50,7 @@
 </div>
 </section>
 <section class="article__content ts">
-<p>The ultrasonic sensor HC-SR04 provides 2Cm to 400cm of non-contact measurement functionality with a ranging accuracy that can reach up to 3mm. Here is its <a href="https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf" target="_blank">datasheet</a>. This sensor has 4 pins that we have to connect to our dev board.</p>
+<p>The ultrasonic sensor HC-SR04 provides 2Cm to 400cm of non-contact measurement functionality with a ranging accuracy that can reach up to 3mm. Here is its <a href="https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf" rel="noopener" target="_blank">datasheet</a>. This sensor has 4 pins that we have to connect to our dev board.</p>
 <ul>
 <li>5V supply</li>
 <li>Trigger Pulse Input</li>
@@ -62,10 +62,10 @@
 <h2 id="connection">Connection</h2>
 <p>The connection is quite simple, the <code>VCC</code> goes to the <code>5V</code>, the <code>GND</code> to the <code>GND</code>, the <code>Echo</code> to a digital pin, let's say the <code>12</code> and the <code>Trig</code> to another digital pin, the <code>11</code>.</p>
 <figure class="md"><img alt="uno-ultrasonci-schematic" src="medias/input-devices-ultrasonic-sensor-uno-ultrasonic.jpg"><figcaption>uno-ultrasonci-schematic</figcaption></figure>
-<p>(<a href="https://randomnerdtutorials.com/complete-guide-for-ultrasonic-sensor-hc-sr04/" target="_blank">image source</a>)</p>
+<p>(<a href="https://randomnerdtutorials.com/complete-guide-for-ultrasonic-sensor-hc-sr04/" rel="noopener" target="_blank">image source</a>)</p>
 <h2 id="code">Code</h2>
 <p>Here is the basic code to read data from the ultrasonic sensor, to convert them into readable values (cm) and print it on the serial monitor.</p>
-<p>To quickly create a <a href="https://platformio.org/" target="_blank">PlatformIO</a> project for the Arduino UNO, open a terminal and navigate to a freshly created folder and type <code>$ pio project init --board uno</code>. As simple as that.</p>
+<p>To quickly create a <a href="https://platformio.org/" rel="noopener" target="_blank">PlatformIO</a> project for the Arduino UNO, open a terminal and navigate to a freshly created folder and type <code>$ pio project init --board uno</code>. As simple as that.</p>
 <p>Create in new <code>main.cpp</code> file into the <code>src</code> folder.</p>
 <pre>
 int trigPin = 11;

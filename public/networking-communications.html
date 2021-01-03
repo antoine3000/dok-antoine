@@ -61,14 +61,14 @@
 </div>
 </section>
 <section class="article__content ts">
-<p>For this week's assignment, I will connect two <a href="http://esp8266.net" target="_blank">ESP8266</a> / <a href="https://www.nodemcu.com/index_en.html" target="_blank">NodeMCU</a> together on the WiFi network and exchange data between them.</p>
+<p>For this week's assignment, I will connect two <a href="http://esp8266.net" rel="noopener" target="_blank">ESP8266</a> / <a href="https://www.nodemcu.com/index_en.html" rel="noopener" target="_blank">NodeMCU</a> together on the WiFi network and exchange data between them.</p>
 <p>Understanding the basics of networking and how communication between devices works will be highly beneficial for my final project.</p>
 <video controls="" preload="auto"><source src="medias/networking-communications-network-communication.mp4" type="video/mp4"/></video>
 <p>I decided to keep it simple to have a working example easily reproducible, without project-specific elements that make the code more complex. Therefore, the interaction must be basic: press a button on one side and light a led on the other side.</p>
 <h1 id="hardware">Hardware</h1>
-<p>I'm using two <a href="https://www.nodemcu.com/index_en.html" target="_blank">NodeMCU</a> equipped with <a href="http://esp8266.net" target="_blank">ESP8266</a> chips, mounted on a breadboard to facilitate the prototyping phase. The first NodeMCU, the <em>server</em>, has a LED connected to its pin <code>4</code> (d2). The second NodeMCU, the <em>client</em>, has a push-button connected to its pin <code>4</code> (d2). The WiFi network is prodived through my home router.</p>
+<p>I'm using two <a href="https://www.nodemcu.com/index_en.html" rel="noopener" target="_blank">NodeMCU</a> equipped with <a href="http://esp8266.net" rel="noopener" target="_blank">ESP8266</a> chips, mounted on a breadboard to facilitate the prototyping phase. The first NodeMCU, the <em>server</em>, has a LED connected to its pin <code>4</code> (d2). The second NodeMCU, the <em>client</em>, has a push-button connected to its pin <code>4</code> (d2). The WiFi network is prodived through my home router.</p>
 <figure class="md"><img alt="NodeMCUv1.0-pinout.jpg" src="medias/networking-communications-NodeMCUv1.0-pinout.jpg"><figcaption>NodeMCUv1.0-pinout.jpg</figcaption></figure>
-(<a href="https://www.teachmemicro.com/nodemcu-pinout/" target="_blank">image source</a>)</p>
+(<a href="https://www.teachmemicro.com/nodemcu-pinout/" rel="noopener" target="_blank">image source</a>)</p>
 <figure class="md"><img alt="setup" src="medias/networking-communications-setup.jpg"><figcaption>setup</figcaption></figure>
 <h1 id="software">Software</h1>
 <h2 id="project-structure">Project structure</h2>
@@ -86,7 +86,7 @@ board = nodemcuv2
 framework = arduino
 </pre>
 <p>I connect the two NodeMCUs simultaneously on my computer, to be sure that the right program is uploaded to the right board, I must configure the upload port.</p>
-<p>To find out which port is used and by what (device list): <code>$ pio device list</code> (<a href="https://docs.platformio.org/en/latest/core/userguide/device/cmd_list.html#cmd-device-list" target="_blank">source</a>)</p>
+<p>To find out which port is used and by what (device list): <code>$ pio device list</code> (<a href="https://docs.platformio.org/en/latest/core/userguide/device/cmd_list.html#cmd-device-list" rel="noopener" target="_blank">source</a>)</p>
 <p>I can now add <code>upload_port = /dev/ttyUSB0</code> to the server's <code>platformio.ini</code> file and <code>upload_port = /dev/ttyUSB1</code> to the client. Depending on how I plugged them into my computer.</p>
 <h2 id="code">Code</h2>
 <p>The <em>server</em> will wait for a message from the <em>client</em> indicating whether to turn on its LED or not. The <em>client</em> will connect to the <em>server</em> network and send it its data, depending on the state of a simple push button.</p>
@@ -208,15 +208,15 @@ void loop () {
 <video controls="" preload="auto"><source src="medias/networking-communications-network-communication.mp4" type="video/mp4"/></video>
 <p>(The NodeMCU don't fit well on the breadboard, I had to hold them in place during the experiment to be sure that the connections were good.)</p>
 <h1 id="incubator">Incubator</h1>
-<p>Part of this assignment is also covered with the <a href="incubator-v0-1.html" target="_blank">Incubator</a> project.</p>
-<p><a class="btn" href="incubator-v0-1.html" target="_blank">Incubator v0.1</a></p>
+<p>Part of this assignment is also covered with the <a href="incubator-v0-1.html" rel="noopener" target="_blank">Incubator</a> project.</p>
+<p><a class="btn" href="incubator-v0-1.html" rel="noopener" target="_blank">Incubator v0.1</a></p>
 <h1 id="useful-links">Useful links</h1>
 <ul>
-<li><a href="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/site/local/#material/extras/week14/networking" target="_blank">Fab Lab Barcelona - Networking class</a></li>
-<li><a href="https://www.instructables.com/id/WiFi-Communication-Between-Two-ESP8266-Based-MCU-T/" target="_blank">WiFi Communication Between Two ESP8266 Based MCU Through the Home Router</a></li>
-<li><a href="https://robotzero.one/sending-data-esp8266-to-esp8266/" target="_blank">ESP8266 Sending Data Over Wi-Fi to another ESP8266</a></li>
-<li><a href="https://www.instructables.com/id/Arduino-Esp8266-Post-Data-to-Website/" target="_blank">ESP8266 - post data to website</a></li>
-<li><a href="https://www.arduino.cc/en/Reference/Wire" target="_blank">Arduino Wire library</a></li>
+<li><a href="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/site/local/#material/extras/week14/networking" rel="noopener" target="_blank">Fab Lab Barcelona - Networking class</a></li>
+<li><a href="https://www.instructables.com/id/WiFi-Communication-Between-Two-ESP8266-Based-MCU-T/" rel="noopener" target="_blank">WiFi Communication Between Two ESP8266 Based MCU Through the Home Router</a></li>
+<li><a href="https://robotzero.one/sending-data-esp8266-to-esp8266/" rel="noopener" target="_blank">ESP8266 Sending Data Over Wi-Fi to another ESP8266</a></li>
+<li><a href="https://www.instructables.com/id/Arduino-Esp8266-Post-Data-to-Website/" rel="noopener" target="_blank">ESP8266 - post data to website</a></li>
+<li><a href="https://www.arduino.cc/en/Reference/Wire" rel="noopener" target="_blank">Arduino Wire library</a></li>
 </ul>
 </section>
 <footer>

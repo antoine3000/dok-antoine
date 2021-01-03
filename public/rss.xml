@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Sun, 13 Dec 2020 12:38:31 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Sun, 03 Jan 2021 22:25:03 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="large:4449-01.jpg" alt="" /&gt;
 &lt;img src="large:4449-02.jpg" alt="" /&gt;
@@ -25,21 +25,19 @@
 
 &lt;h2 id="fab-academy-2020"&gt;Fab Academy (2020)&lt;/h2&gt;
 
-&lt;p&gt;I'm currently following the &lt;a target="_blank" href="https://fabacademy.org/"&gt;Fab Academy&lt;/a&gt; at &lt;a target="_blank" href="https://fablabbcn.org/"&gt;Fab Lab Barcelona&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I'm currently following the &lt;a rel="noopener" target="_blank" href="https://fabacademy.org/"&gt;Fab Academy&lt;/a&gt; at &lt;a rel="noopener" target="_blank" href="https://fablabbcn.org/"&gt;Fab Lab Barcelona&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;This intensive program is about designing and prototyping projects using digital fabrication tools and machine, such as: computer-controlled cutting, electronics, 3D scanning and printing, electronics design,computer-controlled machining, embedded programming, molding and casting, networking and communications, m...</description><pubDate>Fri, 04 Sep 2020 00:00:00 +0200</pubDate></item><item><title>Final project: research</title><link>https://antoine.studio/final-project-research.html</link><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;This intensive program is about designing and prototyping projects using digital fabrication tools and machine, such as: computer-controlled cutting, electronics, 3D scanning and printing, electronics design,computer-controlled machining, embedded programming, molding and casting, ne...</description><pubDate>Fri, 04 Sep 2020 00:00:00 +0200</pubDate></item><item><title>Final project: research</title><link>https://antoine.studio/final-project-research.html</link><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
 
-&lt;p&gt;This article is a place for me to post ideas about my final project. It is not intended to be clear or readable. At least, not at the moment. I have compiled my notes and the elements that were used in the realisation of my final project on the &lt;a target="_blank" href="green-observatory.html"&gt;page&lt;/a&gt; dedicated to it.&lt;/p&gt;
+&lt;p&gt;This article is a place for me to post ideas about my final project. It is not intended to be clear or readable. At least, not at the moment. I have compiled my notes and the elements that were used in the realisation of my final project on the &lt;a rel="noopener" target="_blank" href="green-observatory.html"&gt;page&lt;/a&gt; dedicated to it.&lt;/p&gt;
 
 &lt;p&gt;In short, I'm designing a device that listens to the electrical activity of plants and transforms it into a physical and meditative movement that we humans can observe and contemplate. I call it &lt;em&gt;The Green Observatory&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;a target="_blank" href="button:green-observatory.html"&gt;The Green Osbservatory&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a rel="noopener" target="_blank" href="button:green-observatory.html"&gt;The Green Osbservatory&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="IMG_8664.jpg" alt="" /&gt;&lt;/p&gt;
 
-&lt;h1 id="external-resources"&gt;External resources&lt;/h1&gt;
-
-&lt;p&gt;&lt;a targ...</description><pubDate>Wed, 15 Jan 2020 00:00:00 +0200</pubDate></item><item><title>Sketches and first ideas</title><link>https://antoine.studio/final-project-research-sketches-ideas.html</link><description>&lt;p&gt;This page is where I collect some of my thoughts on my final project idea.&lt;/p&gt;
+&lt;h1 id="external-resources"&gt;Exter...</description><pubDate>Wed, 15 Jan 2020 00:00:00 +0200</pubDate></item><item><title>Sketches and first ideas</title><link>https://antoine.studio/final-project-research-sketches-ideas.html</link><description>&lt;p&gt;This page is where I collect some of my thoughts on my final project idea.&lt;/p&gt;
 
 &lt;h1 id="listen-to-what-the-plants-have-to-say"&gt;Listen to what the plants have to say&lt;/h1&gt;
 
@@ -50,24 +48,24 @@
 &lt;p&gt;The machine I have in mind is able to get the data from a plant [temperature, light level, air quality,...</description><pubDate>Thu, 02 Apr 2020 00:00:00 +0200</pubDate></item><item><title>References and related projects</title><link>https://antoine.studio/final-project-research-references.html</link><description>&lt;h2 id="concept"&gt;Concept&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a target="_blank" href="https://www.media.mit.edu/projects/elowan-a-plant-robot-hybrid/overview/"&gt;Elowan (MIT Media Lab)&lt;/a&gt;
+&lt;li&gt;&lt;a rel="noopener" target="_blank" href="https://www.media.mit.edu/projects/elowan-a-plant-robot-hybrid/overview/"&gt;Elowan (MIT Media Lab)&lt;/a&gt;
 is a cybernetic lifeform, a plant in direct dialogue with a machine. Using its own internal
 electrical signals, the plant is interfaced with a robotic extension that drives it toward light.&lt;/li&gt;
-&lt;li&gt;&lt;a target="_blank" href="https://hackaday.io/project/134172-plantoid"&gt;Plantoid&lt;/a&gt;, an hybrid with actuators and electrical
+&lt;li&gt;&lt;a rel="noopener" target="_blank" href="https://hackaday.io/project/134172-plantoid"&gt;Plantoid&lt;/a&gt;, an hybrid with actuators and electrical
 potential sensing for plant control.&lt;/li&gt;
-&lt;li&gt;&lt;a target="_blank" href="https://backyardbrains.com/products/plantspikerbox"&gt;the Plant SpykerBox&lt;/a&gt;, a device that records and visualizes the signals emitted by plants offering users the unique opportunity to peer into the fascinating world of plant signaling and ...</description><pubDate>Fri, 01 May 2020 00:00:00 +0200</pubDate></item><item><title>Sensing the electrical activity of a plant</title><link>https://antoine.studio/final-project-research-input-plant-activity.html</link><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
+&lt;li&gt;&lt;a rel="noopener" target="_blank" href="https://backyardbrains.com/products/plantspikerbox"&gt;the Plant SpykerBox&lt;/a&gt;, a device that records and visualizes the signals emitted by plants offering users the unique opportunity to peer into ...</description><pubDate>Fri, 01 May 2020 00:00:00 +0200</pubDate></item><item><title>Sensing the electrical activity of a plant</title><link>https://antoine.studio/final-project-research-input-plant-activity.html</link><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
 
 &lt;p&gt;I selected two projects, related to mine, that listen to the electrical activity of plant in order to produce music (or at least sounds). They both are very useful for the understanding, design and fabrication of the sensing part of my project.&lt;/p&gt;
 
 &lt;h1 id="references"&gt;References&lt;/h1&gt;
 
-&lt;p&gt;The first is &lt;a target="_blank" href="http://lessnullvoid.cc/content/2011/10/pulsum-plantae/"&gt;Pulsum Plantae&lt;/a&gt; (&lt;a target="_blank" href="https://github.com/Lessnullvoid/Pulsum-Plantae"&gt;Github project&lt;/a&gt;). This project amplifies the low voltage of a plant to make it readable, then converts it into an interactive installation that makes sounds. Leslie Garcia, Thiago Hersan, and Paloma López (the artists) have opened the sources of their project to make it acces...</description><pubDate>Mon, 01 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Structure: design and fabrication</title><link>https://antoine.studio/final-project-research-structure.html</link><description>&lt;p&gt;&lt;img src="structure-overview-01.png" alt="structure overview" /&gt;
+&lt;p&gt;The first is &lt;a rel="noopener" target="_blank" href="http://lessnullvoid.cc/content/2011/10/pulsum-plantae/"&gt;Pulsum Plantae&lt;/a&gt; (&lt;a rel="noopener" target="_blank" href="https://github.com/Lessnullvoid/Pulsum-Plantae"&gt;Github project&lt;/a&gt;). This project amplifies the low voltage of a plant to make it readable, then converts it into an interactive installation that makes sounds. Leslie Garcia, Thiago Hersan, and Paloma López (the artists) have opened the sources of ...</description><pubDate>Mon, 01 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Structure: design and fabrication</title><link>https://antoine.studio/final-project-research-structure.html</link><description>&lt;p&gt;&lt;img src="structure-overview-01.png" alt="structure overview" /&gt;
 &lt;img src="structure-detail-01.png" alt="structure detail" /&gt;&lt;/p&gt;
 ...</description><pubDate>Tue, 02 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Principles and practices</title><link>https://antoine.studio/principles-and-practices.html</link><description>&lt;h1 id="fab-academy"&gt;Fab Academy&lt;/h1&gt;
 
-&lt;p&gt;For the next six months (from January to June 2020), I will follow the &lt;a target="_blank" href="https://fabacademy.org/"&gt;Fab Academy&lt;/a&gt; at &lt;a target="_blank" href="https://fablabbcn.org/"&gt;Fab Lab Barcelona&lt;/a&gt;. The Fab Academy is an intensive program to learn how to design and prototype projects using digital fabrication tools and machine, such as: computer-controlled cutting, electronics, 3D scanning and printing, electronics design,computer-controlled machining, embedded programming, molding and casting, networking and communications, mechanical design, interface and application programming and machine design.&lt;/p&gt;
+&lt;p&gt;For the next six months (from January to June 2020), I will follow the &lt;a rel="noopener" target="_blank" href="https://fabacademy.org/"&gt;Fab Academy&lt;/a&gt; at &lt;a rel="noopener" target="_blank" href="https://fablabbcn.org/"&gt;Fab Lab Barcelona&lt;/a&gt;. The Fab Academy is an intensive program to learn how to design and prototype projects using digital fabrication tools and machine, such as: computer-controlled cutting, electronics, 3D scanning and printing, electronics design,computer-controlled machining, embedded programming, molding and casting, networking and communications, mechanical design, interface and application programming and machine design.&lt;/p&gt;
 
-&lt;p&gt;I have a background in graphic &amp;amp; web design and web development and I love to imagine and build experiences for the common us...</description><pubDate>Sun, 26 Jan 2020 00:00:00 +0200</pubDate></item><item><title>Project management</title><link>https://antoine.studio/project-management.html</link><description>&lt;p&gt;An important part of the &lt;a target="_blank" href="https://fabacademy.org/"&gt;Fab Academy&lt;/a&gt;, apart from learning digital fabrication techniques, consists of documenting everything we do in order to create a shared and open knowledge base between all students, and for everybody.&lt;/p&gt;
+&lt;p&gt;I have a background in graphic &amp;amp; web design and web development and I love to imagine and build...</description><pubDate>Sun, 26 Jan 2020 00:00:00 +0200</pubDate></item><item><title>Project management</title><link>https://antoine.studio/project-management.html</link><description>&lt;p&gt;An important part of the &lt;a rel="noopener" target="_blank" href="https://fabacademy.org/"&gt;Fab Academy&lt;/a&gt;, apart from learning digital fabrication techniques, consists of documenting everything we do in order to create a shared and open knowledge base between all students, and for everybody.&lt;/p&gt;
 
 &lt;p&gt;One of my goals for this academy is to use only open-source tools. I want to be able to see what is inside the tools I use, modify it in case of need and share with others the projects I do with the environment necessary for their functioning.&lt;/p&gt;
 
@@ -75,25 +73,24 @@ potential sensing for plant control.&lt;/li&gt;
   &lt;p&gt;Practice shapes tools, tools shape practice&lt;/p&gt;
   
   &lt;blockquote&gt;
-    &lt;p&gt;&lt;a target="_blank" href="http://osp.kitchen/"&gt;Open Source Publishing&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a rel="noopener" target="_blank" href="http://osp.kitchen/"&gt;Open Source Publishing&lt;/a&gt;&lt;/p&gt;
   &lt;/blockquote&gt;
 &lt;/blockquote&gt;
-...</description><pubDate>Fri, 04 Sep 2020 00:00:00 +0200</pubDate></item><item><title>My computer</title><link>https://antoine.studio/project-management-my-computer.html</link><description>&lt;p&gt;Few months ago, I decided to switch from the closed Apple ecosystem to the wonderful and open world of Linux. I'm running &lt;a target="_blank" href="https://elementary.io/"&gt;Elementary OS&lt;/a&gt;, a distribution based on Ubuntu, on a mid-2014 macbook pro. This machine isn't the more convenient to run a Linux distribution but I will keep using it as long as I can, even if I have some tiny hardware issues, simply because the more sustainable computer is the one I already have.&lt;/p&gt;
+...</description><pubDate>Fri, 04 Sep 2020 00:00:00 +0200</pubDate></item><item><title>My computer</title><link>https://antoine.studio/project-management-my-computer.html</link><description>&lt;p&gt;Few months ago, I decided to switch from the closed Apple ecosystem to the wonderful and open world of Linux. I'm running &lt;a rel="noopener" target="_blank" href="https://elementary.io/"&gt;Elementary OS&lt;/a&gt;, a distribution based on Ubuntu, on a mid-2014 macbook pro. This machine isn't the more convenient to run a Linux distribution but I will keep using it as long as I can, even if I have some tiny hardware issues, simply because the more sustainable computer is the one I already have.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Text editor: &lt;a target="_blank" href="https://vscodium.com/"&gt;VSCodium&lt;/a&gt; + &lt;a target="_blank" href="https://neovim.io/"&gt;NeoVim&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Terminal: &lt;a target="_blank" href="https://github.com/software-jessies-org/jessies/wiki/Terminator"&gt;Terminator&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;version control system: &lt;a target="_blank" hr...</description><pubDate>Tue, 04 Feb 2020 00:00:00 +0200</pubDate></item><item><title>My documentation tool</title><link>https://antoine.studio/project-management-my-documentation-tool.html</link><description>&lt;p&gt;My ideal documentation tool is as light as possible and requires very little energy to operate; is perfectly understandable and does the tasks I want it to do - nothing more; evolves with my needs; has no Javascript, no cookies, no trackers.&lt;/p&gt;
+&lt;li&gt;Text editor: &lt;a rel="noopener" target="_blank" href="https://vscodium.com/"&gt;VSCodium&lt;/a&gt; + &lt;a rel="noopener" target="_blank" href="https://neovim.io/"&gt;NeoVim&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Terminal: &lt;a rel="noopener" target="_blank" href="https://github.com/software-jessies-org/jessies/wiki/Terminator"&gt;Terminato...</description><pubDate>Tue, 04 Feb 2020 00:00:00 +0200</pubDate></item><item><title>My documentation tool</title><link>https://antoine.studio/project-management-my-documentation-tool.html</link><description>&lt;p&gt;My ideal documentation tool is as light as possible and requires very little energy to operate; is perfectly understandable and does the tasks I want it to do - nothing more; evolves with my needs; has no Javascript, no cookies, no trackers.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;A sustainable website means ensuring support for older hardware, slower networks and improving the portability and archivability of the blog’s content.&lt;/p&gt;
   
   &lt;blockquote&gt;
-    &lt;p&gt;&lt;a target="_blank" href="https://homebrewserver.club/low-tech-website-howto.html"&gt;Homebrewserver.club&lt;/a&gt; / &lt;a target="_blank" href="https://solar.lowtechmagazine.com/2018/09/how-to-build-a-lowtech-website.html"&gt;Low-tech Magazine&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a rel="noopener" target="_blank" href="https://homebrewserver.club/low-tech-website-howto.html"&gt;Homebrewserver.club&lt;/a&gt; / &lt;a rel="noopener" target="_blank" href="https://solar.lowtechmagazine.com/2018/09/how-to-build-a-lowtech-website.html"&gt;Low-tech Magazine&lt;/a&gt;&lt;/p&gt;
   &lt;/blockquote&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;The best way to meet these requirements and to fully understand how it works is...</description><pubDate>Wed, 05 Feb 2020 00:00:00 +0200</pubDate></item><item><title>Git cheatsheet</title><link>https://antoine.studio/project-management-git-cheatsheet.html</link><description>&lt;p&gt;Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.&lt;/p&gt;
+&lt;p&gt;The best way to meet these requirements and to fu...</description><pubDate>Wed, 05 Feb 2020 00:00:00 +0200</pubDate></item><item><title>Git cheatsheet</title><link>https://antoine.studio/project-management-git-cheatsheet.html</link><description>&lt;p&gt;Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.&lt;/p&gt;
 
 &lt;h2 id="useful-commands"&gt;Useful commands&lt;/h2&gt;
 
@@ -117,7 +114,7 @@ potential sensing for plant control.&lt;/li&gt;
 
 &lt;h2 id="imagemagick-recipes"&gt;Imagemagick recipes&lt;/h2&gt;
 
-&lt;p&gt;&lt;a target="_blank" href="https://imagemagick.org/index.php"&gt;Imagemagick&lt;/a&gt; can resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves. Via the terminal.&lt;/p&gt;
+&lt;p&gt;&lt;a rel="noopener" target="_blank" href="https://imagemagick.org/index.php"&gt;Imagemagick&lt;/a&gt; can resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves. Via the terminal.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Rotate &lt;code&gt;mogrify -rotate 180 *.jpg&lt;/code&gt;&lt;/li&gt;
@@ -136,7 +133,7 @@ potential sensing for plant control.&lt;/li&gt;
 
 &lt;p&gt;&lt;img src="references.jpg" alt="references" /&gt;&lt;/p&gt;
 
-&lt;p&gt;File: &lt;a target="_blank" href="https://cloud.antoin...</description><pubDate>Sun, 09 Feb 2020 00:00:00 +0200</pubDate></item><item><title>Computer-controlled cutting</title><link>https://antoine.studio/computer-controlled-cutting.html</link><description>&lt;p&gt;This week is about exploring the possibilities of the computer-controlled cutting machines present in Fab Labs : the lasercutter and the vinylcutter. The first (group) assignement is to understand how the machines work and to obtain some of the values (specific to these machines) necessary to properly prepare the files before sending them to the machines. The second (personal) assignement is to design, lasercut, and document a parametric construction kit, and to cut something with the vinylcutter.&lt;/p&gt;
+&lt;p&gt;File: &lt;a rel="noopener" target="_blank" href="https...</description><pubDate>Sun, 09 Feb 2020 00:00:00 +0200</pubDate></item><item><title>Computer-controlled cutting</title><link>https://antoine.studio/computer-controlled-cutting.html</link><description>&lt;p&gt;This week is about exploring the possibilities of the computer-controlled cutting machines present in Fab Labs : the lasercutter and the vinylcutter. The first (group) assignement is to understand how the machines work and to obtain some of the values (specific to these machines) necessary to properly prepare the files before sending them to the machines. The second (personal) assignement is to design, lasercut, and document a parametric construction kit, and to cut something with the vinylcutter.&lt;/p&gt;
 ...</description><pubDate>Fri, 14 Feb 2020 00:00:00 +0200</pubDate></item><item><title>Laser cutter</title><link>https://antoine.studio/computer-controlled-cutting-laser-cutter-basics.html</link><description>&lt;p&gt;The laser cutter is an excellent machine: it gives quick results, it is easy to learn, it works with different types of material (wood, acrylic, cardboard, etc.) and the cutting is very precise. Using joints allows you to go from 2D to 3D objects. It makes the laser cutter one of the best machines to quickly prototype an idea.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="large:nesting-cut.jpg" alt="nesting-cut" /&gt;&lt;/p&gt;
@@ -149,13 +146,13 @@ potential sensing for plant control.&lt;/li&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Do not leave the machine unattended&lt;/li&gt;
-&lt;li&gt;Cut only materials that you know are safe (no chromium, no carbon, no PVC, no PVP...</description><pubDate>Sat, 15 Feb 2020 00:00:00 +0200</pubDate></item><item><title>Geodesic dome</title><link>https://antoine.studio/computer-controlled-cutting-geodesic-dome.html</link><description>&lt;p&gt;A &lt;a target="_blank" href="https://en.wikipedia.org/wiki/Geodesic_dome"&gt;geodesic dome&lt;/a&gt; is a structure based on a geodesic polyhedron. The triangular elements of the dome are structurally rigid and distribute the structural stress throughout the structure, making geodesic domes able to withstand very heavy loads for their size.&lt;/p&gt;
+&lt;li&gt;Cut only materials that you know are safe (no chromium, no carbon, no PVC, no PVP...</description><pubDate>Sat, 15 Feb 2020 00:00:00 +0200</pubDate></item><item><title>Geodesic dome</title><link>https://antoine.studio/computer-controlled-cutting-geodesic-dome.html</link><description>&lt;p&gt;A &lt;a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Geodesic_dome"&gt;geodesic dome&lt;/a&gt; is a structure based on a geodesic polyhedron. The triangular elements of the dome are structurally rigid and distribute the structural stress throughout the structure, making geodesic domes able to withstand very heavy loads for their size.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="dome-reference.jpg" alt="dome-reference" /&gt;&lt;/p&gt;
 
 &lt;h2 id="design"&gt;Design&lt;/h2&gt;
 
-&lt;p&gt;I wanted to build a geodesic dome made up of two triangular faces and a joint. But because the structure of a geodesic dome is mainly made up of sticks instead of faces, finding documentation was not as easy as expected. Finally, &lt;a target="_blank" href="https://simplydifferently.org/Geodesic_Dome_Notes?page=3#2V%20Icosahedron%20Dome"&gt;this website&lt;/a&gt; helped me to...</description><pubDate>Sun, 16 Feb 2020 00:00:00 +0200</pubDate></item><item><title>The most common password ever</title><link>https://antoine.studio/computer-controlled-cutting-the-most-common-password-ever.html</link><description>&lt;p&gt;According to &lt;a target="_blank" href="https://en.wikipedia.org/wiki/List_of_the_most_common_passwords"&gt;this page&lt;/a&gt;, the most common password ever is … &lt;code&gt;123456&lt;/code&gt;. It's so basic and evident I wanted to stick it on my laptop to send the subtle message to the people around me that their password is &lt;em&gt;maybe&lt;/em&gt; not the best.&lt;/p&gt;
+&lt;p&gt;I wanted to build a geodesic dome made up of two triangular faces and a joint. But because the structure of a geodesic dome is mainly made up of sticks instead of faces, finding documentation was not as easy as expected. Finally, &lt;a rel="noopener" target="_blank" href="https://simplydifferently.org/Geodesic_Dome_Notes?page=3#2V%20Icosahedron%20Dome"...</description><pubDate>Sun, 16 Feb 2020 00:00:00 +0200</pubDate></item><item><title>The most common password ever</title><link>https://antoine.studio/computer-controlled-cutting-the-most-common-password-ever.html</link><description>&lt;p&gt;According to &lt;a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/List_of_the_most_common_passwords"&gt;this page&lt;/a&gt;, the most common password ever is … &lt;code&gt;123456&lt;/code&gt;. It's so basic and evident I wanted to stick it on my laptop to send the subtle message to the people around me that their password is &lt;em&gt;maybe&lt;/em&gt; not the best.&lt;/p&gt;
 
 &lt;p&gt;And you, is this one of your passwords?&lt;/p&gt;
 
@@ -163,13 +160,12 @@ potential sensing for plant control.&lt;/li&gt;
 
 &lt;h2 id="vinyl-cutter"&gt;Vinyl cutter&lt;/h2&gt;
 
-&lt;p&gt;The vinyl cutter we have at Fab Lab Barcelona is a &lt;a target="_blank" href="https://www.rolanddga.com/es/soporte/products/cutting/camm-1-gx-24-24-vinyl-cutter"&gt;Roland CAMM-1 Servo GX-24&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The vinyl cutter we have at Fab Lab Barcelona is a &lt;a rel="noopener" target="_blank" href="https://www.rolanddga.com/es/soporte/products/cutting/camm-1-gx-24-24-vinyl-cutter"&gt;Roland CAMM-1 Servo GX-24&lt;/a&gt;.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Work area: 584 x 24998mm&lt;/li&gt;
 &lt;li&gt;Cutting speed: up to 500mm/s&lt;/li&gt;
-&lt;li&gt;Cutting length: maximum 25m&lt;/li&gt;
-&lt;li...</description><pubDate>Mon, 17 Feb 2020 00:00:00 +0200</pubDate></item><item><title>Electronics production</title><link>https://antoine.studio/electronics-production.html</link><description>&lt;p&gt;It's the 4th week of the Fab Academy, we're now exploring the process of electronics production: How to make a in-circuit programmer from a &lt;a target="_blank" href="https://en.wikipedia.org/wiki/Printed_circuit_board"&gt;printed circuit board&lt;/a&gt; (PCB) and several electronic components, a programmer in wich I will send code to pilot my future electronic projects.&lt;/p&gt;
+&lt;li&gt;Cuttin...</description><pubDate>Mon, 17 Feb 2020 00:00:00 +0200</pubDate></item><item><title>Electronics production</title><link>https://antoine.studio/electronics-production.html</link><description>&lt;p&gt;It's the 4th week of the Fab Academy, we're now exploring the process of electronics production: How to make a in-circuit programmer from a &lt;a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Printed_circuit_board"&gt;printed circuit board&lt;/a&gt; (PCB) and several electronic components, a programmer in wich I will send code to pilot my future electronic projects.&lt;/p&gt;
 ...</description><pubDate>Wed, 19 Feb 2020 00:00:00 +0200</pubDate></item><item><title>Testing the compact milling machine</title><link>https://antoine.studio/electronics-production-testing-the-milling-machine.html</link><description>&lt;p&gt;The goal of this group assignment is for us to know the potential gaps between our traces, or how thin the traces could be. Since the machines were always occupied and the booking system at Fab Lab Barcelona was not really effective, our class couldn't have a chance to do many group tests. In the end, we were able to finish only 1 group test with the participation of the whole class.&lt;/p&gt;
 
 &lt;p&gt;We used the Roland MonoFab SRM-20 machine to mill a test file.&lt;/p&gt;
@@ -188,89 +184,82 @@ potential sensing for plant control.&lt;/li&gt;
   &lt;p&gt;In-system programming (ISP), also called in-circuit serial programming (ICSP), is the ability of some programmable logic devices, microcontrollers, and other embedded devices to be programmed while installed in a complete system, rather than requiring the chip to be programmed prior to installing it into the system.&lt;/p&gt;
   
   &lt;blockquote&gt;
-    &lt;p&gt;&lt;a target="_blank" href="https://en.wikipedia.org/wiki/In-system_programming"&gt;In-circuit programming, Wikipedia.&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/In-system_programming"&gt;In-circuit programming, Wikipedia.&lt;/a&gt;&lt;/p&gt;
   &lt;/blockquote&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id="ftdi-updi"&gt;FTDI &amp;amp; UPDI&lt;/h2&gt;
 
-&lt;p&gt;I decided to make an &lt;a target="_blank" href="https://www.ftdichip.com/"&gt;FTDI&lt;/a&gt; USB-FT230XS-serial. I have to admit that my choice isn't clear at this point. I could have chosen to make another model of programmer, any of them. It's almo...</description><pubDate>Fri, 21 Feb 2020 00:00:00 +0200</pubDate></item><item><title>3D scanning and printing</title><link>https://antoine.studio/3D-scanning-printing.html</link><description>&lt;p&gt;3D printing is not as simple as pressing the &lt;em&gt;print&lt;/em&gt; button and waiting for the model to be printed. It is crucial to know how to prepare a 3D model, how the printer works and what are its limits, and how to balance printing time with print quality. This week, I'm going to test a printer, scan and print something.&lt;/p&gt;
-...</description><pubDate>Wed, 26 Feb 2020 00:00:00 +0200</pubDate></item><item><title>Printing a test file</title><link>https://antoine.studio/3D-scanning-printing-printing-a-test-file.html</link><description>&lt;p&gt;For this week's group assignement, I teamed up with &lt;a target="_blank" href="https://fabacademy.org/2020/labs/barcelona/students/tue-ngo/"&gt;Tue&lt;/a&gt; and &lt;a target="_blank" href="https://fabacademy.org/2020/labs/barcelona/students/david-prieto/"&gt;David&lt;/a&gt;. We picked a &lt;a target="_blank" href="https://www.thingiverse.com/thing:1363023"&gt;test file&lt;/a&gt; from Thingiverse in order to test different features of one of the 3D printers we have in Fab Lab Barcelona, the &lt;a target="_blank" href="https://www.creality3d.shop/products/creality-cr-10s-s5-3d-printer-diy-kit-large-printing-size-500x500x500mm"&gt;Creality3D CR-10 S5 3D&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I decided to make an &lt;a rel="noopener" target="_blank" href="https://www.ftdichip.com/"&gt;FTDI&lt;/a&gt; USB-FT230XS-serial. I have to admit that my choice isn't clear at this point. I could have chosen to make another model of prog...</description><pubDate>Fri, 21 Feb 2020 00:00:00 +0200</pubDate></item><item><title>3D scanning and printing</title><link>https://antoine.studio/3D-scanning-printing.html</link><description>&lt;p&gt;3D printing is not as simple as pressing the &lt;em&gt;print&lt;/em&gt; button and waiting for the model to be printed. It is crucial to know how to prepare a 3D model, how the printer works and what are its limits, and how to balance printing time with print quality. This week, I'm going to test a printer, scan and print something.&lt;/p&gt;
+...</description><pubDate>Wed, 26 Feb 2020 00:00:00 +0200</pubDate></item><item><title>Printing a test file</title><link>https://antoine.studio/3D-scanning-printing-printing-a-test-file.html</link><description>&lt;p&gt;For this week's group assignement, I teamed up with &lt;a rel="noopener" target="_blank" href="https://fabacademy.org/2020/labs/barcelona/students/tue-ngo/"&gt;Tue&lt;/a&gt; and &lt;a rel="noopener" target="_blank" href="https://fabacademy.org/2020/labs/barcelona/students/david-prieto/"&gt;David&lt;/a&gt;. We picked a &lt;a rel="noopener" target="_blank" href="https://www.thingiverse.com/thing:1363023"&gt;test file&lt;/a&gt; from Thingiverse in order to test different features of one of the 3D printers we have in Fab Lab Barcelona, the &lt;a rel="noopener" target="_blank" href="https://www.creality3d.shop/products/creality-cr-10s-s5-3d-printer-diy-kit-large-printing-size-500x500x500mm"&gt;Creality3D CR-10 S5 3D&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="testfilecad.jpeg" alt="test file" /&gt;&lt;/p&gt;
 
 &lt;p&gt;This file allows us to test these features:&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;z-height check&lt;/li&gt;
-&lt;li&gt;warp check&lt;/li&gt;
-&lt;li&gt;spike&lt;/l...</description><pubDate>Wed, 26 Feb 2020 00:00:00 +0200</pubDate></item><item><title>Oloid shape</title><link>https://antoine.studio/3D-scanning-printing-oloid-shape.html</link><description>&lt;p&gt;I'm exploring different types of shapes that could eventually be interesting regarding my final project. One of these is the oloid.&lt;/p&gt;
+&lt;...</description><pubDate>Wed, 26 Feb 2020 00:00:00 +0200</pubDate></item><item><title>Oloid shape</title><link>https://antoine.studio/3D-scanning-printing-oloid-shape.html</link><description>&lt;p&gt;I'm exploring different types of shapes that could eventually be interesting regarding my final project. One of these is the oloid.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;An oloid is a three-dimensional curved geometric object that was discovered by Paul Schatz in 1929. It is the convex hull of a skeletal frame made by placing two linked congruent circles in perpendicular planes, so that the center of each circle lies on the edge of the other circle. The distance between the circle centers equals the radius of the circles. One third of each circle's perimeter lies inside the convex hull, so the same shape may be also formed as the convex hull of the two remaining circular arcs each spanning an angle of 4π/3.&lt;/p&gt;
   
   &lt;blockquote&gt;
-    &lt;p&gt;&lt;a target="_blank" href="https://en.wikipedia.org/wiki/Oloid"&gt;Oloi...</description><pubDate>Thu, 27 Feb 2020 00:00:00 +0200</pubDate></item><item><title>3D scanning</title><link>https://antoine.studio/3D-scanning-printing-3D-scanning.html</link><description>&lt;p&gt;There aren't many open source tools available and maintained for 3D scanning, but &lt;a target="_blank" href="https://alicevision.org/#meshroom"&gt;Meshroom&lt;/a&gt; is one of them. It is an open source photogrammetry software.&lt;/p&gt;
+    &lt;p&gt;&lt;a rel="noopener" target="_blank" href="https://en.wikipedia.org/w...</description><pubDate>Thu, 27 Feb 2020 00:00:00 +0200</pubDate></item><item><title>3D scanning</title><link>https://antoine.studio/3D-scanning-printing-3D-scanning.html</link><description>&lt;p&gt;There aren't many open source tools available and maintained for 3D scanning, but &lt;a rel="noopener" target="_blank" href="https://alicevision.org/#meshroom"&gt;Meshroom&lt;/a&gt; is one of them. It is an open source photogrammetry software.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Photogrammetry is the art, science and technology of obtaining reliable information about physical objects and the environment through the process of recording, measuring and interpreting photographic images and patterns of electromagnetic radiant imagery and other phenomena.&lt;/p&gt;
   
   &lt;blockquote&gt;
-    &lt;p&gt;&lt;a target="_blank" href="https://en.wikipedia.org/wiki/Photogrammetry"&gt;Photogrammetry, Wikipedia&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Photogrammetry"&gt;Photogrammetry, Wikipedia&lt;/a&gt;&lt;/p&gt;
   &lt;/blockquote&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;&lt;img src="scan-success.jpeg" alt="scan-success" /&gt;&lt;/p&gt;
 
-&lt;h1 id="requirements"&gt;Requirements&lt;/h1&gt;
-
-&lt;p&gt;Meshroom nee...</description><pubDate>Fri, 28 Feb 2020 00:00:00 +0200</pubDate></item><item><title>Electronics design</title><link>https://antoine.studio/electronics-design.html</link><description>&lt;p&gt;I knew almost nothing about electronics before following the Fab Academy.I had to learn and understand the very basics of a electronic circuit and its composents, but also of electricity and its flow.&lt;/p&gt;
+&lt;h1 id="requirements"&gt;Requ...</description><pubDate>Fri, 28 Feb 2020 00:00:00 +0200</pubDate></item><item><title>Electronics design</title><link>https://antoine.studio/electronics-design.html</link><description>&lt;p&gt;I knew almost nothing about electronics before following the Fab Academy.I had to learn and understand the very basics of a electronic circuit and its composents, but also of electricity and its flow.&lt;/p&gt;
 
 &lt;p&gt;To do so, I designed a pomodoro timer from scratch. I have learn a lot throughout the process and I have the feeling that this new knowledge will play a key role in what I will do for my personal project and afterwards.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="pomo.jpeg:flux" alt="pomo" /&gt;&lt;/p&gt;
-...</description><pubDate>Wed, 04 Mar 2020 00:00:00 +0200</pubDate></item><item><title>Pomodoro timer</title><link>https://antoine.studio/electronics-design-pomodoro-timer.html</link><description>&lt;p&gt;I use a pomodoro timer daily to help me manage my time and effort in the tasks I want to accomplish. For now, I'm using &lt;a target="_blank" href="https://github.com/JaDogg/pydoro"&gt;Pydoro&lt;/a&gt;, an open source pomodoro terminal timer written in Python but I would like to build mine and have it physically next to my laptop.&lt;/p&gt;
+...</description><pubDate>Wed, 04 Mar 2020 00:00:00 +0200</pubDate></item><item><title>Pomodoro timer</title><link>https://antoine.studio/electronics-design-pomodoro-timer.html</link><description>&lt;p&gt;I use a pomodoro timer daily to help me manage my time and effort in the tasks I want to accomplish. For now, I'm using &lt;a rel="noopener" target="_blank" href="https://github.com/JaDogg/pydoro"&gt;Pydoro&lt;/a&gt;, an open source pomodoro terminal timer written in Python but I would like to build mine and have it physically next to my laptop.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. The technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks. Each interval is known as a pomodoro, from the Italian word for 'tomato', after the tomato-shaped kitchen timer that Cirillo used as a university student.&lt;/p&gt;
   
   &lt;blockquote&gt;
-    &lt;p&gt;&lt;a target="_blank" href="https://en.wikiped...</description><pubDate>Tue, 15 Sep 2020 00:00:00 +0200</pubDate></item><item><title>Test equipment</title><link>https://antoine.studio/electronics-design-test-equipment.html</link><description>&lt;p&gt;This week's group assignment is about how to use the test equipment in order to test/debug/understand electronic circuits. Because of the covid-19 situtation, I did this assignment alone, from my home.&lt;/p&gt;
+    &lt;p&gt;&lt;a rel="noopener" target="_b...</description><pubDate>Tue, 15 Sep 2020 00:00:00 +0200</pubDate></item><item><title>Test equipment</title><link>https://antoine.studio/electronics-design-test-equipment.html</link><description>&lt;p&gt;This week's group assignment is about how to use the test equipment in order to test/debug/understand electronic circuits. Because of the covid-19 situtation, I did this assignment alone, from my home.&lt;/p&gt;
 
 &lt;h1 id="multimeter"&gt;Multimeter&lt;/h1&gt;
 
-&lt;p&gt;A useful resource to understand how to use a multimeter is &lt;a target="_blank" href="https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/all"&gt;this tutorial&lt;/a&gt; from Sparkfun. It covers all the basics we should know.&lt;/p&gt;
+&lt;p&gt;A useful resource to understand how to use a multimeter is &lt;a rel="noopener" target="_blank" href="https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/all"&gt;this tutorial&lt;/a&gt; from Sparkfun. It covers all the basics we should know.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="multimeter.jpg" alt="" /&gt;&lt;/p&gt;
 
 &lt;p&gt;The selection knob allows to set the multimeter to read different things such as milliamps (mA) of current, voltage (V) and resistance (Ω). The different positions of a multimeter are there to adjust the scale, depending on the values you are measuring.&lt;/p&gt;
 
-&lt;h2 id="voltage...</description><pubDate>Mon, 21 Sep 2020 00:00:00 +0200</pubDate></item><item><title>Computer-controlled machining</title><link>https://antoine.studio/computer-controlled-machining.html</link><description>&lt;p&gt;&lt;/p&gt;
+...</description><pubDate>Mon, 21 Sep 2020 00:00:00 +0200</pubDate></item><item><title>Computer-controlled machining</title><link>https://antoine.studio/computer-controlled-machining.html</link><description>&lt;p&gt;&lt;/p&gt;
 ...</description><pubDate>Wed, 11 Mar 2020 00:00:00 +0200</pubDate></item><item><title>CNC machine</title><link>https://antoine.studio/computer-controlled-machining-cnc-machine.html</link><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
 
 &lt;p&gt;For this week's assignement we have to characterise the CNC machine. This was done when we had the opportunity to return to the lab after the lockdown situation due to the COVID-19 pandemic.&lt;/p&gt;
 
-&lt;p&gt;I had a chance to team up with my classmates &lt;a target="_blank" href="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/"&gt;Tue Ngo&lt;/a&gt;, &lt;a target="_blank" href="https://fabacademy.org/2020/labs/barcelona/students/arman-najari/"&gt;Arman Naraji&lt;/a&gt;, &lt;a target="_blank" href="https://fabacademy.org/2020/labs/barcelona/students/david-prieto/"&gt;David Prieto&lt;/a&gt; and &lt;a target="_blank" href="https://fabacademy.org/2020/labs/barcelona/students/lynn-dika/"&gt;Lynn Dika&lt;/a&gt; for this group assignment.&lt;/p&gt;
-
-&lt;p&gt;On this page, I will highlight the...</description><pubDate>Thu, 01 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Fab stool/bench/table</title><link>https://antoine.studio/computer-controlled-machining-fab-stool-bench-table.html</link><description>&lt;p&gt;I wanted to have a stool/bench/table for my apartment, a kind of furniture that can be different things because of its dimensions. So I designed and fabricated it using the large CNC at Fab Lab Barcelona.&lt;/p&gt;
+&lt;p&gt;I had a chance to team up with my classmates &lt;a rel="noopener" target="_blank" href="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/"&gt;Tue Ngo&lt;/a&gt;, &lt;a rel="noopener" target="_blank" href="https://fabacademy.org/2020/labs/barcelona/students/arman-najari/"&gt;Arman Naraji&lt;/a&gt;, &lt;a rel="noopener" target="_blank" href="https://fabacademy.org/2020/labs/barcelona/students/david-prieto/"&gt;David Prieto&lt;/a&gt; and &lt;a rel="noopener" target="_blank" href="https://fabacademy.org/2020/labs/barcelona/students/lynn-dika/"&gt;Lynn Dika&lt;/a&gt; for this ...</description><pubDate>Thu, 01 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Fab stool/bench/table</title><link>https://antoine.studio/computer-controlled-machining-fab-stool-bench-table.html</link><description>&lt;p&gt;I wanted to have a stool/bench/table for my apartment, a kind of furniture that can be different things because of its dimensions. So I designed and fabricated it using the large CNC at Fab Lab Barcelona.&lt;/p&gt;
 
 &lt;p&gt;I designed it with parametric values. This process can be useful for everyone, to adapt the furnitures (or anything else) to their needs and the context in which it will be used.&lt;/p&gt;
 
 &lt;h1 id="design"&gt;Design&lt;/h1&gt;
 
-&lt;p&gt;I first designed this project on paper and then in &lt;a target="_blank" href="https://www.freecadweb.org/"&gt;Freecad&lt;/a&gt;, my favorite open-source software for 3D modeling.&lt;/p&gt;
+&lt;p&gt;I first designed this project on paper and then in &lt;a rel="noopener" target="_blank" href="https://www.freecadweb.org/"&gt;Freecad&lt;/a&gt;, my favorite open-source software for 3D modeling.&lt;/p&gt;
 
 &lt;p&gt;The stool/bench/table consists of a seat, two legs and a stretcher.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="stool-view-1.png" alt="" /&gt;
 &lt;img src="stool-view-4.png" alt="front view" /&gt;
-&lt;img src="stool-view-5.png" al...</description><pubDate>Tue, 06 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Embedded programming</title><link>https://antoine.studio/embedded-programming.html</link><description>&lt;p&gt;Two weeks ago, I designed a pomodoro timer during the &lt;a target="_blank" href="fabac-assignments-electronics-design.html"&gt;Electronics design&lt;/a&gt; week. It's now time to program it. I'm going to write the piece of code that will light my LEDs as time goes by and find a way to send it to the ATtiny1614 chip. I'm going to focus on the latter: how to send a program (= program) a chip. Well, that was the plan.&lt;/p&gt;
+&lt;img src="stool...</description><pubDate>Tue, 06 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Embedded programming</title><link>https://antoine.studio/embedded-programming.html</link><description>&lt;p&gt;Two weeks ago, I designed a pomodoro timer during the &lt;a rel="noopener" target="_blank" href="fabac-assignments-electronics-design.html"&gt;Electronics design&lt;/a&gt; week. It's now time to program it. I'm going to write the piece of code that will light my LEDs as time goes by and find a way to send it to the ATtiny1614 chip. I'm going to focus on the latter: how to send a program (= program) a chip. Well, that was the plan.&lt;/p&gt;
 
 &lt;p&gt;Unfortunately, in the meantime, the coronavirus has hit Spain (and the whole world). We are now all in quarantine, with no access to the lab. I will have to work from home, with the equipment I already have, nothing more.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="pomo-circuit-playground.jpeg" alt="pomo-circuit-playground" /&gt;&lt;/p&gt;
 
-&lt;p&gt;For this reason, I'm going to use a &lt;a target="_blank" href="https://w...</description><pubDate>Wed, 18 Mar 2020 00:00:00 +0200</pubDate></item><item><title>Pomodoro code</title><link>https://antoine.studio/embedded-programming-pomodoro-code.html</link><description>&lt;h1 id="how-i-want-to-use-my-pomodoro"&gt;How I want to use my pomodoro&lt;/h1&gt;
+&lt;p&gt;For this reason, I'm going to use a &lt;a rel="noopener" t...</description><pubDate>Wed, 18 Mar 2020 00:00:00 +0200</pubDate></item><item><title>Pomodoro code</title><link>https://antoine.studio/embedded-programming-pomodoro-code.html</link><description>&lt;h1 id="how-i-want-to-use-my-pomodoro"&gt;How I want to use my pomodoro&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Press the left button to start the timer&lt;/li&gt;
@@ -289,13 +278,13 @@ potential sensing for plant control.&lt;/li&gt;
 
 &lt;p&gt;For this software I am using the Arduino framework. This framework, ...</description><pubDate>Wed, 18 Mar 2020 00:00:00 +0200</pubDate></item><item><title>How to read a datasheet</title><link>https://antoine.studio/embedded-programming-datasheet.html</link><description>&lt;p&gt;Reading a datasheet isn't the easiest thing to do. It is full of technical details that often interfere with the actual data one can look after.&lt;/p&gt;
 
-&lt;p&gt;I'll now take a tour of the things that seem important to me when reading a datasheet. And for that, we'll have a look at the &lt;a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny1614-16-17-DataSheet-DS40002204A.pdf"&gt;datasheet of the ATTiny1614&lt;/a&gt; from Microship.&lt;/p&gt;
+&lt;p&gt;I'll now take a tour of the things that seem important to me when reading a datasheet. And for that, we'll have a look at the &lt;a rel="noopener" target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny1614-16-17-DataSheet-DS40002204A.pdf"&gt;datasheet of the ATTiny1614&lt;/a&gt; from Microship.&lt;/p&gt;
 
 &lt;p&gt;To easily navigation into a large PDF document, use the &lt;code&gt;ctrl + f&lt;/code&gt; to open a search box and type the term you're looking for.&lt;/p&gt;
 
 &lt;h2 id="configuration-summary"&gt;Configuration summary&lt;/h2&gt;
 
-&lt;p&gt;The &lt;em&gt;configuration summary&lt;/em&gt; is the section where one can have a quick look at what the chip can or cannot do. How many pins does the c...</description><pubDate>Thu, 19 Mar 2020 00:00:00 +0200</pubDate></item><item><title>Programming the ATtiny1614</title><link>https://antoine.studio/embedded-programming-attiny1614.html</link><description>&lt;p&gt;The ATtiny1614 isn't yet supported by PlatformIO and therefore needs another method to be programmed. Fortunately, &lt;a target="_blank" href="https://github.com/mraardvark/pyupdi"&gt;pyupdi&lt;/a&gt; is here! Pyupdi is a Python UPDI driver for programming the "new" tinyAVR and megaAVR devices.&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;configuration summary&lt;/em&gt; is the section where one can have a quick look at what the chip can or cannot do. How many ...</description><pubDate>Thu, 19 Mar 2020 00:00:00 +0200</pubDate></item><item><title>Programming the ATtiny1614</title><link>https://antoine.studio/embedded-programming-attiny1614.html</link><description>&lt;p&gt;The ATtiny1614 isn't yet supported by PlatformIO and therefore needs another method to be programmed. Fortunately, &lt;a rel="noopener" target="_blank" href="https://github.com/mraardvark/pyupdi"&gt;pyupdi&lt;/a&gt; is here! Pyupdi is a Python UPDI driver for programming the "new" tinyAVR and megaAVR devices.&lt;/p&gt;
 
 &lt;h2 id="connectivity"&gt;Connectivity&lt;/h2&gt;
 
@@ -310,30 +299,28 @@ potential sensing for plant control.&lt;/li&gt;
 &lt;h2 id="compile"&gt;Compile&lt;/h2&gt;
 
 &lt;p&gt;The first thing to do is to compile the code with the Arduino IDE and then send it with &lt;code&gt;pyupdi&lt;/code&gt;.
-To be able to compile the code, f...</description><pubDate>Fri, 20 Mar 2020 00:00:00 +0200</pubDate></item><item><title>Programming the ESP32 — Barduino</title><link>https://antoine.studio/embedded-programming-esp32-barduino.html</link><description>&lt;p&gt;We have been asked to assemble a Barduino few hours before the lab lockdown due to the coronavirus, in order to be able to experiment with it later at home.&lt;/p&gt;
+To be able to comp...</description><pubDate>Fri, 20 Mar 2020 00:00:00 +0200</pubDate></item><item><title>Programming the ESP32 — Barduino</title><link>https://antoine.studio/embedded-programming-esp32-barduino.html</link><description>&lt;p&gt;We have been asked to assemble a Barduino few hours before the lab lockdown due to the coronavirus, in order to be able to experiment with it later at home.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Barduino 2.0 started as a project to have a ESP32 fabacademy compatible board to help the students develope their work on top of it. This board was designed by Eduardo Chamorro Martin with the help of Josep Marti and Oscar Gonzalez in Fab Lab Barcelona 2020.&lt;/p&gt;
   
   &lt;blockquote&gt;
-    &lt;p&gt;&lt;a target="_blank" href="https://gitlab.fabcloud.org/barcelonaworkshops/barduino-2.0"&gt;Barduino 2.0, Gitlab&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a rel="noopener" target="_blank" href="https://gitlab.fabcloud.org/barcelonaworkshops/barduino-2.0"&gt;Barduino 2.0, Gitlab&lt;/a&gt;&lt;/p&gt;
   &lt;/blockquote&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;&lt;img src="barduino-pic.jpeg" alt="arduino-pic" /&gt;&lt;/p&gt;
 
-&lt;p&gt;To use that board with PlatformIO, &lt;code&gt;pio init&lt;/code&gt; a new project specifically for the ESP32 chip.&lt;/p&gt;
+&lt;p&gt;To use that board with PlatformIO, &lt;code&gt;pio init&lt;/code&gt; a new project specifically for the ESP32 chip.&lt;/p&gt;...</description><pubDate>Sat, 21 Mar 2020 00:00:00 +0200</pubDate></item><item><title>PlatformIO</title><link>https://antoine.studio/embedded-programming-platformio.html</link><description>&lt;p&gt;&lt;a rel="noopener" target="_blank" href="https://platformio.org/"&gt;PlatformIO&lt;/a&gt; is a cross-platform, cross-architecture and multiple framework tool for embedded programming. It replaces Arduino IDE and offers a lot more subtilities and flexibility to write organized code for micro-controllers.&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;$ pi...</description><pubDate>Sat, 21 Mar 2020 00:00:00 +0200</pubDate></item><item><title>PlatformIO</title><link>https://antoine.studio/embedded-programming-platformio.html</link><description>&lt;p&gt;&lt;a target="_blank" href="https://platformio.org/"&gt;PlatformIO&lt;/a&gt; is a cross-platform, cross-architecture and multiple framework tool for embedded programming. It replaces Arduino IDE and offers a lot more subtilities and flexibility to write organized code for micro-controllers.&lt;/p&gt;
-
-&lt;p&gt;I use PlatformIO as a replacement for Arduino IDE because it allows me to use the text editor I want (I use &lt;a target="_blank" href="https://neovim.io/"&gt;Neovim&lt;/a&gt;, an hyperextensible Vim-based text editor) and because it integrates librairies of more than 700 differents boards, including the ones I use. It also has a unified debugger and a static code analyze which seems super useful for large scale projects.&lt;/p&gt;
+&lt;p&gt;I use PlatformIO as a replacement for Arduino IDE because it allows me to use the text editor I want (I use &lt;a rel="noopener" target="_blank" href="https://neovim.io/"&gt;Neovim&lt;/a&gt;, an hyperextensible Vim-based text editor) and because it integrates librairies of more than 700 differents boards, including the ones I use. It also has a unified debugger and a static code analyze which seems super useful for large scale projects.&lt;/p&gt;
 
 &lt;h3 id="initialization"&gt;Initialization&lt;/h3&gt;
 
-&lt;p&gt;Because PlatformIO is based on Python, the...</description><pubDate>Sun, 22 Mar 2020 00:00:00 +0200</pubDate></item><item><title>Arduino IDE</title><link>https://antoine.studio/embedded-programming-arduino-ide.html</link><description>&lt;p&gt;One can also use Arduino IDE to load a piece of code into a device. It works perfectly well even if this solution is more basic and doesn't allow a lot of fine tuning. Because this software is well maintained and massively used, it makes it a very good tool for quickly prototyping without detours.&lt;/p&gt;
+&lt;p&gt;Because Plat...</description><pubDate>Sun, 22 Mar 2020 00:00:00 +0200</pubDate></item><item><title>Arduino IDE</title><link>https://antoine.studio/embedded-programming-arduino-ide.html</link><description>&lt;p&gt;One can also use Arduino IDE to load a piece of code into a device. It works perfectly well even if this solution is more basic and doesn't allow a lot of fine tuning. Because this software is well maintained and massively used, it makes it a very good tool for quickly prototyping without detours.&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;a target="_blank" href="https://www.arduino.cc/en/Main/Software"&gt;Download Arduino IDE&lt;/a&gt; and install it on you computer&lt;/li&gt;
+&lt;li&gt;&lt;a rel="noopener" target="_blank" href="https://www.arduino.cc/en/Main/Software"&gt;Download Arduino IDE&lt;/a&gt; and install it on you computer&lt;/li&gt;
 &lt;li&gt;Find and install the Circuit Playground library with the built-in &lt;code&gt;Boards Manager&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Verify the code&lt;/li&gt;
 &lt;li&gt;Upload the code&lt;/li&gt;
@@ -344,8 +331,8 @@ To be able to compile the code, f...</description><pubDate>Fri, 20 Mar 2020 00:0
 
 &lt;p&gt;Part of this assignment is also covered on my final project's page.&lt;/p&gt;
 
-&lt;p&gt;&lt;a target="_blank" href="button:green-observatory-input.html"&gt;The Green Observatory: Input&lt;/a&gt;&lt;/p&gt;
-...</description><pubDate>Mon, 02 Nov 2020 00:00:00 +0200</pubDate></item><item><title>Ultrasonic sensor HC-SR04</title><link>https://antoine.studio/input-devices-ultrasonic-sensor.html</link><description>&lt;p&gt;The ultrasonic sensor HC-SR04 provides 2Cm to 400cm of non-contact measurement functionality with a ranging accuracy that can reach up to 3mm. Here is its &lt;a target="_blank" href="https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf"&gt;datasheet&lt;/a&gt;. This sensor has 4 pins that we have to connect to our dev board.&lt;/p&gt;
+&lt;p&gt;&lt;a rel="noopener" target="_blank" href="button:green-observatory-input.html"&gt;The Green Observatory: Input&lt;/a&gt;&lt;/p&gt;
+...</description><pubDate>Mon, 02 Nov 2020 00:00:00 +0200</pubDate></item><item><title>Ultrasonic sensor HC-SR04</title><link>https://antoine.studio/input-devices-ultrasonic-sensor.html</link><description>&lt;p&gt;The ultrasonic sensor HC-SR04 provides 2Cm to 400cm of non-contact measurement functionality with a ranging accuracy that can reach up to 3mm. Here is its &lt;a rel="noopener" target="_blank" href="https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf"&gt;datasheet&lt;/a&gt;. This sensor has 4 pins that we have to connect to our dev board.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;5V supply&lt;/li&gt;
@@ -360,15 +347,14 @@ To be able to compile the code, f...</description><pubDate>Fri, 20 Mar 2020 00:0
 
 &lt;h2 id="connection"&gt;Connection&lt;/h2&gt;
 
-&lt;p&gt;The connection is quite simple, the &lt;code&gt;VCC&lt;/code&gt; goes to the &lt;code&gt;5V&lt;/code&gt;, the &lt;code&gt;GND&lt;...</description><pubDate>Thu, 26 Mar 2020 00:00:00 +0200</pubDate></item><item><title>Thermistor</title><link>https://antoine.studio/input-devices-thermistor.html</link><description>&lt;p&gt;Or how to measure temperature using a resistor.&lt;/p&gt;
+&lt;p&gt;The connection is quite simple, the &lt;code&gt;VCC&lt;/code&gt; goes to the &lt;code&gt;5V&lt;/code&gt;,...</description><pubDate>Thu, 26 Mar 2020 00:00:00 +0200</pubDate></item><item><title>Thermistor</title><link>https://antoine.studio/input-devices-thermistor.html</link><description>&lt;p&gt;Or how to measure temperature using a resistor.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;To measure the temperature, we need to measure the resistance. However, a microcontroller does not have a resistance-meter built in. Instead, it only has a voltage reader known as a analog-digital-converter. So what we have to do is convert the resistance into a voltage, and we will do that by adding another resistor and connecting them in series. Now you just measure the voltage in the middle, as the resistance changes, the voltage changes too, according to the simple voltage-divider equation. We just need to keep one resistor fixed&lt;/p&gt;
   
   &lt;blockquote&gt;
-    &lt;p&gt;Analog Voltage Reading Method, &lt;a target="_blank" href="https://learn.adafruit.com/thermistor/using-a-thermistor"&gt;Adafruit&lt;/a&gt;&lt;/p&gt;
-  &lt;/blockquote&gt;
-&lt;/blockquo...</description><pubDate>Fri, 27 Mar 2020 00:00:00 +0200</pubDate></item><item><title>Moisture level sensor</title><link>https://antoine.studio/input-devices-moisture-sensor.html</link><description>&lt;p&gt;Water is a conductive element, and the more water there is in the soil the more electricity can flow through it. So, in order to measure the soil moisture level, we can integrate it into an electrical circuit and measure the voltage. The more voltage in the circuit, the more water there is in the soil.&lt;/p&gt;
+    &lt;p&gt;Analog Voltage Reading Method, &lt;a rel="noopener" target="_blank" href="https://learn.adafruit.com/thermistor/using-a-thermistor"&gt;Adafruit&lt;/a&gt;&lt;/p&gt;
+  &lt;/blockqu...</description><pubDate>Fri, 27 Mar 2020 00:00:00 +0200</pubDate></item><item><title>Moisture level sensor</title><link>https://antoine.studio/input-devices-moisture-sensor.html</link><description>&lt;p&gt;Water is a conductive element, and the more water there is in the soil the more electricity can flow through it. So, in order to measure the soil moisture level, we can integrate it into an electrical circuit and measure the voltage. The more voltage in the circuit, the more water there is in the soil.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="moist-setup.jpg" alt="moist-setup" /&gt;&lt;/p&gt;
 
@@ -387,7 +373,7 @@ To be able to compile the code, f...</description><pubDate>Fri, 20 Mar 2020 00:0
 
 &lt;p&gt;I covered this topic on a different article.&lt;/p&gt;
 
-&lt;p&gt;&lt;a target="_blank" href="button:green-observatory-input.html"&gt;Sensing plants activity&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a rel="noopener" target="_blank" href="button:green-observatory-input.html"&gt;Sensing plants activity&lt;/a&gt;&lt;/p&gt;
 ...</description><pubDate>Tue, 15 Sep 2020 00:00:00 +0200</pubDate></item><item><title>Applications and implications</title><link>https://antoine.studio/applications-implications.html</link><description>&lt;h1 id="about-my-final-project"&gt;About my final project&lt;/h1&gt;
 
 &lt;p&gt;For this weeks's assignement, we were asked to answer a series of questions about our final project. I don't really know where I'm going with my project but I guess that's the point of this week: write some very practical facts and see where my main idea goes, and how far I can define it. Let's do that.&lt;/p&gt;
@@ -402,40 +388,39 @@ To be able to compile the code, f...</description><pubDate>Fri, 20 Mar 2020 00:0
 &lt;li&gt;Detect their electrical activity and deduce what their reactions are related to.&lt;/li&gt;
 &lt;li&gt;Using the data from their environment and deduce if th...</description><pubDate>Thu, 17 Sep 2020 00:00:00 +0200</pubDate></item><item><title>Output devices</title><link>https://antoine.studio/output-devices.html</link><description>&lt;p&gt;This week's assignement is about output devices: we are learning how to make various motors work, what are their mechanisms and principles, when and why use a specific one instead of another.&lt;/p&gt;
 
-&lt;p&gt;I'm going to lend a hand to &lt;a target="_blank" href="https://maudb.gitlab.io/dok/"&gt;Maud Bausier&lt;/a&gt;, my partner, who is building an incubator to grow mycelium or any fermented food (tempeh, sriracha, etc.). I think we could have enough material to finish a prototype at home (covid-19 restrictions).&lt;/p&gt;
+&lt;p&gt;I'm going to lend a hand to &lt;a rel="noopener" target="_blank" href="https://maudb.gitlab.io/dok/"&gt;Maud Bausier&lt;/a&gt;, my partner, who is building an incubator to grow mycelium or any fermented food (tempeh, sriracha, etc.). I think we could have enough material to finish a prototype at home (covid-19 restrictions).&lt;/p&gt;
 
-&lt;p&gt;The main challenges for the moment concern electronics, which consists of: a thermistor (to know the temperature inside the incubator), a Peltier (to heat it), a fan (to cool it), an LCD screen (to know what's going on) and two push buttons to set the desired temperature inside the incuba...</description><pubDate>Mon, 02 Nov 2020 00:00:00 +0200</pubDate></item><item><title>Prototyping an incubator</title><link>https://antoine.studio/output-devices-incubator.html</link><description>&lt;p&gt;As I said, my partner is building an incubator to help us grow mycellium (and other fermented food) and she asked me an hand to help her with the electronic part. In this context, I will prototype an incubator by using the devices I already have. I will do it by following the spiral methodology: a first round with the basic features, and then other ones with additional options.&lt;/p&gt;
+&lt;p&gt;The main challenges for the moment concern electronics, which consists of: a thermistor (to know the temperature inside the incubator), a Peltier (to heat it), a fan (to cool it), an LCD screen (to know what's going on) and two push buttons to set the desired temperature in...</description><pubDate>Mon, 02 Nov 2020 00:00:00 +0200</pubDate></item><item><title>Prototyping an incubator</title><link>https://antoine.studio/output-devices-incubator.html</link><description>&lt;p&gt;As I said, my partner is building an incubator to help us grow mycellium (and other fermented food) and she asked me an hand to help her with the electronic part. In this context, I will prototype an incubator by using the devices I already have. I will do it by following the spiral methodology: a first round with the basic features, and then other ones with additional options.&lt;/p&gt;
 
 &lt;h2 id="update-2020-11"&gt;Update 2020-11&lt;/h2&gt;
 
-&lt;p&gt;I have started a new project dedicated to the incubator and the sub-projects it brings. Everything is documented under &lt;a target="_blank" href="incubator-v0-1.html"&gt;incubator-v0-1.html&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I have started a new project dedicated to the incubator and the sub-projects it brings. Everything is documented under &lt;a rel="noopener" target="_blank" href="incubator-v0-1.html"&gt;incubator-v0-1.html&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="incubator-shield.jpg" alt="" /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a target="_blank" href="button:incubator-v0-1.html"&gt;Incubator&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a rel="noopener" target="_blank" href="button:incubator-v0-1.html"&gt;Incubator&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id="round-01-the-basics"&gt;Round #01: the...</description><pubDate>Thu, 16 Apr 2020 00:00:00 +0200</pubDate></item><item><title>Interface application programming</title><link>https://antoine.studio/interface-application-programming.html</link><description>&lt;p&gt;This week is devoted to programming interfaces and applications, a subject that I really like. I would not say that I am a good programmer, I have little experience. But it's something I love to do: solve logic problems, create software that produces the result I want (or the result I didn't expect, because I also find unexpected things beautiful).&lt;/p&gt;
+&lt;h2 id="round...</description><pubDate>Thu, 16 Apr 2020 00:00:00 +0200</pubDate></item><item><title>Interface application programming</title><link>https://antoine.studio/interface-application-programming.html</link><description>&lt;p&gt;This week is devoted to programming interfaces and applications, a subject that I really like. I would not say that I am a good programmer, I have little experience. But it's something I love to do: solve logic problems, create software that produces the result I want (or the result I didn't expect, because I also find unexpected things beautiful).&lt;/p&gt;
 
-&lt;p&gt;I'm going to use &lt;a target="_blank" href="https://openframeworks.cc/"&gt;openFrameworks&lt;/a&gt; to create an interactive audio and visual piece, a kind of experimental musical instrument that reacts to its environment.&lt;/p&gt;
+&lt;p&gt;I'm going to use &lt;a rel="noopener" target="_blank" href="https://openframeworks.cc/"&gt;openFrameworks&lt;/a&gt; to create an interactive audio and visual piece, a kind of experimental musical instrument that reacts to its environment.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;Part of this assignment is also covered with the &lt;a target="_blank" href="incubator-v0-1.html"&gt;Incubator&lt;/a&gt; project.&lt;/p&gt;
+&lt;p&gt;Part of this assignment is also covered with the &lt;a rel="noopener" target="_blank" href="incubator-v0-1.html"&gt;Incubator&lt;/a&gt; project.&lt;/p&gt;
 
-&lt;p&gt;&lt;a target="_blank" href="button:incubator-v0-1.html"&gt;Incubator v0.1&lt;/a&gt;&lt;/p&gt;
-...</description><pubDate>Wed, 22 Apr 2020 00:00:00 +0200</pubDate></item><item><title>My coding journey</title><link>https://antoine.studio/interface-application-programming-my-coding-journey.html</link><description>&lt;h1 id="processing-java-javascript"&gt;Processing (Java / Javascript)&lt;/h1&gt;
+&lt;p&gt;&lt;a rel="noopener" target="_blank" href="button:incubat...</description><pubDate>Wed, 22 Apr 2020 00:00:00 +0200</pubDate></item><item><title>My coding journey</title><link>https://antoine.studio/interface-application-programming-my-coding-journey.html</link><description>&lt;h1 id="processing-java-javascript"&gt;Processing (Java / Javascript)&lt;/h1&gt;
 
-&lt;p&gt;In art school, I had two years of digital art workshops. The main tool we used in this class was &lt;a target="_blank" href="https://processing.org/"&gt;Processing&lt;/a&gt;. And it was so refreshing. Being able to produce an artistic installation with algorithms was something I was looking for. But it was also the rise of another movement: Internet culture. This quickly made me drop Processing for its javascript version, &lt;a target="_blank" href="https://p5js.org/"&gt;p5js&lt;/a&gt; and html/css, in order to create websites. It was not really good, Processing (p5js) is not so exciting when it is stuck in a browser. But the mix of graphic design and coding was definitely the right direction for me. I had the insight I needed with Proces...</description><pubDate>Thu, 23 Apr 2020 00:00:00 +0200</pubDate></item><item><title>My first openFrameworks application</title><link>https://antoine.studio/interface-application-programming-first-of-application.html</link><description>&lt;p&gt;For my first openFrameworks application, I would like to get sensor data and convert it to an interactive visual and audio piece. I'm going to use the &lt;a target="_blank" href="https://learn.adafruit.com/adafruit-circuit-playground-express/overview"&gt;Circuit Playground Express&lt;/a&gt; and its multiple integrated sensors and buttons to help me quickly prototype my idea.&lt;/p&gt;
+&lt;p&gt;In art school, I had two years of digital art workshops. The main tool we used in this class was &lt;a rel="noopener" target="_blank" href="https://processing.org/"&gt;Processing&lt;/a&gt;. And it was so refreshing. Being able to produce an artistic installation with algorithms was something I was looking for. But it was also the rise of another movement: Internet culture. This quickly made me drop Processing for its javascript version, &lt;a rel="noopener" target="_blank" href="https://p5js.org/"&gt;p5js&lt;/a&gt; and html/css, in order to create websites. It was not really good, Processing (p5js) is not so exciting when it is stuck in a browser. But the mix of graphic design and coding was definitely the right direction for me. I had th...</description><pubDate>Thu, 23 Apr 2020 00:00:00 +0200</pubDate></item><item><title>My first openFrameworks application</title><link>https://antoine.studio/interface-application-programming-first-of-application.html</link><description>&lt;p&gt;For my first openFrameworks application, I would like to get sensor data and convert it to an interactive visual and audio piece. I'm going to use the &lt;a rel="noopener" target="_blank" href="https://learn.adafruit.com/adafruit-circuit-playground-express/overview"&gt;Circuit Playground Express&lt;/a&gt; and its multiple integrated sensors and buttons to help me quickly prototype my idea.&lt;/p&gt;
 
 &lt;h1 id="installation"&gt;Installation&lt;/h1&gt;
 
-&lt;p&gt;I first had to install openFrameworks on my machine. Speaking of my machine, I switched from &lt;a target="_blank" href="https://elementary.io/"&gt;Elementary OS&lt;/a&gt; to &lt;a target="_blank" href="https://manjaro.org/"&gt;Manjaro&lt;/a&gt; two three weeks ago. I no longer depend on the &lt;a target="_blank" href="https://en.wikipedia.org/wiki/APT_(software)"&gt;APT&lt;/a&gt; package manager (Advanced Package ...</description><pubDate>Fri, 24 Apr 2020 00:00:00 +0200</pubDate></item><item><title>Invention, intellectual property, and income</title><link>https://antoine.studio/invention.html</link><description>&lt;p&gt;For the week's assignment, I was asked to develop a dissemination plan for my final project. I'll try to explain my vision for open-source hardware and software, and why I find them absolutely necessary.&lt;/p&gt;
+&lt;p&gt;I first had to install openFrameworks on my machine. Speaking of my machine, I switched from &lt;a rel="noopener" target="_blank" href="https://elementary.io/"&gt;Elementary OS&lt;/a&gt; to &lt;a rel="noopener" target="_blank" href="https://manjaro.org/"&gt;Manjaro&lt;/a&gt; two three weeks ago. I no longer depend on the &lt;a rel="noopener" target="_blank" href="https://en.wikipedia.org/wik...</description><pubDate>Fri, 24 Apr 2020 00:00:00 +0200</pubDate></item><item><title>Invention, intellectual property, and income</title><link>https://antoine.studio/invention.html</link><description>&lt;p&gt;For the week's assignment, I was asked to develop a dissemination plan for my final project. I'll try to explain my vision for open-source hardware and software, and why I find them absolutely necessary.&lt;/p&gt;
 
 &lt;h1 id="grow-an-audience"&gt;Grow an audience&lt;/h1&gt;
 
 &lt;p&gt;I think one of the characteristics of a good project is that it spreads by itself. Explaining your project to your peers will allow them, if they find it as interesting as you think it is, to spread it into their circle. This will indirectly expand your audience.&lt;/p&gt;
 
-&lt;p&gt;If your local audience isn't responsive to your project, find another place to talk about it. Internet is filled with tiny niches that could extend your message. &lt;a target="_blank" href="https://joinmastodon.org/"&gt;Mastodon&lt;/a&gt;, for example, is a decentralized soci...</description><pubDate>Fri, 18 Sep 2020 00:00:00 +0200</pubDate></item><item><title>Networking and communications</title><link>https://antoine.studio/networking-communications.html</link><description>&lt;p&gt;For this week's assignment, I will connect two &lt;a target="_blank" href="http://esp8266.net"&gt;ESP8266&lt;/a&gt; / &lt;a target="_blank" href="https://www.nodemcu.com/index_en.html"&gt;NodeMCU&lt;/a&gt; together on the WiFi network and exchange data between them.&lt;/p&gt;
+&lt;p&gt;If your local audience isn't responsive to your project, find another place to talk about it. Internet is filled with tiny niches that could extend your message. &lt;a rel="noopener" target="_blank" href="https://joinmastodon.org/"&gt;Mastodon&lt;/a&gt;, for example, is a dec...</description><pubDate>Fri, 18 Sep 2020 00:00:00 +0200</pubDate></item><item><title>Networking and communications</title><link>https://antoine.studio/networking-communications.html</link><description>&lt;p&gt;For this week's assignment, I will connect two &lt;a rel="noopener" target="_blank" href="http://esp8266.net"&gt;ESP8266&lt;/a&gt; / &lt;a rel="noopener" target="_blank" href="https://www.nodemcu.com/index_en.html"&gt;NodeMCU&lt;/a&gt; together on the WiFi network and exchange data between them.&lt;/p&gt;
 
 &lt;p&gt;Understanding the basics of networking and how communication between devices works will be highly beneficial for my final project.&lt;/p&gt;
 
@@ -445,10 +430,10 @@ To be able to compile the code, f...</description><pubDate>Fri, 20 Mar 2020 00:0
 
 &lt;h1 id="hardware"&gt;Hardware&lt;/h1&gt;
 
-&lt;p&gt;I'm using two &lt;a target="_blank" href="https://www.nodem...</description><pubDate>Wed, 06 May 2020 00:00:00 +0200</pubDate></item><item><title>Molding and casting</title><link>https://antoine.studio/molding-casting.html</link><description>&lt;p&gt;For this week's assignment, I will design and mill a two-sided mold to make multiple oloids using the &lt;em&gt;molding and casting&lt;/em&gt; technique. As part of the group assignment, I will explore various materials, which unfortunately I cannot do as a group due to this strange period of the COVID-19 pandemic.&lt;/p&gt;
+&lt;p&gt;I'm using two &lt;a rel="noop...</description><pubDate>Wed, 06 May 2020 00:00:00 +0200</pubDate></item><item><title>Molding and casting</title><link>https://antoine.studio/molding-casting.html</link><description>&lt;p&gt;For this week's assignment, I will design and mill a two-sided mold to make multiple oloids using the &lt;em&gt;molding and casting&lt;/em&gt; technique. As part of the group assignment, I will explore various materials, which unfortunately I cannot do as a group due to this strange period of the COVID-19 pandemic.&lt;/p&gt;
 ...</description><pubDate>Wed, 13 May 2020 00:00:00 +0200</pubDate></item><item><title>Multiple oloids</title><link>https://antoine.studio/molding-casting-multiple-oloids.html</link><description>&lt;p&gt;&lt;img src="oloid-model.png:flux" alt="" /&gt;&lt;/p&gt;
 
-&lt;p&gt;Remember the oloid I printed during the &lt;a target="_blank" href="3D-scanning-printing-oloid-shape.html"&gt;3D printing&lt;/a&gt; week?
+&lt;p&gt;Remember the oloid I printed during the &lt;a rel="noopener" target="_blank" href="3D-scanning-printing-oloid-shape.html"&gt;3D printing&lt;/a&gt; week?
 For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold an oloid and to cast it in the variety of materials that we have here, in Fab Lab Barcelona.&lt;/p&gt;
 
 &lt;h1 id="mold-design"&gt;Mold design&lt;/h1&gt;
@@ -463,18 +448,18 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 
 &lt;p&gt;I'll use the oloid model I already did as a starting point.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="mold...</description><pubDate>Tue, 06 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Wildcard</title><link>https://antoine.studio/wildcard.html</link><description>&lt;p&gt;For this week's assignement, we were asked to design and produce something with a digital fabrication process that is not covered by any other assignment.&lt;/p&gt;
+&lt;p...</description><pubDate>Tue, 06 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Wildcard</title><link>https://antoine.studio/wildcard.html</link><description>&lt;p&gt;For this week's assignement, we were asked to design and produce something with a digital fabrication process that is not covered by any other assignment.&lt;/p&gt;
 
 &lt;p&gt;I decided to present the fabrication of an inflatable part. This was documented as part of my final project. You can find its content on the page dedicated to it.&lt;/p&gt;
 
-&lt;p&gt;&lt;a target="_blank" href="button:green-observatory-inflatable.html"&gt;Making of the inflatable part&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a rel="noopener" target="_blank" href="button:green-observatory-inflatable.html"&gt;Making of the inflatable part&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="inflatable-result.jpg" alt="" /&gt;&lt;/p&gt;
 ...</description><pubDate>Wed, 07 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Machine design</title><link>https://antoine.studio/machine-design.html</link><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
 
-&lt;p&gt;For the Machine Design week at the Fab Academy, we were asked to make a machine of any type, but one that we could operate and automate. I teamed up with &lt;a target="_blank" href="https://fabacademy.org/2020/labs/barcelona/students/benjamin-scott/"&gt;Benjamin Scott&lt;/a&gt; and we decided to go for a machine that plays Pong again itself. We call it the &lt;em&gt;Pong Machine&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;For the Machine Design week at the Fab Academy, we were asked to make a machine of any type, but one that we could operate and automate. I teamed up with &lt;a rel="noopener" target="_blank" href="https://fabacademy.org/2020/labs/barcelona/students/benjamin-scott/"&gt;Benjamin Scott&lt;/a&gt; and we decided to go for a machine that plays Pong again itself. We call it the &lt;em&gt;Pong Machine&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;First of all, we had to find out how to make the machine we had in mind, which was not easy when we launched this project in June 2020, towards the official end of the Academy. A few months later, as the Covid-19 crisis subsides, we have a better understanding of the tools we have in the lab, how the mechanics work, what we have to produce by ourselves and what we can take fr...</description><pubDate>Tue, 10 Nov 2020 00:00:00 +0200</pubDate></item><item><title>Making the field</title><link>https://antoine.studio/machine-design-making-the-field.html</link><description>&lt;h1 id="mounting-plate"&gt;Mounting plate&lt;/h1&gt;
+&lt;p&gt;First of all, we had to find out how to make the machine we had in mind, which was not easy when we launched this project in June 2020, towards the official end of the Academy. A few months later, as the Covid-19 crisis subsides, we have a better understanding of the tools we have in the lab, how the mechanics work, what we have to produce by ourselves and what...</description><pubDate>Tue, 10 Nov 2020 00:00:00 +0200</pubDate></item><item><title>Making the field</title><link>https://antoine.studio/machine-design-making-the-field.html</link><description>&lt;h1 id="mounting-plate"&gt;Mounting plate&lt;/h1&gt;
 
 &lt;p&gt;I designed and laser-cut a mounting plate made of acrylic (&lt;code&gt;10 mm&lt;/code&gt;) with the imprints of our elements (NEMA17 stepper motor and solenoid) in order to be able to fix our elements to the structure, and thus make it move when the stepper motor is actuated.&lt;/p&gt;
 
@@ -511,17 +496,17 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 
 &lt;p&gt;This project wouldn't have been possible without the precious help of my Fab Academy instructors,...</description><pubDate>Mon, 15 Jun 2020 00:00:00 +0200</pubDate></item><item><title>Electronics: Input</title><link>https://antoine.studio/green-observatory-input.html</link><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
 
-&lt;p&gt;An electronic board (low power, 5V) that receives signals from a plant via electrodes placed on its leaves and sends instructions to &lt;a target="_blank" href="green-observatory-output.html"&gt;another board&lt;/a&gt; dedicated to the outputs (low power, 12 V). Calculations are performed by a ATmega 16-U2 microchip. The data can be read on a computer via USB.&lt;/p&gt;
+&lt;p&gt;An electronic board (low power, 5V) that receives signals from a plant via electrodes placed on its leaves and sends instructions to &lt;a rel="noopener" target="_blank" href="green-observatory-output.html"&gt;another board&lt;/a&gt; dedicated to the outputs (low power, 12 V). Calculations are performed by a ATmega 16-U2 microchip. The data can be read on a computer via USB.&lt;/p&gt;
 
 &lt;h2 id="research"&gt;Research&lt;/h2&gt;
 
 &lt;p&gt;I have previously researched and created a prototype of what could be an easy setup to (try) listen to the electrical activity of plants. I did this using an Arduino Uno and a 555 IC timer on a breadboard. You can read more on the page dedicated to this topic.&lt;/p&gt;
 
-&lt;p&gt;&lt;a target="_blank" href="button:final-project-research-input-plant-activity.html"&gt;Research / Se...</description><pubDate>Mon, 12 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Electronics: Output</title><link>https://antoine.studio/green-observatory-output.html</link><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;&lt;a rel="noopener" target="_blank" href="button:final-project-research-input-plan...</description><pubDate>Mon, 12 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Electronics: Output</title><link>https://antoine.studio/green-observatory-output.html</link><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
 
-&lt;p&gt;An electronic board that receives signals from &lt;a target="_blank" href="green-observatory-input.html"&gt;an input&lt;/a&gt; and controls an air fhigh using an air pump and four solenoids.&lt;/p&gt;
+&lt;p&gt;An electronic board that receives signals from &lt;a rel="noopener" target="_blank" href="green-observatory-input.html"&gt;an input&lt;/a&gt; and controls an air fhigh using an air pump and four solenoids.&lt;/p&gt;
 
-&lt;p&gt;Note that this project is inspired by &lt;a target="_blank" href="https://www.programmableair.com/"&gt;Programmable Air&lt;/a&gt;, I simplified it by using one pump instead of two. Once again, thanks to open-source :)&lt;/p&gt;
+&lt;p&gt;Note that this project is inspired by &lt;a rel="noopener" target="_blank" href="https://www.programmableair.com/"&gt;Programmable Air&lt;/a&gt;, I simplified it by using one pump instead of two. Once again, thanks to open-source :)&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="schema.jpg" alt="First sketch" /&gt;&lt;/p&gt;
 
@@ -529,7 +514,7 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 
 &lt;h2 id="air-pump"&gt;Air pump&lt;/h2&gt;
 
-&lt;p&gt;The &lt;a target="_blank" href="https://www.sparkfun.com/products/10398"&gt;air pump&lt;/a&gt; operates at 12V and has sufficient suction for my project. The only drawback is that it is very noisy. It will not pro...</description><pubDate>Mon, 12 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Making of the inflatable part</title><link>https://antoine.studio/green-observatory-inflatable.html</link><description>&lt;p&gt;An important part of my final project is the inflatable part, which will help us understand the electrical activity of plants. This part should produce organic movements that react to a flow of air.&lt;/p&gt;
+&lt;p&gt;The &lt;a rel="noopener" target="_blank" href="https://www.sparkfun.com/products/10398"&gt;air pump&lt;/a&gt; operates at 12V and has sufficient suction for my project. The only drawb...</description><pubDate>Mon, 12 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Making of the inflatable part</title><link>https://antoine.studio/green-observatory-inflatable.html</link><description>&lt;p&gt;An important part of my final project is the inflatable part, which will help us understand the electrical activity of plants. This part should produce organic movements that react to a flow of air.&lt;/p&gt;
 
 &lt;p&gt;So I have to produce a silicone part that has an air pocket inside that could be inflated and deflated by pushing and pulling a flow of air inside through two pipes (in and out).&lt;/p&gt;
 
@@ -538,7 +523,7 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 &lt;p&gt;The strategy that Eduardo Chamorro (one of my instructors) and I came up with is to build a mold using a piece of laser-cut acrylic to cast a first layer of silicon and then redo another layer while inserting another piece of acrylic that will allow us to preserve an air pocket inside the cast silicon piece.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Design a structure that can be lasercutted&lt;/li...</description><pubDate>Wed, 07 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Making of the structure</title><link>https://antoine.studio/green-observatory-structure.html</link><description>&lt;p&gt;The structure was designed with &lt;a target="_blank" href="https://www.freecadweb.org/"&gt;Freecad&lt;/a&gt; and made to be milled with a CNC machine on a 9mm thick plywood panel. The upper disk supports the inflatable part and the lower disk supports the electronics. A 3D printed part ensures the desired angle of the structure.&lt;/p&gt;
+&lt;li&gt;Design a structure that can be lasercutted&lt;/li...</description><pubDate>Wed, 07 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Making of the structure</title><link>https://antoine.studio/green-observatory-structure.html</link><description>&lt;p&gt;The structure was designed with &lt;a rel="noopener" target="_blank" href="https://www.freecadweb.org/"&gt;Freecad&lt;/a&gt; and made to be milled with a CNC machine on a 9mm thick plywood panel. The upper disk supports the inflatable part and the lower disk supports the electronics. A 3D printed part ensures the desired angle of the structure.&lt;/p&gt;
 
 &lt;h1 id="design"&gt;Design&lt;/h1&gt;
 
@@ -552,13 +537,13 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 
 &lt;p&gt;&lt;img src="design-07.png" alt="Small angle" /&gt;
 &lt;img src="small:design-08.png" alt="" /&gt;
-&lt;img src="small:des...</description><pubDate>Sun, 18 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Incubator v0.1</title><link>https://antoine.studio/incubator-v0-1.html</link><description>&lt;p&gt;Together with my partner &lt;a target="_blank" href="https://maudb.gitlab.io/dok/"&gt;Maud Bausier&lt;/a&gt;, we are making an incubator.&lt;/p&gt;
+&lt;img...</description><pubDate>Sun, 18 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Incubator v0.1</title><link>https://antoine.studio/incubator-v0-1.html</link><description>&lt;p&gt;Together with my partner &lt;a rel="noopener" target="_blank" href="https://maudb.gitlab.io/dok/"&gt;Maud Bausier&lt;/a&gt;, we are making an incubator.&lt;/p&gt;
 
 &lt;p&gt;As vegans, tempeh (fermeted food in general) is an important part of our diet. It is full of proteins, macrobiotics and it is delicious.&lt;/p&gt;
 
 &lt;p&gt;We started producing our own tempeh when we lived in Amsterdam, where we had a small room dedicated to a boiler, ensuring a constant temperature all year round. But that changed when we moved to Barcelona, where the temperature in the flat is practically the same as the outside temperature, because the windows are almost always open, which involves temperature variations that prevent us from producing the tempeh we love.&lt;/p&gt;
 
-&lt;p&gt;That's why we are making an incubator, called &lt;em&gt;Tempeh Machine&lt;/em&gt;, to help us fer...</description><pubDate>Tue, 03 Nov 2020 00:00:00 +0200</pubDate></item><item><title>Electronics</title><link>https://antoine.studio/incubator-v0-1-electronics.html</link><description>&lt;p&gt;The electronic part of the incubator must remain as simple as possible, to offer the possibility of being understood and modified by others. I don't want to lock the users in a device they don't understand.&lt;/p&gt;
+&lt;p&gt;That's why we are making an incubator, called &lt;em&gt;Tempeh Machine&lt;/em&gt;,...</description><pubDate>Tue, 03 Nov 2020 00:00:00 +0200</pubDate></item><item><title>Electronics</title><link>https://antoine.studio/incubator-v0-1-electronics.html</link><description>&lt;p&gt;The electronic part of the incubator must remain as simple as possible, to offer the possibility of being understood and modified by others. I don't want to lock the users in a device they don't understand.&lt;/p&gt;
 
 &lt;p&gt;It is built as an extra board that comes with a Barduino, allowing it to operate with two 12V outputs and one 5V input.&lt;/p&gt;
 
@@ -566,7 +551,7 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 
 &lt;h2 id="barduino"&gt;Barduino&lt;/h2&gt;
 
-&lt;p&gt;A &lt;a target="_blank" href="https://gitlab.com/fablabbcn-projects/electronics/barduino"&gt;Barduino&lt;/a&gt;, an ESP32 development board made in Barcelona, is used as the brain. This allows me to use a Wifi compatible board with a functional USB connection without having to do it (again) by myself. Moreover, it allows me to design a shield (something I've never done before) and to participa...</description><pubDate>Mon, 09 Nov 2020 00:00:00 +0200</pubDate></item><item><title>Interface example</title><link>https://antoine.studio/incubator-v0-1-interface-example.html</link><description>&lt;p&gt;To make sure I understand how a web interface is made via an ESP32, I started with a very basic example. The only thing this minimal example will do is to light on and off the RGB LED connected to the Barduino (ESP32) through the incubator shield I designed via a web interface accessible from any browser (desktop and mobile).&lt;/p&gt;
+&lt;p&gt;A &lt;a rel="noopener" target="_blank" href="https://gitlab.com/fablabbcn-projects/electronics/barduino"&gt;Barduino&lt;/a&gt;, an ESP32 development board made in Barcelona, is used as the brain. This allows me to use a Wifi compatible board with a functional USB connection without having to do it (again) by myself. Moreover, it allows me to design a shield (something I've never done before) a...</description><pubDate>Mon, 09 Nov 2020 00:00:00 +0200</pubDate></item><item><title>Interface example</title><link>https://antoine.studio/incubator-v0-1-interface-example.html</link><description>&lt;p&gt;To make sure I understand how a web interface is made via an ESP32, I started with a very basic example. The only thing this minimal example will do is to light on and off the RGB LED connected to the Barduino (ESP32) through the incubator shield I designed via a web interface accessible from any browser (desktop and mobile).&lt;/p&gt;
 
 &lt;p&gt;&lt;video&gt;&lt;source src="esp-interface-minimal.mp4"&gt;&lt;/video&gt;
 &lt;img src="small:interface-screenshot.png" alt="very very minimal" /&gt;&lt;/p&gt;
@@ -584,14 +569,14 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 &lt;/pre&gt;
 
 &lt;h3 id="w...</description><pubDate>Tue, 10 Nov 2020 00:00:00 +0200</pubDate></item><item><title>Interface</title><link>https://antoine.studio/incubator-v0-1-interface.html</link><description>&lt;p&gt;I decided to go screenless for this project, and to use the screen that we already have in our pocket: the one from our phone. This choice is motivated by the resource I have at my disposal. Ideally, in the next version, I would add a tiny screen to make the incubator totally independent of other technologies. I don't want to force the use of a smartphone (because I would like to stop using mine).&lt;/p&gt;
-...</description><pubDate>Thu, 12 Nov 2020 00:00:00 +0200</pubDate></item><item><title>Incubator v0.2</title><link>https://antoine.studio/incubator-v0-2.html</link><description>&lt;p&gt;As my &lt;a target="_blank" href="incubator-v0-1.html"&gt;version 0.1&lt;/a&gt; was not working as expected, I quickly moved on an another version, the 0.2. In this version, I redesigned the electronics and made a case for it, I made a small web interface to control and modify the temperature inside the incubator and finally did some tempeh!&lt;/p&gt;
-...</description><pubDate>Wed, 25 Nov 2020 00:00:00 +0200</pubDate></item><item><title>Electronics</title><link>https://antoine.studio/incubator-v0-2-electronics.html</link><description>&lt;p&gt;This is the continuation of &lt;a target="_blank" href="incubator-v0-1-electronics.html"&gt;the electronics of the v0.1&lt;/a&gt;.&lt;/p&gt;
+...</description><pubDate>Thu, 12 Nov 2020 00:00:00 +0200</pubDate></item><item><title>Incubator v0.2</title><link>https://antoine.studio/incubator-v0-2.html</link><description>&lt;p&gt;As my &lt;a rel="noopener" target="_blank" href="incubator-v0-1.html"&gt;version 0.1&lt;/a&gt; was not working as expected, I quickly moved on an another version, the 0.2. In this version, I redesigned the electronics and made a case for it, I made a small web interface to control and modify the temperature inside the incubator and finally did some tempeh!&lt;/p&gt;
+...</description><pubDate>Wed, 25 Nov 2020 00:00:00 +0200</pubDate></item><item><title>Electronics</title><link>https://antoine.studio/incubator-v0-2-electronics.html</link><description>&lt;p&gt;This is the continuation of &lt;a rel="noopener" target="_blank" href="incubator-v0-1-electronics.html"&gt;the electronics of the v0.1&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;In the previous version I had some problems with the ESP32 pins I was using. The one I had chosen for the heating pad could not be used as an output and the one I had chosen for the DHT11 sensor could not read values for any reason. I found out which pins to use after a session of testing all the pins and whether or not they could meet my needs.&lt;/p&gt;
 
 &lt;p&gt;Also, during my tests, I realised that the DHT11 sensor doesn't really need 5V to work, even though I thought it would be better/safe to use it this way. This means that I can remove some components from the PCB (the level shifter that converted 3.3V to 5V), which simplified the PCB design.&lt;/p&gt;
 
-&lt;h1 id="schematic...</description><pubDate>Sun, 22 Nov 2020 00:00:00 +0200</pubDate></item><item><title>A case for the electronics</title><link>https://antoine.studio/incubator-v0-2-case-for-electronics.html</link><description>&lt;p&gt;Now that the &lt;a target="_blank" href="incubator-v0-2-electronics.html"&gt;electronics&lt;/a&gt; is working, I need to protect it a little to avoid mishandling that could damage it. To do this, I will design a case which will then be printed in 3D.&lt;/p&gt;
+&lt;h...</description><pubDate>Sun, 22 Nov 2020 00:00:00 +0200</pubDate></item><item><title>A case for the electronics</title><link>https://antoine.studio/incubator-v0-2-case-for-electronics.html</link><description>&lt;p&gt;Now that the &lt;a rel="noopener" target="_blank" href="incubator-v0-2-electronics.html"&gt;electronics&lt;/a&gt; is working, I need to protect it a little to avoid mishandling that could damage it. To do this, I will design a case which will then be printed in 3D.&lt;/p&gt;
 
 &lt;h1 id="design"&gt;Design&lt;/h1&gt;
 
@@ -610,7 +595,7 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 &lt;li&gt;ESP32 antenna&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id="a-way-to-f...</description><pubDate>Mon, 23 Nov 2020 00:00:00 +0200</pubDate></item><item><title>Web interface</title><link>https://antoine.studio/incubator-v0-2-web-interface.html</link><description>&lt;p&gt;TODO: Everything :)&lt;/p&gt;
+&lt;h2...</description><pubDate>Mon, 23 Nov 2020 00:00:00 +0200</pubDate></item><item><title>Web interface</title><link>https://antoine.studio/incubator-v0-2-web-interface.html</link><description>&lt;p&gt;TODO: Everything :)&lt;/p&gt;
 ...</description><pubDate>Tue, 24 Nov 2020 00:00:00 +0200</pubDate></item><item><title>Our first tempeh</title><link>https://antoine.studio/incubator-v0-2-first-tempeh.html</link><description>&lt;p&gt;TODO: Everything :)&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="large:yummy.jpg" alt="" /&gt;&lt;/p&gt;
@@ -624,10 +609,43 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 &lt;img src="grow-light-03.jpg" alt="" /&gt;
 &lt;img src="grow-light-04.jpg" alt="" /&gt;
 &lt;img src="grow-light-05.jpg" alt="" /&gt;&lt;/p&gt;
-...</description><pubDate>Fri, 11 Dec 2020 00:00:00 +0200</pubDate></item><item><title>Tempeh collection</title><link>https://antoine.studio/tempeh-collection.html</link><description>&lt;p&gt;Collection of tempeh made with our &lt;a target="_blank" href="incubator-v0-2.html"&gt;incubator&lt;/a&gt;.&lt;/p&gt;
+...</description><pubDate>Fri, 11 Dec 2020 00:00:00 +0200</pubDate></item><item><title>Tempeh collection</title><link>https://antoine.studio/tempeh-collection.html</link><description>&lt;p&gt;Collection of tempeh made with our &lt;a rel="noopener" target="_blank" href="incubator-v0-2.html"&gt;incubator&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="small:tempeh-01.jpg" alt="Chickpeas, red and green beans" /&gt;
 &lt;img src="small:tempeh-02.jpg" alt="Chickpeas, red and green beans" /&gt;
 &lt;img src="small:tempeh-03.jpg:flux" alt="Chickpeas" /&gt;
 &lt;img src="small:tempeh-04.jpg" alt="Soy beans, adzuki beans" /&gt;&lt;/p&gt;
-...</description><pubDate>Sun, 13 Dec 2020 00:00:00 +0200</pubDate></item></channel></rss>
+...</description><pubDate>Sun, 13 Dec 2020 00:00:00 +0200</pubDate></item><item><title>Terminal</title><link>https://antoine.studio/terminal.html</link><description>&lt;p&gt;Notes about different tools I use in the terminal.&lt;/p&gt;
+...</description><pubDate>Sun, 03 Jan 2021 00:00:00 +0200</pubDate></item><item><title>Kitty terminal</title><link>https://antoine.studio/terminal-kitty.html</link><description>&lt;ul&gt;
+&lt;li&gt;configuration file &lt;code&gt;.config/kitty/kitty.conf&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;open kitty terminal &lt;code&gt;ctrl + 1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;new window &lt;code&gt;F5&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;change window &lt;code&gt;left top right bottom (cursor)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;resize window &lt;code&gt;shift + cmd + r&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;open a new tab &lt;code&gt;shift + cmd + t&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;go to next tab &lt;code&gt;shift + cmd + -&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;go to previous tab &lt;code&gt;shift + cmd + &amp;lt;-&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;new&lt;/li&gt;
+&lt;/ul&gt;
+...</description><pubDate>Fri, 03 Jan 2020 00:00:00 +0200</pubDate></item><item><title>Vim</title><link>https://antoine.studio/terminal-vim.html</link><description>&lt;p&gt;leader key &lt;code&gt;,&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;move &lt;code&gt;h j k l&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;visual mode &lt;code&gt;v&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;normal mode &lt;code&gt;esc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;insert before the cursor &lt;code&gt;i&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;insert after the cursor &lt;code&gt;a&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;insert at the end of the line &lt;code&gt;A&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;begin a new line below the cursor and insert &lt;code&gt;o&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;begin a new line above the cursor and insert &lt;code&gt;O&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;copy &lt;code&gt;y&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;cut &lt;code&gt;d&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;paste &lt;code&gt;p&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;paste above &lt;code&gt;P&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;replace &lt;code&gt;r&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;undo &lt;code&gt;u&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;redo &lt;code&gt;ctrl + r&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;undo all changes on the line &lt;code&gt;U&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;delete text &lt;code&gt;d&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;delete line &lt;code&gt;dd&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;delete text (...</description><pubDate>Sun, 03 Jan 2021 00:00:00 +0200</pubDate></item></channel></rss>

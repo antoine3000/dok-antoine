@@ -82,10 +82,10 @@
 <h3 class="toc__title--sub"><a href="embedded-programming.html#embedded-programming-arduino-ide">Arduino IDE</a></h3>
 </section>
 <section class="article__content ts">
-<p>Two weeks ago, I designed a pomodoro timer during the <a href="fabac-assignments-electronics-design.html" target="_blank">Electronics design</a> week. It's now time to program it. I'm going to write the piece of code that will light my LEDs as time goes by and find a way to send it to the ATtiny1614 chip. I'm going to focus on the latter: how to send a program (= program) a chip. Well, that was the plan.</p>
+<p>Two weeks ago, I designed a pomodoro timer during the <a href="fabac-assignments-electronics-design.html" rel="noopener" target="_blank">Electronics design</a> week. It's now time to program it. I'm going to write the piece of code that will light my LEDs as time goes by and find a way to send it to the ATtiny1614 chip. I'm going to focus on the latter: how to send a program (= program) a chip. Well, that was the plan.</p>
 <p>Unfortunately, in the meantime, the coronavirus has hit Spain (and the whole world). We are now all in quarantine, with no access to the lab. I will have to work from home, with the equipment I already have, nothing more.</p>
 <figure class="md"><img alt="pomo-circuit-playground" src="medias/embedded-programming-pomo-circuit-playground.jpeg"><figcaption>pomo-circuit-playground</figcaption></figure>
-<p>For this reason, I'm going to use a <a href="https://www.adafruit.com/product/3333" target="_blank">Circuit Playground Express</a>. This tiny board is already equipped with 10 mini NeoPixels, 1 motion sensor, 1 temperature sensor, 1 sound sensor, 1 mini speaker, 2 push buttons, 1 slide switch, infrared receiver and transmitter and 8 alligator-clip friendly input/output pins. It's a perfect board for quick prototyping and code experiments.</p>
+<p>For this reason, I'm going to use a <a href="https://www.adafruit.com/product/3333" rel="noopener" target="_blank">Circuit Playground Express</a>. This tiny board is already equipped with 10 mini NeoPixels, 1 motion sensor, 1 temperature sensor, 1 sound sensor, 1 mini speaker, 2 push buttons, 1 slide switch, infrared receiver and transmitter and 8 alligator-clip friendly input/output pins. It's a perfect board for quick prototyping and code experiments.</p>
 </section>
 <footer>
 <p>✎ <span>Created</span> 18/03/2020</p>
@@ -214,7 +214,7 @@ void loop() {
 <!-- content -->
 <section class="article__content ts">
 <p>Reading a datasheet isn't the easiest thing to do. It is full of technical details that often interfere with the actual data one can look after.</p>
-<p>I'll now take a tour of the things that seem important to me when reading a datasheet. And for that, we'll have a look at the <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny1614-16-17-DataSheet-DS40002204A.pdf" target="_blank">datasheet of the ATTiny1614</a> from Microship.</p>
+<p>I'll now take a tour of the things that seem important to me when reading a datasheet. And for that, we'll have a look at the <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny1614-16-17-DataSheet-DS40002204A.pdf" rel="noopener" target="_blank">datasheet of the ATTiny1614</a> from Microship.</p>
 <p>To easily navigation into a large PDF document, use the <code>ctrl + f</code> to open a search box and type the term you're looking for.</p>
 <h2 id="configuration-summary">Configuration summary</h2>
 <p>The <em>configuration summary</em> is the section where one can have a quick look at what the chip can or cannot do. How many pins does the chip have, what its memory size, how many inputs/outputs or AC pins are free to use. It may seem obvious but having a look at the summary before digging deeper in the content will save you time.</p>
@@ -240,7 +240,7 @@ void loop() {
 <!-- featured image -->
 <!-- content -->
 <section class="article__content ts">
-<p>The ATtiny1614 isn't yet supported by PlatformIO and therefore needs another method to be programmed. Fortunately, <a href="https://github.com/mraardvark/pyupdi" target="_blank">pyupdi</a> is here! Pyupdi is a Python UPDI driver for programming the "new" tinyAVR and megaAVR devices.</p>
+<p>The ATtiny1614 isn't yet supported by PlatformIO and therefore needs another method to be programmed. Fortunately, <a href="https://github.com/mraardvark/pyupdi" rel="noopener" target="_blank">pyupdi</a> is here! Pyupdi is a Python UPDI driver for programming the "new" tinyAVR and megaAVR devices.</p>
 <h2 id="connectivity">Connectivity</h2>
 <p>Power comes from a USB cable via a FTDI connector. The data comes from the UPDI connector and goes through another FTDI connector.</p>
 <h2 id="install">Install</h2>
@@ -248,7 +248,7 @@ void loop() {
 <p><code>pip install -r requirements.txt</code></p>
 <h2 id="compile">Compile</h2>
 <p>The first thing to do is to compile the code with the Arduino IDE and then send it with <code>pyupdi</code>.
-To be able to compile the code, first install the <a href="https://github.com/SpenceKonde/megaTinyCore" target="_blank">megaTinyCore</a> library using the Libraries manager into the Arduino IDE and select the ATtiny1614 board.</p>
+To be able to compile the code, first install the <a href="https://github.com/SpenceKonde/megaTinyCore" rel="noopener" target="_blank">megaTinyCore</a> library using the Libraries manager into the Arduino IDE and select the ATtiny1614 board.</p>
 <p>From the Arduini IDE console, locate the <code>.ino.hex</code> that is generated when you compile and copy its path. It should be something like <code>/tmp/arduino_build_342195/Blink.ino.hex</code>.</p>
 <h2 id="upload">Upload</h2>
 <p>Once your program is correctly compiled, open a terminal to send it to your device.</p>
@@ -275,7 +275,7 @@ pyupdi.py -d tiny1614 -c /dev/ttyUSB0 -b 9600 -f /tmp/arduino_build_342195/Blink
 <blockquote>
 <p>Barduino 2.0 started as a project to have a ESP32 fabacademy compatible board to help the students develope their work on top of it. This board was designed by Eduardo Chamorro Martin with the help of Josep Marti and Oscar Gonzalez in Fab Lab Barcelona 2020.</p>
 <blockquote>
-<p><a href="https://gitlab.fabcloud.org/barcelonaworkshops/barduino-2.0" target="_blank">Barduino 2.0, Gitlab</a></p>
+<p><a href="https://gitlab.fabcloud.org/barcelonaworkshops/barduino-2.0" rel="noopener" target="_blank">Barduino 2.0, Gitlab</a></p>
 </blockquote>
 </blockquote>
 <figure class="md"><img alt="arduino-pic" src="medias/embedded-programming-esp32-barduino-barduino-pic.jpeg"><figcaption>arduino-pic</figcaption></figure>
@@ -325,8 +325,8 @@ framework = arduino
 <!-- featured image -->
 <!-- content -->
 <section class="article__content ts">
-<p><a href="https://platformio.org/" target="_blank">PlatformIO</a> is a cross-platform, cross-architecture and multiple framework tool for embedded programming. It replaces Arduino IDE and offers a lot more subtilities and flexibility to write organized code for micro-controllers.</p>
-<p>I use PlatformIO as a replacement for Arduino IDE because it allows me to use the text editor I want (I use <a href="https://neovim.io/" target="_blank">Neovim</a>, an hyperextensible Vim-based text editor) and because it integrates librairies of more than 700 differents boards, including the ones I use. It also has a unified debugger and a static code analyze which seems super useful for large scale projects.</p>
+<p><a href="https://platformio.org/" rel="noopener" target="_blank">PlatformIO</a> is a cross-platform, cross-architecture and multiple framework tool for embedded programming. It replaces Arduino IDE and offers a lot more subtilities and flexibility to write organized code for micro-controllers.</p>
+<p>I use PlatformIO as a replacement for Arduino IDE because it allows me to use the text editor I want (I use <a href="https://neovim.io/" rel="noopener" target="_blank">Neovim</a>, an hyperextensible Vim-based text editor) and because it integrates librairies of more than 700 differents boards, including the ones I use. It also has a unified debugger and a static code analyze which seems super useful for large scale projects.</p>
 <h3 id="initialization">Initialization</h3>
 <p>Because PlatformIO is based on Python, the installation is pretty straight-forward using <em>pip</em>: <code>$ pip install -U platformio</code></p>
 <p>An empty folder to host the project is needed for PlatformIO to set up its environment. Make a new one and go in it <code>$ mkdir my-project &amp;&amp; cd my-project</code> then type <code>$ pio init</code> to initialize this folder with the PlatformIO structure.</p>
@@ -353,7 +353,7 @@ boards/
 - board_definition.json
 </pre>
 <p>Next, search for the depedencies ID you might need, in this case the <code>Adafruit_CircuitPlayground.h</code>, by typing <code>$ pio lib search "header:Adafruit_CircuitPlayground.h"</code>. The lib ID I need is <code>602</code>.</p>
-<p>Configure the project for this specific board, by following the datasheet found <a href="https://docs.platformio.org/en/latest/boards/atmelsam/adafruit_circuitplayground_m0.html" target="_blank">here</a>.</p>
+<p>Configure the project for this specific board, by following the datasheet found <a href="https://docs.platformio.org/en/latest/boards/atmelsam/adafruit_circuitplayground_m0.html" rel="noopener" target="_blank">here</a>.</p>
 <p>These values have to be written in the <code>platformio.io</code> file.</p>
 <pre>
 [env:adafruit_circuitplayground_m0]
@@ -384,7 +384,7 @@ lib_deps =
 <section class="article__content ts">
 <p>One can also use Arduino IDE to load a piece of code into a device. It works perfectly well even if this solution is more basic and doesn't allow a lot of fine tuning. Because this software is well maintained and massively used, it makes it a very good tool for quickly prototyping without detours.</p>
 <ol>
-<li><a href="https://www.arduino.cc/en/Main/Software" target="_blank">Download Arduino IDE</a> and install it on you computer</li>
+<li><a href="https://www.arduino.cc/en/Main/Software" rel="noopener" target="_blank">Download Arduino IDE</a> and install it on you computer</li>
 <li>Find and install the Circuit Playground library with the built-in <code>Boards Manager</code></li>
 <li>Verify the code</li>
 <li>Upload the code</li>

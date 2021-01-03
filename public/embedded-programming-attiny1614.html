@@ -49,7 +49,7 @@
 </div>
 </section>
 <section class="article__content ts">
-<p>The ATtiny1614 isn't yet supported by PlatformIO and therefore needs another method to be programmed. Fortunately, <a href="https://github.com/mraardvark/pyupdi" target="_blank">pyupdi</a> is here! Pyupdi is a Python UPDI driver for programming the "new" tinyAVR and megaAVR devices.</p>
+<p>The ATtiny1614 isn't yet supported by PlatformIO and therefore needs another method to be programmed. Fortunately, <a href="https://github.com/mraardvark/pyupdi" rel="noopener" target="_blank">pyupdi</a> is here! Pyupdi is a Python UPDI driver for programming the "new" tinyAVR and megaAVR devices.</p>
 <h2 id="connectivity">Connectivity</h2>
 <p>Power comes from a USB cable via a FTDI connector. The data comes from the UPDI connector and goes through another FTDI connector.</p>
 <h2 id="install">Install</h2>
@@ -57,7 +57,7 @@
 <p><code>pip install -r requirements.txt</code></p>
 <h2 id="compile">Compile</h2>
 <p>The first thing to do is to compile the code with the Arduino IDE and then send it with <code>pyupdi</code>.
-To be able to compile the code, first install the <a href="https://github.com/SpenceKonde/megaTinyCore" target="_blank">megaTinyCore</a> library using the Libraries manager into the Arduino IDE and select the ATtiny1614 board.</p>
+To be able to compile the code, first install the <a href="https://github.com/SpenceKonde/megaTinyCore" rel="noopener" target="_blank">megaTinyCore</a> library using the Libraries manager into the Arduino IDE and select the ATtiny1614 board.</p>
 <p>From the Arduini IDE console, locate the <code>.ino.hex</code> that is generated when you compile and copy its path. It should be something like <code>/tmp/arduino_build_342195/Blink.ino.hex</code>.</p>
 <h2 id="upload">Upload</h2>
 <p>Once your program is correctly compiled, open a terminal to send it to your device.</p>
