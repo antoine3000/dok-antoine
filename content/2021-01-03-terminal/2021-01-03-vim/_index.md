@@ -6,6 +6,7 @@ leader key `,`
 
 - quit `q`
 - move `h j k l`
+- move line by line in a paragraph `g + j k`
 - visual mode `v`
 - normal mode `esc`
 - insert before the cursor `i`

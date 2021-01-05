@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Tue, 05 Jan 2021 10:45:56 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Tue, 05 Jan 2021 11:34:16 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="large:4449-01.jpg" alt="" /&gt;
 &lt;img src="large:4449-02.jpg" alt="" /&gt;
@@ -631,6 +631,7 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 &lt;ul&gt;
 &lt;li&gt;quit &lt;code&gt;q&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;move &lt;code&gt;h j k l&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;move line by line in a paragraph &lt;code&gt;g + j k&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;visual mode &lt;code&gt;v&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;normal mode &lt;code&gt;esc&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;insert before the cursor &lt;code&gt;i&lt;/code&gt;&lt;/li&gt;
@@ -645,9 +646,7 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 &lt;li&gt;replace &lt;code&gt;r&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;undo &lt;code&gt;u&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;redo &lt;code&gt;ctrl + r&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;undo all changes on the line &lt;code&gt;U&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;delete text &lt;code&gt;d&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;delete line &lt;code&gt;dd&lt;...</description><pubDate>Sun, 03 Jan 2021 00:00:00 +0200</pubDate></item><item><title>Music player</title><link>https://antoine.studio/music-player.html</link><description>&lt;p&gt;I would like to have an easy solution to listen to music on the go. My ideal player has an SD card that contains music folders, a 3.5 mm jack input, a removable battery, a black and white screen that shows a minimal interface, and it runs on open-source software.&lt;/p&gt;
+&lt;li&gt;undo all changes on the line &lt;code&gt;U&lt;/code&gt;&lt;/li...</description><pubDate>Sun, 03 Jan 2021 00:00:00 +0200</pubDate></item><item><title>Music player</title><link>https://antoine.studio/music-player.html</link><description>&lt;p&gt;I would like to have an easy solution to listen to music on the go. My ideal player has an SD card that contains music folders, a 3.5 mm jack input, a removable battery, a black and white screen that shows a minimal interface, and it runs on open-source software.&lt;/p&gt;
 
 &lt;p&gt;I haven't found the one I am ready to always take with me, so I will try to make it myself. This article will contain my explorations on trying to do so.&lt;/p&gt;
 ...</description><pubDate>Mon, 04 Jan 2021 00:00:00 +0200</pubDate></item><item><title>References</title><link>https://antoine.studio/music-player-references.html</link><description>&lt;p&gt;Here is a collection of references on DIY music player, music related hardware or anything that could help me in my quest of making my music player.&lt;/p&gt;
