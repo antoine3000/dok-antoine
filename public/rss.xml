@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Sun, 03 Jan 2021 22:25:03 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Tue, 05 Jan 2021 10:45:56 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="large:4449-01.jpg" alt="" /&gt;
 &lt;img src="large:4449-02.jpg" alt="" /&gt;
@@ -625,11 +625,11 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 &lt;li&gt;open a new tab &lt;code&gt;shift + cmd + t&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;go to next tab &lt;code&gt;shift + cmd + -&amp;gt;&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;go to previous tab &lt;code&gt;shift + cmd + &amp;lt;-&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;new&lt;/li&gt;
 &lt;/ul&gt;
 ...</description><pubDate>Fri, 03 Jan 2020 00:00:00 +0200</pubDate></item><item><title>Vim</title><link>https://antoine.studio/terminal-vim.html</link><description>&lt;p&gt;leader key &lt;code&gt;,&lt;/code&gt;&lt;/p&gt;
 
 &lt;ul&gt;
+&lt;li&gt;quit &lt;code&gt;q&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;move &lt;code&gt;h j k l&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;visual mode &lt;code&gt;v&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;normal mode &lt;code&gt;esc&lt;/code&gt;&lt;/li&gt;
@@ -647,5 +647,14 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 &lt;li&gt;redo &lt;code&gt;ctrl + r&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;undo all changes on the line &lt;code&gt;U&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;delete text &lt;code&gt;d&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;delete line &lt;code&gt;dd&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;delete text (...</description><pubDate>Sun, 03 Jan 2021 00:00:00 +0200</pubDate></item></channel></rss>
+&lt;li&gt;delete line &lt;code&gt;dd&lt;...</description><pubDate>Sun, 03 Jan 2021 00:00:00 +0200</pubDate></item><item><title>Music player</title><link>https://antoine.studio/music-player.html</link><description>&lt;p&gt;I would like to have an easy solution to listen to music on the go. My ideal player has an SD card that contains music folders, a 3.5 mm jack input, a removable battery, a black and white screen that shows a minimal interface, and it runs on open-source software.&lt;/p&gt;
+
+&lt;p&gt;I haven't found the one I am ready to always take with me, so I will try to make it myself. This article will contain my explorations on trying to do so.&lt;/p&gt;
+...</description><pubDate>Mon, 04 Jan 2021 00:00:00 +0200</pubDate></item><item><title>References</title><link>https://antoine.studio/music-player-references.html</link><description>&lt;p&gt;Here is a collection of references on DIY music player, music related hardware or anything that could help me in my quest of making my music player.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a rel="noopener" target="_blank" href="https://github.com/PaulStoffregen/Audio"&gt;Teensy Audio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a rel="noopener" target="_blank" href="https://bela.io/"&gt;Bela&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a rel="noopener" target="_blank" href="https://www.elecrow.com/bluetooth-audio-receiver-decoding-player-p-1630.html"&gt;Bluetooth audio receiver module&lt;/a&gt; used by &lt;a rel="noopener" target="_blank" href="https://wiki.xxiivv.com/site/hardware.html"&gt;Neauoire&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a rel="noopener" target="_blank" href="https://hackaday.io/project/171750-tinydfplayer"&gt;TinyDFPlayer&lt;/a&gt; on Hackaday&lt;/li&gt;
+&lt;li&gt;&lt;a rel="noopener" target="_blank" href="https://learn.ad...</description><pubDate>Mon, 04 Jan 2021 00:00:00 +0200</pubDate></item></channel></rss>
