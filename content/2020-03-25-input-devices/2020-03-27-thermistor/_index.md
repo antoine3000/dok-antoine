@@ -1,5 +1,6 @@
 ---
 title: Thermistor
+last_update: 2021-01-09
 ---
 
 Or how to measure temperature using a resistor.
@@ -12,31 +13,48 @@ Or how to measure temperature using a resistor.
 
 ## Connection
 
-The thermistor is linked to the `5V` pin and to an analog pin `0` through a 10k resistor, and to `GND`.
+The thermistor is linked to the `GND`, and to the analog pin `0` and to the `5V` pin through a 10 resistor.
 
-![uno-thermi](uno-thermi.png)
+![](thermistor-setup.png)
 
-([image source](https://learn.adafruit.com/thermistor/using-a-thermistor))
+([image source](https://computers.tutsplus.com/tutorials/how-to-read-temperatures-with-arduino--mac-53714))
 
 ## Code
 
-Here is the piece of code that print the value of the analog pin `0` and convert its values into a Celcius temperature.
+Here is the piece of code that print the value of the analog pin `0` and convert its values into a Celcius temperature value.
 
 <pre>
-int analogPin = 0;
-int beta = 3950;
-int resistance = 10;
+#include &lt;Arduino.h&gt;
+#include &lt;math.h&gt;
 
-void setup() {
+void setup()
+{
   Serial.begin(9600);
 }
 
-void loop() {
-  long a = analogRead(analogPin);
-  float temp = beta / (log((1025.0*10/a-10)/10) + beta/298.0)-273.0;
-  Serial.println(temp);
+// Function that applies the Steinhart-Hart equation
+float thermistor(int val)
+{
+  float temp;
+  // From raw analog values
+  temp = log(((10240000 / val) - 10000));
+  // To Kelvin values
+  temp = 1 / (0.001129148 + (0.000234125 + (0.0000000876741 * temp * temp)) * temp);
+  // Convert Kelvin to Celsius
+  temp = temp - 273.15;
+  return temp;
+}
+
+void loop()
+{
+  int val;
+  float temp;
+  val = analogRead(0);
+  temp = thermistor(val);
+  Serial.print(temp);
+  Serial.println(" °C");
   delay(1000);
 }
 </pre>
 
-TODO: Update values according to [this tutorial](https://computers.tutsplus.com/tutorials/how-to-read-temperatures-with-arduino--mac-53714)
+Main resource: [this tutorial](https://computers.tutsplus.com/tutorials/how-to-read-temperatures-with-arduino--mac-53714)
