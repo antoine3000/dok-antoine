@@ -60,7 +60,7 @@
 <p>As I said, my partner is building an incubator to help us grow mycellium (and other fermented food) and she asked me an hand to help her with the electronic part. In this context, I will prototype an incubator by using the devices I already have. I will do it by following the spiral methodology: a first round with the basic features, and then other ones with additional options.</p>
 <h2 id="update-2020-11">Update 2020-11</h2>
 <p>I have started a new project dedicated to the incubator and the sub-projects it brings. Everything is documented under <a href="incubator-v0-1.html" rel="noopener" target="_blank">incubator-v0-1.html</a>.</p>
-<figure class="md"><img alt="" src="medias/output-devices-incubator-incubator-shield.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/output-devices-incubator-incubator-shield.jpg"><figcaption></figcaption></figure>
 <p><a class="btn" href="incubator-v0-1.html" rel="noopener" target="_blank">Incubator</a></p>
 <h2 id="round-01-the-basics">Round #01: the basics</h2>
 <p>For the first round, I would like to control a fan and a Peltier (thermoelectric cooler) to get an ideal temperature into a closed space, using a Arduino UNO. The Peltier will be used to warm up the temperature and the fan will help us to either cool down or to distribute the heat evenly.</p>
@@ -85,9 +85,9 @@
 </ul>
 <h3 id="schematics">Schematics</h3>
 <p>I did a schematic in <a href="https://www.kicad-pcb.org/" rel="noopener" target="_blank">KiCAD</a> to help me understand the different components ad how to plug them together. Here is a <a href="files/incubator-schema.jpg" rel="noopener" target="_blank">larger image</a> if you like.</p>
-<figure class="md"><img alt="incubator-schema" src="medias/output-devices-incubator-incubator-schema.jpg"><figcaption>incubator-schema</figcaption></figure>
+<figure class="md"><img alt="incubator-schema" loading="lazy" src="medias/output-devices-incubator-incubator-schema.jpg"><figcaption>incubator-schema</figcaption></figure>
 <p>File: <a href="files/incubator_01.pro" rel="noopener" target="_blank">incubator_01.pro</a></p>
-<figure class="md"><img alt="incubator prototype" src="medias/output-devices-incubator-incubator-circuit.jpg"><figcaption>incubator prototype</figcaption></figure>
+<figure class="md"><img alt="incubator prototype" loading="lazy" src="medias/output-devices-incubator-incubator-circuit.jpg"><figcaption>incubator prototype</figcaption></figure>
 <h3 id="code">Code</h3>
 <p>I attribute the pins values according to my schematics and define some settings, such as the ideal temperature and the accepted range, but also the fan and Peltier power.</p>
 <p>I do not want the system to go from a stage "It is too hot, I have to cool the temperature" to a stage "It is too cold, let's heat it now" too quickly. This is why I implemented the value <code>tempRange</code>, saying that there are acceptable values around the ideal, which makes the system less reactive but constant.</p>
@@ -146,11 +146,11 @@ void loop(){
 <video controls="" preload="auto"><source src="medias/output-devices-incubator-incubator-prototype.mp4" type="video/mp4"/></video>
 <h3 id="results">Results</h3>
 <p>The overall result of this prototype is quite good. The temperature is easily regulated with the Peltier and the fan, and the thermistor obtains precise values.</p>
-<figure class="md"><img alt="incubator prototype" src="medias/output-devices-incubator-incubator-overview.jpg"><figcaption>incubator prototype</figcaption></figure>
+<figure class="md"><img alt="incubator prototype" loading="lazy" src="medias/output-devices-incubator-incubator-overview.jpg"><figcaption>incubator prototype</figcaption></figure>
 <p>When I tried plugging in the devices for the first time, I was running them at 12 V continuously, but the wires and MOSFETS quickly became very hot, which was a concern. There was too much current in the circuit. Fortunately, not using them continuously but at regular intervals has given us much better results: the devices always work as we want when they receive less current, at least for my needs. This brings me to the PWM tip (as mentioned above).</p>
-<figure class="md"><img alt="incubator prototype" src="medias/output-devices-incubator-incubator-close.jpg"><figcaption>incubator prototype</figcaption></figure>
+<figure class="md"><img alt="incubator prototype" loading="lazy" src="medias/output-devices-incubator-incubator-close.jpg"><figcaption>incubator prototype</figcaption></figure>
 <p>I put the thermistor and the Pelier in a cup, to allow the system to increase its temperature without losing too much heat in the surrounding environment. The fan is positioned in front of them, which gives us the possibility to expel the hot air.</p>
-<figure class="md"><img alt="incubator prototype" src="medias/output-devices-incubator-incubator-power.jpg"><figcaption>incubator prototype</figcaption></figure>
+<figure class="md"><img alt="incubator prototype" loading="lazy" src="medias/output-devices-incubator-incubator-power.jpg"><figcaption>incubator prototype</figcaption></figure>
 <h1 id="next">Next</h1>
 <p>Now that the electronics work as I want, I hand over to my partner. The next step will probably be a real test with a closed space to see how quickly we can lower or increase the temperature inside. We are also thinking of using the fan to distribute the heat evenly. Be sure to read <a href="https://maudb.gitlab.io/dok/projects/biolab-kitchen/" rel="noopener" target="_blank">Maud's documentation</a> to see her progress on the incubator.</p>
 <h3 id="references">References</h3>

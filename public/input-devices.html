@@ -91,11 +91,11 @@
 <li>Echo Pulse Output</li>
 <li>GND</li>
 </ul>
-<figure class="md"><img alt="uno-ultrasonic-inuse" src="medias/input-devices-ultrasonic-sensor-uno-ultrasonic-inuse.jpg"><figcaption>uno-ultrasonic-inuse</figcaption></figure>
+<figure class="md"><img alt="uno-ultrasonic-inuse" loading="lazy" src="medias/input-devices-ultrasonic-sensor-uno-ultrasonic-inuse.jpg"><figcaption>uno-ultrasonic-inuse</figcaption></figure>
 <p>I'm using an Arduino UNO to use this sensor because it needs a voltage of 5V. Unfortunately, the Barduino and its ESP32 only has a voltage of 3.3V.</p>
 <h2 id="connection">Connection</h2>
 <p>The connection is quite simple, the <code>VCC</code> goes to the <code>5V</code>, the <code>GND</code> to the <code>GND</code>, the <code>Echo</code> to a digital pin, let's say the <code>12</code> and the <code>Trig</code> to another digital pin, the <code>11</code>.</p>
-<figure class="md"><img alt="uno-ultrasonci-schematic" src="medias/input-devices-ultrasonic-sensor-uno-ultrasonic.jpg"><figcaption>uno-ultrasonci-schematic</figcaption></figure>
+<figure class="md"><img alt="uno-ultrasonci-schematic" loading="lazy" src="medias/input-devices-ultrasonic-sensor-uno-ultrasonic.jpg"><figcaption>uno-ultrasonci-schematic</figcaption></figure>
 <p>(<a href="https://randomnerdtutorials.com/complete-guide-for-ultrasonic-sensor-hc-sr04/" rel="noopener" target="_blank">image source</a>)</p>
 <h2 id="code">Code</h2>
 <p>Here is the basic code to read data from the ultrasonic sensor, to convert them into readable values (cm) and print it on the serial monitor.</p>
@@ -149,11 +149,11 @@ void loop() {
 <p>Analog Voltage Reading Method, <a href="https://learn.adafruit.com/thermistor/using-a-thermistor" rel="noopener" target="_blank">Adafruit</a></p>
 </blockquote>
 </blockquote>
-<figure class="md"><img alt="thermo-photo-1" src="medias/input-devices-thermistor-uno-thermo-photo-1.jpg"><figcaption>thermo-photo-1</figcaption></figure>
-<figure class="md"><img alt="thermo-photo-2" src="medias/input-devices-thermistor-uno-thermo-photo-2.jpg"><figcaption>thermo-photo-2</figcaption></figure>
+<figure class="md"><img alt="thermo-photo-1" loading="lazy" src="medias/input-devices-thermistor-uno-thermo-photo-1.jpg"><figcaption>thermo-photo-1</figcaption></figure>
+<figure class="md"><img alt="thermo-photo-2" loading="lazy" src="medias/input-devices-thermistor-uno-thermo-photo-2.jpg"><figcaption>thermo-photo-2</figcaption></figure>
 <h2 id="connection">Connection</h2>
 <p>The thermistor is linked to the <code>GND</code>, and to the analog pin <code>0</code> and to the <code>5V</code> pin through a 10 resistor.</p>
-<figure class="md"><img alt="" src="medias/input-devices-thermistor-thermistor-setup.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/input-devices-thermistor-thermistor-setup.png"><figcaption></figcaption></figure>
 <p>(<a href="https://computers.tutsplus.com/tutorials/how-to-read-temperatures-with-arduino--mac-53714" rel="noopener" target="_blank">image source</a>)</p>
 <h2 id="code">Code</h2>
 <p>Here is the piece of code that print the value of the analog pin <code>0</code> and convert its values into a Celcius temperature value.</p>
@@ -205,7 +205,7 @@ void loop()
 <!-- content -->
 <section class="article__content ts">
 <p>Water is a conductive element, and the more water there is in the soil the more electricity can flow through it. So, in order to measure the soil moisture level, we can integrate it into an electrical circuit and measure the voltage. The more voltage in the circuit, the more water there is in the soil.</p>
-<figure class="md"><img alt="moist-setup" src="medias/input-devices-moisture-sensor-moist-setup.jpg"><figcaption>moist-setup</figcaption></figure>
+<figure class="md"><img alt="moist-setup" loading="lazy" src="medias/input-devices-moisture-sensor-moist-setup.jpg"><figcaption>moist-setup</figcaption></figure>
 <p>To represent it, I built a small system that lights a green LED when the soil is wet and a red LED when it's dry.</p>
 <h2 id="connection">Connection</h2>
 <ul>
@@ -216,7 +216,7 @@ void loop()
 <li>12 (digital) to the green LED through a 220Ω resistor</li>
 <li>LED's to the GND (digital)</li>
 </ul>
-<figure class="md"><img alt="moist-closeup" src="medias/input-devices-moisture-sensor-moist-closeup.jpg"><figcaption>moist-closeup</figcaption></figure>
+<figure class="md"><img alt="moist-closeup" loading="lazy" src="medias/input-devices-moisture-sensor-moist-closeup.jpg"><figcaption>moist-closeup</figcaption></figure>
 <h2 id="code">Code</h2>
 <p>The code is basic. If the analog pin gets a high voltage, it means that the soil is moist and the plant is <em>happy</em> so we turn on the green LED, and vice versa.</p>
 <p>I plan to write a more complex code in the coming weeks, a code that takes into account the amount of water needed for each specific plant, and to alert when it's too dry <em>or</em> too weet.</p>
@@ -260,7 +260,7 @@ void loop() {
 <!-- content -->
 <section class="article__content ts">
 <p>In the frame of my Fab Academy final project, I'm exploring how to sense the electrical activity of plants.</p>
-<figure class="md"><img alt="Listen to what we can observe from this lovely plant" src="medias/input-devices-sensing-plants-activity-IMG_8664.jpg"><figcaption>Listen to what we can observe from this lovely plant</figcaption></figure>
+<figure class="md"><img alt="Listen to what we can observe from this lovely plant" loading="lazy" src="medias/input-devices-sensing-plants-activity-IMG_8664.jpg"><figcaption>Listen to what we can observe from this lovely plant</figcaption></figure>
 <p>I covered this topic on a different article.</p>
 <p><a class="btn" href="green-observatory-input.html" rel="noopener" target="_blank">Sensing plants activity</a></p>
 </section>

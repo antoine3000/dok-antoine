@@ -109,8 +109,8 @@
 <h2 id="software">Software</h2>
 <p>Unfortunately, Fab Lab Barcelona uses <a href="https://mecsoft.com/rhinocam/" rel="noopener" target="_blank">RhinoCAM</a> (~1500€), a plug-in for <a href="https://www.rhino3d.com/" rel="noopener" target="_blank">Rhino3D</a> (995€), to perform this task. Paying ~2495€ for a propriatary software that students can't get unless they crack it is a very bad idea for me, especially in the context of Fab Labs. But Fab Lab Barcelona made this choice and configured RhinoCAM with all the necessary parameters to work with the <a href="https://www.cnc-step.com/milling-machine/" rel="noopener" target="_blank">RaptorX-SL</a>, the big CNC.</p>
 <p>I hope that open-source solutions will evolve robustly in the near future to counter this proprietary monopoly.</p>
-<figure class="lg"><img alt="RhinoCAM" src="medias/computer-controlled-machining-cnc-machine-test-cam-1.png"><figcaption>RhinoCAM</figcaption></figure>
-<figure class="lg"><img alt="RhinoCAM" src="medias/computer-controlled-machining-cnc-machine-test-cam-2.png"><figcaption>RhinoCAM</figcaption></figure>
+<figure class="lg"><img alt="RhinoCAM" loading="lazy" src="medias/computer-controlled-machining-cnc-machine-test-cam-1.png"><figcaption>RhinoCAM</figcaption></figure>
+<figure class="lg"><img alt="RhinoCAM" loading="lazy" src="medias/computer-controlled-machining-cnc-machine-test-cam-2.png"><figcaption>RhinoCAM</figcaption></figure>
 <h2 id="g-code">G-code</h2>
 <p>To mill something with the CNC, we first have to screw a wooden board onto the machine bed to make sure it won't move during the process. But as we don't want to mill on a screw, which can cause a fire, we first have to place the screws on our drawing and generate a G-code (<em>Machining Operation &gt; Engraving</em>) just for that. Then another g-code (<em>Machining Operation &gt; 2-axis Profiling</em>) has to be generated with our design only.</p>
 <h2 id="what-we-need-to-know">What we need to know</h2>
@@ -131,10 +131,10 @@
 <li>Step width X: <code>0.0213mm</code></li>
 <li>Step width Y+Z: <code>0.0113mm</code></li>
 </ul>
-<figure class="lg"><img alt="" src="medias/computer-controlled-machining-cnc-machine-test-1.jpg"><figcaption></figcaption></figure>
-<figure class="lg"><img alt="" src="medias/computer-controlled-machining-cnc-machine-test-2.jpg"><figcaption></figcaption></figure>
-<figure class="lg"><img alt="" src="medias/computer-controlled-machining-cnc-machine-test-3.jpg"><figcaption></figcaption></figure>
-<figure class="lg"><img alt="" src="medias/computer-controlled-machining-cnc-machine-test-4.jpg"><figcaption></figcaption></figure>
+<figure class="lg"><img alt="" loading="lazy" src="medias/computer-controlled-machining-cnc-machine-test-1.jpg"><figcaption></figcaption></figure>
+<figure class="lg"><img alt="" loading="lazy" src="medias/computer-controlled-machining-cnc-machine-test-2.jpg"><figcaption></figcaption></figure>
+<figure class="lg"><img alt="" loading="lazy" src="medias/computer-controlled-machining-cnc-machine-test-3.jpg"><figcaption></figcaption></figure>
+<figure class="lg"><img alt="" loading="lazy" src="medias/computer-controlled-machining-cnc-machine-test-4.jpg"><figcaption></figcaption></figure>
 <h1 id="conclusion">Conclusion</h1>
 <p>The Raptor CNC machine is impressive in power and size. It can carry out large projects, but it can also be dangerous, which is why it is important to observe the safety rules:</p>
 <ul>
@@ -155,7 +155,7 @@
 <h1 class="article__title">Fab stool/bench/table <a href="computer-controlled-machining-fab-stool-bench-table.html">●</a></h1>
 <!-- tags -->
 <!-- featured image -->
-<figure class="md"><img alt="" class="article__featured" src="medias/computer-controlled-machining-fab-stool-bench-table-stool-3.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" class="article__featured" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-stool-3.jpg"><figcaption></figcaption></figure>
 <!-- content -->
 <section class="article__content ts">
 <p>I wanted to have a stool/bench/table for my apartment, a kind of furniture that can be different things because of its dimensions. So I designed and fabricated it using the large CNC at Fab Lab Barcelona.</p>
@@ -163,27 +163,27 @@
 <h1 id="design">Design</h1>
 <p>I first designed this project on paper and then in <a href="https://www.freecadweb.org/" rel="noopener" target="_blank">Freecad</a>, my favorite open-source software for 3D modeling.</p>
 <p>The stool/bench/table consists of a seat, two legs and a stretcher.</p>
-<figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-table-stool-view-1.png"><figcaption></figcaption></figure>
-<figure class="md"><img alt="front view" src="medias/computer-controlled-machining-fab-stool-bench-table-stool-view-4.png"><figcaption>front view</figcaption></figure>
-<figure class="md"><img alt="top view" src="medias/computer-controlled-machining-fab-stool-bench-table-stool-view-5.png"><figcaption>top view</figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-stool-view-1.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="front view" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-stool-view-4.png"><figcaption>front view</figcaption></figure>
+<figure class="md"><img alt="top view" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-stool-view-5.png"><figcaption>top view</figcaption></figure>
 <h2 id="parametric-values">Parametric values</h2>
 <p>I used parametric values in order to easily modify values such as the lengths of the seat, the height of the legs, the thickness of the material, the endmill diameter I will use, the length of the slots, etc.</p>
-<figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-table-parametric-values.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-parametric-values.png"><figcaption></figcaption></figure>
 <p>Once the document is well organised and the values in the part design workbench call up values from the datasheet, changing the values automatically changes the rest. This allows me to design without knowing everything in advance, such as the diameter of the milling cutter that will be used to mill the project, and above all it allows the design to be adapted quickly and almost frictionlessly to new constraints.</p>
 <h2 id="preparing-for-production">Preparing for production</h2>
 <h3 id="tolerance">Tolerance</h3>
 <p>It is strongly recommended to take a tolerance value into account when working with a CNC machine. This is because the machine will not produce a perfect result and if the cuts are too tight, there is a good chance that it will be almost impossible to put the project together.</p>
-<figure class="md"><img alt="Tolerance detail" src="medias/computer-controlled-machining-fab-stool-bench-table-tolerance.png"><figcaption>Tolerance detail</figcaption></figure>
+<figure class="md"><img alt="Tolerance detail" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-tolerance.png"><figcaption>Tolerance detail</figcaption></figure>
 <p>In this case I used a tolerance value of <code>0.2 mm</code>. This means that there is an extra <code>0.1 mm</code> on each side of the cut to make sure that the parts fit together.</p>
 <p>Update: the tolerance value I used wasn't enough, I had to sand the mortises in order to join the different elements together.</p>
 <h3 id="dogbones">Dogbones</h3>
 <p>Right angles are not accessible by the endmills, which will produce an undesirable result.</p>
 <p>To avoid this, it is common practice to create dog bone shapes by adding holes the size of the endmill in the right angles. The space left by the cut will then correspond to the piece that is supposed to fit into it.</p>
-<figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-table-dogbones1.png"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-table-dogbones2.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-dogbones1.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-dogbones2.png"><figcaption></figcaption></figure>
 <h3 id="export">Export</h3>
 <p>When the different parts are well designed, take into account the tolerance of the CNC and have dogbones shapes to ensure that the actual measurements will be as expected, export all parts in a technical drawing sheet at the correct scale (1:1). This sheet should be exported as a <code>.dxf</code> file and then imported into RhinoCAM.</p>
-<figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-table-techdraw.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-techdraw.png"><figcaption></figcaption></figure>
 <h1 id="toolpaths">Toolpaths</h1>
 <h2 id="file-import">File import</h2>
 <ul>
@@ -198,14 +198,14 @@
 <li>Corner coordinates <code>0, 0, 0</code></li>
 <li>Dimensions <code>2,400 x 1,250 x 15</code></li>
 </ul>
-<figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-table-rhino-overview.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-rhino-overview.png"><figcaption></figcaption></figure>
 <h2 id="screw-marks">Screw marks</h2>
 <ul>
 <li>Copy the material rectangle and offset it by <code>20mm</code></li>
 <li>Create <code>Points</code> along the offset line to fix the material</li>
 <li>Add more <code>Points</code> around the critical part that could move during the process. If it is needed to add a screw inside a pocket, make sure to place two of them to avoid any rotational movement.</li>
 </ul>
-<figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-table-engraving.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-engraving.png"><figcaption></figcaption></figure>
 <h2 id="tool">Tool</h2>
 <ul>
 <li>Create a new <code>Tool</code>
@@ -226,7 +226,7 @@
 </ul></li>
 <li><code>Save</code> the new tool</li>
 </ul>
-<figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-table-tool.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-tool.png"><figcaption></figcaption></figure>
 <p>To calculate the <code>Cut speed</code> value, check the chipload value of the material (for plywood, using a 6mm endmill, range is <code>.011″-.013″</code>, according to this <a href="https://gdptooling.com/chipload-calc/#" rel="noopener" target="_blank">calculator</a>). Then RPM * number of flutes * minimum value * 25.4 (in to cm) = minimum cut speed. Then do the same for the maximum value. Finally, use a value in the middle to ensure the happiness of the machine.</p>
 <h2 id="engraving-pocketing-profiling">Engraving, pocketing, profiling</h2>
 <p>Do each step on a different layer.</p>
@@ -259,10 +259,10 @@
 <li>Sorting: <code>Minimum Distance Sort</code></li>
 <li><code>Generate</code></li>
 </ul>
-<figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-table-pocketing.png"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-table-in-profiling.png"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-table-out-profiling.png"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-table-perspective.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-pocketing.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-in-profiling.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-out-profiling.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-perspective.png"><figcaption></figcaption></figure>
 <h2 id="export-to-g-code">Export to G-code</h2>
 <p>Two files must be exported. The first one contains the screw data, which we will run first. Then all the other operations (pocketing, inner profiling, outer profiling) on the second file, which we will launch once the material is screwed to the machine bed.</p>
 <ul>
@@ -285,15 +285,15 @@
 <li>Unscrew the screws</li>
 <li>Sand the egdes of the pieces to obtain a nice result</li>
 </ol>
-<figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-table-cnc-milling-2.jpg"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-table-cnc-milling-1.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-cnc-milling-2.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-cnc-milling-1.jpg"><figcaption></figcaption></figure>
 <video controls="" preload="auto"><source src="medias/computer-controlled-machining-fab-stool-bench-table-cnc-milling-web.mp4" type="video/mp4"/></video>
-<figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-table-cnc-milling-3.jpg"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-table-cnc-milling-4.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-cnc-milling-3.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-cnc-milling-4.jpg"><figcaption></figcaption></figure>
 <h1 id="result">Result</h1>
-<figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-table-stool-1.jpg"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-table-stool-2.jpg"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/computer-controlled-machining-fab-stool-bench-table-stool-3.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-stool-1.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-stool-2.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-stool-3.jpg"><figcaption></figcaption></figure>
 <h1 id="conclusion">Conclusion</h1>
 <p>It's really nice to design something knowing how it will be made afterwards. Designing with constraints, understanding the material and taking into account all the little details that can make a difference. That's part of the reason I'm doing this Fab Academy. CNC is a wonderful machine that can produce all kinds of results, and I'm looking forward to discovering them all.</p>
 <p>At first it was intimidating. The machine is powerful and can be harmful if not used properly and there is a wide range of settings to know and understand to produce the right instructions for the machine (G-code). But once all this is demystified, all that remains is fun and new possibilities.</p>

@@ -37,7 +37,7 @@
 <p class="article__parent">This article is part of: <a href="green-observatory.html">The Green Observatory</a>.</p>
 <!-- tags -->
 <!-- featured image -->
-<figure class="md"><img alt="" class="article__featured" src="medias/green-observatory-input-final-result.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" class="article__featured" loading="lazy" src="medias/green-observatory-input-final-result.png"><figcaption></figcaption></figure>
 <!-- toc -->
 <section class="article__toc">
 <h2 class="toc__title">Table of content</h2>
@@ -88,7 +88,7 @@
 <p><a class="btn" href="final-project-research-input-plant-activity.html" rel="noopener" target="_blank">Research / Sensing the electrical activity of a plant</a></p>
 <p>I don't know how relevant the data I collect is though, but I feel that detecting any kind of electrical activity from a plant is good for my project.</p>
 <p>Don't forget that the main idea of my project is to invite humans to observe nature and to get closer to it. I am not looking for scientific accuracy at all costs, although I would ideally like to achieve it.</p>
-<figure class="lg"><img alt="First prototype" src="medias/green-observatory-input-prototype.jpg"><figcaption>First prototype</figcaption></figure>
+<figure class="lg"><img alt="First prototype" loading="lazy" src="medias/green-observatory-input-prototype.jpg"><figcaption>First prototype</figcaption></figure>
 <h1 id="key-electronics-components">Key electronics components</h1>
 <h2 id="atmega-16-u2">ATmega 16-U2</h2>
 <p>After some discussions with my instructors at Fab Lab Barcelona, I decided to test the (poorly documented) <code>ATmega 16-U2</code> chip. It is available in the lab inventory, it speaks USB, has the minimum requirements for my project (and this is the microchip used in the Arduino Uno to exchange data via USB). I always prefer to use appropriate hardware, and especially in this context of custom electronics.</p>
@@ -110,18 +110,18 @@ According to Andrew Mao's <a href="http://fab.cba.mit.edu/classes/863.14/people/
 <p>I design electronics boards with <a href="https://kicad-pcb.org/" rel="noopener" target="_blank">KiCad</a>, a cross platform and open source electronics design automation suite. You will find the files at the end of this article.</p>
 <p>I have already explained how to <a href="electronics-design.html" rel="noopener" target="_blank">design electronics</a> and how to <a href="electronics-production.html" rel="noopener" target="_blank">produce electronics</a>. Feel free to read my documentation on these subjects.</p>
 <h2 id="schematics">Schematics</h2>
-<figure class="md"><img alt="" src="medias/green-observatory-input-design-03.png"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/green-observatory-input-design-04.png"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/green-observatory-input-design-05.png"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/green-observatory-input-design-06.png"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/green-observatory-input-design-07.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/green-observatory-input-design-03.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/green-observatory-input-design-04.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/green-observatory-input-design-05.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/green-observatory-input-design-06.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/green-observatory-input-design-07.png"><figcaption></figcaption></figure>
 <h2 id="pcb-design">PCB design</h2>
-<figure class="md"><img alt="" src="medias/green-observatory-input-design-01.png"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/green-observatory-input-design-02.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/green-observatory-input-design-01.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/green-observatory-input-design-02.png"><figcaption></figcaption></figure>
 <h2 id="export">Export</h2>
-<figure class="md"><img alt="Drills" src="medias/green-observatory-input-board-low-Drills.png"><figcaption>Drills</figcaption></figure>
-<figure class="md"><img alt="Edge cuts" src="medias/green-observatory-input-board-low-Edge_Cuts.png"><figcaption>Edge cuts</figcaption></figure>
-<figure class="md"><img alt="Circuit" src="medias/green-observatory-input-board-low-F_Cu.png"><figcaption>Circuit</figcaption></figure>
+<figure class="md"><img alt="Drills" loading="lazy" src="medias/green-observatory-input-board-low-Drills.png"><figcaption>Drills</figcaption></figure>
+<figure class="md"><img alt="Edge cuts" loading="lazy" src="medias/green-observatory-input-board-low-Edge_Cuts.png"><figcaption>Edge cuts</figcaption></figure>
+<figure class="md"><img alt="Circuit" loading="lazy" src="medias/green-observatory-input-board-low-F_Cu.png"><figcaption>Circuit</figcaption></figure>
 <h3 id="tips">Tips</h3>
 <ul>
 <li>Verify the correct clearance before tracing the routes</li>
@@ -130,16 +130,16 @@ According to Andrew Mao's <a href="http://fab.cba.mit.edu/classes/863.14/people/
 <li>Trace a common ground at the end of the design process</li>
 </ul>
 <h1 id="fabrication">Fabrication</h1>
-<figure class="md"><img alt="Fresh out of the mini milling machine" src="medias/green-observatory-input-input-01.jpg"><figcaption>Fresh out of the mini milling machine</figcaption></figure>
-<figure class="md"><img alt="My shopping list, just before the soldering" src="medias/green-observatory-input-input-02.jpg"><figcaption>My shopping list, just before the soldering</figcaption></figure>
-<figure class="md"><img alt="A trick solder to solder the microchip without making it move" src="medias/green-observatory-input-input-03.jpg"><figcaption>A trick solder to solder the microchip without making it move</figcaption></figure>
-<figure class="md"><img alt="" src="medias/green-observatory-input-input-04.jpg"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/green-observatory-input-input-05.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="Fresh out of the mini milling machine" loading="lazy" src="medias/green-observatory-input-input-01.jpg"><figcaption>Fresh out of the mini milling machine</figcaption></figure>
+<figure class="md"><img alt="My shopping list, just before the soldering" loading="lazy" src="medias/green-observatory-input-input-02.jpg"><figcaption>My shopping list, just before the soldering</figcaption></figure>
+<figure class="md"><img alt="A trick solder to solder the microchip without making it move" loading="lazy" src="medias/green-observatory-input-input-03.jpg"><figcaption>A trick solder to solder the microchip without making it move</figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/green-observatory-input-input-04.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/green-observatory-input-input-05.jpg"><figcaption></figcaption></figure>
 <h2 id="debugging">Debugging</h2>
 <p>I thought my electronic board was well made, or at least it looked like it. But once connected to my computer, I first tried to read my USB ports by typing <code>$ lsusb</code> but the new device didn't appear. I then checked further with <code>$ dmesg -w</code> and saw that I had an over-current condition on the new device's port. Which means there is a short somewhere.</p>
 <p>I spent hours trying to find the short, but since I have a common ground, meaning that everything except the tracks is ground, it was very difficult to find it.</p>
 <p>Finally, I decided to redo my board, but this time whit constant continuity check between each operation, that is the only way to make sure that everything is as it should be.</p>
-<figure class="md"><img alt="First and second attempt" src="medias/green-observatory-input-input-06.jpg"><figcaption>First and second attempt</figcaption></figure>
+<figure class="md"><img alt="First and second attempt" loading="lazy" src="medias/green-observatory-input-input-06.jpg"><figcaption>First and second attempt</figcaption></figure>
 <p>In the end, I discovered that a track passing under a component was grounded because the clearance I had defined in my design was too small. I scratched a bit the PCB between the track and the common group to separate them, and it worked. That lesson took me hours of work.</p>
 <h1 id="atmega-16-u2-2">ATmega 16-U2</h1>
 <p>The ATmega 16-U2, as I said before, was supposed to be a good candidate for my electronic project, but it was not.</p>
@@ -400,7 +400,7 @@ int main(void)
 <h1 id="result">Result</h1>
 <p>Here is a video shot of my final project, where you can see the inflatable part reacting to the electronics. As I said before, it doesn't react to the activity of the plan but to the operations I wrote previously in the code. This makes it more of a <em>proof of concept</em> than a functional part.</p>
 <video controls="" preload="auto"><source src="medias/green-observatory-input-electronics-detail-muted.mp4" type="video/mp4"/></video>
-<figure class="md"><img alt="" src="medias/green-observatory-input-final-result.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/green-observatory-input-final-result.png"><figcaption></figcaption></figure>
 <h1 id="conclusion">Conclusion</h1>
 <p>I had a lot of trouble programming the chip I chose, the Atmega 16-U2. Especially because my prototype works and I couldn't reproduce its behavior on my custom electronics due to the lack of debugging tools.</p>
 <p>Saying that I learned a lot in the process about how to react, debug, bounce back to other solutions, what USB is, how it works, etc. It made me realize how dependent we can be on tools that make our lives easier, like the Arduino IDE. And I'm very happy about that.</p>

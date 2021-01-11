@@ -37,7 +37,7 @@
 <p class="article__parent">This article is part of: <a href="green-observatory.html">The Green Observatory</a>.</p>
 <!-- tags -->
 <!-- featured image -->
-<figure class="md"><img alt="" class="article__featured" src="medias/green-observatory-output-output-01.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" class="article__featured" loading="lazy" src="medias/green-observatory-output-output-01.png"><figcaption></figcaption></figure>
 <!-- toc -->
 <section class="article__toc">
 <h2 class="toc__title">Table of content</h2>
@@ -67,7 +67,7 @@
 <h1 id="introduction">Introduction</h1>
 <p>An electronic board that receives signals from <a href="green-observatory-input.html" rel="noopener" target="_blank">an input</a> and controls an air fhigh using an air pump and four solenoids.</p>
 <p>Note that this project is inspired by <a href="https://www.programmableair.com/" rel="noopener" target="_blank">Programmable Air</a>, I simplified it by using one pump instead of two. Once again, thanks to open-source :)</p>
-<figure class="md"><img alt="First sketch" src="medias/green-observatory-output-schema.jpg"><figcaption>First sketch</figcaption></figure>
+<figure class="md"><img alt="First sketch" loading="lazy" src="medias/green-observatory-output-schema.jpg"><figcaption>First sketch</figcaption></figure>
 <h1 id="key-electronics-components">Key electronics components</h1>
 <h2 id="air-pump">Air pump</h2>
 <p>The <a href="https://www.sparkfun.com/products/10398" rel="noopener" target="_blank">air pump</a> operates at 12V and has sufficient suction for my project. The only drawback is that it is very noisy. It will not produce the complete meditative experience I am looking for, but it will work for this first prototype. This pump was available at the lab.</p>
@@ -79,27 +79,27 @@
 <p>I design electronics boards with <a href="https://kicad-pcb.org/" rel="noopener" target="_blank">KiCad</a>, a cross platform and open source electronics design automation suite. You will find the files at the end of this article.</p>
 <p>I have already explained how to <a href="electronics-design.html" rel="noopener" target="_blank">design electronics</a> and how to <a href="electronics-production.html" rel="noopener" target="_blank">produce electronics</a>. Feel free to read my documentation on these subjects.</p>
 <h2 id="schematics">Schematics</h2>
-<figure class="md"><img alt="Misc." src="medias/green-observatory-output-design-01.png"><figcaption>Misc.</figcaption></figure>
-<figure class="md"><img alt="Solenoids" src="medias/green-observatory-output-design-02.png"><figcaption>Solenoids</figcaption></figure>
-<figure class="md"><img alt="Mosfets" src="medias/green-observatory-output-design-03.png"><figcaption>Mosfets</figcaption></figure>
-<figure class="md"><img alt="Pump (identical to solenoids)" src="medias/green-observatory-output-design-04.png"><figcaption>Pump (identical to solenoids)</figcaption></figure>
+<figure class="md"><img alt="Misc." loading="lazy" src="medias/green-observatory-output-design-01.png"><figcaption>Misc.</figcaption></figure>
+<figure class="md"><img alt="Solenoids" loading="lazy" src="medias/green-observatory-output-design-02.png"><figcaption>Solenoids</figcaption></figure>
+<figure class="md"><img alt="Mosfets" loading="lazy" src="medias/green-observatory-output-design-03.png"><figcaption>Mosfets</figcaption></figure>
+<figure class="md"><img alt="Pump (identical to solenoids)" loading="lazy" src="medias/green-observatory-output-design-04.png"><figcaption>Pump (identical to solenoids)</figcaption></figure>
 <h2 id="pcb-design">PCB design</h2>
-<figure class="lg"><img alt="" src="medias/green-observatory-output-design-05.png"><figcaption></figcaption></figure>
-<figure class="lg"><img alt="" src="medias/green-observatory-output-design-06.png"><figcaption></figcaption></figure>
+<figure class="lg"><img alt="" loading="lazy" src="medias/green-observatory-output-design-05.png"><figcaption></figcaption></figure>
+<figure class="lg"><img alt="" loading="lazy" src="medias/green-observatory-output-design-06.png"><figcaption></figcaption></figure>
 <h2 id="export">Export</h2>
-<figure class="md"><img alt="Drills" src="medias/green-observatory-output-board-high-Drills.png"><figcaption>Drills</figcaption></figure>
-<figure class="md"><img alt="Edge cuts" src="medias/green-observatory-output-board-high-Edge_Cuts.png"><figcaption>Edge cuts</figcaption></figure>
-<figure class="md"><img alt="Circuit" src="medias/green-observatory-output-board-high-F_Cu.png"><figcaption>Circuit</figcaption></figure>
+<figure class="md"><img alt="Drills" loading="lazy" src="medias/green-observatory-output-board-high-Drills.png"><figcaption>Drills</figcaption></figure>
+<figure class="md"><img alt="Edge cuts" loading="lazy" src="medias/green-observatory-output-board-high-Edge_Cuts.png"><figcaption>Edge cuts</figcaption></figure>
+<figure class="md"><img alt="Circuit" loading="lazy" src="medias/green-observatory-output-board-high-F_Cu.png"><figcaption>Circuit</figcaption></figure>
 <h1 id="fabrication">Fabrication</h1>
-<figure class="md"><img alt="" src="medias/green-observatory-output-fabrication-01.jpg"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/green-observatory-output-fabrication-02.jpg"><figcaption></figcaption></figure>
-<figure class="md"><img alt="High and low voltage together" src="medias/green-observatory-output-fabrication-03.jpg"><figcaption>High and low voltage together</figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/green-observatory-output-fabrication-01.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/green-observatory-output-fabrication-02.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="High and low voltage together" loading="lazy" src="medias/green-observatory-output-fabrication-03.jpg"><figcaption>High and low voltage together</figcaption></figure>
 <h1 id="problems-encountered">Problems encountered</h1>
 <p>Also, when designing the PCB, I chose a wrong mosfet element. When I realized this, I replaced the symbol I was using in the schematics but I didn't update the footprint. Therefore, after milling and soldering the PCB, I realized that the mosfets were not connected as they should be. To avoid redoing everything (the Fab Academy deadline was too short), I had to use another type of mosfets with long legs that can be bent in the right position.  An unaesthetic technique that works.</p>
 <p>Unfortunately, powering my circuit with these wrong mosfets burned the buck-boost. It was no big deal, because it was used to power <a href="green-observatory-input.html" rel="noopener" target="_blank">another board</a> that could also be powered by USB. I'll try to replace the buck-boost with a <a href="https://en.wikipedia.org/wiki/Small-outline_transistor" rel="noopener" target="_blank">SOT</a> (small outline transistor), it should be cheaper and easier to use.</p>
 <h1 id="result">Result</h1>
 <p>To see a video of the final result -&gt; <a href="green-observatory-presentation.html" rel="noopener" target="_blank">Green Observatory - Presentation</a></p>
-<figure class="lg"><img alt="" src="medias/green-observatory-output-electronics.jpg"><figcaption></figcaption></figure>
+<figure class="lg"><img alt="" loading="lazy" src="medias/green-observatory-output-electronics.jpg"><figcaption></figcaption></figure>
 <h1 id="conclusion">Conclusion</h1>
 <p>I'm very happy with the result of this PCB. Even with this Frankenstein look, because of the replacement of the mosfets.</p>
 <p>Of course, I would like to redo it more cleanly, now that I've understood the mistakes I made, but in doing so I would be very tempted to change something: I would love to have a silent system. But that would mean a smaller pump (5V) and therefore less suction, which means a smaller inflatable, a smaller device. I keep this option in mind, as a V2 of this project.</p>

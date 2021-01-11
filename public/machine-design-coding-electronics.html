@@ -80,7 +80,7 @@ void motorCalibration()
 </code></pre>
 <h1 id="positioning">Positioning</h1>
 <p>To position correctly the pad according to any crossed lines we had to think about good logic. And the simplest one is always the best.</p>
-<figure class="md"><img alt="" src="medias/machine-design-coding-electronics-logic.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/machine-design-coding-electronics-logic.jpg"><figcaption></figcaption></figure>
 <p>Each <code>lane</code> has a numerical value between 0 and 4 and each <code>line</code> also has a numerical value between 0 and 3.</p>
 <p>The game is started with the motor in the centre, in lane <code>2</code>. As soon as a line is crossed, we check whether the value of the line is lower or higher than the value of the lane, which indicates whether the ball is moving to the right or to the left.</p>
 <p>Then, knowing the direction and the line crossed, we know in which lane the motor must move. But for how many steps? For the difference between its current position and its final position multiplied by the number of steps that make up a lane.</p>
@@ -240,7 +240,7 @@ void loop()
   }
 }
 </code></pre>
-<figure class="lg"><img alt="" src="medias/machine-design-coding-electronics-coding-session.jpg"><figcaption></figcaption></figure>
+<figure class="lg"><img alt="" loading="lazy" src="medias/machine-design-coding-electronics-coding-session.jpg"><figcaption></figcaption></figure>
 </section>
 <footer>
 <p>✎ <span>Created</span> 10/11/2020</p>

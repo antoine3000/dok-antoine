@@ -40,7 +40,7 @@
     <a class="tag__link" href="fab-academy-assignments.html">#fab-academy-assignments</a>
 </p>
 <!-- featured image -->
-<figure class="md"><img alt="" class="article__featured" src="medias/electronics-production-ftdi-updi.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" class="article__featured" loading="lazy" src="medias/electronics-production-ftdi-updi.jpg"><figcaption></figcaption></figure>
 <!-- toc -->
 <section class="article__toc">
 <h2 class="toc__title">Table of content</h2>
@@ -80,7 +80,7 @@
 <section class="article__content ts">
 <p>The goal of this group assignment is for us to know the potential gaps between our traces, or how thin the traces could be. Since the machines were always occupied and the booking system at Fab Lab Barcelona was not really effective, our class couldn't have a chance to do many group tests. In the end, we were able to finish only 1 group test with the participation of the whole class.</p>
 <p>We used the Roland MonoFab SRM-20 machine to mill a test file.</p>
-<figure class="md"><img alt="linetest" src="medias/electronics-production-testing-the-milling-machine-linetest.png"><figcaption>linetest</figcaption></figure>
+<figure class="md"><img alt="linetest" loading="lazy" src="medias/electronics-production-testing-the-milling-machine-linetest.png"><figcaption>linetest</figcaption></figure>
 <h2 id="detailed-specs-of-the-machine">Detailed specs of the machine:</h2>
 <ul>
 <li>Work area: 203 x 152 x 60mm</li>
@@ -90,8 +90,8 @@
 <li>Input Format : RML-1</li>
 <li>Material: Modeling Wax, Chemical Wood, Foam, Acrylic, PCB</li>
 </ul>
-<figure class="md"><img alt="group-1" src="medias/electronics-production-testing-the-milling-machine-group-1.png"><figcaption>group-1</figcaption></figure>
-<figure class="md"><img alt="group-2" src="medias/electronics-production-testing-the-milling-machine-group-2.png"><figcaption>group-2</figcaption></figure>
+<figure class="md"><img alt="group-1" loading="lazy" src="medias/electronics-production-testing-the-milling-machine-group-1.png"><figcaption>group-1</figcaption></figure>
+<figure class="md"><img alt="group-2" loading="lazy" src="medias/electronics-production-testing-the-milling-machine-group-2.png"><figcaption>group-2</figcaption></figure>
 <p>We prepared the <code>.rml</code> files using <a href="http://fabmodules.org/" rel="noopener" target="_blank">Fab Modules</a>.</p>
 <ol>
 <li>Select <code>.png</code> input format and load the .png file</li>
@@ -102,8 +102,8 @@
 <li>Select the proper direction. If there are thin traces on the board, we need to select the conventional direction in order to avoid broken traces.</li>
 <li>Click the <code>calculate</code> button to calculate the toolpath and click the <code>save</code> button to save the <code>.rml</code> file.</li>
 </ol>
-<figure class="md"><img alt="linetest" src="medias/electronics-production-testing-the-milling-machine-testline-2.jpg"><figcaption>linetest</figcaption></figure>
-<figure class="md"><img alt="linetest" src="medias/electronics-production-testing-the-milling-machine-testline-1.jpg"><figcaption>linetest</figcaption></figure>
+<figure class="md"><img alt="linetest" loading="lazy" src="medias/electronics-production-testing-the-milling-machine-testline-2.jpg"><figcaption>linetest</figcaption></figure>
+<figure class="md"><img alt="linetest" loading="lazy" src="medias/electronics-production-testing-the-milling-machine-testline-1.jpg"><figcaption>linetest</figcaption></figure>
 <p>We had an issue with the outlines cutting. One side was not cut completely. We managed to generate the file multiple times and did the process again, but we still had the same problem. However, we could tell from the failed test that using the default settings of Fab Modules, the machine is able to mill up to 0.010mm thin trace.</p>
 <p>I hope we will find a way to better manage the time we have for the coming weeks. I would like to have more time with the machines, to be able to experiment more an go further than the assignments.</p>
 </section>
@@ -131,9 +131,9 @@
 </blockquote>
 <h2 id="ftdi-updi">FTDI &amp; UPDI</h2>
 <p>I decided to make an <a href="https://www.ftdichip.com/" rel="noopener" target="_blank">FTDI</a> USB-FT230XS-serial. I have to admit that my choice isn't clear at this point. I could have chosen to make another model of programmer, any of them. It's almost impossible to make a thoughtful choice now because I don't know yet what kind of electronic architecture I will need later. Let's say that the most important thing now is learning how to create a programmer, any of them, and to be able to do it again later with a more specific electronic project.</p>
-<figure class="md"><img alt="USB-FT230XS-serial" src="medias/electronics-production-in-circuit-programmer-USB-FT230XS-serial.png"><figcaption>USB-FT230XS-serial</figcaption></figure>
+<figure class="md"><img alt="USB-FT230XS-serial" loading="lazy" src="medias/electronics-production-in-circuit-programmer-USB-FT230XS-serial.png"><figcaption>USB-FT230XS-serial</figcaption></figure>
 <p>To program this FTDI USB-FT230XS-serial chip, I also need a UPDI (Unified Program and Debugging Interface) which is an interface for programming and debugging other devices, such as the FTDI that I use.</p>
-<figure class="md"><img alt="FTDI-UPDI" src="medias/electronics-production-in-circuit-programmer-FTDI-UPDI.png"><figcaption>FTDI-UPDI</figcaption></figure>
+<figure class="md"><img alt="FTDI-UPDI" loading="lazy" src="medias/electronics-production-in-circuit-programmer-FTDI-UPDI.png"><figcaption>FTDI-UPDI</figcaption></figure>
 <h3 id="files-preparation">Files preparation</h3>
 <p>We always need two differents files to mill a board, one for the traces and one for the outline, because these two tasks need differents end-mills: a 1/32 for the outline and a 1/64 (wich is super fragile) for the traces.</p>
 <ul>
@@ -151,7 +151,7 @@
 <p>I used the same settings for both mills, except for the mill value, as stated,
 <code>1/64</code> or <code>1/32</code>.</p>
 <p class="todo">To do: Update values, the 1/32 mill needs to cut at 0.5mm/s speed as is cutting much more material at once</p>
-<figure class="md"><img alt="fab-modules-settings" src="medias/electronics-production-in-circuit-programmer-fab-modules-settings.jpeg"><figcaption>fab-modules-settings</figcaption></figure>
+<figure class="md"><img alt="fab-modules-settings" loading="lazy" src="medias/electronics-production-in-circuit-programmer-fab-modules-settings.jpeg"><figcaption>fab-modules-settings</figcaption></figure>
 <h4 id="files">Files</h4>
 <ul>
 <li><a href="files/USB-FT230XS-serial.traces.png" rel="noopener" target="_blank">FTDI traces</a></li>
@@ -161,13 +161,13 @@
 </ul>
 <h3 id="milling-process">Milling process</h3>
 <p>At Fab Lab Barcelona, we use a Roland <a href="https://www.rolanddga.com/products/3d/srm-20-small-milling-machine/features" rel="noopener" target="_blank">SRM-20 Compact Milling Machine</a> to mill PCBs. The machine is compact (as its name suggests) and <em>very</em> precise.</p>
-<figure class="md"><img alt="roland-srm20" src="medias/electronics-production-in-circuit-programmer-roland-srm20.jpg"><figcaption>roland-srm20</figcaption></figure>
+<figure class="md"><img alt="roland-srm20" loading="lazy" src="medias/electronics-production-in-circuit-programmer-roland-srm20.jpg"><figcaption>roland-srm20</figcaption></figure>
 <p>Cover the back of the PCB with double-sided tape to make it stick to the surface of the milling machine, we don't want it to move. Don't overlap the layers of tape, this would create different levels and therefore a lack of precision on the Z axis.</p>
-<figure class="md"><img alt="pcb" src="medias/electronics-production-in-circuit-programmer-pcb.jpg"><figcaption>pcb</figcaption></figure>
+<figure class="md"><img alt="pcb" loading="lazy" src="medias/electronics-production-in-circuit-programmer-pcb.jpg"><figcaption>pcb</figcaption></figure>
 <p>Place the PCB inside the milling machine, on the board (parallel to the edge is better, as it is easier to optimize the space on the PCB) and mount the drill on the machine. A 1/32 for the outline or a 1/64 for the traces.</p>
-<figure class="md"><img alt="end-mills" src="medias/electronics-production-in-circuit-programmer-end-mills.jpg"><figcaption>end-mills</figcaption></figure>
+<figure class="md"><img alt="end-mills" loading="lazy" src="medias/electronics-production-in-circuit-programmer-end-mills.jpg"><figcaption>end-mills</figcaption></figure>
 <p>Configure the X and Y axes according to the size of the design and the space available on the PCB.And then, configure the Z axis. This is one of the most <em>important</em> part of the milling processs. The end-mill is supposed to be placed perfectly on the surface of the PCB so the machine knows how deep it can go when milling the paths. If not, it will either damage the board or not mill it enough.</p>
-<figure class="md"><img alt="roland-vpanel" src="medias/electronics-production-in-circuit-programmer-roland-vpanel.jpg"><figcaption>roland-vpanel</figcaption></figure>
+<figure class="md"><img alt="roland-vpanel" loading="lazy" src="medias/electronics-production-in-circuit-programmer-roland-vpanel.jpg"><figcaption>roland-vpanel</figcaption></figure>
 <p>To set the Z axis correctly:</p>
 <ol>
 <li>Screw the end-mill at an approximate height first</li>
@@ -179,7 +179,7 @@
 <li><code>Set origin point: Z</code> again with the updated position</li>
 </ol>
 <p>Take care to always lift the Z axis before moving on the X and Y axis. If not, the end-mill will scratch the surface and destroy the PCB.</p>
-<figure class="md"><img alt="xyz" src="medias/electronics-production-in-circuit-programmer-xyz-axes.jpg"><figcaption>xyz</figcaption></figure>
+<figure class="md"><img alt="xyz" loading="lazy" src="medias/electronics-production-in-circuit-programmer-xyz-axes.jpg"><figcaption>xyz</figcaption></figure>
 <p>When the end mill and the XYZ axes are configured, press the <code>cut</code> button to load the appropriate file, then press the <code>setup</code> button to start the milling process.</p>
 <video controls="" preload="auto"><source src="medias/electronics-production-in-circuit-programmer-milling-process.mp4" type="video/mp4"/></video>
 <p>In resume, it's needed to run the cut two times. First time for the traces, using the 1/64 end-mill. Then a second time for the outline using the 1/32 end-mill. It implies that you will have to change the file and the end-mill at the middle of the milling process. Don't modify the X/Y axes by doing it or you will lose the exact position of your design. Only re-setup the Z axis when the 1/32 end-mill is in the machine.</p>
@@ -190,9 +190,9 @@
 <li>The first time we milled our boards, the Z axis wasn't defined correctly and some un-milled parts remained on the PCB after the process. It's easy to spot them, they are shiny compare to the rest. We had to re-mill with a slightly different Z axis value, to mill a little deeper.</li>
 <li>We forgot to lift the tool on the Z axis before moving it to the X/Y origin… We scratched the board and we had to re-mill to damaged parts.</li>
 </ul>
-<figure class="md"><img alt="pcb-result" src="medias/electronics-production-in-circuit-programmer-pcb-result.jpg"><figcaption>pcb-result</figcaption></figure>
+<figure class="md"><img alt="pcb-result" loading="lazy" src="medias/electronics-production-in-circuit-programmer-pcb-result.jpg"><figcaption>pcb-result</figcaption></figure>
 <p>It is a good practice to test the board with a multimeter between to milling and the soldering, to be sure that the circuits conduct the electricity as they should.</p>
-<figure class="md"><img alt="pcb-test" src="medias/electronics-production-in-circuit-programmer-pcb-test.jpg"><figcaption>pcb-test</figcaption></figure>
+<figure class="md"><img alt="pcb-test" loading="lazy" src="medias/electronics-production-in-circuit-programmer-pcb-test.jpg"><figcaption>pcb-test</figcaption></figure>
 <h2 id="soldering-components">Soldering components</h2>
 <blockquote>
 <p>Soldering is a process in which two or more items are joined together by melting and putting a filler metal (solder) into the joint, the filler metal having a lower melting point than the adjoining metal.</p>
@@ -201,20 +201,20 @@
 </blockquote>
 </blockquote>
 <p>Once I had the board ready, I could start the soldering process. But before that, I first start the collect the components I needed and sticked them to a sheet of paper to be sure not to lose them.</p>
-<figure class="md"><img alt="shopping-list" src="medias/electronics-production-in-circuit-programmer-shopping-list.jpg"><figcaption>shopping-list</figcaption></figure>
+<figure class="md"><img alt="shopping-list" loading="lazy" src="medias/electronics-production-in-circuit-programmer-shopping-list.jpg"><figcaption>shopping-list</figcaption></figure>
 <p>To solder electronics components on a board, it is easier to start with the central parts to the external parts and from the most complex to the simplest.</p>
 <p>The first few minutes of soldering are a bit frustrating, the parts are very small and precision is not easy on this scale. And we have to begin with the most complex part (to get it done before continuing). But once I got used to it, it became a very pleasant moment of mindfulness.</p>
-<figure class="lg"><img alt="soldering-macro" src="medias/electronics-production-in-circuit-programmer-soldering-macro.jpg"><figcaption>soldering-macro</figcaption></figure>
-<figure class="lg"><img alt="soldering-ftdi" src="medias/electronics-production-in-circuit-programmer-soldering-ftdi.JPG"><figcaption>soldering-ftdi</figcaption></figure>
+<figure class="lg"><img alt="soldering-macro" loading="lazy" src="medias/electronics-production-in-circuit-programmer-soldering-macro.jpg"><figcaption>soldering-macro</figcaption></figure>
+<figure class="lg"><img alt="soldering-ftdi" loading="lazy" src="medias/electronics-production-in-circuit-programmer-soldering-ftdi.JPG"><figcaption>soldering-ftdi</figcaption></figure>
 <p>Unfortunately, I forgot to take pictures during the soldering process, I was totally into it, I guess. <a href="https://www.youtube.com/watch?v=QKbJxytERvg" rel="noopener" target="_blank">This tutorial</a> helped me understand how to do.</p>
 <p>Here are the results of the two boards, the FTDI and the UPDI.</p>
-<figure class="md"><img alt="ftdi-updi-result" src="medias/electronics-production-in-circuit-programmer-ftdi-updi-result.jpg"><figcaption>ftdi-updi-result</figcaption></figure>
-<figure class="md"><img alt="ftdi-updi" src="medias/electronics-production-in-circuit-programmer-ftdi-updi.jpg"><figcaption>ftdi-updi</figcaption></figure>
+<figure class="md"><img alt="ftdi-updi-result" loading="lazy" src="medias/electronics-production-in-circuit-programmer-ftdi-updi-result.jpg"><figcaption>ftdi-updi-result</figcaption></figure>
+<figure class="md"><img alt="ftdi-updi" loading="lazy" src="medias/electronics-production-in-circuit-programmer-ftdi-updi.jpg"><figcaption>ftdi-updi</figcaption></figure>
 <h2 id="testing-the-device">Testing the device</h2>
 <p>The next step was to connect the FTDI board to my computer to see if it was properly mounted and readable.</p>
 <p>It wasn't directly the case, I first had some connectivity errors, my computer could recognize a new USB device but didn't know what it was. I had to test the connectivity of all the parts with a multimeter. After a few minutes of testing, I noticed that a resistor was not well soldered… I heated the soldering tool again and fixed the issue.</p>
 <p>Another test with the multimeter confirmed to me that the board was well done. Let's plug it to my computer to get that confirmation.</p>
-<figure class="md"><img alt="usb-cable" src="medias/electronics-production-in-circuit-programmer-usb-cable.JPG"><figcaption>usb-cable</figcaption></figure>
+<figure class="md"><img alt="usb-cable" loading="lazy" src="medias/electronics-production-in-circuit-programmer-usb-cable.JPG"><figcaption>usb-cable</figcaption></figure>
 <p>On linux, in order to list the devices plugged to your computer, run <code>lsusb</code> in a terminal. Or run <code>dmesg -w</code> to get info in real time.</p>
 <blockquote>
 <p>dmesg (diagnostic message) is a command on most Unix-like operating systems that prints the message buffer of the kernel. The output of this command typically contains the messages produced by the device drivers.</p>
@@ -222,8 +222,8 @@
 <p><a href="https://en.wikipedia.org/wiki/Dmesg" rel="noopener" target="_blank">dmesg, Wikipedia</a></p>
 </blockquote>
 </blockquote>
-<figure class="md"><img alt="usb-computer" src="medias/electronics-production-in-circuit-programmer-usb-computer.JPG"><figcaption>usb-computer</figcaption></figure>
-<figure class="md"><img alt="It's working!" src="medias/electronics-production-in-circuit-programmer-ftdi-screenshot.jpeg"><figcaption>It's working!</figcaption></figure>
+<figure class="md"><img alt="usb-computer" loading="lazy" src="medias/electronics-production-in-circuit-programmer-usb-computer.JPG"><figcaption>usb-computer</figcaption></figure>
+<figure class="md"><img alt="It's working!" loading="lazy" src="medias/electronics-production-in-circuit-programmer-ftdi-screenshot.jpeg"><figcaption>It's working!</figcaption></figure>
 </section>
 <footer>
 <p>✎ <span>Created</span> 21/02/2020</p>

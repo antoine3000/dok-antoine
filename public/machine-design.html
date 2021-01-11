@@ -41,7 +41,7 @@
 <a class="tag__link" href="to-review.html">#to-review</a>
 </p>
 <!-- featured image -->
-<figure class="md"><img alt="" class="article__featured" src="medias/machine-design-team.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" class="article__featured" loading="lazy" src="medias/machine-design-team.png"><figcaption></figcaption></figure>
 <!-- toc -->
 <section class="article__toc">
 <h2 class="toc__title">Table of content</h2>
@@ -94,21 +94,21 @@
 <h1 class="article__title">Making the field <a href="machine-design-making-the-field.html">●</a></h1>
 <!-- tags -->
 <!-- featured image -->
-<figure class="md"><img alt="" class="article__featured" src="medias/machine-design-making-the-field-mounting-plate.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" class="article__featured" loading="lazy" src="medias/machine-design-making-the-field-mounting-plate.jpg"><figcaption></figcaption></figure>
 <!-- content -->
 <section class="article__content ts">
 <h1 id="mounting-plate">Mounting plate</h1>
 <p>I designed and laser-cut a mounting plate made of acrylic (<code>10 mm</code>) with the imprints of our elements (NEMA17 stepper motor and solenoid) in order to be able to fix our elements to the structure, and thus make it move when the stepper motor is actuated.</p>
-<figure class="md"><img alt="" src="medias/machine-design-making-the-field-mounting-plate-freecad.png"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/machine-design-making-the-field-mounting-plate-measures.png"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/machine-design-making-the-field-field-02.jpg"><figcaption></figcaption></figure>
-<figure class="lg"><img alt="" src="medias/machine-design-making-the-field-mounting-plate-2.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/machine-design-making-the-field-mounting-plate-freecad.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/machine-design-making-the-field-mounting-plate-measures.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/machine-design-making-the-field-field-02.jpg"><figcaption></figcaption></figure>
+<figure class="lg"><img alt="" loading="lazy" src="medias/machine-design-making-the-field-mounting-plate-2.jpg"><figcaption></figcaption></figure>
 <h1 id="solenoid-holder">Solenoid holder</h1>
 <p>To fix the solenoid, which will then be used to push the ball forward, I designed an holder that we could screw onto our mounting plate.</p>
-<figure class="md"><img alt="" src="medias/machine-design-making-the-field-solenoid-holder.png"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/machine-design-making-the-field-solenoid-holder-01.jpg"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/machine-design-making-the-field-solenoid-holder-02.jpg"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/machine-design-making-the-field-solenoid-holder-03.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/machine-design-making-the-field-solenoid-holder.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/machine-design-making-the-field-solenoid-holder-01.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/machine-design-making-the-field-solenoid-holder-02.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/machine-design-making-the-field-solenoid-holder-03.jpg"><figcaption></figcaption></figure>
 <h1 id="files">Files</h1>
 <ul>
 <li>Solenoid holder (Freecad design file): <a href="file:system-solenoid.FCStd" rel="noopener" target="_blank">system-solenoid.FCStd</a></li>
@@ -163,7 +163,7 @@ void motorCalibration()
 </code></pre>
 <h1 id="positioning">Positioning</h1>
 <p>To position correctly the pad according to any crossed lines we had to think about good logic. And the simplest one is always the best.</p>
-<figure class="md"><img alt="" src="medias/machine-design-coding-electronics-logic.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/machine-design-coding-electronics-logic.jpg"><figcaption></figcaption></figure>
 <p>Each <code>lane</code> has a numerical value between 0 and 4 and each <code>line</code> also has a numerical value between 0 and 3.</p>
 <p>The game is started with the motor in the centre, in lane <code>2</code>. As soon as a line is crossed, we check whether the value of the line is lower or higher than the value of the lane, which indicates whether the ball is moving to the right or to the left.</p>
 <p>Then, knowing the direction and the line crossed, we know in which lane the motor must move. But for how many steps? For the difference between its current position and its final position multiplied by the number of steps that make up a lane.</p>
@@ -323,7 +323,7 @@ void loop()
   }
 }
 </code></pre>
-<figure class="lg"><img alt="" src="medias/machine-design-coding-electronics-coding-session.jpg"><figcaption></figcaption></figure>
+<figure class="lg"><img alt="" loading="lazy" src="medias/machine-design-coding-electronics-coding-session.jpg"><figcaption></figcaption></figure>
 </section>
 <footer>
 <p>✎ <span>Created</span> 10/11/2020</p>

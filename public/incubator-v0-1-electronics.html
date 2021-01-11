@@ -37,7 +37,7 @@
 <p class="article__parent">This article is part of: <a href="incubator-v0-1.html">Incubator v0.1</a>.</p>
 <!-- tags -->
 <!-- featured image -->
-<figure class="md"><img alt="" class="article__featured" src="medias/incubator-v0-1-electronics-incubator-shield.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" class="article__featured" loading="lazy" src="medias/incubator-v0-1-electronics-incubator-shield.jpg"><figcaption></figcaption></figure>
 <!-- toc -->
 <section class="article__toc">
 <h2 class="toc__title">Table of content</h2>
@@ -79,7 +79,7 @@
 <h2 id="rgb-led">RGB LED</h2>
 <p>An RGB LED is used to communicate basic information to the user. Does the incubator heat or cool? Has it reached the desired temperature? etc.</p>
 <h1 id="schematics">Schematics</h1>
-<figure class="md"><img alt="" src="medias/incubator-v0-1-electronics-schematics.svg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-1-electronics-schematics.svg"><figcaption></figcaption></figure>
 <h2 id="interesting-points">Interesting points</h2>
 <ul>
 <li>A <a href="https://www.onsemi.com/pub/Collateral/NCP1117-D.PDF" rel="noopener" target="_blank">voltage regulator</a> is used to convert 12V to 5V (which is used by the sensor and the Barduino)</li>
@@ -93,22 +93,22 @@
 <li>the GPIO 34, 35, 36, 39 on the ESP32 are only inputs (<a href="https://randomnerdtutorials.com/esp32-pinout-reference-gpios/" rel="noopener" target="_blank">source</a>) and therefore can't be used for the fan or the heating pad. I discovered this only after the fabrication, I had to add an extra cable from an empty pin to the heating pad line (where was the error). Good to know for next time.</li>
 </ul>
 <h1 id="pcb-design">PCB design</h1>
-<figure class="md"><img alt="3D view generated from KiCAD" src="medias/incubator-v0-1-electronics-incubator-esp-3D.png"><figcaption>3D view generated from KiCAD</figcaption></figure>
-<figure class="md"><img alt="" src="medias/incubator-v0-1-electronics-output-pcb.png"><figcaption></figcaption></figure>
-<figure class="md"><img alt="Another view without the common ground" src="medias/incubator-v0-1-electronics-output-pcb-without-gnd.png"><figcaption>Another view without the common ground</figcaption></figure>
+<figure class="md"><img alt="3D view generated from KiCAD" loading="lazy" src="medias/incubator-v0-1-electronics-incubator-esp-3D.png"><figcaption>3D view generated from KiCAD</figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-1-electronics-output-pcb.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="Another view without the common ground" loading="lazy" src="medias/incubator-v0-1-electronics-output-pcb-without-gnd.png"><figcaption>Another view without the common ground</figcaption></figure>
 <h1 id="fabrication">Fabrication</h1>
 <h2 id="incubator-shield">Incubator shield</h2>
-<figure class="md"><img alt="" src="medias/incubator-v0-1-electronics-fab-01.jpg"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/incubator-v0-1-electronics-fab-02.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-1-electronics-fab-01.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-1-electronics-fab-02.jpg"><figcaption></figcaption></figure>
 <p>The <a href="https://www.rolanddga.com/products/3d/srm-20-small-milling-machine" rel="noopener" target="_blank">SRM-20</a> milling machine wasn't properly calibrated when I used it because it had just received a new motor. The quality of my milling is therefore not the best, but after a close check with a multimeter, I can confirm that all the tracks are correctly connected.</p>
-<figure class="md"><img alt="" src="medias/incubator-v0-1-electronics-fab-03.jpg"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/incubator-v0-1-electronics-fab-04.jpg"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/incubator-v0-1-electronics-fab-05.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-1-electronics-fab-03.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-1-electronics-fab-04.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-1-electronics-fab-05.jpg"><figcaption></figcaption></figure>
 <h2 id="barduino-2">Barduino</h2>
 <p>The files to make the barduino can be found on its gitlab <a href="https://gitlab.com/fablabbcn-projects/electronics/barduino/-/tree/master/barduino-microusb-2.2" rel="noopener" target="_blank">repository</a>.</p>
 <p>Fab Lab Barcelona ordered several PCBs from their PCB design in order to speed up the production of the Barduino (which is used in various projects). Only the assembly, the soldering of the components, is necessary to make it work.</p>
-<figure class="md"><img alt="" src="medias/incubator-v0-1-electronics-incubator-traces.jpg"><figcaption></figcaption></figure>
-<figure class="md"><img alt="" src="medias/incubator-v0-1-electronics-incub-overview.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-1-electronics-incubator-traces.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-1-electronics-incub-overview.jpg"><figcaption></figcaption></figure>
 </section>
 <footer>
 <p>✎ <span>Created</span> 09/11/2020</p>

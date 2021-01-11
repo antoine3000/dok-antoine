@@ -102,7 +102,7 @@ def wrap(to_wrap, wrap_in):
 
 
 def html_update(html, slug):
-    img_tag = '<img src ="medias/' + slug + '-'
+    img_tag = '<img loading="lazy" src ="medias/' + slug + '-'
     video_tag = '<video controls preload="auto"><source type ="video/mp4" src ="medias/' + slug + '-'
     file_link = '<a target="_blank" class="link-file" href="medias/' + slug + '-'
     html = html.replace('<img src="', img_tag)
