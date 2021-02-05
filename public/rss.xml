@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Mon, 11 Jan 2021 15:14:28 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Fri, 05 Feb 2021 16:35:59 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="large:4449-01.jpg" alt="" /&gt;
 &lt;img src="large:4449-02.jpg" alt="" /&gt;
@@ -700,4 +700,12 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 &lt;img src="large:18.jpg" alt="" /&gt;
 &lt;img src="large:19.jpg" alt="" /&gt;
 &lt;img src="large:20.jpg" alt="" /&gt;
-&lt;img src="large:21.jpg" alt="" /&gt;&lt;/p...</description><pubDate>Thu, 07 Jan 2021 00:00:00 +0200</pubDate></item></channel></rss>
+&lt;img src="large:21.jpg" alt="" /&gt;&lt;/p...</description><pubDate>Thu, 07 Jan 2021 00:00:00 +0200</pubDate></item><item><title>Purify indoor air with moss</title><link>https://antoine.studio/moss.html</link><description>&lt;p&gt;I am investigating what could be a low-maintenance, low-tech solution to purify indoor air, and my research has naturally led me to moss and its purifying properties.&lt;/p&gt;
+
+&lt;h2 id="starting-point"&gt;Starting point&lt;/h2&gt;
+
+&lt;p&gt;One project in particular caught my attention, found on &lt;a rel="noopener" target="_blank" href="https://www.theearthissue.com/fashion-lifestyle/foliair"&gt;The Earth Issue&lt;/a&gt;, it is called &lt;a rel="noopener" target="_blank" href="https://www.foliair.com/"&gt;Foliair&lt;/a&gt; and it is a decorative frame that you can hang on your wall, but it is made of moss, so it purifies your place.&lt;/p&gt;
+
+&lt;h2 id="learning-by-doing"&gt;Learning by doing&lt;/h2&gt;
+
+&lt;p&gt;As soon as I read this, I went to the nearest park to my apartment, Montjuïc Barcelona, and picked up moss where I could find it, in order to...</description><pubDate>Fri, 05 Feb 2021 00:00:00 +0200</pubDate></item></channel></rss>
