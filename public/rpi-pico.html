@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title property="schema:name">antoine.studio - Documentation tool</title>
+<meta content="Documentation tool" name="description"/>
+<meta content="antoine.studio" property="schema:name"/>
+<meta content="Documentation tool" property="schema:description"/>
+<link href="assets/main.min.css" rel="stylesheet"/>
+</head>
+<body class="page page--article">
+<main class="main">
+<header class="header">
+<nav class="nav">
+<ul class="nav__list">
+<li class="nav__item">
+<a class="nav__link" href="index.html">antoine.studio</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="content.html">content</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="flux.html">flux</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="about.html">about</a>
+</li>
+</ul>
+</nav>
+</header>
+<article class="article">
+<!-- title -->
+<h1 class="article__title">Raspberry Pi Pico</h1>
+<!-- parent -->
+<p class="article__parent">This article is part of: <a href="rpi.html">Rasberry Pi</a>.</p>
+<!-- tags -->
+<!-- featured image -->
+<!-- toc -->
+<section class="article__toc">
+<h2 class="toc__title">Table of content</h2>
+<div class="toc__list"><ul>
+<li><a href="#documentation">Documentation</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#use">Use</a></li>
+</ul>
+</div>
+</section>
+<section class="article__content ts">
+<h1 id="documentation">Documentation</h1>
+<ul>
+<li><a href="https://www.raspberrypi.org/documentation/rp2040/getting-started/" rel="noopener" target="_blank">Pico documentation</a></li>
+<li><a href="https://datasheets.raspberrypi.org/pico/raspberry-pi-pico-python-sdk.pdf" rel="noopener" target="_blank">Pico MicroPython documentation</a></li>
+</ul>
+<h1 id="installation">Installation</h1>
+<ol>
+<li><a href="https://www.raspberrypi.org/documentation/rp2040/getting-started/#getting-started-with-micropython" rel="noopener" target="_blank">Install MicroPython</a></li>
+<li>Install rshell <code>pip3 install rshell</code> (<a href="https://www.twilio.com/blog/programming-raspberry-pi-pico-microcontroller-micropython" rel="noopener" target="_blank">guide</a>)</li>
+<li>Install <a href="https://salsa.debian.org/minicom-team/minicom" rel="noopener" target="_blank">Minicom</a> (USB serial) - <a href="https://aur.archlinux.org/packages/minicom-git/" rel="noopener" target="_blank">AUR</a></li>
+</ol>
+<h1 id="use">Use</h1>
+<ol>
+<li>Go to the folder of your choice <code>cd pico/experiments/</code> and create a <code>main.py</code> file that will contain your MicroPython script</li>
+<li>Run <code>rshell -p /dev/ttyACM0 --buffer-size 512</code> where <code>ttyACM0</code> in the Pico adress on your machine. Run <code>dmesg -w</code> to see the devices connected to your computer, and therefore the address of your Pico.</li>
+<li>Copy your local script to the pico by running <code>cp main.py /pyboard/main.py</code></li>
+<li>Close the rshell connection <code>CTRL + x</code> and unplug/plug your Pico</li>
+<li>Run <code>minicom -b 115200 -o -D /dev/ttyACM0</code> to read the serial communiction (replace <code>ttyACM0</code> with your Pico address previously obtained)</li>
+</ol>
+</section>
+<footer>
+<p>✎ <span>Created</span> 21/04/2021</p>
+<p>⁂ <span>Updated</span> 21/04/2021</p>
+</footer>
+</article>
+<footer class="footer">
+<p>antoine.studio ☼ 2020 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a> — <a href="https://antoine.studio/rss.xml">RSS feed</a> </p>
+</footer>
+</main>
+</body>
+</html>
