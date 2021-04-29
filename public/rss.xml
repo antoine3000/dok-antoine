@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Wed, 21 Apr 2021 18:05:54 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>Documentation tool</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Thu, 29 Apr 2021 14:58:56 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="large:4449-01.jpg" alt="" /&gt;
 &lt;img src="large:4449-02.jpg" alt="" /&gt;
@@ -721,4 +721,10 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 &lt;ol&gt;
 &lt;li&gt;&lt;a rel="noopener" target="_blank" href="https://www.raspberrypi.org/documentation/rp2040/getting-started/#getting-started-with-micropython"&gt;Install MicroPython&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Install rshell &lt;code&gt;pip3 install rshell&lt;/code&gt; (&lt;a rel="noopener" target="_blank" href="https://www.twilio.com/blog/programming-raspberry-pi-pico-microcontroller-micropython"&gt;guide&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Install &lt;a rel="noopener" tar...</description><pubDate>Wed, 21 Apr 2021 00:00:00 +0200</pubDate></item></channel></rss>
+&lt;li&gt;Install &lt;a rel="noopener" tar...</description><pubDate>Wed, 21 Apr 2021 00:00:00 +0200</pubDate></item><item><title>Focus404 ↝ Alien Jazz</title><link>https://antoine.studio/focus404-alien-jazz.html</link><description>&lt;p&gt;At the end of December 2020, I felt the need to create a musical project. One of my first. I went for several days, alone, to a yurt surrounded by llamas located in the south of Catalonia, Spain.  I spent my days walking, cycling, practicing yoga and meditation. And my nights composing this album.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="alien-jazz-cover.jpg:flux" alt="" /&gt;&lt;/p&gt;
+
+&lt;div class="player" style="max-width: 720px;"&gt;&lt;div style="left: 0; width: 100%; height: 365px; position: relative;"&gt;&lt;iframe src="https://bandcamp.com/EmbeddedPlayer/album=1330270076/size=large/bgcol=ffffff/linkcol=333333/artwork=none/transparent=true/" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen allow="encrypted-media"&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;Alien Jazz&lt;/em&gt; is available on ...</description><pubDate>Fri, 30 Apr 2021 00:00:00 +0200</pubDate></item></channel></rss>
